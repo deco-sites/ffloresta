@@ -32,6 +32,35 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
+        "__resolveType": "site/sections/Content/Benefits.tsx",
+        "benefits": [
+          {
+            "benefitImgSrc": "https://assets.decocache.com/ffloresta/b7d07fbb-44b7-4c3e-8934-eb6cc3751182/home-benefit-icon-01.png",
+            "benefitImgAltText": "Cartão de Crédito",
+            "benefitTitle": "COMPRE EM ATÉ 10X SEM JUROS NO CARTÃO DE CRÉDITO EM COMPRAS ACIMA DE R$ 480,00",
+            "benefitText": "<p>COMPRE EM ATÉ <strong>10X</strong> SEM JUROS NO CARTÃO DE CRÉDITO EM COMPRAS ACIMA DE <strong>R$ 480,00</strong></p>"
+          },
+          {
+            "benefitImgSrc": "https://assets.decocache.com/ffloresta/11de435f-bde0-4ab8-b30e-c5a6f94b9361/home-benefit-icon-02.png",
+            "benefitImgAltText": "Pix",
+            "benefitText": "<p>DESCONTO DE <strong>10%</strong> NO PAGAMENTO <strong>PIX</strong> OU <strong>BOLETO</strong>. *EXCETO PARA PRODUTOS EM PROMOÇÃO.</p>"
+          },
+          {
+            "benefitImgSrc": "https://assets.decocache.com/ffloresta/e62b308d-131c-4b24-b669-6f7dc5a363f8/home-benefit-icon-03.png",
+            "benefitImgAltText": "Frete",
+            "benefitText": "<p>FRETE EXPRESSO ENVIO MAIS <strong>RÁPIDO</strong> DO <strong>BRASIL.</strong></p>"
+          },
+          {
+            "benefitImgSrc": "https://assets.decocache.com/ffloresta/3fa6bd86-4c00-4e9a-8320-3b1ab15625ef/home-benefit-icon-04.png",
+            "benefitImgAltText": "Localização",
+            "benefitText": "<p>4 <strong>LOJAS</strong> FÍSICAS: PINHEIROS, BRÁS, SANTO ANDRÉ E CAMPINAS.</p>"
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
         "__resolveType": "site/sections/Product/ProductShelf.tsx",
         "title": "Featured Products",
         "cta": "/mono",

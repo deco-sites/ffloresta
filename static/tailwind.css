@@ -3759,6 +3759,9 @@ details.collapse summary::-webkit-details-marker {
 .mb-10 {
   margin-bottom: 2.5rem;
 }
+.mb-11 {
+  margin-bottom: 2.75rem;
+}
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -3913,9 +3916,6 @@ details.collapse summary::-webkit-details-marker {
 .min-h-\[42px\] {
   min-height: 42px;
 }
-.min-h-\[660px\] {
-  min-height: 660px;
-}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -3989,6 +3989,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .w-screen {
   width: 100vw;
+}
+.min-w-0 {
+  min-width: 0px;
 }
 .min-w-\[100px\] {
   min-width: 100px;
@@ -4085,6 +4088,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .flex-shrink {
   flex-shrink: 1;
+}
+.flex-shrink-0 {
+  flex-shrink: 0;
 }
 .shrink-0 {
   flex-shrink: 0;
@@ -4989,8 +4995,14 @@ details.collapse summary::-webkit-details-marker {
 .duration-1000 {
   transition-duration: 1000ms;
 }
+.duration-200 {
+  transition-duration: 200ms;
+}
 .duration-300 {
   transition-duration: 300ms;
+}
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .ease-out {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
@@ -5717,6 +5729,11 @@ details.collapse summary::-webkit-details-marker {
     gap: 5rem;
   }
 
+  .md\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .md\:px-\[60px\] {
     padding-left: 60px;
     padding-right: 60px;
@@ -5802,6 +5819,10 @@ details.collapse summary::-webkit-details-marker {
 
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .lg\:flex-row {

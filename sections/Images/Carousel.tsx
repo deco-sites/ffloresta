@@ -1,5 +1,6 @@
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import { Picture, Source } from "apps/website/components/Picture.tsx";
+import Section from "../../components/ui/Section.tsx";
 // import Icon from "../../components/ui/Icon.tsx";
 import Slider from "../../components/ui/Slider.tsx";
 import { clx } from "../../sdk/clx.ts";
@@ -61,8 +62,8 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
     event: { name: "view_promotion", params },
   });
 
-  const hasAction = action &&
-    (action.href || action.title || action.subTitle || action.label);
+  const hasAction =
+    action && (action.href || action.title || action.subTitle || action.label);
 
   return (
     <a
@@ -77,7 +78,7 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
             "absolute h-full w-full top-0 left-0",
             "flex flex-col justify-center items-center",
             "px-5 sm:px-0",
-            "sm:left-40 sm:items-start sm:max-w-96",
+            "sm:left-40 sm:items-start sm:max-w-96"
           )}
         >
           {action.title && (
@@ -134,9 +135,9 @@ function Carousel({ images = [], preload, interval }: Props) {
       class={clx(
         "grid",
         "grid-rows-[1fr_32px_1fr_42px]",
-        "grid-cols-[32px_1fr_32px] min-h-[660px]",
+        "grid-cols-[32px_1fr_32px]",
         "sm:grid-cols-[112px_1fr_42px] sm:min-h-min",
-        "w-screen",
+        "w-screen"
       )}
     >
       <div class="col-span-full row-span-full">
@@ -149,8 +150,7 @@ function Carousel({ images = [], preload, interval }: Props) {
         </Slider>
       </div>
 
-      {
-        /* <div class="hidden sm:flex items-center justify-center z-10 col-start-1 row-start-2">
+      {/* <div class="hidden sm:flex items-center justify-center z-10 col-start-1 row-start-2">
         <Slider.PrevButton
           class="btn btn-neutral btn-outline btn-circle no-animation btn-sm"
           disabled={false}
@@ -166,13 +166,12 @@ function Carousel({ images = [], preload, interval }: Props) {
         >
           <Icon id="chevron-right" />
         </Slider.NextButton>
-      </div> */
-      }
+      </div> */}
 
       <ul
         class={clx(
           "col-span-full row-start-4 z-10 h-3",
-          "carousel justify-center gap-2",
+          "carousel justify-center gap-2"
         )}
       >
         {images.map((_, index) => (
@@ -181,10 +180,9 @@ function Carousel({ images = [], preload, interval }: Props) {
               index={index}
               class={clx(
                 "bg-white  h-3 w-3 no-animation rounded-full",
-                "disabled:bg-[#2D2D2D]  transition-[background]",
+                "disabled:bg-[#2D2D2D]  transition-[background]"
               )}
-            >
-            </Slider.Dot>
+            ></Slider.Dot>
           </li>
         ))}
       </ul>
@@ -195,3 +193,5 @@ function Carousel({ images = [], preload, interval }: Props) {
 }
 
 export default Carousel;
+
+export const LoadingFallback = () => <Section.Placeholder height="300px" />;
