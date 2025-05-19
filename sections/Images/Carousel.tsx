@@ -19,15 +19,16 @@ export interface Banner {
   /** @description Image's alt text */
   alt: string;
 
+  /** @description Optional action configuration */
   action?: {
     /** @description when user clicks on the image, go to this link */
-    href: string;
+    href?: string;
     /** @description Image text title */
-    title: string;
+    title?: string;
     /** @description Image text subtitle */
-    subTitle: string;
+    subTitle?: string;
     /** @description Button label */
-    label: string;
+    label?: string;
   };
 }
 
@@ -46,15 +47,8 @@ export interface Props {
   interval?: number;
 }
 
-function BannerItem(
-  { image, lcp }: { image: Banner; lcp?: boolean },
-) {
-  const {
-    alt,
-    mobile,
-    desktop,
-    action,
-  } = image;
+function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
+  const { alt, mobile, desktop, action } = image;
   const params = { promotion_name: image.alt };
 
   const selectPromotionEvent = useSendEvent({
@@ -67,34 +61,41 @@ function BannerItem(
     event: { name: "view_promotion", params },
   });
 
+  const hasAction =
+    action && (action.href || action.title || action.subTitle || action.label);
+
   return (
     <a
-      {...selectPromotionEvent}
+      {...(hasAction ? selectPromotionEvent : {})}
       href={action?.href ?? "#"}
       aria-label={action?.label}
       class="relative block overflow-y-hidden w-full"
     >
-      {action && (
+      {hasAction && (
         <div
           class={clx(
             "absolute h-full w-full top-0 left-0",
             "flex flex-col justify-center items-center",
             "px-5 sm:px-0",
-            "sm:left-40 sm:items-start sm:max-w-96",
+            "sm:left-40 sm:items-start sm:max-w-96"
           )}
         >
-          <span class="text-7xl font-bold text-base-100">
-            {action.title}
-          </span>
-          <span class="font-normal text-base text-base-100 pt-4 pb-12">
-            {action.subTitle}
-          </span>
-          <button
-            class="btn btn-primary btn-outline border-0 bg-base-100 min-w-[180px]"
-            aria-label={action.label}
-          >
-            {action.label}
-          </button>
+          {action.title && (
+            <span class="text-7xl font-bold text-base-100">{action.title}</span>
+          )}
+          {action.subTitle && (
+            <span class="font-normal text-base text-base-100 pt-4 pb-12">
+              {action.subTitle}
+            </span>
+          )}
+          {action.label && (
+            <button
+              class="btn btn-primary btn-outline border-0 bg-base-100 min-w-[180px]"
+              aria-label={action.label}
+            >
+              {action.label}
+            </button>
+          )}
         </div>
       )}
       <Picture preload={lcp} {...viewPromotionEvent}>
@@ -123,6 +124,7 @@ function BannerItem(
   );
 }
 
+// O restante do componente Carousel permanece o mesmo
 function Carousel({ images = [], preload, interval }: Props) {
   const id = useId();
 
@@ -131,10 +133,10 @@ function Carousel({ images = [], preload, interval }: Props) {
       id={id}
       class={clx(
         "grid",
-        "grid-rows-[1fr_32px_1fr_64px]",
+        "grid-rows-[1fr_32px_1fr_42px]",
         "grid-cols-[32px_1fr_32px] min-h-[660px]",
-        "sm:grid-cols-[112px_1fr_112px] sm:min-h-min",
-        "w-screen",
+        "sm:grid-cols-[112px_1fr_42px] sm:min-h-min",
+        "w-screen"
       )}
     >
       <div class="col-span-full row-span-full">
@@ -147,7 +149,7 @@ function Carousel({ images = [], preload, interval }: Props) {
         </Slider>
       </div>
 
-      <div class="hidden sm:flex items-center justify-center z-10 col-start-1 row-start-2">
+      {/* <div class="hidden sm:flex items-center justify-center z-10 col-start-1 row-start-2">
         <Slider.PrevButton
           class="btn btn-neutral btn-outline btn-circle no-animation btn-sm"
           disabled={false}
@@ -163,24 +165,23 @@ function Carousel({ images = [], preload, interval }: Props) {
         >
           <Icon id="chevron-right" />
         </Slider.NextButton>
-      </div>
+      </div> */}
 
       <ul
         class={clx(
-          "col-span-full row-start-4 z-10",
-          "carousel justify-center gap-3",
+          "col-span-full row-start-4 z-10 h-3",
+          "carousel justify-center gap-2"
         )}
       >
         {images.map((_, index) => (
-          <li class="carousel-item">
+          <li class="carousel-item h-3">
             <Slider.Dot
               index={index}
               class={clx(
-                "bg-black opacity-20 h-3 w-3 no-animation rounded-full",
-                "disabled:w-8 disabled:bg-base-100 disabled:opacity-100 transition-[width]",
+                "bg-white  h-3 w-3 no-animation rounded-full",
+                "disabled:bg-[#2D2D2D]  transition-[background]"
               )}
-            >
-            </Slider.Dot>
+            ></Slider.Dot>
           </li>
         ))}
       </ul>
