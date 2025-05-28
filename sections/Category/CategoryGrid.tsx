@@ -68,7 +68,7 @@ function CategoryGrid({ title, cta, items, showArrows = true }: Props) {
                 // Tablet: 3 itens
                 "md:w-[calc(33.333%-16px)]",
                 // Desktop: tamanho máximo
-                "lg:w-[calc(25%-20px)] xl:w-[calc(20%-20px)]"
+                "lg:w-[calc(25%-20px)] xl:w-[calc(20%-20px)]",
               )}
             >
               <Card {...i} />

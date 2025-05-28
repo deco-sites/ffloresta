@@ -7,26 +7,8 @@
     "--animation-btn": "0.25s"
   },
   "font": {
-    "__resolveType": "website/loaders/fonts/googleFonts.ts",
-    "fonts": [
-      {
-        "variations": [
-          {
-            "weight": "400"
-          },
-          {
-            "weight": "500"
-          },
-          {
-            "weight": "600"
-          },
-          {
-            "weight": "700"
-          }
-        ],
-        "family": "Inter"
-      }
-    ]
+    "family": "FS Emeric",
+    "styleSheet": "<style> @font-face {   font-family: 'FS Emeric Bold';   font-style: normal;   font-weight: 700;   font-display: swap;   src: url(/live/invoke/website/loaders/asset.ts?src=https://ffloresta.deco.site/FS Emeric-Bold.ttf) format('truetype'); }  @font-face {   font-family: 'FS Emeric Book';   font-style: normal;   font-weight: 400;   font-display: swap;   src: url(/live/invoke/website/loaders/asset.ts?src=https://ffloresta.deco.site/FS Emeric-Book.ttf) format('truetype'); }  @font-face {   font-family: 'FS Emeric ExtraBold Italic';   font-style: italic;   font-weight: 800;   font-display: swap;   src: url(/live/invoke/website/loaders/asset.ts?src=https://ffloresta.deco.site/FS Emeric-ExtraBold Italic.ttf) format('truetype'); }  @font-face {   font-family: 'FS Emeric ExtraBold';   font-style: normal;   font-weight: 800;   font-display: swap;   src: url(/live/invoke/website/loaders/asset.ts?src=https://ffloresta.deco.site/FS Emeric-ExtraBold.ttf) format('truetype'); }  @font-face {   font-family: 'FS Emeric ExtraLight Italic';   font-style: italic;   font-weight: 200;   font-display: swap;   src: url(/live/invoke/website/loaders/asset.ts?src=https://ffloresta.deco.site/FS Emeric-ExtraLight Italic.ttf) format('truetype'); }  @font-face {   font-family: 'FS Emeric ExtraLight';   font-style: normal;   font-weight: 200;   font-display: swap;   src: url(/live/invoke/website/loaders/asset.ts?src=https://ffloresta.deco.site/FS Emeric-ExtraLight.ttf) format('truetype'); }  @font-face {   font-family: 'FS Emeric Heavy Italic';   font-style: italic;   font-weight: 900;   font-display: swap;   src: url(/live/invoke/website/loaders/asset.ts?src=https://ffloresta.deco.site/FS Emeric-Heavy Italic.ttf) format('truetype'); }  @font-face {   font-family: 'FS Emeric Heavy';   font-style: normal;   font-weight: 900;   font-display: swap;   src: url(/live/invoke/website/loaders/asset.ts?src=https://ffloresta.deco.site/FS Emeric-Heavy.ttf) format('truetype'); }  @font-face {   font-family: 'FS Emeric Light Italic';   font-style: italic;   font-weight: 300;   font-display: swap;   src: url(/live/invoke/website/loaders/asset.ts?src=https://ffloresta.deco.site/FS Emeric-Light Italic.ttf) format('truetype'); }  @font-face {   font-family: 'FS Emeric Light';   font-style: normal;   font-weight: 300;   font-display: swap;   src: url(/live/invoke/website/loaders/asset.ts?src=https://ffloresta.deco.site/FS Emeric-Light.ttf) format('truetype'); }  @font-face {   font-family: 'FS Emeric Medium Italic';   font-style: italic;   font-weight: 500;   font-display: swap;   src: url(/live/invoke/website/loaders/asset.ts?src=https://ffloresta.deco.site/FS Emeric-Medium Italic.ttf) format('truetype'); }  @font-face {   font-family: 'FS Emeric Medium';   font-style: normal;   font-weight: 500;   font-display: swap;   src: url(/live/invoke/website/loaders/asset.ts?src=https://ffloresta.deco.site/FS Emeric-Medium.ttf) format('truetype'); }  @font-face {   font-family: 'FS Emeric Regular';   font-style: normal;   font-weight: 400;   font-display: swap;   src: url(/live/invoke/website/loaders/asset.ts?src=https://ffloresta.deco.site/FS Emeric-Regular.ttf) format('truetype'); }  @font-face {   font-family: 'FS Emeric SemiBold';   font-style: normal;   font-weight: 600;   font-display: swap;   src: url(/live/invoke/website/loaders/asset.ts?src=https://ffloresta.deco.site/FS Emeric-SemiBold.ttf) format('truetype'); }  @font-face {   font-family: 'FS Emeric Thin Italic';   font-style: italic;   font-weight: 100;   font-display: swap;   src: url(/live/invoke/website/loaders/asset.ts?src=https://ffloresta.deco.site/FS Emeric-Thin Italic.ttf) format('truetype'); }  @font-face {   font-family: 'FS Emeric Thin';   font-style: normal;   font-weight: 100;   font-display: swap;   src: url(/live/invoke/website/loaders/asset.ts?src=https://ffloresta.deco.site/FS Emeric-Thin.ttf) format('truetype'); }  @font-face {   font-family: 'FS Emeric Bold Italic';   font-style: italic;   font-weight: 700;   font-display: swap;   src: url(/live/invoke/website/loaders/asset.ts?src=https://ffloresta.deco.site/FS Emeric-Bold Italic.ttf) format('truetype'); }  @font-face {   font-family: 'FS Emeric Book Italic';   font-style: italic;   font-weight: 400;   font-display: swap;   src: url(/live/invoke/website/loaders/asset.ts?src=https://ffloresta.deco.site/FS Emeric-Book Italic.ttf) format('truetype'); } </style>"
   },
   "colorScheme": "any",
   "otherStyles": {

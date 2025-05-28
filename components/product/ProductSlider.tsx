@@ -28,7 +28,7 @@ function ProductSlider({ products, itemListName }: Props) {
                 // Tablet: 3 itens
                 "md:w-[calc(33.333%-16px)]",
                 // Desktop: 4-5 itens (258px máximo)
-                "lg:w-[calc(25%-20px)] xl:w-[calc(20%-20px)] max-w-[258px]"
+                "lg:w-[calc(25%-20px)] xl:w-[calc(20%-20px)] max-w-[258px]",
               )}
             >
               <ProductCard
