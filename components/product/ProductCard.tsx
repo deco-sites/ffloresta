@@ -7,27 +7,19 @@ import { relative } from "../../sdk/url.ts";
 import { useOffer } from "../../sdk/useOffer.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import { useVariantPossibilities } from "../../sdk/useVariantPossiblities.ts";
-import WishlistButton from "../wishlist/WishlistButton.tsx";
 import AddToCartButton from "./AddToCartButton.tsx";
-import { Ring } from "./ProductVariantSelector.tsx";
 import { useId } from "../../sdk/useId.ts";
 
 interface Props {
   product: Product;
-  /** Preload card image */
   preload?: boolean;
-
-  /** @description used for analytics event */
   itemListName?: string;
-
-  /** @description index of the product card in the list */
   index?: number;
-
   class?: string;
 }
 
-const WIDTH = 287;
-const HEIGHT = 287;
+const WIDTH = 258;
+const HEIGHT = 210;
 const ASPECT_RATIO = `${WIDTH} / ${HEIGHT}`;
 
 function ProductCard({
@@ -38,25 +30,20 @@ function ProductCard({
   class: _class,
 }: Props) {
   const id = useId();
-
   const { url, image: images, offers, isVariantOf } = product;
   const hasVariant = isVariantOf?.hasVariant ?? [];
   const title = isVariantOf?.name ?? product.name;
   const [front, back] = images ?? [];
-
   const { listPrice, price, seller = "1", availability } = useOffer(offers);
   const inStock = availability === "https://schema.org/InStock";
   const possibilities = useVariantPossibilities(hasVariant, product);
   const firstSkuVariations = Object.entries(possibilities)?.[0];
-  const variants = Object.entries(firstSkuVariations?.[1] ?? {});
   const relativeUrl = relative(url);
-  const percent = listPrice && price
-    ? Math.round(((listPrice - price) / listPrice) * 100)
-    : 0;
-
+  const percent =
+    listPrice && price
+      ? Math.round(((listPrice - price) / listPrice) * 100)
+      : 0;
   const item = mapProductToAnalyticsItem({ product, price, listPrice, index });
-
-  {/* Add click event to dataLayer */}
   const event = useSendEvent({
     on: "click",
     event: {
@@ -68,32 +55,30 @@ function ProductCard({
     },
   });
 
-  //Added it to check the variant name in the SKU Selector later, so it doesn't render the SKU to "shoes size" in the Product Card
-  const firstVariantName = firstSkuVariations?.[0]?.toLowerCase();
-  const shoeSizeVariant = "shoe size";
-
   return (
     <div
       {...event}
-      class={clx("card card-compact group text-sm", _class)}
+      class={clx(
+        "bg-white flex flex-col p-[18px_24px] w-full max-w-[258px] border-solid border-[0.7px] border-[#8D98A0] font-['FS_Emeric']",
+        _class
+      )}
     >
-      <figure
-        class={clx(
-          "relative bg-base-200",
-          "rounded border border-transparent",
-          "group-hover:border-primary",
-        )}
-        style={{ aspectRatio: ASPECT_RATIO }}
-      >
+      <figure class="relative">
+        {/* Flags no topo */}
+        <div class="absolute top-0 left-0 flex gap-2">
+          <span class="w-full text-xs font-bold text-white bg-[#C60000] h-[15px] flex items-center px-2">
+            NOVIDADE
+          </span>
+        </div>
+
         {/* Product Images */}
         <a
           href={relativeUrl}
           aria-label="view product"
           class={clx(
-            "absolute top-0 left-0",
             "grid grid-cols-1 grid-rows-1",
-            "w-full",
-            !inStock && "opacity-70",
+            "w-full mt-10",
+            !inStock && "opacity-70"
           )}
         >
           <Image
@@ -102,11 +87,7 @@ function ProductCard({
             width={WIDTH}
             height={HEIGHT}
             style={{ aspectRatio: ASPECT_RATIO }}
-            class={clx(
-              "object-cover",
-              "rounded w-full",
-              "col-span-full row-span-full",
-            )}
+            class={clx("object-cover", "w-full", "col-span-full row-span-full")}
             sizes="(max-width: 640px) 50vw, 20vw"
             preload={preload}
             loading={preload ? "eager" : "lazy"}
@@ -120,9 +101,9 @@ function ProductCard({
             style={{ aspectRatio: ASPECT_RATIO }}
             class={clx(
               "object-cover",
-              "rounded w-full",
+              "w-full",
               "col-span-full row-span-full",
-              "transition-opacity opacity-0 lg:group-hover:opacity-100",
+              "transition-opacity opacity-0 lg:group-hover:opacity-100"
             )}
             sizes="(max-width: 640px) 50vw, 20vw"
             loading="lazy"
@@ -130,103 +111,118 @@ function ProductCard({
           />
         </a>
 
-        {/* Wishlist button */}
-        <div class="absolute top-0 left-0 w-full flex items-center justify-between">
-          {/* Notify Me */}
-          <span
-            class={clx(
-              "text-sm/4 font-normal text-black bg-error bg-opacity-15 text-center rounded-badge px-2 py-1",
-              inStock && "opacity-0",
-            )}
-          >
-            Notify me
-          </span>
-
-          {/* Discounts */}
-          <span
-            class={clx(
-              "text-sm/4 font-normal text-black bg-primary bg-opacity-15 text-center rounded-badge px-2 py-1",
-              (percent < 1 || !inStock) && "opacity-0",
-            )}
-          >
-            {percent} % off
-          </span>
-        </div>
-
-        <div class="absolute bottom-0 right-0">
-          <WishlistButton item={item} variant="icon" />
-        </div>
+        {/* Flag "Chegará amanhã" */}
+        {inStock && (
+          <div class="mt-2">
+            <span class="text-xs font-bold text-white bg-[#FF7315] h-[15px] flex items-center px-2 w-max">
+              CHEGARÁ AMANHÃ
+            </span>
+          </div>
+        )}
       </figure>
 
-      <a href={relativeUrl} class="pt-5">
-        <span class="font-medium">
-          {title}
-        </span>
+      {/* Product Info */}
+      <div class="mt-2 flex flex-col flex-grow">
+        <a href={relativeUrl} class="block">
+          {/* Product Title */}
+          <h3 class="text-[#3A4332] font-bold text-[12px] leading-[137%] tracking-[0%]">
+            {title}
+          </h3>
 
-        <div class="flex gap-2 pt-2">
-          {listPrice && (
-            <span class="line-through font-normal text-gray-400">
-              {formatPrice(listPrice, offers?.priceCurrency)}
-            </span>
-          )}
-          <span class="font-medium text-base-400">
-            {formatPrice(price, offers?.priceCurrency)}
-          </span>
+          {/* Prices */}
+          <div class="flex flex-col mt-1">
+            {listPrice && price && listPrice > price && (
+              <div class="text-[#8D98A0]">
+                <span class="font-bold text-[7.73px] leading-[170%] tracking-[3%]">
+                  R$
+                </span>
+                <span class="font-bold text-[11.24px] leading-[170%] tracking-[3%] line-through ml-1">
+                  {formatPrice(listPrice, offers?.priceCurrency).replace(
+                    "R$",
+                    ""
+                  )}
+                </span>
+              </div>
+            )}
+            <div class="flex items-center gap-1">
+              <div class="text-[#3A4332]">
+                <span class="font-bold text-[12.65px] leading-[170%] tracking-[3%]">
+                  R$
+                </span>
+                <span class="font-bold text-[7.73px] leading-[170%] tracking-[3%] ml-1">
+                  {formatPrice(price, offers?.priceCurrency).replace("R$", "")}
+                </span>
+              </div>
+              {percent > 0 && (
+                <span class="min-w-[30px] bg-[#3A4332] text-white font-bold text-[8.43px] leading-[170%] tracking-[3%] text-center px-1">
+                  {percent}% OFF
+                </span>
+              )}
+            </div>
+          </div>
+        </a>
+
+        {/* Seção de pagamento PIX */}
+        <div class="h-6 mt-2">
+          <div class="text-[#8D98A0] font-bold text-[10px] leading-[170%] tracking-[0%]">
+            À vista no PIX
+          </div>
+          <div class="flex items-center gap-1 text-[#8D98A0] font-bold text-[10px] leading-[170%] tracking-[0%]">
+            <svg
+              width="14"
+              height="9"
+              viewBox="0 0 14 9"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="text-[#8D98A0]"
+            >
+              <rect
+                x="1.0088"
+                y="0.471508"
+                width="11.9473"
+                height="7.7306"
+                rx="1.75695"
+                stroke="currentColor"
+                stroke-width="0.702782"
+              />
+              <rect
+                x="0.65741"
+                y="2.93127"
+                width="12.6501"
+                height="1.40556"
+                fill="currentColor"
+              />
+            </svg>
+            1x de R${" "}
+            {formatPrice(price, offers?.priceCurrency).replace("R$", "")}
+          </div>
         </div>
-      </a>
 
-      {/* SKU Selector */}
-      {variants.length > 1 && firstVariantName !== shoeSizeVariant && (
-        <ul class="flex items-center justify-start gap-2 pt-4 pb-1 pl-1 overflow-x-auto">
-          {variants.map(([value, link]) => [value, relative(link)] as const)
-            .map(([value, link]) => (
-              <li>
-                <a href={link} class="cursor-pointer">
-                  <input
-                    class="hidden peer"
-                    type="radio"
-                    name={`${id}-${firstSkuVariations?.[0]}`}
-                    checked={link === relativeUrl}
-                  />
-                  <Ring value={value} checked={link === relativeUrl} />
-                </a>
-              </li>
-            ))}
-        </ul>
-      )}
-
-      <div class="flex-grow" />
-
-      <div>
-        {inStock
-          ? (
+        {/* Add to cart button */}
+        <div class="mt-auto pt-4">
+          {inStock ? (
             <AddToCartButton
               product={product}
               seller={seller}
               item={item}
               class={clx(
-                "btn",
-                "btn-outline justify-start border-none !text-sm !font-medium px-0 no-animation w-full",
-                "hover:!bg-transparent",
-                "disabled:!bg-transparent disabled:!opacity-50",
-                "btn-primary hover:!text-primary disabled:!text-primary",
+                "w-full bg-[#3A4332] text-[#97A37F] h-8 flex items-center justify-center",
+                "font-bold text-[14.06px] leading-[170%] tracking-[16%]",
+                "hover:bg-[#293023]"
               )}
             />
-          )
-          : (
+          ) : (
             <a
               href={relativeUrl}
               class={clx(
-                "btn",
-                "btn-outline justify-start border-none !text-sm !font-medium px-0 no-animation w-full",
-                "hover:!bg-transparent",
-                "disabled:!bg-transparent disabled:!opacity-75",
-                "btn-error hover:!text-error disabled:!text-error",
+                "w-full bg-[#293023] text-white h-8 flex items-center justify-center",
+                "font-bold text-[14.06px] leading-[170%] tracking-[16%]"
               )}
             >
-              Sold out
+              INDISPONÍVEL
             </a>
           )}
+        </div>
       </div>
     </div>
   );
