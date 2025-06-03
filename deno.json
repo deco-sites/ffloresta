@@ -69,11 +69,10 @@
   "lint": {
     "rules": { "exclude": ["no-window"], "tags": ["fresh", "recommended"] }
   },
-  "nodeModulesDir": false,
+  "nodeModulesDir": "auto",
   "compilerOptions": {
     "jsx": "react-jsx",
-    "jsxImportSource": "preact",
-    "experimentalDecorators": true
+    "jsxImportSource": "preact"
   },
   "lock": false
 }
