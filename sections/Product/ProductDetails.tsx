@@ -1,9 +1,10 @@
 import { ProductDetailsPage } from "apps/commerce/types.ts";
 import ImageGallerySlider from "../../components/product/Gallery.tsx";
 import ProductInfo from "../../components/product/ProductInfo.tsx";
-import Breadcrumb from "../../components/ui/Breadcrumb.tsx";
+// import Breadcrumb from "../../components/ui/Breadcrumb.tsx";
 import Section from "../../components/ui/Section.tsx";
 import { clx } from "../../sdk/clx.ts";
+import ProductDescription from "../../islands/ProductDescription.tsx";
 
 export interface Props {
   /** @title Integration */
@@ -28,25 +29,27 @@ export default function ProductDetails({ page }: Props) {
   }
 
   return (
-    <div class="container flex flex-col gap-4 sm:gap-5 w-full py-4 sm:py-5 px-5 sm:px-0">
-      <Breadcrumb itemListElement={page.breadcrumbList.itemListElement} />
+    <div class="w-full flex flex-col py-0 sm:py-16 px-5 sm:px-0">
+      {/* <Breadcrumb itemListElement={page.breadcrumbList.itemListElement} /> */}
 
       <div
         class={clx(
-          "container grid",
-          "grid-cols-1 gap-2 py-0",
-          "sm:grid-cols-5 sm:gap-6",
+          "container grid max-w-[915px]",
+          "grid-cols-1 gap-9 py-0",
+          "sm:grid-cols-2 sm:gap-11"
         )}
       >
-        <div class="sm:col-span-3">
+        <div class="">
           <ImageGallerySlider page={page} />
         </div>
-        <div class="sm:col-span-2">
+        <div class="">
           <ProductInfo page={page} />
         </div>
       </div>
+
+      <ProductDescription page={page} />
     </div>
   );
 }
 
-export const LoadingFallback = () => <Section.Placeholder height="635px" />;
+export const LoadingFallback = () => <Section.Placeholder height="580px" />;
