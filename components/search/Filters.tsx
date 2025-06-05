@@ -8,8 +8,6 @@ import { parseRange } from "apps/commerce/utils/filters.ts";
 import Avatar from "../../components/ui/Avatar.tsx";
 import { clx } from "../../sdk/clx.ts";
 import { formatPrice } from "../../sdk/format.ts";
-import { h } from "preact";
-import { useState } from "preact/hooks";
 
 interface Props {
   filters: ProductListingPage["filters"];
@@ -23,12 +21,9 @@ function ValueItem(
 ) {
   return (
     <a href={url} rel="nofollow" class="flex items-center gap-2">
-      <div
-        aria-checked={selected}
-        class="checkbox rounded-none w-4 h-4 max-w-4 max-h-4"
-      />
-      <span class="text-md ext-[#1F251C]">{label}</span>
-      {/* {quantity > 0 && <span class="text-sm text-base-400">({quantity})</span>} */}
+      <div aria-checked={selected} class="checkbox" />
+      <span class="text-sm">{label}</span>
+      {quantity > 0 && <span class="text-sm text-base-400">({quantity})</span>}
     </a>
   );
 }
@@ -72,17 +67,13 @@ function FilterValues({ key, values }: FilterToggle) {
 
 function Filters({ filters }: Props) {
   return (
-    <ul class="flex flex-col gap-6 sm:p-0 divide-y divide-[#CCCCCC]">
+    <ul class="flex flex-col gap-6 p-4 sm:p-0">
       {filters
         .filter(isToggle)
         .map((filter) => (
-          <li class="flex flex-col gap-4 pt-4 px-4 xl:pr-0">
-            <span class="text-md font-medium text-[#1F251C]">
-              {filter.label}
-            </span>
-            <div class="md:max-h-80 md:overflow-auto">
-              <FilterValues {...filter} />
-            </div>
+          <li class="flex flex-col gap-4">
+            <span>{filter.label}</span>
+            <FilterValues {...filter} />
           </li>
         ))}
     </ul>

@@ -31,16 +31,11 @@ function Sort({ sortOptions, url }: Props) {
     label,
   }));
   return (
-    <div class="flex items-center w-full md:w-auto">
-      <label
-        for="sort"
-        class="text-md text-[#1F251C] font-normal hidden md:inline"
-      >
-        Ordenar por:
-      </label>
+    <>
+      <label for="sort" class="sr-only">Sort by</label>
       <select
         name="sort"
-        class="select w-full md:max-w-40 max-h-9 h-9 min-h-9 md:ml-2 text-sm rounded-none uppercase border-[#BCBCBC]"
+        class="select w-full max-w-sm rounded-lg"
         hx-on:change={useScript(() => {
           const select = event!.currentTarget as HTMLSelectElement;
           window.location.href = select.value;
@@ -56,7 +51,7 @@ function Sort({ sortOptions, url }: Props) {
           </option>
         ))}
       </select>
-    </div>
+    </>
   );
 }
 export default Sort;
