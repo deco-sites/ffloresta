@@ -1,5 +1,6 @@
-import { useDevice } from "@deco/deco/hooks";
+import { useDevice, useScript } from "@deco/deco/hooks";
 import { type ImageWidget } from "apps/admin/widgets.ts";
+import { invoke } from "apps/vtex/runtime.ts";
 import Image from "apps/website/components/Image.tsx";
 import Section from "../../components/ui/Section.tsx";
 
@@ -77,19 +78,46 @@ function Footer({
   lojas = { title: "", lojas: [], verMais: "/" },
 }: Props) {
   const device = useDevice();
-  const handleSubmit = (e: { preventDefault: () => void; target: any }) => {
-    e.preventDefault();
-    const form = e.target;
-    const name = form.name.value;
-    const email = form.email.value;
-    const politica = form.politica.value;
+  const handleSubmit = async () => {
+    console.log("oiii");
+    const nameInput = document.getElementById(
+      "name",
+    ) as HTMLInputElement | null;
+    const emailInput = document.getElementById(
+      "email",
+    ) as HTMLInputElement | null;
+    const politicaInput = document.getElementById(
+      "politica",
+    ) as HTMLInputElement | null;
 
-    console.log("Nome:", name, "Email:", email), politica;
+    if (!nameInput || !emailInput || !politicaInput) {
+      alert("Não foi possível acessar os campos do formulário.");
+      return;
+    }
 
-    // Aqui você pode adicionar a lógica de envio (ex: fetch para API)
-    alert("Obrigado por se inscrever, " + name + "!");
+    const name = nameInput.value.trim();
+    const emaill = emailInput.value.trim();
+    const politica = politicaInput.checked ? "aceito" : "não aceito";
 
-    form.reset(); // opcional: limpa o formulário
+    if (!name || !emaill || politica !== "aceito") {
+      alert("Preencha todos os campos e aceite a política de privacidade.");
+      return;
+    }
+
+    try {
+      await invoke.vtex.actions.masterdata.createDocument({
+        data: { name, emaill, politica },
+        acronym: "NL",
+      });
+
+      alert("Cadastro realizado com sucesso!");
+      nameInput.value = "";
+      emailInput.value = "";
+      politicaInput.checked = false;
+    } catch (err) {
+      console.error("Erro ao enviar:", err);
+      alert("Erro ao cadastrar. Tente novamente.");
+    }
   };
 
   return (
@@ -99,7 +127,7 @@ function Footer({
           <p class="text-[20px] lg:text-[22px] text-[#ffffff] text-center font-normal mb-[20px]">
             RECEBA DESCONTOS E NOVIDADES DIRETAMENTE NO SEU E-MAIL
           </p>
-          <form onSubmit={handleSubmit} class="space-y-4">
+          <div class="space-y-4">
             <div class="flex flex-col lg:flex-row w-full gap-2 lg:items-end  items-center">
               <div class="flex flex-col w-full lg:w-[40%] max-w-[300px]">
                 <label
@@ -112,7 +140,7 @@ function Footer({
                   type="text"
                   name="name"
                   id="name"
-                  class="w-full px-3 py-2 border border-write text-[#ffffff] placeholder-white max-h-[36px] shadow-sm focus:outline-none focus:ring-2  bg-[#94A57D]"
+                  class="w-full px-3 py-2 border outline-none border-write text-[#ffffff] placeholder-white max-h-[36px] shadow-sm focus:outline-none focus:ring-2  bg-[#94A57D]"
                   placeholder="Seu nome"
                   required
                 />
@@ -128,13 +156,14 @@ function Footer({
                   type="email"
                   name="email"
                   id="email"
-                  class="w-full px-3 py-2 border border-write text-[#ffffff] placeholder-white max-h-[36px] shadow-sm focus:outline-none focus:ring-2  bg-[#94A57D]"
+                  class="w-full px-3 py-2 border outline-none border-write text-[#ffffff] placeholder-white max-h-[36px] shadow-sm focus:outline-none focus:ring-2  bg-[#94A57D]"
                   placeholder="seu@email.com"
                   required
                 />
               </div>
               <button
-                type="submit"
+                type="button"
+                hx-on:click={useScript(handleSubmit)}
                 class="w-full text-[12px] text-white py-2 max-h-[36px] max-w-[210px] lg:max-w-[100px] bg-[#4B5941] flex justify-center items-center"
               >
                 CADASTRAR
@@ -151,7 +180,7 @@ function Footer({
                 NÃO RECEBE SPAM
               </p>
             </label>
-          </form>
+          </div>
         </div>
       </div>
       {device === "mobile"
