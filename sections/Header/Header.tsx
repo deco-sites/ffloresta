@@ -12,7 +12,6 @@ import Drawer from "../../components/ui/Drawer.tsx";
 import Icon from "../../components/ui/Icon.tsx";
 import Modal from "../../components/ui/Modal.tsx";
 import {
-  HEADER_HEIGHT_DESKTOP,
   HEADER_HEIGHT_MOBILE,
   NAVBAR_HEIGHT_MOBILE,
   SEARCHBAR_DRAWER_ID,
@@ -22,12 +21,15 @@ import {
 } from "../../constants.ts";
 import { useDevice } from "@deco/deco/hooks";
 import { type LoadingFallbackProps } from "@deco/deco";
+import SignIn from "../../components/header/SignIn.tsx";
+
 export interface Logo {
   src: ImageWidget;
   alt: string;
   width?: number;
   height?: number;
 }
+
 export interface SectionProps {
   alerts?: HTMLWidget[];
   /**
@@ -43,16 +45,18 @@ export interface SectionProps {
   /** @title Logo */
   logo: Logo;
   /**
-   * @description Usefull for lazy loading hidden elements, like hamburguer menus etc
+   * @description Useful for lazy loading hidden elements, like hamburger menus etc
    * @hide true */
   loading?: "eager" | "lazy";
 }
+
 type Props = Omit<SectionProps, "alert">;
+
 const Desktop = ({ navItems, logo, searchbar, loading }: Props) => (
   <>
     <Modal id={SEARCHBAR_POPUP_ID}>
       <div
-        class="absolute top-0 bg-base-100 container"
+        class="absolute top-0 bg-base-100 container max-w-[638px]"
         style={{ marginTop: HEADER_HEIGHT_MOBILE }}
       >
         {loading === "lazy"
@@ -65,8 +69,8 @@ const Desktop = ({ navItems, logo, searchbar, loading }: Props) => (
       </div>
     </Modal>
 
-    <div class="flex flex-col gap-4 pt-5 container border-b border-gray-300">
-      <div class="grid grid-cols-3 place-items-center">
+    <div class="">
+      <div class="container flex items-center justify-between p-5">
         <div class="place-self-start">
           <a href="/" aria-label="Store logo">
             <Image
@@ -80,31 +84,36 @@ const Desktop = ({ navItems, logo, searchbar, loading }: Props) => (
 
         <label
           for={SEARCHBAR_POPUP_ID}
-          class="input input-bordered flex items-center gap-2 w-full"
+          class="flex items-center gap-2 w-full max-w-[638px] h-[38px] bg-[#D9D9D9] px-4 cursor-pointer"
           aria-label="search icon button"
         >
-          <Icon id="search" />
-          <span class="text-base-400 truncate">
-            Search products, brands...
+          <Icon id="search" class="text-gray-600" />
+          <span class="text-gray-600 text-sm font-normal truncate">
+            {searchbar.placeholder}
           </span>
         </label>
 
-        <div class="flex gap-4 place-self-end">
-          <Bag />
+        <div class="flex items-center gap-6">
+          <div class="flex gap-[14px] cursor-pointer text-white place-self-end">
+            <SignIn variant={"desktop"} />
+          </div>
+          <div class="flex gap-[14px] cursor-pointer text-white place-self-end">
+            <Bag />
+            <span class="hidden md:block">CARRINHO</span>
+          </div>
         </div>
       </div>
 
-      <div class="flex justify-between items-center">
-        <ul class="flex">
+      <div class="bg-white flex justify-between items-center">
+        <ul class="container flex justify-center gap-3">
           {navItems?.slice(0, 10).map((item) => <NavItem item={item} />)}
         </ul>
-        <div>
-          {/* ship to */}
-        </div>
+        <div>{/* ship to */}</div>
       </div>
     </div>
   </>
 );
+
 const Mobile = ({ logo, searchbar, navItems, loading }: Props) => (
   <>
     <Drawer
@@ -176,15 +185,16 @@ const Mobile = ({ logo, searchbar, navItems, loading }: Props) => (
 
       <label
         for={SEARCHBAR_DRAWER_ID}
-        class="btn btn-square btn-sm btn-ghost"
+        class="flex items-center justify-center w-[38px] h-[38px] bg-[#D9D9D9]"
         aria-label="search icon button"
       >
-        <Icon id="search" />
+        <Icon id="search" class="text-gray-600" />
       </label>
       <Bag />
     </div>
   </>
 );
+
 function Header({
   alerts = [],
   logo = {
@@ -197,15 +207,10 @@ function Header({
   ...props
 }: Props) {
   const device = useDevice();
+
   return (
-    <header
-      style={{
-        height: device === "desktop"
-          ? HEADER_HEIGHT_DESKTOP
-          : HEADER_HEIGHT_MOBILE,
-      }}
-    >
-      <div class="bg-base-100 fixed w-full z-40">
+    <header>
+      <div class="bg-[#1F251C] fixed w-full z-40">
         {alerts.length > 0 && <Alert alerts={alerts} />}
         {device === "desktop"
           ? <Desktop logo={logo} {...props} />
@@ -214,8 +219,9 @@ function Header({
     </header>
   );
 }
+
 export const LoadingFallback = (props: LoadingFallbackProps<Props>) => (
-  // deno-lint-ignore no-explicit-any
-  <Header {...props as any} loading="lazy" />
+  <Header {...(props as any)} loading="lazy" />
 );
+
 export default Header;
