@@ -1,8 +1,9 @@
 import { useDevice, useScript } from "@deco/deco/hooks";
 import { type ImageWidget } from "apps/admin/widgets.ts";
-import { invoke } from "apps/vtex/runtime.ts";
 import Image from "apps/website/components/Image.tsx";
 import Section from "../../components/ui/Section.tsx";
+import Newsletter from "../../islands/Newsletter.tsx";
+import { invoke } from "../../runtime.ts";
 
 /** @titleBy title */
 interface Item {
@@ -122,6 +123,7 @@ function Footer({
 
   return (
     <footer class="sm:px-0 mt-5 sm:mt-10" style={{ backgroundColor: "#fff" }}>
+      <Newsletter />
       <div class="w-full flex justify-center bg-[#94A57D] pb-[30px] pt-[30px] p-5">
         <div class="flex flex-col max-w-[506px] lg:max-w-[738px] ">
           <p class="text-[20px] lg:text-[22px] text-[#ffffff] text-center font-normal mb-[20px]">
