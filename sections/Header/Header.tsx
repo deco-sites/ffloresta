@@ -4,7 +4,6 @@ import Image from "apps/website/components/Image.tsx";
 import Alert from "../../components/header/Alert.tsx";
 import Bag from "../../components/header/Bag.tsx";
 import Menu from "../../components/header/Menu.tsx";
-import NavItem from "../../components/header/NavItem.tsx";
 import Searchbar, {
   type SearchbarProps,
 } from "../../components/search/Searchbar/Form.tsx";
@@ -22,6 +21,7 @@ import {
 import { useDevice } from "@deco/deco/hooks";
 import { type LoadingFallbackProps } from "@deco/deco";
 import SignIn from "../../components/header/SignIn.tsx";
+import NavItemIsland from "../../islands/Header/NavItemIsland.tsx";
 
 export interface Logo {
   src: ImageWidget;
@@ -105,8 +105,8 @@ const Desktop = ({ navItems, logo, searchbar, loading }: Props) => (
       </div>
 
       <div class="bg-white flex justify-between items-center">
-        <ul class="container flex justify-center gap-3">
-          {navItems?.slice(0, 10).map((item) => <NavItem item={item} />)}
+        <ul class="container flex justify-center">
+          {navItems?.slice(0, 10).map((item) => <NavItemIsland item={item} />)}
         </ul>
         <div>{/* ship to */}</div>
       </div>
