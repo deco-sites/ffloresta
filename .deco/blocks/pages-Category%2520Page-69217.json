@@ -13,8 +13,31 @@
       "section": {
         "__resolveType": "commerce/sections/Seo/SeoPLPV2.tsx",
         "jsonLD": {
-          "__resolveType": "PLP Loader"
+          "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+          "sort": "price:desc",
+          "fuzzy": "automatic",
+          "selectedFacets": [],
+          "advancedConfigs": {
+            "includeOriginalAttributes": []
+          },
+          "count": 12
         }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Images/BannerCategory.tsx",
+        "banners": [
+          {
+            "image": {
+              "desktop": "https://assets.decocache.com/ffloresta/793bebb0-1306-4edb-9bfb-473909fc1669/Mask-group.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png",
+              "alt": "Banner"
+            },
+            "matcher": "/*"
+          }
+        ]
       }
     },
     {
@@ -22,7 +45,12 @@
       "section": {
         "__resolveType": "site/sections/Product/SearchResult.tsx",
         "page": {
-          "__resolveType": "PLP Loader"
+          "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+          "count": 12,
+          "advancedConfigs": {
+            "includeOriginalAttributes": []
+          },
+          "pageOffset": 1
         },
         "layout": {
           "columns": {
@@ -38,7 +66,8 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Newsletter/Newsletter.tsx"
+        "__resolveType": "site/sections/Newsletter/Newsletter.tsx",
+        "empty": {}
       }
     },
     {
