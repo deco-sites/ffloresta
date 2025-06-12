@@ -2,6 +2,7 @@ import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
 import Icon from "../ui/Icon.tsx";
 import { useScript } from "@deco/deco/hooks";
+
 const onLoad = (containerID: string) => {
   window.STOREFRONT.USER.subscribe((sdk) => {
     const container = document.getElementById(containerID) as HTMLDivElement;
@@ -18,34 +19,72 @@ const onLoad = (containerID: string) => {
     }
   });
 };
-function SignIn({ variant }: {
-  variant: "mobile" | "desktop";
-}) {
+
+function SignIn({ variant }: { variant: "mobile" | "desktop" }) {
   const id = useId();
   return (
     <div id={id}>
       <a
         class={clx(
-          "btn btn-sm font-thin btn-ghost no-animation",
-          variant === "mobile" && "btn-square",
+          "flex items-center justify-center font-['FS_Emeric'] font-normal text-[16.87px] leading-none text-white uppercase",
+          variant === "mobile" ? "gap-3.5" : "gap-[14px]",
         )}
         href="/login"
         aria-label="Login"
       >
-        <Icon id="account_circle" />
-        {variant === "desktop" && <span>Sign in</span>}
+        <svg
+          width="21"
+          height="23"
+          viewBox="0 0 21 23"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="9.93851"
+            cy="7.22546"
+            r="5.62225"
+            stroke="white"
+            stroke-width="1.40556"
+          />
+          <path
+            d="M0.802345 21.9839C1.03661 19.6413 3.1918 14.9561 9.93851 14.9561C16.6852 14.9561 19.3089 19.6413 19.7775 21.9839"
+            stroke="white"
+            stroke-width="1.40556"
+          />
+        </svg>
+
+        {variant === "desktop" && <span>FAZER LOGIN</span>}
       </a>
       <a
         class={clx(
-          "hidden",
-          "btn btn-sm font-thin btn-ghost no-animation",
-          variant === "mobile" && "btn-square",
+          "hidden flex items-center justify-center font-['FS_Emeric'] font-normal text-[16.87px] leading-none text-white uppercase",
+          variant === "mobile" ? "gap-3.5" : "gap-[14px]",
         )}
         href="/account"
         aria-label="Account"
       >
-        <Icon id="account_circle" />
-        {variant === "desktop" && <span>My account</span>}
+        <svg
+          width="21"
+          height="23"
+          viewBox="0 0 21 23"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="9.93851"
+            cy="7.22546"
+            r="5.62225"
+            stroke="white"
+            stroke-width="1.40556"
+          />
+          <path
+            d="M0.802345 21.9839C1.03661 19.6413 3.1918 14.9561 9.93851 14.9561C16.6852 14.9561 19.3089 19.6413 19.7775 21.9839"
+            stroke="white"
+            stroke-width="1.40556"
+          />
+        </svg>
+
+        {variant === "desktop" && <span>MINHA CONTA</span>}
       </a>
       <script
         type="module"
@@ -54,4 +93,5 @@ function SignIn({ variant }: {
     </div>
   );
 }
+
 export default SignIn;

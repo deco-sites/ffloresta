@@ -15,11 +15,11 @@ function Alert({ alerts = [], interval = 5 }: Props) {
 
   return (
     <div id={id}>
-      <Slider class="carousel carousel-center w-screen gap-6 bg-secondary text-secondary-content text-sm/4">
+      <Slider class="carousel carousel-center w-screen gap-6 bg-[#3A4332] text-white">
         {alerts.map((alert, index) => (
           <Slider.Item index={index} class="carousel-item">
             <span
-              class="px-5 py-4 w-screen text-center"
+              class="px-5 py-2 w-screen text-center font-['FS_Emeric'] font-normal text-[16.87px] leading-none"
               dangerouslySetInnerHTML={{ __html: alert }}
             />
           </Slider.Item>
