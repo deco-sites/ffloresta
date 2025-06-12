@@ -10,8 +10,9 @@ export default function NavItemIsland({
 }) {
   const { url, name, children } = item;
   const submenuRef = useRef<HTMLDivElement>(null);
-  const [submenuTransform, setSubmenuTransform] =
-    useState<string>("translateX(0)");
+  const [submenuTransform, setSubmenuTransform] = useState<string>(
+    "translateX(0)",
+  );
 
   const hasChildWithImage = children?.some((child) => child.image?.length > 0);
   const childImage = children?.find((child) => child.image?.length > 0)
@@ -51,7 +52,8 @@ export default function NavItemIsland({
     >
       <a
         href={url}
-        class="h-[50px] flex items-center justify-center px-4 font-['FS_Emeric'] font-normal text-[16.87px] leading-[100%] text-[#1F251C] hover:text-white hover:bg-[#3A4332] transition-all duration-300"
+        class="h-[50px] flex items-center justify-center px-4 font-['FS_Emeric'] font-normal text-[16.87px] leading-[100%] text-[#1F251C] hover:text-white hover:bg-[#3A4332] transition-all duration-300
+         max-[1300px]:text-[14px] max-[1300px]:px-3"
       >
         {name}
       </a>
