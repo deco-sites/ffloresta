@@ -21,7 +21,7 @@ import {
 import { useDevice } from "@deco/deco/hooks";
 import { type LoadingFallbackProps } from "@deco/deco";
 import SignIn from "../../components/header/SignIn.tsx";
-import NavItemIsland from "../../islands/Header/NavItemIsland.tsx";
+import NavItemIsland from "../../islands/NavItemIsland.tsx";
 
 export interface Logo {
   src: ImageWidget;

@@ -3,7 +3,7 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $_app from "./routes/_app.tsx";
-import * as $Header_NavItemIsland from "./islands/Header/NavItemIsland.tsx";
+import * as $NavItemIsland from "./islands/NavItemIsland.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -11,7 +11,7 @@ const manifest = {
     "./routes/_app.tsx": $_app,
   },
   islands: {
-    "./islands/Header/NavItemIsland.tsx": $Header_NavItemIsland,
+    "./islands/NavItemIsland.tsx": $NavItemIsland,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;
