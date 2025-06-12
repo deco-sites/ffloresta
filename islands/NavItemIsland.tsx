@@ -9,50 +9,45 @@ export default function NavItemIsland({
   item: SiteNavigationElement;
 }) {
   const { url, name, children } = item;
-
   const submenuRef = useRef<HTMLDivElement>(null);
-  const wrapperRef = useRef<HTMLLIElement>(null);
-  const [submenuTransform, setSubmenuTransform] = useState<string>(
-    "translateX(0)",
-  );
+  const [submenuTransform, setSubmenuTransform] =
+    useState<string>("translateX(0)");
 
   const hasChildWithImage = children?.some((child) => child.image?.length > 0);
   const childImage = children?.find((child) => child.image?.length > 0)
     ?.image?.[0];
 
-  useEffect(() => {
-    const wrapper = wrapperRef.current;
-    const submenu = submenuRef.current;
+  const adjustPosition = () => {
+    const node = submenuRef.current;
+    if (!node) return;
 
-    const handleHover = () => {
-      if (!submenu || !wrapper) return;
+    const rect = node.getBoundingClientRect();
+    const overflowRight = rect.right - window.innerWidth;
+    const overflowLeft = rect.left;
 
-      const submenuRect = submenu.getBoundingClientRect();
-      const wrapperRect = wrapper.getBoundingClientRect();
-      const overflowRight = submenuRect.right - window.innerWidth;
-      const overflowLeft = submenuRect.left;
+    if (overflowRight > 0) {
+      setSubmenuTransform(`translateX(-${overflowRight + 16}px)`);
+    } else if (overflowLeft < 0) {
+      setSubmenuTransform(`translateX(${Math.abs(overflowLeft) + 16}px)`);
+    } else {
+      setSubmenuTransform("translateX(0)");
+    }
+  };
 
-      if (overflowRight > 0) {
-        setSubmenuTransform(`translateX(-${overflowRight + 16}px)`);
-      } else if (overflowLeft < 0) {
-        setSubmenuTransform(`translateX(${Math.abs(overflowLeft) + 16}px)`);
-      } else {
-        setSubmenuTransform("translateX(0)");
-      }
-    };
+  const handleMouseEnter = () => {
+    adjustPosition();
+  };
 
-    wrapper?.addEventListener("mouseenter", handleHover);
-
-    return () => {
-      wrapper?.removeEventListener("mouseenter", handleHover);
-    };
-  }, [children]);
+  const handleMouseLeave = () => {
+    setSubmenuTransform("translateX(0)");
+  };
 
   return (
     <li
-      ref={wrapperRef}
       class="group relative flex items-center"
       style={{ height: NAVBAR_HEIGHT_DESKTOP }}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <a
         href={url}
