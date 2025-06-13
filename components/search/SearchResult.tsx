@@ -209,7 +209,7 @@ function Result(props: SectionProps<typeof loader>) {
     },
   });
   const results = (
-    <span class="text-md uppercase font-normal text-[#1F251C]">
+    <span class="text-md text-[#1F251C] uppercase font-normal">
       {/* {page.pageInfo.recordPerPage} de {page.pageInfo.records} produtos encontrados */}
       {page.pageInfo.records} produtos encontrados
     </span>
