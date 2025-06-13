@@ -57,7 +57,9 @@
     "dev": "deno run -A --env --unstable-kv --unstable-hmr dev.ts",
     "reload": "deno cache -r https://deco.cx/run"
   },
-  "githooks": { "pre-commit": "check" },
+  "githooks": {
+    "pre-commit": "check"
+  },
   "exclude": [
     "node_modules",
     "static/",
@@ -67,13 +69,20 @@
     ".deco"
   ],
   "lint": {
-    "rules": { "exclude": ["no-window"], "tags": ["fresh", "recommended"] }
+    "rules": {
+      "exclude": [
+        "no-window"
+      ],
+      "tags": [
+        "fresh",
+        "recommended"
+      ]
+    }
   },
-  "nodeModulesDir": "none",
+  "nodeModulesDir": false,
   "compilerOptions": {
     "jsx": "react-jsx",
-    "jsxImportSource": "preact",
-    "experimentalDecorators": true
+    "jsxImportSource": "preact"
   },
   "lock": false
 }
