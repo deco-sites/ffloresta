@@ -135,7 +135,8 @@ function ProductInfo({ page }: Props) {
         {/* This div creates the spacing and border */}
       </div>
 
-      {/*
+      {
+        /*
       TODO: Comentei o restante dos componentes que podem ser adicionados depois
       {hasValidVariants && (
         <div className="mt-4 sm:mt-8">
@@ -179,7 +180,8 @@ function ProductInfo({ page }: Props) {
           )}
         </span>
       </div>
-      */}
+      */
+      }
     </div>
   );
 }
