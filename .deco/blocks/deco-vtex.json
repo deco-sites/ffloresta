@@ -8,6 +8,11 @@
   "account": "ferragemfloresta",
   "publicUrl": "secure.ferragemfloresta.com.br",
   "appKey": {
+    "encrypted": "vtexappkey-ferragemfloresta-OZBEWF",
+    "__resolveType": "website/loaders/secret.ts"
+  },
+  "appToken": {
+    "encrypted": "KXFVKKNJDSEMHWWTHLRUDMFONAEZQKDPYCHFSDVCWEFAEKKGYUSQEWSBNNXHSWHXAERXZLGYEUJRSQZBSTHEKZCJWIMTYIVVSWBWLLJMSTJHRCGTSUOTFXCOLGIFGFZL",
     "__resolveType": "website/loaders/secret.ts"
   }
 }

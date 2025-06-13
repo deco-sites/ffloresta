@@ -613,12 +613,12 @@
           {
             "benefitImgSrc": "https://assets.decocache.com/ffloresta/11de435f-bde0-4ab8-b30e-c5a6f94b9361/home-benefit-icon-02.png",
             "benefitImgAltText": "Pix",
-            "benefitText": "<p>DESCONTO DE <strong>10%</strong> NO PAGAMENTO <strong>PIX</strong> OU <strong>BOLETO</strong>. *EXCETO PARA PRODUTOS EM PROMOÇÃO.</p>"
+            "benefitText": "<p>DESCONTO DE <strong>10%</strong> NO PAGAMENTO<strong>PIX</strong> OU <strong>BOLETO</strong>.*EXCETO PARA PRODUTOS EM PROMOÇÃO.</p>"
           },
           {
             "benefitImgSrc": "https://assets.decocache.com/ffloresta/e62b308d-131c-4b24-b669-6f7dc5a363f8/home-benefit-icon-03.png",
             "benefitImgAltText": "Frete",
-            "benefitText": "<p>FRETE EXPRESSO ENVIO MAIS <strong>RÁPIDO</strong> DO <strong>BRASIL.</strong></p>"
+            "benefitText": "<p>FRETE EXPRESSOENVIO MAIS <strong>RÁPIDO</strong> DO <strong>BRASIL.</strong></p>"
           },
           {
             "benefitImgSrc": "https://assets.decocache.com/ffloresta/3fa6bd86-4c00-4e9a-8320-3b1ab15625ef/home-benefit-icon-04.png",
