@@ -113,8 +113,8 @@ function ProductCard({
         {/* Flag "Chegará amanhã" */}
         {inStock && (
           <div class="mt-2">
-            <span class="text-xs font-bold text-white bg-[#FF7315] h-[15px] flex items-center px-2 w-max">
-              CHEGARÁ AMANHÃ
+            <span class="text-xs  text-white bg-[#FF7315] h-[15px] flex items-center px-2 w-max">
+              Chegará amanhã
             </span>
           </div>
         )}
@@ -124,7 +124,7 @@ function ProductCard({
       <div class="mt-2 flex flex-col flex-grow">
         <a href={relativeUrl} class="block">
           {/* Product Title */}
-          <h3 class="text-[#3A4332] font-bold text-[12px] leading-[137%] tracking-[0%]">
+          <h3 class="text-[#3A4332] font-bold text-[12px] leading-[137%] tracking-[0%] uppercase">
             {title}
           </h3>
 
@@ -132,10 +132,10 @@ function ProductCard({
           <div class="flex flex-col mt-1">
             {listPrice && price && listPrice > price && (
               <div class="text-[#8D98A0]">
-                <span class="font-bold text-[7.73px] leading-[170%] tracking-[3%]">
+                <span class="font-bold text-[10px] leading-[170%] tracking-[3%]">
                   R$
                 </span>
-                <span class="font-bold text-[11.24px] leading-[170%] tracking-[3%] line-through ml-1">
+                <span class="font-bold text-[14px] leading-[170%] tracking-[3%] line-through">
                   {formatPrice(listPrice, offers?.priceCurrency).replace(
                     "R$",
                     "",
@@ -145,10 +145,10 @@ function ProductCard({
             )}
             <div class="flex items-center gap-1">
               <div class="text-[#3A4332]">
-                <span class="font-bold text-[12.65px] leading-[170%] tracking-[3%]">
+                <span class="font-bold text-[12px] leading-[170%] tracking-[3%]">
                   R$
                 </span>
-                <span class="font-bold text-[7.73px] leading-[170%] tracking-[3%] ml-1">
+                <span class="font-bold text-[16px] leading-[170%] tracking-[3%]">
                   {formatPrice(price, offers?.priceCurrency).replace("R$", "")}
                 </span>
               </div>

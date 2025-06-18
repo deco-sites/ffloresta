@@ -11,6 +11,8 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
     "translateX(0)",
   );
 
+  console.log(children, "chidlren");
+
   const hasChildWithImage = children?.some((child) => child.image?.length > 0);
   const childImage = children?.find((child) => child.image?.length > 0)
     ?.image?.[0];

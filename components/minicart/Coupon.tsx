@@ -6,11 +6,11 @@ export interface Props {
 function Coupon({ coupon }: Props) {
   return (
     <div class="flex justify-between items-center px-4">
-      <span class="text-sm">Discount coupon</span>
+      <span class="text-sm">Cupom de Desconto</span>
 
       <button
         type="button"
-        class="btn btn-ghost underline font-normal no-animation"
+        class="underline font-normal cursor-pointer"
         hx-on:click={useScript(() => {
           event?.stopPropagation();
           const button = event?.currentTarget as HTMLButtonElement;
@@ -18,7 +18,7 @@ function Coupon({ coupon }: Props) {
           button.nextElementSibling?.classList.remove("hidden");
         })}
       >
-        {coupon || "Add"}
+        {coupon || "Inserir"}
       </button>
 
       {/* Displayed when checkbox is checked=true */}
@@ -26,14 +26,14 @@ function Coupon({ coupon }: Props) {
         <input
           form={MINICART_FORM_ID}
           name="coupon"
-          class="input join-item"
+          class=""
           type="text"
           value={coupon ?? ""}
           placeholder={"Cupom"}
         />
         <button
           form={MINICART_FORM_ID}
-          class="btn join-item"
+          class=""
           name="action"
           value="set-coupon"
         >

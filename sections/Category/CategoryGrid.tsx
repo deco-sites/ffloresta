@@ -78,9 +78,9 @@ function CategoryGrid({ title, cta, items, showArrows = true }: Props) {
 
         {showArrows && (
           <>
-            <Slider.PrevButton class="absolute left-0 top-1/2 -translate-y-1/2 w-[17px] h-[32px] flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed z-10">
+            <Slider.PrevButton class="absolute left-0 top-1/2 -translate-y-1/2 w-[20px]  flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed z-10">
               <svg
-                width="17"
+                width="20"
                 height="32"
                 viewBox="0 0 17 32"
                 fill="none"
@@ -96,11 +96,11 @@ function CategoryGrid({ title, cta, items, showArrows = true }: Props) {
               </svg>
             </Slider.PrevButton>
 
-            <Slider.NextButton class="absolute right-0 top-1/2 -translate-y-1/2 w-[17px] h-[32px] flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed z-10">
+            <Slider.NextButton class="absolute right-0 top-1/2 -translate-y-1/2 w-[20px]  flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed z-10">
               <svg
-                width="17"
-                height="31"
-                viewBox="0 0 17 31"
+                width="20"
+                height="32"
+                viewBox="0 0 17 32"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 class="max-w-full max-h-full"

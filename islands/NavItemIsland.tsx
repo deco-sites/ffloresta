@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "preact/hooks";
+import { useRef, useState } from "preact/hooks";
 import type { SiteNavigationElement } from "apps/commerce/types.ts";
 import Image from "apps/website/components/Image.tsx";
 import { NAVBAR_HEIGHT_DESKTOP } from "../constants.ts";
@@ -10,18 +10,11 @@ export default function NavItemIsland({
 }) {
   const { url, name, children } = item;
   const submenuRef = useRef<HTMLDivElement>(null);
-  const [submenuTransform, setSubmenuTransform] = useState<string>(
-    "translateX(0)",
-  );
-
-  const hasChildWithImage = children?.some((child) => child.image?.length > 0);
-  const childImage = children?.find((child) => child.image?.length > 0)
-    ?.image?.[0];
+  const [submenuTransform, setSubmenuTransform] = useState("translateX(0)");
 
   const adjustPosition = () => {
     const node = submenuRef.current;
     if (!node) return;
-
     const rect = node.getBoundingClientRect();
     const overflowRight = rect.right - window.innerWidth;
     const overflowLeft = rect.left;
@@ -35,25 +28,16 @@ export default function NavItemIsland({
     }
   };
 
-  const handleMouseEnter = () => {
-    adjustPosition();
-  };
-
-  const handleMouseLeave = () => {
-    setSubmenuTransform("translateX(0)");
-  };
-
   return (
     <li
       class="group relative flex items-center"
       style={{ height: NAVBAR_HEIGHT_DESKTOP }}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      onMouseEnter={adjustPosition}
+      onMouseLeave={() => setSubmenuTransform("translateX(0)")}
     >
       <a
         href={url}
-        class="h-[50px] flex items-center justify-center px-4 font-['FS_Emeric'] font-normal text-[16.87px] leading-[100%] text-[#1F251C] hover:text-white hover:bg-[#3A4332] transition-all duration-300
-         max-[1300px]:text-[14px] max-[1300px]:px-3"
+        class="h-[50px] flex items-center justify-center px-4 font-['FS_Emeric'] text-[16.87px] text-[#1F251C] hover:text-white hover:bg-[#3A4332] transition-all duration-300 max-[1300px]:text-[14px] max-[1300px]:px-3"
       >
         {name}
       </a>
@@ -61,35 +45,41 @@ export default function NavItemIsland({
       {children && children.length > 0 && (
         <div
           ref={submenuRef}
-          class="absolute hidden group-hover:flex z-40 items-start justify-center min-w-max bg-gradient-to-b from-[rgba(58,67,50,0.9)] to-[rgba(146,169,126,0.9)] transition-transform duration-300"
-          style={{
-            top: "100%",
-            left: 0,
-            transform: submenuTransform,
-          }}
+          class="absolute hidden group-hover:flex z-40 items-start bg-gradient-to-b from-[rgba(58,67,50,0.9)] to-[rgba(146,169,126,0.9)] transition-transform duration-300"
+          style={{ top: "100%", left: 0, transform: submenuTransform }}
         >
           <div class="flex container">
-            <ul class="flex flex-col items-start justify-start p-5 gap-3 min-w-[243px]">
-              {children.map((node) => (
-                <li class="pl-0 py-1" key={node.url}>
+            <ul class="relative flex flex-col min-w-[243px] group">
+              {children.map((node, index) => (
+                <li key={node.url}>
                   <a
-                    class="hover:border-b hover:border-white font-['FS_Emeric'] font-normal text-[10.5px] leading-[100%] text-white transition-all duration-300 ease-in-out"
+                    class="peer hover:underline font-['FS_Emeric'] text-[14px] text-white block p-2 px-4"
                     href={node.url}
                   >
-                    <span>{node.name}</span>
+                    {node.name}
                   </a>
+
+                  {node.children && node.children.length > 0 && (
+                    <>
+                      <div
+                        class="absolute left-full top-0 hidden peer-hover:flex flex-col  min-w-[200px] h-full bg-white"
+                        style={{ top: `${index * 40}px` }} // 40px por item para alinhar com o UL
+                      >
+                        {node.children.map((child) => (
+                          <a
+                            key={child.url}
+                            class="text-[#1F251C] font-['FS_Emeric'] text-[12px] hover:underline p-4"
+                            href={child.url}
+                          >
+                            {child.name}
+                          </a>
+                        ))}
+                      </div>
+                    </>
+                  )}
                 </li>
               ))}
             </ul>
-
-            {hasChildWithImage && childImage && (
-              <Image
-                class="ml-4"
-                src={childImage.url}
-                alt={name}
-                loading="lazy"
-              />
-            )}
           </div>
         </div>
       )}

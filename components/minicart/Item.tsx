@@ -29,59 +29,65 @@ function CartItem({ item, index, locale, currency }: Props) {
   const isGift = price < 0.01;
   // deno-lint-ignore no-explicit-any
   const name = (item as any).item_name;
+
   return (
     <fieldset
-      // deno-lint-ignore no-explicit-any
       data-item-id={(item as any).item_id}
-      class="grid grid-rows-1 gap-2"
-      style={{ gridTemplateColumns: "auto 1fr" }}
+      class="grid grid-rows-1 gap-4"
+      style={{ gridTemplateColumns: "80px 1fr" }}
     >
       <Image
         alt={name}
         src={image}
-        style={{ aspectRatio: "108 / 150" }}
-        width={108}
-        height={150}
+        style={{ aspectRatio: "80 / 110" }}
+        width={80}
+        height={110}
         class="h-full object-contain"
       />
 
       {/* Info */}
-      <div class="flex flex-col gap-2">
+      <div class="flex flex-col gap-3">
         {/* Name and Remove button */}
-        <div class="flex justify-between items-center">
-          <legend>{name}</legend>
+        <div class="flex justify-between items-start">
+          <legend class="font-['FS_Emeric'] text-[#3A4332] font-bold text-[14px] leading-[137%] tracking-[0%] uppercase">
+            {name}
+          </legend>
           <button
             class={clx(
               isGift && "hidden",
-              "btn btn-ghost btn-square no-animation",
+              "btn btn-ghost btn-square no-animation p-0 hover:bg-transparent",
             )}
             hx-on:click={useScript(removeItemHandler)}
           >
-            <Icon id="trash" size={24} />
+            <Icon id="trash" size={24} class="text-[#6B7280]" />
           </button>
         </div>
 
         {/* Price Block */}
         <div class="flex items-center gap-2">
-          <span class="line-through text-sm">
-            {formatPrice(listPrice, currency, locale)}
-          </span>
-          <span class="text-sm text-secondary">
+          {listPrice > price && (
+            <span class="line-through font-['FS_Emeric'] text-[12px] text-[#6B7280]">
+              {formatPrice(listPrice, currency, locale)}
+            </span>
+          )}
+          <span class="font-['FS_Emeric'] font-normal text-[14px] leading-[170%] tracking-[3%] text-[#1F251C]">
             {isGift ? "Grátis" : formatPrice(price, currency, locale)}
           </span>
         </div>
 
         {/* Quantity Selector */}
-        <div class={clx(isGift && "hidden")}>
+        <div class={clx(isGift && "hidden", "mt-2")}>
           <QuantitySelector
             min={0}
             max={QUANTITY_MAX_VALUE}
             value={quantity}
             name={`item::${index}`}
+            class="flex items-center justify-center text-center border border-[#E5E5E5] rounded-none h-[32px]"
           />
         </div>
       </div>
     </fieldset>
   );
 }
+
 export default CartItem;

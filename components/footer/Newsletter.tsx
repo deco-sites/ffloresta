@@ -94,7 +94,12 @@ function Newsletter() {
             </div>
 
             <label htmlFor="politica" class="flex flex-row gap-2 items-start">
-              <input type="checkbox" name="politica" id="politica" />
+              <input
+                type="checkbox"
+                name="politica"
+                id="politica"
+                class="appearance-none min-w-4 h-4 border border-white rounded-sm bg-transparent checked:bg-white checked:border-white focus:outline-none transition duration-200 mt-1 cursor-pointer relative"
+              />
               <p class="text-[12px] text-white">
                 {" "}
                 AO SE CADASTRAR VOCÊ IRÁ CONCORDAR COM A NOSSA POLÍTICA DE

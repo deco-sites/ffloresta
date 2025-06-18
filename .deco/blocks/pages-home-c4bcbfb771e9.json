@@ -37,7 +37,32 @@
                     "url": "https://assets.decocache.com/ffloresta/b44f27bc-fe72-42eb-b37a-e75fc03fdc29/Rectangle-100.png"
                   }
                 ],
-                "children": [],
+                "children": [
+                  {
+                    "children": [],
+                    "image": null,
+                    "name": "EXEMPLO",
+                    "url": "/exemplo"
+                  },
+                  {
+                    "children": [],
+                    "image": null,
+                    "name": "EXEMPLO",
+                    "url": "/exemplo"
+                  },
+                  {
+                    "children": [],
+                    "image": null,
+                    "name": "EXEMPLO",
+                    "url": "/exemplo"
+                  },
+                  {
+                    "children": [],
+                    "image": null,
+                    "name": "EXEMPLO",
+                    "url": "/exemplo"
+                  }
+                ],
                 "name": "EXEMPLO",
                 "url": "/exemplo"
               },
@@ -93,7 +118,7 @@
               }
             ],
             "@type": "SiteNavigationElement",
-            "url": "/ferragens",
+            "url": "/Ferragens",
             "name": "FERRAGENS",
             "image": null
           },
@@ -650,7 +675,8 @@
             "collection": "150",
             "count": 20
           }
-        }
+        },
+        "icon": "https://assets.decocache.com/ffloresta/8e934bf1-704a-43a4-9ec5-abe3998e9fc0/Logo-header.svg"
       }
     },
     {
@@ -767,19 +793,45 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Images/Banner.tsx",
-        "images": {
-          "desktop": "https://assets.decocache.com/ffloresta/187e31a9-7558-4d8c-96e6-26593832961a/image.png",
-          "mobile": "https://assets.decocache.com/ffloresta/34deff97-f8fc-44ca-8258-8a61bca4df1e/image.png"
-        },
-        "cta": {},
-        "description": "<p><br data-mce-bogus=\"1\"></p>"
+        "__resolveType": "site/sections/Content/BannerMosaic.tsx",
+        "images": [
+          {
+            "desktop": "https://assets.decocache.com/ffloresta/a2232c44-7c4a-43b6-b3cf-a9e3b1d5fcbc/image.png",
+            "mobile": "https://assets.decocache.com/ffloresta/07eab070-87cd-4a28-b3c7-614b3b2bb571/image-(1).png",
+            "alt": "01"
+          }
+        ],
+        "itemsToShow": 1,
+        "enableSlider": false
       }
+    },
+    {
+      "__resolveType": "website/flags/multivariate/section.ts",
+      "variants": [
+        {
+          "value": {
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "site/sections/Images/Banner.tsx",
+              "images": {
+                "desktop": "https://assets.decocache.com/ffloresta/187e31a9-7558-4d8c-96e6-26593832961a/image.png",
+                "mobile": "https://assets.decocache.com/ffloresta/a2232c44-7c4a-43b6-b3cf-a9e3b1d5fcbc/image.png"
+              },
+              "cta": {},
+              "description": "<p><br data-mce-bogus=\"1\"></p>"
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/never.ts"
+          }
+        }
+      ]
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Brand/BrandGrid.tsx",
+        "title": "COMPRE POR MARCA",
         "items": [
           {
             "image": "https://assets.decocache.com/ffloresta/5449f31d-af59-4b85-89ec-85d6158f7a8c/brand-01.svg",
@@ -805,15 +857,14 @@
             "image": "https://assets.decocache.com/ffloresta/91fc6b96-2a3b-4404-954b-2efe9362ebc8/brand-06.svg",
             "href": "/"
           }
-        ],
-        "title": "COMPRE POR MARCA"
+        ]
       }
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Product/ProductShelf.tsx",
-        "title": "FERRAMENTAS",
+        "title": "PUXADORES",
         "headerIcon": "https://assets.decocache.com/ffloresta/28daeeed-da2e-4353-9b47-094d244c40dd/home-second-shelf-title-icon.svg",
         "products": {
           "__resolveType": "vtex/loaders/intelligentSearch/productSearchValidator.ts",
@@ -822,27 +873,50 @@
             "collection": "150",
             "count": 30
           }
-        }
+        },
+        "icon": "https://assets.decocache.com/ffloresta/d26b1d31-88e1-41c0-ae15-82e146758d3f/Prancheta-1-3.svg",
+        "banner": "https://assets.decocache.com/ffloresta/783c3412-c1c4-4632-af24-1e5036f8c340/Mask-group.png"
       }
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Newsletter/Newsletter.tsx",
-        "label": "Sign up",
-        "placeholder": "Email address",
-        "empty": {
-          "title": "Get top deals, latest trends, and more.",
-          "description": "Receive our news and promotions in advance. Enjoy and get 10% off your first purchase. For more information click here."
+        "__resolveType": "site/sections/Content/BannerMosaic.tsx",
+        "images": [
+          {
+            "desktop": "https://assets.decocache.com/ffloresta/a6f6d65d-d084-4075-8f19-bed18f938f77/image.png",
+            "mobile": "https://assets.decocache.com/ffloresta/0ed8b777-f095-45af-968b-56d612f9f6d4/image.png",
+            "alt": "01"
+          },
+          {
+            "desktop": "https://assets.decocache.com/ffloresta/48cc75cf-450a-4119-8295-6ee71f08a14f/image-(1).png",
+            "mobile": "https://assets.decocache.com/ffloresta/48cc75cf-450a-4119-8295-6ee71f08a14f/image-(1).png",
+            "alt": "02"
+          },
+          {
+            "desktop": "https://assets.decocache.com/ffloresta/06495ea1-e858-4059-96a2-de19fd6b0562/image-(2).png",
+            "mobile": "https://assets.decocache.com/ffloresta/06495ea1-e858-4059-96a2-de19fd6b0562/image-(2).png",
+            "alt": "03"
+          }
+        ],
+        "itemsToShow": 3,
+        "enableSlider": false
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/VideoWithBackground.tsx",
+        "background": {
+          "desktop": {
+            "src": "https://assets.decocache.com/ffloresta/829fb377-5c1e-43c1-8f01-0af7b12b0bd9/Group-2368.png"
+          },
+          "mobile": {
+            "src": "https://assets.decocache.com/ffloresta/2aad2234-d568-478a-a0f7-79534a2dd46b/Group-2368-(1).png"
+          }
         },
-        "success": {
-          "title": "Thank you for subscribing!",
-          "description": "You’re now signed up to receive the latest news, trends, and exclusive promotions directly to your inbox. Stay tuned!"
-        },
-        "failed": {
-          "title": "Oops!. Something went wrong!",
-          "description": "Something went wrong. Please try again. If the problem persists, please contact us."
-        }
+        "videoUrl": "https://youtu.be/dSX5s9FML_U?si=khXj_dPOYXLncob5",
+        "youtubeVideoId": "dSX5s9FML_U?si=Qk8YX6y3Htdd0wPN"
       }
     },
     {
