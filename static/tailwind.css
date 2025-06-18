@@ -4877,9 +4877,17 @@ details.collapse summary::-webkit-details-marker {
   padding-left: 12px;
   padding-right: 12px;
 }
+.px-\[16px\] {
+  padding-left: 16px;
+  padding-right: 16px;
+}
 .px-\[20px\] {
   padding-left: 20px;
   padding-right: 20px;
+}
+.px-\[22px\] {
+  padding-left: 22px;
+  padding-right: 22px;
 }
 .py-0 {
   padding-top: 0px;
@@ -5912,6 +5920,10 @@ input[type="checkbox"]:checked::after {
   font-weight: 600;
 }
 
+.group\/subitem:hover .group-hover\/subitem\:flex {
+  display: flex;
+}
+
 .group:hover .group-hover\:flex {
   display: flex;
 }
@@ -5946,10 +5958,6 @@ input[type="checkbox"]:checked::after {
 .peer:checked ~ .peer-checked\:text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.peer:hover ~ .peer-hover\:flex {
-  display: flex;
 }
 
 @media (max-width: 1300px) {
@@ -6671,9 +6679,9 @@ input[type="checkbox"]:checked::after {
     max-width: 1440px;
   }
 
-  .\32xl\:px-\[20px\] {
-    padding-left: 20px;
-    padding-right: 20px;
+  .\32xl\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 
