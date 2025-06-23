@@ -14,7 +14,7 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "Header"
+        "__resolveType": "Header With Menus"
       }
     },
     {
@@ -23,8 +23,7 @@
         "__resolveType": "site/sections/Product/SearchResult.tsx",
         "page": {
           "__resolveType": "vtex/loaders/ProductListingPage.ts",
-          "count": 12,
-          "query": "accessories"
+          "count": 12
         },
         "layout": {
           "columns": {

@@ -14,7 +14,7 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "Header"
+        "__resolveType": "Header With Menus"
       }
     },
     {
@@ -24,8 +24,7 @@
         "page": {
           "__resolveType": "vtex/loaders/ProductListingPage.ts",
           "count": 12,
-          "collectionName": "Home & Living",
-          "query": "home & living"
+          "collectionName": "Home & Living"
         },
         "layout": {
           "columns": {

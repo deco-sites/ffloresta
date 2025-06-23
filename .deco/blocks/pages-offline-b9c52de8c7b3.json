@@ -12,7 +12,10 @@
       }
     },
     {
-      "__resolveType": "Header"
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Header With Menus"
+      }
     },
     {
       "__resolveType": "site/sections/Product/ProductShelf.tsx",
