@@ -6,9 +6,9 @@ import { useId } from "../../sdk/useId.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import ShippingSimulationForm from "../shipping/Form.tsx";
 // import WishlistButton from "../wishlist/WishlistButton.tsx";
-// import AddToCartButton from "./AddToCartButton.tsx";
-// import OutOfStock from "./OutOfStock.tsx";
-// import ProductSelector from "./ProductVariantSelector.tsx";
+import AddToCartButtonPDP from "../../islands/AddToCartButtonPDP.tsx";
+import OutOfStock from "./OutOfStock.tsx";
+import ProductSelector from "./ProductVariantSelector.tsx";
 import { useOffer } from "../../sdk/useOffer.ts";
 
 interface Props {
@@ -23,20 +23,11 @@ function ProductInfo({ page }: Props) {
   }
 
   const { breadcrumbList, product } = page;
-  const {
-    // productID,
-    offers,
-    isVariantOf,
-  } = product;
+  const { productID, offers, isVariantOf } = product;
   // const description = product.description || isVariantOf?.description;
   const title = isVariantOf?.name ?? product.name;
 
-  const {
-    price = 0,
-    listPrice,
-    seller = "1",
-    // availability
-  } = useOffer(offers);
+  const { price = 0, listPrice, seller = "1", availability } = useOffer(offers);
 
   // const percent =
   //   listPrice && price
@@ -69,12 +60,11 @@ function ProductInfo({ page }: Props) {
   });
 
   //Checks if the variant name is "title"/"default title" and if so, the SKU Selector div doesn't render
-  // const hasValidVariants =
-  //   isVariantOf?.hasVariant?.some(
-  //     (variant) =>
-  //       variant?.name?.toLowerCase() !== "title" &&
-  //       variant?.name?.toLowerCase() !== "default title"
-  //   ) ?? false;
+  const hasValidVariants = isVariantOf?.hasVariant?.some(
+    (variant) =>
+      variant?.name?.toLowerCase() !== "title" &&
+      variant?.name?.toLowerCase() !== "default title",
+  ) ?? false;
 
   return (
     <div {...viewItemEvent} class="flex flex-col" id={id}>
@@ -130,45 +120,43 @@ function ProductInfo({ page }: Props) {
       {/* Border bottom */}
       <div class="mt-5 md:mt-5 pb-5 border-b border-black" />
 
-      {/* 🚚 Shipping Simulation Form descomentado */}
-      <div class="">
-        <ShippingSimulationForm
-          items={[{ id: Number(product.sku), quantity: 1, seller: seller }]}
-        />
-      </div>
+      {/* Variant Selector */}
 
-      {
-        /*
-      TODO: Componentes a serem ativados no futuro:
-
-      {hasValidVariants && (
-        <div className="mt-4 sm:mt-8">
-          <ProductSelector product={product} />
-        </div>
-      )}
-
+      {/* Add to Cart Button */}
       <div class="mt-4 sm:mt-10 flex flex-col gap-2">
         {availability === "https://schema.org/InStock"
           ? (
             <>
-              <AddToCartButton
+              {hasValidVariants && (
+                <div class="mt-5 mb-6">
+                  <ProductSelector product={product} />
+                </div>
+              )}
+              <AddToCartButtonPDP
                 item={item}
                 seller={seller}
                 product={product}
-                class="btn btn-primary no-animation"
+                class=""
                 disabled={false}
               />
-              <WishlistButton item={item} />
+              <div>
+                <ShippingSimulationForm
+                  items={[
+                    { id: Number(product.sku), quantity: 1, seller: seller },
+                  ]}
+                />
+              </div>
+              {/* <WishlistButton item={item} /> */}
             </>
           )
           : <OutOfStock productID={productID} />}
       </div>
 
-      <div class="mt-8">
-        <ShippingSimulationForm
-          items={[{ id: Number(product.sku), quantity: 1, seller: seller }]}
-        />
-      </div>
+      {/* Shipping Simulation Form */}
+
+      {
+        /*
+      TODO: Componentes a serem ativados no futuro:
 
       <div class="mt-4 sm:mt-6">
         <span class="text-sm">
