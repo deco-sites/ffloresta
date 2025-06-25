@@ -139,7 +139,7 @@ function ProductInfo({ page }: Props) {
               item={item}
               seller={seller}
               product={product}
-              platform={platform} // ✅ agora passado corretamente
+              platform={platform}
               class=""
               disabled={false}
             />
