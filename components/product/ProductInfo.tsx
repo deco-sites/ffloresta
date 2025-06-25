@@ -137,7 +137,8 @@ function ProductInfo({ page }: Props) {
         />
       </div>
 
-      {/*
+      {
+        /*
       TODO: Componentes a serem ativados no futuro:
 
       {hasValidVariants && (
@@ -182,7 +183,8 @@ function ProductInfo({ page }: Props) {
           )}
         </span>
       </div>
-      */}
+      */
+      }
     </div>
   );
 }
