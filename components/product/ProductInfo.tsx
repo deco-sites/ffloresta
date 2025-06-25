@@ -6,6 +6,7 @@ import { useId } from "../../sdk/useId.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import ShippingSimulationForm from "../shipping/Form.tsx";
 // import WishlistButton from "../wishlist/WishlistButton.tsx";
+import { usePlatform } from "../../sdk/usePlatform.tsx"; // já existe
 import AddToCartButtonPDP from "../../islands/AddToCartButtonPDP.tsx";
 import OutOfStock from "./OutOfStock.tsx";
 import ProductSelector from "./ProductVariantSelector.tsx";
@@ -17,6 +18,8 @@ interface Props {
 
 function ProductInfo({ page }: Props) {
   const id = useId();
+
+  const platform = usePlatform();
 
   if (page === null) {
     throw new Error("Missing Product Details Page Info");
@@ -60,11 +63,12 @@ function ProductInfo({ page }: Props) {
   });
 
   //Checks if the variant name is "title"/"default title" and if so, the SKU Selector div doesn't render
-  const hasValidVariants = isVariantOf?.hasVariant?.some(
-    (variant) =>
-      variant?.name?.toLowerCase() !== "title" &&
-      variant?.name?.toLowerCase() !== "default title",
-  ) ?? false;
+  const hasValidVariants =
+    isVariantOf?.hasVariant?.some(
+      (variant) =>
+        variant?.name?.toLowerCase() !== "title" &&
+        variant?.name?.toLowerCase() !== "default title"
+    ) ?? false;
 
   return (
     <div {...viewItemEvent} class="flex flex-col" id={id}>
@@ -124,38 +128,39 @@ function ProductInfo({ page }: Props) {
 
       {/* Add to Cart Button */}
       <div class="mt-4 sm:mt-10 flex flex-col gap-2">
-        {availability === "https://schema.org/InStock"
-          ? (
-            <>
-              {hasValidVariants && (
-                <div class="mt-5 mb-6">
-                  <ProductSelector product={product} />
-                </div>
-              )}
-              <AddToCartButtonPDP
-                item={item}
-                seller={seller}
-                product={product}
-                class=""
-                disabled={false}
-              />
-              <div>
-                <ShippingSimulationForm
-                  items={[
-                    { id: Number(product.sku), quantity: 1, seller: seller },
-                  ]}
-                />
+        {availability === "https://schema.org/InStock" ? (
+          <>
+            {hasValidVariants && (
+              <div class="mt-5 mb-6">
+                <ProductSelector product={product} />
               </div>
-              {/* <WishlistButton item={item} /> */}
-            </>
-          )
-          : <OutOfStock productID={productID} />}
+            )}
+            <AddToCartButtonPDP
+              item={item}
+              seller={seller}
+              product={product}
+              platform={platform} // ✅ agora passado corretamente
+              class=""
+              disabled={false}
+            />
+
+            <div>
+              <ShippingSimulationForm
+                items={[
+                  { id: Number(product.sku), quantity: 1, seller: seller },
+                ]}
+              />
+            </div>
+            {/* <WishlistButton item={item} /> */}
+          </>
+        ) : (
+          <OutOfStock productID={productID} />
+        )}
       </div>
 
       {/* Shipping Simulation Form */}
 
-      {
-        /*
+      {/*
       TODO: Componentes a serem ativados no futuro:
 
       <div class="mt-4 sm:mt-6">
@@ -171,8 +176,7 @@ function ProductInfo({ page }: Props) {
           )}
         </span>
       </div>
-      */
-      }
+      */}
     </div>
   );
 }

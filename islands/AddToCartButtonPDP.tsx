@@ -1,125 +1,68 @@
-import { AnalyticsItem, Product } from "apps/commerce/types.ts";
-import { JSX } from "preact";
+// /islands/AddToCartButtonPDP.tsx
+import { useState } from "preact/hooks";
 import { clx } from "../sdk/clx.ts";
-import { useId } from "../sdk/useId.ts";
-import { usePlatform } from "../sdk/usePlatform.tsx";
 import QuantitySelectorPDP from "../components/product/QuantitySelectorPDP.tsx";
-import { useScript } from "@deco/deco/hooks";
+import type { Product, AnalyticsItem } from "apps/commerce/types.ts";
+import type { JSX } from "preact";
 
-export interface Props extends JSX.HTMLAttributes<HTMLButtonElement> {
+export interface Props extends JSX.HTMLAttributes<HTMLDivElement> {
   product: Product;
   seller: string;
   item: AnalyticsItem;
+  platform: string; // Agora vem do componente pai
 }
 
-const onClickAddToCart = () => {
-  event?.stopPropagation();
-  const button = event?.currentTarget as HTMLButtonElement | null;
-  const container = button!.closest<HTMLDivElement>("div[data-cart-item]")!;
-  const { item, platformProps } = JSON.parse(
-    decodeURIComponent(container.getAttribute("data-cart-item")!),
-  );
+export default function AddToCartButtonPDP({
+  product,
+  seller,
+  item,
+  platform,
+  class: _class,
+}: Props) {
+  const [quantity, setQuantity] = useState(1);
 
-  const input = container.querySelector(
-    'input[type="number"]',
-  ) as HTMLInputElement;
-  const quantity = Number(input?.value ?? 1);
+  const platformProps =
+    platform === "vtex"
+      ? {
+          allowedOutdatedData: ["paymentData"],
+          orderItems: [{ quantity, seller, id: product.productID }],
+        }
+      : null;
 
-  item.quantity = quantity;
-  if (platformProps?.orderItems?.[0]) {
-    platformProps.orderItems[0].quantity = quantity;
-  }
-
-  window.STOREFRONT.CART.addToCart(item, platformProps);
-};
-
-const onClickBuyNow = () => {
-  event?.stopPropagation();
-  const button = event?.currentTarget as HTMLButtonElement | null;
-  const container = button!.closest<HTMLDivElement>("div[data-cart-item]")!;
-  const { item, platformProps } = JSON.parse(
-    decodeURIComponent(container.getAttribute("data-cart-item")!),
-  );
-
-  const input = container.querySelector(
-    'input[type="number"]',
-  ) as HTMLInputElement;
-  const quantity = Number(input?.value ?? 1);
-
-  item.quantity = quantity;
-  if (platformProps?.orderItems?.[0]) {
-    platformProps.orderItems[0].quantity = quantity;
-  }
-
-  window.STOREFRONT.CART.addToCart(item, platformProps);
-  setTimeout(() => {
-    window.location.href = "/checkout/#";
-  }, 100);
-};
-
-const onChange = () => {
-  const input = event!.currentTarget as HTMLInputElement;
-  const productID = input!
-    .closest("div[data-cart-item]")!
-    .getAttribute("data-item-id")!;
-  const quantity = Number(input.value);
-  if (!input.validity.valid) {
-    return;
-  }
-  window.STOREFRONT.CART.setQuantity(productID, quantity);
-};
-
-const useAddToCart = ({ product, seller }: Props) => {
-  const platform = usePlatform();
-  const { productID } = product;
-
-  if (platform === "vtex") {
-    return {
-      allowedOutdatedData: ["paymentData"],
-      orderItems: [{ quantity: 1, seller: seller, id: productID }],
+  const addToCart = () => {
+    const cartItem = { ...item, quantity };
+    const props = platformProps && {
+      ...platformProps,
+      orderItems: [{ ...platformProps.orderItems[0], quantity }],
     };
-  }
 
-  return null;
-};
+    window.STOREFRONT.CART.addToCart(cartItem, props);
+  };
 
-function AddToCartButtonPDP(props: Props) {
-  const { product, item, class: _class } = props;
-  const platformProps = useAddToCart(props);
-  const id = useId();
+  const buyNow = () => {
+    addToCart();
+    setTimeout(() => {
+      window.location.href = "/checkout/#";
+    }, 100);
+  };
 
   return (
-    <div
-      id={id}
-      class={clx("flex flex-col gap-4 w-full", _class?.toString())}
-      data-item-id={product.productID}
-      data-cart-item={encodeURIComponent(
-        JSON.stringify({ item, platformProps }),
-      )}
-    >
+    <div class={clx("flex gap-4", _class)}>
       <QuantitySelectorPDP
         min={1}
         max={99}
-        hx-on:change={useScript(onChange)}
+        value={quantity}
+        onChange={setQuantity}
       />
 
       <div class="flex gap-2">
-        <button
-          class="btn btn-primary flex-1"
-          hx-on:click={useScript(onClickAddToCart)}
-        >
+        <button onClick={addToCart} class="btn btn-primary flex-1">
           Adicionar ao Carrinho
         </button>
-
-        <button
-          class="btn btn-secondary flex-1"
-          hx-on:click={useScript(onClickBuyNow)}
-        >
+        <button onClick={buyNow} class="btn btn-secondary flex-1">
           Comprar Agora
         </button>
       </div>
     </div>
   );
 }
-
-export default AddToCartButtonPDP;
