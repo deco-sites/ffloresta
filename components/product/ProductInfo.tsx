@@ -4,7 +4,7 @@ import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalytic
 import { formatPrice } from "../../sdk/format.ts";
 import { useId } from "../../sdk/useId.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
-// import ShippingSimulationForm from "../shipping/Form.tsx";
+import ShippingSimulationForm from "../shipping/Form.tsx";
 // import WishlistButton from "../wishlist/WishlistButton.tsx";
 // import AddToCartButton from "./AddToCartButton.tsx";
 // import OutOfStock from "./OutOfStock.tsx";
@@ -34,7 +34,7 @@ function ProductInfo({ page }: Props) {
   const {
     price = 0,
     listPrice,
-    // seller = "1",
+    seller = "1",
     // availability
   } = useOffer(offers);
 
@@ -80,8 +80,6 @@ function ProductInfo({ page }: Props) {
     <div {...viewItemEvent} class="flex flex-col" id={id}>
       {/* SKU and Product Name */}
       <div class="flex flex-col gap-0.5">
-        {" "}
-        {/* 2px gap = 0.5rem */}
         <span class="font-['FS_Emeric'] font-normal text-xs leading-[140%] text-[#3A4332]">
           SKU: valor fiction por enquanto
         </span>
@@ -90,7 +88,7 @@ function ProductInfo({ page }: Props) {
         </h1>
       </div>
 
-      {/* Prices - 20px gap on desktop, 6px on mobile */}
+      {/* Prices */}
       <div class="mt-1.5 md:mt-5 flex flex-col gap-0">
         <div class="flex flex-col items-start gap-0">
           {listPrice && (
@@ -105,7 +103,6 @@ function ProductInfo({ page }: Props) {
 
         {/* Cash Price with SVG */}
         <div class="flex items-center gap-2 mt-1">
-          {/* SVG do cartão - substitua pelo seu SVG real */}
           <svg
             width="18"
             height="12"
@@ -130,14 +127,19 @@ function ProductInfo({ page }: Props) {
         </div>
       </div>
 
-      {/* Border bottom with spacing */}
-      <div class="mt-5 md:mt-5 pb-5 border-b border-black">
-        {/* This div creates the spacing and border */}
+      {/* Border bottom */}
+      <div class="mt-5 md:mt-5 pb-5 border-b border-black" />
+
+      {/* 🚚 Shipping Simulation Form descomentado */}
+      <div class="">
+        <ShippingSimulationForm
+          items={[{ id: Number(product.sku), quantity: 1, seller: seller }]}
+        />
       </div>
 
-      {
-        /*
-      TODO: Comentei o restante dos componentes que podem ser adicionados depois
+      {/*
+      TODO: Componentes a serem ativados no futuro:
+
       {hasValidVariants && (
         <div className="mt-4 sm:mt-8">
           <ProductSelector product={product} />
@@ -180,8 +182,7 @@ function ProductInfo({ page }: Props) {
           )}
         </span>
       </div>
-      */
-      }
+      */}
     </div>
   );
 }

@@ -12,7 +12,7 @@ function ThirdLevelMenu({ items }: { items: SiteNavigationElement[] }) {
         <li key={thirdItem.url}>
           <a
             href={thirdItem.url}
-            class="py-2 font-[FS Emeric] text-[13px] text-white hover:underline block"
+            class="py-2 font-['FS_Emeric'] text-[13px] text-white hover:underline block"
           >
             {thirdItem.name}
           </a>
@@ -25,40 +25,38 @@ function ThirdLevelMenu({ items }: { items: SiteNavigationElement[] }) {
 function SubMenuItem({ item }: { item: SiteNavigationElement }) {
   const hasThirdLevel = item.children && item.children.length > 0;
 
-  return hasThirdLevel
-    ? (
-      <div class="collapse collapse-plus rounded-none">
-        <input type="checkbox" class="peer" />
-        <div class="collapse-title text-white text-[14px] font-[FS Emeric]">
-          {item.name}
-        </div>
-        <div class="collapse-content bg-transparent">
-          <ThirdLevelMenu items={item.children!} />
-        </div>
-      </div>
-    )
-    : (
-      <a
-        href={item.url}
-        class="block py-3 font-[FS Emeric] text-[14px] text-white bg-transparent"
-      >
+  return hasThirdLevel ? (
+    <div class="collapse collapse-plus rounded-none">
+      <input type="checkbox" class="peer" />
+      <div class="collapse-title text-white text-[14px] font-['FS_Emeric']">
         {item.name}
-      </a>
-    );
+      </div>
+      <div class="collapse-content bg-transparent">
+        <ThirdLevelMenu items={item.children!} />
+      </div>
+    </div>
+  ) : (
+    <a
+      href={item.url}
+      class="block py-3 font-['FS_Emeric'] text-[14px] text-white bg-transparent"
+    >
+      {item.name}
+    </a>
+  );
 }
 
 function MenuItem({ item }: { item: SiteNavigationElement }) {
   return (
     <div class="collapse collapse-plus rounded-none">
       <input type="checkbox" class="peer" />
-      <div class="collapse-title text-[#1F251C] peer-checked:bg-[#3A4332] peer-checked:text-white text-[16.87px] font-[FS Emeric]">
+      <div class="collapse-title text-[#1F251C] peer-checked:bg-[#3A4332] peer-checked:text-white text-[16.87px] font-['FS_Emeric']">
         {item.name}
       </div>
       <div class="collapse-content bg-gradient-to-b from-[rgba(58,67,50,0.9)] to-[rgba(146,169,126,0.9)]">
         <ul>
           <li>
             <a
-              class="underline text-[12px] text-white font-[FS Emeric]"
+              class="underline text-[12px] text-white font-['FS_Emeric']"
               href={item.url}
             >
               Ver todos
