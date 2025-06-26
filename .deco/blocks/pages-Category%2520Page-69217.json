@@ -11,6 +11,12 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
+        "__resolveType": "Category Banner - 01"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
         "__resolveType": "commerce/sections/Seo/SeoPLPV2.tsx",
         "jsonLD": {
           "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",

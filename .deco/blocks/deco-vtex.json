@@ -1,13 +1,1 @@
-{
-  "__resolveType": "site/apps/deco/vtex.ts",
-  "salesChannel": "1",
-  "defaultSegment": {
-    "channelPrivacy": "public"
-  },
-  "platform": "vtex",
-  "account": "ferragemfloresta",
-  "publicUrl": "secure.ferragemfloresta.com.br",
-  "appKey": {
-    "__resolveType": "website/loaders/secret.ts"
-  }
-}
+{"__resolveType":"site/apps/deco/vtex.ts"}
