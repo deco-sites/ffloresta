@@ -10,9 +10,9 @@ export default function Form({ items }: Props) {
   const slot = useId();
 
   return (
-    <div class="flex flex-col gap-2 font-['FS_Emeric']">
+    <div class="flex flex-col  font-['FS_Emeric']">
       <form
-        class="relative join gap-2"
+        class="relative join gap-2 mb-2"
         hx-target={`#${slot}`}
         hx-swap="innerHTML"
         hx-sync="this:replace"

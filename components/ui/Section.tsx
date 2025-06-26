@@ -16,14 +16,11 @@ function Header({ title, cta, icon, banner }: Props) {
     return null;
   }
 
-  console.log(icon, "icon");
-  console.log(banner, "banner");
-
   return (
     <div
       class={clx(
         "flex justify-between items-center gap-2",
-        "px-5 2xl:w-full  2xl:max-w-[1440px] 2xl:mx-auto 2xl:px-0",
+        "px-5 2xl:w-full  2xl:max-w-[1240px] 2xl:mx-auto 2xl:px-0"
       )}
     >
       {/* {icon && <img src={icon} alt={title} />} */}
@@ -54,7 +51,7 @@ function Container({ class: _class, ...props }: JSX.IntrinsicElements["div"]) {
       {...props}
       class={clx(
         "container max-w-[1440px] flex flex-col gap-4 sm:gap-6 w-full py-5 sm:py-10",
-        _class?.toString(),
+        _class?.toString()
       )}
     />
   );

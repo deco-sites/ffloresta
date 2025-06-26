@@ -19,7 +19,7 @@ function QuantitySelectorPDP({
   const clamp = (v: number) => Math.min(Math.max(v, min), max);
 
   return (
-    <div class="flex items-center border rounded-md bg-gray-100 text-black w-24">
+    <div class="flex items-center border-none bg-[#D9D9D9] text-black w-16">
       <button
         type="button"
         class="w-8 h-8 text-xl leading-none"
@@ -30,7 +30,7 @@ function QuantitySelectorPDP({
       <input
         id={id}
         class={clx(
-          "text-center text-sm w-full bg-gray-100 text-black border-0 outline-none"
+          "text-center text-sm w-full bg-transparent text-black border-0 outline-none"
         )}
         type="number"
         min={min}

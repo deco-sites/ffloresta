@@ -47,7 +47,7 @@ export default function AddToCartButtonPDP({
   };
 
   return (
-    <div class={clx("flex gap-4", _class)}>
+    <div class={clx("flex gap-[6px]", _class)}>
       <QuantitySelectorPDP
         min={1}
         max={99}
@@ -55,12 +55,19 @@ export default function AddToCartButtonPDP({
         onChange={setQuantity}
       />
 
-      <div class="flex gap-2">
-        <button onClick={addToCart} class="btn btn-primary flex-1">
-          Adicionar ao Carrinho
+      <div class="w-full  flex items-center gap-2">
+        <button
+          onClick={buyNow}
+          class="w-full min-h-8 flex items-center justify-center bg-[#2DDC4F] text-white font-['FS_Emeric'] text-[13px] font-bold transition-all duration-300 hover:bg-[#2bbd48]"
+        >
+          COMPRAR
         </button>
-        <button onClick={buyNow} class="btn btn-secondary flex-1">
-          Comprar Agora
+        <span class="hidden lg:block font-['FS_Emeric'] text-[9px]">ou</span>
+        <button
+          onClick={addToCart}
+          class="hidden w-full min-w-[178px] min-h-8 lg:flex items-center justify-center bg-[#9AA37C] font-['FS_Emeric'] text-[13px] font-bold transition-all duration-300 hover:bg-[#7f8863]"
+        >
+          ADICIONAR AO CARRINHO
         </button>
       </div>
     </div>

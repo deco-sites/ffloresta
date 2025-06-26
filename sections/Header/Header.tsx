@@ -40,8 +40,6 @@ export interface SectionProps {
 type Props = Omit<SectionProps, "alert">;
 
 function Header({ alerts = [], logo, navItems, searchbar, loading }: Props) {
-  console.log(navItems, "navItems");
-
   return (
     <header>
       <div class="bg-[#1F251C]  w-full z-40">

@@ -7,11 +7,8 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
   const { url, name, children } = item;
 
   const submenuRef = useRef<HTMLDivElement>(null);
-  const [submenuTransform, setSubmenuTransform] = useState<string>(
-    "translateX(0)",
-  );
-
-  console.log(children, "chidlren");
+  const [submenuTransform, setSubmenuTransform] =
+    useState<string>("translateX(0)");
 
   const hasChildWithImage = children?.some((child) => child.image?.length > 0);
   const childImage = children?.find((child) => child.image?.length > 0)
@@ -70,8 +67,8 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
         >
           <div class="flex container">
             <ul class="flex flex-col items-start justify-start p-5 gap-3 min-w-[243px]">
-              {children.map((node) => (
-                <li class="pl-0 py-1" key={node.url}>
+              {children.map((node, i) => (
+                <li class="pl-0 py-1" key={`${node.url}-${i}`}>
                   <a
                     class="hover:border-b hover:border-white font-['FS_Emeric'] font-normal text-[10.5px] leading-[100%] text-white transition-all duration-300 ease-in-out"
                     href={node.url}

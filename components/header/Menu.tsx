@@ -8,8 +8,8 @@ export interface Props {
 function ThirdLevelMenu({ items }: { items: SiteNavigationElement[] }) {
   return (
     <ul class="pl-4">
-      {items.map((thirdItem) => (
-        <li key={thirdItem.url}>
+      {items.map((thirdItem, i) => (
+        <li key={`${thirdItem.url}-${i}`}>
           <a
             href={thirdItem.url}
             class="py-2 font-['FS_Emeric'] text-[13px] text-white hover:underline block"
@@ -25,26 +25,24 @@ function ThirdLevelMenu({ items }: { items: SiteNavigationElement[] }) {
 function SubMenuItem({ item }: { item: SiteNavigationElement }) {
   const hasThirdLevel = item.children && item.children.length > 0;
 
-  return hasThirdLevel
-    ? (
-      <div class="collapse collapse-plus rounded-none">
-        <input type="checkbox" class="peer" />
-        <div class="collapse-title text-white text-[14px] font-['FS_Emeric']">
-          {item.name}
-        </div>
-        <div class="collapse-content bg-transparent">
-          <ThirdLevelMenu items={item.children!} />
-        </div>
-      </div>
-    )
-    : (
-      <a
-        href={item.url}
-        class="block py-3 font-['FS_Emeric'] text-[14px] text-white bg-transparent"
-      >
+  return hasThirdLevel ? (
+    <div class="collapse collapse-plus rounded-none">
+      <input type="checkbox" class="peer" />
+      <div class="collapse-title text-white text-[14px] font-['FS_Emeric']">
         {item.name}
-      </a>
-    );
+      </div>
+      <div class="collapse-content bg-transparent">
+        <ThirdLevelMenu items={item.children!} />
+      </div>
+    </div>
+  ) : (
+    <a
+      href={item.url}
+      class="block py-3 font-['FS_Emeric'] text-[14px] text-white bg-transparent"
+    >
+      {item.name}
+    </a>
+  );
 }
 
 function MenuItem({ item }: { item: SiteNavigationElement }) {
@@ -64,8 +62,8 @@ function MenuItem({ item }: { item: SiteNavigationElement }) {
               Ver todos
             </a>
           </li>
-          {item.children?.map((node) => (
-            <li key={node.url}>
+          {item.children?.map((node, i) => (
+            <li key={`${node.url}-${i}`}>
               <SubMenuItem item={node} />
             </li>
           ))}

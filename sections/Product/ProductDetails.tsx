@@ -29,14 +29,14 @@ export default function ProductDetails({ page }: Props) {
   }
 
   return (
-    <div class="w-full flex flex-col py-0 sm:py-16 px-5 sm:px-0">
+    <div class="w-full flex flex-col">
       {/* <Breadcrumb itemListElement={page.breadcrumbList.itemListElement} /> */}
 
       <div
         class={clx(
           "container grid max-w-[915px]",
-          "grid-cols-1 gap-9 py-0",
-          "sm:grid-cols-2 sm:gap-11",
+          "grid-cols-1 gap-9 py-0 px-4",
+          "lg:grid-cols-2 lg:gap-11 lg:px-0"
         )}
       >
         <div class="">

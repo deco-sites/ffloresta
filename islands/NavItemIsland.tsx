@@ -54,8 +54,8 @@ export default function NavItemIsland({
         >
           <div class="flex container">
             <ul class="relative flex flex-col min-w-[243px]">
-              {children.map((node, index) => (
-                <li key={node.url} class="group/subitem relative">
+              {children.map((node, i) => (
+                <li key={`${node.url}-${i}`} class="group/subitem relative">
                   <a
                     class="hover:underline font-['FS_Emeric'] text-[14px] text-white block p-2 px-[22px]"
                     href={node.url}
@@ -66,11 +66,11 @@ export default function NavItemIsland({
                   {node.children && node.children.length > 0 && (
                     <div
                       class="absolute left-full top-0 hidden group-hover/subitem:flex flex-col min-w-[200px] bg-white"
-                      style={{ top: `${index * 40}px` }}
+                      style={{ top: `${i * 40}px` }}
                     >
-                      {node.children.map((child) => (
+                      {node.children.map((child, i) => (
                         <a
-                          key={child.url}
+                          key={`${child.url}-${i}`}
                           class="text-[#1F251C] font-['FS_Emeric'] text-[12px] hover:underline p-2 px-[16px]"
                           href={child.url}
                         >
