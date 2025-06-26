@@ -612,14 +612,6 @@
           "action": {
             "href": "/"
           }
-        },
-        {
-          "desktop": "https://assets.decocache.com/ffloresta/a4c65b4a-1851-4f9e-9a02-b093fe4f69ea/home-main-banner-desk.png",
-          "mobile": "https://assets.decocache.com/ffloresta/46a283cf-9726-4f0b-811b-e7e898f15a29/home-main-banner-mobile.webp",
-          "alt": "Banner Principal",
-          "action": {
-            "href": "/"
-          }
         }
       ],
       "preload": true
