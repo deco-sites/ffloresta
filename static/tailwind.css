@@ -6123,8 +6123,8 @@ input[type="checkbox"]:checked::after {
     grid-template-columns: 150px 1fr;
   }
 
-  .sm\:grid-cols-\[275px_1fr\] {
-    grid-template-columns: 275px 1fr;
+  .sm\:grid-cols-\[1fr_806px\] {
+    grid-template-columns: 1fr 806px;
   }
 
   .sm\:grid-cols-\[min-content_1fr\] {
