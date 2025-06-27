@@ -26,7 +26,7 @@ export default function VideoWithBackground({
   return (
     <div class="container max-h-[507px] relative w-full h-screen">
       {/* Background Image */}
-      <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 z-0 px-5 2xl:px-0">
         <picture>
           <source media="(max-width: 767px)" srcset={background.mobile.src} />
           <source media="(min-width: 768px)" srcset={background.desktop.src} />

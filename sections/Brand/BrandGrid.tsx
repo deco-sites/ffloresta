@@ -29,8 +29,6 @@ function Card({ image, href, label }: Item) {
       <div class="rounded-full flex justify-center items-center w-full h-full max-w-[180px] mx-auto">
         <Image
           src={image}
-          width={180}
-          height={180}
           alt={label || "Brand"}
           loading="lazy"
           class="w-full h-full object-contain"
@@ -65,8 +63,8 @@ function BrandGrid({ title, cta, items, showArrows = true }: Props) {
                 "w-[calc(50%-12px)]",
                 // Tablet: 3 itens
                 "md:w-[calc(33.333%-16px)]",
-                // Desktop: tamanho máximo
-                "lg:w-[calc(25%-20px)] xl:w-[calc(20%-20px)]",
+                // Desktop: 6 itens (100%/6 = 16.666%)
+                "lg:w-[calc(16.666%-20px)]"
               )}
             >
               <Card {...i} />

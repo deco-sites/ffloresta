@@ -64,7 +64,7 @@ export default function BannerMosaic({
 
   if (enableSlider) {
     return (
-      <Section id={id} class="container px-5 md:px-0 py-6 md:py-11">
+      <Section id={id} class="container px-5 2xl:px-0 py-6 md:py-11">
         <Slider
           class="carousel carousel-center gap-3"
           snap="snap-center sm:snap-start block first:ml-6 sm:first:ml-0 last:mr-6 sm:last:mr-0"
@@ -85,7 +85,7 @@ export default function BannerMosaic({
   return (
     <div
       id={id}
-      class={`container flex flex-col md:flex-row flex-wrap items-stretch justify-center px-5 md:px-0 py-6 md:py-11 gap-${gap}`}
+      class={`container flex flex-col md:flex-row flex-wrap items-stretch justify-center px-5 2xl:px-0 py-6 md:py-11 gap-${gap}`}
     >
       {images?.slice(0, itemsToShow).map((image, index) => (
         <div class={`flex-1 w-full md:max-w-[${100 / itemsToShow}%]`}>

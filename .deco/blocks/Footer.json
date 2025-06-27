@@ -1,24 +1,24 @@
 {
   "__resolveType": "site/sections/Footer/Footer.tsx",
-  "logoLinha": "https://assets.decocache.com/ffloresta/ec653781-82d5-4001-95a5-fed465bed3b5/floresta-logo-branca.svg",
   "logo": "https://assets.decocache.com/ffloresta/dafa5589-391c-4cab-8c8d-61078bba18ee/floresta-logo-verde.svg",
   "links": [
     {
       "title": "SOBRE A FLORESTA",
       "itens": [
         {
-          "title": "NOSSA HITÓRIA",
+          "title": "NOSSA HISTÓRIA",
           "href": "#"
         },
         {
-          "title": "NOSSA MISSÃO",
+          "title": "NOSSA MISSÃO, VISÃO E VALORES",
           "href": "#"
         },
         {
-          "title": "NOSSOS VALORES",
-          "href": "#"
+          "title": "POLÍTICA DE PRIVACIDADE",
+          "href": "/"
         }
-      ]
+      ],
+      "href": "/"
     },
     {
       "title": "SUA CONTA",
@@ -34,8 +34,17 @@
         {
           "title": "MEUS FAVORITOS",
           "href": "#"
+        },
+        {
+          "title": "GARANTIA",
+          "href": "/"
+        },
+        {
+          "title": "TROCA E DEVOLUÇÃO",
+          "href": "/"
         }
-      ]
+      ],
+      "href": "/"
     }
   ],
   "social": [
@@ -46,11 +55,6 @@
           "alt": "Casa e Mercado",
           "href": "#",
           "image": "https://assets.decocache.com/ffloresta/39fb75c9-e048-497b-87da-08678e864df4/casa_mercado.svg"
-        },
-        {
-          "alt": "YouTube",
-          "href": "#",
-          "image": "https://assets.decocache.com/ffloresta/d0869ff5-844b-4cae-b6d4-7e9962987f03/youtube.svg"
         },
         {
           "alt": "Facebook",
@@ -66,6 +70,16 @@
           "alt": "TikTok",
           "href": "#",
           "image": "https://assets.decocache.com/ffloresta/3d50485c-aed9-44c2-a8e4-baf1de78b558/tiktok.svg"
+        },
+        {
+          "alt": "Youtube",
+          "href": "#",
+          "image": "https://assets.decocache.com/ffloresta/cf1181c7-fd1d-41e5-88e7-e83a6af55acc/Frame-28888.svg"
+        },
+        {
+          "alt": "Linkedin",
+          "href": "#",
+          "image": "https://assets.decocache.com/ffloresta/71497798-0f9a-4323-93df-c194b7cdbec0/Group-2403.svg"
         }
       ]
     }
@@ -139,5 +153,6 @@
     ],
     "verMais": "/"
   },
-  "trademark": "FERRAGENS FLORESTA LTDA - CNPJ: 21.009.346/0001-20 [RUA PAIS LEME, 238 - PINHEIROS, SÃO PAULO - SP, CEP 05424-010"
+  "trademark": "FERRAGENS FLORESTA LTDA - CNPJ: 21.009.346/0001-20 [RUA PAIS LEME, 238 - PINHEIROS, SÃO PAULO - SP, CEP 05424-010",
+  "policies": []
 }

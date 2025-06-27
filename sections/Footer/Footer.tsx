@@ -196,26 +196,38 @@ function Footer({
                       <hr class="w-full max-w-[75px] h-1 bg-[#273D28] rounded-sm" />
                     )}
                   </div>
-                  <div class="flex justify-between flex-wrap max-w-[159px] lg:max-w-[210px] mt-[20px]">
-                    {itens.map(({ image, alt, href }, idx) => (
-                      <a key={idx} href={href} class="mb-[15px]">
+                  <div class="flex flex-col gap-[15px] max-w-[159px] lg:max-w-[210px] mt-[20px]">
+                    {/* Primeira imagem (índice 0) */}
+                    {itens.length > 0 && (
+                      <a href={itens[0].href} class="w-full">
                         <Image
-                          src={image}
-                          alt={alt}
+                          src={itens[0].image}
+                          alt={itens[0].alt}
                           loading="lazy"
-                          width={
-                            device === "mobile"
-                              ? idx === 0 || idx === 1
-                                ? 60
-                                : 40
-                              : idx === 0 || idx === 1
-                              ? 100
-                              : 50
-                          }
-                          height={idx === 0 || idx === 1 ? 80 : 50}
+                          width="100%"
+                          height="auto"
+                          class="w-full"
                         />
                       </a>
-                    ))}
+                    )}
+
+                    {/* Demais imagens (se houver) */}
+                    {itens.length > 1 && (
+                      <div class="grid grid-cols-3 gap-[10px] ">
+                        {itens.slice(1).map(({ image, alt, href }, idx) => (
+                          <a key={idx} href={href} class="">
+                            <Image
+                              src={image}
+                              alt={alt}
+                              loading="lazy"
+                              width={50}
+                              height={50}
+                              class="w-full h-auto max-w-[50px] max-h-[50px]"
+                            />
+                          </a>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               ))}
@@ -252,7 +264,7 @@ function Footer({
         </div>
 
         <div>
-          <p class="font-bold text-[16px] lg:text-[24px]  text-[#273D28] font-[Lato] mb-[30px] mt-[50px]">
+          <p class="font-bold text-[16px] lg:text-[24px]  text-[#273D28] font-['FS_Emeric'] mb-[30px] mt-[50px]">
             {lojas.title}
           </p>
           <div class="flex flex-row gap-x-[20px]">

@@ -112,9 +112,8 @@ const Desktop = ({ navItems, logo, searchbar, loading }: Props) => (
           <div class="flex gap-[14px] cursor-pointer text-white place-self-end">
             <SignIn variant={"desktop"} />
           </div>
-          <div class="flex gap-[14px] cursor-pointer text-white place-self-end">
+          <div class="flex items-center place-self-end">
             <Bag />
-            <span class="hidden md:block">CARRINHO</span>
           </div>
         </div>
       </div>

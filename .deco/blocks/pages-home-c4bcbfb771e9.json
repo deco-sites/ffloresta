@@ -697,47 +697,34 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Category/CategoryGrid.tsx",
+        "__resolveType": "site/sections/Brand/BrandGrid.tsx",
         "title": "CATEGORIAS",
-        "headerIcon": "https://assets.decocache.com/ffloresta/28daeeed-da2e-4353-9b47-094d244c40dd/home-second-shelf-title-icon.svg",
         "items": [
           {
-            "label": "Men",
-            "href": "/men",
-            "image": "https://assets.decocache.com/ffloresta/cfd50d43-d174-48f1-8c66-09d1794f127c/top-categories-01.png"
+            "href": "/",
+            "image": "https://assets.decocache.com/ffloresta/bcf27d4c-9968-4025-8fe7-e691d92b671d/category1.png"
           },
           {
-            "href": "/women",
-            "label": "Women",
-            "image": "https://assets.decocache.com/ffloresta/6e330eac-6c63-42a5-966d-79ae8dd4db05/top-categories-02.png"
+            "href": "/",
+            "image": "https://assets.decocache.com/ffloresta/497d65db-5ee7-4aba-bc2b-aa0a594830ef/category2.png"
           },
           {
-            "href": "/kids",
-            "label": "Kids",
-            "image": "https://assets.decocache.com/ffloresta/209cf1bd-1397-432f-a6fe-418c8426c8fc/top-categories-03.png"
+            "href": "/",
+            "image": "https://assets.decocache.com/ffloresta/4dcff94e-9416-47af-9c0c-62acc2282904/category3.png"
           },
           {
-            "href": "/accessories",
-            "label": "Accessories",
-            "image": "https://assets.decocache.com/ffloresta/f2cc3b9a-a397-4474-97d7-9b3d61782b37/top-categories-04.png"
+            "href": "/",
+            "image": "https://assets.decocache.com/ffloresta/d96e85f1-c4b2-4ae0-b0fc-23992e0d9f70/category4.png"
           },
           {
-            "href": "/home-and-living",
-            "label": "Home & Living",
-            "image": "https://assets.decocache.com/ffloresta/c62b8dab-033b-4b25-bda0-5d7587cd221c/top-categories-05.png"
+            "href": "/",
+            "image": "https://assets.decocache.com/ffloresta/592d1ac9-6cef-46dc-a3fc-2ec662e35cb5/category5.png"
           },
           {
-            "href": "/home-and-living",
-            "label": "Home & Living",
-            "image": "https://assets.decocache.com/ffloresta/c62b8dab-033b-4b25-bda0-5d7587cd221c/top-categories-05.png"
-          },
-          {
-            "href": "/home-and-living",
-            "label": "Home & Living",
-            "image": "https://assets.decocache.com/ffloresta/c62b8dab-033b-4b25-bda0-5d7587cd221c/top-categories-05.png"
+            "href": "/",
+            "image": "https://assets.decocache.com/ffloresta/bcf27d4c-9968-4025-8fe7-e691d92b671d/category1.png"
           }
-        ],
-        "showArrows": true
+        ]
       }
     },
     {

@@ -29,8 +29,6 @@ function Card({ image, href, label }: Item) {
       <div class="rounded-full flex justify-center items-center w-full h-full max-w-[200px] mx-auto">
         <Image
           src={image}
-          width={200}
-          height={200}
           alt={label || "Category"}
           loading="lazy"
           class="w-full h-full object-contain"
@@ -38,7 +36,7 @@ function Card({ image, href, label }: Item) {
         />
       </div>
       {label && (
-        <span class="font-['FS_Emeric'] font-normal text-[14.06px] leading-[170%] tracking-[0.16em] text-[#97A37F] text-center">
+        <span class="font-['FS_Emeric'] font-bold text-[16px] leading-[170%] tracking-[0.16em] text-[#3A4332] text-center">
           {label}
         </span>
       )}
@@ -67,8 +65,9 @@ function CategoryGrid({ title, cta, items, showArrows = true }: Props) {
                 "sm:w-[calc(50%-16px)]",
                 // Tablet: 3 itens
                 "md:w-[calc(33.333%-16px)]",
-                // Desktop: tamanho máximo
-                "lg:w-[calc(25%-20px)] xl:w-[calc(20%-20px)]",
+                // Desktop: 6 itens (16.666% de largura)
+                "lg:w-[calc(16.666%-20px)]"
+                // Removi o xl:w-[calc(20%-20px)] para manter apenas 6 itens em desktop
               )}
             >
               <Card {...i} />
