@@ -14,8 +14,8 @@ function ProductSlider({ products, itemListName }: Props) {
 
   return (
     <>
-      <div id={id} class="relative px-[20px] max-w-[1240px] mx-auto">
-        <Slider class="carousel carousel-center gap-6 w-full flex items-center justify-center">
+      <div id={id} class="relative px-[32px] max-w-[1240px] mx-auto">
+        <Slider class="carousel carousel-center gap-6 w-full">
           {products?.map((product, index) => (
             <Slider.Item
               index={index}
@@ -44,7 +44,7 @@ function ProductSlider({ products, itemListName }: Props) {
         </Slider>
 
         {/* Botões de navegação */}
-        <Slider.PrevButton class="absolute left-0 top-1/2 -translate-y-1/2 w-[17px] h-[32px] flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed z-15">
+        <Slider.PrevButton class="absolute left-[8px] top-1/2 -translate-y-1/2 w-[17px] h-[32px] flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed z-15">
           <svg
             width="12"
             height="20"
@@ -61,7 +61,7 @@ function ProductSlider({ products, itemListName }: Props) {
           </svg>
         </Slider.PrevButton>
 
-        <Slider.NextButton class="absolute right-0 top-1/2 -translate-y-1/2 w-[17px] h-[32px] flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed z-15">
+        <Slider.NextButton class="absolute right-[8px] top-1/2 -translate-y-1/2 w-[17px] h-[32px] flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed z-15">
           <svg
             width="12"
             height="20"

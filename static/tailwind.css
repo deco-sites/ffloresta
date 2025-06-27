@@ -468,6 +468,10 @@ html {
     margin: 0;
   }
 
+  body {
+    background: #fdfff5 !important;
+  }
+
   /* Disable scroll once drawer/modal is openned */
   body:has(.drawer-toggle:checked),
   body:has(.modal-toggle:checked) {
@@ -578,6 +582,8 @@ html {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
 }
 @media (min-width: 640px) {
 
@@ -597,16 +603,16 @@ html {
     max-width: 1024px;
   }
 }
+@media (min-width: 1240px) {
+
+  .container {
+    max-width: 1240px;
+  }
+}
 @media (min-width: 1280px) {
 
   .container {
     max-width: 1280px;
-  }
-}
-@media (min-width: 1536px) {
-
-  .container {
-    max-width: 1536px;
   }
 }
 .alert {
@@ -3658,6 +3664,9 @@ details.collapse summary::-webkit-details-marker {
 .left-4 {
   left: 1rem;
 }
+.left-\[8px\] {
+  left: 8px;
+}
 .left-full {
   left: 100%;
 }
@@ -3672,6 +3681,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .right-6 {
   right: 1.5rem;
+}
+.right-\[8px\] {
+  right: 8px;
 }
 .top-0 {
   top: 0px;
@@ -4221,23 +4233,14 @@ details.collapse summary::-webkit-details-marker {
 .max-w-7xl {
   max-width: 80rem;
 }
-.max-w-\[1180px\] {
-  max-width: 1180px;
-}
 .max-w-\[1240px\] {
   max-width: 1240px;
 }
 .max-w-\[139px\] {
   max-width: 139px;
 }
-.max-w-\[1440px\] {
-  max-width: 1440px;
-}
 .max-w-\[159px\] {
   max-width: 159px;
-}
-.max-w-\[1800px\] {
-  max-width: 1800px;
 }
 .max-w-\[180px\] {
   max-width: 180px;
@@ -4798,6 +4801,10 @@ details.collapse summary::-webkit-details-marker {
   --tw-bg-opacity: 1;
   background-color: rgb(245 245 245 / var(--tw-bg-opacity));
 }
+.bg-\[\#FDFFF5\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 255 245 / var(--tw-bg-opacity));
+}
 .bg-\[\#FF7315\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 115 21 / var(--tw-bg-opacity));
@@ -4969,6 +4976,10 @@ details.collapse summary::-webkit-details-marker {
 .px-\[22px\] {
   padding-left: 22px;
   padding-right: 22px;
+}
+.px-\[32px\] {
+  padding-left: 32px;
+  padding-right: 32px;
 }
 .py-0 {
   padding-top: 0px;
@@ -5811,6 +5822,8 @@ input[type="checkbox"]:checked::after {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
   }
 
   @media (min-width: 640px) {
@@ -5834,17 +5847,17 @@ input[type="checkbox"]:checked::after {
     }
   }
 
+  @media (min-width: 1240px) {
+
+    .xl\:container {
+      max-width: 1240px;
+    }
+  }
+
   @media (min-width: 1280px) {
 
     .xl\:container {
       max-width: 1280px;
-    }
-  }
-
-  @media (min-width: 1536px) {
-
-    .xl\:container {
-      max-width: 1536px;
     }
   }
 }

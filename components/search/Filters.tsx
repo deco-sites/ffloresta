@@ -18,9 +18,7 @@ interface Props {
 const isToggle = (filter: Filter): filter is FilterToggle =>
   filter["@type"] === "FilterToggle";
 
-function ValueItem(
-  { url, selected, label, quantity }: FilterToggleValue,
-) {
+function ValueItem({ url, selected, label, quantity }: FilterToggleValue) {
   return (
     <a href={url} rel="nofollow" class="flex items-center gap-2">
       <div
@@ -56,11 +54,13 @@ function FilterValues({ key, values }: FilterToggle) {
         if (key === "price") {
           const range = parseRange(item.value);
 
-          return range && (
-            <ValueItem
-              {...item}
-              label={`${formatPrice(range.from)} - ${formatPrice(range.to)}`}
-            />
+          return (
+            range && (
+              <ValueItem
+                {...item}
+                label={`${formatPrice(range.from)} - ${formatPrice(range.to)}`}
+              />
+            )
           );
         }
 
@@ -73,18 +73,14 @@ function FilterValues({ key, values }: FilterToggle) {
 function Filters({ filters }: Props) {
   return (
     <ul class="flex flex-col gap-6 sm:p-0 divide-y divide-[#CCCCCC]">
-      {filters
-        .filter(isToggle)
-        .map((filter) => (
-          <li class="flex flex-col gap-4 pt-4 px-4 xl:pr-0">
-            <span class="text-md font-medium text-[#1F251C]">
-              {filter.label}
-            </span>
-            <div class="md:max-h-80 md:overflow-auto">
-              <FilterValues {...filter} />
-            </div>
-          </li>
-        ))}
+      {filters.filter(isToggle).map((filter) => (
+        <li class="flex flex-col gap-4 pt-4 px-4 xl:pr-0">
+          <span class="text-md font-medium text-[#1F251C]">{filter.label}</span>
+          <div class="md:max-h-80 md:overflow-auto">
+            <FilterValues {...filter} />
+          </div>
+        </li>
+      ))}
     </ul>
   );
 }

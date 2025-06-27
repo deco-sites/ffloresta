@@ -39,9 +39,10 @@ function ProductCard({
   const possibilities = useVariantPossibilities(hasVariant, product);
   const firstSkuVariations = Object.entries(possibilities)?.[0];
   const relativeUrl = relative(url);
-  const percent = listPrice && price
-    ? Math.round(((listPrice - price) / listPrice) * 100)
-    : 0;
+  const percent =
+    listPrice && price
+      ? Math.round(((listPrice - price) / listPrice) * 100)
+      : 0;
   const item = mapProductToAnalyticsItem({ product, price, listPrice, index });
   const event = useSendEvent({
     on: "click",
@@ -59,7 +60,7 @@ function ProductCard({
       {...event}
       class={clx(
         "bg-white flex flex-col p-[18px_24px] w-full max-w-[258px] border-solid border-[0.7px] border-[#8D98A0] font-['FS_Emeric']",
-        _class,
+        _class
       )}
     >
       <figure class="relative">
@@ -77,7 +78,7 @@ function ProductCard({
           class={clx(
             "grid grid-cols-1 grid-rows-1",
             "w-full mt-10",
-            !inStock && "opacity-70",
+            !inStock && "opacity-70"
           )}
         >
           <Image
@@ -102,7 +103,7 @@ function ProductCard({
               "object-cover",
               "w-full",
               "col-span-full row-span-full",
-              "transition-opacity opacity-0 lg:group-hover:opacity-100",
+              "transition-opacity opacity-0 lg:group-hover:opacity-100"
             )}
             sizes="(max-width: 640px) 50vw, 20vw"
             loading="lazy"
@@ -138,7 +139,7 @@ function ProductCard({
                 <span class="font-bold text-[14px] leading-[170%] tracking-[3%] line-through">
                   {formatPrice(listPrice, offers?.priceCurrency).replace(
                     "R$",
-                    "",
+                    ""
                   )}
                 </span>
               </div>
@@ -164,65 +165,35 @@ function ProductCard({
         {/* Seção de pagamento PIX */}
         <div class="h-6 mt-2">
           <div class="text-[#8D98A0] font-bold text-[10px] leading-[170%] tracking-[0%]">
-            À vista no PIX
-          </div>
-          <div class="flex items-center gap-1 text-[#8D98A0] font-bold text-[10px] leading-[170%] tracking-[0%]">
-            <svg
-              width="14"
-              height="9"
-              viewBox="0 0 14 9"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              class="text-[#8D98A0]"
-            >
-              <rect
-                x="1.0088"
-                y="0.471508"
-                width="11.9473"
-                height="7.7306"
-                rx="1.75695"
-                stroke="currentColor"
-                stroke-width="0.702782"
-              />
-              <rect
-                x="0.65741"
-                y="2.93127"
-                width="12.6501"
-                height="1.40556"
-                fill="currentColor"
-              />
-            </svg>
-            1x de R${" "}
+            À vista no PIX R${" "}
             {formatPrice(price, offers?.priceCurrency).replace("R$", "")}
           </div>
         </div>
 
         {/* Add to cart button */}
         <div class="mt-auto pt-4">
-          {inStock
-            ? (
-              <AddToCartButton
-                product={product}
-                seller={seller}
-                item={item}
-                class={clx(
-                  "w-full bg-[#3A4332] text-[#97A37F] h-8 flex items-center justify-center",
-                  "font-bold text-[14.06px] leading-[170%] tracking-[16%]",
-                  "hover:bg-[#293023]",
-                )}
-              />
-            )
-            : (
-              <a
-                href={relativeUrl}
-                class={clx(
-                  "w-full bg-[#293023] text-white h-8 flex items-center justify-center",
-                  "font-bold text-[14.06px] leading-[170%] tracking-[16%]",
-                )}
-              >
-                INDISPONÍVEL
-              </a>
-            )}
+          {inStock ? (
+            <AddToCartButton
+              product={product}
+              seller={seller}
+              item={item}
+              class={clx(
+                "w-full bg-[#3A4332] text-white h-8 flex items-center justify-center",
+                "font-bold text-[14.06px] leading-[170%] tracking-[16%]",
+                "hover:bg-[#293023]"
+              )}
+            />
+          ) : (
+            <a
+              href={relativeUrl}
+              class={clx(
+                "w-full bg-[#293023] text-white h-8 flex items-center justify-center",
+                "font-bold text-[14.06px] leading-[170%] tracking-[16%]"
+              )}
+            >
+              INDISPONÍVEL
+            </a>
+          )}
         </div>
       </div>
     </div>

@@ -85,7 +85,7 @@ const Desktop = ({ navItems, logo, searchbar, loading }: Props) => (
     </Modal>
 
     <div>
-      <div class="container flex items-center justify-between p-5 gap-4">
+      <div class="container flex items-center justify-between p-5 gap-4 2xl:px-0">
         <div class="place-self-start">
           <a href="/" aria-label="Store logo">
             <Image
@@ -119,7 +119,7 @@ const Desktop = ({ navItems, logo, searchbar, loading }: Props) => (
         </div>
       </div>
 
-      <div class="bg-white flex justify-between items-center">
+      <div class="bg-[#FDFFF5] flex justify-between items-center">
         <ul class="container flex justify-center">
           {navItems?.slice(0, 10).map((item) => (
             <NavItemIsland item={item} />
