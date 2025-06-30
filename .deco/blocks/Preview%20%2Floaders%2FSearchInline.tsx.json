@@ -1,0 +1,29 @@
+{
+  "name": "Sugestões de busca para SearchbarInline",
+  "path": "/api/suggestions",
+  "description": "Retorna termos e produtos sugeridos com base no input do usuário. Usado pela searchbar inline.",
+  "loader": {
+    "kind": "resolved",
+    "source": "apps/commerce/loaders/suggestions.ts",
+    "props": {
+      "count": 6
+    }
+  },
+  "handlers": {
+    "GET": {
+      "resolveProps": {
+        "query": {
+          "from": "querystring",
+          "key": "q"
+        }
+      },
+      "mapResponse": {
+        "body": {
+          "suggestion": "{{loader}}"
+        },
+        "status": 200
+      }
+    }
+  },
+  "key": "searchbar-inline-suggestions"
+}

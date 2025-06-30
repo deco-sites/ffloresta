@@ -4,17 +4,12 @@ import Image from "apps/website/components/Image.tsx";
 import Alert from "../../components/header/Alert.tsx";
 import Bag from "../../components/header/Bag.tsx";
 import Menu from "../../components/header/Menu.tsx";
-import Searchbar, {
-  type SearchbarProps,
-} from "../../components/search/Searchbar/Form.tsx";
+import SearchbarInline from "../../components/search/SearchbarInline.tsx";
+import Searchbar from "../../components/search/Searchbar/Form.tsx"; // usado no mobile
 import Drawer from "../../components/ui/Drawer.tsx";
 import Icon from "../../components/ui/Icon.tsx";
-import Modal from "../../components/ui/Modal.tsx";
 import {
-  HEADER_HEIGHT_MOBILE,
-  NAVBAR_HEIGHT_MOBILE,
   SEARCHBAR_DRAWER_ID,
-  SEARCHBAR_POPUP_ID,
   SIDEMENU_CONTAINER_ID,
   SIDEMENU_DRAWER_ID,
 } from "../../constants.ts";
@@ -32,7 +27,7 @@ export interface Logo {
 export interface SectionProps {
   alerts?: HTMLWidget[];
   navItems?: SiteNavigationElement[] | null;
-  searchbar: SearchbarProps;
+  searchbar: import("../../components/search/Searchbar/Form.tsx").SearchbarProps;
   logo: Logo;
   loading?: "eager" | "lazy";
 }
@@ -42,7 +37,7 @@ type Props = Omit<SectionProps, "alert">;
 function Header({ alerts = [], logo, navItems, searchbar, loading }: Props) {
   return (
     <header>
-      <div class="bg-[#1F251C]  w-full z-40">
+      <div class="bg-[#1F251C] w-full z-40">
         {alerts.length > 0 && <Alert alerts={alerts} />}
         {/* Desktop */}
         <div class="hidden lg:block">
@@ -67,23 +62,8 @@ function Header({ alerts = [], logo, navItems, searchbar, loading }: Props) {
   );
 }
 
-const Desktop = ({ navItems, logo, searchbar, loading }: Props) => (
+const Desktop = ({ navItems, logo, searchbar }: Props) => (
   <>
-    <Modal id={SEARCHBAR_POPUP_ID}>
-      <div
-        class="absolute top-0 bg-base-100 container max-w-[638px]"
-        style={{ marginTop: HEADER_HEIGHT_MOBILE }}
-      >
-        {loading === "lazy" ? (
-          <div class="flex justify-center items-center">
-            <span class="loading loading-spinner" />
-          </div>
-        ) : (
-          <Searchbar {...searchbar} />
-        )}
-      </div>
-    </Modal>
-
     <div>
       <div class="container flex items-center justify-between p-5 gap-4 2xl:px-0">
         <div class="place-self-start">
@@ -97,20 +77,12 @@ const Desktop = ({ navItems, logo, searchbar, loading }: Props) => (
           </a>
         </div>
 
-        <label
-          for={SEARCHBAR_POPUP_ID}
-          class="flex items-center gap-2 w-full max-w-[638px] h-[38px] bg-[#D9D9D9] px-4 cursor-pointer"
-          aria-label="search icon button"
-        >
-          <Icon id="search" class="text-gray-600" />
-          <span class="text-gray-600 text-sm font-normal truncate">
-            {searchbar.placeholder}
-          </span>
-        </label>
+        {/* Novo Searchbar */}
+        <SearchbarInline placeholder={searchbar.placeholder} />
 
         <div class="flex items-center gap-6">
           <div class="flex gap-[14px] cursor-pointer text-white place-self-end">
-            <SignIn variant={"desktop"} />
+            <SignIn variant="desktop" />
           </div>
           <div class="flex items-center place-self-end">
             <Bag />
@@ -206,4 +178,5 @@ const Mobile = ({ logo, searchbar, navItems, loading }: Props) => (
 export const LoadingFallback = (props: LoadingFallbackProps<Props>) => (
   <Header {...(props as any)} loading="lazy" />
 );
+
 export default Header;
