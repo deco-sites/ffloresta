@@ -45,7 +45,12 @@ function Header({ alerts = [], logo, navItems, loading, searchBar }: Props) {
         </div>
         {/* Mobile */}
         <div class="lg:hidden">
-          <Mobile logo={logo} navItems={navItems} loading={loading} />
+          <Mobile
+            logo={logo}
+            navItems={navItems}
+            loading={loading}
+            searchBar={searchBar}
+          />
         </div>
       </div>
     </header>
@@ -93,7 +98,7 @@ const Desktop = ({ navItems, logo, searchBar }: Props) => (
   </>
 );
 
-const Mobile = ({ logo, navItems, loading }: Props) => (
+const Mobile = ({ logo, navItems, loading, searchBar }: Props) => (
   <>
     <Drawer
       id={SIDEMENU_DRAWER_ID}
