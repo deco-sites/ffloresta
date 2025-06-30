@@ -11,6 +11,7 @@ import { type LoadingFallbackProps } from "@deco/deco";
 import SignIn from "../../components/header/SignIn.tsx";
 import NavItemIsland from "../../islands/NavItemIsland.tsx";
 import SearchBarIsland from "../../islands/CustomSearchBar.tsx";
+import { SearchBarProps } from "../../islands/CustomSearchBar.tsx";
 
 export interface Logo {
   src: ImageWidget;
