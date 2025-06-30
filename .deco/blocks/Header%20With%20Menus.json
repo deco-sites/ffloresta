@@ -1864,5 +1864,6 @@
       "image": null
     }
   ],
-  "loading": "eager"
+  "loading": "eager",
+  "searchBar": {}
 }

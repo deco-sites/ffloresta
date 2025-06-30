@@ -11,8 +11,17 @@ import { type LoadingFallbackProps } from "@deco/deco";
 import SignIn from "../../components/header/SignIn.tsx";
 import NavItemIsland from "../../islands/NavItemIsland.tsx";
 import SearchBarIsland from "../../islands/CustomSearchBar.tsx";
-import { SearchBarProps } from "../../islands/CustomSearchBar.tsx";
 
+export interface CustomSearchBarProps {
+  /**
+   * @title Placeholder
+   * @description Search bar default placeholder message
+   * @default What are you looking for?
+   */
+  placeholder?: string;
+  /** @description Path to loader */
+  loader: string;
+}
 export interface Logo {
   src: ImageWidget;
   alt: string;
@@ -23,7 +32,7 @@ export interface Logo {
 export interface SectionProps {
   alerts?: HTMLWidget[];
   navItems?: SiteNavigationElement[] | null;
-  searchBar: SearchbarProps;
+  searchBar: CustomSearchBarProps;
   logo: Logo;
   loading?: "eager" | "lazy";
 }
