@@ -55,7 +55,7 @@ export default function NavItemIsland({
           <div class="flex container">
             <ul class="relative flex flex-col min-w-[243px]">
               {children.map((node, i) => (
-                <li key={`${node.url}-${i}`} class="group/subitem relative">
+                <li key={`${node.url}-${i}`} class="group/subitem">
                   <a
                     class="hover:underline font-['FS_Emeric'] text-[14px] text-white block p-2 px-[22px]"
                     href={node.url}

@@ -80,7 +80,6 @@ function formatPriceRange(min: number, max: number): string {
 }
 
 function enhancePriceFilter(priceFilter: FilterToggle): FilterToggle {
-  // 1. Extração segura dos valores de preço
   const priceValues: number[] = [];
 
   priceFilter.values.forEach((item) => {
@@ -92,7 +91,6 @@ function enhancePriceFilter(priceFilter: FilterToggle): FilterToggle {
 
   if (priceValues.length === 0) return priceFilter;
 
-  // 2. Definição das faixas de preço (garantindo o primeiro valor)
   const priceRanges = [
     { min: 20, max: 49.99, label: "R$ 20,00 - R$ 49,99" },
     { min: 50, max: 99.99, label: "R$ 50,00 - R$ 99,99" },
@@ -104,11 +102,9 @@ function enhancePriceFilter(priceFilter: FilterToggle): FilterToggle {
     { min: 5000, max: Infinity, label: "Acima de R$ 5.000,00" },
   ];
 
-  // 3. Cálculo das quantidades com fallback seguro
   const enhancedValues = priceRanges
     .filter((range) => range.min < Math.max(...priceValues))
     .map((range) => {
-      // Cálculo seguro da quantidade
       let quantity = 0;
       priceFilter.values.forEach((item) => {
         const [from, to] = item.value.split(":").map(Number);
@@ -123,25 +119,21 @@ function enhancePriceFilter(priceFilter: FilterToggle): FilterToggle {
         }
       });
 
-      const maxValue = range.max === Infinity
-        ? Math.max(...priceValues)
-        : range.max;
+      const maxValue =
+        range.max === Infinity ? Math.max(...priceValues) : range.max;
       const value = `${range.min}:${maxValue}`;
 
       return {
         value,
         quantity: Math.max(1, quantity),
         selected: false,
-        url: `?filter.category-1=ferragens&filter.price=${
-          encodeURIComponent(
-            value,
-          )
-        }`,
+        url: `?filter.category-1=ferragens&filter.price=${encodeURIComponent(
+          value
+        )}`,
         label: range.label,
       };
     });
 
-  // 4. Garantia de que pelo menos uma faixa será retornada
   if (enhancedValues.length === 0) {
     return {
       ...priceFilter,
@@ -150,11 +142,9 @@ function enhancePriceFilter(priceFilter: FilterToggle): FilterToggle {
           value: `0:${Math.max(...priceValues)}`,
           quantity: 1,
           selected: false,
-          url: `?filter.category-1=ferragens&filter.price=0%3A${
-            Math.max(
-              ...priceValues,
-            )
-          }`,
+          url: `?filter.category-1=ferragens&filter.price=0%3A${Math.max(
+            ...priceValues
+          )}`,
           label: `R$ 0,00 - R$ ${Math.max(...priceValues).toFixed(2)}`,
         },
       ],
@@ -167,19 +157,12 @@ function enhancePriceFilter(priceFilter: FilterToggle): FilterToggle {
   };
 }
 function Filters({ filters }: Props) {
-  // Aplica o enhancement apenas ao filtro de preço
   const enhancedFilters = filters.map((filter) => {
     if (isToggle(filter) && filter.key === "price") {
       return enhancePriceFilter(filter);
     }
     return filter;
   });
-
-  // Log para debug
-  console.log(
-    "Enhanced Price Filter:",
-    enhancedFilters.find((f) => isToggle(f) && f.key === "price"),
-  );
 
   return (
     <ul class="flex flex-col gap-6 sm:p-0 divide-y divide-[#CCCCCC]">
