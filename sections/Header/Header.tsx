@@ -22,21 +22,26 @@ export interface Logo {
 export interface SectionProps {
   alerts?: HTMLWidget[];
   navItems?: SiteNavigationElement[] | null;
-  searchbar: SearchbarProps;
+  searchBar: SearchbarProps;
   logo: Logo;
   loading?: "eager" | "lazy";
 }
 
 type Props = Omit<SectionProps, "alert">;
 
-function Header({ alerts = [], logo, navItems, loading }: Props) {
+function Header({ alerts = [], logo, navItems, loading, searchBar }: Props) {
   return (
     <header>
       <div class="bg-[#1F251C] w-full z-40">
         {alerts.length > 0 && <Alert alerts={alerts} />}
         {/* Desktop */}
         <div class="hidden lg:block">
-          <Desktop logo={logo} navItems={navItems} loading={loading} />
+          <Desktop
+            logo={logo}
+            navItems={navItems}
+            loading={loading}
+            searchBar={searchBar}
+          />
         </div>
         {/* Mobile */}
         <div class="lg:hidden">
