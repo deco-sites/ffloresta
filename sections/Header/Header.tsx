@@ -11,6 +11,9 @@ import { type LoadingFallbackProps } from "@deco/deco";
 import SignIn from "../../components/header/SignIn.tsx";
 import NavItemIsland from "../../islands/NavItemIsland.tsx";
 import SearchBarIsland from "../../islands/CustomSearchBar.tsx";
+import { Suggestion } from "apps/commerce/types.ts";
+import { asResolved } from "@deco/deco";
+import { type Resolved } from "@deco/deco";
 
 export interface CustomSearchBarProps {
   /**
@@ -20,7 +23,7 @@ export interface CustomSearchBarProps {
    */
   placeholder?: string;
   /** @description Path to loader */
-  loader: string;
+  loader: Resolved<Suggestion | null>;
 }
 export interface Logo {
   src: ImageWidget;

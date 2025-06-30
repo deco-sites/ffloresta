@@ -313,18 +313,17 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Header/Header.tsx",
-        "navItems": {
-          "__resolveType": "commerce/loaders/navbar.ts",
-          "items": []
-        },
-        "logo": {
-          "src": "https://assets.decocache.com/ffloresta/789ff04a-cd4b-493d-9669-70722e090ad3/Logo.svg",
-          "alt": "alt",
-          "width": 200,
-          "height": 50
-        },
+        "navItems": null,
         "searchBar": {
-          "loader": "/loaders/vtex/intelligentSearch/suggestions.ts"
+          "loader": {
+            "data": {
+              "__resolveType": "vtex/loaders/intelligentSearch/suggestions.ts",
+              "advancedConfigs": {
+                "includeOriginalAttributes": []
+              },
+              "similars": false
+            }
+          }
         }
       }
     }

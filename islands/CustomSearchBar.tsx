@@ -5,7 +5,9 @@ import { useSignal } from "@preact/signals";
 import { useEffect } from "preact/hooks";
 import Icon from "../components/ui/Icon.tsx";
 import { invoke } from "../runtime.ts";
-
+import { Suggestion } from "apps/commerce/types.ts";
+import { asResolved } from "@deco/deco";
+import { type Resolved } from "@deco/deco";
 export interface CustomSearchBarProps {
   /**
    * @title Placeholder
@@ -14,7 +16,7 @@ export interface CustomSearchBarProps {
    */
   placeholder?: string;
   /** @description Path to loader */
-  loader: string;
+  loader: Resolved<Suggestion | null>;
 }
 
 export default function SearchbarIsland({
