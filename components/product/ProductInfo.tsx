@@ -63,12 +63,11 @@ function ProductInfo({ page }: Props) {
   });
 
   //Checks if the variant name is "title"/"default title" and if so, the SKU Selector div doesn't render
-  const hasValidVariants =
-    isVariantOf?.hasVariant?.some(
-      (variant) =>
-        variant?.name?.toLowerCase() !== "title" &&
-        variant?.name?.toLowerCase() !== "default title"
-    ) ?? false;
+  const hasValidVariants = isVariantOf?.hasVariant?.some(
+    (variant) =>
+      variant?.name?.toLowerCase() !== "title" &&
+      variant?.name?.toLowerCase() !== "default title",
+  ) ?? false;
 
   return (
     <div {...viewItemEvent} class="flex flex-col mb-10 lg:mb-40" id={id}>
@@ -128,39 +127,40 @@ function ProductInfo({ page }: Props) {
 
       {/* Add to Cart Button */}
       <div class="mt-4 ">
-        {availability === "https://schema.org/InStock" ? (
-          <>
-            {hasValidVariants && (
-              <div class="mb-6">
-                <ProductSelector product={product} />
-              </div>
-            )}
-            <AddToCartButtonPDP
-              item={item}
-              seller={seller}
-              product={product}
-              platform={platform}
-              class="mb-[14px]"
-              disabled={false}
-            />
-
-            <div>
-              <ShippingSimulationForm
-                items={[
-                  { id: Number(product.sku), quantity: 1, seller: seller },
-                ]}
+        {availability === "https://schema.org/InStock"
+          ? (
+            <>
+              {hasValidVariants && (
+                <div class="mb-6">
+                  <ProductSelector product={product} />
+                </div>
+              )}
+              <AddToCartButtonPDP
+                item={item}
+                seller={seller}
+                product={product}
+                platform={platform}
+                class="mb-[14px]"
+                disabled={false}
               />
-            </div>
-            {/* <WishlistButton item={item} /> */}
-          </>
-        ) : (
-          <OutOfStock productID={productID} />
-        )}
+
+              <div>
+                <ShippingSimulationForm
+                  items={[
+                    { id: Number(product.sku), quantity: 1, seller: seller },
+                  ]}
+                />
+              </div>
+              {/* <WishlistButton item={item} /> */}
+            </>
+          )
+          : <OutOfStock productID={productID} />}
       </div>
 
       {/* Shipping Simulation Form */}
 
-      {/*
+      {
+        /*
       TODO: Componentes a serem ativados no futuro:
 
       <div class="mt-4 sm:mt-6">
@@ -176,7 +176,8 @@ function ProductInfo({ page }: Props) {
           )}
         </span>
       </div>
-      */}
+      */
+      }
     </div>
   );
 }

@@ -11,14 +11,14 @@ export default function ProductDescriptionIsland({ page }: Props) {
   // Função para buscar propriedades específicas
   const getProperty = (key: string) =>
     page.product?.isVariantOf?.additionalProperty?.find(
-      (prop) => prop.name === key
+      (prop) => prop.name === key,
     )?.value;
 
   const description = page.product?.description || "";
   const diferenciais = getProperty("Diferenciais");
   const especificacoes = page.product?.isVariantOf?.additionalProperty?.filter(
     (prop) =>
-      prop.propertyID === "Especificações Técnicas" && prop.name && prop.value
+      prop.propertyID === "Especificações Técnicas" && prop.name && prop.value,
   );
 
   console.log(description, "description");

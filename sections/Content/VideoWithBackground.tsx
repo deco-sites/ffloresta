@@ -21,7 +21,8 @@ export default function VideoWithBackground({
   youtubeVideoId,
 }: Props) {
   // Construir a URL correta de embed do YouTube
-  const youtubeEmbedUrl = `https://www.youtube.com/embed/${youtubeVideoId}?autoplay=0&rel=0`;
+  const youtubeEmbedUrl =
+    `https://www.youtube.com/embed/${youtubeVideoId}?autoplay=0&rel=0`;
 
   return (
     <div class="container max-h-[507px] relative w-full h-screen">
@@ -53,7 +54,8 @@ export default function VideoWithBackground({
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               title="YouTube video player"
-            ></iframe>
+            >
+            </iframe>
           </div>
         </div>
       </div>

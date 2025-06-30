@@ -2,7 +2,7 @@
 import { useState } from "preact/hooks";
 import { clx } from "../sdk/clx.ts";
 import QuantitySelectorPDP from "../components/product/QuantitySelectorPDP.tsx";
-import type { Product, AnalyticsItem } from "apps/commerce/types.ts";
+import type { AnalyticsItem, Product } from "apps/commerce/types.ts";
 import type { JSX } from "preact";
 
 export interface Props extends JSX.HTMLAttributes<HTMLDivElement> {
@@ -21,13 +21,12 @@ export default function AddToCartButtonPDP({
 }: Props) {
   const [quantity, setQuantity] = useState(1);
 
-  const platformProps =
-    platform === "vtex"
-      ? {
-          allowedOutdatedData: ["paymentData"],
-          orderItems: [{ quantity, seller, id: product.productID }],
-        }
-      : null;
+  const platformProps = platform === "vtex"
+    ? {
+      allowedOutdatedData: ["paymentData"],
+      orderItems: [{ quantity, seller, id: product.productID }],
+    }
+    : null;
 
   const addToCart = () => {
     const cartItem = { ...item, quantity };

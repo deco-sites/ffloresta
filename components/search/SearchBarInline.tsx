@@ -1,7 +1,7 @@
 import { useSignal } from "@preact/signals";
 import { useEffect, useRef } from "preact/hooks";
-import Searchbar from "./Form.tsx";
-import type { SearchbarProps } from "./Form.tsx";
+import Searchbar from "./Searchbar/Form.tsx";
+import type { SearchbarProps } from "./Searchbar/Form.tsx";
 
 export default function SearchbarInline(props: SearchbarProps) {
   const open = useSignal(false);

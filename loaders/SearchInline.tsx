@@ -1,16 +1,16 @@
 interface Props {
   /**
-  * @description The description of name.
-  */
+   * @description The description of name.
+   */
   name?: string;
 }
 
 export interface Returns {
-  name: string
+  name: string;
 }
 
-export default function loader({ name  = "Capy" }: Props): Returns {
-  return { 
+export default function loader({ name = "Capy" }: Props): Returns {
+  return {
     name,
-  }
+  };
 }

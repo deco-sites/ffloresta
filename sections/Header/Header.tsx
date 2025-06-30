@@ -27,7 +27,8 @@ export interface Logo {
 export interface SectionProps {
   alerts?: HTMLWidget[];
   navItems?: SiteNavigationElement[] | null;
-  searchbar: import("../../components/search/Searchbar/Form.tsx").SearchbarProps;
+  searchbar:
+    import("../../components/search/Searchbar/Form.tsx").SearchbarProps;
   logo: Logo;
   loading?: "eager" | "lazy";
 }
@@ -92,9 +93,7 @@ const Desktop = ({ navItems, logo, searchbar }: Props) => (
 
       <div class="bg-[#FDFFF5] flex justify-between items-center">
         <ul class="container flex justify-center">
-          {navItems?.slice(0, 10).map((item) => (
-            <NavItemIsland item={item} />
-          ))}
+          {navItems?.slice(0, 10).map((item) => <NavItemIsland item={item} />)}
         </ul>
         <div>{/* ship to */}</div>
       </div>
@@ -109,13 +108,13 @@ const Mobile = ({ logo, searchbar, navItems, loading }: Props) => (
       aside={
         <Drawer.Aside title="Search" drawer={SEARCHBAR_DRAWER_ID}>
           <div class="w-screen overflow-y-auto">
-            {loading === "lazy" ? (
-              <div class="h-full w-full flex items-center justify-center">
-                <span class="loading loading-spinner" />
-              </div>
-            ) : (
-              <Searchbar {...searchbar} />
-            )}
+            {loading === "lazy"
+              ? (
+                <div class="h-full w-full flex items-center justify-center">
+                  <span class="loading loading-spinner" />
+                </div>
+              )
+              : <Searchbar {...searchbar} />}
           </div>
         </Drawer.Aside>
       }
@@ -124,17 +123,17 @@ const Mobile = ({ logo, searchbar, navItems, loading }: Props) => (
       id={SIDEMENU_DRAWER_ID}
       aside={
         <Drawer.Aside title="" drawer={SIDEMENU_DRAWER_ID}>
-          {loading === "lazy" ? (
-            <div
-              id={SIDEMENU_CONTAINER_ID}
-              class="h-full flex items-center justify-center"
-              style={{ minWidth: "100vw" }}
-            >
-              <span class="loading loading-spinner" />
-            </div>
-          ) : (
-            <Menu navItems={navItems ?? []} />
-          )}
+          {loading === "lazy"
+            ? (
+              <div
+                id={SIDEMENU_CONTAINER_ID}
+                class="h-full flex items-center justify-center"
+                style={{ minWidth: "100vw" }}
+              >
+                <span class="loading loading-spinner" />
+              </div>
+            )
+            : <Menu navItems={navItems ?? []} />}
         </Drawer.Aside>
       }
     />

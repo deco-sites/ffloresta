@@ -7,8 +7,9 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
   const { url, name, children } = item;
 
   const submenuRef = useRef<HTMLDivElement>(null);
-  const [submenuTransform, setSubmenuTransform] =
-    useState<string>("translateX(0)");
+  const [submenuTransform, setSubmenuTransform] = useState<string>(
+    "translateX(0)",
+  );
 
   const hasChildWithImage = children?.some((child) => child.image?.length > 0);
   const childImage = children?.find((child) => child.image?.length > 0)

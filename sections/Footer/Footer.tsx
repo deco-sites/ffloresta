@@ -82,23 +82,25 @@ function Footer({
   return (
     <footer class="sm:px-0 mt-5 sm:mt-10" style={{ backgroundColor: "#fff" }}>
       <Newsletter />
-      {device === "mobile" ? (
-        ""
-      ) : (
-        <div class="bg-[#1F251C] min-h-[100px] flex items-center ps-[4%]">
-          <div class=" w-full">
-            {logoLinha && (
-              <Image
-                src={logoLinha}
-                alt="Logo Linha"
-                loading="lazy"
-                width={200}
-                height={50}
-              />
-            )}
+      {device === "mobile"
+        ? (
+          ""
+        )
+        : (
+          <div class="bg-[#1F251C] min-h-[100px] flex items-center ps-[4%]">
+            <div class=" w-full">
+              {logoLinha && (
+                <Image
+                  src={logoLinha}
+                  alt="Logo Linha"
+                  loading="lazy"
+                  width={200}
+                  height={50}
+                />
+              )}
+            </div>
           </div>
-        </div>
-      )}
+        )}
 
       <div class="container flex flex-col lg:p-[4%]  w-full p-5">
         <div class="w-full pb-[30px]">
@@ -115,72 +117,74 @@ function Footer({
         </div>
 
         <div class="grid grid-flow-row sm:grid-flow-col gap-6">
-          {device === "mobile" ? (
-            <div>
-              {links.map(({ title, itens }, index) => (
-                <details
-                  open
-                  key={title + index}
-                  class="flex flex-col gap-[12px]"
-                >
-                  <summary class="font-normal text-[16px] uppercase text-[#353535] cursor-pointer flex justify-between items-center min-h-[48px]">
-                    <span>{title}</span>
+          {device === "mobile"
+            ? (
+              <div>
+                {links.map(({ title, itens }, index) => (
+                  <details
+                    open
+                    key={title + index}
+                    class="flex flex-col gap-[12px]"
+                  >
+                    <summary class="font-normal text-[16px] uppercase text-[#353535] cursor-pointer flex justify-between items-center min-h-[48px]">
+                      <span>{title}</span>
 
-                    <span class="transform transition-transform duration-300">
-                      <svg
-                        width="12"
-                        height="7"
-                        viewBox="0 0 12 7"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M0.52124 0.966797C0.537437 0.755898 0.622525 0.570573 0.775146 0.417969L0.842529 0.357422C1.00278 0.224673 1.19303 0.157278 1.40796 0.157227C1.62312 0.157227 1.814 0.224465 1.97436 0.357422L2.04077 0.417969L6.00757 4.38574L9.97534 0.417968L10.0408 0.359375C10.1973 0.230598 10.3865 0.165388 10.6013 0.162109L10.6931 0.165039C10.8737 0.17901 11.0351 0.24329 11.1736 0.357421L11.241 0.417968C11.4141 0.591095 11.5026 0.805113 11.5027 1.05078C11.5027 1.26578 11.4353 1.45689 11.3025 1.61719L11.241 1.68457L6.74683 6.17871C6.66749 6.25802 6.58242 6.32291 6.49097 6.37012L6.39722 6.41113C6.27539 6.45627 6.14515 6.47848 6.00854 6.47852C5.87192 6.47852 5.74172 6.45623 5.61987 6.41113L5.52612 6.37012C5.43441 6.32286 5.34882 6.25824 5.26929 6.17871L0.775146 1.68457L0.716553 1.61914C0.587624 1.46258 0.522622 1.27346 0.519287 1.05859L0.52124 0.966797Z"
-                          fill="#292929"
-                          stroke="white"
-                          stroke-width="0.3"
-                        />
-                      </svg>
-                    </span>
-                  </summary>
+                      <span class="transform transition-transform duration-300">
+                        <svg
+                          width="12"
+                          height="7"
+                          viewBox="0 0 12 7"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0.52124 0.966797C0.537437 0.755898 0.622525 0.570573 0.775146 0.417969L0.842529 0.357422C1.00278 0.224673 1.19303 0.157278 1.40796 0.157227C1.62312 0.157227 1.814 0.224465 1.97436 0.357422L2.04077 0.417969L6.00757 4.38574L9.97534 0.417968L10.0408 0.359375C10.1973 0.230598 10.3865 0.165388 10.6013 0.162109L10.6931 0.165039C10.8737 0.17901 11.0351 0.24329 11.1736 0.357421L11.241 0.417968C11.4141 0.591095 11.5026 0.805113 11.5027 1.05078C11.5027 1.26578 11.4353 1.45689 11.3025 1.61719L11.241 1.68457L6.74683 6.17871C6.66749 6.25802 6.58242 6.32291 6.49097 6.37012L6.39722 6.41113C6.27539 6.45627 6.14515 6.47848 6.00854 6.47852C5.87192 6.47852 5.74172 6.45623 5.61987 6.41113L5.52612 6.37012C5.43441 6.32286 5.34882 6.25824 5.26929 6.17871L0.775146 1.68457L0.716553 1.61914C0.587624 1.46258 0.522622 1.27346 0.519287 1.05859L0.52124 0.966797Z"
+                            fill="#292929"
+                            stroke="white"
+                            stroke-width="0.3"
+                          />
+                        </svg>
+                      </span>
+                    </summary>
 
-                  <div class="flex flex-col gap-[12px] mt-2 mb-[20px]">
-                    {itens.map(({ title, href }, idx) => (
-                      <a
-                        key={title + idx}
-                        class="font-normal text-[14px] uppercase text-[#353535]"
-                        href={href}
-                      >
-                        {title}
-                      </a>
-                    ))}
+                    <div class="flex flex-col gap-[12px] mt-2 mb-[20px]">
+                      {itens.map(({ title, href }, idx) => (
+                        <a
+                          key={title + idx}
+                          class="font-normal text-[14px] uppercase text-[#353535]"
+                          href={href}
+                        >
+                          {title}
+                        </a>
+                      ))}
+                    </div>
+                  </details>
+                ))}
+              </div>
+            )
+            : (
+              <div class="grid grid-flow-row sm:grid-flow-col gap-6">
+                {links.map(({ title, itens }, index) => (
+                  <div key={title + index} class="flex flex-col gap-[18px]">
+                    <div class="font-normal text-[22px] uppercase text-[#353535]">
+                      <p>{title}</p>
+                      <hr class="w-full max-w-[75px] h-1 bg-[#273D28] rounded-sm" />
+                    </div>
+                    <div class="flex flex-col gap-[18px]">
+                      {itens.map(({ title, href }, idx) => (
+                        <a
+                          key={title + idx}
+                          class="font-normal text-[20px] uppercase text-[#353535]"
+                          href={href}
+                        >
+                          {title}
+                        </a>
+                      ))}
+                    </div>
                   </div>
-                </details>
-              ))}
-            </div>
-          ) : (
-            <div class="grid grid-flow-row sm:grid-flow-col gap-6">
-              {links.map(({ title, itens }, index) => (
-                <div key={title + index} class="flex flex-col gap-[18px]">
-                  <div class="font-normal text-[22px] uppercase text-[#353535]">
-                    <p>{title}</p>
-                    <hr class="w-full max-w-[75px] h-1 bg-[#273D28] rounded-sm" />
-                  </div>
-                  <div class="flex flex-col gap-[18px]">
-                    {itens.map(({ title, href }, idx) => (
-                      <a
-                        key={title + idx}
-                        class="font-normal text-[20px] uppercase text-[#353535]"
-                        href={href}
-                      >
-                        {title}
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
+                ))}
+              </div>
+            )}
 
           <div class="flex flex-col sm:flex-row gap-12 justify-between items-start">
             <div class="">
@@ -190,11 +194,13 @@ function Footer({
                     class={`font-normal text-[16px] lg:text-[22px] uppercase text-[#353535]`}
                   >
                     <p>{title}</p>
-                    {device === "mobile" ? (
-                      ""
-                    ) : (
-                      <hr class="w-full max-w-[75px] h-1 bg-[#273D28] rounded-sm" />
-                    )}
+                    {device === "mobile"
+                      ? (
+                        ""
+                      )
+                      : (
+                        <hr class="w-full max-w-[75px] h-1 bg-[#273D28] rounded-sm" />
+                      )}
                   </div>
                   <div class="flex flex-col gap-[15px] max-w-[159px] lg:max-w-[210px] mt-[20px]">
                     {/* Primeira imagem (índice 0) */}
@@ -238,11 +244,13 @@ function Footer({
                 <div key={title + index}>
                   <div class="font-normal text-[16px] lg:text-[22px] uppercase text-[#353535]">
                     <p>{title}</p>
-                    {device === "mobile" ? (
-                      ""
-                    ) : (
-                      <hr class="w-full max-w-[75px] h-1 bg-[#273D28] rounded-sm" />
-                    )}
+                    {device === "mobile"
+                      ? (
+                        ""
+                      )
+                      : (
+                        <hr class="w-full max-w-[75px] h-1 bg-[#273D28] rounded-sm" />
+                      )}
                   </div>
                   <div class="flex flex-wrap max-w-[300px] lg:max-w-[360px] mt-[20px]">
                     {payments.map(({ image, alt, href }, idx) => (
@@ -268,86 +276,93 @@ function Footer({
             {lojas.title}
           </p>
           <div class="flex flex-row gap-x-[20px]">
-            {device === "mobile" ? (
-              <div class="flex flex-col gap-y-[10px]">
-                <p class="text-[#273D28] text-[14px] lg:text-[22px]">
-                  {lojas.lojas[0].title}
-                </p>
-                <p class="text-[#273D28] text-[12px] lg:text-[16px] font-bold underline decoration-[#273D28]">
-                  {lojas.lojas[0].tuor}
-                </p>
-                <p class="text-[#273D28] text-[12px] lg:text-[16px]">
-                  {lojas.lojas[0].end}
-                </p>
-                <div class="flex flex-row">
-                  <p class="text-[#273D28] text-[12px] lg:text-[16px] font-bold">
-                    TELEFONE:
+            {device === "mobile"
+              ? (
+                <div class="flex flex-col gap-y-[10px]">
+                  <p class="text-[#273D28] text-[14px] lg:text-[22px]">
+                    {lojas.lojas[0].title}
                   </p>
-                  <p class="text-[#273D28] text-[12px] lg:text-[16px]">
-                    {lojas.lojas[0].tel}
-                  </p>
-                </div>
-                <div>
                   <p class="text-[#273D28] text-[12px] lg:text-[16px] font-bold underline decoration-[#273D28]">
-                    HORÁRIO DE ATENDIMENTO
+                    {lojas.lojas[0].tuor}
                   </p>
                   <p class="text-[#273D28] text-[12px] lg:text-[16px]">
-                    {lojas.lojas[0].horario}
+                    {lojas.lojas[0].end}
                   </p>
-                </div>
-              </div>
-            ) : (
-              <div class="flex flex-row gap-x-[20px]">
-                {" "}
-                {lojas.lojas.map(({ title, tuor, end, tel, horario }, idx) => (
-                  <div key={idx} class="flex flex-col gap-y-[10px]">
-                    <p class="text-[#273D28] text-[14px] lg:text-[22px]">
-                      {title}
-                    </p>
-                    <p class="text-[#273D28] text-[12px] lg:text-[16px] font-bold underline decoration-[#273D28]">
-                      {tuor}
+                  <div class="flex flex-row">
+                    <p class="text-[#273D28] text-[12px] lg:text-[16px] font-bold">
+                      TELEFONE:
                     </p>
                     <p class="text-[#273D28] text-[12px] lg:text-[16px]">
-                      {end}
+                      {lojas.lojas[0].tel}
                     </p>
-                    <div class="flex flex-row">
-                      <p class="text-[#273D28] text-[12px] lg:text-[16px] font-bold">
-                        TELEFONE:
-                      </p>
-                      <p class="text-[#273D28] text-[12px] lg:text-[16px]">
-                        {tel}
-                      </p>
-                    </div>
-                    <div>
-                      <p class="text-[#273D28] text-[12px] lg:text-[16px] font-bold underline decoration-[#273D28]">
-                        HORÁRIO DE ATENDIMENTO
-                      </p>
-                      <p class="text-[#273D28] text-[12px] lg:text-[16px]">
-                        {horario}
-                      </p>
-                    </div>
                   </div>
-                ))}
-              </div>
-            )}
+                  <div>
+                    <p class="text-[#273D28] text-[12px] lg:text-[16px] font-bold underline decoration-[#273D28]">
+                      HORÁRIO DE ATENDIMENTO
+                    </p>
+                    <p class="text-[#273D28] text-[12px] lg:text-[16px]">
+                      {lojas.lojas[0].horario}
+                    </p>
+                  </div>
+                </div>
+              )
+              : (
+                <div class="flex flex-row gap-x-[20px]">
+                  {" "}
+                  {lojas.lojas.map((
+                    { title, tuor, end, tel, horario },
+                    idx,
+                  ) => (
+                    <div key={idx} class="flex flex-col gap-y-[10px]">
+                      <p class="text-[#273D28] text-[14px] lg:text-[22px]">
+                        {title}
+                      </p>
+                      <p class="text-[#273D28] text-[12px] lg:text-[16px] font-bold underline decoration-[#273D28]">
+                        {tuor}
+                      </p>
+                      <p class="text-[#273D28] text-[12px] lg:text-[16px]">
+                        {end}
+                      </p>
+                      <div class="flex flex-row">
+                        <p class="text-[#273D28] text-[12px] lg:text-[16px] font-bold">
+                          TELEFONE:
+                        </p>
+                        <p class="text-[#273D28] text-[12px] lg:text-[16px]">
+                          {tel}
+                        </p>
+                      </div>
+                      <div>
+                        <p class="text-[#273D28] text-[12px] lg:text-[16px] font-bold underline decoration-[#273D28]">
+                          HORÁRIO DE ATENDIMENTO
+                        </p>
+                        <p class="text-[#273D28] text-[12px] lg:text-[16px]">
+                          {horario}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
           </div>
-          {device === "mobile" ? (
-            <a
-              href={lojas.verMais}
-              class="text-[#273D28] underline decoration-[#273D28] text-[12px] mt-[16px]"
-            >
-              Ver mais lojas
-            </a>
-          ) : (
-            ""
-          )}
+          {device === "mobile"
+            ? (
+              <a
+                href={lojas.verMais}
+                class="text-[#273D28] underline decoration-[#273D28] text-[12px] mt-[16px]"
+              >
+                Ver mais lojas
+              </a>
+            )
+            : (
+              ""
+            )}
         </div>
 
-        {device === "mobile" ? (
-          ""
-        ) : (
-          <hr class="w-full text-base-400 mt-[50px] bg-[#A3A3A3] h-[2px]" />
-        )}
+        {device === "mobile"
+          ? (
+            ""
+          )
+          : <hr class="w-full text-base-400 mt-[50px] bg-[#A3A3A3] h-[2px]" />}
 
         <div class="flex flex-col lg:flex-row items-center justify-between mt-[30px] lg:mt-4">
           <div class="flex flex-nowrap items-center justify-between sm:justify-center gap-4">
