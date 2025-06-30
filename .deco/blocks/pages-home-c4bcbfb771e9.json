@@ -4,6 +4,30 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
+        "__resolveType": "site/sections/Header/Header.tsx",
+        "navItems": null,
+        "searchBar": {
+          "loader": {
+            "data": {
+              "__resolveType": "vtex/loaders/intelligentSearch/suggestions.ts",
+              "advancedConfigs": {
+                "includeOriginalAttributes": []
+              },
+              "similars": false
+            }
+          }
+        },
+        "logo": {
+          "src": "https://assets.decocache.com/ffloresta/789ff04a-cd4b-493d-9669-70722e090ad3/Logo.svg",
+          "alt": "Logo",
+          "width": 200,
+          "height": 50
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
         "__resolveType": "Header With Menus"
       }
     },
@@ -54,6 +78,14 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Product/ProductShelfWithBanner.tsx",
+        "products": {
+          "__resolveType": "vtex/loaders/intelligentSearch/productSearchValidator.ts",
+          "props": {
+            "sort": "price:desc",
+            "collection": "150",
+            "count": 20
+          }
+        },
         "banner": {
           "mobile": {
             "src": "https://assets.decocache.com/ffloresta/2a062699-1996-4d40-8cbf-a4cd8399aca9/home-top-banner-shelf-desk.png",
@@ -65,14 +97,6 @@
           }
         },
         "orientation": "vertical",
-        "products": {
-          "__resolveType": "vtex/loaders/intelligentSearch/productSearchValidator.ts",
-          "props": {
-            "sort": "price:desc",
-            "collection": "150",
-            "count": 20
-          }
-        },
         "icon": "https://assets.decocache.com/ffloresta/8e934bf1-704a-43a4-9ec5-abe3998e9fc0/Logo-header.svg"
       }
     },
@@ -80,6 +104,7 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Product/ProductShelfWithBackground.tsx",
+        "title": "DESTAQUE FLORESTA",
         "products": {
           "__resolveType": "vtex/loaders/intelligentSearch/productSearchValidator.ts",
           "props": {
@@ -95,8 +120,7 @@
           "mobile": {
             "src": "https://assets.decocache.com/ffloresta/69b40089-2979-4077-9522-0f87b68682ee/image-(1).png"
           }
-        },
-        "title": "DESTAQUE FLORESTA"
+        }
       }
     },
     {
@@ -307,24 +331,6 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "Footer"
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Header/Header.tsx",
-        "navItems": null,
-        "searchBar": {
-          "loader": {
-            "data": {
-              "__resolveType": "vtex/loaders/intelligentSearch/suggestions.ts",
-              "advancedConfigs": {
-                "includeOriginalAttributes": []
-              },
-              "similars": false
-            }
-          }
-        }
       }
     }
   ],
