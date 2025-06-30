@@ -4,18 +4,13 @@ import Image from "apps/website/components/Image.tsx";
 import Alert from "../../components/header/Alert.tsx";
 import Bag from "../../components/header/Bag.tsx";
 import Menu from "../../components/header/Menu.tsx";
-import SearchbarInline from "../../components/search/SearchbarInline.tsx";
-import Searchbar from "../../components/search/Searchbar/Form.tsx"; // usado no mobile
 import Drawer from "../../components/ui/Drawer.tsx";
 import Icon from "../../components/ui/Icon.tsx";
-import {
-  SEARCHBAR_DRAWER_ID,
-  SIDEMENU_CONTAINER_ID,
-  SIDEMENU_DRAWER_ID,
-} from "../../constants.ts";
+import { SIDEMENU_CONTAINER_ID, SIDEMENU_DRAWER_ID } from "../../constants.ts";
 import { type LoadingFallbackProps } from "@deco/deco";
 import SignIn from "../../components/header/SignIn.tsx";
 import NavItemIsland from "../../islands/NavItemIsland.tsx";
+import SearchBarIsland from "../../islands/CustomSearchBar.tsx";
 
 export interface Logo {
   src: ImageWidget;
@@ -27,43 +22,32 @@ export interface Logo {
 export interface SectionProps {
   alerts?: HTMLWidget[];
   navItems?: SiteNavigationElement[] | null;
-  searchbar:
-    import("../../components/search/Searchbar/Form.tsx").SearchbarProps;
+  searchbar: SearchbarProps;
   logo: Logo;
   loading?: "eager" | "lazy";
 }
 
 type Props = Omit<SectionProps, "alert">;
 
-function Header({ alerts = [], logo, navItems, searchbar, loading }: Props) {
+function Header({ alerts = [], logo, navItems, loading }: Props) {
   return (
     <header>
       <div class="bg-[#1F251C] w-full z-40">
         {alerts.length > 0 && <Alert alerts={alerts} />}
         {/* Desktop */}
         <div class="hidden lg:block">
-          <Desktop
-            logo={logo}
-            navItems={navItems}
-            searchbar={searchbar}
-            loading={loading}
-          />
+          <Desktop logo={logo} navItems={navItems} loading={loading} />
         </div>
         {/* Mobile */}
         <div class="lg:hidden">
-          <Mobile
-            logo={logo}
-            navItems={navItems}
-            searchbar={searchbar}
-            loading={loading}
-          />
+          <Mobile logo={logo} navItems={navItems} loading={loading} />
         </div>
       </div>
     </header>
   );
 }
 
-const Desktop = ({ navItems, logo, searchbar }: Props) => (
+const Desktop = ({ navItems, logo, searchBar }: Props) => (
   <>
     <div>
       <div class="container flex items-center justify-between p-5 gap-4 2xl:px-0">
@@ -78,8 +62,9 @@ const Desktop = ({ navItems, logo, searchbar }: Props) => (
           </a>
         </div>
 
-        {/* Novo Searchbar */}
-        <SearchbarInline placeholder={searchbar.placeholder} />
+        <div>
+          <SearchBarIsland {...searchBar} />
+        </div>
 
         <div class="flex items-center gap-6">
           <div class="flex gap-[14px] cursor-pointer text-white place-self-end">
@@ -93,7 +78,9 @@ const Desktop = ({ navItems, logo, searchbar }: Props) => (
 
       <div class="bg-[#FDFFF5] flex justify-between items-center">
         <ul class="container flex justify-center">
-          {navItems?.slice(0, 10).map((item) => <NavItemIsland item={item} />)}
+          {navItems?.slice(0, 10).map((item) => (
+            <NavItemIsland item={item} />
+          ))}
         </ul>
         <div>{/* ship to */}</div>
       </div>
@@ -101,39 +88,23 @@ const Desktop = ({ navItems, logo, searchbar }: Props) => (
   </>
 );
 
-const Mobile = ({ logo, searchbar, navItems, loading }: Props) => (
+const Mobile = ({ logo, navItems, loading }: Props) => (
   <>
-    <Drawer
-      id={SEARCHBAR_DRAWER_ID}
-      aside={
-        <Drawer.Aside title="Search" drawer={SEARCHBAR_DRAWER_ID}>
-          <div class="w-screen overflow-y-auto">
-            {loading === "lazy"
-              ? (
-                <div class="h-full w-full flex items-center justify-center">
-                  <span class="loading loading-spinner" />
-                </div>
-              )
-              : <Searchbar {...searchbar} />}
-          </div>
-        </Drawer.Aside>
-      }
-    />
     <Drawer
       id={SIDEMENU_DRAWER_ID}
       aside={
         <Drawer.Aside title="" drawer={SIDEMENU_DRAWER_ID}>
-          {loading === "lazy"
-            ? (
-              <div
-                id={SIDEMENU_CONTAINER_ID}
-                class="h-full flex items-center justify-center"
-                style={{ minWidth: "100vw" }}
-              >
-                <span class="loading loading-spinner" />
-              </div>
-            )
-            : <Menu navItems={navItems ?? []} />}
+          {loading === "lazy" ? (
+            <div
+              id={SIDEMENU_CONTAINER_ID}
+              class="h-full flex items-center justify-center"
+              style={{ minWidth: "100vw" }}
+            >
+              <span class="loading loading-spinner" />
+            </div>
+          ) : (
+            <Menu navItems={navItems ?? []} />
+          )}
         </Drawer.Aside>
       }
     />
@@ -162,13 +133,6 @@ const Mobile = ({ logo, searchbar, navItems, loading }: Props) => (
         </a>
       )}
 
-      <label
-        for={SEARCHBAR_DRAWER_ID}
-        class="flex items-center justify-center w-[38px] h-[38px]"
-        aria-label="search icon button"
-      >
-        <Icon id="search" class="text-white" />
-      </label>
       <Bag />
     </div>
   </>

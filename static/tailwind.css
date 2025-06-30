@@ -3618,6 +3618,9 @@ details.collapse summary::-webkit-details-marker {
 .top-\[70px\] {
   top: 70px;
 }
+.top-full {
+  top: 100%;
+}
 .z-0 {
   z-index: 0;
 }
@@ -4217,6 +4220,9 @@ details.collapse summary::-webkit-details-marker {
 .max-w-\[480px\] {
   max-width: 480px;
 }
+.max-w-\[500px\] {
+  max-width: 500px;
+}
 .max-w-\[506px\] {
   max-width: 506px;
 }
@@ -4225,9 +4231,6 @@ details.collapse summary::-webkit-details-marker {
 }
 .max-w-\[522px\] {
   max-width: 522px;
-}
-.max-w-\[638px\] {
-  max-width: 638px;
 }
 .max-w-\[640px\] {
   max-width: 640px;
@@ -4584,6 +4587,10 @@ details.collapse summary::-webkit-details-marker {
 .rounded-sm {
   border-radius: 0.125rem;
 }
+.rounded-b-lg {
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
 .rounded-l {
   border-top-left-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
@@ -4926,9 +4933,9 @@ details.collapse summary::-webkit-details-marker {
   padding-left: 22px;
   padding-right: 22px;
 }
-.px-\[32px\] {
-  padding-left: 32px;
-  padding-right: 32px;
+.px-\[48px\] {
+  padding-left: 48px;
+  padding-right: 48px;
 }
 .py-0 {
   padding-top: 0px;
