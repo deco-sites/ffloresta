@@ -4,30 +4,6 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Header/Header.tsx",
-        "navItems": null,
-        "searchBar": {
-          "loader": {
-            "data": {
-              "__resolveType": "vtex/loaders/intelligentSearch/suggestions.ts",
-              "advancedConfigs": {
-                "includeOriginalAttributes": []
-              },
-              "similars": false
-            }
-          }
-        },
-        "logo": {
-          "src": "https://assets.decocache.com/ffloresta/789ff04a-cd4b-493d-9669-70722e090ad3/Logo.svg",
-          "alt": "Logo",
-          "width": 200,
-          "height": 50
-        }
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
         "__resolveType": "Header With Menus"
       }
     },
@@ -104,7 +80,6 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Product/ProductShelfWithBackground.tsx",
-        "title": "DESTAQUE FLORESTA",
         "products": {
           "__resolveType": "vtex/loaders/intelligentSearch/productSearchValidator.ts",
           "props": {
@@ -113,6 +88,7 @@
             "count": 7
           }
         },
+        "title": "DESTAQUE FLORESTA",
         "background": {
           "desktop": {
             "src": "https://assets.decocache.com/ffloresta/f8ba9f96-6cf8-4d4b-b0e9-8b52e645df7e/image.png"
