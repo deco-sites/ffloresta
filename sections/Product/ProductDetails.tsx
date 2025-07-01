@@ -34,9 +34,9 @@ export default function ProductDetails({ page }: Props) {
 
       <div
         class={clx(
-          "container grid max-w-[915px]",
+          "container grid max-w-[915px] md:mt-16",
           "grid-cols-1 gap-9 py-0 px-4",
-          "lg:grid-cols-2 lg:gap-11 lg:px-0",
+          "lg:grid-cols-2 lg:gap-11 lg:px-0"
         )}
       >
         <div class="">

@@ -3585,9 +3585,6 @@ details.collapse summary::-webkit-details-marker {
 .left-\[8px\] {
   left: 8px;
 }
-.left-full {
-  left: 100%;
-}
 .right-0 {
   right: 0px;
 }
@@ -6022,10 +6019,6 @@ input[type="checkbox"]:checked::after {
   font-weight: 600;
 }
 
-.group\/subitem:hover .group-hover\/subitem\:flex {
-  display: flex;
-}
-
 .group:hover .group-hover\:flex {
   display: flex;
 }
@@ -6348,6 +6341,10 @@ input[type="checkbox"]:checked::after {
 
   .md\:ml-2 {
     margin-left: 0.5rem;
+  }
+
+  .md\:mt-16 {
+    margin-top: 4rem;
   }
 
   .md\:mt-5 {

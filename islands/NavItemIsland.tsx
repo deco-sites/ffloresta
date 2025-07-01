@@ -1,6 +1,5 @@
 import { useRef, useState } from "preact/hooks";
 import type { SiteNavigationElement } from "apps/commerce/types.ts";
-import Image from "apps/website/components/Image.tsx";
 import { NAVBAR_HEIGHT_DESKTOP } from "../constants.ts";
 
 export default function NavItemIsland({
@@ -12,6 +11,10 @@ export default function NavItemIsland({
   const submenuRef = useRef<HTMLDivElement>(null);
   const [submenuTransform, setSubmenuTransform] = useState("translateX(0)");
   const [isSubmenuHovered, setIsSubmenuHovered] = useState(false);
+  const [activeThirdLevel, setActiveThirdLevel] = useState<{
+    items: SiteNavigationElement[];
+    topPosition: number;
+  } | null>(null);
 
   const adjustPosition = () => {
     const node = submenuRef.current;
@@ -26,6 +29,27 @@ export default function NavItemIsland({
       setSubmenuTransform(`translateX(${Math.abs(overflowLeft) + 16}px)`);
     } else {
       setSubmenuTransform("translateX(0)");
+    }
+  };
+
+  const handleSubItemHover = (
+    items: SiteNavigationElement[] | undefined,
+    event: MouseEvent
+  ) => {
+    if (!items || items.length === 0) {
+      setActiveThirdLevel(null);
+      return;
+    }
+
+    const target = event.currentTarget as HTMLElement;
+    const rect = target.getBoundingClientRect();
+    const parentRect = submenuRef.current?.getBoundingClientRect();
+
+    if (parentRect) {
+      setActiveThirdLevel({
+        items,
+        topPosition: rect.top - parentRect.top,
+      });
     }
   };
 
@@ -47,41 +71,51 @@ export default function NavItemIsland({
           ref={submenuRef}
           class={`absolute hidden group-hover:flex ${
             isSubmenuHovered ? "flex" : ""
-          } z-40 items-start bg-gradient-to-b from-[rgba(58,67,50,0.9)] to-[rgba(146,169,126,0.9)] transition-transform duration-300`}
+          } z-40 bg-gradient-to-b from-[rgba(58,67,50,0.9)] to-[rgba(146,169,126,0.9)] transition-transform duration-300`}
           style={{ top: "100%", left: 0, transform: submenuTransform }}
           onMouseEnter={() => setIsSubmenuHovered(true)}
-          onMouseLeave={() => setIsSubmenuHovered(false)}
+          onMouseLeave={() => {
+            setIsSubmenuHovered(false);
+            setActiveThirdLevel(null);
+          }}
         >
-          <div class="flex container">
-            <ul class="relative flex flex-col min-w-[243px]">
+          <div class="flex">
+            {/* Primeiro nível de submenu */}
+            <ul class="flex flex-col min-w-[243px]">
               {children.map((node, i) => (
-                <li key={`${node.url}-${i}`} class="group/subitem">
+                <li
+                  key={`${node.url}-${i}`}
+                  class="relative"
+                  onMouseEnter={(e) => handleSubItemHover(node.children, e)}
+                  onMouseLeave={() => setActiveThirdLevel(null)}
+                >
                   <a
                     class="hover:underline font-['FS_Emeric'] text-[14px] text-white block p-2 px-[22px]"
                     href={node.url}
                   >
                     {node.name}
                   </a>
-
-                  {node.children && node.children.length > 0 && (
-                    <div
-                      class="absolute left-full top-0 hidden group-hover/subitem:flex flex-col min-w-[200px] bg-white"
-                      style={{ top: `${i * 40}px` }}
-                    >
-                      {node.children.map((child, i) => (
-                        <a
-                          key={`${child.url}-${i}`}
-                          class="text-[#1F251C] font-['FS_Emeric'] text-[12px] hover:underline p-2 px-[16px]"
-                          href={child.url}
-                        >
-                          {child.name}
-                        </a>
-                      ))}
-                    </div>
-                  )}
                 </li>
               ))}
             </ul>
+
+            {/* Container para o terceiro nível */}
+            {activeThirdLevel && (
+              <div
+                class="flex flex-col min-w-[200px] bg-white shadow-lg"
+                style={{ marginTop: `${activeThirdLevel.topPosition}px` }}
+              >
+                {activeThirdLevel.items.map((child, i) => (
+                  <a
+                    key={`${child.url}-${i}`}
+                    class="text-[#1F251C] font-['FS_Emeric'] text-[12px] hover:underline p-2 px-[16px]"
+                    href={child.url}
+                  >
+                    {child.name}
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       )}
