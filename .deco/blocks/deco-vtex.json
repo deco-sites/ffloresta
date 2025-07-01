@@ -1,1 +1,18 @@
-{"__resolveType":"site/apps/deco/vtex.ts"}
+{
+  "__resolveType": "site/apps/deco/vtex.ts",
+  "salesChannel": "1",
+  "defaultSegment": {
+    "channelPrivacy": "public"
+  },
+  "platform": "vtex",
+  "account": "ferragemfloresta",
+  "publicUrl": "secure.ferragemfloresta.com.br",
+  "appKey": {
+    "encrypted": "209d619828b05f9a22a2e844c40700e2015c37d657c94a30feb5dbd29de4919dc0197a46a8f6ad93b7c536379ab97b4f",
+    "__resolveType": "website/loaders/secret.ts"
+  },
+  "appToken": {
+    "encrypted": "5adc390a3515bf59bdf6f7c552a3b91319629fd43eea95399265e7582cc75807ad85a26f3aabc70897cf4cf2523d0e9c791ba6feaea4cd9f91b3d3f8509dbf53e3f460ac5c7383668d92133b06b823ed9d7249de7d6fc5b0ed23f8ceb7dc655e14325d9f4fac8c4036893c234e3a0d9a9ba9ee8dcf49efcb7a835ea67e1e05c9aec732e60b66bcd6290295566e4c58b9",
+    "__resolveType": "website/loaders/secret.ts"
+  }
+}

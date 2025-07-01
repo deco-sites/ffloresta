@@ -1,23 +1,29 @@
 import { JSX } from "preact";
 import { clx } from "../../sdk/clx.ts";
-import { ImageWidget as Image } from "apps/admin/widgets.ts";
+import type { ImageWidget } from "apps/admin/widgets.ts";
 export interface Props {
   /** @description Section title */
   title?: string;
 
   /** @description See all link */
   cta?: string;
-  icon?: Image;
+  icon?: ImageWidget;
+  banner?: ImageWidget;
 }
 
-function Header({ title, cta, icon }: Props) {
+function Header({ title, cta, icon, banner }: Props) {
   if (!title) {
     return null;
   }
 
   return (
-    <div class={clx("flex justify-between items-center gap-2", "px-5 sm:px-0")}>
-      {icon && <img src={icon} alt={title} />}
+    <div
+      class={clx(
+        "flex justify-between items-center gap-2",
+        "2xl:w-full 2xl:max-w-[1240px] px-0",
+      )}
+    >
+      {/* {icon && <img src={icon} alt={title} />} */}
       <span class="font-['FS_Emeric'] font-bold text-[#1F251C] text-[18px] leading-[100%] sm:text-[26.14px]">
         {title}
       </span>
@@ -26,6 +32,7 @@ function Header({ title, cta, icon }: Props) {
           See all
         </a>
       )}
+      {banner && <img src={banner} alt={title} />}
     </div>
   );
 }
@@ -43,7 +50,7 @@ function Container({ class: _class, ...props }: JSX.IntrinsicElements["div"]) {
     <div
       {...props}
       class={clx(
-        "container flex flex-col gap-4 sm:gap-6 w-full py-5 sm:py-10",
+        "container flex flex-col gap-4 sm:gap-6 w-full p-5 sm:py-10 2xl:px-0",
         _class?.toString(),
       )}
     />

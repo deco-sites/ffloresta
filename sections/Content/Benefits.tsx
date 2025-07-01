@@ -23,7 +23,7 @@ interface BenefitItemProps {
 const BenefitItem = ({ benefit }: BenefitItemProps) => {
   return (
     <a className="w-full h-full" href={benefit.benefitLink}>
-      <div className="group flex items-center gap-3 transition duration-200 ease-in-out text-black w-full h-full rounded p-4">
+      <div className="group flex items-center gap-3 transition duration-200 ease-in-out text-black w-full h-full rounded p-0">
         <div className="flex-shrink-0">
           <img
             src={benefit.benefitImgSrc}
@@ -46,7 +46,7 @@ const Benefits = ({ benefits }: Props) => {
   return (
     <>
       {/* Desktop View - Grid */}
-      <div className="hidden md:grid container grid-cols-1 px-5 md:grid-cols-2 md:px-0 lg:grid-cols-4 gap-3 mt-6 mb-11 w-full">
+      <div className="hidden md:grid container grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-3 mt-6 mb-0 w-full px-5 2xl:px-0">
         {benefits?.map((benefit: Benefit) => (
           <div key={benefit.benefitText} className="min-w-0">
             <BenefitItem benefit={benefit} />

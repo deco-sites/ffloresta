@@ -65,7 +65,7 @@ export default function ProductShelfWithBanner({
       <div
         class={`flex gap-10 ${
           orientation === "vertical" ? "flex-col" : "flex-row"
-        } w-full max-w-[1440px] mx-auto lg:mx-0 xl:max-w-none xl:px-0`}
+        } w-full max-w-[1240px] mx-auto lg:mx-0 xl:max-w-none xl:px-0`}
       >
         {/* Banner Section */}
         <div class={orientation === "vertical" ? "w-full" : "flex-1"}>

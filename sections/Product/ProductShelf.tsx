@@ -7,13 +7,16 @@ import Section, {
 import { useOffer } from "../../sdk/useOffer.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import { type LoadingFallbackProps } from "@deco/deco";
+
 export interface Props extends SectionHeaderProps {
   products: Product[] | null;
 }
+
 export default function ProductShelf({ products, title, cta }: Props) {
   if (!products || products.length === 0) {
     return null;
   }
+
   const viewItemListEvent = useSendEvent({
     on: "view",
     event: {
@@ -24,25 +27,31 @@ export default function ProductShelf({ products, title, cta }: Props) {
           mapProductToAnalyticsItem({
             index,
             product,
-            ...(useOffer(product.offers)),
+            ...useOffer(product.offers),
           })
         ),
       },
     },
   });
+
   return (
     <Section.Container {...viewItemListEvent}>
-      <Section.Header title={title} cta={cta} />
-
-      <ProductSlider products={products} itemListName={title} />
+      <div class="w-full max-w-[1240px] mx-auto lg:mx-0 xl:max-w-none xl:px-0">
+        <Section.Header title={title} cta={cta} />
+        <div class="mt-14">
+          <ProductSlider products={products} itemListName={title} />
+        </div>
+      </div>
     </Section.Container>
   );
 }
-export const LoadingFallback = (
-  { title, cta }: LoadingFallbackProps<Props>,
-) => (
+
+export const LoadingFallback = ({
+  title,
+  cta,
+}: LoadingFallbackProps<Props>) => (
   <Section.Container>
     <Section.Header title={title} cta={cta} />
-    <Section.Placeholder height="471px" />;
+    <Section.Placeholder height="471px" />
   </Section.Container>
 );

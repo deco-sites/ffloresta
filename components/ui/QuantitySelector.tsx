@@ -6,21 +6,24 @@ const onClick = (delta: number) => {
   // doidera!
   event!.stopPropagation();
   const button = event!.currentTarget as HTMLButtonElement;
-  const input = button.parentElement
-    ?.querySelector<HTMLInputElement>('input[type="number"]')!;
+  const input = button.parentElement?.querySelector<HTMLInputElement>(
+    'input[type="number"]',
+  )!;
   const min = Number(input.min) || -Infinity;
   const max = Number(input.max) || Infinity;
   input.value = `${Math.min(Math.max(input.valueAsNumber + delta, min), max)}`;
   input.dispatchEvent(new Event("change", { bubbles: true }));
 };
-function QuantitySelector(
-  { id = useId(), disabled, ...props }: JSX.IntrinsicElements["input"],
-) {
+function QuantitySelector({
+  id = useId(),
+  disabled,
+  ...props
+}: JSX.IntrinsicElements["input"]) {
   return (
     <div class="join border rounded w-full">
       <button
         type="button"
-        class="btn btn-square btn-ghost no-animation"
+        class="p-3 cursor-pointer text-[16px]"
         hx-on:click={useScript(onClick, -1)}
         disabled={disabled}
       >
@@ -48,7 +51,7 @@ function QuantitySelector(
       </div>
       <button
         type="button"
-        class="btn btn-square btn-ghost no-animation"
+        class="p-3 cursor-pointer text-[24px] leading-none"
         hx-on:click={useScript(onClick, 1)}
         disabled={disabled}
       >

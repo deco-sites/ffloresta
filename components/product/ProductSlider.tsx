@@ -14,7 +14,7 @@ function ProductSlider({ products, itemListName }: Props) {
 
   return (
     <>
-      <div id={id} class="relative px-[20px]">
+      <div id={id} class="relative px-[48px] max-w-[1240px] mx-auto">
         <Slider class="carousel carousel-center gap-6 w-full">
           {products?.map((product, index) => (
             <Slider.Item
@@ -27,22 +27,24 @@ function ProductSlider({ products, itemListName }: Props) {
                 "min-[400px]:w-[calc(50%-16px)]",
                 // Tablet: 3 itens
                 "md:w-[calc(33.333%-16px)]",
-                // Desktop: 4-5 itens (258px máximo)
-                "lg:w-[calc(25%-20px)] xl:w-[calc(20%-20px)] max-w-[258px]",
+                // Desktop: 4 itens
+                "lg:w-[calc(25%-20px)]",
+                // Desktop grande: 5 itens (ocupando espaço máximo)
+                "xl:w-[calc(20%-20px)]",
               )}
             >
               <ProductCard
                 index={index}
                 product={product}
                 itemListName={itemListName}
-                class="min-h-[410px] shadow-[5.62px_5.62px_7.03px_0px_rgba(0,0,0,0.15)]"
+                class="min-h-[410px] shadow-[5.62px_5.62px_7.03px_0px_rgba(0,0,0,0.15)] w-full"
               />
             </Slider.Item>
           ))}
         </Slider>
 
         {/* Botões de navegação */}
-        <Slider.PrevButton class="absolute left-0 top-1/2 -translate-y-1/2 w-[17px] h-[32px] flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed z-15">
+        <Slider.PrevButton class="absolute left-[8px] top-1/2 -translate-y-1/2 w-[17px] h-[32px] flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed z-15">
           <svg
             width="12"
             height="20"
@@ -59,7 +61,7 @@ function ProductSlider({ products, itemListName }: Props) {
           </svg>
         </Slider.PrevButton>
 
-        <Slider.NextButton class="absolute right-0 top-1/2 -translate-y-1/2 w-[17px] h-[32px] flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed z-15">
+        <Slider.NextButton class="absolute right-[8px] top-1/2 -translate-y-1/2 w-[17px] h-[32px] flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed z-15">
           <svg
             width="12"
             height="20"

@@ -1,0 +1,1869 @@
+{
+  "__resolveType": "site/sections/Header/Header.tsx",
+  "searchbar": {
+    "placeholder": "O que você está procurando?",
+    "loader": {
+      "__resolveType": "resolved",
+      "data": {
+        "__resolveType": "vtex/loaders/intelligentSearch/suggestions.ts",
+        "count": 4,
+        "advancedConfigs": {
+          "includeOriginalAttributes": []
+        }
+      }
+    }
+  },
+  "alerts": [
+    "<p><span>Promoção, desconto de até 50%OFF</span></p>"
+  ],
+  "logo": {
+    "src": "https://assets.decocache.com/ffloresta/ec653781-82d5-4001-95a5-fed465bed3b5/floresta-logo-branca.svg",
+    "alt": "Deco Storefront",
+    "width": 200,
+    "height": 50
+  },
+  "navItems": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "url": "/exemplo",
+          "name": "EXEMPLO",
+          "image": null
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        }
+      ],
+      "@type": "SiteNavigationElement",
+      "url": "/ferragens",
+      "name": "FERRAGENS",
+      "image": null
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        }
+      ],
+      "@type": "SiteNavigationElement",
+      "url": "/fechaduras",
+      "name": "FECHADURAS",
+      "image": null
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        }
+      ],
+      "@type": "SiteNavigationElement",
+      "url": "/ferramentas",
+      "name": "FERRAMENTAS",
+      "image": null
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        }
+      ],
+      "@type": "SiteNavigationElement",
+      "url": "/puxadores",
+      "name": "PUXADORES",
+      "image": null
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        }
+      ],
+      "@type": "SiteNavigationElement",
+      "url": "/banheiro",
+      "name": "BANHEIRO",
+      "image": null
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        }
+      ],
+      "@type": "SiteNavigationElement",
+      "url": "/cozinha",
+      "name": "COZINHA",
+      "image": null
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        }
+      ],
+      "@type": "SiteNavigationElement",
+      "url": "/closet",
+      "name": "CLOSET",
+      "image": null
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            },
+            {
+              "children": [],
+              "image": null,
+              "name": "EXEMPLO",
+              "url": "/exemplo"
+            }
+          ],
+          "image": null,
+          "url": "/exemplo",
+          "name": "EXEMPLO"
+        }
+      ],
+      "@type": "SiteNavigationElement",
+      "url": "/area-de-servico",
+      "name": "ÁREA DE SERVIÇO",
+      "image": null
+    }
+  ],
+  "loading": "eager",
+  "searchBar": {}
+}

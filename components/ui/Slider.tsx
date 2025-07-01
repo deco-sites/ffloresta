@@ -1,7 +1,10 @@
 import type { JSX } from "preact";
 import { clx } from "../../sdk/clx.ts";
 import { useScript } from "@deco/deco/hooks";
-function Dot({ index, ...props }: {
+function Dot({
+  index,
+  ...props
+}: {
   index: number;
 } & JSX.IntrinsicElements["button"]) {
   return (
@@ -16,7 +19,10 @@ function Dot({ index, ...props }: {
 function Slider(props: JSX.IntrinsicElements["ul"]) {
   return <ul data-slider {...props} />;
 }
-function Item({ index, ...props }: JSX.IntrinsicElements["li"] & {
+function Item({
+  index,
+  ...props
+}: JSX.IntrinsicElements["li"] & {
   index: number;
 }) {
   return <li data-slider-item={index} {...props} />;

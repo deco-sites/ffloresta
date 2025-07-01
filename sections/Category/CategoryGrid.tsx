@@ -29,8 +29,6 @@ function Card({ image, href, label }: Item) {
       <div class="rounded-full flex justify-center items-center w-full h-full max-w-[200px] mx-auto">
         <Image
           src={image}
-          width={200}
-          height={200}
           alt={label || "Category"}
           loading="lazy"
           class="w-full h-full object-contain"
@@ -38,7 +36,7 @@ function Card({ image, href, label }: Item) {
         />
       </div>
       {label && (
-        <span class="font-['FS_Emeric'] font-normal text-[14.06px] leading-[170%] tracking-[0.16em] text-[#97A37F] text-center">
+        <span class="font-['FS_Emeric'] font-bold text-[16px] leading-[170%] tracking-[0.16em] text-[#3A4332] text-center">
           {label}
         </span>
       )}
@@ -67,8 +65,9 @@ function CategoryGrid({ title, cta, items, showArrows = true }: Props) {
                 "sm:w-[calc(50%-16px)]",
                 // Tablet: 3 itens
                 "md:w-[calc(33.333%-16px)]",
-                // Desktop: tamanho máximo
-                "lg:w-[calc(25%-20px)] xl:w-[calc(20%-20px)]",
+                // Desktop: 6 itens (16.666% de largura)
+                "lg:w-[calc(16.666%-20px)]",
+                // Removi o xl:w-[calc(20%-20px)] para manter apenas 6 itens em desktop
               )}
             >
               <Card {...i} />
@@ -78,9 +77,9 @@ function CategoryGrid({ title, cta, items, showArrows = true }: Props) {
 
         {showArrows && (
           <>
-            <Slider.PrevButton class="absolute left-0 top-1/2 -translate-y-1/2 w-[17px] h-[32px] flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed z-10">
+            <Slider.PrevButton class="absolute left-0 top-1/2 -translate-y-1/2 w-[20px]  flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed z-10">
               <svg
-                width="17"
+                width="20"
                 height="32"
                 viewBox="0 0 17 32"
                 fill="none"
@@ -96,11 +95,11 @@ function CategoryGrid({ title, cta, items, showArrows = true }: Props) {
               </svg>
             </Slider.PrevButton>
 
-            <Slider.NextButton class="absolute right-0 top-1/2 -translate-y-1/2 w-[17px] h-[32px] flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed z-10">
+            <Slider.NextButton class="absolute right-0 top-1/2 -translate-y-1/2 w-[20px]  flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed z-10">
               <svg
-                width="17"
-                height="31"
-                viewBox="0 0 17 31"
+                width="20"
+                height="32"
+                viewBox="0 0 17 32"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 class="max-w-full max-h-full"

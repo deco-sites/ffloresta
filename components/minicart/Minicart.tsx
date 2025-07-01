@@ -50,10 +50,12 @@ const onLoad = (formID: string) => {
       }
       // Disable addToCart button interactivity
       document.querySelectorAll("div[data-cart-item]").forEach((container) => {
-        container?.querySelectorAll("button")
-          .forEach((node) => node.disabled = true);
-        container?.querySelectorAll("input")
-          .forEach((node) => node.disabled = true);
+        container
+          ?.querySelectorAll("button")
+          .forEach((node) => (node.disabled = true));
+        container
+          ?.querySelectorAll("input")
+          .forEach((node) => (node.disabled = true));
       });
     },
   );
@@ -66,15 +68,13 @@ const sendBeginCheckoutEvent = () => {
 };
 export const action = async (_props: unknown, req: Request, ctx: AppContext) =>
   req.method === "PATCH"
-    ? ({ cart: await ctx.invoke("site/loaders/minicart.ts") }) // error fallback
-    : ({ cart: await ctx.invoke("site/actions/minicart/submit.ts") });
+    ? { cart: await ctx.invoke("site/loaders/minicart.ts") } // error fallback
+    : { cart: await ctx.invoke("site/actions/minicart/submit.ts") };
 export function ErrorFallback() {
   return (
     <div class="flex flex-col flex-grow justify-center items-center overflow-hidden w-full gap-2">
       <div class="flex flex-col gap-1 p-6 justify-center items-center">
-        <span class="font-semibold">
-          Error while updating cart
-        </span>
+        <span class="font-semibold">Error while updating cart</span>
         <span class="text-sm text-center">
           Click in the button below to retry or refresh the page
         </span>
@@ -91,27 +91,25 @@ export function ErrorFallback() {
     </div>
   );
 }
-export default function Cart(
-  {
-    cart: {
-      platformCart,
-      storefront: {
-        items,
-        total,
-        subtotal,
-        coupon,
-        discounts,
-        locale,
-        currency,
-        enableCoupon = true,
-        freeShippingTarget,
-        checkoutHref,
-      },
+export default function Cart({
+  cart: {
+    platformCart,
+    storefront: {
+      items,
+      total,
+      subtotal,
+      coupon,
+      discounts,
+      locale,
+      currency,
+      enableCoupon = true,
+      freeShippingTarget,
+      checkoutHref,
     },
-  }: {
-    cart: Minicart;
   },
-) {
+}: {
+  cart: Minicart;
+}) {
   const count = items.length;
   return (
     <>
@@ -142,7 +140,7 @@ export default function Cart(
           )}
         />
 
-        {/* This contains the platformCart cart from the commerce platform. Integrations usually use this value, like GTM, pixels etc */}
+        {/* This contains the platformCart cart from the commerce platform. */}
         <input
           type="hidden"
           name="platform-cart"
@@ -157,11 +155,13 @@ export default function Cart(
         >
           {count === 0
             ? (
-              <div class="flex flex-col gap-6">
-                <span class="font-medium text-2xl">Your bag is empty</span>
+              <div class="flex flex-col gap-6 items-center justify-center h-full">
+                <span class="font-['FS_Emeric'] font-normal text-[16.87px] text-[#1F251C]">
+                  Your bag is empty
+                </span>
                 <label
                   for={MINICART_DRAWER_ID}
-                  class="btn btn-outline no-animation"
+                  class="btn no-animation bg-[#3A4332] text-white hover:bg-[#3A4332] hover:text-white border-none font-['FS_Emeric'] font-normal text-[16.87px] px-6 py-3"
                 >
                   Choose products
                 </label>
@@ -169,20 +169,10 @@ export default function Cart(
             )
             : (
               <>
-                {/* Free Shipping Bar */}
-                <div class="px-2 py-4 w-full">
-                  <FreeShippingProgressBar
-                    total={total}
-                    locale={locale}
-                    currency={currency}
-                    target={freeShippingTarget}
-                  />
-                </div>
-
                 {/* Cart Items */}
                 <ul
                   role="list"
-                  class="mt-6 px-2 flex-grow overflow-y-auto flex flex-col gap-6 w-full"
+                  class="mt-6 px-4 flex-grow overflow-y-auto flex flex-col gap-8 w-full"
                 >
                   {items.map((item, index) => (
                     <li>
@@ -196,21 +186,38 @@ export default function Cart(
                   ))}
                 </ul>
 
+                {/* Free Shipping Bar */}
+                <div class="px-4 py-6 w-full bg-[#F5F5F5]">
+                  <FreeShippingProgressBar
+                    total={total}
+                    locale={locale}
+                    currency={currency}
+                    target={freeShippingTarget}
+                  />
+                </div>
+
                 {/* Cart Footer */}
-                <footer class="w-full">
+                <footer class="w-full bg-white">
                   {/* Subtotal */}
-                  <div class="border-t border-base-200 py-2 flex flex-col">
+                  <div class="border-t border-[#E5E5E5] py-4 flex flex-col gap-2">
                     {discounts > 0 && (
                       <div class="flex justify-between items-center px-4">
-                        <span class="text-sm">Discounts</span>
-                        <span class="text-sm">
+                        <span class="font-['FS_Emeric'] text-[14px] text-[#1F251C]">
+                          Descontos
+                        </span>
+                        <span class="font-['FS_Emeric'] text-[14px] text-[#1F251C]">
                           {formatPrice(discounts, currency, locale)}
                         </span>
                       </div>
                     )}
-                    <div class="w-full flex justify-between px-4 text-sm">
-                      <span>Subtotal</span>
-                      <output form={MINICART_FORM_ID}>
+                    <div class="w-full flex justify-between px-4">
+                      <span class="font-['FS_Emeric'] text-[14px] text-[#1F251C]">
+                        Subtotal
+                      </span>
+                      <output
+                        form={MINICART_FORM_ID}
+                        class="font-['FS_Emeric'] text-[14px] text-[#1F251C]"
+                      >
                         {formatPrice(subtotal, currency, locale)}
                       </output>
                     </div>
@@ -218,29 +225,31 @@ export default function Cart(
                   </div>
 
                   {/* Total */}
-                  <div class="border-t border-base-200 pt-4 flex flex-col justify-end items-end gap-2 mx-4">
+                  <div class="border-t border-[#E5E5E5] pt-4 pb-6 flex flex-col justify-end items-end gap-2 px-4">
                     <div class="flex justify-between items-center w-full">
-                      <span>Total</span>
+                      <span class="font-['FS_Emeric'] text-[16px] leading-[170%] tracking-[3%]">
+                        Total
+                      </span>
                       <output
                         form={MINICART_FORM_ID}
-                        class="font-medium text-xl"
+                        class="font-['FS_Emeric'] font-bold text-[16px] leading-[170%] tracking-[3%] text-[#1F251C]"
                       >
                         {formatPrice(total, currency, locale)}
                       </output>
                     </div>
-                    <span class="text-sm text-base-300">
-                      Fees and shipping will be calculated at checkout
+                    <span class="font-['FS_Emeric'] text-[12px] text-[#6B7280]">
+                      Frete e taxas serão calculados na próxima etapa.
                     </span>
                   </div>
 
-                  <div class="p-4">
+                  <div class="px-4 pb-8">
                     <a
-                      class="btn btn-primary w-full no-animation"
+                      class="btn w-full no-animation bg-[#3A4332] text-white hover:bg-[#3A4332] hover:text-white border-none font-['FS_Emeric'] font-normal text-[16px] h-[50px]"
                       href={checkoutHref}
                       hx-on:click={useScript(sendBeginCheckoutEvent)}
                     >
                       <span class="[.htmx-request_&]:hidden">
-                        Begin Checkout
+                        COMPRAR AGORA
                       </span>
                       <span class="[.htmx-request_&]:inline hidden loading loading-spinner" />
                     </a>

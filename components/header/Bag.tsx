@@ -27,7 +27,7 @@ function Bag() {
           class="hidden indicator-item badge badge-primary badge-sm font-thin"
         />
 
-        <span class="">
+        <span class="flex gap-[14px] cursor-pointer text-white">
           <svg
             width="22"
             height="21"
@@ -43,6 +43,7 @@ function Bag() {
               stroke-linejoin="round"
             />
           </svg>
+          <span class="hidden md:block">CARRINHO</span>
         </span>
       </label>
       <script

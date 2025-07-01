@@ -68,8 +68,8 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
         >
           <div class="flex container">
             <ul class="flex flex-col items-start justify-start p-5 gap-3 min-w-[243px]">
-              {children.map((node) => (
-                <li class="pl-0 py-1" key={node.url}>
+              {children.map((node, i) => (
+                <li class="pl-0 py-1" key={`${node.url}-${i}`}>
                   <a
                     class="hover:border-b hover:border-white font-['FS_Emeric'] font-normal text-[10.5px] leading-[100%] text-white transition-all duration-300 ease-in-out"
                     href={node.url}
