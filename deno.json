@@ -69,7 +69,7 @@
   "lint": {
     "rules": { "exclude": ["no-window"], "tags": ["fresh", "recommended"] }
   },
-  "nodeModulesDir": "none",
+  "nodeModulesDir": false,
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "preact",
