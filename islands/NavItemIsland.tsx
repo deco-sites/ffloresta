@@ -101,10 +101,7 @@ export default function NavItemIsland({
 
             {/* Container para o terceiro nível */}
             {activeThirdLevel && (
-              <div
-                class="flex flex-col min-w-[200px] bg-white shadow-lg"
-                style={{ marginTop: `${activeThirdLevel.topPosition}px` }}
-              >
+              <div class="flex flex-col min-w-[200px] bg-white shadow-lg">
                 {activeThirdLevel.items.map((child, i) => (
                   <a
                     key={`${child.url}-${i}`}
