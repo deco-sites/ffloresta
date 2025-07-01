@@ -3943,6 +3943,9 @@ details.collapse summary::-webkit-details-marker {
 .max-h-9 {
   max-height: 2.25rem;
 }
+.max-h-96 {
+  max-height: 24rem;
+}
 .max-h-\[110px\] {
   max-height: 110px;
 }
@@ -4220,9 +4223,6 @@ details.collapse summary::-webkit-details-marker {
 .max-w-\[480px\] {
   max-width: 480px;
 }
-.max-w-\[500px\] {
-  max-width: 500px;
-}
 .max-w-\[506px\] {
   max-width: 506px;
 }
@@ -4252,6 +4252,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .max-w-sm {
   max-width: 24rem;
+}
+.max-w-xl {
+  max-width: 36rem;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -4586,10 +4589,6 @@ details.collapse summary::-webkit-details-marker {
 }
 .rounded-sm {
   border-radius: 0.125rem;
-}
-.rounded-b-lg {
-  border-bottom-right-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
 }
 .rounded-l {
   border-top-left-radius: 0.25rem;

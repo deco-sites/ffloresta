@@ -11,20 +11,7 @@ import { type LoadingFallbackProps } from "@deco/deco";
 import SignIn from "../../components/header/SignIn.tsx";
 import NavItemIsland from "../../islands/NavItemIsland.tsx";
 import SearchBarIsland from "../../islands/CustomSearchBar.tsx";
-import { Suggestion } from "apps/commerce/types.ts";
-import { asResolved } from "@deco/deco";
-import { type Resolved } from "@deco/deco";
 
-export interface CustomSearchBarProps {
-  /**
-   * @title Placeholder
-   * @description Search bar default placeholder message
-   * @default What are you looking for?
-   */
-  placeholder?: string;
-  /** @description Path to loader */
-  loader: Resolved<Suggestion | null>;
-}
 export interface Logo {
   src: ImageWidget;
   alt: string;
@@ -32,10 +19,34 @@ export interface Logo {
   height?: number;
 }
 
+export interface SearchBarProps {
+  /**
+   * @title Placeholder
+   * @description Search bar default placeholder message
+   * @default What are you looking for?
+   */
+  placeholder?: string;
+  /**
+   * @title Mostrar sugestões de produtos
+   * @default true
+   */
+  showProductSuggestions?: boolean;
+  /**
+   * @title Mostrar termos de busca
+   * @default true
+   */
+  showSearchTerms?: boolean;
+  /**
+   * @title Nome da conta VTEX
+   * @description Exemplo: 'minhaloja'
+   */
+  vtexAccount: string;
+}
+
 export interface SectionProps {
   alerts?: HTMLWidget[];
   navItems?: SiteNavigationElement[] | null;
-  searchBar: CustomSearchBarProps;
+  searchBar?: SearchBarProps;
   logo: Logo;
   loading?: "eager" | "lazy";
 }
@@ -85,8 +96,8 @@ const Desktop = ({ navItems, logo, searchBar }: Props) => (
           </a>
         </div>
 
-        <div>
-          <SearchBarIsland {...searchBar} />
+        <div class="flex-1 max-w-xl mx-4">
+          {searchBar && <SearchBarIsland {...searchBar} />}
         </div>
 
         <div class="flex items-center gap-6">
@@ -105,7 +116,6 @@ const Desktop = ({ navItems, logo, searchBar }: Props) => (
             <NavItemIsland item={item} />
           ))}
         </ul>
-        <div>{/* ship to */}</div>
       </div>
     </div>
   </>
@@ -154,6 +164,15 @@ const Mobile = ({ logo, navItems, loading, searchBar }: Props) => (
             height={logo.height || 13}
           />
         </a>
+      )}
+
+      {searchBar && (
+        <div class="mr-2">
+          <SearchBarIsland
+            {...searchBar}
+            showProductSuggestions={false} // Desativa sugestões de produtos no mobile se desejar
+          />
+        </div>
       )}
 
       <Bag />
