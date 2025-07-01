@@ -119,17 +119,20 @@ function enhancePriceFilter(priceFilter: FilterToggle): FilterToggle {
         }
       });
 
-      const maxValue =
-        range.max === Infinity ? Math.max(...priceValues) : range.max;
+      const maxValue = range.max === Infinity
+        ? Math.max(...priceValues)
+        : range.max;
       const value = `${range.min}:${maxValue}`;
 
       return {
         value,
         quantity: Math.max(1, quantity),
         selected: false,
-        url: `?filter.category-1=ferragens&filter.price=${encodeURIComponent(
-          value
-        )}`,
+        url: `?filter.category-1=ferragens&filter.price=${
+          encodeURIComponent(
+            value,
+          )
+        }`,
         label: range.label,
       };
     });
@@ -142,9 +145,11 @@ function enhancePriceFilter(priceFilter: FilterToggle): FilterToggle {
           value: `0:${Math.max(...priceValues)}`,
           quantity: 1,
           selected: false,
-          url: `?filter.category-1=ferragens&filter.price=0%3A${Math.max(
-            ...priceValues
-          )}`,
+          url: `?filter.category-1=ferragens&filter.price=0%3A${
+            Math.max(
+              ...priceValues,
+            )
+          }`,
           label: `R$ 0,00 - R$ ${Math.max(...priceValues).toFixed(2)}`,
         },
       ],

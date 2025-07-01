@@ -30,7 +30,7 @@ function ProductSlider({ products, itemListName }: Props) {
                 // Desktop: 4 itens
                 "lg:w-[calc(25%-20px)]",
                 // Desktop grande: 5 itens (ocupando espaço máximo)
-                "xl:w-[calc(20%-20px)]"
+                "xl:w-[calc(20%-20px)]",
               )}
             >
               <ProductCard

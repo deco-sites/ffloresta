@@ -11,10 +11,12 @@ export default function NavItemIsland({
   const submenuRef = useRef<HTMLDivElement>(null);
   const [submenuTransform, setSubmenuTransform] = useState("translateX(0)");
   const [isSubmenuHovered, setIsSubmenuHovered] = useState(false);
-  const [activeThirdLevel, setActiveThirdLevel] = useState<{
-    items: SiteNavigationElement[];
-    topPosition: number;
-  } | null>(null);
+  const [activeThirdLevel, setActiveThirdLevel] = useState<
+    {
+      items: SiteNavigationElement[];
+      topPosition: number;
+    } | null
+  >(null);
 
   const adjustPosition = () => {
     const node = submenuRef.current;
@@ -34,7 +36,7 @@ export default function NavItemIsland({
 
   const handleSubItemHover = (
     items: SiteNavigationElement[] | undefined,
-    event: MouseEvent
+    event: MouseEvent,
   ) => {
     if (!items || items.length === 0) {
       setActiveThirdLevel(null);
