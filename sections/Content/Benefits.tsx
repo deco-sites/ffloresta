@@ -23,7 +23,7 @@ interface BenefitItemProps {
 const BenefitItem = ({ benefit }: BenefitItemProps) => {
   return (
     <a className="w-full h-full" href={benefit.benefitLink}>
-      <div className="group flex items-center gap-3 transition duration-200 ease-in-out text-black w-full h-full rounded p-0">
+      <div className="group flex items-center gap-3 transition duration-200 ease-in-out font-['FS_Emeric'] text-[#273D28] w-full h-full rounded p-0">
         <div className="flex-shrink-0">
           <img
             src={benefit.benefitImgSrc}
@@ -32,7 +32,7 @@ const BenefitItem = ({ benefit }: BenefitItemProps) => {
           />
         </div>
         <div
-          className="flex-1 min-w-0"
+          className="flex-1 min-w-0 font-['FS_Emeric'] text-[#273D28] text-[20px]"
           dangerouslySetInnerHTML={{ __html: benefit.benefitText }}
         />
       </div>

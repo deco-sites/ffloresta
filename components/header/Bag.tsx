@@ -1,6 +1,5 @@
 import { MINICART_DRAWER_ID } from "../../constants.ts";
 import { useId } from "../../sdk/useId.ts";
-import Icon from "../ui/Icon.tsx";
 import { useScript } from "@deco/deco/hooks";
 const onLoad = (id: string) =>
   window.STOREFRONT.CART.subscribe((sdk) => {
@@ -24,7 +23,7 @@ function Bag() {
       <label class="indicator" for={MINICART_DRAWER_ID} aria-label="open cart">
         <span
           id={id}
-          class="hidden indicator-item badge badge-primary badge-sm font-thin"
+          class="hidden indicator-item badge badge-primary badge-sm font-thin bg-[#23ac6a] text-white outline-none border-none"
         />
 
         <span class="flex gap-[14px] cursor-pointer text-white">
@@ -43,7 +42,9 @@ function Bag() {
               stroke-linejoin="round"
             />
           </svg>
-          <span class="hidden md:block">CARRINHO</span>
+          <span class="hidden md:block font-['FS_Emeric'] text-white">
+            CARRINHO
+          </span>
         </span>
       </label>
       <script
