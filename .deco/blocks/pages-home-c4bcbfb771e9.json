@@ -107,27 +107,33 @@
         "items": [
           {
             "href": "/",
-            "image": "https://assets.decocache.com/ffloresta/bcf27d4c-9968-4025-8fe7-e691d92b671d/category1.png"
+            "image": "https://assets.decocache.com/ffloresta/bcf27d4c-9968-4025-8fe7-e691d92b671d/category1.png",
+            "label": "Marceneiro"
           },
           {
             "href": "/",
-            "image": "https://assets.decocache.com/ffloresta/497d65db-5ee7-4aba-bc2b-aa0a594830ef/category2.png"
+            "image": "https://assets.decocache.com/ffloresta/497d65db-5ee7-4aba-bc2b-aa0a594830ef/category2.png",
+            "label": "Puxadores"
           },
           {
             "href": "/",
-            "image": "https://assets.decocache.com/ffloresta/4dcff94e-9416-47af-9c0c-62acc2282904/category3.png"
+            "image": "https://assets.decocache.com/ffloresta/4dcff94e-9416-47af-9c0c-62acc2282904/category3.png",
+            "label": "Ferragens"
           },
           {
             "href": "/",
-            "image": "https://assets.decocache.com/ffloresta/d96e85f1-c4b2-4ae0-b0fc-23992e0d9f70/category4.png"
+            "image": "https://assets.decocache.com/ffloresta/d96e85f1-c4b2-4ae0-b0fc-23992e0d9f70/category4.png",
+            "label": "Fechadura"
           },
           {
             "href": "/",
-            "image": "https://assets.decocache.com/ffloresta/592d1ac9-6cef-46dc-a3fc-2ec662e35cb5/category5.png"
+            "image": "https://assets.decocache.com/ffloresta/592d1ac9-6cef-46dc-a3fc-2ec662e35cb5/category5.png",
+            "label": "Ferramentas"
           },
           {
             "href": "/",
-            "image": "https://assets.decocache.com/ffloresta/bcf27d4c-9968-4025-8fe7-e691d92b671d/category1.png"
+            "image": "https://assets.decocache.com/ffloresta/bcf27d4c-9968-4025-8fe7-e691d92b671d/category1.png",
+            "label": "Marceneiro"
           }
         ]
       }
