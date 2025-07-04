@@ -9,8 +9,9 @@ export default function NavItemIsland({
 }) {
   const { url, name, children } = item;
   const submenuRef = useRef<HTMLDivElement>(null);
+  const thirdLevelRef = useRef<HTMLDivElement>(null);
   const [submenuTransform, setSubmenuTransform] = useState("translateX(0)");
-  const [isSubmenuHovered, setIsSubmenuHovered] = useState(false);
+  const [isSubmenuVisible, setIsSubmenuVisible] = useState(false);
   const [activeThirdLevel, setActiveThirdLevel] = useState<
     {
       items: SiteNavigationElement[];
@@ -55,11 +56,29 @@ export default function NavItemIsland({
     }
   };
 
+  const handleMouseEnter = () => {
+    adjustPosition();
+    setIsSubmenuVisible(true);
+  };
+
+  const handleMouseLeave = (e: MouseEvent) => {
+    // Verifica se o mouse está saindo para fora do menu completo
+    const relatedTarget = e.relatedTarget as HTMLElement;
+    if (
+      !submenuRef.current?.contains(relatedTarget) &&
+      !thirdLevelRef.current?.contains(relatedTarget)
+    ) {
+      setIsSubmenuVisible(false);
+      setActiveThirdLevel(null);
+    }
+  };
+
   return (
     <li
       class="group relative flex items-center"
       style={{ height: NAVBAR_HEIGHT_DESKTOP }}
-      onMouseEnter={adjustPosition}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <a
         href={url}
@@ -71,15 +90,11 @@ export default function NavItemIsland({
       {children && children.length > 0 && (
         <div
           ref={submenuRef}
-          class={`absolute hidden group-hover:flex ${
-            isSubmenuHovered ? "flex" : ""
+          class={`absolute hidden ${
+            isSubmenuVisible ? "!flex" : ""
           } z-40 bg-gradient-to-b from-[rgba(58,67,50,0.9)] to-[rgba(146,169,126,0.9)] transition-transform duration-300`}
           style={{ top: "100%", left: 0, transform: submenuTransform }}
-          onMouseEnter={() => setIsSubmenuHovered(true)}
-          onMouseLeave={() => {
-            setIsSubmenuHovered(false);
-            setActiveThirdLevel(null);
-          }}
+          onMouseLeave={handleMouseLeave}
         >
           <div class="flex">
             {/* Primeiro nível de submenu */}
@@ -89,7 +104,6 @@ export default function NavItemIsland({
                   key={`${node.url}-${i}`}
                   class="relative"
                   onMouseEnter={(e) => handleSubItemHover(node.children, e)}
-                  onMouseLeave={() => setActiveThirdLevel(null)}
                 >
                   <a
                     class="hover:underline font-['FS_Emeric'] text-[14px] text-white block p-2 px-[22px]"
@@ -103,11 +117,16 @@ export default function NavItemIsland({
 
             {/* Container para o terceiro nível */}
             {activeThirdLevel && (
-              <div class="flex flex-col min-w-[200px] bg-white shadow-lg">
+              <div
+                ref={thirdLevelRef}
+                class="flex flex-col min-w-[200px] shadow-lg"
+                onMouseEnter={() => setIsSubmenuVisible(true)}
+                onMouseLeave={handleMouseLeave}
+              >
                 {activeThirdLevel.items.map((child, i) => (
                   <a
                     key={`${child.url}-${i}`}
-                    class="text-[#1F251C] font-['FS_Emeric'] text-[12px] hover:underline p-2 px-[16px]"
+                    class="text-white font-['FS_Emeric'] text-[12px] hover:underline p-2 px-[16px]"
                     href={child.url}
                   >
                     {child.name}

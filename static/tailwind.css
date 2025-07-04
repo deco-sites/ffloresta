@@ -3840,6 +3840,9 @@ details.collapse summary::-webkit-details-marker {
 .inline {
   display: inline;
 }
+.\!flex {
+  display: flex !important;
+}
 .flex {
   display: flex;
 }
