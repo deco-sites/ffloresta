@@ -10,14 +10,14 @@ import { type LoadingFallbackProps } from "@deco/deco";
 import { ImageWidget } from "apps/admin/widgets.ts";
 
 export interface BannerProps {
-  desktop: {
-    src: ImageWidget;
-    alt: string;
+  desktop?: {
+    src?: ImageWidget;
+    alt?: string;
   };
 
-  mobile: {
-    src: ImageWidget;
-    alt: string;
+  mobile?: {
+    src?: ImageWidget;
+    alt?: string;
   };
   href?: string;
 }

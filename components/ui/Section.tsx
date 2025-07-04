@@ -16,6 +16,8 @@ function Header({ title, cta, icon, banner }: Props) {
     return null;
   }
 
+  console.log(banner, "banner");
+
   return (
     <div
       class={clx(
