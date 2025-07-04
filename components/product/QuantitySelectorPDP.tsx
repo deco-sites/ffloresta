@@ -30,7 +30,7 @@ function QuantitySelectorPDP({
       <input
         id={id}
         class={clx(
-          "text-center text-sm w-full bg-transparent text-black border-0 outline-none",
+          "text-center text-sm w-full bg-transparent text-black border-0 outline-none"
         )}
         type="number"
         min={min}

@@ -38,7 +38,7 @@ export default function GallerySlider(props: Props) {
     <>
       <div
         id={id}
-        class="grid grid-flow-row sm:grid-flow-col grid-cols-1 sm:grid-cols-[min-content_1fr] gap-3"
+        class="grid grid-flow-row sm:grid-flow-col grid-cols-1 sm:grid-cols-[min-content_1fr] gap-3 border border-gray-200"
       >
         {/* Image Slider */}
         <div class="col-start-1 col-span-1 sm:col-start-2">
@@ -72,7 +72,7 @@ export default function GallerySlider(props: Props) {
             "justify-between sm:justify-start",
             "gap-2 sm:gap-4",
             "overflow-x-auto sm:overflow-visible",
-            "w-full sm:w-auto",
+            "w-full sm:w-auto"
           )}
         >
           {/* Prev Arrow */}
@@ -99,7 +99,7 @@ export default function GallerySlider(props: Props) {
               "flex sm:flex-col items-center",
               "overflow-x-auto sm:overflow-y-auto",
               "gap-2 sm:gap-4",
-              "max-w-[calc(84px*4+12px*3)] sm:max-h-none",
+              "max-w-[calc(84px*4+12px*3)] sm:max-h-none"
             )}
           >
             {images.map((img, index) => (

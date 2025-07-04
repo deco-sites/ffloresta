@@ -14,7 +14,7 @@ function ProductSlider({ products, itemListName }: Props) {
 
   return (
     <>
-      <div id={id} class="relative px-[48px] max-w-[1240px] mx-auto">
+      <div id={id} class="relative px-[48px] container mx-auto">
         <Slider class="carousel carousel-center gap-6 w-full">
           {products?.map((product, index) => (
             <Slider.Item

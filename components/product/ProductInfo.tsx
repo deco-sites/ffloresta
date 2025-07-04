@@ -63,11 +63,12 @@ function ProductInfo({ page }: Props) {
   });
 
   //Checks if the variant name is "title"/"default title" and if so, the SKU Selector div doesn't render
-  const hasValidVariants = isVariantOf?.hasVariant?.some(
-    (variant) =>
-      variant?.name?.toLowerCase() !== "title" &&
-      variant?.name?.toLowerCase() !== "default title",
-  ) ?? false;
+  const hasValidVariants =
+    isVariantOf?.hasVariant?.some(
+      (variant) =>
+        variant?.name?.toLowerCase() !== "title" &&
+        variant?.name?.toLowerCase() !== "default title"
+    ) ?? false;
 
   return (
     <div {...viewItemEvent} class="flex flex-col mb-10 lg:mb-40" id={id}>
@@ -76,7 +77,7 @@ function ProductInfo({ page }: Props) {
         <span class="font-['FS_Emeric'] font-normal text-xs leading-[140%] text-[#3A4332]">
           SKU: {product.sku}
         </span>
-        <h1 class="font-['FS_Emeric'] font-bold uppercase text-[15px] leading-[140%] text-[#3A4332] md:text-[20px]">
+        <h1 class="font-['FS_Emeric'] font-bold text-[15px] leading-[140%] text-[#3A4332] md:text-[20px]">
           {title}
         </h1>
       </div>
@@ -85,12 +86,12 @@ function ProductInfo({ page }: Props) {
       <div class="mt-1.5 md:mt-5 flex flex-col gap-0">
         <div class="flex flex-col items-start gap-0">
           {listPrice && (
-            <span class="font-['FS_Emeric'] font-normal text-[20px] leading-[170%] tracking-[3%] text-center text-[#121212]">
+            <span class="font-['FS_Emeric'] font-normal text-[20px] leading-[170%] tracking-[3%] text-center text-[#121212] line-through">
               {formatPrice(listPrice, offers?.priceCurrency)}
             </span>
           )}
           <span class="font-['FS_Emeric'] font-bold text-[35px] leading-[170%] tracking-[3%] text-center text-[#677357]">
-            {formatPrice(price, offers?.priceCurrency)}
+            {formatPrice(price, offers?.priceCurrency)} à vista
           </span>
         </div>
 
@@ -115,7 +116,8 @@ function ProductInfo({ page }: Props) {
           </svg>
 
           <span class="font-gotham font-normal text-[14px] leading-[170%] text-[#677357] md:text-[17px]">
-            1x de {formatPrice(price, offers?.priceCurrency)}
+            1x de {formatPrice(price, offers?.priceCurrency)} no cartão de
+            crédito
           </span>
         </div>
       </div>
@@ -127,40 +129,39 @@ function ProductInfo({ page }: Props) {
 
       {/* Add to Cart Button */}
       <div class="mt-4 ">
-        {availability === "https://schema.org/InStock"
-          ? (
-            <>
-              {hasValidVariants && (
-                <div class="mb-6">
-                  <ProductSelector product={product} />
-                </div>
-              )}
-              <AddToCartButtonPDP
-                item={item}
-                seller={seller}
-                product={product}
-                platform={platform}
-                class="mb-[14px]"
-                disabled={false}
-              />
-
-              <div>
-                <ShippingSimulationForm
-                  items={[
-                    { id: Number(product.sku), quantity: 1, seller: seller },
-                  ]}
-                />
+        {availability === "https://schema.org/InStock" ? (
+          <>
+            {hasValidVariants && (
+              <div class="mb-6">
+                <ProductSelector product={product} />
               </div>
-              {/* <WishlistButton item={item} /> */}
-            </>
-          )
-          : <OutOfStock productID={productID} />}
+            )}
+            <AddToCartButtonPDP
+              item={item}
+              seller={seller}
+              product={product}
+              platform={platform}
+              class="mb-[14px]"
+              disabled={false}
+            />
+
+            <div>
+              <ShippingSimulationForm
+                items={[
+                  { id: Number(product.sku), quantity: 1, seller: seller },
+                ]}
+              />
+            </div>
+            {/* <WishlistButton item={item} /> */}
+          </>
+        ) : (
+          <OutOfStock productID={productID} />
+        )}
       </div>
 
       {/* Shipping Simulation Form */}
 
-      {
-        /*
+      {/*
       TODO: Componentes a serem ativados no futuro:
 
       <div class="mt-4 sm:mt-6">
@@ -176,8 +177,7 @@ function ProductInfo({ page }: Props) {
           )}
         </span>
       </div>
-      */
-      }
+      */}
     </div>
   );
 }
