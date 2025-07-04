@@ -11,13 +11,13 @@ import { ImageWidget } from "apps/admin/widgets.ts";
 
 export interface BannerProps {
   desktop?: {
-    src?: ImageWidget;
-    alt?: string;
+    src: ImageWidget;
+    alt: string;
   };
 
   mobile?: {
-    src?: ImageWidget;
-    alt?: string;
+    src: ImageWidget;
+    alt: string;
   };
   href?: string;
 }
@@ -68,19 +68,24 @@ export default function ProductShelfWithBanner({
         } w-full container mx-auto lg:mx-0 xl:max-w-none xl:px-0`}
       >
         {/* Banner Section */}
-        <div class={orientation === "vertical" ? "w-full" : "flex-1"}>
-          <a href={banner.href} class="block">
-            <picture>
-              <source media="(max-width: 767px)" srcset={banner.mobile.src} />
-              <source media="(min-width: 768px)" srcset={banner.desktop.src} />
-              <img
-                src={banner.desktop.src}
-                alt={banner.desktop.alt}
-                class="w-full h-auto object-cover"
-              />
-            </picture>
-          </a>
-        </div>
+        {banner && (
+          <div class={orientation === "vertical" ? "w-full" : "flex-1"}>
+            <a href={banner.href} class="block">
+              <picture>
+                <source media="(max-width: 767px)" srcset={banner.mobile.src} />
+                <source
+                  media="(min-width: 768px)"
+                  srcset={banner.desktop.src}
+                />
+                <img
+                  src={banner.desktop.src}
+                  alt={banner.desktop.alt}
+                  class="w-full h-auto object-cover"
+                />
+              </picture>
+            </a>
+          </div>
+        )}
 
         {/* Shelf Section */}
         <div class={orientation === "vertical" ? "w-full" : "flex-1"}>
