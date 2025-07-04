@@ -8,15 +8,15 @@ export interface Props {
   /** @description See all link */
   cta?: string;
   icon?: ImageWidget;
-  banner?: ImageWidget;
+  headerBanner?: ImageWidget;
 }
 
-function Header({ title, cta, icon, banner }: Props) {
+function Header({ title, cta, icon, headerBanner }: Props) {
   if (!title) {
     return null;
   }
 
-  console.log(banner, "banner");
+  console.log(headerBanner, "banner");
 
   return (
     <div
@@ -34,7 +34,7 @@ function Header({ title, cta, icon, banner }: Props) {
           See all
         </a>
       )}
-      {banner && <img src={banner} alt={title} />}
+      {headerBanner && <img src={headerBanner} alt={title} />}
     </div>
   );
 }
