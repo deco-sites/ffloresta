@@ -55,8 +55,8 @@ type Props = Omit<SectionProps, "alert">;
 
 function Header({ alerts = [], logo, navItems, loading, searchBar }: Props) {
   return (
-    <header>
-      <div class="bg-[#1F251C] w-full z-40">
+    <header class="h-[174px]">
+      <div class="bg-[#1F251C] w-full z-40 fixed top-0">
         {alerts.length > 0 && <Alert alerts={alerts} />}
         {/* Desktop */}
         <div class="hidden lg:block">
@@ -111,8 +111,10 @@ const Desktop = ({ navItems, logo, searchBar }: Props) => (
       </div>
 
       <div class="bg-[#FDFFF5] flex justify-between items-center">
-        <ul class="container flex justify-center">
-          {navItems?.slice(0, 10).map((item) => <NavItemIsland item={item} />)}
+        <ul class="container flex justify-between p-0">
+          {navItems?.slice(0, 10).map((item) => (
+            <NavItemIsland item={item} />
+          ))}
         </ul>
       </div>
     </div>
@@ -125,17 +127,17 @@ const Mobile = ({ logo, navItems, loading, searchBar }: Props) => (
       id={SIDEMENU_DRAWER_ID}
       aside={
         <Drawer.Aside title="" drawer={SIDEMENU_DRAWER_ID}>
-          {loading === "lazy"
-            ? (
-              <div
-                id={SIDEMENU_CONTAINER_ID}
-                class="h-full flex items-center justify-center"
-                style={{ minWidth: "100vw" }}
-              >
-                <span class="loading loading-spinner" />
-              </div>
-            )
-            : <Menu navItems={navItems ?? []} />}
+          {loading === "lazy" ? (
+            <div
+              id={SIDEMENU_CONTAINER_ID}
+              class="h-full flex items-center justify-center"
+              style={{ minWidth: "100vw" }}
+            >
+              <span class="loading loading-spinner" />
+            </div>
+          ) : (
+            <Menu navItems={navItems ?? []} />
+          )}
         </Drawer.Aside>
       }
     />

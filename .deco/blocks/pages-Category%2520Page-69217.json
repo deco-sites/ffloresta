@@ -66,7 +66,8 @@
           "variant": "aside",
           "pagination": "show-more"
         },
-        "startingPage": 1
+        "startingPage": 1,
+        "bannerImage": "https://assets.decocache.com/ffloresta/33330e97-eafc-4362-8d8b-5f709ad63088/Group-2404.png"
       }
     },
     {

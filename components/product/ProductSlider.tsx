@@ -14,13 +14,13 @@ function ProductSlider({ products, itemListName }: Props) {
 
   return (
     <>
-      <div id={id} class="relative px-[48px] max-w-[1240px] mx-auto">
+      <div id={id} class="relative px-[48px] container mx-auto">
         <Slider class="carousel carousel-center gap-6 w-full">
           {products?.map((product, index) => (
             <Slider.Item
               index={index}
               class={clx(
-                "carousel-item",
+                "carousel-item min-h-[450px]",
                 // Mobile: 1 item
                 "w-[calc(100%-12px)]",
                 // Mobile grande: 2 itens
@@ -30,14 +30,14 @@ function ProductSlider({ products, itemListName }: Props) {
                 // Desktop: 4 itens
                 "lg:w-[calc(25%-20px)]",
                 // Desktop grande: 5 itens (ocupando espaço máximo)
-                "xl:w-[calc(20%-20px)]",
+                "xl:w-[calc(20%-20px)]"
               )}
             >
               <ProductCard
                 index={index}
                 product={product}
                 itemListName={itemListName}
-                class="min-h-[410px] shadow-[5.62px_5.62px_7.03px_0px_rgba(0,0,0,0.15)] w-full"
+                class="shadow-[5.62px_5.62px_7.03px_0px_rgba(0,0,0,0.15)] w-[98%] h-[98%]"
               />
             </Slider.Item>
           ))}

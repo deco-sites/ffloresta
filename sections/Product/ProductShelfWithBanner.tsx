@@ -10,12 +10,12 @@ import { type LoadingFallbackProps } from "@deco/deco";
 import { ImageWidget } from "apps/admin/widgets.ts";
 
 export interface BannerProps {
-  desktop: {
+  desktop?: {
     src: ImageWidget;
     alt: string;
   };
 
-  mobile: {
+  mobile?: {
     src: ImageWidget;
     alt: string;
   };
@@ -65,22 +65,27 @@ export default function ProductShelfWithBanner({
       <div
         class={`flex gap-10 ${
           orientation === "vertical" ? "flex-col" : "flex-row"
-        } w-full max-w-[1240px] mx-auto lg:mx-0 xl:max-w-none xl:px-0`}
+        } w-full container mx-auto lg:mx-0 xl:max-w-none xl:px-0`}
       >
         {/* Banner Section */}
-        <div class={orientation === "vertical" ? "w-full" : "flex-1"}>
-          <a href={banner.href} class="block">
-            <picture>
-              <source media="(max-width: 767px)" srcset={banner.mobile.src} />
-              <source media="(min-width: 768px)" srcset={banner.desktop.src} />
-              <img
-                src={banner.desktop.src}
-                alt={banner.desktop.alt}
-                class="w-full h-auto object-cover"
-              />
-            </picture>
-          </a>
-        </div>
+        {banner && (
+          <div class={orientation === "vertical" ? "w-full" : "flex-1"}>
+            <a href={banner.href} class="block">
+              <picture>
+                <source media="(max-width: 767px)" srcset={banner.mobile.src} />
+                <source
+                  media="(min-width: 768px)"
+                  srcset={banner.desktop.src}
+                />
+                <img
+                  src={banner.desktop.src}
+                  alt={banner.desktop.alt}
+                  class="w-full h-auto object-cover"
+                />
+              </picture>
+            </a>
+          </div>
+        )}
 
         {/* Shelf Section */}
         <div class={orientation === "vertical" ? "w-full" : "flex-1"}>

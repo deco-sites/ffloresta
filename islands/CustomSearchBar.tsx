@@ -117,7 +117,7 @@ function ProductCard({
 
       <div class="mt-2 flex flex-col flex-grow">
         <a href={relativeUrl} class="block">
-          <h3 class="text-[#3A4332] font-bold text-[12px] leading-[137%] tracking-[0%] uppercase">
+          <h3 class="text-[#3A4332] font-bold text-[12px] leading-[137%] tracking-[0%] capitalize">
             {name}
           </h3>
 
@@ -130,7 +130,7 @@ function ProductCard({
                 <span class="font-bold text-[14px] leading-[170%] tracking-[3%] line-through">
                   {formatPrice(listPrice, offers?.priceCurrency).replace(
                     "R$",
-                    "",
+                    ""
                   )}
                 </span>
               </div>
@@ -247,42 +247,43 @@ export default function CustomSearchBar({
       {error.value && <div class="text-error text-sm mt-1">{error.value}</div>}
 
       {focused.value && hasSuggestions() && (
-        <div class="absolute top-full left-0 right-0 bg-base-100 border border-base-200 rounded-none shadow-lg z-50 p-4 max-h-[638px] overflow-auto">
+        <div class="absolute top-full left-0 right-0 bg-white border border-base-200 rounded-none shadow-lg z-50 p-4 max-h-[638px] overflow-auto">
           <div class="flex flex-col md:flex-row gap-5">
             {/* Coluna de termos de busca */}
             {showSearchTerms && searchTerms.value.length > 0 && (
-              <div class="w-full md:w-1/3">
+              <div class="w-full md:w-1/3 bg-white">
                 <h3 class="font-bold text-lg mb-4">Termos de busca</h3>
                 <ul class="space-y-1 md:space-y-2">
                   {(isMobile.value
                     ? searchTerms.value.slice(0, 3)
-                    : searchTerms.value).map((term, index) => (
-                      <li key={index}>
-                        <a
-                          href={`/s?q=${encodeURIComponent(term.term)}`}
-                          class="block py-1 md:py-2 hover:bg-base-200 rounded"
-                          onMouseDown={(e) => e.preventDefault()}
-                        >
-                          <div class="flex justify-between items-center">
-                            <span class="text-sm md:text-base text-capitalize">
-                              {term.term}
+                    : searchTerms.value
+                  ).map((term, index) => (
+                    <li key={index}>
+                      <a
+                        href={`/s?q=${encodeURIComponent(term.term)}`}
+                        class="block py-1 md:py-2 hover:bg-base-200 rounded"
+                        onMouseDown={(e) => e.preventDefault()}
+                      >
+                        <div class="flex justify-between items-center">
+                          <span class="text-sm md:text-base text-capitalize">
+                            {term.term}
+                          </span>
+                          {term.count && (
+                            <span class="text-xs md:text-sm text-gray-500">
+                              {term.count}
                             </span>
-                            {term.count && (
-                              <span class="text-xs md:text-sm text-gray-500">
-                                {term.count}
-                              </span>
-                            )}
-                          </div>
-                        </a>
-                      </li>
-                    ))}
+                          )}
+                        </div>
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </div>
             )}
 
             {/* Coluna de produtos */}
             {showProductSuggestions && products.value.length > 0 && (
-              <div class="flex-1">
+              <div class="flex-1 bg-white">
                 <h3 class="font-bold text-lg mb-4">Produtos sugeridos</h3>
                 <div class="flex flex-col md:grid md:grid-cols-2 gap-2 md:gap-4">
                   {products.value.slice(0, 2).map((product) => (

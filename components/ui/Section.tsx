@@ -8,19 +8,21 @@ export interface Props {
   /** @description See all link */
   cta?: string;
   icon?: ImageWidget;
-  banner?: ImageWidget;
+  headerBanner?: ImageWidget;
 }
 
-function Header({ title, cta, icon, banner }: Props) {
+function Header({ title, cta, icon, headerBanner }: Props) {
   if (!title) {
     return null;
   }
+
+  console.log(headerBanner, "banner");
 
   return (
     <div
       class={clx(
         "flex justify-between items-center gap-2",
-        "2xl:w-full 2xl:max-w-[1240px] px-0",
+        "2xl:w-full 2xl:container px-0"
       )}
     >
       {/* {icon && <img src={icon} alt={title} />} */}
@@ -32,7 +34,7 @@ function Header({ title, cta, icon, banner }: Props) {
           See all
         </a>
       )}
-      {banner && <img src={banner} alt={title} />}
+      {headerBanner && <img src={headerBanner} alt={title} />}
     </div>
   );
 }
@@ -51,7 +53,7 @@ function Container({ class: _class, ...props }: JSX.IntrinsicElements["div"]) {
       {...props}
       class={clx(
         "container flex flex-col gap-4 sm:gap-6 w-full p-5 sm:py-10 2xl:px-0",
-        _class?.toString(),
+        _class?.toString()
       )}
     />
   );

@@ -1627,8 +1627,9 @@
   ],
   "loading": "eager",
   "searchBar": {
-    "placeholder": "What are you looking for?",
+    "placeholder": "O que você está procurando?",
     "showProductSuggestions": true,
-    "showSearchTerms": true
+    "showSearchTerms": true,
+    "vtexAccount": "ferragemfloresta"
   }
 }
