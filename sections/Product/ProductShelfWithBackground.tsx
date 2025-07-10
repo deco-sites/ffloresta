@@ -1,13 +1,11 @@
 import type { Product } from "apps/commerce/types.ts";
 import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
-import ProductSlider from "../../components/product/ProductSlider.tsx";
-import Section, {
-  Props as SectionHeaderProps,
-} from "../../components/ui/Section.tsx";
+import Section from "../../components/ui/Section.tsx";
 import { useOffer } from "../../sdk/useOffer.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import { type LoadingFallbackProps } from "@deco/deco";
 import { ImageWidget } from "apps/admin/widgets.ts";
+import ProductSliderForBGShelf from "../../components/product/ProductSliderForBgShelf.tsx";
 
 export interface BackgroundProps {
   desktop: {
@@ -18,9 +16,15 @@ export interface BackgroundProps {
   };
 }
 
-export interface Props extends SectionHeaderProps {
+export interface Props {
   products: Product[] | null;
   background?: BackgroundProps;
+  /** @description Section title */
+  title?: string;
+
+  /** @description See all link */
+  cta?: string;
+  icon?: ImageWidget;
 }
 
 export default function ProductShelfWithBackground({
@@ -28,6 +32,7 @@ export default function ProductShelfWithBackground({
   title,
   cta,
   background,
+  icon,
 }: Props) {
   if (!products || products.length === 0) {
     return null;
@@ -53,7 +58,7 @@ export default function ProductShelfWithBackground({
   return (
     <Section.Container {...viewItemListEvent}>
       {/* Header Section - Sem background */}
-      <Section.Header title={title} cta={cta} />
+      <Section.Header title={title} cta={cta} icon={icon} />
 
       {/* Shelf Section - Com background */}
       <div class="relative w-full py-12">
@@ -80,7 +85,7 @@ export default function ProductShelfWithBackground({
 
         {/* Shelf Content - Overlay */}
         <div class="relative z-10">
-          <ProductSlider
+          <ProductSliderForBGShelf
             products={products}
             itemListName={title}
             class="bg-transparent p-0"
@@ -94,9 +99,10 @@ export default function ProductShelfWithBackground({
 export const LoadingFallback = ({
   title,
   cta,
+  icon,
 }: LoadingFallbackProps<Props>) => (
   <Section.Container>
-    <Section.Header title={title} cta={cta} />
+    <Section.Header title={title} cta={cta} icon={icon} />
     <Section.Placeholder height="471px" />
   </Section.Container>
 );

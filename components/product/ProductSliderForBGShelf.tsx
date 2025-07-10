@@ -9,7 +9,7 @@ interface Props {
   itemListName?: string;
 }
 
-function ProductSlider({ products, itemListName }: Props) {
+function ProductSliderForBGShelf({ products, itemListName }: Props) {
   const id = useId();
 
   return (
@@ -25,7 +25,7 @@ function ProductSlider({ products, itemListName }: Props) {
                 "max-[299px]:w-[calc(100%-20px)]",
                 // Mobile: 2 items (default for mobile)
                 // Calculation: (100vw - 40px padding - 3px gap) / 2 + 1% margin for shadow
-                "min-[300px]:w-[calc(47.5vw-20px)]", // Ajustado para acomodar o shadow
+                "min-[300px]:w-[calc(44vw-20px)]", // Ajustado para acomodar o shadow
                 // Tablet: 3 items
                 "md:w-[calc(33.333vw-14px)]",
                 // Desktop: 4 items
@@ -84,4 +84,4 @@ function ProductSlider({ products, itemListName }: Props) {
   );
 }
 
-export default ProductSlider;
+export default ProductSliderForBGShelf;

@@ -26,7 +26,7 @@ function SignIn({ variant }: { variant: "mobile" | "desktop" }) {
       <a
         class={clx(
           "flex items-center justify-center font-['FS_Emeric'] font-normal text-[16.87px] leading-none text-white uppercase",
-          variant === "mobile" ? "gap-3.5" : "gap-[14px]"
+          variant === "mobile" ? "gap-3.5" : "gap-[14px]",
         )}
         href="/login"
         aria-label="Login"
@@ -57,7 +57,7 @@ function SignIn({ variant }: { variant: "mobile" | "desktop" }) {
       <a
         class={clx(
           "hidden flex items-center justify-center font-['FS_Emeric'] font-normal text-[16.87px] leading-none text-white uppercase",
-          variant === "mobile" ? "gap-3.5" : "gap-[14px]"
+          variant === "mobile" ? "gap-3.5" : "gap-[14px]",
         )}
         href="/account"
         aria-label="Account"

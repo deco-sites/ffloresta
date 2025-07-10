@@ -1,8 +1,6 @@
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
-import Section, {
-  type Props as SectionHeaderProps,
-} from "../../components/ui/Section.tsx";
+import Section from "../../components/ui/Section.tsx";
 import Slider from "../../components/ui/Slider.tsx";
 import { clx } from "../../sdk/clx.ts";
 import { type LoadingFallbackProps } from "@deco/deco";
@@ -15,9 +13,15 @@ export interface Item {
   label?: string;
 }
 
-export interface Props extends SectionHeaderProps {
+export interface Props {
   items: Item[];
   showArrows?: boolean;
+  /** @description Section title */
+  title?: string;
+
+  /** @description See all link */
+  cta?: string;
+  icon?: ImageWidget;
 }
 
 function Card({ image, href, label }: Item) {
@@ -44,12 +48,12 @@ function Card({ image, href, label }: Item) {
   );
 }
 
-function CategoryGrid({ title, cta, items, showArrows = true }: Props) {
+function CategoryGrid({ title, cta, items, showArrows = true, icon }: Props) {
   const id = useId();
 
   return (
     <Section.Container>
-      <Section.Header title={title} cta={cta} />
+      <Section.Header title={title} cta={cta} icon={icon} />
 
       <div id={id} class="relative px-[20px]">
         <Slider class="carousel justify-between carousel-center gap-6 w-full">
@@ -66,7 +70,7 @@ function CategoryGrid({ title, cta, items, showArrows = true }: Props) {
                 // Tablet: 3 itens
                 "md:w-[calc(33.333%-16px)]",
                 // Desktop: 6 itens (16.666% de largura)
-                "lg:w-[calc(16.666%-20px)]",
+                "lg:w-[calc(16.666%-20px)]"
                 // Removi o xl:w-[calc(20%-20px)] para manter apenas 6 itens em desktop
               )}
             >
@@ -123,9 +127,10 @@ function CategoryGrid({ title, cta, items, showArrows = true }: Props) {
 export const LoadingFallback = ({
   title,
   cta,
+  icon,
 }: LoadingFallbackProps<Props>) => (
   <Section.Container>
-    <Section.Header title={title} cta={cta} />
+    <Section.Header title={title} cta={cta} icon={icon} />
     <Section.Placeholder height="165px" />;
   </Section.Container>
 );

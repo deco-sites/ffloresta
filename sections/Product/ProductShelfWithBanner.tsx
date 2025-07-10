@@ -1,9 +1,7 @@
 import type { Product } from "apps/commerce/types.ts";
 import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
 import ProductSlider from "../../components/product/ProductSlider.tsx";
-import Section, {
-  Props as SectionHeaderProps,
-} from "../../components/ui/Section.tsx";
+import Section from "../../components/ui/Section.tsx";
 import { useOffer } from "../../sdk/useOffer.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import { type LoadingFallbackProps } from "@deco/deco";
@@ -22,7 +20,7 @@ export interface BannerProps {
   href?: string;
 }
 
-export interface Props extends SectionHeaderProps {
+export interface Props {
   products: Product[] | null;
   banner: BannerProps;
   /**
@@ -30,6 +28,12 @@ export interface Props extends SectionHeaderProps {
    * @default "horizontal"
    */
   orientation?: "horizontal" | "vertical";
+  /** @description Section title */
+  title?: string;
+
+  /** @description See all link */
+  cta?: string;
+  icon?: ImageWidget;
 }
 
 export default function ProductShelfWithBanner({
@@ -38,6 +42,7 @@ export default function ProductShelfWithBanner({
   cta,
   banner,
   orientation = "horizontal",
+  icon,
 }: Props) {
   if (!products || products.length === 0) {
     return null;
@@ -61,11 +66,11 @@ export default function ProductShelfWithBanner({
   });
 
   return (
-    <Section.Container {...viewItemListEvent}>
+    <Section.Container {...viewItemListEvent} class="p-0 2xl:p-0">
       <div
         class={`flex gap-10 ${
           orientation === "vertical" ? "flex-col" : "flex-row"
-        } w-full container mx-auto lg:mx-0 xl:max-w-none xl:px-0`}
+        } w-full  mx-auto lg:mx-0 xl:max-w-none`}
       >
         {/* Banner Section */}
         {banner && (
@@ -89,7 +94,7 @@ export default function ProductShelfWithBanner({
 
         {/* Shelf Section */}
         <div class={orientation === "vertical" ? "w-full" : "flex-1"}>
-          <Section.Header title={title} cta={cta} />
+          <Section.Header title={title} cta={cta} icon={icon} />
           <ProductSlider products={products} itemListName={title} />
         </div>
       </div>
