@@ -22,13 +22,15 @@ function Header({ title, cta, icon, headerBanner }: Props) {
     <div
       class={clx(
         "flex justify-between items-center gap-2",
-        "2xl:w-full 2xl:container px-0",
+        "2xl:w-full 2xl:container px-0"
       )}
     >
-      {/* {icon && <img src={icon} alt={title} />} */}
-      <span class="font-['FS_Emeric'] font-bold text-[#1F251C] text-[18px] leading-[100%] sm:text-[26.14px]">
-        {title}
-      </span>
+      <div class="flex items-center gap-2">
+        {icon && <img src={icon} alt={title} />}
+        <span class="font-['FS_Emeric'] font-bold text-[#1F251C] text-[18px] leading-[100%] sm:text-[26.14px]">
+          {title}
+        </span>
+      </div>
       {cta && (
         <a class="text-sm font-medium text-primary" href={cta}>
           See all
@@ -53,7 +55,7 @@ function Container({ class: _class, ...props }: JSX.IntrinsicElements["div"]) {
       {...props}
       class={clx(
         "container flex flex-col gap-4 sm:gap-6 w-full py-5 sm:py-10 2xl:px-0",
-        _class?.toString(),
+        _class?.toString()
       )}
     />
   );
