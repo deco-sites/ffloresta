@@ -5,7 +5,7 @@ import { useOffer } from "../../sdk/useOffer.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import { type LoadingFallbackProps } from "@deco/deco";
 import { ImageWidget } from "apps/admin/widgets.ts";
-import ProductSliderForBGShelf from "../../components/product/ProductSliderForBgShelf.tsx";
+import ProductSliderForBGShelf from "../../components/product/ProductSliderForBGShelf.tsx";
 
 export interface BackgroundProps {
   desktop: {
