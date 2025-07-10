@@ -11,6 +11,7 @@ import { type LoadingFallbackProps } from "@deco/deco";
 import SignIn from "../../components/header/SignIn.tsx";
 import NavItemIsland from "../../islands/NavItemIsland.tsx";
 import SearchBarIsland from "../../islands/CustomSearchBar.tsx";
+import HeaderDrawer from "../../components/header/HeaderDrawer.tsx";
 
 export interface Logo {
   src: ImageWidget;
@@ -112,7 +113,9 @@ const Desktop = ({ navItems, logo, searchBar }: Props) => (
 
       <div class="bg-[#FDFFF5] flex justify-between items-center">
         <ul class="container flex justify-between p-0">
-          {navItems?.slice(0, 10).map((item) => <NavItemIsland item={item} />)}
+          {navItems?.slice(0, 10).map((item) => (
+            <NavItemIsland item={item} />
+          ))}
         </ul>
       </div>
     </div>
@@ -166,22 +169,22 @@ const Mobile = ({
       </div>
     )}
 
-    <Drawer
+    <HeaderDrawer
       id={SIDEMENU_DRAWER_ID}
       aside={
-        <Drawer.Aside title="" drawer={SIDEMENU_DRAWER_ID}>
-          {loading === "lazy"
-            ? (
-              <div
-                id={SIDEMENU_CONTAINER_ID}
-                class="h-full flex items-center justify-center"
-                style={{ minWidth: "100vw" }}
-              >
-                <span class="loading loading-spinner" />
-              </div>
-            )
-            : <Menu navItems={navItems ?? []} />}
-        </Drawer.Aside>
+        <HeaderDrawer.Aside drawer={SIDEMENU_DRAWER_ID}>
+          {loading === "lazy" ? (
+            <div
+              id={SIDEMENU_CONTAINER_ID}
+              class="h-full flex items-center justify-center"
+              style={{ minWidth: "100vw" }}
+            >
+              <span class="loading loading-spinner" />
+            </div>
+          ) : (
+            <Menu navItems={navItems ?? []} />
+          )}
+        </HeaderDrawer.Aside>
       }
     />
   </div>

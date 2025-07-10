@@ -1,6 +1,5 @@
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
-import Icon from "../ui/Icon.tsx";
 import { useScript } from "@deco/deco/hooks";
 
 const onLoad = (containerID: string) => {
@@ -27,7 +26,7 @@ function SignIn({ variant }: { variant: "mobile" | "desktop" }) {
       <a
         class={clx(
           "flex items-center justify-center font-['FS_Emeric'] font-normal text-[16.87px] leading-none text-white uppercase",
-          variant === "mobile" ? "gap-3.5" : "gap-[14px]",
+          variant === "mobile" ? "gap-3.5" : "gap-[14px]"
         )}
         href="/login"
         aria-label="Login"
@@ -43,22 +42,22 @@ function SignIn({ variant }: { variant: "mobile" | "desktop" }) {
             cx="9.93851"
             cy="7.22546"
             r="5.62225"
-            stroke="white"
+            stroke="black"
             stroke-width="1.40556"
           />
           <path
             d="M0.802345 21.9839C1.03661 19.6413 3.1918 14.9561 9.93851 14.9561C16.6852 14.9561 19.3089 19.6413 19.7775 21.9839"
-            stroke="white"
+            stroke="black"
             stroke-width="1.40556"
           />
         </svg>
 
-        {variant === "desktop" && <span>FAZER LOGIN</span>}
+        <span class="text-[#1F251C] lg:text-white">FAZER LOGIN</span>
       </a>
       <a
         class={clx(
           "hidden flex items-center justify-center font-['FS_Emeric'] font-normal text-[16.87px] leading-none text-white uppercase",
-          variant === "mobile" ? "gap-3.5" : "gap-[14px]",
+          variant === "mobile" ? "gap-3.5" : "gap-[14px]"
         )}
         href="/account"
         aria-label="Account"
@@ -84,7 +83,7 @@ function SignIn({ variant }: { variant: "mobile" | "desktop" }) {
           />
         </svg>
 
-        {variant === "desktop" && <span>MINHA CONTA</span>}
+        <span class="text-[#1F251C] lg:text-white">MINHA CONTA</span>
       </a>
       <script
         type="module"
