@@ -16,9 +16,9 @@ export interface Props {
 function Institucional({ title, description, description2, images }: Props) {
   return (
     <Section.Container class=" bg-[#FDFFF5]">
-      <div class="flex flex-col-reverse md:flex-row items-center gap-8 bg-[#FDFFF5] ml-[3em] mr-[3em] pt-[3em]">
+      <div class="flex flex-col-reverse md:flex-row items-center gap-8 bg-[#FDFFF5] lg:ml-[3em] lg:mr-[3em]">
         {/* Imagem */}
-        <div class="w-full md:w-1/2">
+        <div class="w-full lg:w-1/2">
           <Picture>
             <Source
               media="(max-width: 640px)"
@@ -43,7 +43,7 @@ function Institucional({ title, description, description2, images }: Props) {
 
         {/* Texto */}
         {(title || description || description2) && (
-          <div class="w-full md:w-1/2 text-left">
+          <div class="w-full lg:w-1/2 text-left">
             {title && (
               <h2
                 class="font-bold mb-4"
