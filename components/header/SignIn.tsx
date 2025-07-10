@@ -42,12 +42,12 @@ function SignIn({ variant }: { variant: "mobile" | "desktop" }) {
             cx="9.93851"
             cy="7.22546"
             r="5.62225"
-            stroke="black"
+            stroke={variant === "mobile" ? "#1F251C" : "white"}
             stroke-width="1.40556"
           />
           <path
             d="M0.802345 21.9839C1.03661 19.6413 3.1918 14.9561 9.93851 14.9561C16.6852 14.9561 19.3089 19.6413 19.7775 21.9839"
-            stroke="black"
+            stroke={variant === "mobile" ? "#1F251C" : "white"}
             stroke-width="1.40556"
           />
         </svg>
@@ -73,12 +73,12 @@ function SignIn({ variant }: { variant: "mobile" | "desktop" }) {
             cx="9.93851"
             cy="7.22546"
             r="5.62225"
-            stroke="white"
+            stroke={variant === "mobile" ? "#1F251C" : "white"}
             stroke-width="1.40556"
           />
           <path
             d="M0.802345 21.9839C1.03661 19.6413 3.1918 14.9561 9.93851 14.9561C16.6852 14.9561 19.3089 19.6413 19.7775 21.9839"
-            stroke="white"
+            stroke={variant === "mobile" ? "#1F251C" : "white"}
             stroke-width="1.40556"
           />
         </svg>
