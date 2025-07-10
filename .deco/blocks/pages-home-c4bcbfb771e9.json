@@ -292,26 +292,66 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Content/BannerMosaic.tsx",
-        "images": [
+        "__resolveType": "website/flags/multivariate/section.ts",
+        "variants": [
           {
-            "desktop": "https://assets.decocache.com/ffloresta/a6f6d65d-d084-4075-8f19-bed18f938f77/image.png",
-            "mobile": "https://assets.decocache.com/ffloresta/0ed8b777-f095-45af-968b-56d612f9f6d4/image.png",
-            "alt": "01"
+            "value": {
+              "__resolveType": "site/sections/Content/BannerMosaic.tsx",
+              "images": [
+                {
+                  "desktop": "https://assets.decocache.com/ffloresta/a6f6d65d-d084-4075-8f19-bed18f938f77/image.png",
+                  "mobile": "https://assets.decocache.com/ffloresta/0ed8b777-f095-45af-968b-56d612f9f6d4/image.png",
+                  "alt": "01"
+                },
+                {
+                  "desktop": "https://assets.decocache.com/ffloresta/48cc75cf-450a-4119-8295-6ee71f08a14f/image-(1).png",
+                  "mobile": "https://assets.decocache.com/ffloresta/48cc75cf-450a-4119-8295-6ee71f08a14f/image-(1).png",
+                  "alt": "02"
+                },
+                {
+                  "desktop": "https://assets.decocache.com/ffloresta/06495ea1-e858-4059-96a2-de19fd6b0562/image-(2).png",
+                  "mobile": "https://assets.decocache.com/ffloresta/06495ea1-e858-4059-96a2-de19fd6b0562/image-(2).png",
+                  "alt": "03"
+                }
+              ],
+              "itemsToShow": 3,
+              "enableSlider": true
+            },
+            "rule": {
+              "__resolveType": "website/matchers/device.ts",
+              "mobile": true,
+              "tablet": true
+            }
           },
           {
-            "desktop": "https://assets.decocache.com/ffloresta/48cc75cf-450a-4119-8295-6ee71f08a14f/image-(1).png",
-            "mobile": "https://assets.decocache.com/ffloresta/48cc75cf-450a-4119-8295-6ee71f08a14f/image-(1).png",
-            "alt": "02"
-          },
-          {
-            "desktop": "https://assets.decocache.com/ffloresta/06495ea1-e858-4059-96a2-de19fd6b0562/image-(2).png",
-            "mobile": "https://assets.decocache.com/ffloresta/06495ea1-e858-4059-96a2-de19fd6b0562/image-(2).png",
-            "alt": "03"
+            "value": {
+              "__resolveType": "site/sections/Content/BannerMosaic.tsx",
+              "images": [
+                {
+                  "desktop": "https://assets.decocache.com/ffloresta/a6f6d65d-d084-4075-8f19-bed18f938f77/image.png",
+                  "mobile": "https://assets.decocache.com/ffloresta/0ed8b777-f095-45af-968b-56d612f9f6d4/image.png",
+                  "alt": "01"
+                },
+                {
+                  "desktop": "https://assets.decocache.com/ffloresta/48cc75cf-450a-4119-8295-6ee71f08a14f/image-(1).png",
+                  "mobile": "https://assets.decocache.com/ffloresta/48cc75cf-450a-4119-8295-6ee71f08a14f/image-(1).png",
+                  "alt": "02"
+                },
+                {
+                  "desktop": "https://assets.decocache.com/ffloresta/06495ea1-e858-4059-96a2-de19fd6b0562/image-(2).png",
+                  "mobile": "https://assets.decocache.com/ffloresta/06495ea1-e858-4059-96a2-de19fd6b0562/image-(2).png",
+                  "alt": "03"
+                }
+              ],
+              "itemsToShow": 3,
+              "enableSlider": false
+            },
+            "rule": {
+              "__resolveType": "website/matchers/device.ts",
+              "desktop": true
+            }
           }
-        ],
-        "itemsToShow": 3,
-        "enableSlider": false
+        ]
       }
     },
     {
