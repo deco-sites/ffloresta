@@ -130,7 +130,7 @@ function ProductCard({
                 <span class="font-bold text-[14px] leading-[170%] tracking-[3%] line-through">
                   {formatPrice(listPrice, offers?.priceCurrency).replace(
                     "R$",
-                    ""
+                    "",
                   )}
                 </span>
               </div>
@@ -220,10 +220,13 @@ export default function CustomSearchBar({
     (showSearchTerms && searchTerms.value.length > 0);
 
   return (
-    <div class="relative w-full max-w-[638px]">
-      <form onSubmit={handleSubmit} class="join w-full h-9 bg-[#D9D9D9]">
+    <div class="relative w-full lg:max-w-[638px]">
+      <form
+        onSubmit={handleSubmit}
+        class="join w-full h-[60px] lg:h-9 bg-[#D9D9D9]"
+      >
         <input
-          class="input join-item flex-grow h-9 rounded-none border-none outline-none focus:outline-none bg-[#D9D9D9]"
+          class="input join-item flex-grow h-[60px] lg:h-9 rounded-none border-none outline-none focus:outline-none bg-[#D9D9D9] placeholder:text-[#1F251C]"
           name="q"
           placeholder={placeholder}
           value={query.value}
@@ -236,7 +239,7 @@ export default function CustomSearchBar({
 
         <button
           type="submit"
-          class="btn join-item bg-[#D9D9D9] no-animation p-0 px-3 min-h-[unset] max-h-9 rounded-none border-none outline-none focus:outline-none hover:rounded-none hover:bg-[#D9D9D9] hover:no-animation"
+          class="btn join-item bg-[#D9D9D9] no-animation p-0 px-3 min-h-[unset] h-[60px] lg:h-9 lg:max-h-9 rounded-none border-none outline-none focus:outline-none hover:rounded-none hover:bg-[#D9D9D9] hover:no-animation"
           aria-label="Buscar"
           disabled={loading.value}
         >
@@ -256,27 +259,26 @@ export default function CustomSearchBar({
                 <ul class="space-y-1 md:space-y-2">
                   {(isMobile.value
                     ? searchTerms.value.slice(0, 3)
-                    : searchTerms.value
-                  ).map((term, index) => (
-                    <li key={index}>
-                      <a
-                        href={`/s?q=${encodeURIComponent(term.term)}`}
-                        class="block py-1 md:py-2 hover:bg-base-200 rounded"
-                        onMouseDown={(e) => e.preventDefault()}
-                      >
-                        <div class="flex justify-between items-center">
-                          <span class="text-sm md:text-base text-capitalize">
-                            {term.term}
-                          </span>
-                          {term.count && (
-                            <span class="text-xs md:text-sm text-gray-500">
-                              {term.count}
+                    : searchTerms.value).map((term, index) => (
+                      <li key={index}>
+                        <a
+                          href={`/s?q=${encodeURIComponent(term.term)}`}
+                          class="block py-1 md:py-2 hover:bg-base-200 rounded"
+                          onMouseDown={(e) => e.preventDefault()}
+                        >
+                          <div class="flex justify-between items-center">
+                            <span class="text-sm md:text-base text-capitalize">
+                              {term.term}
                             </span>
-                          )}
-                        </div>
-                      </a>
-                    </li>
-                  ))}
+                            {term.count && (
+                              <span class="text-xs md:text-sm text-gray-500">
+                                {term.count}
+                              </span>
+                            )}
+                          </div>
+                        </a>
+                      </li>
+                    ))}
                 </ul>
               </div>
             )}

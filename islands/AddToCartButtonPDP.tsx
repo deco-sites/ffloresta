@@ -21,13 +21,12 @@ export default function AddToCartButtonPDP({
 }: Props) {
   const [quantity, setQuantity] = useState(1);
 
-  const platformProps =
-    platform === "vtex"
-      ? {
-          allowedOutdatedData: ["paymentData"],
-          orderItems: [{ quantity, seller, id: product.productID }],
-        }
-      : null;
+  const platformProps = platform === "vtex"
+    ? {
+      allowedOutdatedData: ["paymentData"],
+      orderItems: [{ quantity, seller, id: product.productID }],
+    }
+    : null;
 
   const addToCart = () => {
     const cartItem = { ...item, quantity };
@@ -62,13 +61,15 @@ export default function AddToCartButtonPDP({
         >
           COMPRAR
         </button>
-        {/* <span class="hidden lg:block font-['FS_Emeric'] text-[9px]">ou</span>
+        {
+          /* <span class="hidden lg:block font-['FS_Emeric'] text-[9px]">ou</span>
         <button
           onClick={addToCart}
           class="hidden w-full min-w-[178px] min-h-8 lg:flex items-center justify-center bg-[#9AA37C] font-['FS_Emeric'] text-[13px] font-bold transition-all duration-300 hover:bg-[#7f8863]"
         >
           ADICIONAR AO CARRINHO
-        </button> */}
+        </button> */
+        }
       </div>
     </div>
   );

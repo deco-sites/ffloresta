@@ -64,7 +64,7 @@ function BrandGrid({ title, cta, items, showArrows = true }: Props) {
                 // Tablet: 3 itens
                 "md:w-[calc(33.333%-16px)]",
                 // Desktop: 6 itens (100%/6 = 16.666%)
-                "lg:w-[calc(16.666%-20px)]"
+                "lg:w-[calc(16.666%-20px)]",
               )}
             >
               <Card {...i} />

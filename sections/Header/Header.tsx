@@ -55,7 +55,7 @@ type Props = Omit<SectionProps, "alert">;
 
 function Header({ alerts = [], logo, navItems, loading, searchBar }: Props) {
   return (
-    <header class="h-[174px]">
+    <header class="h-[146px] lg:h-[174px]">
       <div class="bg-[#1F251C] w-full z-40 fixed top-0">
         {alerts.length > 0 && <Alert alerts={alerts} />}
         {/* Desktop */}
@@ -112,72 +112,79 @@ const Desktop = ({ navItems, logo, searchBar }: Props) => (
 
       <div class="bg-[#FDFFF5] flex justify-between items-center">
         <ul class="container flex justify-between p-0">
-          {navItems?.slice(0, 10).map((item) => (
-            <NavItemIsland item={item} />
-          ))}
+          {navItems?.slice(0, 10).map((item) => <NavItemIsland item={item} />)}
         </ul>
       </div>
     </div>
   </>
 );
 
-const Mobile = ({ logo, navItems, loading, searchBar }: Props) => (
-  <>
+const Mobile = ({
+  logo,
+  navItems,
+  loading,
+  searchBar,
+}: Props & { alerts: HTMLWidget[] }) => (
+  <div class="w-full">
+    <div class="flex items-center justify-between w-full py-3 px-4 gap-2">
+      <div class="flex-1 flex justify-start">
+        <label
+          for={SIDEMENU_DRAWER_ID}
+          class="w-[38px] h-[38px] cursor-pointer flex items-center"
+          aria-label="open menu"
+        >
+          <Icon id="menu" class="text-white" />
+        </label>
+      </div>
+
+      <div class="flex-1 flex justify-center">
+        {logo && (
+          <a
+            href="/"
+            class="inline-flex items-center justify-center"
+            aria-label="Store logo"
+          >
+            <Image
+              src={logo.src}
+              alt={logo.alt}
+              width={logo.width || 100}
+              height={logo.height || 13}
+            />
+          </a>
+        )}
+      </div>
+
+      <div class="flex-1 flex justify-end">
+        <Bag />
+      </div>
+    </div>
+
+    {/* Searchbar row - full width */}
+    {searchBar && (
+      <div class="w-full">
+        <SearchBarIsland {...searchBar} showProductSuggestions={false} />
+      </div>
+    )}
+
     <Drawer
       id={SIDEMENU_DRAWER_ID}
       aside={
         <Drawer.Aside title="" drawer={SIDEMENU_DRAWER_ID}>
-          {loading === "lazy" ? (
-            <div
-              id={SIDEMENU_CONTAINER_ID}
-              class="h-full flex items-center justify-center"
-              style={{ minWidth: "100vw" }}
-            >
-              <span class="loading loading-spinner" />
-            </div>
-          ) : (
-            <Menu navItems={navItems ?? []} />
-          )}
+          {loading === "lazy"
+            ? (
+              <div
+                id={SIDEMENU_CONTAINER_ID}
+                class="h-full flex items-center justify-center"
+                style={{ minWidth: "100vw" }}
+              >
+                <span class="loading loading-spinner" />
+              </div>
+            )
+            : <Menu navItems={navItems ?? []} />}
         </Drawer.Aside>
       }
     />
-
-    <div class="flex items-center justify-between w-screen py-3 px-5 gap-2">
-      <label
-        for={SIDEMENU_DRAWER_ID}
-        class="w-[38px] h-[38px] cursor-pointer"
-        aria-label="open menu"
-      >
-        <Icon id="menu" class="text-white" />
-      </label>
-
-      {logo && (
-        <a
-          href="/"
-          class="flex-grow inline-flex items-center justify-center"
-          aria-label="Store logo"
-        >
-          <Image
-            src={logo.src}
-            alt={logo.alt}
-            width={logo.width || 100}
-            height={logo.height || 13}
-          />
-        </a>
-      )}
-
-      {searchBar && (
-        <div class="mr-2">
-          <SearchBarIsland
-            {...searchBar}
-            showProductSuggestions={false} // Desativa sugestões de produtos no mobile se desejar
-          />
-        </div>
-      )}
-
-      <Bag />
-    </div>
-  </>
+  </div>
 );
 
 export const LoadingFallback = (props: LoadingFallbackProps<Props>) => (

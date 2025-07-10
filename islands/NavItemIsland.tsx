@@ -43,10 +43,12 @@ export default function NavItemIsland({
   const thirdLevelRef = useRef<HTMLDivElement>(null);
   const [submenuTransform, setSubmenuTransform] = useState("translateX(0)");
   const [isSubmenuVisible, setIsSubmenuVisible] = useState(false);
-  const [activeThirdLevel, setActiveThirdLevel] = useState<{
-    items: SiteNavigationElement[];
-    topPosition: number;
-  } | null>(null);
+  const [activeThirdLevel, setActiveThirdLevel] = useState<
+    {
+      items: SiteNavigationElement[];
+      topPosition: number;
+    } | null
+  >(null);
 
   // Calcula a altura máxima baseada no número de itens
   const calculateMaxHeight = (items: SiteNavigationElement[]) => {
@@ -74,7 +76,7 @@ export default function NavItemIsland({
 
   const handleSubItemHover = (
     items: SiteNavigationElement[] | undefined,
-    event: MouseEvent
+    event: MouseEvent,
   ) => {
     if (!items || items.length === 0) {
       setActiveThirdLevel(null);
