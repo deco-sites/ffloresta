@@ -136,7 +136,8 @@
             "image": "https://assets.decocache.com/ffloresta/bcf27d4c-9968-4025-8fe7-e691d92b671d/category1.png",
             "label": "Marceneiro"
           }
-        ]
+        ],
+        "icon": "https://assets.decocache.com/ffloresta/25532a3b-7eb8-4e13-9da7-e0e7f978d512/Group-13.svg"
       }
     },
     {
@@ -256,6 +257,25 @@
       "section": {
         "__resolveType": "site/sections/Product/ProductShelf.tsx",
         "title": "PUXADORES",
+        "headerIcon": "https://assets.decocache.com/ffloresta/28daeeed-da2e-4353-9b47-094d244c40dd/home-second-shelf-title-icon.svg",
+        "products": {
+          "__resolveType": "vtex/loaders/intelligentSearch/productSearchValidator.ts",
+          "props": {
+            "sort": "price:desc",
+            "collection": "150",
+            "count": 30
+          }
+        },
+        "icon": "https://assets.decocache.com/ffloresta/25532a3b-7eb8-4e13-9da7-e0e7f978d512/Group-13.svg",
+        "banner": "https://assets.decocache.com/ffloresta/783c3412-c1c4-4632-af24-1e5036f8c340/Mask-group.png",
+        "headerBanner": "https://assets.decocache.com/ffloresta/9a798c44-bf86-49eb-be92-3633ca83a640/image-8.png"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Product/ProductShelf.tsx",
+        "title": "FECHADURAS",
         "headerIcon": "https://assets.decocache.com/ffloresta/28daeeed-da2e-4353-9b47-094d244c40dd/home-second-shelf-title-icon.svg",
         "products": {
           "__resolveType": "vtex/loaders/intelligentSearch/productSearchValidator.ts",
