@@ -63,12 +63,12 @@ function BrandGrid({ title, cta, items, showArrows = true, icon }: Props) {
               class={clx(
                 "carousel-item",
                 "last:pr-5 last:sm:pr-0",
-                // Mobile: 2 itens
-                "w-[calc(50%-12px)]",
-                // Tablet: 3 itens
-                "md:w-[calc(33.333%-16px)]",
-                // Desktop: 6 itens (100%/6 = 16.666%)
-                "lg:w-[calc(16.666%-20px)]"
+                // Mobile: 2 itens (abaixo de 640px)
+                "w-[calc(50%-12px)] sm:w-[calc(50%-12px)]",
+                // Tablet: 3 itens (640px ou mais)
+                "min-[640px]:w-[calc(33.333%-16px)]",
+                // Desktop: ajuste responsivo para garantir pelo menos 3 itens
+                "lg:w-[calc(33.333%-20px)]"
               )}
             >
               <Card {...i} />

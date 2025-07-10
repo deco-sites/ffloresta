@@ -20,7 +20,7 @@ function ProductSlider({ products, itemListName }: Props) {
             <Slider.Item
               index={index}
               class={clx(
-                "carousel-item min-h-[400px] lg:min-h-[450px]",
+                "carousel-item min-h-[400px]",
                 // Below 300px: 1 item (very small screens)
                 "max-[299px]:w-[calc(100%-20px)]",
                 // Mobile: 2 items (default for mobile)
@@ -31,7 +31,7 @@ function ProductSlider({ products, itemListName }: Props) {
                 // Desktop: 4 items
                 "lg:w-[calc(25%-18px)]",
                 // Large desktop: 5 items
-                "xl:w-[calc(20%-19.2px)]",
+                "xl:w-[calc(20%-19.2px)]"
               )}
             >
               <ProductCard

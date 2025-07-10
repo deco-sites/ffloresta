@@ -6206,6 +6206,10 @@ input[type="checkbox"]:checked::after {
     width: 552px;
   }
 
+  .sm\:w-\[calc\(50\%-12px\)\] {
+    width: calc(50% - 12px);
+  }
+
   .sm\:w-\[calc\(50\%-16px\)\] {
     width: calc(50% - 16px);
   }
@@ -6400,6 +6404,10 @@ input[type="checkbox"]:checked::after {
 
   .last\:sm\:pr-0:last-child {
     padding-right: 0px;
+  }
+
+  .min-\[640px\]\:w-\[calc\(33\.333\%-16px\)\] {
+    width: calc(33.333% - 16px);
   }
 }
 
@@ -6658,10 +6666,6 @@ input[type="checkbox"]:checked::after {
     max-height: 600px;
   }
 
-  .lg\:min-h-\[450px\] {
-    min-height: 450px;
-  }
-
   .lg\:w-1\/2 {
     width: 50%;
   }
@@ -6688,6 +6692,10 @@ input[type="checkbox"]:checked::after {
 
   .lg\:w-\[calc\(25\%-18px\)\] {
     width: calc(25% - 18px);
+  }
+
+  .lg\:w-\[calc\(33\.333\%-20px\)\] {
+    width: calc(33.333% - 20px);
   }
 
   .lg\:w-full {
