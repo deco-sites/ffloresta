@@ -19,9 +19,9 @@ export default function ProductDetails({ page }: Props) {
     return (
       <div class="w-full flex justify-center items-center py-28">
         <div class="flex flex-col items-center justify-center gap-6">
-          <span class="font-medium text-2xl">Page not found</span>
+          <span class="font-medium text-2xl">Página não encontrada!</span>
           <a href="/" class="btn no-animation">
-            Go back to Home
+            Voltar ao Início
           </a>
         </div>
       </div>

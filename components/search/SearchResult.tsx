@@ -79,7 +79,7 @@ function PageResult(props: SectionProps<typeof loader>) {
       <div
         class={clx(
           "pb-2 sm:pb-10",
-          (!prevPageUrl || partial === "hideLess") && "hidden"
+          (!prevPageUrl || partial === "hideLess") && "hidden",
         )}
       >
         <a
@@ -99,7 +99,7 @@ function PageResult(props: SectionProps<typeof loader>) {
           "grid items-center",
           "grid-cols-2 gap-4",
           "sm:grid-cols-3",
-          "w-full"
+          "w-full",
         )}
       >
         {products?.map((product, index) => (
@@ -114,46 +114,50 @@ function PageResult(props: SectionProps<typeof loader>) {
       </div>
 
       <div class={clx("pt-5 sm:pt-10 w-full")}>
-        {infinite ? (
-          <div class="flex justify-center [&_section]:contents">
-            <a
-              rel="next"
-              class={clx(
-                "w-full max-w-32 p-3 bg-[#3A4332] text-[#97A37F] h-8 flex items-center justify-center font-bold text-[14.06px] leading-[170%] tracking-[16%] hover:bg-[#293023] cursor-pointer transition",
-                (!nextPageUrl || partial === "hideMore") && "hidden"
-              )}
-              hx-swap="outerHTML show:parent:top"
-              hx-get={partialNext}
-            >
-              <span class="inline [.htmx-request_&]:hidden">Mostrar mais</span>
-              <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
-            </a>
-          </div>
-        ) : (
-          <div class={clx("join", infinite && "hidden")}>
-            <a
-              rel="prev"
-              aria-label="previous page link"
-              href={prevPageUrl ?? "#"}
-              disabled={!prevPageUrl}
-              class="btn btn-ghost join-item"
-            >
-              <Icon id="chevron-right" class="rotate-180" />
-            </a>
-            <span class="btn btn-ghost join-item">
-              Page {zeroIndexedOffsetPage + 1}
-            </span>
-            <a
-              rel="next"
-              aria-label="next page link"
-              href={nextPageUrl ?? "#"}
-              disabled={!nextPageUrl}
-              class="btn btn-ghost join-item"
-            >
-              <Icon id="chevron-right" />
-            </a>
-          </div>
-        )}
+        {infinite
+          ? (
+            <div class="flex justify-center [&_section]:contents">
+              <a
+                rel="next"
+                class={clx(
+                  "w-full max-w-32 p-3 bg-[#3A4332] text-[#97A37F] h-8 flex items-center justify-center font-bold text-[14.06px] leading-[170%] tracking-[16%] hover:bg-[#293023] cursor-pointer transition",
+                  (!nextPageUrl || partial === "hideMore") && "hidden",
+                )}
+                hx-swap="outerHTML show:parent:top"
+                hx-get={partialNext}
+              >
+                <span class="inline [.htmx-request_&]:hidden">
+                  Mostrar mais
+                </span>
+                <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
+              </a>
+            </div>
+          )
+          : (
+            <div class={clx("join", infinite && "hidden")}>
+              <a
+                rel="prev"
+                aria-label="previous page link"
+                href={prevPageUrl ?? "#"}
+                disabled={!prevPageUrl}
+                class="btn btn-ghost join-item"
+              >
+                <Icon id="chevron-right" class="rotate-180" />
+              </a>
+              <span class="btn btn-ghost join-item">
+                Page {zeroIndexedOffsetPage + 1}
+              </span>
+              <a
+                rel="next"
+                aria-label="next page link"
+                href={nextPageUrl ?? "#"}
+                disabled={!nextPageUrl}
+                class="btn btn-ghost join-item"
+              >
+                <Icon id="chevron-right" />
+              </a>
+            </div>
+          )}
       </div>
     </div>
   );
@@ -197,15 +201,12 @@ function Result(props: SectionProps<typeof loader>) {
 
   const fallbackSeoText: SeoText = {
     title: typeof document !== "undefined" ? document.title : undefined,
-    description:
-      typeof document !== "undefined"
-        ? document
-            .querySelector("meta[name='description']")
-            ?.getAttribute("content") ?? undefined
-        : undefined,
+    description: typeof document !== "undefined"
+      ? document
+        .querySelector("meta[name='description']")
+        ?.getAttribute("content") ?? undefined
+      : undefined,
   };
-
-  console.log(props.seoText, "props.seoText");
 
   const seoText = props.seoText ?? fallbackSeoText;
 
@@ -241,105 +242,105 @@ function Result(props: SectionProps<typeof loader>) {
   return (
     <>
       <div id={container} {...viewItemListEvent} class="w-full">
-        {partial ? (
-          <PageResult {...props} />
-        ) : (
-          <div class="container flex flex-col gap-4 sm:gap-5 w-full py-4 sm:py-5 px-5 sm:px-0">
-            <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
+        {partial
+          ? <PageResult {...props} />
+          : (
+            <div class="container flex flex-col gap-4 sm:gap-5 w-full py-4 sm:py-5 px-5 sm:px-0">
+              <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
 
-            {device === "mobile" && (
-              <Drawer
-                id={controls}
-                aside={
-                  <div class="bg-base-100 flex flex-col h-full w-full divide-y overflow-y-hidden">
+              {device === "mobile" && (
+                <Drawer
+                  id={controls}
+                  aside={
+                    <div class="bg-base-100 flex flex-col h-full w-full divide-y overflow-y-hidden">
+                      <div class="flex justify-between items-center">
+                        <h1 class="px-4 py-3">
+                          <span class="font-medium text-2xl">Filtro</span>
+                        </h1>
+                        <label
+                          class="btn btn-ghost cursor-pointer"
+                          for={controls}
+                        >
+                          <Icon id="close" />
+                        </label>
+                      </div>
+                      <div class="flex-grow overflow-auto">
+                        <Filters filters={filters} />
+                      </div>
+                    </div>
+                  }
+                >
+                  <div class="flex sm:hidden flex-col items-start">
+                    <div class="flex">{results}</div>
+                    <div class="w-full flex justify-between items-center gap-4 mt-5">
+                      <div class="flex max-w-1/2 w-full">
+                        <label
+                          class="cursor-pointer w-full h-9 min-h9 max-h-9 p-0 rounded-none flex items-center justify-center gap-2 bg-[#c6cfba] text-[#323f2d] text-sm font-bold uppercase"
+                          for={controls}
+                        >
+                          <Icon id="filter" />
+                          Filtro
+                        </label>
+                      </div>
+                      <div class="flex max-w-1/2 w-full">{sortBy}</div>
+                    </div>
+                  </div>
+                </Drawer>
+              )}
+
+              <div class="grid grid-cols-1 sm:grid-cols-[1fr_806px] lg:gap-10">
+                {device === "desktop" && (
+                  <aside class="place-self-start flex flex-col gap-9 w-full">
+                    <span class="text-base font-medium h-12 flex items-center text-md text-[#1F251C]">
+                      Filtro
+                    </span>
+                    {bannerImage && (
+                      <img
+                        src={bannerImage}
+                        alt="banner categoria"
+                        class="w-full rounded"
+                      />
+                    )}
+                    <Filters filters={filters} />
+                  </aside>
+                )}
+
+                <div class="flex flex-col gap-9">
+                  {device === "desktop" && (
                     <div class="flex justify-between items-center">
-                      <h1 class="px-4 py-3">
-                        <span class="font-medium text-2xl">Filtro</span>
-                      </h1>
-                      <label
-                        class="btn btn-ghost cursor-pointer"
-                        for={controls}
-                      >
-                        <Icon id="close" />
-                      </label>
+                      {results}
+                      <div>{sortBy}</div>
                     </div>
-                    <div class="flex-grow overflow-auto">
-                      <Filters filters={filters} />
-                    </div>
-                  </div>
-                }
-              >
-                <div class="flex sm:hidden flex-col items-start">
-                  <div class="flex">{results}</div>
-                  <div class="w-full flex justify-between items-center gap-4 mt-5">
-                    <div class="flex max-w-1/2 w-full">
-                      <label
-                        class="cursor-pointer w-full h-9 min-h9 max-h-9 p-0 rounded-none flex items-center justify-center gap-2 bg-[#c6cfba] text-[#323f2d] text-sm font-bold uppercase"
-                        for={controls}
-                      >
-                        <Icon id="filter" />
-                        Filtro
-                      </label>
-                    </div>
-                    <div class="flex max-w-1/2 w-full">{sortBy}</div>
-                  </div>
-                </div>
-              </Drawer>
-            )}
+                  )}
 
-            <div class="grid grid-cols-1 sm:grid-cols-[1fr_806px] lg:gap-10">
-              {device === "desktop" && (
-                <aside class="place-self-start flex flex-col gap-9 w-full">
-                  <span class="text-base font-medium h-12 flex items-center text-md text-[#1F251C]">
-                    Filtro
-                  </span>
-                  {bannerImage && (
+                  <PageResult {...props} />
+
+                  {(seoText?.title || seoText?.description) && (
+                    <div class="flex flex-col gap-2 sm:gap-3 text-[#1F251C] px-2 sm:px-0">
+                      {seoText.title && (
+                        <h2 class="text-[18px] sm:text-[20px] font-medium">
+                          {seoText.title}
+                        </h2>
+                      )}
+                      {seoText.description && (
+                        <p class="text-[14px] sm:text-[16px] leading-relaxed">
+                          {seoText.description}
+                        </p>
+                      )}
+                    </div>
+                  )}
+
+                  {device === "mobile" && bannerImage && (
                     <img
                       src={bannerImage}
                       alt="banner categoria"
                       class="w-full rounded"
                     />
                   )}
-                  <Filters filters={filters} />
-                </aside>
-              )}
-
-              <div class="flex flex-col gap-9">
-                {device === "desktop" && (
-                  <div class="flex justify-between items-center">
-                    {results}
-                    <div>{sortBy}</div>
-                  </div>
-                )}
-
-                <PageResult {...props} />
-
-                {(seoText?.title || seoText?.description) && (
-                  <div class="flex flex-col gap-2 sm:gap-3 text-[#1F251C] px-2 sm:px-0">
-                    {seoText.title && (
-                      <h2 class="text-[18px] sm:text-[20px] font-medium">
-                        {seoText.title}
-                      </h2>
-                    )}
-                    {seoText.description && (
-                      <p class="text-[14px] sm:text-[16px] leading-relaxed">
-                        {seoText.description}
-                      </p>
-                    )}
-                  </div>
-                )}
-
-                {device === "mobile" && bannerImage && (
-                  <img
-                    src={bannerImage}
-                    alt="banner categoria"
-                    class="w-full rounded"
-                  />
-                )}
+                </div>
               </div>
             </div>
-          </div>
-        )}
+          )}
       </div>
 
       <script
@@ -348,7 +349,7 @@ function Result(props: SectionProps<typeof loader>) {
           __html: useScript(
             setPageQuerystring,
             `${pageInfo.currentPage}`,
-            container
+            container,
           ),
         }}
       />

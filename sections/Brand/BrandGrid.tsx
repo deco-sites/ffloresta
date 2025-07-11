@@ -56,19 +56,21 @@ function BrandGrid({ title, cta, items, showArrows = true, icon }: Props) {
       <Section.Header title={title} cta={cta} icon={icon} />
 
       <div id={id} class="relative px-[20px]">
-        <Slider class="carousel justify-between carousel-center gap-6 w-full">
+        <Slider class="carousel justify-between carousel-center gap-3 w-full">
           {items.map((i, index) => (
             <Slider.Item
               index={index}
               class={clx(
                 "carousel-item",
                 "last:pr-5 last:sm:pr-0",
-                // Mobile: 2 itens (abaixo de 640px)
-                "w-[calc(50%-12px)] sm:w-[calc(50%-12px)]",
-                // Tablet: 3 itens (640px ou mais)
-                "min-[640px]:w-[calc(33.333%-16px)]",
-                // Desktop: ajuste responsivo para garantir pelo menos 3 itens
-                "lg:w-[calc(33.333%-20px)]",
+                // Abaixo de 300px: 2 itens
+                "w-[calc(50%-8px)]",
+                // De 300px a 639px: 3 itens
+                "min-[400px]:w-[calc(33.333%-10px)]",
+                // Tablet (640px ou mais): 4 itens
+                "min-[640px]:w-[calc(25%-12px)]",
+                // Desktop (1024px ou mais): 6 itens
+                "lg:w-[calc(16.666%-12px)]",
               )}
             >
               <Card {...i} />
