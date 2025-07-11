@@ -6,45 +6,45 @@
       "title": "Sobre a Floresta",
       "itens": [
         {
-          "title": "Nossa História",
+          "title": "Nossas História",
           "href": "/nossa-historia"
         },
         {
-          "title": "Nossa Missão, Visão e Valores",
-          "href": "#"
+          "title": "Nossa Missão",
+          "href": "/nossa-missao"
+        },
+        {
+          "title": "Nosso Valores",
+          "href": "/nossos-valores"
+        },
+        {
+          "title": "Garantia, Troca e Devoluções",
+          "href": "/garantia-troca-e-devolucao"
         },
         {
           "title": "Política de Privacidade",
-          "href": "/"
+          "href": "/politica-de-privacidade"
         }
       ],
       "href": "/"
     },
     {
-      "title": "Sua Conta",
       "itens": [
         {
           "title": "Minha Conta",
-          "href": "#"
+          "href": "/account"
         },
         {
           "title": "Meus Pedidos",
-          "href": "#"
+          "href": "/account#/orders"
         },
         {
           "title": "Meus Favoritos",
-          "href": "#"
-        },
-        {
-          "title": "Garantia",
-          "href": "/"
-        },
-        {
-          "title": "Troca e Devolução",
-          "href": "/"
+          "href": "/wishlist"
         }
       ],
-      "href": "/"
+      "href": "/",
+      "title": "Sua Conta"
     }
   ],
   "social": [
@@ -127,28 +127,28 @@
         "tuor": "Tour 360°",
         "end": "R. Pais Leme, 238 - Pinheiros, São Paulo - SP, 05424-010",
         "tel": "(11) 30936122",
-        "horario": "De Segunda a Sexta das 8H ÀS 17H Sábado das 9H ÀS 13H"
+        "horario": "De Segunda a Sexta das 8h às 17h sábado das 9h às 13h"
       },
       {
         "title": "Brás",
         "tuor": "Tour 360°",
         "end": "Rua do Gasômetro, 281 - Brás, São Paulo - SP, 03004-001",
         "tel": "(11) 2039-0333",
-        "horario": "De Segunda a Sexta das 8H ÀS 17H Sábado das 9H ÀS 13H"
+        "horario": "De Segunda a Sexta das 8h às 17h sábado das 9h às 13h"
       },
       {
         "title": "Santo André",
         "tuor": "Tour 360°",
         "end": "Av. Artur de Queirós, 592 - Casa Branca, Santo André - SP, 09015-510",
         "tel": "(11) 5555-9940",
-        "horario": "De Segunda a Sexta das 8H ÀS 17H Sábado das 9H ÀS 13H"
+        "horario": "De Segunda a Sexta das 8h às 17h sábado das 9h às 13h"
       },
       {
         "title": "Campinas",
         "tuor": "Tour 360°",
         "end": "R. São Luís do Paraitinga, 53 - Jardim do Trevo, Campinas - SP, 13030-105",
         "tel": "(19) 3995-0299",
-        "horario": "De Segunda a Sexta das 8H ÀS 17H Sábado das 9H ÀS 13H"
+        "horario": "De Segunda a Sexta das 8h às 17h sábado das 9h às 13h"
       }
     ],
     "verMais": "/"

@@ -1,0 +1,45 @@
+{
+  "name": "Nossos Valores",
+  "path": "/nossos-valores",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Header With Menus"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Institucional/BannerInstitucional.tsx",
+        "images": {
+          "mobile": "https://assets.decocache.com/ffloresta/4956871d-d653-403d-8b72-072b1ac8a744/companypageconfiguration_960f5ba2-d244-45bd-8091-d32f4f10ffd0-1-(1).png",
+          "desktop": "https://assets.decocache.com/ffloresta/1256f0c5-792f-4bc9-b6a0-b3f29078c645/companypageconfiguration_960f5ba2-d244-45bd-8091-d32f4f10ffd0-1.png"
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Institucional/NossaHistoria.tsx",
+        "images": {
+          "mobile": "https://assets.decocache.com/ffloresta/65793bb0-d150-4261-91ad-61d1ebf6d4ba/maxresdefault-(1)-1.png",
+          "desktop": "https://assets.decocache.com/ffloresta/65793bb0-d150-4261-91ad-61d1ebf6d4ba/maxresdefault-(1)-1.png"
+        },
+        "title": "Nossos Valores",
+        "description": "<p>Ser honesto</p><p>Ser comprometido</p><p>Ser produtivo</p><p>Ser atencioso</p><p>Ser respeitoso</p><p>Ser solidário</p>",
+        "description2": "<p></p>"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Footer"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}

@@ -30,177 +30,177 @@
             {
               "children": [],
               "image": null,
-              "name": "ALGARISMOS",
+              "name": "Algarismos",
               "url": "/ferragens/acessorios/algarismos"
             },
             {
               "children": [],
               "image": null,
-              "name": "BATEDORES PARA PORTA",
+              "name": "Batedores para Porta",
               "url": "/ferragens/acessorios/batedores-para-porta"
             },
             {
               "children": [],
               "image": null,
-              "name": "DIVERSOS",
+              "name": "Diversos",
               "url": "/ferragens/acessorios/diversos"
             },
             {
               "children": [],
               "image": null,
-              "name": "FECHOS",
+              "name": "Fechos",
               "url": "/ferragens/acessorios/fechos"
             },
             {
               "children": [],
               "image": null,
-              "name": "GANCHOS DE REDE",
+              "name": "Ganchos de Rede",
               "url": "/ferragens/acessorios/ganchos-de-rede"
             },
             {
               "children": [],
               "image": null,
-              "name": "PASSA CABOS",
+              "name": "Passa Cabos",
               "url": "/ferragens/acessorios/passa-cabos"
             },
             {
               "children": [],
               "image": null,
-              "name": "PÉS PARA MÓVEIS",
+              "name": "Pés para Móveis",
               "url": "/ferragens/acessorios/pes-para-moveis"
             },
             {
               "children": [],
               "image": null,
-              "name": "PRENDEDORES DE PORTA",
+              "name": "Prendedores de Porta",
               "url": "/ferragens/acessorios/prendedores-de-porta"
             },
             {
               "children": [],
               "image": null,
-              "name": "RODIZIOS",
+              "name": "Rodizios",
               "url": "/ferragens/acessorios/rodizios"
             },
             {
               "children": [],
               "image": null,
-              "name": "VEDA PORTA",
+              "name": "Veda Porta",
               "url": "/ferragens/acessorios/veda-porta"
             }
           ],
           "url": "/ferragens/acessorios",
-          "name": "ACESSÓRIOS",
+          "name": "Acessórios",
           "image": null
         },
         {
           "children": [],
           "image": null,
           "url": "/ferragens/amortecedores-e-pulsadores/",
-          "name": "AMORTECEDORES E PULSADORES"
+          "name": "Amortecedores e Pulsadores"
         },
         {
           "children": [],
           "image": null,
           "url": "/ferragens/articuladores/",
-          "name": "ARTICULADORES"
+          "name": "Articuladores"
         },
         {
           "children": [
             {
               "children": [],
               "image": null,
-              "name": "EXEMPLO",
+              "name": "Acessórios",
               "url": "/ferragens/corredicas/acessorios"
             },
             {
               "children": [],
               "image": null,
-              "name": "APOIO",
+              "name": "Apoio",
               "url": "/ferragens/corredicas/apoio"
             },
             {
               "children": [],
               "image": null,
-              "name": "ESPECIAIS",
+              "name": "Especiais",
               "url": "/ferragens/corredicas/especiais"
             },
             {
               "children": [],
               "image": null,
-              "name": "INVISÍVEL",
+              "name": "Invisível",
               "url": "/ferragens/corredicas/invisivel"
             },
             {
               "children": [],
               "image": null,
-              "name": "TELESCÓPICAS",
+              "name": "Telescópicas",
               "url": "/ferragens/corredicas/telescopicas"
             }
           ],
           "image": null,
           "url": "/ferragens/corredicas",
-          "name": "CORREDIÇAS"
+          "name": "Corrediças"
         },
         {
           "children": [],
           "image": null,
           "url": "/ferragens/desempenador-de-porta/",
-          "name": "DESEMPENADOR DE PORTA"
+          "name": "Desempenador de Porta"
         },
         {
           "children": [
             {
               "children": [],
               "image": null,
-              "name": "ACESSÓRIOS",
+              "name": "Acessórios",
               "url": "/ferragens/dobradicas/acessorios"
             },
             {
               "children": [],
               "image": null,
-              "name": "COMUM",
+              "name": "Comum",
               "url": "/ferragens/dobradicas/comum"
             },
             {
               "children": [],
               "image": null,
-              "name": "DE COPO",
+              "name": "De Copo",
               "url": "/ferragens/dobradicas/de-copo"
             },
             {
               "children": [],
               "image": null,
-              "name": "INVISÍVEL",
+              "name": "Invisível",
               "url": "/ferragens/dobradicas/invisivel"
             },
             {
               "children": [],
               "image": null,
-              "name": "EXEMPLO",
-              "url": "/ferragens/dobradicas/mola"
+              "url": "/ferragens/dobradicas/mola",
+              "name": "Mola"
             },
             {
               "children": [],
               "image": null,
-              "name": "PALMELAS",
+              "name": "Palmelas",
               "url": "/ferragens/dobradicas/palmelas"
             },
             {
               "children": [],
               "image": null,
-              "name": "PIVÔS",
+              "name": "Pivôs",
               "url": "/ferragens/dobradicas/pivos"
             },
             {
               "children": [],
               "image": null,
-              "name": "PORTA CAMARÃO",
+              "name": "Porta Camarão",
               "url": "/ferragens/dobradicas/porta-camarao"
             }
           ],
           "image": null,
           "url": "/ferragens/dobradicas",
-          "name": "DOBRADIÇAS"
+          "name": "Dobradiças"
         },
         {
           "children": [
@@ -208,48 +208,48 @@
               "children": [],
               "image": null,
               "url": "/ferragens/eletrica-e-iluminacao/acessorios",
-              "name": "ACESSÓRIOS"
+              "name": "Acessórios"
             },
             {
               "children": [],
               "image": null,
-              "name": "FITAS LED",
+              "name": "Fitas Led",
               "url": "/ferragens/eletrica-e-iluminacao/fitas-led"
             },
             {
               "children": [],
               "image": null,
-              "name": "FONTES E CONVERSORES",
+              "name": "Fontes e Conversores",
               "url": "/ferragens/eletrica-e-iluminacao/fontes-e-conversores"
             },
             {
               "children": [],
               "image": null,
               "url": "/ferragens/eletrica-e-iluminacao/luminarias-led",
-              "name": "LUMINÁRIAS LED"
+              "name": "Luminárias Led"
             },
             {
               "children": [],
               "image": null,
-              "name": "PERFIS LED",
+              "name": "Perfis Led",
               "url": "/ferragens/eletrica-e-iluminacao/perfis-led"
             },
             {
               "children": [],
               "image": null,
-              "name": "TOMADAS E INTERRUPTORES",
+              "name": "Tomadas e Interruptores",
               "url": "/ferragens/eletrica-e-iluminacao/tomadas-e-interruptores"
             },
             {
               "children": [],
               "image": null,
-              "name": "TORRES DE TOMADA",
+              "name": "Torres de Tomada",
               "url": "/ferragens/eletrica-e-iluminacao/torres-de-tomada"
             }
           ],
           "image": null,
           "url": "/ferragens/eletrica-e-iluminacao",
-          "name": "ELÉTRICA E ILUMINAÇÃO"
+          "name": "Elétrica e Iluminação"
         },
         {
           "children": [
@@ -257,18 +257,18 @@
               "children": [],
               "image": null,
               "url": "/ferragens/estruturas-tubulares/acessorios",
-              "name": "ACESSÓRIOS"
+              "name": "Acessórios"
             },
             {
               "children": [],
               "image": null,
-              "name": "PERFIL",
+              "name": "Perfil",
               "url": "/ferragens/estruturas-tubulares/perfil"
             }
           ],
           "image": null,
-          "url": "/ferragens/estruturas-tubulares/acessorios",
-          "name": "ESTRUTURAS TUBULARES"
+          "url": "/ferragens/estruturas-tubulares",
+          "name": "Estruturas Tubulares"
         },
         {
           "children": [
@@ -276,35 +276,35 @@
               "children": [],
               "image": null,
               "url": "/ferragens/fixacao/buchas",
-              "name": "BUCHAS"
+              "name": "Buchas"
             },
             {
               "children": [],
               "image": null,
               "url": "/ferragens/fixacao/cantoneiras",
-              "name": "CANTONEIRAS"
+              "name": "Cantoneiras"
             },
             {
               "children": [],
               "image": null,
               "url": "/ferragens/fixacao/conectores",
-              "name": "CONECTORES"
+              "name": "Conectores"
             },
             {
               "children": [],
               "image": null,
-              "name": "DISPOSITIVOS DE MONTAGEM",
+              "name": "Dispositivos de Montagem",
               "url": "/ferragens/fixacao/dispositivos-de-montagem"
             },
             {
               "children": [],
               "image": null,
               "url": "/ferragens/fixacao/parafusos",
-              "name": "PARAFUSOS"
+              "name": "Parafusos"
             }
           ],
           "image": null,
-          "name": "FIXAÇÃO",
+          "name": "Fixação",
           "url": "/ferragens/fixacao"
         },
         {
@@ -312,37 +312,37 @@
             {
               "children": [],
               "image": null,
-              "name": "ACESSÓRIOS",
+              "name": "Acessórios",
               "url": "/ferragens/kits-de-portas/acessorios"
             },
             {
               "children": [],
               "image": null,
-              "name": "APARENTE",
+              "name": "Aparente",
               "url": "/ferragens/kits-de-portas/aparente"
             },
             {
               "children": [],
               "image": null,
               "url": "/ferragens/kits-de-portas/oculta",
-              "name": "OCULTA"
+              "name": "Oculta"
             },
             {
               "children": [],
               "image": null,
               "url": "/ferragens/kits-de-portas/para-moveis",
-              "name": "PARA MÓVEIS"
+              "name": "PAra Móveis"
             },
             {
               "children": [],
               "image": null,
               "url": "/ferragens/kits-de-portas/porta-camarao",
-              "name": "PORTA CAMARÃO"
+              "name": "Porta Camarão"
             }
           ],
           "image": null,
           "url": "/ferragens/kits-de-portas",
-          "name": "KITS DE PORTAS"
+          "name": "Kits de Portas"
         },
         {
           "children": [
@@ -350,35 +350,35 @@
               "children": [],
               "image": null,
               "url": "/ferragens/molas/acessorios",
-              "name": "ACESSÓRIOS"
+              "name": "Acessórios"
             },
             {
               "children": [],
               "image": null,
-              "name": "AÉREA",
+              "name": "Aérea",
               "url": "/ferragens/molas/aerea"
             },
             {
               "children": [],
               "image": null,
-              "name": "PISO",
+              "name": "Piso",
               "url": "/ferragens/molas/piso"
             },
             {
               "children": [],
               "image": null,
-              "name": "TOPO",
+              "name": "Topo",
               "url": "/ferragens/molas/topo"
             }
           ],
           "image": null,
           "url": "/ferragens/molas",
-          "name": "MOLAS"
+          "name": "Molas"
         },
         {
           "children": [],
           "image": null,
-          "name": "PISTÕES",
+          "name": "Pistões",
           "url": "/ferragens/pistoes"
         },
         {
@@ -387,53 +387,53 @@
               "children": [],
               "image": null,
               "url": "/ferragens/quimicos/acessorios",
-              "name": "ACESSÓRIOS"
+              "name": "Acessórios"
             },
             {
               "children": [],
               "image": null,
-              "name": "COLAS",
+              "name": "Colas",
               "url": "/ferragens/quimicos/colas"
             },
             {
               "children": [],
               "image": null,
               "url": "/ferragens/quimicos/espumas",
-              "name": "ESPUMAS"
+              "name": "Espumas"
             },
             {
               "children": [],
               "image": null,
-              "name": "SELADORES",
+              "name": "Seladores",
               "url": "/ferragens/quimicos/seladores"
             },
             {
               "children": [],
               "image": null,
-              "name": "SOLVENTES",
+              "name": "Solventes",
               "url": "/ferragens/quimicos/solventes"
             }
           ],
           "image": null,
-          "name": "QUIMICOS",
+          "name": "Quimicos",
           "url": "/ferragens/quimicos"
         },
         {
           "children": [],
           "image": null,
-          "name": "RODAPÉS",
+          "name": "Rodapés",
           "url": "/ferragens/rodapes/"
         },
         {
           "children": [],
           "image": null,
-          "name": "SISTEMAS DE GAVETAS",
+          "name": "Sistemas de Gavetas",
           "url": "/ferragens/sistemas-de-gavetas/"
         },
         {
           "children": [],
           "image": null,
-          "name": "SUPORTES",
+          "name": "Suportes",
           "url": "/ferragens/suportes/"
         },
         {
@@ -442,23 +442,23 @@
               "children": [],
               "image": null,
               "url": "/ferragens/trilhos-e-perfis/acessorios",
-              "name": "ACESSÓRIOS"
+              "name": "Acessórios"
             },
             {
               "children": [],
               "image": null,
-              "name": "PONTEIRAS E TAMPAS",
+              "name": "Ponteiras e Tampas",
               "url": "/ferragens/trilhos-e-perfis/ponteiras-e-tampas"
             }
           ],
           "image": null,
           "url": "/ferragens/trilhos-e-perfis",
-          "name": "TRILHOS E PERFIS"
+          "name": "Trilhos e Perfis"
         }
       ],
       "@type": "SiteNavigationElement",
       "url": "/ferragens",
-      "name": "FERRAGENS",
+      "name": "Ferragens",
       "image": null
     },
     {
@@ -467,54 +467,54 @@
           "children": [],
           "image": null,
           "url": "/puxadores/alca/",
-          "name": "ALÇA"
+          "name": "Alça"
         },
         {
           "children": [],
           "image": null,
           "url": "/puxadores/concha/",
-          "name": "CONCHA"
+          "name": "Concha"
         },
         {
           "children": [],
           "image": null,
           "url": "/puxadores/duplos/",
-          "name": "DUPLOS"
+          "name": "Duplos"
         },
         {
           "children": [],
           "image": null,
           "url": "/puxadores/embutir/",
-          "name": "EMBUTIR"
+          "name": "Embutir"
         },
         {
           "children": [],
           "image": null,
           "url": "/puxadores/infantil/",
-          "name": "INFANTIL"
+          "name": "Infantil"
         },
         {
           "children": [],
           "image": null,
           "url": "/puxadores/perfil/",
-          "name": "EXEMPLO"
+          "name": "Perfil"
         },
         {
           "children": [],
           "image": null,
           "url": "/puxadores/ponto/",
-          "name": "PONTO"
+          "name": "Ponto"
         },
         {
           "children": [],
           "image": null,
-          "name": "TOPO",
+          "name": "Topo",
           "url": "/puxadores/topo/"
         }
       ],
       "@type": "SiteNavigationElement",
       "url": "/Puxadores",
-      "name": "PUXADORES",
+      "name": "Puxadores",
       "image": null
     },
     {
@@ -524,134 +524,134 @@
             {
               "children": [],
               "image": null,
-              "name": "ACESSÓRIOS",
+              "name": "Acessórios",
               "url": "/fechaduras/eletronica/acessorios"
             },
             {
               "children": [],
               "image": null,
-              "name": "BIOMÉTRICA",
+              "name": "Biométrica",
               "url": "/fechaduras/eletronica/biometrica"
             },
             {
               "children": [],
               "image": null,
-              "name": "DIGITAL",
+              "name": "Digital",
               "url": "/fechaduras/eletronica/digital"
             },
             {
               "children": [],
               "image": null,
-              "name": "MÓVEIS",
+              "name": "Móveis",
               "url": "/fechaduras/eletronica/moveis"
             }
           ],
           "image": null,
           "url": "/fechaduras/eletronica",
-          "name": "ELETRÔNICA"
+          "name": "Eletrônica"
         },
         {
           "children": [
             {
               "children": [],
               "image": null,
-              "name": "ACESSÓRIOS",
+              "name": "Acessórios",
               "url": "/fechaduras/manuais/acessorios"
             },
             {
               "children": [],
               "image": null,
-              "name": "ALTA SEGURANÇA",
+              "name": "Alta Segurança",
               "url": "/fechaduras/manuais/alta-seguranca"
             },
             {
               "children": [],
               "image": null,
-              "name": "ANTI-PANICO",
+              "name": "Anti-Panico",
               "url": "/fechaduras/manuais/anti-panico"
             },
             {
               "children": [],
               "image": null,
-              "name": "AUXILIARES",
+              "name": "Auxiliares",
               "url": "/fechaduras/manuais/auxiliares"
             },
             {
               "children": [],
               "image": null,
-              "name": "BICO DE PAPAGAIO",
+              "name": "Bico de Papagaio",
               "url": "/fechaduras/manuais/bico-de-papagaio"
             },
             {
               "children": [],
               "image": null,
-              "name": "CHAVE TETRA",
+              "name": "Chave Tetra",
               "url": "/fechaduras/manuais/chave-tetra"
             },
             {
               "children": [],
               "image": null,
-              "name": "CREMONA",
+              "name": "Cremona",
               "url": "/fechaduras/manuais/cremona"
             },
             {
               "children": [],
               "image": null,
-              "name": "MÁQUINAS",
+              "name": "Máquinas",
               "url": "/fechaduras/manuais/maquinas"
             },
             {
               "children": [],
               "image": null,
-              "name": "MÓVEIS",
+              "name": "Móveis",
               "url": "/fechaduras/manuais/moveis"
             },
             {
               "children": [],
               "image": null,
-              "name": "ROLETE",
+              "name": "Rolete",
               "url": "/fechaduras/manuais/rolete"
             }
           ],
           "image": null,
           "url": "/fechaduras/manuais",
-          "name": "MANUAIS"
+          "name": "Manuais"
         },
         {
           "children": [
             {
               "children": [],
               "image": null,
-              "name": "CADEADOS",
+              "name": "Cadeados",
               "url": "/fechaduras/seguranca/cadeados"
             },
             {
               "children": [],
               "image": null,
-              "name": "COFRES",
+              "name": "Cofres",
               "url": "/fechaduras/seguranca/cofres"
             },
             {
               "children": [],
               "image": null,
-              "name": "TRINCOS",
+              "name": "Trincos",
               "url": "/fechaduras/seguranca/trincos"
             },
             {
               "children": [],
               "image": null,
-              "name": "VISORES",
+              "name": "Visores",
               "url": "/fechaduras/seguranca/visores"
             }
           ],
           "image": null,
           "url": "/fechaduras/seguranca",
-          "name": "SEGURANÇA"
+          "name": "Segurança"
         }
       ],
       "@type": "SiteNavigationElement",
       "url": "/Fechaduras",
-      "name": "FECHADURAS",
+      "name": "Fechaduras",
       "image": null
     },
     {
@@ -661,129 +661,129 @@
             {
               "children": [],
               "image": null,
-              "name": "AVENTOS",
+              "name": "Aventos",
               "url": "/ferragens-de-projetos/blum/aventos"
             },
             {
               "children": [],
               "image": null,
-              "name": "REVEGO",
+              "name": "Revego",
               "url": "/ferragens-de-projetos/blum/revego"
             },
             {
               "children": [],
               "image": null,
-              "name": "SERVO-DRIVE",
+              "name": "Servo-Drive",
               "url": "/ferragens-de-projetos/blum/servo-drive"
             },
             {
               "children": [],
               "image": null,
-              "name": "SPACE STEP",
+              "name": "Space-Step",
               "url": "/ferragens-de-projetos/blum/space-step"
             }
           ],
           "image": null,
           "url": "/ferragens-de-projetos/blum",
-          "name": "BLUM"
+          "name": "Blum"
         },
         {
           "children": [
             {
               "children": [],
               "image": null,
-              "name": "COPLANAR",
+              "name": "Coplanar",
               "url": "/ferragens-de-projetos/fgvtn/coplanar"
             },
             {
               "children": [],
               "image": null,
-              "name": "EASY SHELF",
+              "name": "Easy Shelf",
               "url": "/ferragens-de-projetos/fgvtn/easy-shelf"
             }
           ],
           "image": null,
           "url": "/ferragens-de-projetos/fgvtn",
-          "name": "FGVTN"
+          "name": "Fgvtn"
         },
         {
           "children": [
             {
               "children": [],
               "image": null,
-              "name": "BETTLIFT",
+              "name": "Bettlift",
               "url": "/ferragens-de-projetos/hafele/bettlift"
             },
             {
               "children": [],
               "image": null,
-              "name": "FREE",
+              "name": "Free",
               "url": "/ferragens-de-projetos/hafele/free"
             },
             {
               "children": [],
               "image": null,
-              "name": "HAWA",
+              "name": "Hawa",
               "url": "/ferragens-de-projetos/hafele/hawa"
             },
             {
               "children": [],
               "image": null,
-              "name": "SLIDO CLASSIC 60VF",
+              "name": "Slido Classic 60vf",
               "url": "/ferragens-de-projetos/hafele/slido-classic-60vf"
             },
             {
               "children": [],
               "image": null,
-              "name": "SLIDO DESIGN 80",
+              "name": "Slido Design 80",
               "url": "/ferragens-de-projetos/hafele/slido-design-80"
             },
             {
               "children": [],
               "image": null,
-              "name": "SLIDO F-PARK",
+              "name": "Slido F Park",
               "url": "/ferragens-de-projetos/hafele/slido-f-park"
             },
             {
               "children": [],
               "image": null,
-              "name": "TAVOLETTO",
+              "name": "Tavoletto",
               "url": "/ferragens-de-projetos/hafele/tavoletto"
             }
           ],
           "image": null,
           "url": "/ferragens-de-projeto/hafele",
-          "name": "HAFELE"
+          "name": "Hafele"
         },
         {
           "children": [
             {
               "children": [],
               "image": null,
-              "name": "COPLANAR",
+              "name": "Coplanar",
               "url": "/ferragens-de-projetos/rometal/coplanar"
             },
             {
               "children": [],
               "image": null,
-              "name": "RIVELATTO",
+              "name": "Rivelatto",
               "url": "/ferragens-de-projetos/rometal/rivelatto"
             },
             {
               "children": [],
               "image": null,
-              "name": "VOLARE",
+              "name": "Volare",
               "url": "/ferragens-de-projetos/rometal/volare"
             }
           ],
           "image": null,
           "url": "/ferragens-de-projeto/rometal",
-          "name": "ROMETAL"
+          "name": "Rometal"
         }
       ],
       "@type": "SiteNavigationElement",
       "url": "/Ferragens-de-Projetos",
-      "name": "FERRAGENS DE PROJETOS",
+      "name": "Ferragens de Projetos",
       "image": null
     },
     {
@@ -793,286 +793,286 @@
             {
               "children": [],
               "image": null,
-              "name": "SUPORTES E ORGANIZADORES",
+              "name": "Suportes e Organizadores",
               "url": "/ambientes/area-de-servico/suportes-e-organizadores"
             },
             {
               "children": [],
               "image": null,
-              "name": "TÁBUA DE PASSAR",
+              "name": "Tábua de Passar",
               "url": "/ambientes/area-de-servico/tabua-de-passar"
             },
             {
               "children": [],
               "image": null,
-              "name": "TULHAS",
+              "name": "Tulhas",
               "url": "/ambientes/area-de-servico/tulhas"
             },
             {
               "children": [],
               "image": null,
-              "name": "VARAIS",
+              "name": "Varais",
               "url": "/ambientes/area-de-servico/varais"
             }
           ],
           "image": null,
           "url": "/ambientes/area-de-servico",
-          "name": "ÁREA DE SERVIÇO"
+          "name": "Área de Serviço"
         },
         {
           "children": [
             {
               "children": [],
               "image": null,
-              "name": "ACESSÓRIOS",
+              "name": "Acessórios",
               "url": "/ambientes/banheiro/acessorios"
             },
             {
               "children": [],
               "image": null,
-              "name": "CHUVEIROS",
+              "name": "Chuveiros",
               "url": "/ambientes/banheiro/chuveiros"
             },
             {
               "children": [],
               "image": null,
-              "name": "ESPELHOS",
+              "name": "Espelhos",
               "url": "/ambientes/banheiro/espelhos"
             },
             {
               "children": [],
               "image": null,
-              "name": "LIXEIRAS",
+              "name": "Lixeiras",
               "url": "/ambientes/banheiro/lixeiras"
             },
             {
               "children": [],
               "image": null,
-              "name": "ORGANIZAÇÃO",
+              "name": "Organização",
               "url": "/ambientes/banheiro/organizacao"
             },
             {
               "children": [],
               "image": null,
               "url": "/ambientes/banheiro/ralos",
-              "name": "RALOS"
+              "name": "Ralos"
             },
             {
               "children": [],
               "image": null,
-              "name": "TOALHEIROS ELÉTRICOS",
+              "name": "Toalheiros Elétricos",
               "url": "/ambientes/banheiro/toalheiros-eletricos"
             },
             {
               "children": [],
               "image": null,
-              "name": "TORNEIRAS",
+              "name": "Torneiras",
               "url": "/ambientes/banheiro/torneiras"
             }
           ],
           "image": null,
-          "url": "/ambientes/banheiro/acessorios",
-          "name": "BANHEIRO"
+          "url": "/ambientes/banheiro",
+          "name": "Banheiro"
         },
         {
           "children": [
             {
               "children": [],
               "image": null,
-              "name": "ADEGA",
+              "name": "Adega",
               "url": "/ambientes/cozinha/adega"
             },
             {
               "children": [],
               "image": null,
-              "name": "BARRA PROTETORA",
+              "name": "Barra Protetora",
               "url": "/ambientes/cozinha/barra-protetora"
             },
             {
               "children": [],
               "image": null,
-              "name": "EXEMPLO",
+              "name": "Cesto Giratorio",
               "url": "/ambientes/cozinha/cesto-giratorio"
             },
             {
               "children": [],
               "image": null,
-              "name": "COLUNAS DESLIZANTES",
+              "name": "Colunas Deslizantes",
               "url": "/ambientes/cozinha/colunas-deslizantes"
             },
             {
               "children": [],
               "image": null,
-              "name": "DIVISOR DE TALHERES",
+              "name": "Divisor de Talheres",
               "url": "/ambientes/cozinha/divisor-de-talheres"
             },
             {
               "children": [],
               "image": null,
-              "name": "ESCORREDORES DE LOUÇAS",
+              "name": "Escorredores de Louças",
               "url": "/ambientes/cozinha/escorredores-de-loucas"
             },
             {
               "children": [],
               "image": null,
-              "name": "FRUTEIRA",
+              "name": "Fruteira",
               "url": "/ambientes/cozinha/fruteira"
             },
             {
               "children": [],
               "image": null,
-              "name": "GAVETA ARAMADA",
+              "name": "Gaveta Aramada",
               "url": "/ambientes/cozinha/gaveta-aramada"
             },
             {
               "children": [],
               "image": null,
-              "name": "GRADES DE VENTILAÇÃO",
+              "name": "Grades de Ventilação",
               "url": "/ambientes/cozinha/grades-de-ventilacao"
             },
             {
               "children": [],
               "image": null,
-              "name": "LIXEIRAS",
+              "name": "Lixeiras",
               "url": "/ambientes/cozinha/lixeiras"
             },
             {
               "children": [],
               "image": null,
-              "name": "MISTURADORES",
+              "name": "Misturadores",
               "url": "/ambientes/cozinha/misturadores"
             },
             {
               "children": [],
               "image": null,
-              "name": "ORGANIZADOR",
+              "name": "Organizador",
               "url": "/ambientes/cozinha/organizador"
             },
             {
               "children": [],
               "image": null,
-              "name": "PORTA GARRAFAS",
+              "name": "Porta Garrafas",
               "url": "/ambientes/cozinha/porta-garrafas"
             },
             {
               "children": [],
               "image": null,
-              "name": "PORTA TEMPEROS E CONDIMENTOS",
+              "name": "Porta Temperos e Condimentos",
               "url": "/ambientes/cozinha/porta-temperos-e-condimentos"
             },
             {
               "children": [],
               "image": null,
-              "name": "TORNEIRAS",
+              "name": "Torneiras",
               "url": "/ambientes/cozinha/torneiras"
             }
           ],
           "image": null,
           "url": "/ambientes/cozinha",
-          "name": "COZINHA"
+          "name": "Cozinha"
         },
         {
           "children": [
             {
               "children": [],
               "image": null,
-              "name": "AQUECEDOR DE AMBIENTE",
+              "name": "Aquecedor de Ambiente",
               "url": "/ambientes/para-casa/aquecedor-de-ambiente"
             },
             {
               "children": [],
               "image": null,
-              "name": "ASPIRADOR DE PÓ",
+              "name": "Aspirador de Pó",
               "url": "/ambientes/para-casa/aspirador-de-po"
             },
             {
               "children": [],
               "image": null,
-              "name": "ELETROPORTÁTEIS",
+              "name": "Eletroportáteis",
               "url": "/ambientes/para-casa/eletroportateis"
             },
             {
               "children": [],
               "image": null,
-              "name": "JARDINAGEM",
+              "name": "Jardinagem",
               "url": "/ambientes/para-casa/jardinagem"
             },
             {
               "children": [],
               "image": null,
-              "name": "SUPORTES DE TV",
+              "name": "Suportes de TV",
               "url": "/ambientes/para-casa/suportes-de-tv"
             }
           ],
           "image": null,
           "url": "/ambientes/para-casa",
-          "name": "PARA CASA"
+          "name": "Para Casa"
         },
         {
           "children": [
             {
               "children": [],
               "image": null,
-              "name": "ACESSÓRIOS",
+              "name": "Acessórios",
               "url": "/ambientes/quarto/acessorios"
             },
             {
               "children": [],
               "image": null,
-              "name": "CABIDEIROS",
+              "name": "Cabideiros",
               "url": "/ambientes/quarto/cabideiros"
             },
             {
               "children": [],
               "image": null,
-              "name": "CABIDEIROS LED",
+              "name": "Cabideiros Led",
               "url": "/ambientes/quarto/cabideiros-led"
             },
             {
               "children": [],
               "image": null,
-              "name": "CALCEIROS",
+              "name": "Calceiros",
               "url": "/ambientes/quarto/calceiros"
             },
             {
               "children": [],
               "image": null,
-              "name": "ESCADAS",
+              "name": "Escadas",
               "url": "/ambientes/quarto/escadas"
             },
             {
               "children": [],
               "image": null,
               "url": "/ambientes/quarto/espelhos",
-              "name": "ESPELHOS"
+              "name": "Espelhos"
             },
             {
               "children": [],
               "image": null,
-              "name": "ORGANIZADORES",
+              "name": "Organizadores",
               "url": "/ambientes/quarto/organizadores"
             },
             {
               "children": [],
               "image": null,
-              "name": "PORTA CINTOS E GRAVATAS",
+              "name": "Porta Cintos e Gravatas",
               "url": "/ambientes/quarto/porta-cintos-e-gravatas"
             },
             {
               "children": [],
               "image": null,
-              "name": "PROTEÇÃO",
+              "name": "Proteção",
               "url": "/ambientes/quarto/protecao"
             }
           ],
           "image": null,
           "url": "/ambientes/quarto",
-          "name": "QUARTO"
+          "name": "Quarto"
         }
       ],
       "@type": "SiteNavigationElement",
       "url": "/Ambientes",
-      "name": "AMBIENTES",
+      "name": "Ambientes",
       "image": null
     },
     {
@@ -1082,207 +1082,207 @@
             {
               "children": [],
               "image": null,
-              "name": "BATERIAS E CARREGADORES",
+              "name": "Baterias e Carregadores",
               "url": "/ferramentas/acessorios/baterias-e-carregadores"
             },
             {
               "children": [],
               "image": null,
-              "name": "BITS E PONTAS",
+              "name": "Bits e Pontas",
               "url": "/ferramentas/acessorios/bits-e-pontas"
             },
             {
               "children": [],
               "image": null,
-              "name": "BROCAS",
+              "name": "Brocas",
               "url": "/ferramentas/acessorios/brocas"
             },
             {
               "children": [],
               "image": null,
-              "name": "CARREGADORES",
+              "name": "Carregadores",
               "url": "/ferramentas/acessorios/carregadores"
             },
             {
               "children": [],
               "image": null,
-              "name": "CONECTORES E ENGATES",
+              "name": "Conectores e Engates",
               "url": "/ferramentas/acessorios/conectores-e-engates"
             },
             {
               "children": [],
               "image": null,
-              "name": "DISCOS",
+              "name": "Discos",
               "url": "/ferramentas/acessorios/discos"
             },
             {
               "children": [],
               "image": null,
-              "name": "DIVERSOS",
+              "name": "Diversos",
               "url": "/ferramentas/acessorios/diversos"
             },
             {
               "children": [],
               "image": null,
-              "name": "ESCARADORES",
+              "name": "Escaradores",
               "url": "/ferramentas/acessorios/escaradores"
             },
             {
               "children": [],
               "image": null,
-              "name": "FRESAS",
+              "name": "Fresas",
               "url": "/ferramentas/acessorios/fresas"
             },
             {
               "children": [],
               "image": null,
-              "name": "LIXAS",
+              "name": "Lixas",
               "url": "/ferramentas/acessorios/lixas"
             },
             {
               "children": [],
               "image": null,
-              "name": "MANDRIL",
+              "name": "Mandril",
               "url": "/ferramentas/acessorios/mandril"
             },
             {
               "children": [],
               "image": null,
               "url": "/ferramentas/acessorios/marcadores",
-              "name": "MARCADORES"
+              "name": "Marcadores"
             },
             {
               "children": [],
               "image": null,
-              "name": "PINOS E GRAMPOS",
+              "name": "Pinos e Grampos",
               "url": "/ferramentas/acessorios/pinos-e-grampos"
             },
             {
               "children": [],
               "image": null,
-              "name": "ROLAMENTOS",
+              "name": "Rolamentos",
               "url": "/ferramentas/acessorios/rolamentos"
             },
             {
               "children": [],
               "image": null,
-              "name": "SERRA COPO",
+              "name": "Serra Copo",
               "url": "/ferramentas/acessorios/serra-copo"
             },
             {
               "children": [],
               "image": null,
               "url": "/ferramentas/acessorios/serras",
-              "name": "SERRAS"
+              "name": "Serras"
             },
             {
               "children": [],
               "image": null,
-              "name": "SOQUETES",
+              "name": "Soquetes",
               "url": "/ferramentas/acessorios/soquetes"
             },
             {
               "children": [],
               "image": null,
-              "name": "SUPORTES",
+              "name": "Suportes",
               "url": "/ferramentas/acessorios/suportes"
             },
             {
               "children": [],
               "image": null,
-              "name": "TALHADEIRAS E PONTEIROS",
+              "name": "Talhadeiras e Ponteiros",
               "url": "/ferramentas/acessorios/talhadeiras-e-ponteiros"
             },
             {
               "children": [],
               "image": null,
-              "name": "VAZADORES",
+              "name": "Vazadores",
               "url": "/ferramentas/acessorios/vazadores"
             }
           ],
           "image": null,
           "url": "/ferramentas/acessorios",
-          "name": "ACESSÓRIOS"
+          "name": "Acessórios"
         },
         {
           "children": [
             {
               "children": [],
               "image": null,
-              "name": "BOLSAS E MOCHILAS",
+              "name": "Bolsas e Mochilas",
               "url": "/ferramentas/armazenamento/bolsas-e-mochilas"
             },
             {
               "children": [],
               "image": null,
-              "name": "MALETAS E CAIXAS",
+              "name": "Maletas e Caixas",
               "url": "/ferramentas/armazenamento/maletas-e-caixas"
             }
           ],
           "image": null,
           "url": "/ferramentas/armazenamento",
-          "name": "ARMAZENAMENTO"
+          "name": "Amazenamento"
         },
         {
           "children": [
             {
               "children": [],
               "image": null,
-              "name": "CHAVE DE IMPACTO",
+              "name": "Chave de Impacto",
               "url": "/ferramentas/ferramentas-a-bateria/chave-de-impacto"
             },
             {
               "children": [],
               "image": null,
-              "name": "DETECTOR",
+              "name": "Detector",
               "url": "/ferramentas/ferramentas-a-bateria/detector"
             },
             {
               "children": [],
               "image": null,
-              "name": "ESMERILHADEIRAS",
+              "name": "Esmerilhadeiras",
               "url": "/ferramentas/ferramentas-a-bateria/esmerilhadeiras"
             },
             {
               "children": [],
               "image": null,
-              "name": "FURADEIRAS E PARAFUSADEIRAS",
+              "name": "Furadeiras e Parafusadeiras",
               "url": "/ferramentas/ferramentas-a-bateria/furadeiras-e-parafusadeiras"
             },
             {
               "children": [],
               "image": null,
-              "name": "INSTRUMENTOS DE MEDIÇÃO",
+              "name": "Instrumentos de Medição",
               "url": "/ferramentas/ferramentas-a-bateria/instrumentos-de-medicao"
             },
             {
               "children": [],
               "image": null,
-              "name": "MARTELETES",
+              "name": "Marteletes",
               "url": "/ferramentas/ferramentas-a-bateria/marteletes"
             },
             {
               "children": [],
               "image": null,
               "url": "/ferramentas/ferramentas-a-bateria/micro-retifica",
-              "name": "MICRO RETÍFICA"
+              "name": "Micro Retífica"
             },
             {
               "children": [],
               "image": null,
-              "name": "MULTICORTADORAS",
+              "name": "Multicortadoras",
               "url": "/ferramentas/ferramentas-a-bateria/multicortadoras"
             },
             {
               "children": [],
               "image": null,
-              "name": "PISTOLAS",
+              "name": "Pistolas",
               "url": "/ferramentas/ferramentas-a-bateria/pistolas"
             },
             {
               "children": [],
               "image": null,
-              "name": "PLAINAS",
+              "name": "Plainas",
               "url": "/ferramentas/ferramentas-a-bateria/plainas"
             },
             {
@@ -1294,335 +1294,335 @@
             {
               "children": [],
               "image": null,
-              "name": "SERRAS",
+              "name": "Serras",
               "url": "/ferramentas/ferramentas-a-bateria/serras"
             },
             {
               "children": [],
               "image": null,
-              "name": "SOPRADORES",
+              "name": "Sopradores",
               "url": "/ferramentas/ferramentas-a-bateria/sopradores"
             },
             {
               "children": [],
               "image": null,
-              "name": "TUPIAS",
+              "name": "Tupias",
               "url": "/ferramentas/ferramentas-a-bateria/tupias"
             }
           ],
           "image": null,
           "url": "/ferramentas/ferramentas-a-bateria",
-          "name": "FERRAMENTAS À BATERIA"
+          "name": "Ferramentas à Bateria"
         },
         {
           "children": [
             {
               "children": [],
               "image": null,
-              "name": "ESMERILHADEIRAS",
+              "name": "Esmerilhadeiras",
               "url": "/ferramentas/ferramentas-eletricas/esmerilhadeiras"
             },
             {
               "children": [],
               "image": null,
-              "name": "FURADEIRAS E PARAFUSADEIRAS",
+              "name": "Furadeiras e Parafusadeiras",
               "url": "/ferramentas/ferramentas-eletricas/furadeiras-e-parafusadeiras"
             },
             {
               "children": [],
               "image": null,
-              "name": "GRAMPEADOR PINADOR",
+              "name": "rampeador Pinador",
               "url": "/ferramentas/ferramentas-eletricas/grampeador-pinador"
             },
             {
               "children": [],
               "image": null,
-              "name": "GRAVADOR",
+              "name": "Gravador",
               "url": "/ferramentas/ferramentas-eletricas/gravador"
             },
             {
               "children": [],
               "image": null,
-              "name": "INVERSOR DE SOLDA",
+              "name": "Inversor de Solda",
               "url": "/ferramentas/ferramentas-eletricas/inversor-de-solda"
             },
             {
               "children": [],
               "image": null,
               "url": "/ferramentas/ferramentas-eletricas/lixadeiras",
-              "name": "LIXADEIRAS"
+              "name": "Lixadeiras"
             },
             {
               "children": [],
               "image": null,
-              "name": "MARTELETE",
+              "name": "Martelete",
               "url": "/ferramentas/ferramentas-eletricas/martelete"
             },
             {
               "children": [],
               "image": null,
               "url": "/ferramentas/ferramentas-eletricas/micro-retifica",
-              "name": "MICRO RETÍFICA"
+              "name": "Micro Retífica"
             },
             {
               "children": [],
               "image": null,
-              "name": "MULTICORTADORAS",
+              "name": "Multicortadoras",
               "url": "/ferramentas/ferramentas-eletricas/multicortadoras"
             },
             {
               "children": [],
               "image": null,
-              "name": "PISTOLAS",
+              "name": "Pistolas",
               "url": "/ferramentas/ferramentas-eletricas/pistolas"
             },
             {
               "children": [],
               "image": null,
-              "name": "PLAINAS",
+              "name": "Plainas",
               "url": "/ferramentas/ferramentas-eletricas/plainas"
             },
             {
               "children": [],
               "image": null,
-              "name": "POLITRIZ",
+              "name": "Politriz",
               "url": "/ferramentas/ferramentas-eletricas/politriz"
             },
             {
               "children": [],
               "image": null,
-              "name": "RETIFICADORAS",
+              "name": "Retificadoras",
               "url": "/ferramentas/ferramentas-eletricas/retificadoras"
             },
             {
               "children": [],
               "image": null,
-              "name": "SERRA TICO-TICO",
+              "name": "Serra Tico-Tico",
               "url": "/ferramentas/ferramentas-eletricas/serra-tico-tico"
             },
             {
               "children": [],
               "image": null,
-              "name": "SERRAS",
+              "name": "Serras",
               "url": "/ferramentas/ferramentas-eletricas/serras"
             },
             {
               "children": [],
               "image": null,
-              "name": "SOPRADORES",
+              "name": "Sopradores",
               "url": "/ferramentas/ferramentas-eletricas/sopradores"
             },
             {
               "children": [],
               "image": null,
-              "name": "TUPIAS",
+              "name": "Tupias",
               "url": "/ferramentas/ferramentas-eletricas/tupias"
             }
           ],
           "image": null,
           "url": "/ferramentas/ferramentas-eletricas",
-          "name": "FERRAMENTAS ELÉTRICAS"
+          "name": "Ferramentas Elétricas"
         },
         {
           "children": [
             {
               "children": [],
               "image": null,
-              "name": "ALICATES",
+              "name": "Alicates",
               "url": "/ferramentas/ferramentas-manuais/alicates"
             },
             {
               "children": [],
               "image": null,
-              "name": "ARCOS PARA SERRAS",
+              "name": "Arcos para Serras",
               "url": "/ferramentas/ferramentas-manuais/arcos-para-serras"
             },
             {
               "children": [],
               "image": null,
-              "name": "BANCADA E CAVALETES",
+              "name": "Bancada e Cavaletes",
               "url": "/ferramentas/ferramentas-manuais/bancada-e-cavaletes"
             },
             {
               "children": [],
               "image": null,
-              "name": "CHAVES",
+              "name": "Chaves",
               "url": "/ferramentas/ferramentas-manuais/chaves"
             },
             {
               "children": [],
               "image": null,
-              "name": "CORTADOR PARA PISOS",
+              "name": "Cortador para Pisos",
               "url": "/ferramentas/ferramentas-manuais/cortador-para-pisos"
             },
             {
               "children": [],
               "image": null,
-              "name": "ESPÁTULAS",
+              "name": "Espátulas",
               "url": "/ferramentas/ferramentas-manuais/espatulas"
             },
             {
               "children": [],
               "image": null,
-              "name": "ESQUADROS",
+              "name": "Esquadros",
               "url": "/ferramentas/ferramentas-manuais/esquadros"
             },
             {
               "children": [],
               "image": null,
-              "name": "ESTILETE",
+              "name": "Estilete",
               "url": "/ferramentas/ferramentas-manuais/estilete"
             },
             {
               "children": [],
               "image": null,
-              "name": "FORMÃO",
+              "name": "Formão",
               "url": "/ferramentas/ferramentas-manuais/formao"
             },
             {
               "children": [],
               "image": null,
-              "name": "GRAMPEADOR",
+              "name": "Grampeador",
               "url": "/ferramentas/ferramentas-manuais/grampeador"
             },
             {
               "children": [],
               "image": null,
-              "name": "GRAMPO SARGENTO",
+              "name": "Grampo Sargento",
               "url": "/ferramentas/ferramentas-manuais/grampo-sargento"
             },
             {
               "children": [],
               "image": null,
-              "name": "INSTRUMENTOS DE MEDIÇÃO",
+              "name": "Instrumentos de Medição",
               "url": "/ferramentas/ferramentas-manuais/instrumentos-de-medicao"
             },
             {
               "children": [],
               "image": null,
-              "name": "JOGOS DE FERRAMENTAS",
+              "name": "Jogos de Ferramentas",
               "url": "/ferramentas/ferramentas-manuais/jogos-de-ferramentas"
             },
             {
               "children": [],
               "image": null,
-              "name": "LIMAS",
+              "name": "Limas",
               "url": "/ferramentas/ferramentas-manuais/limas"
             },
             {
               "children": [],
               "image": null,
-              "name": "MAGNETIZADOR",
+              "name": "Magnetizador",
               "url": "/ferramentas/ferramentas-manuais/magnetizador"
             },
             {
               "children": [],
               "image": null,
-              "name": "MARTELOS",
+              "name": "Martelos",
               "url": "/ferramentas/ferramentas-manuais/martelos"
             },
             {
               "children": [],
               "image": null,
-              "name": "NÍVEL",
+              "name": "Nível",
               "url": "/ferramentas/ferramentas-manuais/nivel"
             },
             {
               "children": [],
               "image": null,
-              "name": "PISTOLAS",
+              "name": "Pistolas",
               "url": "/ferramentas/ferramentas-manuais/pistolas"
             },
             {
               "children": [],
               "image": null,
-              "name": "PLAINAS",
+              "name": "Plainas",
               "url": "/ferramentas/ferramentas-manuais/plainas"
             },
             {
               "children": [],
               "image": null,
-              "name": "REBITADORES",
+              "name": "Rebitadores",
               "url": "/ferramentas/ferramentas-manuais/rebitadores"
             },
             {
               "children": [],
               "image": null,
-              "name": "RISCADORES",
+              "name": "Riscadores",
               "url": "/ferramentas/ferramentas-manuais/riscadores"
             },
             {
               "children": [],
               "image": null,
-              "name": "SERROTES",
+              "name": "Serrotes",
               "url": "/ferramentas/ferramentas-manuais/serrotes"
             },
             {
               "children": [],
               "image": null,
-              "name": "TESOURAS",
+              "name": "Tesouras",
               "url": "/ferramentas/ferramentas-manuais/tesouras"
             },
             {
               "children": [],
               "image": null,
-              "name": "TORNOS E MORSAS",
+              "name": "Tornos e Morsas",
               "url": "/ferramentas/ferramentas-manuais/tornos-e-morsas"
             },
             {
               "children": [],
               "image": null,
-              "name": "TORQUÊS ARMADOR",
+              "name": "Torquês Armador",
               "url": "/ferramentas/ferramentas-manuais/torques-armador"
             },
             {
               "children": [],
               "image": null,
-              "name": "TORQUÍMETRO",
+              "name": "Torquímetro",
               "url": "/ferramentas/ferramentas-manuais/torquimetro"
             }
           ],
           "image": null,
           "url": "/ferramentas/ferramentas-manuais",
-          "name": "FERRAMENTAS MANUAIS"
+          "name": "Ferramentas Manuais"
         },
         {
           "children": [
             {
               "children": [],
               "image": null,
-              "name": "COMPRESSORES",
+              "name": "Compressores",
               "url": "/ferramentas/ferramentas-pneumaticas/compressores"
             },
             {
               "children": [],
               "image": null,
-              "name": "GRAMPEADOR PINADOR",
+              "name": "Grampeador Pinador",
               "url": "/ferramentas/ferramentas-pneumaticas/grampeador-pinador"
             },
             {
               "children": [],
               "image": null,
-              "name": "LUBRIFICANTE",
+              "name": "Lubrificante",
               "url": "/ferramentas/ferramentas-pneumaticas/lubrificante"
             }
           ],
           "image": null,
           "url": "/ferramentas/ferramentas-pneumaticas",
-          "name": "FERRAMENTAS PNEUMÁTICAS"
+          "name": "Ferramentas Pneumáticas"
         }
       ],
       "@type": "SiteNavigationElement",
       "url": "/Ferramentas",
-      "name": "FERRAMENTAS",
+      "name": "Ferramentas",
       "image": null
     },
     {
       "children": [],
       "@type": "SiteNavigationElement",
       "url": "/150?map=productClusterIds",
-      "name": "OFERTAS",
-      "image": null
+      "image": null,
+      "name": "Ofertas"
     }
   ],
   "loading": "eager",

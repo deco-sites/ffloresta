@@ -1,0 +1,45 @@
+{
+  "name": "Política de Privacidade",
+  "path": "/politica-de-privacidade",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Header With Menus"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Institucional/BannerInstitucional.tsx",
+        "images": {
+          "mobile": "https://assets.decocache.com/ffloresta/4956871d-d653-403d-8b72-072b1ac8a744/companypageconfiguration_960f5ba2-d244-45bd-8091-d32f4f10ffd0-1-(1).png",
+          "desktop": "https://assets.decocache.com/ffloresta/1256f0c5-792f-4bc9-b6a0-b3f29078c645/companypageconfiguration_960f5ba2-d244-45bd-8091-d32f4f10ffd0-1.png"
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Institucional/NossaHistoria.tsx",
+        "images": {
+          "mobile": "https://assets.decocache.com/ffloresta/65793bb0-d150-4261-91ad-61d1ebf6d4ba/maxresdefault-(1)-1.png",
+          "desktop": "https://assets.decocache.com/ffloresta/65793bb0-d150-4261-91ad-61d1ebf6d4ba/maxresdefault-(1)-1.png"
+        },
+        "title": "Política de Privacidade",
+        "description": "<p><span style=\"color: rgb(34, 34, 34); font-size: 16px\">Nosso compromisso com a sua privacidade.</span><br><span style=\"color: rgb(34, 34, 34); font-size: 16px\">Na Ferragens Floresta, sua privacidade é muito importante para nós. Nos comprometemos a proteger seus dados pessoais e garantir que suas informações estejam seguras. Esta política explica como coletamos, usamos, armazenamos e protegemos seus dados, conforme a Lei Geral de Proteção de Dados (LGPD) – Lei nº 13.709/2018.</span><br><span style=\"color: rgb(34, 34, 34); font-size: 16px\"><br>Aplicabilidade<br>Esta Política de Privacidade possui aplicabilidade única e exclusivamente aos clientes e titulares de dados pessoais das lojas Ferragens Floresta estabelecidas no Estado de São Paulo.<br></span><span><br>Dados coletados e motivos.<br>Coletamos dados para oferecer uma experiência de compra prática e segura. Os tipos de dados que coletamos podem ser divididos em duas categorias:<br><br>a. Dados fornecidos por você:<br>• Nome;<br>• CPF/CNPJ;<br>• Endereço;<br>• Telefone;<br>• E-mail;<br>• Dados de pagamento;<br>• Informações de compra;<br>• Criação de uma senha de acesso.<br><br>b. Dados coletados automaticamente:<br>• Endereço IP;<br>• Dados do navegador;<br>• Localização aproximada;<br>• Dados sobre seu dispositivo;<br>• Interações no site.<br><br>Utilizamos essas informações para processar pedidos, melhorar nossos serviços, enviar ofertas e promoções, com seu consentimento, e garantir a segurança das transações.<br><br>Bases legais para o tratamento de dados<br>Tratamos seus dados com base em diferentes fundamentos legais, dependendo do contexto:<br>• Execução de contrato: para processar suas compras e entregas.<br>• Consentimento: quando você opta por receber nossas promoções.<br>• Cumprimento de obrigação legal: para emissão de notas fiscais.<br>• Interesse legitimo: para melhorar sua experiência no site.<br><br>Como compartilhamos seus dados<br><br>Compartilhamos seus dados apenas quando necessário, sempre com muito cuidado:<br><br>• Com prestadores de serviços: como transportadoras e empresas de pagamento.<br>• Com autoridades legais: quando exigido por lei.<br>• Com parceiros comerciais: mas só com seu consentimento.<br><br>Segurança e Armazenamento das Informações<br>Na Ferragens Floresta, a segurança das suas informações é um compromisso essencial. Adotamos medidas técnicas e organizacionais para garantir a proteção dos seus dados pessoais contra acessos não autorizados, alterações indevidas ou vazamentos.<br>Todas as transações realizadas em nosso site são protegidas por tecnologia de criptografia SSL/TLS, que assegura que seus dados pessoais e informações de pagamento trafeguem de forma segura, sem risco de interceptação. Isso significa que ninguém além da nossa equipe autorizada terá acesso a esses dados.<br>Seus dados são armazenados em ambientes controlados, com acesso restrito, e utilizamos práticas de segurança que ajudam a prevenir acessos indevidos. Trabalhamos com atenção contínua à integridade e à confidencialidade das suas informações.<br>Também somos comprometidos com a sua privacidade: não compartilhamos suas informações com terceiros sem o seu consentimento. Os dados coletados são utilizados apenas para processar pedidos, cumprir obrigações legais e melhorar sua experiência de compra.<br>Oferecemos formas de pagamento confiáveis, operadas por parceiros certificados que seguem padrões reconhecidos de segurança. Além disso, não armazenamos os dados completos do seu cartão de crédito.<br>Caso ocorra qualquer situação que envolva seus dados, nossa equipe estará pronta para agir com agilidade, clareza e respeito, sempre em conformidade com as normas legais vigentes.<br><br>Seus dados<br>Você tem controle sobre seus dados. A qualquer momento, pode:<br><br>• Acessar seus dados armazenados;<br>• Corrigir informações desatualizadas ou incorretas;<br>• Retirar seu consentimento para o uso de informações;<br>• Solicitar a exclusão dos dados quando possível.<br>Essa solicitação deverá ser direcionada ao e-mail: </span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"mailto:sac@ferragensfloresta.com.br\"><span>sac@ferragensfloresta.com.br</span></a><span>.<br>As solicitações relacionadas ao tratamento de dados pessoais serão respondidas em até 15 dias úteis.<br><br>Exceções: Alguns dados pessoais, especialmente os vinculados a obrigações fiscais e tributárias, não podem ser excluídos imediatamente, conforme previsto pela LGPD (Art. 16, Inciso I). Por exemplo, dados de notas fiscais e registros de transações comerciais são mantidos pelo prazo determinado pelos órgãos fiscais competentes.<br><br>Uso de Cookies<br>Usamos cookies para melhorar sua navegação, personalizar conteúdo e analisar tráfego. Você pode configurar seu navegador para bloquear cookies, mas isso pode afetar algumas funcionalidades do site.<br><br>Fale Conosco<br>Em caso de dúvidas sobre sua privacidade, estamos à disposição para ajudar. Basta enviar um e-mail para </span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"mailto:sac@ferragensfloresta.com.br\"><span>sac@ferragensfloresta.com.br</span></a><span>.<br><br>Mudanças na política<br>Essa política pode ser alterada a qualquer momento, independente qualquer notificação ou aviso prévio.</span></p>",
+        "description2": "<p></p>"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Footer"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}

@@ -1,0 +1,45 @@
+{
+  "name": "Garantia, troca e devolução",
+  "path": "/garantia-troca-e-devolucao",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Header With Menus"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Institucional/BannerInstitucional.tsx",
+        "images": {
+          "mobile": "https://assets.decocache.com/ffloresta/4956871d-d653-403d-8b72-072b1ac8a744/companypageconfiguration_960f5ba2-d244-45bd-8091-d32f4f10ffd0-1-(1).png",
+          "desktop": "https://assets.decocache.com/ffloresta/1256f0c5-792f-4bc9-b6a0-b3f29078c645/companypageconfiguration_960f5ba2-d244-45bd-8091-d32f4f10ffd0-1.png"
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Institucional/NossaHistoria.tsx",
+        "images": {
+          "mobile": "https://assets.decocache.com/ffloresta/65793bb0-d150-4261-91ad-61d1ebf6d4ba/maxresdefault-(1)-1.png",
+          "desktop": "https://assets.decocache.com/ffloresta/65793bb0-d150-4261-91ad-61d1ebf6d4ba/maxresdefault-(1)-1.png"
+        },
+        "title": "Garantia, troca e devolução",
+        "description": "<p>Caso tenha qualquer dúvida ou precise de assistência adicional, não hesite em nos contatar. Estamos aqui para ajudar!</p><p>A Ferragens Floresta quer tornar a sua experiência em satisfatória de ponta a ponta – desde a escolha de produtos, passando pelo ato da compra até chegar ao recebimento. E não vamos deixar você desamparado em momento algum desse processo. Você teve algum problema com a sua encomenda, com o produto adquirido em nosso site?</p><p>Faça o processo de troca/devolução de forma simples e rápida ou entre em contato conosco imediatamente.<br>Problemas podem acontecer. Por isso, já listamos, aqui abaixo, situações que podem vir a ocorrer em uma eventualidade. Veja se é o seu caso e saiba como você deve proceder.</p><p>Garantia</p><p>Se algum item que você adquiriu com a Ferragens Floresta e apresentar defeito técnico ou de fabricação, saiba que você tem até 90 (noventa) dias para abrir uma reclamação, como assegura o artigo 26 do Código de Defesa do Consumidor – que também vale para compras feitas pela internet. E ressaltamos: o prazo passa a valer a partir da entrega efetiva do produto.</p><p>Identificado o defeito, entre em contato com a nossa central de atendimento, que nós vamos te orientar a resolver o problema, seja por mecanismos próprios ou acionando uma assistência técnica autorizada pelo fabricante do item adquirido.</p><p>Ressaltamos que o ideal é sempre verificar o produto durante o recebimento, de forma imediata. Se o transporte causou alguma avaria ao material adquirido, se algum item adicionado ao carrinho não estiver junto do volume entregue ou mesmo se a embalagem da mercadoria estiver de alguma forma violada, recomendamos que você se recuse a assinar o comprovante de recebimento e acione a Ferragens Floresta imediatamente.</p><p>Troca</p><p>O produto chegou e não era o que você queria? Que mancada! Recuse a entrega e nos acione por um de nossos canais de relacionamento.</p><p>Sempre confira o produto assim que o volume for entregue – isso agiliza o processo. Se o engano só for percebido depois de já recebida a entrega, não remova os lacres originais da peça e nos notifique do problema.</p><p>O produto correto vai ser encaminhado assim que chegar o item enviado por engano. Se a peça escolhida não estiver disponível em nosso estoque, você terá a opção de fazer uma outra compra de mesmo valor em nossa loja ou mesmo reaver o dinheiro que pagou pelo que não recebeu.</p><p>Troca por avaria</p><p>As trocas e os cancelamentos de compras serão realizados após análise da Ferragens Floresta . O envio de um novo produto, a restituição do valor pago ou a abertura de crédito para outra compra futura serão garantidos a todos os casos em que o item recebido de volta esteja dentro dessas especificações:</p><ul><li><p>O produto deve estar na embalagem original;</p></li><li><p>O produto não pode apresentar indícios de avaria por mau uso;</p></li><li><p>O produto precisa voltar com a nota fiscal emitida;</p></li><li><p>O produto tem que vir com todos os acessórios de origem;</p></li><li><p>O produto deve retornar com o manual de instrução, caso haja.</p></li></ul><p>Se alguma dessas obrigatoriedades não for respeitada, a Ferragens Floresta se resguarda ao direito de negar a troca ou o cancelamento de compra, reencaminhando mais uma vez o mesmo item para o cliente.</p><p>Da mesma forma, se todos os parâmetros forem cumpridos, nós nos responsabilizamos por cancelar a compra ou por trocar o produto original em até 30 (trinta) dias úteis, contados a partir da confirmação dada ao consumidor.</p><p>Devolução</p><p>Chegou a mercadoria e a sua vida mudou nesse meio tempo? Não se preocupe: o Código de Defesa do Consumidor e a Ferragens Floresta garantem que você tem até 7 (sete) dias – a contar do recebimento do produto – para desistir dessa compra.</p><p>Se isso acontecer, você tem o direito de devolver o que comprou e receber o valor da compra totalmente restituído ou receber o mesmo valor em crédito na loja virtual para compras futuras.</p><p>A restituição do dinheiro para o caso de compra feita por boleto bancário vai acontecer em até 10 (dez) dias úteis(mediante a e-mail informando os dados do cliente), em sua conta corrente. Para compras feitas com o cartão de crédito, o lançamento do débito vai ser simplesmente cancelado; se ele já tiver sido cobrado, faremos a restituição das parcelas já pagas – o que pode ocorrer em até 2 (duas) faturas subsequentes, procedimento padrão das administradoras de cartão.</p><p>Cancelamento de pedidos</p><p>Ops, tivemos um imprevisto! Ferragens Floresta torce para que isso não aconteça, mas precisamos fazer o alerta: nós resguardamos o direito de cancelar compras feitas pelo site, em algumas circunstâncias. Isso pode acontecer em três situações, que listamos abaixo:</p><ul><li><p>Dados inconsistentes ou ausentes: se o cadastro do cliente estiver inadequado, não teremos condições de fazer o envio da mercadoria e cancelaremos a compra.</p></li></ul><p>Ressaltamos que o cliente ainda será informado da situação para tentarmos garantir a compra e a entrega dos produtos adquiridos no site; o cancelamento só será feito em última instância.<br></p><ul><li><p>Boleto bancário sem pagamento: o vencimento que consta no boleto precisa ser respeitado. Se o boleto não estiver pago até a data limite, a compra será automaticamente cancelada. Isso não impede, todavia, que o cliente refaça a compra em nosso site e gere outro boleto com data futura para pagamento – procedimento que recomendamos ser feito, no caso deste imprevisto.</p></li><li><p>Compra no cartão reprovada: se a administradora do seu cartão de crédito não aprovar a compra a ser realizada em nosso site, o pedido também vai ser cancelado de forma automática. Se isso acontecer, avalie a alternativa de escolher outra forma de pagamento para chegarmos até você com nossa linha de produtos.</p></li></ul><p><strong><br></strong></p>",
+        "description2": "<p></p>"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Footer"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}
