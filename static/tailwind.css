@@ -4165,6 +4165,9 @@ details.collapse summary::-webkit-details-marker {
 .min-w-\[50\%\] {
   min-width: 50%;
 }
+.min-w-\[80\%\] {
+  min-width: 80%;
+}
 .min-w-\[calc\(50\%-6px\)\] {
   min-width: calc(50% - 6px);
 }
@@ -4328,6 +4331,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .resize {
   resize: both;
+}
+.snap-start {
+  scroll-snap-align: start;
 }
 .snap-center {
   scroll-snap-align: center;
