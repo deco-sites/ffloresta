@@ -1,3 +1,4 @@
+// SearchResult.tsx
 import type { ProductListingPage } from "apps/commerce/types.ts";
 import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
 import ProductCard from "../../components/product/ProductCard.tsx";
@@ -23,10 +24,6 @@ export interface Props {
   layout?: Layout;
   startingPage?: 0 | 1;
   partial?: "hideMore" | "hideLess";
-  /**
-   * @title Banner image
-   * @description Banner image displayed above the filters on desktop
-   */
   bannerImage?: ImageWidget;
 }
 
@@ -105,12 +102,12 @@ function PageResult(props: SectionProps<typeof loader>) {
             product={product}
             preload={index === 0}
             index={offset + index}
-            class="h-full min-w-[160px] max-w-[300px]"
+            class="h-full w-[98%] shadow-[5.62px_5.62px_7.03px_0px_rgba(0,0,0,0.15)]"
           />
         ))}
       </div>
 
-      <div class={clx("pt-2 sm:pt-10 w-full", "")}>
+      <div class={clx("pt-2 sm:pt-10 w-full")}>
         {infinite
           ? (
             <div class="flex justify-center [&_section]:contents">
@@ -242,7 +239,10 @@ function Result(props: SectionProps<typeof loader>) {
                         <h1 class="px-4 py-3">
                           <span class="font-medium text-2xl">Filtro</span>
                         </h1>
-                        <label class="btn btn-ghost" for={controls}>
+                        <label
+                          class="btn btn-ghost cursor-pointer"
+                          for={controls}
+                        >
                           <Icon id="close" />
                         </label>
                       </div>
@@ -255,23 +255,21 @@ function Result(props: SectionProps<typeof loader>) {
                   <div class="flex sm:hidden flex-col items-start">
                     <div class="flex">{results}</div>
                     <div class="w-full flex justify-between items-center gap-4 mt-5">
-                      <div class="flex max-w-1/2 w-full">{sortBy}</div>
                       <div class="flex max-w-1/2 w-full">
                         <label
-                          class="w-full h-9 min-h9 max-h-9 p-0 rounded-none flex items-center justify-center gap-2 bg-[#c6cfba] text-[#323f2d] text-sm font-bold uppercase"
+                          class="cursor-pointer w-full h-9 min-h9 max-h-9 p-0 rounded-none flex items-center justify-center gap-2 bg-[#c6cfba] text-[#323f2d] text-sm font-bold uppercase"
                           for={controls}
                         >
                           <svg
-                            class="w-4 h-4"
-                            width="16px"
-                            height="16px"
+                            width="24"
+                            height="24"
                             viewBox="0 0 24 24"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
-                              d="M20 5.6c0-.56 0-.84-.11-1.05a1 1 0 0 0-.44-.45c-.21-.11-.49-.11-1.05-.11H5.6c-.56 0-.84 0-1.05.11a1 1 0 0 0-.45.44c-.11.21-.11.49-.11 1.05V6.34c0 .24 0 .36.03.48a.99.99 0 0 0 .12.27c.07.1.16.19.33.36l5.06 5.06c.17.17.26.26.33.36.07.1.12.22.15.34.03.12.03.24.03.48v4.75c0 .86 0 1.29.18 1.56.16.22.4.38.67.42.3.05.67-.14 1.44-.52l.8-.4c.31-.15.47-.23.57-.33.1-.1.18-.22.23-.36.05-.16.05-.35.05-.7V13.66c0-.24 0-.36.03-.48a.99.99 0 0 0 .12-.27c.07-.1.16-.19.33-.36l5.06-5.06c.17-.17.26-.26.33-.36a.99.99 0 0 0 .12-.27c.03-.12.03-.24.03-.48V5.6Z"
-                              stroke="#323f2d"
+                              d="M21 4H14M10 4H3M21 12H12M8 12H3M21 20H16M12 20H3M14 2V6M8 10V14M16 18V22"
+                              stroke="#3A4332"
                               stroke-width="2"
                               stroke-linecap="round"
                               stroke-linejoin="round"
@@ -280,6 +278,7 @@ function Result(props: SectionProps<typeof loader>) {
                           Filtro
                         </label>
                       </div>
+                      <div class="flex max-w-1/2 w-full">{sortBy}</div>
                     </div>
                   </div>
                 </Drawer>

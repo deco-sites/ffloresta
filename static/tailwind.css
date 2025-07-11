@@ -4084,6 +4084,9 @@ details.collapse summary::-webkit-details-marker {
 .w-\[57px\] {
   width: 57px;
 }
+.w-\[98\%\] {
+  width: 98%;
+}
 .w-\[calc\(100\%-12px\)\] {
   width: calc(100% - 12px);
 }
@@ -4911,10 +4914,6 @@ details.collapse summary::-webkit-details-marker {
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
-}
-.px-16 {
-  padding-left: 4rem;
-  padding-right: 4rem;
 }
 .px-2 {
   padding-left: 0.5rem;
@@ -6515,11 +6514,6 @@ input[type="checkbox"]:checked::after {
 
   .md\:overflow-auto {
     overflow: auto;
-  }
-
-  .md\:px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
   }
 
   .md\:px-\[60px\] {

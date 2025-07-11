@@ -25,7 +25,7 @@ function ProductDescription({
       <div class="w-full h-12 bg-[#96A27E]"></div>
 
       {/* Container principal */}
-      <div class="container mx-auto px-16 py-9 md:px-4 md:py-10">
+      <div class="container mx-auto px-4 py-9 md:py-10">
         {/* Tabs */}
         <div class="flex overflow-x-auto gap-8 md:gap-4">
           {tabs.map((tab) => (
