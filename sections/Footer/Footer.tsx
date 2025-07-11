@@ -126,7 +126,7 @@ function Footer({
                     key={title + index}
                     class="flex flex-col gap-[12px]"
                   >
-                    <summary class="font-normal text-[16px] uppercase text-[#353535] cursor-pointer flex justify-between items-center min-h-[48px]">
+                    <summary class="font-normal text-[16px]  text-[#353535] cursor-pointer flex justify-between items-center min-h-[48px]">
                       <span>{title}</span>
 
                       <span class="transform transition-transform duration-300">
@@ -151,7 +151,7 @@ function Footer({
                       {itens.map(({ title, href }, idx) => (
                         <a
                           key={title + idx}
-                          class="font-normal text-[14px] uppercase text-[#353535]"
+                          class="font-normal text-[14px]  text-[#353535]"
                           href={href}
                         >
                           {title}
@@ -166,7 +166,7 @@ function Footer({
               <div class="grid grid-flow-row sm:grid-flow-col gap-6">
                 {links.map(({ title, itens }, index) => (
                   <div key={title + index} class="flex flex-col gap-[18px]">
-                    <div class="font-normal text-[22px] uppercase text-[#353535]">
+                    <div class="font-normal text-[22px]  text-[#353535]">
                       <p>{title}</p>
                       <hr class="w-full max-w-[75px] h-1 bg-[#273D28] rounded-sm" />
                     </div>
@@ -174,7 +174,7 @@ function Footer({
                       {itens.map(({ title, href }, idx) => (
                         <a
                           key={title + idx}
-                          class="font-normal text-[20px] uppercase text-[#353535]"
+                          class="font-normal text-[20px]  text-[#353535]"
                           href={href}
                         >
                           {title}
@@ -187,11 +187,11 @@ function Footer({
             )}
 
           <div class="flex flex-col sm:flex-row gap-12 justify-between items-start">
-            <div class="">
+            <div class="w-full">
               {social.map(({ title, itens }, index) => (
-                <div key={title + index}>
+                <div class="w-full" key={title + index}>
                   <div
-                    class={`font-normal text-[16px] lg:text-[22px] uppercase text-[#353535]`}
+                    class={`font-normal text-[16px] lg:text-[22px]  text-[#353535]`}
                   >
                     <p>{title}</p>
                     {device === "mobile"
@@ -202,10 +202,13 @@ function Footer({
                         <hr class="w-full max-w-[75px] h-1 bg-[#273D28] rounded-sm" />
                       )}
                   </div>
-                  <div class="flex flex-col gap-[15px] max-w-[159px] lg:max-w-[210px] mt-[20px]">
+                  <div class="flex items-center  lg:flex-col gap-[15px]  lg:max-w-[210px] mt-[20px]">
                     {/* Primeira imagem (índice 0) */}
                     {itens.length > 0 && (
-                      <a href={itens[0].href} class="w-full">
+                      <a
+                        href={itens[0].href}
+                        class="w-full max-w-[50%] min-w-[50%]"
+                      >
                         <Image
                           src={itens[0].image}
                           alt={itens[0].alt}
@@ -242,7 +245,7 @@ function Footer({
             <div class="flex flex-wrap gap-2">
               {paymentMethods.map(({ title, payments }, index) => (
                 <div key={title + index}>
-                  <div class="font-normal text-[16px] lg:text-[22px] uppercase text-[#353535]">
+                  <div class="font-normal text-[16px] lg:text-[22px]  text-[#353535]">
                     <p>{title}</p>
                     {device === "mobile"
                       ? (

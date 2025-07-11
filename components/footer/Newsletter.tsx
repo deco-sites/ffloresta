@@ -48,7 +48,7 @@ function Newsletter() {
       <div class="w-full flex justify-center bg-[#94A57D] pb-[30px] pt-[30px] p-5">
         <div class="flex flex-col max-w-[506px] lg:max-w-[738px] ">
           <p class="text-[20px] lg:text-[22px] text-[#ffffff] text-center font-normal mb-[20px]">
-            RECEBA DESCONTOS E NOVIDADES DIRETAMENTE NO SEU E-MAIL
+            Receba descontos e novidades diretamente no seu e-mail
           </p>
           <div class="space-y-4">
             <div class="flex flex-col lg:flex-row w-full gap-2 lg:items-end  items-center">
@@ -57,7 +57,7 @@ function Newsletter() {
                   class="block text-[16px] font-normal text-[#ffffff] mb-1"
                   for="name"
                 >
-                  INFORME SEU NOME
+                  Informe seu nome
                 </label>
                 <input
                   type="text"
@@ -73,7 +73,7 @@ function Newsletter() {
                   class="block text-[16px] font-normal text-[#ffffff] mb-1"
                   for="email"
                 >
-                  INFORME SEU EMAIL
+                  Informe seu e-mail
                 </label>
                 <input
                   type="email"
@@ -89,7 +89,7 @@ function Newsletter() {
                 onClick={handleSubmit}
                 class="w-full text-[12px] text-white py-2 max-h-[36px] max-w-[210px] lg:max-w-[100px] bg-[#4B5941] flex justify-center items-center"
               >
-                CADASTRAR
+                Cadastrar
               </button>
             </div>
 
@@ -102,10 +102,10 @@ function Newsletter() {
               />
               <p class="text-[12px] text-white">
                 {" "}
-                AO SE CADASTRAR VOCÊ IRÁ CONCORDAR COM A NOSSA POLÍTICA DE
-                PRIVACIDADE E PODERÁ ALTERAR OU CANCELAR A NEWSLETTER A QUALQUER
-                MOMENTO QUE VOCÊ DESEJAR. AQUI VOCÊ ECONOMIZA NAS SUAS COMPRAS E
-                NÃO RECEBE SPAM
+                Ao se cadastrar você irá concordar com a nossa política de
+                privacidade e poderá alterar ou cancelar a newsletter a qualquer
+                momento que você desejar. Aqui você economiza nas suas compras e
+                não recebe spam
               </p>
             </label>
 

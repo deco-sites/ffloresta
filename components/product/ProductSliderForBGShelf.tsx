@@ -31,7 +31,7 @@ function ProductSliderForBGShelf({ products, itemListName }: Props) {
                 // Desktop: 4 items
                 "lg:w-[calc(25%-18px)]",
                 // Large desktop: 5 items
-                "xl:w-[calc(20%-19.2px)]"
+                "xl:w-[calc(20%-19.2px)]",
               )}
             >
               <ProductCard

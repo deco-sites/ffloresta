@@ -32,10 +32,9 @@ export default function TabbedProductShelf({
   icon,
   headerBanner,
 }: Props) {
-  const ti =
-    typeof tabIndex === "number"
-      ? Math.min(Math.max(tabIndex, 0), tabs.length)
-      : 0;
+  const ti = typeof tabIndex === "number"
+    ? Math.min(Math.max(tabIndex, 0), tabs.length)
+    : 0;
   const { products } = tabs[ti];
   const viewItemListEvent = useSendEvent({
     on: "view",
@@ -43,14 +42,13 @@ export default function TabbedProductShelf({
       name: "view_item_list",
       params: {
         item_list_name: title,
-        items:
-          products?.map((product, index) =>
-            mapProductToAnalyticsItem({
-              index,
-              product,
-              ...useOffer(product.offers),
-            })
-          ) ?? [],
+        items: products?.map((product, index) =>
+          mapProductToAnalyticsItem({
+            index,
+            product,
+            ...useOffer(product.offers),
+          })
+        ) ?? [],
       },
     },
   });
@@ -64,11 +62,13 @@ export default function TabbedProductShelf({
       />
 
       <Section.Tabbed>
-        {!products?.length ? (
-          <div class="flex justify-center items-center">No Products found</div>
-        ) : (
-          <ProductSlider products={products} itemListName={title} />
-        )}
+        {!products?.length
+          ? (
+            <div class="flex justify-center items-center">
+              No Products found
+            </div>
+          )
+          : <ProductSlider products={products} itemListName={title} />}
       </Section.Tabbed>
     </Section.Container>
   );

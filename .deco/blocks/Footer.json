@@ -3,44 +3,44 @@
   "logo": "https://assets.decocache.com/ffloresta/dafa5589-391c-4cab-8c8d-61078bba18ee/floresta-logo-verde.svg",
   "links": [
     {
-      "title": "SOBRE A FLORESTA",
+      "title": "Sobre a Floresta",
       "itens": [
         {
-          "title": "NOSSA HISTÓRIA",
+          "title": "Nossa História",
           "href": "/nossa-historia"
         },
         {
-          "title": "NOSSA MISSÃO, VISÃO E VALORES",
+          "title": "Nossa Missão, Visão e Valores",
           "href": "#"
         },
         {
-          "title": "POLÍTICA DE PRIVACIDADE",
+          "title": "Política de Privacidade",
           "href": "/"
         }
       ],
       "href": "/"
     },
     {
-      "title": "SUA CONTA",
+      "title": "Sua Conta",
       "itens": [
         {
-          "title": "MINHA CONTA",
+          "title": "Minha Conta",
           "href": "#"
         },
         {
-          "title": "MEUS PEDIDOS",
+          "title": "Meus Pedidos",
           "href": "#"
         },
         {
-          "title": "MEUS FAVORITOS",
+          "title": "Meus Favoritos",
           "href": "#"
         },
         {
-          "title": "GARANTIA",
+          "title": "Garantia",
           "href": "/"
         },
         {
-          "title": "TROCA E DEVOLUÇÃO",
+          "title": "Troca e Devolução",
           "href": "/"
         }
       ],
@@ -120,39 +120,39 @@
     }
   ],
   "lojas": {
-    "title": "CONHEÇA NOSSAS LOJAS",
+    "title": "Conheça Nossas Lojas",
     "lojas": [
       {
-        "title": "PINHEIROS",
-        "tuor": "TOUR 360°",
+        "title": "Pinheiros",
+        "tuor": "Tour 360°",
         "end": "R. Pais Leme, 238 - Pinheiros, São Paulo - SP, 05424-010",
         "tel": "(11) 30936122",
-        "horario": "DE SEGUNDA A SEXTA DAS 8H ÀS 17H SÁBADO DAS 9H ÀS 13H"
+        "horario": "De Segunda a Sexta das 8H ÀS 17H Sábado das 9H ÀS 13H"
       },
       {
-        "title": "BRÁS",
-        "tuor": "TOUR 360°",
+        "title": "Brás",
+        "tuor": "Tour 360°",
         "end": "Rua do Gasômetro, 281 - Brás, São Paulo - SP, 03004-001",
         "tel": "(11) 2039-0333",
-        "horario": "DE SEGUNDA A SEXTA DAS 8H ÀS 17H SÁBADO DAS 9H ÀS 13H"
+        "horario": "De Segunda a Sexta das 8H ÀS 17H Sábado das 9H ÀS 13H"
       },
       {
-        "title": "SANTO ANDRÉ",
-        "tuor": "TOUR 360°",
+        "title": "Santo André",
+        "tuor": "Tour 360°",
         "end": "Av. Artur de Queirós, 592 - Casa Branca, Santo André - SP, 09015-510",
         "tel": "(11) 5555-9940",
-        "horario": "DE SEGUNDA A SEXTA DAS 8H ÀS 17H SÁBADO DAS 9H ÀS 13H"
+        "horario": "De Segunda a Sexta das 8H ÀS 17H Sábado das 9H ÀS 13H"
       },
       {
-        "title": "CAMPINAS",
-        "tuor": "TOUR 360°",
+        "title": "Campinas",
+        "tuor": "Tour 360°",
         "end": "R. São Luís do Paraitinga, 53 - Jardim do Trevo, Campinas - SP, 13030-105",
         "tel": "(19) 3995-0299",
-        "horario": "DE SEGUNDA A SEXTA DAS 8H ÀS 17H SÁBADO DAS 9H ÀS 13H"
+        "horario": "De Segunda a Sexta das 8H ÀS 17H Sábado das 9H ÀS 13H"
       }
     ],
     "verMais": "/"
   },
-  "trademark": "FERRAGENS FLORESTA LTDA - CNPJ: 21.009.346/0001-20 [RUA PAIS LEME, 238 - PINHEIROS, SÃO PAULO - SP, CEP 05424-010",
+  "trademark": "Ferragens Floresta LTDA - CNPJ: 21.009.346/0001-20 [RUA PAIS LEME, 238 - PINHEIROS, SÃO PAULO - SP, CEP 05424-010",
   "policies": []
 }

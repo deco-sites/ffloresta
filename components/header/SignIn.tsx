@@ -25,7 +25,7 @@ function SignIn({ variant }: { variant: "mobile" | "desktop" }) {
     <div id={id}>
       <a
         class={clx(
-          "flex items-center justify-center font-['FS_Emeric'] font-normal text-[16.87px] leading-none text-white uppercase",
+          "flex items-center justify-center font-['FS_Emeric'] font-normal text-[16.87px] leading-none text-white",
           variant === "mobile" ? "gap-3.5" : "gap-[14px]",
         )}
         href="/login"
@@ -52,11 +52,11 @@ function SignIn({ variant }: { variant: "mobile" | "desktop" }) {
           />
         </svg>
 
-        <span class="text-[#1F251C] lg:text-white">FAZER LOGIN</span>
+        <span class="text-[#1F251C] lg:text-white">Fazer Login</span>
       </a>
       <a
         class={clx(
-          "hidden flex items-center justify-center font-['FS_Emeric'] font-normal text-[16.87px] leading-none text-white uppercase",
+          "hidden flex items-center justify-center font-['FS_Emeric'] font-normal text-[16.87px] leading-none text-white",
           variant === "mobile" ? "gap-3.5" : "gap-[14px]",
         )}
         href="/account"
@@ -83,7 +83,7 @@ function SignIn({ variant }: { variant: "mobile" | "desktop" }) {
           />
         </svg>
 
-        <span class="text-[#1F251C] lg:text-white">MINHA CONTA</span>
+        <span class="text-[#1F251C] lg:text-white">Minha Conta</span>
       </a>
       <script
         type="module"

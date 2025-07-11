@@ -70,7 +70,7 @@ function CategoryGrid({ title, cta, items, showArrows = true, icon }: Props) {
                 // Tablet: 3 itens
                 "md:w-[calc(33.333%-16px)]",
                 // Desktop: 6 itens (16.666% de largura)
-                "lg:w-[calc(16.666%-20px)]"
+                "lg:w-[calc(16.666%-20px)]",
                 // Removi o xl:w-[calc(20%-20px)] para manter apenas 6 itens em desktop
               )}
             >

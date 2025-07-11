@@ -43,7 +43,7 @@ function Bag() {
             />
           </svg>
           <span class="hidden md:block font-['FS_Emeric'] text-white">
-            CARRINHO
+            Carrinho
           </span>
         </span>
       </label>

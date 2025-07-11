@@ -68,7 +68,7 @@ function BrandGrid({ title, cta, items, showArrows = true, icon }: Props) {
                 // Tablet: 3 itens (640px ou mais)
                 "min-[640px]:w-[calc(33.333%-16px)]",
                 // Desktop: ajuste responsivo para garantir pelo menos 3 itens
-                "lg:w-[calc(33.333%-20px)]"
+                "lg:w-[calc(33.333%-20px)]",
               )}
             >
               <Card {...i} />

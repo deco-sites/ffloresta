@@ -4159,6 +4159,9 @@ details.collapse summary::-webkit-details-marker {
 .min-w-\[4px\] {
   min-width: 4px;
 }
+.min-w-\[50\%\] {
+  min-width: 50%;
+}
 .min-w-\[calc\(50\%-6px\)\] {
   min-width: calc(50% - 6px);
 }
@@ -4183,9 +4186,6 @@ details.collapse summary::-webkit-details-marker {
 }
 .max-w-\[139px\] {
   max-width: 139px;
-}
-.max-w-\[159px\] {
-  max-width: 159px;
 }
 .max-w-\[180px\] {
   max-width: 180px;
@@ -4231,6 +4231,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .max-w-\[480px\] {
   max-width: 480px;
+}
+.max-w-\[50\%\] {
+  max-width: 50%;
 }
 .max-w-\[506px\] {
   max-width: 506px;
@@ -6752,6 +6755,10 @@ input[type="checkbox"]:checked::after {
 
   .lg\:flex-row-reverse {
     flex-direction: row-reverse;
+  }
+
+  .lg\:flex-col {
+    flex-direction: column;
   }
 
   .lg\:items-start {
