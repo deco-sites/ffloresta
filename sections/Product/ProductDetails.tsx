@@ -44,11 +44,7 @@ export default function ProductDetails({ page, productBanner }: Props) {
         <div class="w-full flex flex-col">
           {productBanner && (
             <div class="block lg:hidden">
-              <img
-                src={productBanner?.src}
-                alt={productBanner?.alt}
-                class="w-full"
-              />
+              <img src={productBanner} alt={page.productName} class="w-full" />
             </div>
           )}
           <ImageGallerySlider page={page} />
@@ -56,11 +52,7 @@ export default function ProductDetails({ page, productBanner }: Props) {
         <div class="">
           {productBanner && (
             <div class="hidden lg:block">
-              <img
-                src={productBanner?.src}
-                alt={productBanner?.alt}
-                class="w-full"
-              />
+              <img src={productBanner} alt={page.productName} class="w-full" />
             </div>
           )}
           <ProductInfo page={page} />
