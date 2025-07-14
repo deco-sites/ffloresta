@@ -33,7 +33,11 @@ export default function ProductDetails({ page, productBanner }: Props) {
   return (
     <div class="w-full flex flex-col">
       {/* <Breadcrumb itemListElement={page.breadcrumbList.itemListElement} /> */}
-
+      {productBanner && (
+        <div class="block lg:hidden">
+          <img src={productBanner} alt={page.productName} class="w-full" />
+        </div>
+      )}
       <div
         class={clx(
           "container grid md:mt-16",
@@ -42,16 +46,11 @@ export default function ProductDetails({ page, productBanner }: Props) {
         )}
       >
         <div class="w-full flex flex-col">
-          {productBanner && (
-            <div class="block lg:hidden">
-              <img src={productBanner} alt={page.productName} class="w-full" />
-            </div>
-          )}
           <ImageGallerySlider page={page} />
         </div>
         <div class="">
           {productBanner && (
-            <div class="hidden lg:block">
+            <div class="hidden lg:block mb-5">
               <img src={productBanner} alt={page.productName} class="w-full" />
             </div>
           )}
