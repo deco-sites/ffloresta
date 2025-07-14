@@ -35,7 +35,8 @@
           "includeOriginalAttributes": []
         },
         "indexingSkus": true
-      }
+      },
+      "productBanner": "https://assets.decocache.com/ffloresta/fa0192ac-8204-4c26-885f-4b5ee9592926/Mask-group.png"
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
