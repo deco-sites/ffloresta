@@ -26,9 +26,9 @@ function SubMenuItem({ item }: { item: SiteNavigationElement }) {
   const hasThirdLevel = item.children && item.children.length > 0;
 
   return hasThirdLevel ? (
-    <div class="collapse collapse-plus rounded-none">
-      <input type="checkbox" class="peer" />
-      <div class="collapse-title text-white text-[14px] font-['FS_Emeric'] px-0 py-3 min-h-[unset]">
+    <div class="collapse collapse-plus rounded-none min-h-[unset] h-fit">
+      <input type="checkbox" class="peer min-h-[unset] h-fit" />
+      <div class="collapse-title text-white text-[14px] font-['FS_Emeric'] px-0 py-3 min-h-[unset] h-fit">
         {item.name}
       </div>
       <div class="collapse-content bg-transparent">
