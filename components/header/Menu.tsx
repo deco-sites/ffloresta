@@ -25,26 +25,24 @@ function ThirdLevelMenu({ items }: { items: SiteNavigationElement[] }) {
 function SubMenuItem({ item }: { item: SiteNavigationElement }) {
   const hasThirdLevel = item.children && item.children.length > 0;
 
-  return hasThirdLevel
-    ? (
-      <div class="collapse collapse-plus rounded-none">
-        <input type="checkbox" class="peer" />
-        <div class="collapse-title text-white text-[14px] font-['FS_Emeric']">
-          {item.name}
-        </div>
-        <div class="collapse-content bg-transparent">
-          <ThirdLevelMenu items={item.children!} />
-        </div>
-      </div>
-    )
-    : (
-      <a
-        href={item.url}
-        class="block py-3 font-['FS_Emeric'] text-[14px] text-white bg-transparent"
-      >
+  return hasThirdLevel ? (
+    <div class="collapse collapse-plus rounded-none">
+      <input type="checkbox" class="peer" />
+      <div class="collapse-title text-white text-[14px] font-['FS_Emeric'] px-0">
         {item.name}
-      </a>
-    );
+      </div>
+      <div class="collapse-content bg-transparent">
+        <ThirdLevelMenu items={item.children!} />
+      </div>
+    </div>
+  ) : (
+    <a
+      href={item.url}
+      class="block py-3 font-['FS_Emeric'] text-[14px] text-white bg-transparent"
+    >
+      {item.name}
+    </a>
+  );
 }
 
 function MenuItem({ item }: { item: SiteNavigationElement }) {
