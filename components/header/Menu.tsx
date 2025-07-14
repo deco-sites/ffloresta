@@ -28,7 +28,7 @@ function SubMenuItem({ item }: { item: SiteNavigationElement }) {
   return hasThirdLevel ? (
     <div class="collapse collapse-plus rounded-none">
       <input type="checkbox" class="peer" />
-      <div class="collapse-title text-white text-[14px] font-['FS_Emeric'] px-0">
+      <div class="collapse-title text-white text-[14px] font-['FS_Emeric'] px-0 py-3">
         {item.name}
       </div>
       <div class="collapse-content bg-transparent">
