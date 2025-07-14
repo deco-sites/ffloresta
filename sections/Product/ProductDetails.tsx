@@ -7,16 +7,13 @@ import { clx } from "../../sdk/clx.ts";
 import ProductDescription from "../../islands/ProductDescription.tsx";
 import type { ImageWidget } from "apps/admin/widgets.ts";
 
-interface CustomProductDetailsPage extends ProductDetailsPage {
+export interface Props {
+  /** @title Integration */
+  page: ProductDetailsPage | null;
   productBanner?: ImageWidget;
 }
 
-export interface Props {
-  /** @title Integration */
-  page: CustomProductDetailsPage | null;
-}
-
-export default function ProductDetails({ page }: Props) {
+export default function ProductDetails({ page, productBanner }: Props) {
   /**
    * Rendered when a not found is returned by any of the loaders run on this page
    */
@@ -45,11 +42,11 @@ export default function ProductDetails({ page }: Props) {
         )}
       >
         <div class="w-full flex flex-col">
-          {page.productBanner && (
+          {productBanner && (
             <div class="block lg:hidden">
               <img
-                src={page.productBanner?.src}
-                alt={page.productBanner?.alt}
+                src={productBanner?.src}
+                alt={productBanner?.alt}
                 class="w-full"
               />
             </div>
@@ -57,11 +54,11 @@ export default function ProductDetails({ page }: Props) {
           <ImageGallerySlider page={page} />
         </div>
         <div class="">
-          {page.productBanner && (
+          {productBanner && (
             <div class="hidden lg:block">
               <img
-                src={page.productBanner?.src}
-                alt={page.productBanner?.alt}
+                src={productBanner?.src}
+                alt={productBanner?.alt}
                 class="w-full"
               />
             </div>
