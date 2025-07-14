@@ -8,12 +8,12 @@ import ProductDescription from "../../islands/ProductDescription.tsx";
 import type { ImageWidget } from "apps/admin/widgets.ts";
 
 interface CustomProductDetailsPage extends ProductDetailsPage {
-  productBanner: ImageWidget;
+  productBanner?: ImageWidget;
 }
 
 export interface Props {
   /** @title Integration */
-  page: ProductDetailsPage | null;
+  page: CustomProductDetailsPage | null;
 }
 
 export default function ProductDetails({ page }: Props) {
@@ -41,27 +41,31 @@ export default function ProductDetails({ page }: Props) {
         class={clx(
           "container grid md:mt-16",
           "grid-cols-1 gap-9 py-0 px-4",
-          "lg:grid-cols-2 lg:gap-11 lg:px-0",
+          "lg:grid-cols-2 lg:gap-11 lg:px-0"
         )}
       >
         <div class="w-full flex flex-col">
-          <div class="block lg:hidden">
-            <img
-              src={page.productBanner?.src}
-              alt={page.productBanner?.alt}
-              class="w-full"
-            />
-          </div>
+          {page.productBanner && (
+            <div class="block lg:hidden">
+              <img
+                src={page.productBanner?.src}
+                alt={page.productBanner?.alt}
+                class="w-full"
+              />
+            </div>
+          )}
           <ImageGallerySlider page={page} />
         </div>
         <div class="">
-          <div class="hidden lg:block">
-            <img
-              src={page.productBanner?.src}
-              alt={page.productBanner?.alt}
-              class="w-full"
-            />
-          </div>
+          {page.productBanner && (
+            <div class="hidden lg:block">
+              <img
+                src={page.productBanner?.src}
+                alt={page.productBanner?.alt}
+                class="w-full"
+              />
+            </div>
+          )}
           <ProductInfo page={page} />
         </div>
       </div>
