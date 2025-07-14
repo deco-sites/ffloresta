@@ -293,7 +293,7 @@ export default function Session({
         aside={
           <Drawer.Aside title="Meu Carrinho" drawer={MINICART_DRAWER_ID}>
             <div
-              class="h-full flex flex-col bg-base-100 items-center justify-center overflow-auto"
+              class="h-full flex flex-col bg-white items-center justify-center overflow-auto"
               style={{
                 minWidth: "calc(min(100vw, 425px))",
                 maxWidth: "425px",

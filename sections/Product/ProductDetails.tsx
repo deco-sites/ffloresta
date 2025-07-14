@@ -5,6 +5,11 @@ import ProductInfo from "../../components/product/ProductInfo.tsx";
 import Section from "../../components/ui/Section.tsx";
 import { clx } from "../../sdk/clx.ts";
 import ProductDescription from "../../islands/ProductDescription.tsx";
+import type { ImageWidget } from "apps/admin/widgets.ts";
+
+interface CustomProductDetailsPage extends ProductDetailsPage {
+  productBanner: ImageWidget;
+}
 
 export interface Props {
   /** @title Integration */
@@ -39,10 +44,24 @@ export default function ProductDetails({ page }: Props) {
           "lg:grid-cols-2 lg:gap-11 lg:px-0",
         )}
       >
-        <div class="">
+        <div class="w-full flex flex-col">
+          <div class="block lg:hidden">
+            <img
+              src={page.productBanner?.src}
+              alt={page.productBanner?.alt}
+              class="w-full"
+            />
+          </div>
           <ImageGallerySlider page={page} />
         </div>
         <div class="">
+          <div class="hidden lg:block">
+            <img
+              src={page.productBanner?.src}
+              alt={page.productBanner?.alt}
+              class="w-full"
+            />
+          </div>
           <ProductInfo page={page} />
         </div>
       </div>

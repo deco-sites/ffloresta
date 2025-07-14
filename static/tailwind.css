@@ -3888,8 +3888,8 @@ details.collapse summary::-webkit-details-marker {
 .h-\[10px\] {
   height: 10px;
 }
-.h-\[146px\] {
-  height: 146px;
+.h-\[154px\] {
+  height: 154px;
 }
 .h-\[15px\] {
   height: 15px;
@@ -4110,9 +4110,6 @@ details.collapse summary::-webkit-details-marker {
 .w-min {
   width: -moz-min-content;
   width: min-content;
-}
-.w-screen {
-  width: 100vw;
 }
 .min-w-0 {
   min-width: 0px;
@@ -4804,10 +4801,6 @@ details.collapse summary::-webkit-details-marker {
 .bg-accent {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-a,oklch(var(--a)/var(--tw-bg-opacity)));
-}
-.bg-base-100 {
-  --tw-bg-opacity: 1;
-  background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
 }
 .bg-base-200 {
   --tw-bg-opacity: 1;
@@ -6793,6 +6786,10 @@ input[type="checkbox"]:checked::after {
 
   .lg\:justify-center {
     justify-content: center;
+  }
+
+  .lg\:justify-between {
+    justify-content: space-between;
   }
 
   .lg\:gap-10 {

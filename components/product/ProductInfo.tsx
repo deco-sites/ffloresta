@@ -85,11 +85,11 @@ function ProductInfo({ page }: Props) {
       <div class="mt-1.5 md:mt-5 flex flex-col gap-0">
         <div class="flex flex-col items-start gap-0">
           {listPrice && (
-            <span class="font-['FS_Emeric'] font-normal text-[20px] leading-[170%] tracking-[3%] text-center text-[#121212] line-through">
+            <span class="font-['FS_Emeric'] font-normal text-[20px] leading-[170%] tracking-[3%] text-left text-[#121212] line-through">
               {formatPrice(listPrice, offers?.priceCurrency)}
             </span>
           )}
-          <span class="font-['FS_Emeric'] font-bold text-[35px] leading-[170%] tracking-[3%] text-center text-[#677357]">
+          <span class="font-['FS_Emeric'] font-bold text-[35px] leading-[170%] tracking-[3%] text-left text-[#677357]">
             {formatPrice(price, offers?.priceCurrency)} à vista
           </span>
         </div>

@@ -81,31 +81,35 @@ export default function BannerMosaicWithMobileSlider({
 
       {/* Desktop layout */}
       <div class="hidden md:block">
-        {enableSlider ? (
-          <Slider
-            class="carousel carousel-center gap-3"
-            snap="snap-start first:ml-6 last:mr-6"
-          >
-            {images?.map((image, index) => (
-              <Slider.Item
-                index={index}
-                class={`carousel-item min-w-[calc(${100 / itemsToShow}% - ${
-                  gap * 2
-                }px)]`}
-              >
-                <MosaicImage image={image} lcp={index < 2} />
-              </Slider.Item>
-            ))}
-          </Slider>
-        ) : (
-          <div class={`flex flex-wrap gap-${gap} justify-center items-stretch`}>
-            {images?.slice(0, itemsToShow).map((image, index) => (
-              <div class={`flex-1 max-w-[${100 / itemsToShow}%]`}>
-                <MosaicImage image={image} lcp={index < 2} />
-              </div>
-            ))}
-          </div>
-        )}
+        {enableSlider
+          ? (
+            <Slider
+              class="carousel carousel-center gap-3"
+              snap="snap-start first:ml-6 last:mr-6"
+            >
+              {images?.map((image, index) => (
+                <Slider.Item
+                  index={index}
+                  class={`carousel-item min-w-[calc(${100 / itemsToShow}% - ${
+                    gap * 2
+                  }px)]`}
+                >
+                  <MosaicImage image={image} lcp={index < 2} />
+                </Slider.Item>
+              ))}
+            </Slider>
+          )
+          : (
+            <div
+              class={`flex flex-wrap gap-${gap} justify-center items-stretch`}
+            >
+              {images?.slice(0, itemsToShow).map((image, index) => (
+                <div class={`flex-1 max-w-[${100 / itemsToShow}%]`}>
+                  <MosaicImage image={image} lcp={index < 2} />
+                </div>
+              ))}
+            </div>
+          )}
       </div>
     </Section>
   );

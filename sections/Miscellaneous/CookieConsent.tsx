@@ -11,10 +11,11 @@ const script = (id: string) => {
     const elem = document.getElementById(id);
     if (consent !== ACCEPTED && elem) {
       const accept = elem.querySelector("[data-button-cc-accept]");
-      accept && accept.addEventListener("click", () => {
-        localStorage.setItem(KEY, ACCEPTED);
-        elem.classList.add(HIDDEN);
-      });
+      accept &&
+        accept.addEventListener("click", () => {
+          localStorage.setItem(KEY, ACCEPTED);
+          elem.classList.add(HIDDEN);
+        });
       const close = elem.querySelector("[data-button-cc-close]");
       close &&
         close.addEventListener("click", () => elem.classList.add(HIDDEN));
@@ -39,34 +40,32 @@ interface Props {
     content?: "Tiled" | "Piled up";
   };
 }
-function CookieConsent(
-  {
-    title = "Cookies",
-    text =
-      "Guardamos estatísticas de visitas para melhorar sua experiência de navegação.",
-    policy = {
-      text: "Saiba mais sobre sobre política de privacidade",
-      link: "/politica-de-privacidade",
-    },
-    buttons = {
-      allowText: "Aceitar",
-      cancelText: "Fechar",
-    },
-  }: Props,
-) {
+function CookieConsent({
+  title = "Cookies",
+  text =
+    "Guardamos estatísticas de visitas para melhorar sua experiência de navegação.",
+  policy = {
+    text: "Saiba mais sobre sobre política de privacidade",
+    link: "/politica-de-privacidade",
+  },
+  buttons = {
+    allowText: "Aceitar",
+    cancelText: "Fechar",
+  },
+}: Props) {
   const id = useId();
   return (
     <>
       <div
         id={id}
         class={clx(
-          "transform-gpu translate-y-[200%] transition fixed bottom-0 w-screen z-50 sm:flex",
+          "transform-gpu translate-y-[200%] transition fixed bottom-0 w-full z-50 sm:flex",
           "sm:bottom-2 sm:justify-cente",
         )}
       >
         <div
           class={clx(
-            "p-4 mx-4 my-2 flex flex-col gap-4 shadow bg-base-100 rounded border border-base-200",
+            "p-4 mx-4 my-2 flex flex-col gap-4 shadow bg-white rounded border border-base-200",
             "sm:flex-row sm:items-end",
           )}
         >

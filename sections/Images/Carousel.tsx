@@ -67,7 +67,7 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
           )}
           {action.label && (
             <button
-              class="btn btn-primary btn-outline border-0 bg-base-100 min-w-[180px]"
+              class="btn btn-primary btn-outline border-0 bg-white min-w-[180px]"
               aria-label={action.label}
             >
               {action.label}
@@ -112,7 +112,7 @@ function Carousel({ images = [], preload, interval }: Props) {
         "grid-rows-[1fr_32px_1fr_42px]",
         "grid-cols-[32px_1fr_32px]",
         "sm:grid-cols-[112px_1fr_42px] sm:min-h-min",
-        "w-full max-w-full overflow-hidden", // Alterado de w-screen para w-full e adicionado overflow-hidden
+        "w-full max-w-full overflow-hidden",
       )}
     >
       <div class="col-span-full row-span-full">

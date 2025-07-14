@@ -56,7 +56,7 @@ type Props = Omit<SectionProps, "alert">;
 
 function Header({ alerts = [], logo, navItems, loading, searchBar }: Props) {
   return (
-    <header class="h-[146px] lg:h-[174px]">
+    <header class="h-[154px] lg:h-[174px]">
       <div class="bg-[#1F251C] w-full z-40 fixed top-0">
         {alerts.length > 0 && <Alert alerts={alerts} />}
         {/* Desktop */}

@@ -278,7 +278,7 @@ function Footer({
           <p class="font-bold text-[16px] lg:text-[24px]  text-[#273D28] font-['FS_Emeric'] mb-[30px] mt-[50px]">
             {lojas.title}
           </p>
-          <div class="flex flex-row gap-x-[20px]">
+          <div class="flex flex-col lg:flex-row gap-x-[20px]">
             {device === "mobile"
               ? (
                 <div class="flex flex-col gap-y-[10px]">
@@ -310,7 +310,7 @@ function Footer({
                 </div>
               )
               : (
-                <div class="flex flex-row gap-x-[20px]">
+                <div class="flex flex-col lg:flex-row gap-x-[20px]">
                   {" "}
                   {lojas.lojas.map((
                     { title, tuor, end, tel, horario },

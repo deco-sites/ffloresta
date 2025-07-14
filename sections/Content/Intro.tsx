@@ -5,21 +5,19 @@ export interface IntroProps {
 }
 
 const ALIGNMENT_TEXT = {
-  "Left": "items-start text-start",
-  "Center": "items-center text-center",
-  "Right": "items-end text-end",
+  Left: "items-start text-start",
+  Center: "items-center text-center",
+  Right: "items-end text-end",
 };
 
-export default function Intro(
-  {
-    text =
-      "Lorem ipsum dolor sit amet consectetur. Placerat ornare diam nulla fringilla gravida justo elementum. Ut sed in.",
-    subheading,
-    alignment = "Left",
-  }: IntroProps,
-) {
+export default function Intro({
+  text =
+    "Lorem ipsum dolor sit amet consectetur. Placerat ornare diam nulla fringilla gravida justo elementum. Ut sed in.",
+  subheading,
+  alignment = "Left",
+}: IntroProps) {
   return (
-    <section class="bg-base-100">
+    <section class="bg-white">
       <div class="xl:container xl:mx-auto mx-5 md:mx-10 py-10 md:py-24">
         <div
           class={`flex flex-col gap-6 ${ALIGNMENT_TEXT[alignment ?? "Left"]}`}

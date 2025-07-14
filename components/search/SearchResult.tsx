@@ -252,7 +252,7 @@ function Result(props: SectionProps<typeof loader>) {
                 <Drawer
                   id={controls}
                   aside={
-                    <div class="bg-base-100 flex flex-col h-full w-full divide-y overflow-y-hidden">
+                    <div class="bg-white flex flex-col h-full w-full divide-y overflow-y-hidden">
                       <div class="flex justify-between items-center">
                         <h1 class="px-4 py-3">
                           <span class="font-medium text-2xl">Filtro</span>

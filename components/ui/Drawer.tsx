@@ -23,9 +23,13 @@ const script = (id: string) => {
   };
   addEventListener("keydown", handler);
 };
-function Drawer(
-  { children, aside, open, class: _class = "", id = useId() }: Props,
-) {
+function Drawer({
+  children,
+  aside,
+  open,
+  class: _class = "",
+  id = useId(),
+}: Props) {
   return (
     <>
       <div class={clx("drawer", _class)}>
@@ -38,9 +42,7 @@ function Drawer(
           aria-label={open ? "open drawer" : "closed drawer"}
         />
 
-        <div class="drawer-content">
-          {children}
-        </div>
+        <div class="drawer-content">{children}</div>
 
         <aside
           data-aside
@@ -60,7 +62,11 @@ function Drawer(
     </>
   );
 }
-function Aside({ title, drawer, children }: {
+function Aside({
+  title,
+  drawer,
+  children,
+}: {
   title: string;
   drawer: string;
   children: ComponentChildren;
@@ -68,7 +74,7 @@ function Aside({ title, drawer, children }: {
   return (
     <div
       data-aside
-      class="bg-base-100 grid grid-rows-[auto_1fr] h-full divide-y"
+      class="bg-white grid grid-rows-[auto_1fr] h-full divide-y"
       style={{ maxWidth: "100vw" }}
     >
       <div class="flex justify-between items-center">
