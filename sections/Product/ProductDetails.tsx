@@ -6,6 +6,7 @@ import Section from "../../components/ui/Section.tsx";
 import { clx } from "../../sdk/clx.ts";
 import ProductDescription from "../../islands/ProductDescription.tsx";
 import type { ImageWidget } from "apps/admin/widgets.ts";
+import { type LoadingFallbackProps } from "@deco/deco";
 
 export interface Props {
   /** @title Integration */
@@ -63,4 +64,7 @@ export default function ProductDetails({ page, productBanner }: Props) {
   );
 }
 
-export const LoadingFallback = () => <Section.Placeholder height="580px" />;
+export const LoadingFallback = ({
+  page,
+  productBanner,
+}: LoadingFallbackProps<Props>) => <Section.Placeholder height="580px" />;
