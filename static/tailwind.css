@@ -3707,6 +3707,10 @@ details.collapse summary::-webkit-details-marker {
   margin-top: 5rem;
   margin-bottom: 5rem;
 }
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -3797,6 +3801,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .mt-6 {
   margin-top: 1.5rem;
+}
+.mt-8 {
+  margin-top: 2rem;
 }
 .mt-\[16px\] {
   margin-top: 16px;
@@ -3932,6 +3939,10 @@ details.collapse summary::-webkit-details-marker {
 }
 .h-auto {
   height: auto;
+}
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .h-full {
   height: 100%;

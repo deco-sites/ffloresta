@@ -48,7 +48,7 @@ export default function ProductShelf({
 
   return (
     <Section.Container {...viewItemListEvent} class="p-0 2xl:p-0">
-      <div class="w-full mx-auto lg:mx-0 xl:max-w-none">
+      <div class="w-full mx-auto lg:mx-0 xl:max-w-none mt-8">
         <div class="px-4 lg:px-0">
           <Section.Header
             title={title}
