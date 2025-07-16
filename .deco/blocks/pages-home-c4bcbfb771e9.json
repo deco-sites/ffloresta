@@ -185,21 +185,6 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Content/BannerMosaic.tsx",
-        "images": [
-          {
-            "desktop": "https://assets.decocache.com/ffloresta/a2232c44-7c4a-43b6-b3cf-a9e3b1d5fcbc/image.png",
-            "mobile": "https://assets.decocache.com/ffloresta/07eab070-87cd-4a28-b3c7-614b3b2bb571/image-(1).png",
-            "alt": "01"
-          }
-        ],
-        "itemsToShow": 1,
-        "enableSlider": false
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
         "__resolveType": "site/sections/Brand/BrandGrid.tsx",
         "title": "COMPRE POR MARCA",
         "items": [
