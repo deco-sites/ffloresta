@@ -76,7 +76,7 @@ function ProductInfo({ page }: Props) {
         <span class="font-['FS_Emeric'] font-normal text-xs leading-[140%] text-[#3A4332]">
           SKU: {product.sku}
         </span>
-        <h1 class="font-['FS_Emeric'] font-bold text-[15px] leading-[140%] text-[#3A4332] md:text-[20px]">
+        <h1 class="font-['FS_Emeric'] font-bold text-[15px] leading-[140%] text-[#3A4332] md:text-[28px]">
           {title}
         </h1>
       </div>
@@ -89,7 +89,7 @@ function ProductInfo({ page }: Props) {
               {formatPrice(listPrice, offers?.priceCurrency)}
             </span>
           )}
-          <span class="font-['FS_Emeric'] font-bold text-[35px] leading-[170%] tracking-[3%] text-left text-[#677357]">
+          <span class="font-['FS_Emeric'] font-bold text-[24px] leading-[170%] tracking-[3%] text-left text-[#677357]">
             {formatPrice(price, offers?.priceCurrency)} à vista
           </span>
         </div>

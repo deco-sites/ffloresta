@@ -4806,6 +4806,15 @@ details.collapse summary::-webkit-details-marker {
   --tw-bg-opacity: 1;
   background-color: rgb(198 207 186 / var(--tw-bg-opacity));
 }
+.bg-\[rgba\(21\2c 31\2c 22\2c 0\.5\)\] {
+  background-color: rgba(21,31,22,0.5);
+}
+.bg-\[rgba\(21\2c 31\2c 22\2c 0\.75\)\] {
+  background-color: rgba(21,31,22,0.75);
+}
+.bg-\[rgba\(21\2c 31\2c 22\2c 0\.85\)\] {
+  background-color: rgba(21,31,22,0.85);
+}
 .bg-\[var\(--bg-color\)\] {
   background-color: var(--bg-color);
 }
@@ -5172,9 +5181,6 @@ details.collapse summary::-webkit-details-marker {
 .text-\[24px\] {
   font-size: 24px;
 }
-.text-\[35px\] {
-  font-size: 35px;
-}
 .text-\[40px\] {
   font-size: 40px;
 }
@@ -5507,6 +5513,11 @@ details.collapse summary::-webkit-details-marker {
 }
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.backdrop-blur-\[12px\] {
+  --tw-backdrop-blur: blur(12px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 .transition {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
@@ -6007,6 +6018,10 @@ input[type="checkbox"]:checked::after {
 
 .hover\:bg-\[rgba\(108\2c 131\2c 88\2c 0\.9\)\]:hover {
   background-color: rgba(108,131,88,0.9);
+}
+
+.hover\:bg-\[rgba\(21\2c 31\2c 22\2c 0\.85\)\]:hover {
+  background-color: rgba(21,31,22,0.85);
 }
 
 .hover\:bg-base-200:hover {
@@ -6596,8 +6611,8 @@ input[type="checkbox"]:checked::after {
     font-size: 18px;
   }
 
-  .md\:text-\[20px\] {
-    font-size: 20px;
+  .md\:text-\[28px\] {
+    font-size: 28px;
   }
 
   .md\:text-base {

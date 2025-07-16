@@ -123,7 +123,7 @@ export default function NavItemIsland({
       >
         <a
           href={url}
-          class="h-[50px] flex items-center justify-center px-4 font-['FS_Emeric'] text-[16.87px] text-[#1F251C] hover:text-white hover:bg-[#3A4332] transition-all duration-300 max-[1300px]:text-[14px] max-[1300px]:px-3"
+          class="h-[50px] flex items-center justify-center px-4 font-['FS_Emeric'] text-[16.87px] text-white hover:bg-[rgba(21,31,22,0.85)] transition-all duration-300 max-[1300px]:text-[14px] max-[1300px]:px-3"
         >
           {name}
         </a>
@@ -133,7 +133,7 @@ export default function NavItemIsland({
             ref={submenuRef}
             class={`absolute hidden ${
               isSubmenuVisible ? "!flex" : ""
-            } z-40 bg-gradient-to-b from-[rgba(58,67,50,0.9)] to-[rgba(146,169,126,0.9)] transition-transform duration-300 overflow-y-auto scrollbar-custom`}
+            } z-40 bg-[rgba(21,31,22,0.75)] backdrop-blur-[12px] transition-transform duration-300 overflow-y-auto scrollbar-custom`}
             style={{
               top: "100%",
               left: 0,
@@ -163,7 +163,7 @@ export default function NavItemIsland({
               {activeThirdLevel && (
                 <div
                   ref={thirdLevelRef}
-                  class="flex flex-col min-w-[200px] shadow-lg overflow-y-auto scrollbar-custom"
+                  class="flex flex-col min-w-[200px] shadow-lg overflow-y-auto scrollbar-custom bg-[rgba(21,31,22,0.5)] backdrop-blur-[12px]"
                   style={{
                     maxHeight: calculateMaxHeight(activeThirdLevel.items),
                   }}

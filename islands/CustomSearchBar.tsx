@@ -117,7 +117,7 @@ function ProductCard({
 
       <div class="mt-2 flex flex-col flex-grow">
         <a href={relativeUrl} class="block">
-          <h3 class="text-[#3A4332] font-bold text-[12px] leading-[137%] tracking-[0%] capitalize">
+          <h3 class="text-[#3A4332] font-bold text-[14px] leading-[137%] tracking-[0%] capitalize">
             {name}
           </h3>
 
@@ -136,10 +136,10 @@ function ProductCard({
               </div>
             )}
             <div class="text-[#3A4332]">
-              <span class="font-bold text-[12px] leading-[170%] tracking-[3%]">
+              <span class="font-bold text-[13px] leading-[170%] tracking-[3%]">
                 R$
               </span>
-              <span class="font-bold text-[16px] leading-[170%] tracking-[3%]">
+              <span class="font-bold text-[14px] leading-[170%] tracking-[3%]">
                 {formatPrice(price, offers?.priceCurrency).replace("R$", "")}
               </span>
             </div>

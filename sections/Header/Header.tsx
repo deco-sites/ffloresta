@@ -111,7 +111,7 @@ const Desktop = ({ navItems, logo, searchBar }: Props) => (
         </div>
       </div>
 
-      <div class="bg-[#FDFFF5] flex justify-between items-center">
+      <div class="flex justify-between items-center bg-[rgba(21,31,22,0.85)] backdrop-blur-[12px]">
         <ul class="container flex justify-between p-0">
           {navItems?.slice(0, 10).map((item) => <NavItemIsland item={item} />)}
         </ul>
