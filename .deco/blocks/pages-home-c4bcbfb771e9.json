@@ -30,22 +30,22 @@
             "benefitImgSrc": "https://assets.decocache.com/ffloresta/b7d07fbb-44b7-4c3e-8934-eb6cc3751182/home-benefit-icon-01.png",
             "benefitImgAltText": "Cartão de Crédito",
             "benefitTitle": "COMPRE EM ATÉ 10X SEM JUROS NO CARTÃO DE CRÉDITO EM COMPRAS ACIMA DE R$ 480,00",
-            "benefitText": "<p><strong>PARCELE EM ATÉ </strong></p><p><strong>10X SEM JUROS NO </strong></p><p><strong>CARTÃO</strong> PARA COMPRAS </p><p>ACIMA DE R$ 590,00</p>"
+            "benefitText": "<p><strong><span style=\"font-size: 14pt\">Parcele em até 10x sem juros no cartão</span></strong><span style=\"font-size: 14pt\"><br>para compras acima de R$590,00</span></p>"
           },
           {
             "benefitImgSrc": "https://assets.decocache.com/ffloresta/11de435f-bde0-4ab8-b30e-c5a6f94b9361/home-benefit-icon-02.png",
             "benefitImgAltText": "Pix",
-            "benefitText": "<p><strong>10% OFF NO PIX OU BOLETO</strong> </p><p>*EXCETO PARA PROMOÇÕES, </p><p>FERRAMENTAS E PRODUTOS ZEN</p>"
+            "benefitText": "<p><strong><span style=\"font-size: 14pt\">10% off no PIX ou boleto</span></strong></p><p><span style=\"font-size: 14pt\">*Exceto para promoções, ferramentas e produtos ZEN</span></p>"
           },
           {
             "benefitImgSrc": "https://assets.decocache.com/ffloresta/e62b308d-131c-4b24-b669-6f7dc5a363f8/home-benefit-icon-03.png",
             "benefitImgAltText": "Frete",
-            "benefitText": "<p>ENTREGAMOS EM TODO O BRASIL</p>"
+            "benefitText": "<p><span style=\"font-size: 14pt\">Entregamos em todo o Brasil</span></p>"
           },
           {
             "benefitImgSrc": "https://assets.decocache.com/ffloresta/3fa6bd86-4c00-4e9a-8320-3b1ab15625ef/home-benefit-icon-04.png",
             "benefitImgAltText": "Localização",
-            "benefitText": "<p>5 <strong>LOJAS</strong> FÍSICAS: </p><p>PINHEIROS, BRÁS, SANTO ANDRÉ, </p><p>CAMPINAS E SOROCABA</p><p></p>"
+            "benefitText": "<p><span style=\"font-size: 14pt\">5 </span><strong><span style=\"font-size: 14pt\">Lojas </span></strong><span style=\"font-size: 14pt\">físicas:</span></p><p><span style=\"font-size: 14pt\">Pinheiros, Brás, Santo André, Campinas e Sorocaba</span></p><p></p>"
           }
         ]
       }
@@ -179,21 +179,6 @@
           }
         ],
         "itemsToShow": 3,
-        "enableSlider": false
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Content/BannerMosaic.tsx",
-        "images": [
-          {
-            "desktop": "https://assets.decocache.com/ffloresta/a2232c44-7c4a-43b6-b3cf-a9e3b1d5fcbc/image.png",
-            "mobile": "https://assets.decocache.com/ffloresta/07eab070-87cd-4a28-b3c7-614b3b2bb571/image-(1).png",
-            "alt": "01"
-          }
-        ],
-        "itemsToShow": 1,
         "enableSlider": false
       }
     },
