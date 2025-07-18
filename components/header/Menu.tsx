@@ -51,7 +51,7 @@ function MenuItem({ item }: { item: SiteNavigationElement }) {
   return (
     <div class="collapse collapse-plus rounded-none">
       <input type="checkbox" class="peer" />
-      <div class="collapse-title text-[#1F251C] peer-checked:bg-[#3A4332] peer-checked:text-white text-[16.87px] font-['FS_Emeric']">
+      <div class="collapse-title text-[#1F251C] peer-checked:bg-[#3A4332] peer-checked:text-white text-[16px] font-['FS_Emeric']">
         {item.name}
       </div>
       <div class="collapse-content bg-gradient-to-b from-[rgba(58,67,50,0.9)] to-[rgba(146,169,126,0.9)]">

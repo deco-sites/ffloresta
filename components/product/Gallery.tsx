@@ -38,45 +38,48 @@ export default function GallerySlider(props: Props) {
     <>
       <div
         id={id}
-        class="grid grid-flow-row sm:grid-flow-col grid-cols-1 sm:grid-cols-[min-content_1fr] gap-3 border border-gray-200"
+        class="grid grid-flow-row sm:grid-flow-col grid-cols-1 sm:grid-cols-[84px_1fr] gap-3 "
       >
-        {/* Image Slider */}
-        <div class="col-start-1 col-span-1 sm:col-start-2">
-          <div class="relative h-min flex-grow">
-            <Slider class="carousel carousel-center gap-6 w-full">
-              {images.map((img, index) => (
-                <Slider.Item index={index} class="carousel-item w-full">
-                  <Image
-                    class="w-full"
-                    sizes="(max-width: 640px) 100vw, 40vw"
-                    style={{ aspectRatio: ASPECT_RATIO }}
-                    src={img.url!}
-                    alt={img.alternateName}
-                    width={WIDTH}
-                    height={HEIGHT}
-                    preload={index === 0}
-                    loading={index === 0 ? "eager" : "lazy"}
-                  />
-                </Slider.Item>
-              ))}
-            </Slider>
-          </div>
+        {/* Thumbnails - Desktop */}
+        <div class="hidden sm:flex flex-col gap-4 overflow-y-auto max-h-[615px]">
+          {images.map((img, index) => (
+            <Slider.Dot index={index} class="w-[84px]">
+              <Image
+                style={{ aspectRatio: "84 / 70" }}
+                class="object-cover rounded hover:border-base-400 cursor-pointer border border-gray-200"
+                width={84}
+                height={70}
+                src={img.url!}
+                alt={img.alternateName}
+              />
+            </Slider.Dot>
+          ))}
         </div>
 
-        {/* Dots com arrows no mobile */}
-        <div
-          class={clx(
-            "col-start-1 col-span-1",
-            "flex sm:flex-col",
-            "items-center sm:items-start",
-            "justify-between sm:justify-start",
-            "gap-2 sm:gap-4",
-            "overflow-x-auto sm:overflow-visible",
-            "w-full sm:w-auto",
-          )}
-        >
-          {/* Prev Arrow */}
-          <Slider.PrevButton class="sm:hidden" disabled>
+        {/* Image Slider - Desktop e Mobile */}
+        <div class="relative h-min flex-grow">
+          <Slider class="carousel carousel-center gap-6 w-full">
+            {images.map((img, index) => (
+              <Slider.Item index={index} class="carousel-item w-full">
+                <Image
+                  class="w-full"
+                  sizes="(max-width: 640px) 100vw, 40vw"
+                  style={{ aspectRatio: ASPECT_RATIO }}
+                  src={img.url!}
+                  alt={img.alternateName}
+                  width={WIDTH}
+                  height={HEIGHT}
+                  preload={index === 0}
+                  loading={index === 0 ? "eager" : "lazy"}
+                />
+              </Slider.Item>
+            ))}
+          </Slider>
+        </div>
+
+        {/* Dots com arrows - Mobile */}
+        <div class="sm:hidden flex items-center justify-between gap-2 w-full overflow-x-auto">
+          <Slider.PrevButton disabled>
             <svg
               width="12"
               height="20"
@@ -93,15 +96,7 @@ export default function GallerySlider(props: Props) {
             </svg>
           </Slider.PrevButton>
 
-          {/* Dots */}
-          <div
-            class={clx(
-              "flex sm:flex-col items-center",
-              "overflow-x-auto sm:overflow-y-auto",
-              "gap-2 sm:gap-4",
-              "max-w-[calc(84px*4+12px*3)] sm:max-h-none",
-            )}
-          >
+          <div class="flex items-center gap-2 overflow-x-auto max-w-[calc(84px*4+12px*3)]">
             {images.map((img, index) => (
               <Slider.Dot index={index}>
                 <Image
@@ -116,8 +111,7 @@ export default function GallerySlider(props: Props) {
             ))}
           </div>
 
-          {/* Next Arrow */}
-          <Slider.NextButton class="sm:hidden" disabled={images.length < 2}>
+          <Slider.NextButton disabled={images.length < 2}>
             <svg
               width="12"
               height="20"

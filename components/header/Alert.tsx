@@ -19,7 +19,7 @@ function Alert({ alerts = [], interval = 5 }: Props) {
         {alerts.map((alert, index) => (
           <Slider.Item index={index} class="carousel-item">
             <span
-              class="px-5 py-2 w-full text-center font-['FS_Emeric'] font-normal text-[16.87px] leading-none"
+              class="px-5 py-2 w-full text-center font-['FS_Emeric'] font-normal text-[16px] leading-none"
               dangerouslySetInnerHTML={{ __html: alert }}
             />
           </Slider.Item>

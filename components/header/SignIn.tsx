@@ -2,6 +2,12 @@ import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
 import { useScript } from "@deco/deco/hooks";
 
+// Tamanhos e estilos padronizados
+const ICON_SIZE = 20;
+const TEXT_STYLE = "font-['FS_Emeric'] font-normal text-[14px] leading-none";
+const TEXT_COLOR = "text-[#1F251C] lg:text-white";
+const GAP = "gap-3.5 lg:gap-[14px]";
+
 const onLoad = (containerID: string) => {
   window.STOREFRONT.USER.subscribe((sdk) => {
     const container = document.getElementById(containerID) as HTMLDivElement;
@@ -25,15 +31,17 @@ function SignIn({ variant }: { variant: "mobile" | "desktop" }) {
     <div id={id}>
       <a
         class={clx(
-          "flex items-center justify-center font-['FS_Emeric'] font-normal text-[16.87px] leading-none text-white",
-          variant === "mobile" ? "gap-3.5" : "gap-[14px]",
+          "flex items-center justify-center",
+          TEXT_STYLE,
+          TEXT_COLOR,
+          GAP,
         )}
         href="/login"
         aria-label="Login"
       >
         <svg
-          width="21"
-          height="23"
+          width={ICON_SIZE}
+          height={ICON_SIZE}
           viewBox="0 0 21 23"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -51,20 +59,21 @@ function SignIn({ variant }: { variant: "mobile" | "desktop" }) {
             stroke-width="1.40556"
           />
         </svg>
-
-        <span class="text-[#1F251C] lg:text-white">Fazer Login</span>
+        <span>Fazer Login</span>
       </a>
       <a
         class={clx(
-          "hidden flex items-center justify-center font-['FS_Emeric'] font-normal text-[16.87px] leading-none text-white",
-          variant === "mobile" ? "gap-3.5" : "gap-[14px]",
+          "hidden flex items-center justify-center",
+          TEXT_STYLE,
+          TEXT_COLOR,
+          GAP,
         )}
         href="/account"
         aria-label="Account"
       >
         <svg
-          width="21"
-          height="23"
+          width={ICON_SIZE}
+          height={ICON_SIZE}
           viewBox="0 0 21 23"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -82,8 +91,7 @@ function SignIn({ variant }: { variant: "mobile" | "desktop" }) {
             stroke-width="1.40556"
           />
         </svg>
-
-        <span class="text-[#1F251C] lg:text-white">Minha Conta</span>
+        <span>Minha Conta</span>
       </a>
       <script
         type="module"

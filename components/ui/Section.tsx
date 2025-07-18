@@ -21,7 +21,7 @@ function Header({ title, cta, icon, headerBanner }: Props) {
   return (
     <div
       class={clx(
-        "flex flex-col items-start lg:flex-row lg:justify-between lg:items-center gap-2",
+        "flex flex-col items-start lg:grid lg:grid-cols-2 lg:justify-between lg:items-center gap-2",
         "2xl:w-full 2xl:container px-0",
       )}
     >

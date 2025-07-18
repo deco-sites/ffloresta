@@ -123,7 +123,7 @@ export default function NavItemIsland({
       >
         <a
           href={url}
-          class="h-[50px] flex items-center justify-center px-4 font-['FS_Emeric'] text-[16.87px] text-white hover:bg-[rgba(21,31,22,0.85)] transition-all duration-300 max-[1300px]:text-[14px] max-[1300px]:px-3"
+          class="h-[50px] flex items-center justify-center px-4 font-['FS_Emeric'] text-[16px] text-white hover:bg-[rgba(21,31,22,0.85)] transition-all duration-300 max-[1300px]:text-[14px] max-[1300px]:px-3"
         >
           {name}
         </a>
@@ -151,7 +151,7 @@ export default function NavItemIsland({
                     onMouseEnter={(e) => handleSubItemHover(node.children, e)}
                   >
                     <a
-                      class="hover:underline font-['FS_Emeric'] text-[14px] text-white block p-2 px-[22px]"
+                      class="hover:underline font-['FS_Emeric'] text-[16px] text-white block p-2 px-[22px]"
                       href={node.url}
                     >
                       {node.name}
@@ -173,7 +173,7 @@ export default function NavItemIsland({
                   {activeThirdLevel.items.map((child, i) => (
                     <a
                       key={`${child.url}-${i}`}
-                      class="text-white font-['FS_Emeric'] text-[12px] hover:underline p-2 px-[16px]"
+                      class="text-white font-['FS_Emeric'] text-[16px] hover:underline p-2 px-[16px]"
                       href={child.url}
                     >
                       {child.name}

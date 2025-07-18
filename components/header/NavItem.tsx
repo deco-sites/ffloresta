@@ -51,7 +51,7 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
     >
       <a
         href={url}
-        class="h-[50px] flex items-center justify-center px-4 font-['FS_Emeric'] font-normal text-[16.87px] leading-[100%] text-[#1F251C] hover:text-white hover:bg-[#3A4332] transition-all duration-300"
+        class="h-[50px] flex items-center justify-center px-4 font-['FS_Emeric'] font-normal text-[16px] leading-[100%] text-[#1F251C] hover:text-white hover:bg-[#3A4332] transition-all duration-300"
       >
         {name}
       </a>

@@ -66,7 +66,7 @@ export default function ProductShelfWithBanner({
   });
 
   return (
-    <Section.Container {...viewItemListEvent} class="p-0 2xl:p-0">
+    <Section.Container {...viewItemListEvent} class="container">
       <div
         class={`flex gap-10 ${
           orientation === "vertical" ? "flex-col" : "flex-row"

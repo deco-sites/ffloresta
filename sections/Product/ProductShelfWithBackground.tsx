@@ -56,7 +56,7 @@ export default function ProductShelfWithBackground({
   });
 
   return (
-    <Section.Container {...viewItemListEvent}>
+    <Section.Container {...viewItemListEvent} class="container">
       {/* Header Section - Sem background */}
       <Section.Header title={title} cta={cta} icon={icon} />
 

@@ -30,7 +30,7 @@ function Card({ image, href, label }: Item) {
       href={href}
       class="flex flex-col items-center justify-center gap-4 w-full h-full"
     >
-      <div class="rounded-full flex justify-center items-center w-full h-full max-w-[180px] mx-auto">
+      <div class="rounded-full flex justify-center items-center w-full h-full max-w-[160px] mx-auto">
         <Image
           src={image}
           alt={label || "Brand"}
@@ -56,7 +56,7 @@ function BrandGrid({ title, cta, items, showArrows = true, icon }: Props) {
       <Section.Header title={title} cta={cta} icon={icon} />
 
       <div id={id} class="relative px-[20px]">
-        <Slider class="carousel justify-between carousel-center gap-3 w-full">
+        <Slider class="carousel justify-between carousel-center gap-5 w-full">
           {items.map((i, index) => (
             <Slider.Item
               index={index}
@@ -64,13 +64,13 @@ function BrandGrid({ title, cta, items, showArrows = true, icon }: Props) {
                 "carousel-item",
                 "last:pr-5 last:sm:pr-0",
                 // Abaixo de 300px: 2 itens
-                "w-[calc(50%-8px)]",
+                "w-[calc(50%-10px)]",
                 // De 300px a 639px: 3 itens
-                "min-[400px]:w-[calc(33.333%-10px)]",
+                "min-[400px]:w-[calc(33.333%-14px)]",
                 // Tablet (640px ou mais): 4 itens
-                "min-[640px]:w-[calc(25%-12px)]",
+                "min-[640px]:w-[calc(25%-15px)]",
                 // Desktop (1024px ou mais): 6 itens
-                "lg:w-[calc(16.666%-12px)]",
+                "lg:w-[calc(16.666%-15px)]",
               )}
             >
               <Card {...i} />

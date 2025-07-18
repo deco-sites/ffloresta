@@ -32,7 +32,7 @@ const BenefitItem = ({ benefit }: BenefitItemProps) => {
           />
         </div>
         <div
-          className="flex-1 min-w-0 font-['FS_Emeric'] text-[#273D28] text-[20px]"
+          className="flex-1 min-w-0 font-['FS_Emeric'] text-[#273D28] text-[12px]"
           dangerouslySetInnerHTML={{ __html: benefit.benefitText }}
         />
       </div>
@@ -46,7 +46,7 @@ const Benefits = ({ benefits }: Props) => {
   return (
     <>
       {/* Desktop View - Grid */}
-      <div className="hidden md:grid container grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-3 mt-6 mb-0 w-full px-5 2xl:px-0">
+      <div className="hidden md:grid container grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-3 my-6 w-full px-5 lg:px-[4rem]">
         {benefits?.map((benefit: Benefit) => (
           <div key={benefit.benefitText} className="min-w-0">
             <BenefitItem benefit={benefit} />

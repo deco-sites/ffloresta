@@ -172,7 +172,7 @@ function Filters({ filters }: Props) {
   return (
     <ul class="flex flex-col gap-6 sm:p-0 divide-y divide-[#CCCCCC]">
       {enhancedFilters.filter(isToggle).map((filter) => (
-        <li class="flex flex-col gap-4 pt-4 px-4 xl:pr-0">
+        <li class="flex flex-col gap-4 pt-4 px-4 xl:px-0">
           <span class="text-md font-medium text-[#1F251C]">{filter.label}</span>
           <div class="md:max-h-80 md:overflow-auto">
             <FilterValues {...filter} />

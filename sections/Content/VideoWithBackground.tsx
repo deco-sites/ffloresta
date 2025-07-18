@@ -33,7 +33,7 @@ export default function VideoWithBackground({
           <img
             src={background.desktop.src}
             alt={background.desktop.alt || "Background"}
-            class="w-full h-full object-cover"
+            class="container w-full h-full object-cover lg:px-[4rem]"
           />
         </picture>
       </div>

@@ -156,12 +156,12 @@ export default function Cart({
           {count === 0
             ? (
               <div class="flex flex-col gap-6 items-center justify-center h-full">
-                <span class="font-['FS_Emeric'] font-normal text-[16.87px] text-[#1F251C]">
+                <span class="font-['FS_Emeric'] font-normal text-[16px] text-[#1F251C]">
                   Your bag is empty
                 </span>
                 <label
                   for={MINICART_DRAWER_ID}
-                  class="btn no-animation bg-[#3A4332] text-white hover:bg-[#3A4332] hover:text-white border-none font-['FS_Emeric'] font-normal text-[16.87px] px-6 py-3"
+                  class="btn no-animation bg-[#3A4332] text-white hover:bg-[#3A4332] hover:text-white border-none font-['FS_Emeric'] font-normal text-[16px] px-6 py-3"
                 >
                   Choose products
                 </label>

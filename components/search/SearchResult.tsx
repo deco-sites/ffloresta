@@ -97,8 +97,9 @@ function PageResult(props: SectionProps<typeof loader>) {
         data-product-list
         class={clx(
           "grid items-center",
-          "grid-cols-2 gap-4",
-          "sm:grid-cols-3",
+          "grid-cols-2 gap-4", // Base
+          "lg:grid-cols-3", // ≥1024px
+          "2xl:grid-cols-4", // ≥1240px
           "w-full",
         )}
       >
@@ -120,7 +121,7 @@ function PageResult(props: SectionProps<typeof loader>) {
               <a
                 rel="next"
                 class={clx(
-                  "w-full max-w-32 p-3 bg-[#3A4332] text-[#97A37F] h-8 flex items-center justify-center font-bold text-[14.06px] leading-[170%] tracking-[16%] hover:bg-[#293023] cursor-pointer transition",
+                  "w-full max-w-32 p-3 bg-[#3A4332] text-[white] h-8 flex items-center justify-center font-bold text-[14.06px] leading-[170%] tracking-[16%] hover:bg-[#293023] cursor-pointer transition",
                   (!nextPageUrl || partial === "hideMore") && "hidden",
                 )}
                 hx-swap="outerHTML show:parent:top"
@@ -245,7 +246,7 @@ function Result(props: SectionProps<typeof loader>) {
         {partial
           ? <PageResult {...props} />
           : (
-            <div class="container flex flex-col gap-4 sm:gap-5 w-full py-4 sm:py-5 px-5 sm:px-0">
+            <div class="container flex flex-col gap-4 sm:gap-5 w-full py-4 sm:py-5 px-5 lg:px-[4rem]">
               <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
 
               {device === "mobile" && (
@@ -288,19 +289,21 @@ function Result(props: SectionProps<typeof loader>) {
                 </Drawer>
               )}
 
-              <div class="grid grid-cols-1 sm:grid-cols-[1fr_806px] lg:gap-10">
+              <div class="grid grid-cols-1 sm:grid-cols-[250px_1fr] lg:gap-8">
                 {device === "desktop" && (
                   <aside class="place-self-start flex flex-col gap-9 w-full">
                     <span class="text-base font-medium h-12 flex items-center text-md text-[#1F251C]">
                       Filtro
                     </span>
-                    {bannerImage && (
-                      <img
-                        src={bannerImage}
-                        alt="banner categoria"
-                        class="w-full rounded"
-                      />
-                    )}
+                    {
+                      /* {bannerImage && (
+                    <img
+                      src={bannerImage}
+                      alt="banner categoria"
+                      class="w-full rounded"
+                    />
+                  )} */
+                    }
                     <Filters filters={filters} />
                   </aside>
                 )}
@@ -323,9 +326,26 @@ function Result(props: SectionProps<typeof loader>) {
                         </h2>
                       )}
                       {seoText.description && (
-                        <p class="text-[14px] sm:text-[16px] leading-relaxed">
-                          {seoText.description}
-                        </p>
+                        <>
+                          <p
+                            id="seo-text-truncated"
+                            class="text-[14px] sm:text-[16px] leading-relaxed line-clamp-3"
+                          >
+                            {seoText.description}
+                          </p>
+                          <p
+                            id="seo-text-full"
+                            class="text-[14px] sm:text-[16px] leading-relaxed hidden"
+                          >
+                            {seoText.description}
+                          </p>
+                          <button
+                            onclick="document.getElementById('seo-text-truncated').classList.toggle('hidden'); document.getElementById('seo-text-full').classList.toggle('hidden'); this.textContent = this.textContent === 'Ver mais' ? 'Ver menos' : 'Ver mais';"
+                            class="text-[#3A4332] font-bold text-sm hover:underline"
+                          >
+                            Ver mais
+                          </button>
+                        </>
                       )}
                     </div>
                   )}

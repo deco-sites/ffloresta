@@ -1,15 +1,15 @@
-// /islands/AddToCartButtonPDP.tsx
 import { useState } from "preact/hooks";
 import { clx } from "../sdk/clx.ts";
 import QuantitySelectorPDP from "../components/product/QuantitySelectorPDP.tsx";
 import type { AnalyticsItem, Product } from "apps/commerce/types.ts";
 import type { JSX } from "preact";
+import { useId } from "../sdk/useId.ts";
 
 export interface Props extends JSX.HTMLAttributes<HTMLDivElement> {
   product: Product;
   seller: string;
   item: AnalyticsItem;
-  platform: string; // Agora vem do componente pai
+  platform: string; // Mantido como prop
 }
 
 export default function AddToCartButtonPDP({
@@ -20,29 +20,37 @@ export default function AddToCartButtonPDP({
   class: _class,
 }: Props) {
   const [quantity, setQuantity] = useState(1);
+  const id = useId();
 
-  const platformProps = platform === "vtex"
-    ? {
-      allowedOutdatedData: ["paymentData"],
-      orderItems: [{ quantity, seller, id: product.productID }],
+  const getPlatformProps = () => {
+    if (platform === "vtex") {
+      return {
+        allowedOutdatedData: ["paymentData"],
+        orderItems: [{ quantity, seller, id: product.productID }],
+      };
     }
-    : null;
-
-  const addToCart = () => {
-    const cartItem = { ...item, quantity };
-    const props = platformProps && {
-      ...platformProps,
-      orderItems: [{ ...platformProps.orderItems[0], quantity }],
-    };
-
-    window.STOREFRONT.CART.addToCart(cartItem, props);
+    // Adicione outras plataformas conforme necessário
+    return null;
   };
 
-  const buyNow = () => {
-    addToCart();
-    setTimeout(() => {
-      window.location.href = "/checkout/#";
-    }, 100);
+  const addToCart = (event: Event) => {
+    event?.stopPropagation();
+    const cartItem = { ...item, quantity };
+    const platformProps = getPlatformProps();
+
+    window.STOREFRONT.CART.addToCart(cartItem, platformProps);
+
+    // Abre o minicart
+    const minicartCheckbox = document.getElementById(
+      "minicart-drawer" // ID do minicart
+    ) as HTMLInputElement | null;
+    if (minicartCheckbox) {
+      minicartCheckbox.checked = true;
+    }
+  };
+
+  const buyNow = (event: Event) => {
+    addToCart(event);
   };
 
   return (
@@ -54,22 +62,13 @@ export default function AddToCartButtonPDP({
         onChange={setQuantity}
       />
 
-      <div class="w-full  flex items-center gap-2">
+      <div class="w-full flex items-center gap-2">
         <button
           onClick={buyNow}
-          class="w-full min-h-8 flex items-center justify-center bg-[#2DDC4F] text-white font-['FS_Emeric'] text-[13px] font-bold transition-all duration-300 hover:bg-[#2bbd48]"
+          class="w-full min-h-8 flex items-center justify-center bg-[#05C100] text-white font-['FS_Emeric'] text-[13px] font-bold transition-all duration-300 hover:bg-[#2bbd48]"
         >
           COMPRAR
         </button>
-        {
-          /* <span class="hidden lg:block font-['FS_Emeric'] text-[9px]">ou</span>
-        <button
-          onClick={addToCart}
-          class="hidden w-full min-w-[178px] min-h-8 lg:flex items-center justify-center bg-[#9AA37C] font-['FS_Emeric'] text-[13px] font-bold transition-all duration-300 hover:bg-[#7f8863]"
-        >
-          ADICIONAR AO CARRINHO
-        </button> */
-        }
       </div>
     </div>
   );
