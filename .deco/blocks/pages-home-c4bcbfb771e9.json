@@ -11,7 +11,7 @@
       "__resolveType": "site/sections/Images/Carousel.tsx",
       "images": [
         {
-          "desktop": "https://assets.decocache.com/ffloresta/a4c65b4a-1851-4f9e-9a02-b093fe4f69ea/home-main-banner-desk.png",
+          "desktop": "https://assets.decocache.com/ffloresta/a006b1b6-3b7c-4695-b454-12e384801886/BANNER-SITE-NOVO.jpg",
           "mobile": "https://assets.decocache.com/ffloresta/46a283cf-9726-4f0b-811b-e7e898f15a29/home-main-banner-mobile.webp",
           "alt": "Banner Principal",
           "action": {
@@ -30,7 +30,7 @@
             "benefitImgSrc": "https://assets.decocache.com/ffloresta/b7d07fbb-44b7-4c3e-8934-eb6cc3751182/home-benefit-icon-01.png",
             "benefitImgAltText": "Cartão de Crédito",
             "benefitTitle": "COMPRE EM ATÉ 10X SEM JUROS NO CARTÃO DE CRÉDITO EM COMPRAS ACIMA DE R$ 480,00",
-            "benefitText": "<p><strong><span style=\"font-size: 14pt\">Parcele em até 10x sem juros no cartão</span></strong><span style=\"font-size: 14pt\"><br>para compras acima de R$590,00</span></p>"
+            "benefitText": "<p><strong><span style=\"font-size: 12pt\">Parcele em até 10x sem juros no cartão</span></strong><span style=\"font-size: 12pt\"><br>para compras acima de R$590,00</span></p>"
           },
           {
             "benefitImgSrc": "https://assets.decocache.com/ffloresta/11de435f-bde0-4ab8-b30e-c5a6f94b9361/home-benefit-icon-02.png",
