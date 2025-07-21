@@ -56,8 +56,8 @@ type Props = Omit<SectionProps, "alert">;
 
 function Header({ alerts = [], logo, navItems, loading, searchBar }: Props) {
   return (
-    <header class="h-[154px]">
-      <div class="bg-[#1F251C] w-full z-40 fixed top-0">
+    <header class="h-[154px] lg:h-[124px]">
+      <div class="w-full z-40 fixed top-0">
         {alerts.length > 0 && <Alert alerts={alerts} />}
         {/* Desktop */}
         <div class="hidden lg:block">
@@ -85,35 +85,39 @@ function Header({ alerts = [], logo, navItems, loading, searchBar }: Props) {
 const Desktop = ({ navItems, logo, searchBar }: Props) => (
   <>
     <div>
-      <div class="container flex items-center justify-between py-5 gap-4 ">
-        <div class="place-self-start">
-          <a href="/" aria-label="Store logo">
-            <Image
-              src={logo.src}
-              alt={logo.alt}
-              width={logo.width || 100}
-              height={logo.height || 23}
-            />
-          </a>
-        </div>
-
-        <div class="flex-1 max-w-xl mx-4">
-          {searchBar && <SearchBarIsland {...searchBar} />}
-        </div>
-
-        <div class="flex items-center gap-6">
-          <div class="flex gap-[14px] cursor-pointer text-white place-self-end">
-            <SignIn variant="desktop" />
+      <div class="bg-[#1F251C] w-full">
+        <div class="container flex items-center justify-between py-5 gap-4 ">
+          <div class="place-self-start">
+            <a href="/" aria-label="Store logo">
+              <Image
+                src={logo.src}
+                alt={logo.alt}
+                width={logo.width || 100}
+                height={logo.height || 23}
+              />
+            </a>
           </div>
-          <div class="flex items-center place-self-end">
-            <Bag />
+
+          <div class="flex-1 max-w-xl mx-4">
+            {searchBar && <SearchBarIsland {...searchBar} />}
+          </div>
+
+          <div class="flex items-center gap-6">
+            <div class="flex gap-[14px] cursor-pointer text-white place-self-end">
+              <SignIn variant="desktop" />
+            </div>
+            <div class="flex items-center place-self-end">
+              <Bag />
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="flex justify-between items-center bg-[rgba(21,31,22,0.85)] backdrop-blur-[12px]">
+      <div class="flex justify-between items-center bg-[rgba(21,31,22,0.6)] backdrop-blur-[12px]">
         <ul class="container flex justify-between">
-          {navItems?.slice(0, 10).map((item) => <NavItemIsland item={item} />)}
+          {navItems?.slice(0, 10).map((item) => (
+            <NavItemIsland item={item} />
+          ))}
         </ul>
       </div>
     </div>
@@ -171,17 +175,17 @@ const Mobile = ({
       id={SIDEMENU_DRAWER_ID}
       aside={
         <HeaderDrawer.Aside drawer={SIDEMENU_DRAWER_ID}>
-          {loading === "lazy"
-            ? (
-              <div
-                id={SIDEMENU_CONTAINER_ID}
-                class="h-full flex items-center justify-center"
-                style={{ minWidth: "100vw" }}
-              >
-                <span class="loading loading-spinner" />
-              </div>
-            )
-            : <Menu navItems={navItems ?? []} />}
+          {loading === "lazy" ? (
+            <div
+              id={SIDEMENU_CONTAINER_ID}
+              class="h-full flex items-center justify-center"
+              style={{ minWidth: "100vw" }}
+            >
+              <span class="loading loading-spinner" />
+            </div>
+          ) : (
+            <Menu navItems={navItems ?? []} />
+          )}
         </HeaderDrawer.Aside>
       }
     />

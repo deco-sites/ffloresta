@@ -43,13 +43,13 @@ export default function ProductDetails({ page, productBanner }: Props) {
         class={clx(
           "container grid md:mt-16",
           "grid-cols-1 gap-9 py-0 px-4",
-          "lg:grid-cols-2 lg:gap-11 lg:px-0",
+          "lg:grid-cols-[1fr_380px] lg:gap-11 lg:px-0",
         )}
       >
         <div class="w-full flex flex-col">
           <ImageGallerySlider page={page} />
         </div>
-        <div class="">
+        <div class="h-fit px-5 pb-4 shadow-[5.62px_5.62px_7.03px_0px_rgba(0,0,0,0.15)] mb-10 lg:mb-40">
           {productBanner && (
             <div class="hidden lg:block mb-5">
               <img src={productBanner} alt={page.productName} class="w-full" />

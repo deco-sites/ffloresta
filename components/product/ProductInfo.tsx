@@ -70,7 +70,7 @@ function ProductInfo({ page }: Props) {
   ) ?? false;
 
   return (
-    <div {...viewItemEvent} class="flex flex-col mb-10 lg:mb-40" id={id}>
+    <div {...viewItemEvent} class="flex flex-col" id={id}>
       {/* SKU and Product Name */}
       <div class="flex flex-col gap-0.5">
         <span class="font-['FS_Emeric'] font-normal text-xs leading-[140%] text-[#3A4332]">

@@ -2,9 +2,8 @@ import { useRef, useState } from "preact/hooks";
 import type { SiteNavigationElement } from "apps/commerce/types.ts";
 import { NAVBAR_HEIGHT_DESKTOP } from "../constants.ts";
 
-// Configurações
-const ITEM_HEIGHT = 40; // Altura aproximada de cada item em pixels
-const VISIBLE_ITEMS = 8; // Número de itens visíveis antes do scroll
+const ITEM_HEIGHT = 40;
+const VISIBLE_ITEMS = 8;
 
 const scrollbarStyles = `
   .scrollbar-custom::-webkit-scrollbar {
@@ -40,17 +39,12 @@ export default function NavItemIsland({
 }) {
   const { url, name, children } = item;
   const submenuRef = useRef<HTMLDivElement>(null);
-  const thirdLevelRef = useRef<HTMLDivElement>(null);
   const [submenuTransform, setSubmenuTransform] = useState("translateX(0)");
   const [isSubmenuVisible, setIsSubmenuVisible] = useState(false);
   const [activeThirdLevel, setActiveThirdLevel] = useState<
-    {
-      items: SiteNavigationElement[];
-      topPosition: number;
-    } | null
+    SiteNavigationElement[] | null
   >(null);
 
-  // Calcula a altura máxima baseada no número de itens
   const calculateMaxHeight = (items: SiteNavigationElement[]) => {
     const itemCount = items.length;
     return itemCount > VISIBLE_ITEMS
@@ -74,24 +68,11 @@ export default function NavItemIsland({
     }
   };
 
-  const handleSubItemHover = (
-    items: SiteNavigationElement[] | undefined,
-    event: MouseEvent,
-  ) => {
+  const handleSubItemHover = (items: SiteNavigationElement[] | undefined) => {
     if (!items || items.length === 0) {
       setActiveThirdLevel(null);
-      return;
-    }
-
-    const target = event.currentTarget as HTMLElement;
-    const rect = target.getBoundingClientRect();
-    const parentRect = submenuRef.current?.getBoundingClientRect();
-
-    if (parentRect) {
-      setActiveThirdLevel({
-        items,
-        topPosition: rect.top - parentRect.top,
-      });
+    } else {
+      setActiveThirdLevel(items);
     }
   };
 
@@ -101,11 +82,8 @@ export default function NavItemIsland({
   };
 
   const handleMouseLeave = (e: MouseEvent) => {
-    const relatedTarget = e.relatedTarget as HTMLElement;
-    if (
-      !submenuRef.current?.contains(relatedTarget) &&
-      !thirdLevelRef.current?.contains(relatedTarget)
-    ) {
+    const related = e.relatedTarget as HTMLElement;
+    if (!submenuRef.current?.contains(related)) {
       setIsSubmenuVisible(false);
       setActiveThirdLevel(null);
     }
@@ -123,7 +101,7 @@ export default function NavItemIsland({
       >
         <a
           href={url}
-          class="h-[50px] flex items-center justify-center px-4 font-['FS_Emeric'] text-[16px] text-white hover:bg-[rgba(21,31,22,0.85)] transition-all duration-300 max-[1300px]:text-[14px] max-[1300px]:px-3"
+          class="h-[50px] flex items-center justify-center px-4 font-['FS_Emeric'] text-[16px] text-white hover:bg-[rgba(21,31,22,0.55)] transition-all duration-300 max-[1300px]:text-[14px] max-[1300px]:px-3"
         >
           {name}
         </a>
@@ -131,54 +109,57 @@ export default function NavItemIsland({
         {children && children.length > 0 && (
           <div
             ref={submenuRef}
-            class={`absolute hidden ${
-              isSubmenuVisible ? "!flex" : ""
-            } z-40 bg-[rgba(21,31,22,0.75)] backdrop-blur-[12px] transition-transform duration-300 overflow-y-auto scrollbar-custom`}
+            class={`absolute z-40 transition-transform duration-300 ${
+              isSubmenuVisible ? "flex" : "hidden"
+            }`}
             style={{
               top: "100%",
               left: 0,
               transform: submenuTransform,
-              maxHeight: calculateMaxHeight(children),
             }}
-            onMouseLeave={handleMouseLeave}
           >
-            <div class="flex">
-              <ul class="flex flex-col min-w-[243px]">
-                {children.map((node, i) => (
-                  <li
-                    key={`${node.url}-${i}`}
-                    class="relative"
-                    onMouseEnter={(e) => handleSubItemHover(node.children, e)}
-                  >
-                    <a
-                      class="hover:underline font-['FS_Emeric'] text-[16px] text-white block p-2 px-[22px]"
-                      href={node.url}
-                    >
-                      {node.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-
-              {activeThirdLevel && (
-                <div
-                  ref={thirdLevelRef}
-                  class="flex flex-col min-w-[200px] shadow-lg overflow-y-auto scrollbar-custom bg-[rgba(21,31,22,0.5)] backdrop-blur-[12px]"
+            {/* Submenu with blur background */}
+            <div class="relative flex">
+              <div class="relative min-w-[243px]">
+                <div class="absolute inset-0 bg-[rgba(21,31,22,0.55)] backdrop-blur-[12px] z-[-1]"></div>
+                <ul
+                  class="flex flex-col overflow-y-auto scrollbar-custom"
                   style={{
-                    maxHeight: calculateMaxHeight(activeThirdLevel.items),
+                    maxHeight: calculateMaxHeight(children),
                   }}
-                  onMouseEnter={() => setIsSubmenuVisible(true)}
-                  onMouseLeave={handleMouseLeave}
                 >
-                  {activeThirdLevel.items.map((child, i) => (
-                    <a
-                      key={`${child.url}-${i}`}
-                      class="text-white font-['FS_Emeric'] text-[16px] hover:underline p-2 px-[16px]"
-                      href={child.url}
+                  {children.map((node, i) => (
+                    <li
+                      key={`${node.url}-${i}`}
+                      class="hover:bg-[rgba(255,255,255,0.1)]"
+                      onMouseEnter={() => handleSubItemHover(node.children)}
                     >
-                      {child.name}
-                    </a>
+                      <a
+                        href={node.url}
+                        class="font-['FS_Emeric'] text-[16px] text-white block p-2 px-[22px] hover:underline"
+                      >
+                        {node.name}
+                      </a>
+                    </li>
                   ))}
+                </ul>
+              </div>
+
+              {/* Third level menu */}
+              {activeThirdLevel && (
+                <div class="relative min-w-[200px]">
+                  <div class="absolute inset-0 bg-[rgba(21,31,22,0.55)] backdrop-blur-[12px] z-[-1]"></div>
+                  <div class="flex flex-col">
+                    {activeThirdLevel.map((child, i) => (
+                      <a
+                        key={`${child.url}-${i}`}
+                        href={child.url}
+                        class="text-white font-['FS_Emeric'] text-[16px] hover:underline p-2 px-[16px] hover:bg-[rgba(255,255,255,0.1)]"
+                      >
+                        {child.name}
+                      </a>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>

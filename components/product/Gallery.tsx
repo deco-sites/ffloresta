@@ -62,13 +62,13 @@ export default function GallerySlider(props: Props) {
             {images.map((img, index) => (
               <Slider.Item index={index} class="carousel-item w-full">
                 <Image
-                  class="w-full"
+                  class="shadow-[5.62px_5.62px_7.03px_0px_rgba(0,0,0,0.15)] h-[98%] w-[98%]"
                   sizes="(max-width: 640px) 100vw, 40vw"
                   style={{ aspectRatio: ASPECT_RATIO }}
                   src={img.url!}
                   alt={img.alternateName}
-                  width={WIDTH}
-                  height={HEIGHT}
+                  width={"98%"}
+                  height={"98%"}
                   preload={index === 0}
                   loading={index === 0 ? "eager" : "lazy"}
                 />

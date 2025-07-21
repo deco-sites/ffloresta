@@ -3632,6 +3632,9 @@ details.collapse summary::-webkit-details-marker {
 .z-50 {
   z-index: 50;
 }
+.z-\[-1\] {
+  z-index: -1;
+}
 .z-\[-2\] {
   z-index: -2;
 }
@@ -3849,9 +3852,6 @@ details.collapse summary::-webkit-details-marker {
 }
 .inline {
   display: inline;
-}
-.\!flex {
-  display: flex !important;
 }
 .flex {
   display: flex;
@@ -4817,14 +4817,11 @@ details.collapse summary::-webkit-details-marker {
   --tw-bg-opacity: 1;
   background-color: rgb(198 207 186 / var(--tw-bg-opacity));
 }
-.bg-\[rgba\(21\2c 31\2c 22\2c 0\.5\)\] {
-  background-color: rgba(21,31,22,0.5);
+.bg-\[rgba\(21\2c 31\2c 22\2c 0\.55\)\] {
+  background-color: rgba(21,31,22,0.55);
 }
-.bg-\[rgba\(21\2c 31\2c 22\2c 0\.75\)\] {
-  background-color: rgba(21,31,22,0.75);
-}
-.bg-\[rgba\(21\2c 31\2c 22\2c 0\.85\)\] {
-  background-color: rgba(21,31,22,0.85);
+.bg-\[rgba\(21\2c 31\2c 22\2c 0\.6\)\] {
+  background-color: rgba(21,31,22,0.6);
 }
 .bg-\[var\(--bg-color\)\] {
   background-color: var(--bg-color);
@@ -5520,6 +5517,10 @@ details.collapse summary::-webkit-details-marker {
 .ring-offset-2 {
   --tw-ring-offset-width: 2px;
 }
+.blur {
+  --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
@@ -6028,8 +6029,12 @@ input[type="checkbox"]:checked::after {
   background-color: rgba(108,131,88,0.9);
 }
 
-.hover\:bg-\[rgba\(21\2c 31\2c 22\2c 0\.85\)\]:hover {
-  background-color: rgba(21,31,22,0.85);
+.hover\:bg-\[rgba\(21\2c 31\2c 22\2c 0\.55\)\]:hover {
+  background-color: rgba(21,31,22,0.55);
+}
+
+.hover\:bg-\[rgba\(255\2c 255\2c 255\2c 0\.1\)\]:hover {
+  background-color: rgba(255,255,255,0.1);
 }
 
 .hover\:bg-base-200:hover {
@@ -6658,6 +6663,10 @@ input[type="checkbox"]:checked::after {
     height: 2.25rem;
   }
 
+  .lg\:h-\[124px\] {
+    height: 124px;
+  }
+
   .lg\:max-h-9 {
     max-height: 2.25rem;
   }
@@ -6756,6 +6765,10 @@ input[type="checkbox"]:checked::after {
 
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-\[1fr_380px\] {
+    grid-template-columns: 1fr 380px;
   }
 
   .lg\:flex-row {
