@@ -7,7 +7,7 @@ import ProductDescription from "../../islands/ProductDescription.tsx";
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import { type LoadingFallbackProps } from "@deco/deco";
 import PromoCountdownIsland, {
-  ProductBannerPromoBannerProps,
+  type ProductBannerPromoBannerProps,
 } from "../../islands/ProductPagePromoBanner.tsx";
 
 export interface Props {
@@ -42,7 +42,7 @@ export default function ProductDetails({ page, productBanner }: Props) {
         class={clx(
           "container grid md:mt-16",
           "grid-cols-1 gap-9 py-0 px-4",
-          "lg:grid-cols-[1fr_380px] lg:gap-11 lg:px-0",
+          "lg:grid-cols-[1fr_380px] lg:gap-11 lg:px-0"
         )}
       >
         <div class="w-full flex flex-col">
