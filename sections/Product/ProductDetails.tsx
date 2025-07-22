@@ -15,6 +15,7 @@ export interface Props {
   page: ProductDetailsPage | null;
   productBanner?: {
     image: Image;
+    /** @description Data de termino da Promoção em ISO completo: YYYY-MM-DDTHH:mm:ss.sssZ  */
     countdownDate: string;
     title: string;
     promoName: string;
