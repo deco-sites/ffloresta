@@ -35,37 +35,43 @@ export default function PromoCountdownIsland({
   const { days, hours, minutes, seconds } = formatTime(timeLeft);
 
   return (
-    <div class="relative w-full text-white text-center">
-      {/* Imagem de fundo */}
-      <img
-        src={image}
-        alt={promoName}
-        class="w-full object-cover max-h-[400px]"
-        loading="eager"
-      />
+    <div class="flex flex-col">
+      <div class="relative w-full text-white text-center">
+        <img
+          src={image}
+          alt={promoName}
+          class="w-full object-cover max-h-[60px]"
+          loading="eager"
+        />
 
-      {/* Overlay com título e countdown */}
-      <div class="absolute inset-0 flex flex-col justify-center items-center px-4 bg-black/40">
-        <h2 class="text-3xl md:text-5xl font-bold mb-3">{title}</h2>
+        <div class="absolute inset-0 flex justify-between items-start p-3 bg-black/40">
+          <h2 class="text-lg md:text-sm">{title}</h2>
 
-        <div class="flex items-center justify-center gap-4 text-lg md:text-xl">
-          <div class="text-left">
-            <p class="uppercase text-sm font-semibold tracking-wide text-gray-300">
+          <div class="flex flex-col items-center justify-end text-lg md:text-xl">
+            <p class="font-['FS_Emeric'] text-left text-[12px] leading-none uppercase tracking-wide text-white">
               Termina em:
             </p>
-          </div>
-          <div class="font-mono font-bold flex gap-2">
-            <span>{days}d</span>
-            <span>{String(hours).padStart(2, "0")}h</span>
-            <span>{String(minutes).padStart(2, "0")}m</span>
-            <span>{String(seconds).padStart(2, "0")}s</span>
+            <div class="font-['FS_Emeric'] leading-none flex items-center gap-1">
+              <span class="text-[12px]">{days}D</span>
+              <div class="flex items-center leading-none">
+                <span class="text-[12px] leading-none">
+                  {String(hours).padStart(2, "0")}:
+                </span>
+                <span class="text-[12px] leading-none">
+                  {String(minutes).padStart(2, "0")}:
+                </span>
+                <span class="text-[12px] leading-none">
+                  {String(seconds).padStart(2, "0")}
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-      {/* Retângulo verde abaixo da imagem */}
-      <div class="bg-green-600 text-white flex items-center justify-center gap-2 py-3">
-        <strong class="text-base md:text-lg">{promoName}</strong>
+      <div class="bg-[#97a37f]  flex items-center justify-start gap-2 p-2">
+        <strong class="font-['FS_Emeric'] text-base text-[#3A4332]">
+          {promoName}
+        </strong>
       </div>
     </div>
   );
