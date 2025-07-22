@@ -8,6 +8,7 @@ import * as $CustomSearchBar from "./islands/CustomSearchBar.tsx";
 import * as $NavItemIsland from "./islands/NavItemIsland.tsx";
 import * as $Newsletter from "./islands/Newsletter.tsx";
 import * as $ProductDescription from "./islands/ProductDescription.tsx";
+import * as $ProductPagePromoBanner from "./islands/ProductPagePromoBanner.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -20,6 +21,7 @@ const manifest = {
     "./islands/NavItemIsland.tsx": $NavItemIsland,
     "./islands/Newsletter.tsx": $Newsletter,
     "./islands/ProductDescription.tsx": $ProductDescription,
+    "./islands/ProductPagePromoBanner.tsx": $ProductPagePromoBanner,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

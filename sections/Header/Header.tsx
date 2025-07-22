@@ -113,13 +113,11 @@ const Desktop = ({ navItems, logo, searchBar }: Props) => (
         </div>
       </div>
 
-      <div class="flex justify-between items-center bg-[rgba(21,31,22,0.6)] backdrop-blur-[12px]">
-        <ul class="container flex justify-between">
-          {navItems?.slice(0, 10).map((item) => (
-            <NavItemIsland item={item} />
-          ))}
-        </ul>
-      </div>
+      {navItems && (
+        <div>
+          <NavItemIsland navItems={navItems} />
+        </div>
+      )}
     </div>
   </>
 );
@@ -131,7 +129,7 @@ const Mobile = ({
   searchBar,
 }: Props & { alerts: HTMLWidget[] }) => (
   <div class="w-full">
-    <div class="flex items-center justify-between w-full py-3 px-4 gap-2">
+    <div class="flex items-center justify-between w-full py-3 px-4 gap-2 bg-[#1F251C]">
       <div class="flex-1 flex justify-start">
         <label
           for={SIDEMENU_DRAWER_ID}
@@ -175,17 +173,17 @@ const Mobile = ({
       id={SIDEMENU_DRAWER_ID}
       aside={
         <HeaderDrawer.Aside drawer={SIDEMENU_DRAWER_ID}>
-          {loading === "lazy" ? (
-            <div
-              id={SIDEMENU_CONTAINER_ID}
-              class="h-full flex items-center justify-center"
-              style={{ minWidth: "100vw" }}
-            >
-              <span class="loading loading-spinner" />
-            </div>
-          ) : (
-            <Menu navItems={navItems ?? []} />
-          )}
+          {loading === "lazy"
+            ? (
+              <div
+                id={SIDEMENU_CONTAINER_ID}
+                class="h-full flex items-center justify-center"
+                style={{ minWidth: "100vw" }}
+              >
+                <span class="loading loading-spinner" />
+              </div>
+            )
+            : <Menu navItems={navItems ?? []} />}
         </HeaderDrawer.Aside>
       }
     />

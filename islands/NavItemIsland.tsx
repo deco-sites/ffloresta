@@ -1,9 +1,9 @@
-import { useRef, useState } from "preact/hooks";
+import { useState } from "preact/hooks";
 import type { SiteNavigationElement } from "apps/commerce/types.ts";
-import { NAVBAR_HEIGHT_DESKTOP } from "../constants.ts";
 
-const ITEM_HEIGHT = 40;
-const VISIBLE_ITEMS = 8;
+interface Props {
+  navItems: SiteNavigationElement[];
+}
 
 const scrollbarStyles = `
   .scrollbar-custom::-webkit-scrollbar {
@@ -32,140 +32,70 @@ const scrollbarStyles = `
   }
 `;
 
-export default function NavItemIsland({
-  item,
-}: {
-  item: SiteNavigationElement;
-}) {
-  const { url, name, children } = item;
-  const submenuRef = useRef<HTMLDivElement>(null);
-  const [submenuTransform, setSubmenuTransform] = useState("translateX(0)");
-  const [isSubmenuVisible, setIsSubmenuVisible] = useState(false);
-  const [activeThirdLevel, setActiveThirdLevel] = useState<
-    SiteNavigationElement[] | null
+export default function NavItemIsland({ navItems }: Props) {
+  const [hoveredItem, setHoveredItem] = useState<SiteNavigationElement | null>(
+    null,
+  );
+  const [hoveredSubItem, setHoveredSubItem] = useState<
+    SiteNavigationElement | null
   >(null);
 
-  const calculateMaxHeight = (items: SiteNavigationElement[]) => {
-    const itemCount = items.length;
-    return itemCount > VISIBLE_ITEMS
-      ? `${VISIBLE_ITEMS * ITEM_HEIGHT}px`
-      : `${itemCount * ITEM_HEIGHT}px`;
-  };
-
-  const adjustPosition = () => {
-    const node = submenuRef.current;
-    if (!node) return;
-    const rect = node.getBoundingClientRect();
-    const overflowRight = rect.right - window.innerWidth;
-    const overflowLeft = rect.left;
-
-    if (overflowRight > 0) {
-      setSubmenuTransform(`translateX(-${overflowRight + 16}px)`);
-    } else if (overflowLeft < 0) {
-      setSubmenuTransform(`translateX(${Math.abs(overflowLeft) + 16}px)`);
-    } else {
-      setSubmenuTransform("translateX(0)");
-    }
-  };
-
-  const handleSubItemHover = (items: SiteNavigationElement[] | undefined) => {
-    if (!items || items.length === 0) {
-      setActiveThirdLevel(null);
-    } else {
-      setActiveThirdLevel(items);
-    }
-  };
-
-  const handleMouseEnter = () => {
-    adjustPosition();
-    setIsSubmenuVisible(true);
-  };
-
-  const handleMouseLeave = (e: MouseEvent) => {
-    const related = e.relatedTarget as HTMLElement;
-    if (!submenuRef.current?.contains(related)) {
-      setIsSubmenuVisible(false);
-      setActiveThirdLevel(null);
-    }
-  };
-
   return (
-    <>
-      <style dangerouslySetInnerHTML={{ __html: scrollbarStyles }} />
+    <div
+      class="relative"
+      onMouseLeave={() => {
+        setHoveredItem(null);
+        setHoveredSubItem(null);
+      }}
+    >
+      <style>{scrollbarStyles}</style>
+      {/* Menu principal */}
+      <ul class="flex gap-6 relative bg-[rgba(21,31,22,0.6)] backdrop-blur-[12px]">
+        <div class="container  flex items-center justify-between">
+          {navItems.map((item) => (
+            <li
+              key={item.url}
+              class="text-white px-4 cursor-pointer h-[50px] flex items-center hover:bg-[rgba(255,255,255,0.075)] transition-all duration-200 ease-in-out"
+              onMouseEnter={() => setHoveredItem(item)}
+            >
+              <a href={item.url}>{item.name}</a>
+            </li>
+          ))}
+        </div>
+      </ul>
 
-      <li
-        class="group relative flex items-center"
-        style={{ height: NAVBAR_HEIGHT_DESKTOP }}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
-        <a
-          href={url}
-          class="h-[50px] flex items-center justify-center px-4 font-['FS_Emeric'] text-[16px] text-white hover:bg-[rgba(21,31,22,0.55)] transition-all duration-300 max-[1300px]:text-[14px] max-[1300px]:px-3"
-        >
-          {name}
-        </a>
-
-        {children && children.length > 0 && (
-          <div
-            ref={submenuRef}
-            class={`absolute z-40 transition-transform duration-300 ${
-              isSubmenuVisible ? "flex" : "hidden"
-            }`}
-            style={{
-              top: "100%",
-              left: 0,
-              transform: submenuTransform,
-            }}
-          >
-            {/* Submenu with blur background */}
-            <div class="relative flex">
-              <div class="relative min-w-[243px]">
-                <div class="absolute inset-0 bg-[rgba(21,31,22,0.55)] backdrop-blur-[12px] z-[-1]"></div>
-                <ul
-                  class="flex flex-col overflow-y-auto scrollbar-custom"
-                  style={{
-                    maxHeight: calculateMaxHeight(children),
-                  }}
+      {/* Submenu */}
+      {hoveredItem?.children && (
+        <div class="absolute left-2/4 transform -translate-x-2/4 z-40 container">
+          <div class="flex items-start">
+            <ul class="min-w-[243px] max-h-[430px] overflow-y-auto scrollbar-custom bg-[rgba(21,31,22,0.6)] backdrop-blur-[12px]">
+              {hoveredItem.children.map((child) => (
+                <li
+                  key={child.url}
+                  class="text-white px-4 py-2 hover:bg-[rgba(255,255,255,0.075)] cursor-pointer transition-all duration-200 ease-in-out"
+                  onMouseEnter={() => setHoveredSubItem(child)}
                 >
-                  {children.map((node, i) => (
-                    <li
-                      key={`${node.url}-${i}`}
-                      class="hover:bg-[rgba(255,255,255,0.1)]"
-                      onMouseEnter={() => handleSubItemHover(node.children)}
-                    >
-                      <a
-                        href={node.url}
-                        class="font-['FS_Emeric'] text-[16px] text-white block p-2 px-[22px] hover:underline"
-                      >
-                        {node.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                  <a href={child.url}>{child.name}</a>
+                </li>
+              ))}
+            </ul>
 
-              {/* Third level menu */}
-              {activeThirdLevel && (
-                <div class="relative min-w-[200px]">
-                  <div class="absolute inset-0 bg-[rgba(21,31,22,0.55)] backdrop-blur-[12px] z-[-1]"></div>
-                  <div class="flex flex-col">
-                    {activeThirdLevel.map((child, i) => (
-                      <a
-                        key={`${child.url}-${i}`}
-                        href={child.url}
-                        class="text-white font-['FS_Emeric'] text-[16px] hover:underline p-2 px-[16px] hover:bg-[rgba(255,255,255,0.1)]"
-                      >
-                        {child.name}
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
+            {/* Terceiro nível */}
+            {hoveredSubItem?.children && (
+              <ul class="min-w-[200px] w-full h-full bg-[rgba(14,20,15,0.6)] backdrop-blur-[12px] border-l border-white/10">
+                {hoveredSubItem.children.map((third) => (
+                  <li
+                    key={third.url}
+                    class="text-white px-4 py-2 hover:bg-[rgba(255,255,255,0.075)] cursor-pointer transition-all duration-200 ease-in-out"
+                  >
+                    <a href={third.url}>{third.name}</a>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
-        )}
-      </li>
-    </>
+        </div>
+      )}
+    </div>
   );
 }

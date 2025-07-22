@@ -1,17 +1,19 @@
 import { ProductDetailsPage } from "apps/commerce/types.ts";
 import ImageGallerySlider from "../../components/product/Gallery.tsx";
 import ProductInfo from "../../components/product/ProductInfo.tsx";
-// import Breadcrumb from "../../components/ui/Breadcrumb.tsx";
 import Section from "../../components/ui/Section.tsx";
 import { clx } from "../../sdk/clx.ts";
 import ProductDescription from "../../islands/ProductDescription.tsx";
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import { type LoadingFallbackProps } from "@deco/deco";
+import PromoCountdownIsland, {
+  ProductBannerPromoBannerProps,
+} from "../../islands/ProductPagePromoBanner.tsx";
 
 export interface Props {
   /** @title Integration */
   page: ProductDetailsPage | null;
-  productBanner?: ImageWidget;
+  productBanner?: ProductBannerPromoBannerProps;
 }
 
 export default function ProductDetails({ page, productBanner }: Props) {
@@ -33,12 +35,9 @@ export default function ProductDetails({ page, productBanner }: Props) {
 
   return (
     <div class="w-full flex flex-col">
-      {/* <Breadcrumb itemListElement={page.breadcrumbList.itemListElement} /> */}
-      {productBanner && (
-        <div class="block lg:hidden my-5">
-          <img src={productBanner} alt={page.productName} class="w-full" />
-        </div>
-      )}
+      <div class="block lg:hidden mb-5">
+        {productBanner && <PromoCountdownIsland {...productBanner} />}
+      </div>
       <div
         class={clx(
           "container grid md:mt-16",
