@@ -9,6 +9,7 @@ import { type LoadingFallbackProps } from "@deco/deco";
 import PromoCountdownIsland, {
   type ProductBannerPromoBannerProps,
 } from "../../islands/ProductPagePromoBanner.tsx";
+import type { ImageWidget as Image } from "apps/admin/widgets.ts";
 
 export interface Props {
   /** @title Integration */
