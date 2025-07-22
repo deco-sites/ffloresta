@@ -13,7 +13,12 @@ import PromoCountdownIsland, {
 export interface Props {
   /** @title Integration */
   page: ProductDetailsPage | null;
-  productBanner?: ProductBannerPromoBannerProps;
+  productBanner?: {
+    image: Image;
+    countdownDate: string;
+    title: string;
+    promoName: string;
+  };
 }
 
 export default function ProductDetails({ page, productBanner }: Props) {
@@ -51,7 +56,7 @@ export default function ProductDetails({ page, productBanner }: Props) {
         <div class="h-fit px-5 pb-4 shadow-[5.62px_5.62px_7.03px_0px_rgba(0,0,0,0.15)] mb-10 lg:mb-40">
           {productBanner && (
             <div class="hidden lg:block mb-5">
-              <img src={productBanner} alt={page.productName} class="w-full" />
+              {productBanner && <PromoCountdownIsland {...productBanner} />}
             </div>
           )}
           <ProductInfo page={page} />
