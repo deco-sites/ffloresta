@@ -4003,6 +4003,9 @@ details.collapse summary::-webkit-details-marker {
 .max-h-\[55px\] {
   max-height: 55px;
 }
+.max-h-\[576px\] {
+  max-height: 576px;
+}
 .max-h-\[60px\] {
   max-height: 60px;
 }
@@ -4920,6 +4923,10 @@ details.collapse summary::-webkit-details-marker {
 .object-fill {
   -o-object-fit: fill;
      object-fit: fill;
+}
+.object-none {
+  -o-object-fit: none;
+     object-fit: none;
 }
 .object-scale-down {
   -o-object-fit: scale-down;
