@@ -49,7 +49,7 @@ export default function ProductDetails({ page, productBanner }: Props) {
         class={clx(
           "container grid md:mt-16",
           "grid-cols-1 gap-9 py-0 px-4",
-          "lg:grid-cols-[1fr_380px] lg:gap-11 lg:px-0"
+          "lg:grid-cols-[1fr_380px] lg:gap-11 lg:px-0",
         )}
       >
         <div class="w-full flex flex-col">
