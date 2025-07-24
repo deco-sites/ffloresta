@@ -62,7 +62,7 @@ export default function GallerySlider(props: Props) {
             {images.map((img, index) => (
               <Slider.Item index={index} class="carousel-item w-full">
                 <Image
-                  class="shadow-[5.62px_5.62px_7.03px_0px_rgba(0,0,0,0.15)] h-[98%] max-h-[576px] w-[98%] object-none"
+                  class="shadow-[5.62px_5.62px_7.03px_0px_rgba(0,0,0,0.15)] h-[98%] max-h-[576px] w-[98%] object-contain"
                   sizes="(max-width: 640px) 100vw, 40vw"
                   style={{ aspectRatio: "auto" }}
                   src={img.url!}
