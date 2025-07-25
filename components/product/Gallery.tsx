@@ -24,15 +24,11 @@ export default function GallerySlider(props: Props) {
 
   const {
     page: {
-      product: { name, isVariantOf, image: pImages },
+      product: { isVariantOf, image: pImages },
     },
   } = props;
 
-  const groupImages = isVariantOf?.image ?? pImages ?? [];
-  const filtered = groupImages.filter((img) =>
-    name?.includes(img.alternateName || "")
-  );
-  const images = filtered.length > 0 ? filtered : groupImages;
+  const images = pImages || isVariantOf.image;
 
   return (
     <>
@@ -62,7 +58,7 @@ export default function GallerySlider(props: Props) {
             {images.map((img, index) => (
               <Slider.Item index={index} class="carousel-item w-full">
                 <Image
-                  class="shadow-[5.62px_5.62px_7.03px_0px_rgba(0,0,0,0.15)] h-[98%] max-h-[576px] w-[98%] object-contain"
+                  class="h-[98%] max-h-[576px] w-[98%] object-contain"
                   sizes="(max-width: 640px) 100vw, 40vw"
                   style={{ aspectRatio: "auto" }}
                   src={img.url!}

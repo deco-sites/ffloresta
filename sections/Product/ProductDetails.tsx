@@ -10,6 +10,7 @@ import PromoCountdownIsland, {
   type ProductBannerPromoBannerProps,
 } from "../../islands/ProductPagePromoBanner.tsx";
 import type { ImageWidget as Image } from "apps/admin/widgets.ts";
+import Breadcrumb from "../../components/ui/Breadcrumb.tsx";
 
 export interface Props {
   /** @title Integration */
@@ -40,16 +41,23 @@ export default function ProductDetails({ page, productBanner }: Props) {
     );
   }
 
+  console.log(page.product, "page.product");
+
   return (
     <div class="w-full flex flex-col">
-      <div class="block lg:hidden mb-5">
+      <div class="block lg:hidden mt-6">
         {productBanner && <PromoCountdownIsland {...productBanner} />}
       </div>
+
+      <div class="container mt-6">
+        <Breadcrumb itemListElement={page.breadcrumbList.itemListElement} />
+      </div>
+
       <div
         class={clx(
-          "container grid md:mt-16",
-          "grid-cols-1 gap-9 py-0 px-4",
-          "lg:grid-cols-[1fr_380px] lg:gap-11 lg:px-0",
+          "container grid md:mt-8",
+          "grid-cols-1 gap-9 py-0",
+          "lg:grid-cols-[1fr_380px] lg:gap-11",
         )}
       >
         <div class="w-full flex flex-col">

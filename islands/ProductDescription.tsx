@@ -7,8 +7,6 @@ interface Props {
 export default function ProductDescriptionIsland({ page }: Props) {
   const activeTab = useSignal("Descrição");
 
-  console.log(page.product, "product");
-  // Função para buscar propriedades específicas
   const getProperty = (key: string) =>
     page.product?.isVariantOf?.additionalProperty?.find(
       (prop) => prop.name === key,
@@ -20,8 +18,6 @@ export default function ProductDescriptionIsland({ page }: Props) {
     (prop) =>
       prop.propertyID === "Especificações Técnicas" && prop.name && prop.value,
   );
-
-  console.log(description, "description");
 
   const tabs = [];
 
