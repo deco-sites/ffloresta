@@ -1,6 +1,6 @@
 import { Product } from "apps/commerce/types.ts";
 import { clx } from "../../sdk/clx.ts";
-import Slider from "../ui/Slider.tsx";
+import Slider from "../../islands/Slider.tsx";
 import ProductCard from "./ProductCard.tsx";
 import { useId } from "../../sdk/useId.ts";
 
@@ -15,7 +15,12 @@ function ProductSliderForBGShelf({ products, itemListName }: Props) {
   return (
     <>
       <div id={id} class="relative px-[20px] lg:px-[48px] container mx-auto">
-        <Slider class="carousel carousel-center gap-3 lg:gap-6 w-full">
+        <Slider
+          rootId={id}
+          interval={8000}
+          autoplay={true}
+          class="carousel carousel-center gap-3 lg:gap-6 w-full"
+        >
           {products?.map((product, index) => (
             <Slider.Item
               index={index}
@@ -79,7 +84,7 @@ function ProductSliderForBGShelf({ products, itemListName }: Props) {
           </svg>
         </Slider.NextButton>
       </div>
-      <Slider.JS rootId={id} />
+      <Slider.JS rootId={id} interval={8000} autoplay={true} />
     </>
   );
 }

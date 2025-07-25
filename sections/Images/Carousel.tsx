@@ -1,7 +1,7 @@
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import { Picture, Source } from "apps/website/components/Picture.tsx";
 import Section from "../../components/ui/Section.tsx";
-import Slider from "../../components/ui/Slider.tsx";
+import Slider from "../../islands/Slider.tsx";
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
@@ -112,7 +112,13 @@ function Carousel({ images = [], preload, interval }: Props) {
       )}
     >
       <div class="col-span-full row-span-full">
-        <Slider class="carousel carousel-center w-full gap-6">
+        <Slider
+          rootId={id}
+          interlval={interval && interval * 1e3}
+          infinite
+          autoplay
+          class="carousel carousel-center w-full gap-6"
+        >
           {images.map((image, index) => (
             <Slider.Item index={index} class="carousel-item w-full">
               <BannerItem image={image} lcp={index === 0 && preload} />
@@ -141,7 +147,12 @@ function Carousel({ images = [], preload, interval }: Props) {
         ))}
       </ul>
 
-      <Slider.JS rootId={id} interval={interval && interval * 1e3} infinite />
+      <Slider.JS
+        rootId={id}
+        interval={interval && interval * 1e3}
+        infinite
+        autoplay={true}
+      />
     </div>
   );
 }

@@ -9,7 +9,7 @@ import PromoCountdownIsland from "../../islands/ProductPagePromoBanner.tsx";
 import type { ImageWidget as Image } from "apps/admin/widgets.ts";
 import { HTMLWidget as HTML } from "apps/admin/widgets.ts";
 import Breadcrumb from "../../components/ui/Breadcrumb.tsx";
-import Benefits from "../Content/Benefits.tsx";
+import ProductBenefits from "../../components/product/ProductBenefits.tsx";
 
 interface Benefit {
   benefitImgSrc: Image;
@@ -66,14 +66,13 @@ export default function ProductDetails({
         class={clx(
           "container grid md:mt-8",
           "grid-cols-1 gap-9 py-0",
-          "lg:grid-cols-[1fr_380px] lg:gap-11"
+          "lg:grid-cols-[1fr_380px] lg:gap-11",
         )}
       >
         <div class="w-full flex flex-col">
           <ImageGallerySlider page={page} />
-          {benefits && <Benefits benefits={benefits} />}
         </div>
-        <div class="h-fit px-5 pb-4 shadow-[5.62px_5.62px_7.03px_0px_rgba(0,0,0,0.15)] mb-10 lg:mb-40">
+        <div class="h-fit px-5 pb-4 shadow-[5.62px_5.62px_7.03px_0px_rgba(0,0,0,0.15)] mb-10 lg:mb-0">
           {productBanner && (
             <div class="hidden lg:block mb-5">
               {productBanner && <PromoCountdownIsland {...productBanner} />}
@@ -81,6 +80,9 @@ export default function ProductDetails({
           )}
           <ProductInfo page={page} />
         </div>
+      </div>
+      <div class="container">
+        {benefits && <ProductBenefits benefits={benefits} />}
       </div>
 
       <ProductDescription page={page} />

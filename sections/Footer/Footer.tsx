@@ -116,7 +116,7 @@ function Footer({
           )}
         </div>
 
-        <div class="grid grid-flow-row sm:grid-flow-col gap-6">
+        <div class="flex flex-col sm:grid sm:grid-flow-row lg:grid-cols-2 gap-6">
           {device === "mobile"
             ? (
               <div>
@@ -166,7 +166,7 @@ function Footer({
               <div class="grid grid-flow-row sm:grid-flow-col gap-6">
                 {links.map(({ title, itens }, index) => (
                   <div key={title + index} class="flex flex-col gap-[18px]">
-                    <div class="font-normal text-[22px]  text-[#353535]">
+                    <div class="font-normal text-[16px]  text-[#353535]">
                       <p>{title}</p>
                       <hr class="w-full max-w-[75px] h-1 bg-[#273D28] rounded-sm" />
                     </div>
@@ -174,7 +174,7 @@ function Footer({
                       {itens.map(({ title, href }, idx) => (
                         <a
                           key={title + idx}
-                          class="font-normal text-[20px]  text-[#353535]"
+                          class="font-normal text-[14px]  text-[#353535]"
                           href={href}
                         >
                           {title}
@@ -190,9 +190,7 @@ function Footer({
             <div class="w-full">
               {social.map(({ title, itens }, index) => (
                 <div class="w-full" key={title + index}>
-                  <div
-                    class={`font-normal text-[16px] lg:text-[22px]  text-[#353535]`}
-                  >
+                  <div class={`font-normal text-[16px] text-[#353535]`}>
                     <p>{title}</p>
                     {device === "mobile"
                       ? (
@@ -245,7 +243,7 @@ function Footer({
             <div class="flex flex-wrap gap-2">
               {paymentMethods.map(({ title, payments }, index) => (
                 <div key={title + index}>
-                  <div class="font-normal text-[16px] lg:text-[22px]  text-[#353535]">
+                  <div class="font-normal text-[16px]   text-[#353535]">
                     <p>{title}</p>
                     {device === "mobile"
                       ? (
@@ -275,35 +273,33 @@ function Footer({
         </div>
 
         <div>
-          <p class="font-bold text-[16px] lg:text-[24px]  text-[#273D28] font-['FS_Emeric'] mb-[30px] mt-[50px]">
+          <p class="font-bold text-[16px] text-[#273D28] font-['FS_Emeric'] mb-[30px] mt-[50px]">
             {lojas.title}
           </p>
           <div class="flex flex-col lg:flex-row gap-x-[20px]">
             {device === "mobile"
               ? (
                 <div class="flex flex-col gap-y-[10px]">
-                  <p class="text-[#273D28] text-[14px] lg:text-[22px]">
+                  <p class="text-[#273D28] text-[14px]">
                     {lojas.lojas[0].title}
                   </p>
-                  <p class="text-[#273D28] text-[12px] lg:text-[16px] font-bold underline decoration-[#273D28]">
+                  <p class="text-[#273D28] text-[12px] font-bold underline decoration-[#273D28]">
                     {lojas.lojas[0].tuor}
                   </p>
-                  <p class="text-[#273D28] text-[12px] lg:text-[16px]">
-                    {lojas.lojas[0].end}
-                  </p>
-                  <div class="flex flex-row">
-                    <p class="text-[#273D28] text-[12px] lg:text-[16px] font-bold">
+                  <p class="text-[#273D28] text-[12px]">{lojas.lojas[0].end}</p>
+                  <div class="flex flex-row flex-wrap">
+                    <p class="text-[#273D28] text-[12px] font-bold">
                       TELEFONE:
                     </p>
-                    <p class="text-[#273D28] text-[12px] lg:text-[16px]">
+                    <p class="text-[#273D28] text-[12px]">
                       {lojas.lojas[0].tel}
                     </p>
                   </div>
                   <div>
-                    <p class="text-[#273D28] text-[12px] lg:text-[16px] font-bold underline decoration-[#273D28]">
+                    <p class="text-[#273D28] text-[12px] font-bold underline decoration-[#273D28]">
                       HORÁRIO DE ATENDIMENTO
                     </p>
-                    <p class="text-[#273D28] text-[12px] lg:text-[16px]">
+                    <p class="text-[#273D28] text-[12px]">
                       {lojas.lojas[0].horario}
                     </p>
                   </div>
@@ -317,30 +313,22 @@ function Footer({
                     idx,
                   ) => (
                     <div key={idx} class="flex flex-col gap-y-[10px]">
-                      <p class="text-[#273D28] text-[14px] lg:text-[22px]">
-                        {title}
-                      </p>
-                      <p class="text-[#273D28] text-[12px] lg:text-[16px] font-bold underline decoration-[#273D28]">
+                      <p class="text-[#273D28] text-[16px]">{title}</p>
+                      <p class="text-[#273D28] text-[14px] font-bold underline decoration-[#273D28]">
                         {tuor}
                       </p>
-                      <p class="text-[#273D28] text-[12px] lg:text-[16px]">
-                        {end}
-                      </p>
-                      <div class="flex flex-row">
-                        <p class="text-[#273D28] text-[12px] lg:text-[16px] font-bold">
+                      <p class="text-[#273D28] text-[14px]">{end}</p>
+                      <div class="flex flex-row flex-wrap">
+                        <p class="text-[#273D28] text-[14px] font-bold">
                           TELEFONE:
                         </p>
-                        <p class="text-[#273D28] text-[12px] lg:text-[16px]">
-                          {tel}
-                        </p>
+                        <p class="text-[#273D28] text-[14px]">{tel}</p>
                       </div>
                       <div>
-                        <p class="text-[#273D28] text-[12px] lg:text-[16px] font-bold underline decoration-[#273D28]">
+                        <p class="text-[#273D28] text-[14px] font-bold underline decoration-[#273D28]">
                           HORÁRIO DE ATENDIMENTO
                         </p>
-                        <p class="text-[#273D28] text-[12px] lg:text-[16px]">
-                          {horario}
-                        </p>
+                        <p class="text-[#273D28] text-[14px]">{horario}</p>
                       </div>
                     </div>
                   ))}

@@ -9,6 +9,7 @@ import * as $NavItemIsland from "./islands/NavItemIsland.tsx";
 import * as $Newsletter from "./islands/Newsletter.tsx";
 import * as $ProductDescription from "./islands/ProductDescription.tsx";
 import * as $ProductPagePromoBanner from "./islands/ProductPagePromoBanner.tsx";
+import * as $Slider from "./islands/Slider.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -22,6 +23,7 @@ const manifest = {
     "./islands/Newsletter.tsx": $Newsletter,
     "./islands/ProductDescription.tsx": $ProductDescription,
     "./islands/ProductPagePromoBanner.tsx": $ProductPagePromoBanner,
+    "./islands/Slider.tsx": $Slider,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

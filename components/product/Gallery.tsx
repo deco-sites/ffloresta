@@ -2,7 +2,6 @@ import { ProductDetailsPage } from "apps/commerce/types.ts";
 import Image from "apps/website/components/Image.tsx";
 import ProductImageZoom from "./ProductImageZoom.tsx";
 import Slider from "../ui/Slider.tsx";
-import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
 
 export interface Props {
@@ -12,7 +11,6 @@ export interface Props {
 
 const WIDTH = 820;
 const HEIGHT = 615;
-const ASPECT_RATIO = `${WIDTH} / ${HEIGHT}`;
 
 export default function GallerySlider(props: Props) {
   const id = useId();

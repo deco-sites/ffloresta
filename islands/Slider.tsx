@@ -1,5 +1,5 @@
 import type { JSX } from "preact";
-import { clx } from "../../sdk/clx.ts";
+import { clx } from "../sdk/clx.ts";
 import { useScript } from "@deco/deco/hooks";
 
 function Dot({
@@ -53,22 +53,16 @@ export interface Props {
   scroll?: "smooth" | "auto";
   interval?: number;
   infinite?: boolean;
-  autoplay?: boolean; // Nova prop para controlar autoplay
+  autoplay?: boolean;
 }
 
 const onLoad = ({ rootId, scroll, interval, infinite, autoplay }: Props) => {
   function init() {
-    // Percentage of the item that has to be inside the container
-    // for it it be considered as inside the container
     const THRESHOLD = 0.6;
     const intersectionX = (element: DOMRect, container: DOMRect): number => {
       const delta = container.width / 1000;
-      if (element.right < container.left - delta) {
-        return 0.0;
-      }
-      if (element.left > container.right + delta) {
-        return 0.0;
-      }
+      if (element.right < container.left - delta) return 0.0;
+      if (element.left > container.right + delta) return 0.0;
       if (element.left < container.left - delta) {
         return element.right - container.left + delta;
       }
@@ -77,23 +71,22 @@ const onLoad = ({ rootId, scroll, interval, infinite, autoplay }: Props) => {
       }
       return element.width;
     };
-    // as any are ok in typeguard functions
+
     const isHTMLElement = (x: Element): x is HTMLElement =>
-      // deno-lint-ignore no-explicit-any
       typeof (x as any).offsetLeft === "number";
+
     const root = document.getElementById(rootId);
     const slider = root?.querySelector<HTMLElement>("[data-slider]");
     const items = root?.querySelectorAll<HTMLElement>("[data-slider-item]");
     const prev = root?.querySelector<HTMLElement>('[data-slide="prev"]');
     const next = root?.querySelector<HTMLElement>('[data-slide="next"]');
     const dots = root?.querySelectorAll<HTMLElement>("[data-dot]");
+
     if (!root || !slider || !items || items.length === 0) {
-      console.warn(
-        "Missing necessary slider attributes. It will not work as intended. Necessary elements:",
-        { root, slider, items, rootId },
-      );
+      console.warn("Slider elements missing", { root, slider, items, rootId });
       return;
     }
+
     const getElementsInsideContainer = () => {
       const indices: number[] = [];
       const sliderRect = slider.getBoundingClientRect();
@@ -101,113 +94,120 @@ const onLoad = ({ rootId, scroll, interval, infinite, autoplay }: Props) => {
         const item = items.item(index);
         const rect = item.getBoundingClientRect();
         const ratio = intersectionX(rect, sliderRect) / rect.width;
-        if (ratio > THRESHOLD) {
-          indices.push(index);
-        }
+        if (ratio > THRESHOLD) indices.push(index);
       }
       return indices;
     };
+
     const goToItem = (to: number) => {
       const item = items.item(to);
-      if (!isHTMLElement(item)) {
-        console.warn(
-          `Element at index ${to} is not an html element. Skipping carousel`,
-        );
-        return;
-      }
+      if (!isHTMLElement(item)) return;
+
       slider.scrollTo({
         top: 0,
         behavior: scroll,
         left: item.offsetLeft - slider.offsetLeft,
       });
     };
-    const onClickPrev = () => {
-      event?.stopPropagation();
+
+    const onClickPrev = (event: Event) => {
+      event.stopPropagation();
       const indices = getElementsInsideContainer();
-      // Wow! items per page is how many elements are being displayed inside the container!!
       const itemsPerPage = indices.length;
       const isShowingFirst = indices[0] === 0;
       const pageIndex = Math.floor(indices[indices.length - 1] / itemsPerPage);
+
       goToItem(
         isShowingFirst ? items.length - 1 : (pageIndex - 1) * itemsPerPage,
       );
     };
-    const onClickNext = () => {
+
+    const onClickNext = (event?: Event) => {
       event?.stopPropagation();
       const indices = getElementsInsideContainer();
-      // Wow! items per page is how many elements are being displayed inside the container!!
       const itemsPerPage = indices.length;
       const isShowingLast = indices[indices.length - 1] === items.length - 1;
       const pageIndex = Math.floor(indices[0] / itemsPerPage);
+
       goToItem(isShowingLast ? 0 : (pageIndex + 1) * itemsPerPage);
     };
+
     const observer = new IntersectionObserver(
       (elements) =>
         elements.forEach((e) => {
           const item = e.target.getAttribute("data-slider-item");
           const index = Number(item) || 0;
           const dot = dots?.item(index);
+
           if (e.isIntersecting) {
             dot?.setAttribute("disabled", "");
           } else {
             dot?.removeAttribute("disabled");
           }
+
           if (!infinite) {
             if (index === 0) {
-              if (e.isIntersecting) {
-                prev?.setAttribute("disabled", "");
-              } else {
-                prev?.removeAttribute("disabled");
-              }
+              e.isIntersecting
+                ? prev?.setAttribute("disabled", "")
+                : prev?.removeAttribute("disabled");
             }
             if (index === items.length - 1) {
-              if (e.isIntersecting) {
-                next?.setAttribute("disabled", "");
-              } else {
-                next?.removeAttribute("disabled");
-              }
+              e.isIntersecting
+                ? next?.setAttribute("disabled", "")
+                : next?.removeAttribute("disabled");
             }
           }
         }),
       { threshold: THRESHOLD, root: slider },
     );
+
     items.forEach((item) => observer.observe(item));
+
     for (let it = 0; it < (dots?.length ?? 0); it++) {
       dots?.item(it).addEventListener("click", () => goToItem(it));
     }
+
     prev?.addEventListener("click", onClickPrev);
-    next?.addEventListener("click", onClickNext);
+    next?.addEventListener("click", (e) => onClickNext(e));
 
-    // Modificação: Configurar autoplay apenas se habilitado
-    if (interval && autoplay) {
-      let intervalId: number | null = null;
+    // Configuração do autoplay
+    let autoplayInterval: number | null = null;
 
-      const startAutoplay = () => {
-        if (intervalId === null) {
-          intervalId = setInterval(onClickNext, interval) as unknown as number;
-        }
-      };
+    const startAutoplay = () => {
+      if (autoplayInterval) return;
+      if (interval && autoplay) {
+        autoplayInterval = setInterval(
+          () => onClickNext(),
+          interval,
+        ) as unknown as number;
+      }
+    };
 
-      const stopAutoplay = () => {
-        if (intervalId !== null) {
-          clearInterval(intervalId);
-          intervalId = null;
-        }
-      };
+    const stopAutoplay = () => {
+      if (autoplayInterval) {
+        clearInterval(autoplayInterval);
+        autoplayInterval = null;
+      }
+    };
+
+    // Event listeners para controle do autoplay
+    const setupAutoplay = () => {
+      if (!autoplay || !interval) return;
 
       startAutoplay();
 
-      // Pausar autoplay durante interações
       slider.addEventListener("mouseenter", stopAutoplay);
       slider.addEventListener("touchstart", stopAutoplay);
       slider.addEventListener("pointerdown", stopAutoplay);
 
-      // Retomar autoplay após interações
       slider.addEventListener("mouseleave", startAutoplay);
       slider.addEventListener("touchend", startAutoplay);
       slider.addEventListener("pointerup", startAutoplay);
-    }
+    };
+
+    setupAutoplay();
   }
+
   if (document.readyState === "complete") {
     init();
   } else {
@@ -220,7 +220,7 @@ function JS({
   scroll = "smooth",
   interval,
   infinite = false,
-  autoplay = false, // Valor padrão para autoplay
+  autoplay = false,
 }: Props) {
   return (
     <script
