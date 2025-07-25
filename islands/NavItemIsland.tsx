@@ -141,7 +141,7 @@ export default function NavItemIsland({ navItems }: Props) {
 
             {/* Terceiro nível */}
             {hoveredSubItem?.children && (
-              <ul class="min-w-[200px] w-auto bg-[rgba(14,20,15,0.6)] backdrop-blur-[12px] border-l border-white/10">
+              <ul class="min-w-[200px] max-h-[calc(100vh-172px-16px)] overflow-y-auto scrollbar-custom w-auto bg-[rgba(14,20,15,0.6)] backdrop-blur-[12px] border-l border-white/10">
                 {hoveredSubItem.children.map((third) => (
                   <li
                     key={third.url}
