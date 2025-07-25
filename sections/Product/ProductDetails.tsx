@@ -41,8 +41,6 @@ export default function ProductDetails({ page, productBanner }: Props) {
     );
   }
 
-  console.log(page.product, "page.product");
-
   return (
     <div class="w-full flex flex-col">
       <div class="block lg:hidden mt-6">
