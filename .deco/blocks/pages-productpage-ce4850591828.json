@@ -133,7 +133,29 @@
           "countdownDate": "2025-10-25T23:59:59.999Z",
           "title": "CAMPANHA",
           "promoName": "DESCONTO 50%"
-        }
+        },
+        "benefits": [
+          {
+            "benefitText": "<p><strong><span style=\"font-size: 14px\">Parcele em até 10x sem juros no cartão</span></strong><span style=\"font-size: 14px\"><br>para compras acima de R$590,00</span></p>",
+            "benefitImgAltText": "Parcele em até 10x sem juros no cartão para compras acima de R$590,00",
+            "benefitImgSrc": "https://assets.decocache.com/ffloresta/b7d07fbb-44b7-4c3e-8934-eb6cc3751182/home-benefit-icon-01.png"
+          },
+          {
+            "benefitImgSrc": "https://assets.decocache.com/ffloresta/11de435f-bde0-4ab8-b30e-c5a6f94b9361/home-benefit-icon-02.png",
+            "benefitImgAltText": "10% off no PIX ou boleto  *Exceto para promoções, ferramentas e produtos ZEN",
+            "benefitText": "<p><strong><span style=\"font-size: 14px\">10% off no PIX ou boleto</span></strong></p><p><span style=\"font-size: 14px\">*Exceto para promoções, ferramentas e produtos ZEN</span></p>"
+          },
+          {
+            "benefitImgAltText": "Entregamos em todo o Brasil",
+            "benefitText": "<p><span style=\"font-size: 14px\">Entregamos em todo o Brasil</span></p>",
+            "benefitImgSrc": "https://assets.decocache.com/ffloresta/e62b308d-131c-4b24-b669-6f7dc5a363f8/home-benefit-icon-03.png"
+          },
+          {
+            "benefitImgSrc": "https://assets.decocache.com/ffloresta/3fa6bd86-4c00-4e9a-8320-3b1ab15625ef/home-benefit-icon-04.png",
+            "benefitImgAltText": "Localização",
+            "benefitText": "<p><span style=\"font-size: 14px\">5 </span><strong><span style=\"font-size: 14px\">Lojas </span></strong><span style=\"font-size: 14px\">físicas:</span></p><p><span style=\"font-size: 14px\">Pinheiros, Brás, Santo André, Campinas e Sorocaba</span></p><p></p>"
+          }
+        ]
       }
     },
     {
