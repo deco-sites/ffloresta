@@ -6599,8 +6599,8 @@ input[type="checkbox"]:checked::after {
     font-size: 18px;
   }
 
-  .md\:text-\[28px\] {
-    font-size: 28px;
+  .md\:text-\[24px\] {
+    font-size: 24px;
   }
 
   .md\:text-base {

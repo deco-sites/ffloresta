@@ -4,13 +4,19 @@ import ProductInfo from "../../components/product/ProductInfo.tsx";
 import Section from "../../components/ui/Section.tsx";
 import { clx } from "../../sdk/clx.ts";
 import ProductDescription from "../../islands/ProductDescription.tsx";
-import type { ImageWidget } from "apps/admin/widgets.ts";
 import { type LoadingFallbackProps } from "@deco/deco";
-import PromoCountdownIsland, {
-  type ProductBannerPromoBannerProps,
-} from "../../islands/ProductPagePromoBanner.tsx";
+import PromoCountdownIsland from "../../islands/ProductPagePromoBanner.tsx";
 import type { ImageWidget as Image } from "apps/admin/widgets.ts";
+import { HTMLWidget as HTML } from "apps/admin/widgets.ts";
 import Breadcrumb from "../../components/ui/Breadcrumb.tsx";
+import Benefits from "../Content/Benefits.tsx";
+
+interface Benefit {
+  benefitImgSrc: Image;
+  benefitImgAltText: string;
+  benefitText: HTML;
+  benefitLink?: string;
+}
 
 export interface Props {
   /** @title Integration */
@@ -22,9 +28,14 @@ export interface Props {
     title: string;
     promoName: string;
   };
+  benefits?: Benefit[];
 }
 
-export default function ProductDetails({ page, productBanner }: Props) {
+export default function ProductDetails({
+  page,
+  productBanner,
+  benefits,
+}: Props) {
   /**
    * Rendered when a not found is returned by any of the loaders run on this page
    */
@@ -55,11 +66,12 @@ export default function ProductDetails({ page, productBanner }: Props) {
         class={clx(
           "container grid md:mt-8",
           "grid-cols-1 gap-9 py-0",
-          "lg:grid-cols-[1fr_380px] lg:gap-11",
+          "lg:grid-cols-[1fr_380px] lg:gap-11"
         )}
       >
         <div class="w-full flex flex-col">
           <ImageGallerySlider page={page} />
+          {benefits && <Benefits benefits={benefits} />}
         </div>
         <div class="h-fit px-5 pb-4 shadow-[5.62px_5.62px_7.03px_0px_rgba(0,0,0,0.15)] mb-10 lg:mb-40">
           {productBanner && (
