@@ -1,5 +1,3 @@
-// islands/MenuMobile.tsx
-
 import { useSignal } from "@preact/signals";
 import type { SiteNavigationElement } from "apps/commerce/types.ts";
 
