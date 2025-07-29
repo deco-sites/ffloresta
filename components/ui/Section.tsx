@@ -19,8 +19,8 @@ function Header({ title, cta, icon, headerBanner }: Props) {
   return (
     <div
       class={clx(
-        "flex flex-col items-start lg:grid lg:grid-cols-2 lg:justify-between lg:items-center gap-2",
-        "2xl:w-full 2xl:container px-0",
+        "w-full container flex flex-col justify-start xl:flex-row ",
+        "items-start xl:justify-between xl:items-center gap-4 px-0"
       )}
     >
       <div class="flex items-center gap-2">
@@ -34,7 +34,9 @@ function Header({ title, cta, icon, headerBanner }: Props) {
           See all
         </a>
       )}
-      {headerBanner && <img src={headerBanner} alt={title} />}
+      {headerBanner && (
+        <img className="w-full xl:w-auto" src={headerBanner} alt={title} />
+      )}
     </div>
   );
 }
@@ -53,7 +55,7 @@ function Container({ class: _class, ...props }: JSX.IntrinsicElements["div"]) {
       {...props}
       class={clx(
         "container flex flex-col gap-4 sm:gap-6 w-full py-5 sm:py-10 2xl:px-0",
-        _class?.toString(),
+        _class?.toString()
       )}
     />
   );

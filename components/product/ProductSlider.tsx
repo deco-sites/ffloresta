@@ -14,7 +14,7 @@ function ProductSlider({ products, itemListName }: Props) {
 
   return (
     <>
-      <div id={id} class="relative px-[20px] lg:px-[48px] container mx-auto">
+      <div id={id} class="relative lg:px-[48px] container mx-auto">
         <Slider
           interval={8000}
           autoplay={true}
@@ -36,7 +36,7 @@ function ProductSlider({ products, itemListName }: Props) {
                 // Desktop: 4 items
                 "lg:w-[calc(25%-18px)]",
                 // Large desktop: 5 items
-                "xl:w-[calc(20%-19.2px)]",
+                "xl:w-[calc(20%-19.2px)]"
               )}
             >
               <ProductCard

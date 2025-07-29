@@ -4571,10 +4571,6 @@ details.collapse summary::-webkit-details-marker {
   --tw-divide-opacity: 1;
   border-color: rgb(204 204 204 / var(--tw-divide-opacity));
 }
-.divide-base-200 > :not([hidden]) ~ :not([hidden]) {
-  --tw-divide-opacity: 1;
-  border-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-divide-opacity)));
-}
 .place-self-start {
   place-self: start;
 }
@@ -4716,6 +4712,10 @@ details.collapse summary::-webkit-details-marker {
   --tw-border-opacity: 1;
   border-color: rgb(39 61 40 / var(--tw-border-opacity));
 }
+.border-\[\#3A4332\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(58 67 50 / var(--tw-border-opacity));
+}
 .border-\[\#8D98A0\] {
   --tw-border-opacity: 1;
   border-color: rgb(141 152 160 / var(--tw-border-opacity));
@@ -4731,6 +4731,10 @@ details.collapse summary::-webkit-details-marker {
 .border-\[\#C9CFCF\] {
   --tw-border-opacity: 1;
   border-color: rgb(201 207 207 / var(--tw-border-opacity));
+}
+.border-\[\#CCCCCC\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(204 204 204 / var(--tw-border-opacity));
 }
 .border-\[\#E5E5E5\] {
   --tw-border-opacity: 1;
@@ -4930,6 +4934,9 @@ details.collapse summary::-webkit-details-marker {
   -o-object-fit: scale-down;
      object-fit: scale-down;
 }
+.\!p-0 {
+  padding: 0px !important;
+}
 .p-0 {
   padding: 0px;
 }
@@ -4965,6 +4972,10 @@ details.collapse summary::-webkit-details-marker {
 }
 .p-\[18px_20px\] {
   padding: 18px 20px;
+}
+.\!px-0 {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
 }
 .px-0 {
   padding-left: 0px;
@@ -5066,6 +5077,9 @@ details.collapse summary::-webkit-details-marker {
   padding-top: 2.25rem;
   padding-bottom: 2.25rem;
 }
+.\!pr-4 {
+  padding-right: 1rem !important;
+}
 .pb-12 {
   padding-bottom: 3rem;
 }
@@ -5128,6 +5142,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .pt-6 {
   padding-top: 1.5rem;
+}
+.pt-8 {
+  padding-top: 2rem;
 }
 .pt-\[30px\] {
   padding-top: 30px;
@@ -5903,47 +5920,6 @@ input[type="checkbox"]:checked::after {
   }
 }
 
-@media (min-width: 1536px) {
-
-  .\32xl\:container {
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 0.9375rem;
-    padding-left: 0.9375rem;
-  }
-
-  @media (min-width: 640px) {
-
-    .\32xl\:container {
-      max-width: 640px;
-    }
-  }
-
-  @media (min-width: 768px) {
-
-    .\32xl\:container {
-      max-width: 768px;
-    }
-  }
-
-  @media (min-width: 1024px) {
-
-    .\32xl\:container {
-      max-width: 1024px;
-      padding-right: 4rem;
-      padding-left: 4rem;
-    }
-  }
-
-  @media (min-width: 1240px) {
-
-    .\32xl\:container {
-      max-width: 1240px;
-    }
-  }
-}
-
 .placeholder\:text-\[\#1F251C\]::-moz-placeholder {
   --tw-text-opacity: 1;
   color: rgb(31 37 28 / var(--tw-text-opacity));
@@ -6049,6 +6025,10 @@ input[type="checkbox"]:checked::after {
   background-color: rgba(108,131,88,0.9);
 }
 
+.hover\:bg-\[rgba\(21\2c 31\2c 22\2c 0\.6\)\]:hover {
+  background-color: rgba(21,31,22,0.6);
+}
+
 .hover\:bg-\[rgba\(255\2c 255\2c 255\2c 0\.075\)\]:hover {
   background-color: rgba(255,255,255,0.075);
 }
@@ -6078,6 +6058,12 @@ input[type="checkbox"]:checked::after {
 
 .hover\:underline:hover {
   text-decoration-line: underline;
+}
+
+.hover\:backdrop-blur-\[12px\]:hover {
+  --tw-backdrop-blur: blur(12px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 .focus\:outline-none:focus {
@@ -6135,8 +6121,23 @@ input[type="checkbox"]:checked::after {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.group:hover .group-hover\:bg-\[rgba\(21\2c 31\2c 22\2c 0\.6\)\] {
+  background-color: rgba(21,31,22,0.6);
+}
+
+.group:hover .group-hover\:text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .group:hover .group-hover\:opacity-100 {
   opacity: 1;
+}
+
+.group:hover .group-hover\:backdrop-blur-\[12px\] {
+  --tw-backdrop-blur: blur(12px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 .group:disabled .group-disabled\:bg-\[\#0D1717\] {
@@ -6144,14 +6145,24 @@ input[type="checkbox"]:checked::after {
   background-color: rgb(13 23 23 / var(--tw-bg-opacity));
 }
 
-.peer:checked ~ .peer-checked\:bg-\[\#3A4332\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(58 67 50 / var(--tw-bg-opacity));
+.peer:checked ~ .peer-checked\:rotate-45 {
+  --tw-rotate: 45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.peer:checked ~ .peer-checked\:bg-\[rgba\(21\2c 31\2c 22\2c 0\.6\)\] {
+  background-color: rgba(21,31,22,0.6);
 }
 
 .peer:checked ~ .peer-checked\:text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.peer:checked ~ .peer-checked\:backdrop-blur-\[12px\] {
+  --tw-backdrop-blur: blur(12px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 @media (max-width: 299px) {
@@ -6201,10 +6212,6 @@ input[type="checkbox"]:checked::after {
 
   .sm\:mt-10 {
     margin-top: 2.5rem;
-  }
-
-  .sm\:mt-6 {
-    margin-top: 1.5rem;
   }
 
   .sm\:flex {
@@ -6820,10 +6827,6 @@ input[type="checkbox"]:checked::after {
     justify-content: center;
   }
 
-  .lg\:justify-between {
-    justify-content: space-between;
-  }
-
   .lg\:gap-11 {
     gap: 2.75rem;
   }
@@ -6896,6 +6899,10 @@ input[type="checkbox"]:checked::after {
     line-height: 2.25rem;
   }
 
+  .lg\:text-\[16px\] {
+    font-size: 16px;
+  }
+
   .lg\:text-\[20px\] {
     font-size: 20px;
   }
@@ -6939,8 +6946,24 @@ input[type="checkbox"]:checked::after {
     width: calc(20% - 20px);
   }
 
+  .xl\:w-auto {
+    width: auto;
+  }
+
   .xl\:max-w-none {
     max-width: none;
+  }
+
+  .xl\:flex-row {
+    flex-direction: row;
+  }
+
+  .xl\:items-center {
+    align-items: center;
+  }
+
+  .xl\:justify-between {
+    justify-content: space-between;
   }
 
   .xl\:px-0 {
@@ -6950,10 +6973,6 @@ input[type="checkbox"]:checked::after {
 }
 
 @media (min-width: 1536px) {
-
-  .\32xl\:w-full {
-    width: 100%;
-  }
 
   .\32xl\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));

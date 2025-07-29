@@ -1,3 +1,4 @@
+import { useRef } from "preact/hooks";
 import Icon from "../../components/ui/Icon.tsx";
 import type { SiteNavigationElement } from "apps/commerce/types.ts";
 
@@ -12,7 +13,7 @@ function ThirdLevelMenu({ items }: { items: SiteNavigationElement[] }) {
         <li key={`${thirdItem.url}-${i}`}>
           <a
             href={thirdItem.url}
-            class="py-2 font-['FS_Emeric'] text-[13px] text-white hover:underline block"
+            class="py-2 font-['FS_Emeric'] text-[16px] text-white hover:underline block"
           >
             {thirdItem.name}
           </a>
@@ -23,67 +24,112 @@ function ThirdLevelMenu({ items }: { items: SiteNavigationElement[] }) {
 }
 
 function SubMenuItem({ item }: { item: SiteNavigationElement }) {
-  const hasThirdLevel = item.children && item.children.length > 0;
+  const hasChildren = item.children && item.children.length > 0;
+  const checkboxRef = useRef<HTMLInputElement>(null);
 
-  return hasThirdLevel
-    ? (
-      <div class="collapse collapse-plus rounded-none">
-        <input type="checkbox" class="peer" />
-        <div class="collapse-title text-white text-[14px] font-['FS_Emeric'] px-0 py-3 min-h-[unset] h-fit">
-          {item.name}
-        </div>
-        <div class="collapse-content bg-transparent">
-          <ThirdLevelMenu items={item.children!} />
-        </div>
-      </div>
-    )
-    : (
+  if (!hasChildren) {
+    return (
       <a
         href={item.url}
-        class="block py-3 font-['FS_Emeric'] text-[14px] text-white bg-transparent"
+        class="block py-3 font-['FS_Emeric'] text-[16px] text-[#1F251C] hover:bg-[rgba(21,31,22,0.6)] hover:backdrop-blur-[12px] hover:text-white transition-all duration-200"
       >
         {item.name}
       </a>
     );
+  }
+
+  return (
+    <div class="collapse rounded-none group">
+      <input type="checkbox" ref={checkboxRef} class="peer" />
+      <div class="collapse-title !p-0 !pr-4 group-hover:bg-[rgba(21,31,22,0.6)] group-hover:backdrop-blur-[12px]">
+        <div class="flex justify-between items-center w-full">
+          <a
+            href={item.url}
+            class="py-3 font-['FS_Emeric'] text-[16px] text-[#1F251C] peer-checked:text-white group-hover:text-white flex-grow"
+          >
+            {item.name}
+          </a>
+          <button
+            class="btn btn-ghost btn-xs px-2 transition-transform duration-300 peer-checked:rotate-45"
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              if (checkboxRef.current) {
+                checkboxRef.current.checked = !checkboxRef.current.checked;
+              }
+            }}
+          >
+            <Icon
+              id="Plus"
+              size={16}
+              class="text-[#1F251C] peer-checked:text-white group-hover:text-white"
+            />
+          </button>
+        </div>
+      </div>
+      <div class="collapse-content !px-0">
+        <ThirdLevelMenu items={item.children!} />
+      </div>
+    </div>
+  );
 }
 
 function MenuItem({ item }: { item: SiteNavigationElement }) {
+  const hasChildren = item.children && item.children.length > 0;
+  const checkboxRef = useRef<HTMLInputElement>(null);
+
   return (
-    <div class="collapse collapse-plus rounded-none">
-      <input type="checkbox" class="peer" />
-      <div class="collapse-title text-[#1F251C] peer-checked:bg-[#3A4332] peer-checked:text-white text-[16px] font-['FS_Emeric']">
-        {item.name}
-      </div>
-      <div class="collapse-content bg-gradient-to-b from-[rgba(58,67,50,0.9)] to-[rgba(146,169,126,0.9)]">
-        <ul>
-          <li>
-            <a
-              class="underline text-[12px] text-white font-['FS_Emeric']"
-              href={item.url}
+    <div class="collapse rounded-none border-b border-[#3A4332] group">
+      <input type="checkbox" ref={checkboxRef} class="peer" />
+      <div class="collapse-title !p-0 !pr-4 bg-white group-hover:bg-[rgba(21,31,22,0.6)] group-hover:backdrop-blur-[12px] peer-checked:bg-[rgba(21,31,22,0.6)] peer-checked:backdrop-blur-[12px]">
+        <div class="flex justify-between items-center w-full">
+          <a
+            href={item.url}
+            class="py-3 font-['FS_Emeric'] text-[16px] text-[#1F251C] peer-checked:text-white group-hover:text-white flex-grow"
+          >
+            {item.name}
+          </a>
+          {hasChildren && (
+            <button
+              class="btn btn-ghost btn-xs px-2 transition-transform duration-300 peer-checked:rotate-45"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                if (checkboxRef.current) {
+                  checkboxRef.current.checked = !checkboxRef.current.checked;
+                }
+              }}
             >
-              Ver todos
-            </a>
-          </li>
-          {item.children?.map((node, i) => (
-            <li key={`${node.url}-${i}`}>
-              <SubMenuItem item={node} />
-            </li>
-          ))}
-        </ul>
+              <Icon
+                id="Plus"
+                size={16}
+                class="text-[#1F251C] peer-checked:text-white group-hover:text-white"
+              />
+            </button>
+          )}
+        </div>
       </div>
+      {hasChildren && (
+        <div class="collapse-content !px-0 bg-[rgba(21,31,22,0.6)] backdrop-blur-[12px]">
+          <ul>
+            {item.children?.map((node, i) => (
+              <li key={`${node.url}-${i}`}>
+                <SubMenuItem item={node} />
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }
 
 function Menu({ navItems = [] }: Props) {
   return (
-    <div
-      class="flex flex-col h-full overflow-y-auto"
-      style={{ minWidth: "100vw" }}
-    >
-      <ul class="flex-grow flex flex-col divide-y divide-base-200 overflow-y-auto">
+    <div class="flex flex-col h-full" style={{ minWidth: "100vw" }}>
+      <ul class="flex-grow flex flex-col">
         {navItems.map((item) => (
-          <li key={item.url} class="border-b-[1px solid #3A4332]">
+          <li key={item.url} class="group">
             <MenuItem item={item} />
           </li>
         ))}

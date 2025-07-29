@@ -68,7 +68,7 @@ const ProductBenefits = ({ benefits }: Props) => {
       </div>
 
       {/* Dots de navegação */}
-      <div class="flex justify-center gap-2 mt-4 lg:hidden">
+      <div class="flex justify-center gap-2 mt-4 hidden">
         {benefits?.map((_, index) => (
           <Slider.Dot
             index={index}

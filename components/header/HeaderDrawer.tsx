@@ -49,7 +49,7 @@ function HeaderDrawer({
           data-aside
           class={clx(
             "drawer-side h-full z-40 overflow-hidden",
-            "[[data-aside]&_section]:contents",
+            "[[data-aside]&_section]:contents"
           )}
         >
           <label for={id} class="drawer-overlay" />
@@ -73,10 +73,10 @@ function Aside({
   return (
     <div
       data-aside
-      class="bg-white grid grid-rows-[auto_1fr] h-full divide-y"
+      class="grid grid-rows-[auto_1fr] h-full divide-y"
       style={{ maxWidth: "100vw" }}
     >
-      <div class="flex justify-between items-center px-4">
+      <div class="flex justify-between items-center px-4 bg-white">
         <div>
           <SignIn variant={"mobile"} />
         </div>

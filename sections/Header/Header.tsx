@@ -165,7 +165,7 @@ const Mobile = ({
     {/* Searchbar row - full width */}
     {searchBar && (
       <div class="w-full">
-        <SearchBarIsland {...searchBar} showProductSuggestions={false} />
+        <SearchBarIsland {...searchBar} showProductSuggestions={true} />
       </div>
     )}
 
@@ -173,17 +173,17 @@ const Mobile = ({
       id={SIDEMENU_DRAWER_ID}
       aside={
         <HeaderDrawer.Aside drawer={SIDEMENU_DRAWER_ID}>
-          {loading === "lazy"
-            ? (
-              <div
-                id={SIDEMENU_CONTAINER_ID}
-                class="h-full flex items-center justify-center"
-                style={{ minWidth: "100vw" }}
-              >
-                <span class="loading loading-spinner" />
-              </div>
-            )
-            : <Menu navItems={navItems ?? []} />}
+          {loading === "lazy" ? (
+            <div
+              id={SIDEMENU_CONTAINER_ID}
+              class="h-full flex items-center justify-center"
+              style={{ minWidth: "100vw" }}
+            >
+              <span class="loading loading-spinner" />
+            </div>
+          ) : (
+            <Menu navItems={navItems ?? []} />
+          )}
         </HeaderDrawer.Aside>
       }
     />

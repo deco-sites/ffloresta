@@ -58,15 +58,17 @@ export default function ProductDetails({
         {productBanner && <PromoCountdownIsland {...productBanner} />}
       </div>
 
-      <div class="container mt-6">
-        <Breadcrumb itemListElement={page.breadcrumbList.itemListElement} />
-      </div>
+      {page.breadcrumbList.itemListElement && (
+        <div class="container mt-6">
+          <Breadcrumb itemListElement={page.breadcrumbList.itemListElement} />
+        </div>
+      )}
 
       <div
         class={clx(
           "container grid md:mt-8",
           "grid-cols-1 gap-9 py-0",
-          "lg:grid-cols-[1fr_380px] lg:gap-11",
+          "lg:grid-cols-[1fr_380px] lg:gap-11"
         )}
       >
         <div class="w-full flex flex-col">
@@ -89,8 +91,3 @@ export default function ProductDetails({
     </div>
   );
 }
-
-export const LoadingFallback = ({
-  page,
-  productBanner,
-}: LoadingFallbackProps<Props>) => <Section.Placeholder height="580px" />;
