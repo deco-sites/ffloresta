@@ -35,14 +35,14 @@ function ProductCard({
   const title = isVariantOf?.name ?? product.name;
   const [front, back] = images ?? [];
   const { listPrice, price, seller = "1", availability } = useOffer(offers);
-  console.log("Product price:", price); // Log do preço do produto
   const inStock = availability === "https://schema.org/InStock";
   const possibilities = useVariantPossibilities(hasVariant, product);
   const firstSkuVariations = Object.entries(possibilities)?.[0];
   const relativeUrl = relative(url);
-  const percent = listPrice && price
-    ? Math.round(((listPrice - price) / listPrice) * 100)
-    : 0;
+  const percent =
+    listPrice && price
+      ? Math.round(((listPrice - price) / listPrice) * 100)
+      : 0;
   const item = mapProductToAnalyticsItem({ product, price, listPrice, index });
   const event = useSendEvent({
     on: "click",
@@ -60,7 +60,7 @@ function ProductCard({
       {...event}
       class={clx(
         "bg-white flex flex-col p-[18px_20px] w-full max-w-[258px] font-['FS_Emeric']",
-        _class,
+        _class
       )}
     >
       <figure class="relative">
@@ -78,7 +78,7 @@ function ProductCard({
           class={clx(
             "grid grid-cols-1 grid-rows-1",
             "w-full mt-10",
-            !inStock && "opacity-70",
+            !inStock && "opacity-70"
           )}
         >
           <Image
@@ -103,7 +103,7 @@ function ProductCard({
               "object-cover",
               "w-full",
               "col-span-full row-span-full",
-              "transition-opacity opacity-0 lg:group-hover:opacity-100",
+              "transition-opacity opacity-0 lg:group-hover:opacity-100"
             )}
             sizes="(max-width: 640px) 50vw, 20vw"
             loading="lazy"
@@ -139,7 +139,7 @@ function ProductCard({
                 <span class="font-bold text-[14px] leading-[170%] tracking-[3%] line-through">
                   {formatPrice(listPrice, offers?.priceCurrency).replace(
                     "R$",
-                    "",
+                    ""
                   )}
                 </span>
               </div>
@@ -167,7 +167,6 @@ function ProductCard({
           {(() => {
             const priceSpecs =
               product.offers?.offers?.[0]?.priceSpecification ?? [];
-            // console.log("All price specifications:", priceSpecs);
 
             const noInterestInstallments = priceSpecs.filter(
               (spec) =>
@@ -175,30 +174,18 @@ function ProductCard({
                 spec.priceType === "https://schema.org/SalePrice" &&
                 spec.billingDuration &&
                 spec.billingIncrement &&
-                spec.billingIncrement * spec.billingDuration <= price,
+                spec.billingIncrement * spec.billingDuration <= price
             );
-            // console.log("No interest installments:", noInterestInstallments);
 
             const bestInstallment = noInterestInstallments.reduce(
               (max, curr) =>
                 !max || curr.billingDuration > max.billingDuration ? curr : max,
-              null,
+              null
             );
-            // console.log("Best installment found:", bestInstallment);
 
             if (!bestInstallment) {
-              // console.log("No valid installment found");
               return null;
             }
-
-            // console.log("Final installment to display:", {
-            //   duration: bestInstallment.billingDuration,
-            //   increment: bestInstallment.billingIncrement,
-            //   total:
-            //     bestInstallment.billingIncrement *
-            //     bestInstallment.billingDuration,
-            //   price: price,
-            // });
 
             return (
               <div class="flex items-center gap-1">
@@ -226,11 +213,11 @@ function ProductCard({
                   />
                 </svg>
                 <span class="text-[#8D98A0] font-bold text-[12px] leading-[170%] tracking-[0%]">
-                  {bestInstallment.billingDuration}x de R$ {formatPrice(
+                  {bestInstallment.billingDuration}x de R${" "}
+                  {formatPrice(
                     bestInstallment.billingIncrement,
-                    offers?.priceCurrency,
-                  ).replace("R$", "")}
-                  {" "}
+                    offers?.priceCurrency
+                  ).replace("R$", "")}{" "}
                 </span>
               </div>
             );
@@ -239,30 +226,28 @@ function ProductCard({
 
         {/* Add to cart button */}
         <div class="mt-auto pt-4">
-          {inStock
-            ? (
-              <AddToCartButton
-                product={product}
-                seller={seller}
-                item={item}
-                class={clx(
-                  "w-full bg-[#3A4332] text-white h-8 flex items-center justify-center",
-                  "font-bold text-[14.06px] leading-[170%] tracking-[16%]",
-                  "hover:bg-[#293023]",
-                )}
-              />
-            )
-            : (
-              <a
-                href={relativeUrl}
-                class={clx(
-                  "w-full bg-[#293023] text-white h-8 flex items-center justify-center",
-                  "font-bold text-[14.06px] leading-[170%] tracking-[16%]",
-                )}
-              >
-                INDISPONÍVEL
-              </a>
-            )}
+          {inStock ? (
+            <AddToCartButton
+              product={product}
+              seller={seller}
+              item={item}
+              class={clx(
+                "w-full bg-[#3A4332] text-white h-8 flex items-center justify-center",
+                "font-bold text-[14.06px] leading-[170%] tracking-[16%]",
+                "hover:bg-[#293023]"
+              )}
+            />
+          ) : (
+            <a
+              href={relativeUrl}
+              class={clx(
+                "w-full bg-[#293023] text-white h-8 flex items-center justify-center",
+                "font-bold text-[14.06px] leading-[170%] tracking-[16%]"
+              )}
+            >
+              INDISPONÍVEL
+            </a>
+          )}
         </div>
       </div>
     </div>

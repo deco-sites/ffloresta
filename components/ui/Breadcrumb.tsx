@@ -9,13 +9,21 @@ function Breadcrumb({ itemListElement = [] }: Props) {
   const items = [{ name: "Home", item: "/" }, ...itemListElement];
 
   return (
-    <div class="breadcrumbs py-0 font-['FS_Emeric'] text-sm font-normal text-[#3A4332]">
-      <ul>
+    <div class="breadcrumbs py-0 font-['FS_Emeric'] text-sm font-normal text-[#3A4332] overflow-hidden whitespace-nowrap">
+      <ul class="flex flex-wrap items-center">
         {items
           .filter(({ name, item }) => name && item)
-          .map(({ name, item }) => (
-            <li>
-              <a href={relative(item)}>{name}</a>
+          .map(({ name, item }, index) => (
+            <li
+              key={index}
+              class="flex items-center max-w-[calc(100vw-25px)] overflow-hidden text-ellipsis"
+            >
+              <a
+                href={relative(item)}
+                class="truncate max-w-[calc(100vw-25px)] overflow-hidden text-ellipsis"
+              >
+                {name}
+              </a>
             </li>
           ))}
       </ul>

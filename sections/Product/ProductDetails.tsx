@@ -52,32 +52,11 @@ export default function ProductDetails({
     );
   }
 
-  // Debug: Log das principais informações do produto
-  console.log("=== PRODUCT DETAILS DEBUG ===");
-  console.log("Product basic info:", {
-    name: page.product.name,
-    productID: page.product.productID,
-    sku: page.product.sku,
-    url: page.product.url,
-  });
-
-  // Debug: Log das ofertas e preços
   if (page.product.offers?.offers?.length) {
     const offer = page.product.offers.offers[0];
-    console.log("Product offer details:", {
-      price: offer.price,
-      listPrice: offer.listPrice,
-      availability: offer.availability,
-      seller: offer.seller,
-    });
 
     // Debug: Log das especificações de preço (parcelamento)
     if (offer.priceSpecification?.length) {
-      console.log(
-        "Price specifications (installments):",
-        offer.priceSpecification,
-      );
-
       // Filtra apenas as parcelas sem juros para debug
       const noInterestInstallments = offer.priceSpecification.filter(
         (spec) =>
@@ -85,31 +64,9 @@ export default function ProductDetails({
           spec.priceType === "https://schema.org/SalePrice" &&
           spec.billingDuration &&
           spec.billingIncrement &&
-          spec.billingIncrement * spec.billingDuration === offer.price,
+          spec.billingIncrement * spec.billingDuration === offer.price
       );
-      console.log("No interest installments:", noInterestInstallments);
     }
-  }
-
-  // Debug: Log das imagens do produto
-  if (page.product.image?.length) {
-    console.log("Product images:", {
-      mainImage: page.product.image[0],
-      totalImages: page.product.image.length,
-    });
-  }
-
-  // Debug: Log das variações do produto
-  if (page.product.isVariantOf?.hasVariant?.length) {
-    console.log("Product variants:", {
-      variantGroupName: page.product.isVariantOf?.name,
-      totalVariants: page.product.isVariantOf?.hasVariant?.length,
-    });
-  }
-
-  // Debug: Log do breadcrumb
-  if (page.breadcrumbList?.itemListElement?.length) {
-    console.log("Breadcrumb items:", page.breadcrumbList.itemListElement);
   }
 
   return (
@@ -128,7 +85,7 @@ export default function ProductDetails({
         class={clx(
           "container grid md:mt-8",
           "grid-cols-1 gap-9 py-0",
-          "lg:grid-cols-[1fr_380px] lg:gap-11",
+          "lg:grid-cols-[1fr_380px] lg:gap-11"
         )}
       >
         <div class="w-full flex flex-col">
