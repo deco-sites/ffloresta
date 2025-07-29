@@ -34,7 +34,7 @@ function SignIn({ variant }: { variant: "mobile" | "desktop" }) {
           "flex items-center justify-center",
           TEXT_STYLE,
           TEXT_COLOR,
-          GAP
+          GAP,
         )}
         href="/login"
         aria-label="Login"
@@ -66,7 +66,7 @@ function SignIn({ variant }: { variant: "mobile" | "desktop" }) {
           "hidden flex items-center justify-center",
           TEXT_STYLE,
           TEXT_COLOR,
-          GAP
+          GAP,
         )}
         href="/account"
         aria-label="Account"

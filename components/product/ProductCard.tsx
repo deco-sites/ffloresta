@@ -35,6 +35,7 @@ function ProductCard({
   const title = isVariantOf?.name ?? product.name;
   const [front, back] = images ?? [];
   const { listPrice, price, seller = "1", availability } = useOffer(offers);
+  console.log("Product price:", price); // Log do preço do produto
   const inStock = availability === "https://schema.org/InStock";
   const possibilities = useVariantPossibilities(hasVariant, product);
   const firstSkuVariations = Object.entries(possibilities)?.[0];
@@ -163,15 +164,10 @@ function ProductCard({
 
         {/* Linha unificada de pagamento */}
         <div class="mt-1 flex flex-col items-start">
-          {
-            /* <span class="text-[#8D98A0] font-bold text-[12px] leading-[170%] tracking-[0%]">
-            A vista no pix
-          </span> */
-          }
-
           {(() => {
             const priceSpecs =
               product.offers?.offers?.[0]?.priceSpecification ?? [];
+            // console.log("All price specifications:", priceSpecs);
 
             const noInterestInstallments = priceSpecs.filter(
               (spec) =>
@@ -179,16 +175,30 @@ function ProductCard({
                 spec.priceType === "https://schema.org/SalePrice" &&
                 spec.billingDuration &&
                 spec.billingIncrement &&
-                spec.billingIncrement * spec.billingDuration === price,
+                spec.billingIncrement * spec.billingDuration <= price,
             );
+            // console.log("No interest installments:", noInterestInstallments);
 
             const bestInstallment = noInterestInstallments.reduce(
               (max, curr) =>
                 !max || curr.billingDuration > max.billingDuration ? curr : max,
               null,
             );
+            // console.log("Best installment found:", bestInstallment);
 
-            if (!bestInstallment) return null;
+            if (!bestInstallment) {
+              // console.log("No valid installment found");
+              return null;
+            }
+
+            // console.log("Final installment to display:", {
+            //   duration: bestInstallment.billingDuration,
+            //   increment: bestInstallment.billingIncrement,
+            //   total:
+            //     bestInstallment.billingIncrement *
+            //     bestInstallment.billingDuration,
+            //   price: price,
+            // });
 
             return (
               <div class="flex items-center gap-1">
