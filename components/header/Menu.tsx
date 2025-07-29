@@ -9,18 +9,77 @@ export interface Props {
 function ThirdLevelMenu({ items }: { items: SiteNavigationElement[] }) {
   return (
     <ul class="px-4">
-      {" "}
-      {/* espaçamento lateral de 16px */}
-      {items.map((thirdItem, i) => (
-        <li key={`${thirdItem.url}-${i}`}>
-          <a
-            href={thirdItem.url}
-            class="block py-2 font-['FS_Emeric'] text-[16px] text-[#1F251C] hover:underline group-hover:text-white peer-checked:text-white"
-          >
-            {thirdItem.name}
-          </a>
-        </li>
-      ))}
+      {items.map((thirdItem, i) => {
+        const hasChildren = thirdItem.children && thirdItem.children.length > 0;
+        const checkboxRef = useRef<HTMLInputElement>(null);
+
+        return (
+          <li key={`${thirdItem.url}-${i}`} class="group">
+            {hasChildren ? (
+              <div class="collapse rounded-none group">
+                <input
+                  type="checkbox"
+                  ref={checkboxRef}
+                  class="peer absolute opacity-0" // Escondemos o input real
+                />
+                <div class="collapse-title !p-0 !pr-4 min-h-[0] h-fit">
+                  <div class="flex justify-between items-center w-full">
+                    <a
+                      href={thirdItem.url}
+                      class="py-2 font-['FS_Emeric'] text-[16px] text-[#1F251C] hover:underline group-hover:text-white peer-checked:text-white flex-grow"
+                    >
+                      {thirdItem.name}
+                    </a>
+                    <button
+                      class="btn btn-ghost btn-xs px-2 flex items-center justify-center"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        if (checkboxRef.current) {
+                          checkboxRef.current.checked =
+                            !checkboxRef.current.checked;
+                        }
+                      }}
+                    >
+                      <Icon
+                        id="Plus"
+                        size={16}
+                        class="text-[#1F251C] group-hover:text-white peer-checked:hidden transition-colors"
+                      />
+                      <Icon
+                        id="Minus"
+                        size={16}
+                        class="hidden peer-checked:block text-white transition-colors"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div class="collapse-content !px-0 px-4">
+                  <ul>
+                    {thirdItem.children!.map((child, idx) => (
+                      <li key={`${child.url}-${idx}`}>
+                        <a
+                          href={child.url}
+                          class="block py-2 font-['FS_Emeric'] text-[16px] text-[#1F251C] hover:underline group-hover:text-white peer-checked:text-white"
+                        >
+                          {child.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ) : (
+              <a
+                href={thirdItem.url}
+                class="block py-2 font-['FS_Emeric'] text-[16px] text-[#1F251C] hover:underline group-hover:text-white"
+              >
+                {thirdItem.name}
+              </a>
+            )}
+          </li>
+        );
+      })}
     </ul>
   );
 }
@@ -42,9 +101,11 @@ function SubMenuItem({ item }: { item: SiteNavigationElement }) {
 
   return (
     <div class="collapse rounded-none group px-4 min-h-[0] border-none">
-      {" "}
-      {/* espaçamento lateral */}
-      <input type="checkbox" ref={checkboxRef} class="peer min-h-[0] h-fit" />
+      <input
+        type="checkbox"
+        ref={checkboxRef}
+        class="peer absolute opacity-0"
+      />
       <div class="collapse-title !p-0 !pr-4 min-h-[0] h-fit">
         <div class="flex justify-between items-center w-full">
           <a
@@ -66,7 +127,7 @@ function SubMenuItem({ item }: { item: SiteNavigationElement }) {
             <Icon
               id="Plus"
               size={16}
-              class="text-[#1F251C] group-hover:text-white peer-checked:hidden transition-colors"
+              class="text-white group-hover:text-white peer-checked:hidden transition-colors"
             />
             <Icon
               id="Minus"
@@ -88,10 +149,12 @@ function MenuItem({ item }: { item: SiteNavigationElement }) {
   const checkboxRef = useRef<HTMLInputElement>(null);
 
   return (
-    <div class="collapse rounded-none group">
-      {" "}
-      {/* nivel 1 */}
-      <input type="checkbox" ref={checkboxRef} class="peer px-4 min-h-[0]" />
+    <div class="collapse rounded-none group relative">
+      <input
+        type="checkbox"
+        ref={checkboxRef}
+        class="peer absolute opacity-0"
+      />
       <div class="collapse-title !p-0 bg-white group-hover:bg-[rgba(21,31,22,0.6)] group-hover:backdrop-blur-[12px] peer-checked:bg-[rgba(21,31,22,0.6)] peer-checked:backdrop-blur-[12px] !px-4 min-h-[auto] border-none">
         <div class="flex justify-between items-center w-full">
           <a
@@ -127,7 +190,6 @@ function MenuItem({ item }: { item: SiteNavigationElement }) {
       </div>
       {hasChildren && (
         <div class="collapse-content !px-0 px-4 bg-[rgba(21,31,22,0.6)] backdrop-blur-[12px] group-hover:text-white peer-checked:text-white">
-          {/* mapear cada child, não repetir o mesmo nível */}
           <ul>
             {item.children!.map((child, idx) => (
               <li key={`${child.url}-${idx}`}>

@@ -6111,8 +6111,16 @@ input[type="checkbox"]:checked::after {
   font-weight: 600;
 }
 
+.group:hover .group-hover\:block {
+  display: block;
+}
+
 .group:hover .group-hover\:flex {
   display: flex;
+}
+
+.group:hover .group-hover\:hidden {
+  display: none;
 }
 
 .group:hover .group-hover\:-translate-x-40 {

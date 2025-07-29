@@ -5,6 +5,7 @@
 import * as $_app from "./routes/_app.tsx";
 import * as $AddToCartButtonPDP from "./islands/AddToCartButtonPDP.tsx";
 import * as $CustomSearchBar from "./islands/CustomSearchBar.tsx";
+import * as $Header_MenuMobile from "./islands/Header/MenuMobile.tsx";
 import * as $NavItemIsland from "./islands/NavItemIsland.tsx";
 import * as $Newsletter from "./islands/Newsletter.tsx";
 import * as $ProductDescription from "./islands/ProductDescription.tsx";
@@ -19,6 +20,7 @@ const manifest = {
   islands: {
     "./islands/AddToCartButtonPDP.tsx": $AddToCartButtonPDP,
     "./islands/CustomSearchBar.tsx": $CustomSearchBar,
+    "./islands/Header/MenuMobile.tsx": $Header_MenuMobile,
     "./islands/NavItemIsland.tsx": $NavItemIsland,
     "./islands/Newsletter.tsx": $Newsletter,
     "./islands/ProductDescription.tsx": $ProductDescription,
