@@ -161,7 +161,9 @@
                 }
               ]
             },
-            "rule": null
+            "rule": {
+              "__resolveType": "website/matchers/always.ts"
+            }
           }
         ]
       }
