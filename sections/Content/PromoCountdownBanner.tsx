@@ -16,12 +16,14 @@ export default function PromoCountdownSection({
   promoName,
 }: SectionProps<typeof loader>) {
   return (
-    <PromoCountdownIsland
-      image={image}
-      countdownDate={countdownDate}
-      title={title}
-      promoName={promoName}
-    />
+    <div class="w-full container mx-4">
+      <PromoCountdownIsland
+        image={image}
+        countdownDate={countdownDate}
+        title={title}
+        promoName={promoName}
+      />
+    </div>
   );
 }
 
