@@ -55,7 +55,7 @@ type Props = Omit<SectionProps, "alert">;
 
 function Header({ alerts = [], logo, navItems, loading, searchBar }: Props) {
   return (
-    <header class="h-[154px] lg:h-[124px]">
+    <header class="h-[152px] lg:h-[124px]">
       <div class="w-full z-40 fixed top-0">
         {alerts.length > 0 && <Alert alerts={alerts} />}
         {/* Desktop */}
@@ -173,17 +173,17 @@ const Mobile = ({
       id={SIDEMENU_DRAWER_ID}
       aside={
         <HeaderDrawer.Aside drawer={SIDEMENU_DRAWER_ID}>
-          {loading === "lazy" ? (
-            <div
-              id={SIDEMENU_CONTAINER_ID}
-              class="h-full bg-white flex items-center justify-center"
-              style={{ minWidth: "100vw" }}
-            >
-              <span class="loading loading-spinner" />
-            </div>
-          ) : (
-            <MenuMobile navItems={navItems ?? []} />
-          )}
+          {loading === "lazy"
+            ? (
+              <div
+                id={SIDEMENU_CONTAINER_ID}
+                class="h-full bg-white flex items-center justify-center"
+                style={{ minWidth: "100vw" }}
+              >
+                <span class="loading loading-spinner" />
+              </div>
+            )
+            : <MenuMobile navItems={navItems ?? []} />}
         </HeaderDrawer.Aside>
       }
     />

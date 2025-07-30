@@ -14,43 +14,30 @@ function ProductSliderForBGShelf({ products, itemListName }: Props) {
 
   return (
     <>
-      <div id={id} class="relative lg:px-[48px] container mx-auto">
+      <div id={id} class="relative container mx-auto px-0">
         <Slider
-          rootId={id}
           interval={8000}
-          autoplay={true}
-          class="carousel carousel-center gap-3 lg:gap-6 w-full"
+          autoplay
+          infinite
+          class="flex gap-3 lg:gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hidden"
         >
-          {products?.map((product, index) => (
+          {products.map((product, index) => (
             <Slider.Item
               index={index}
-              class={clx(
-                "carousel-item min-h-[400px]",
-                // Below 300px: 1 item (very small screens)
-                "max-[299px]:w-[calc(100%-20px)]",
-                // Mobile: 2 items (default for mobile)
-                // Calculation: (100vw - 40px padding - 3px gap) / 2 + 1% margin for shadow
-                "min-[300px]:w-[calc(44vw-20px)]", // Ajustado para acomodar o shadow
-                // Tablet: 3 items
-                "md:w-[calc(33.333vw-14px)]",
-                // Desktop: 4 items
-                "lg:w-[calc(25%-18px)]",
-                // Large desktop: 5 items
-                "xl:w-[calc(20%-19.2px)]",
-              )}
+              class="snap-start flex-shrink-0 min-h-[430px] w-[18.3%] max-[440px]:w-[47%] max-[609px]:w-[48%] max-[768px]:w-[48.4%] max-[1024px]:w-[32%] max-[1240px]:w-[22.8%] max-[1535px]:w-[18%]"
             >
               <ProductCard
                 index={index}
                 product={product}
                 itemListName={itemListName}
-                class="shadow-[5.62px_5.62px_7.03px_0px_rgba(0,0,0,0.15)] w-full h-[98%]" // Alterado para w-full
+                class="shadow-[5.62px_5.62px_7.03px_0px_rgba(0,0,0,0.15)] w-full h-[98%]"
               />
             </Slider.Item>
           ))}
         </Slider>
 
-        {/* Navigation buttons */}
-        <Slider.PrevButton class="absolute left-[8px] top-1/2 -translate-y-1/2 w-[17px] h-[32px] flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed z-15">
+        {/* Botões de navegação com SVG personalizado */}
+        <Slider.PrevButton class="absolute -left-2 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md p-2 rounded-full w-8 h-8 flex items-center justify-center">
           <svg
             width="12"
             height="20"
@@ -67,7 +54,7 @@ function ProductSliderForBGShelf({ products, itemListName }: Props) {
           </svg>
         </Slider.PrevButton>
 
-        <Slider.NextButton class="absolute right-[8px] top-1/2 -translate-y-1/2 w-[17px] h-[32px] flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed z-15">
+        <Slider.NextButton class="absolute -right-2 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md p-2 rounded-full w-8 h-8 flex items-center justify-center">
           <svg
             width="12"
             height="20"
@@ -84,7 +71,7 @@ function ProductSliderForBGShelf({ products, itemListName }: Props) {
           </svg>
         </Slider.NextButton>
       </div>
-      <Slider.JS rootId={id} interval={8000} autoplay={true} />
+      <Slider.JS rootId={id} interval={8000} autoplay />
     </>
   );
 }

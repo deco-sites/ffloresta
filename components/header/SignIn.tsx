@@ -41,7 +41,7 @@ function SignIn({ variant, showText = true }: Props) {
           "flex items-center justify-center",
           TEXT_STYLE,
           TEXT_COLOR,
-          GAP
+          GAP,
         )}
         href="/login"
         aria-label="Login"
@@ -75,7 +75,7 @@ function SignIn({ variant, showText = true }: Props) {
           "hidden flex items-center justify-center",
           TEXT_STYLE,
           TEXT_COLOR,
-          GAP
+          GAP,
         )}
         href="/account"
         aria-label="Account"

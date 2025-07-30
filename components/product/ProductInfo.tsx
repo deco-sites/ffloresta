@@ -52,12 +52,11 @@ function ProductInfo({ page }: Props) {
     },
   });
 
-  const hasValidVariants =
-    isVariantOf?.hasVariant?.some(
-      (variant) =>
-        variant?.name?.toLowerCase() !== "title" &&
-        variant?.name?.toLowerCase() !== "default title"
-    ) ?? false;
+  const hasValidVariants = isVariantOf?.hasVariant?.some(
+    (variant) =>
+      variant?.name?.toLowerCase() !== "title" &&
+      variant?.name?.toLowerCase() !== "default title",
+  ) ?? false;
 
   // Calculate best installment (copied from ProductCard)
   const priceSpecs = product.offers?.offers?.[0]?.priceSpecification ?? [];
@@ -67,12 +66,12 @@ function ProductInfo({ page }: Props) {
       spec.priceType === "https://schema.org/SalePrice" &&
       spec.billingDuration &&
       spec.billingIncrement &&
-      spec.billingIncrement * spec.billingDuration <= price
+      spec.billingIncrement * spec.billingDuration <= price,
   );
   const bestInstallment = noInterestInstallments.reduce(
     (max, curr) =>
       !max || curr.billingDuration > max.billingDuration ? curr : max,
-    null
+    null,
   );
 
   return (
@@ -122,14 +121,18 @@ function ProductInfo({ page }: Props) {
 
           <span class="font-gotham font-normal text-[12px] leading-[170%] text-[#677357]">
             {bestInstallment
-              ? `${bestInstallment.billingDuration}x de ${formatPrice(
+              ? `${bestInstallment.billingDuration}x de ${
+                formatPrice(
                   bestInstallment.billingIncrement,
-                  offers?.priceCurrency
-                )} sem juros`
-              : `1x de ${formatPrice(
+                  offers?.priceCurrency,
+                )
+              } sem juros`
+              : `1x de ${
+                formatPrice(
                   price,
-                  offers?.priceCurrency
-                )} no cartão de crédito`}
+                  offers?.priceCurrency,
+                )
+              } no cartão de crédito`}
           </span>
         </div>
       </div>
@@ -141,33 +144,33 @@ function ProductInfo({ page }: Props) {
 
       {/* Add to Cart Button */}
       <div class="mt-4 ">
-        {availability === "https://schema.org/InStock" ? (
-          <>
-            {hasValidVariants && (
-              <div class="mb-6">
-                <ProductSelector product={product} />
-              </div>
-            )}
-            <AddToCartButtonPDP
-              item={item}
-              seller={seller}
-              product={product}
-              platform={platform}
-              class="mb-[14px]"
-              disabled={false}
-            />
-
-            <div>
-              <ShippingSimulationForm
-                items={[
-                  { id: Number(product.sku), quantity: 1, seller: seller },
-                ]}
+        {availability === "https://schema.org/InStock"
+          ? (
+            <>
+              {hasValidVariants && (
+                <div class="mb-6">
+                  <ProductSelector product={product} />
+                </div>
+              )}
+              <AddToCartButtonPDP
+                item={item}
+                seller={seller}
+                product={product}
+                platform={platform}
+                class="mb-[14px]"
+                disabled={false}
               />
-            </div>
-          </>
-        ) : (
-          <OutOfStock productID={productID} />
-        )}
+
+              <div>
+                <ShippingSimulationForm
+                  items={[
+                    { id: Number(product.sku), quantity: 1, seller: seller },
+                  ]}
+                />
+              </div>
+            </>
+          )
+          : <OutOfStock productID={productID} />}
       </div>
     </div>
   );

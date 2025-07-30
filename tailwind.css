@@ -69,3 +69,12 @@ input[type="checkbox"]:checked::after {
 .custom-scrollbar:hover::-webkit-scrollbar-thumb {
   background-color: #9ca3af;
 }
+
+.scrollbar-hidden {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}

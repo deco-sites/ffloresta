@@ -39,10 +39,9 @@ function ProductCard({
   const possibilities = useVariantPossibilities(hasVariant, product);
   const firstSkuVariations = Object.entries(possibilities)?.[0];
   const relativeUrl = relative(url);
-  const percent =
-    listPrice && price
-      ? Math.round(((listPrice - price) / listPrice) * 100)
-      : 0;
+  const percent = listPrice && price
+    ? Math.round(((listPrice - price) / listPrice) * 100)
+    : 0;
   const item = mapProductToAnalyticsItem({ product, price, listPrice, index });
   const event = useSendEvent({
     on: "click",
@@ -59,8 +58,8 @@ function ProductCard({
     <div
       {...event}
       class={clx(
-        "bg-white flex flex-col p-[18px_20px] w-full max-w-[258px] font-['FS_Emeric']",
-        _class
+        "bg-white flex flex-col font-['FS_Emeric'] shadow-[5.62px_5.62px_7.03px_0px_rgba(0,0,0,0.15)] p-4 w-[98%] h-[98%] lg:min-h-[450px]",
+        _class,
       )}
     >
       <figure class="relative">
@@ -78,7 +77,7 @@ function ProductCard({
           class={clx(
             "grid grid-cols-1 grid-rows-1",
             "w-full mt-10",
-            !inStock && "opacity-70"
+            !inStock && "opacity-70",
           )}
         >
           <Image
@@ -103,7 +102,7 @@ function ProductCard({
               "object-cover",
               "w-full",
               "col-span-full row-span-full",
-              "transition-opacity opacity-0 lg:group-hover:opacity-100"
+              "transition-opacity opacity-0 lg:group-hover:opacity-100",
             )}
             sizes="(max-width: 640px) 50vw, 20vw"
             loading="lazy"
@@ -131,19 +130,22 @@ function ProductCard({
 
           {/* Prices */}
           <div class="flex flex-col mt-1">
-            {listPrice && price && listPrice > price && (
-              <div class="text-[#8D98A0]">
-                <span class="font-bold text-[10px] leading-[170%] tracking-[3%]">
-                  R$
-                </span>
-                <span class="font-bold text-[14px] leading-[170%] tracking-[3%] line-through">
-                  {formatPrice(listPrice, offers?.priceCurrency).replace(
-                    "R$",
-                    ""
-                  )}
-                </span>
-              </div>
-            )}
+            <div class="min-h-[25px] max-h-[25px]">
+              {listPrice && price && listPrice > price && (
+                <div class="text-[#8D98A0]">
+                  <span class="font-bold text-[10px] leading-[170%] tracking-[3%]">
+                    R$
+                  </span>
+                  <span class="font-bold text-[14px] leading-[170%] tracking-[3%] line-through">
+                    {formatPrice(listPrice, offers?.priceCurrency).replace(
+                      "R$",
+                      "",
+                    )}
+                  </span>
+                </div>
+              )}
+            </div>
+
             <div class="flex items-center gap-1">
               <div class="text-[#3A4332]">
                 <span class="font-bold text-[18px] leading-[170%] tracking-[3%]">
@@ -174,13 +176,13 @@ function ProductCard({
                 spec.priceType === "https://schema.org/SalePrice" &&
                 spec.billingDuration &&
                 spec.billingIncrement &&
-                spec.billingIncrement * spec.billingDuration <= price
+                spec.billingIncrement * spec.billingDuration <= price,
             );
 
             const bestInstallment = noInterestInstallments.reduce(
               (max, curr) =>
                 !max || curr.billingDuration > max.billingDuration ? curr : max,
-              null
+              null,
             );
 
             if (!bestInstallment) {
@@ -213,11 +215,11 @@ function ProductCard({
                   />
                 </svg>
                 <span class="text-[#8D98A0] font-bold text-[12px] leading-[170%] tracking-[0%]">
-                  {bestInstallment.billingDuration}x de R${" "}
-                  {formatPrice(
+                  {bestInstallment.billingDuration}x de R$ {formatPrice(
                     bestInstallment.billingIncrement,
-                    offers?.priceCurrency
-                  ).replace("R$", "")}{" "}
+                    offers?.priceCurrency,
+                  ).replace("R$", "")}
+                  {" "}
                 </span>
               </div>
             );
@@ -226,28 +228,30 @@ function ProductCard({
 
         {/* Add to cart button */}
         <div class="mt-auto pt-4">
-          {inStock ? (
-            <AddToCartButton
-              product={product}
-              seller={seller}
-              item={item}
-              class={clx(
-                "w-full bg-[#05C100] text-white h-8 flex items-center justify-center",
-                "font-bold text-[14.06px] leading-[170%] tracking-[16%]",
-                "hover:bg-[#23911f] transition duration-300 ease-in-out"
-              )}
-            />
-          ) : (
-            <a
-              href={relativeUrl}
-              class={clx(
-                "w-full bg-[#293023] text-white h-8 flex items-center justify-center",
-                "font-bold text-[14.06px] leading-[170%] tracking-[16%] cursor-none"
-              )}
-            >
-              INDISPONÍVEL
-            </a>
-          )}
+          {inStock
+            ? (
+              <AddToCartButton
+                product={product}
+                seller={seller}
+                item={item}
+                class={clx(
+                  "w-full bg-[#05C100] text-white h-8 flex items-center justify-center",
+                  "font-bold text-[14.06px] leading-[170%] tracking-[16%]",
+                  "hover:bg-[#23911f] transition duration-300 ease-in-out",
+                )}
+              />
+            )
+            : (
+              <a
+                href={relativeUrl}
+                class={clx(
+                  "w-full bg-[#293023] text-white h-8 flex items-center justify-center",
+                  "font-bold text-[14.06px] leading-[170%] tracking-[16%] cursor-none",
+                )}
+              >
+                INDISPONÍVEL
+              </a>
+            )}
         </div>
       </div>
     </div>

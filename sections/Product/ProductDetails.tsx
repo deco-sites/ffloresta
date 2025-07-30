@@ -76,7 +76,7 @@ export default function ProductDetails({
       </div>
 
       {page.breadcrumbList.itemListElement && (
-        <div class="container mt-6">
+        <div class="container mt-6 lg:mt-20">
           <Breadcrumb itemListElement={page.breadcrumbList.itemListElement} />
         </div>
       )}
