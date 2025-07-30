@@ -24,7 +24,7 @@ function ProductSlider({ products, itemListName }: Props) {
           {products.map((product, index) => (
             <Slider.Item
               index={index}
-              class="snap-start flex-shrink-0 min-h-[430px] w-[18.3%] max-[440px]:w-[47.5%] max-[609px]:w-[48%] max-[768px]:w-[48.4%] max-[1024px]:w-[32%] max-[1240px]:w-[22.8%] max-[1535px]:w-[18%]"
+              class="snap-start flex-shrink-0 min-h-[500px] max-[450px]:min-h-[430px]  max-[768px]:w-[calc(50%-10px)] max-[1024px]:w-[calc(33.3%-10px)] max-[1240px]:w-[calc(25%-20px)] w-[calc(20%-21px)]"
             >
               <ProductCard
                 index={index}
