@@ -9,14 +9,14 @@ export default function ProductDescriptionIsland({ page }: Props) {
 
   const getProperty = (key: string) =>
     page.product?.isVariantOf?.additionalProperty?.find(
-      (prop) => prop.name === key,
+      (prop) => prop.name === key
     )?.value;
 
   const description = page.product?.description || "";
   const diferenciais = getProperty("Diferenciais");
   const especificacoes = page.product?.isVariantOf?.additionalProperty?.filter(
     (prop) =>
-      prop.propertyID === "Especificações Técnicas" && prop.name && prop.value,
+      prop.propertyID === "Especificações Técnicas" && prop.name && prop.value
   );
 
   const tabs = [];
@@ -26,11 +26,11 @@ export default function ProductDescriptionIsland({ page }: Props) {
       title: "Descrição",
       content: (
         <div class="py-6">
-          <h3 class="font-['FS_Emeric'] font-bold text-lg text-[#3A4332] mb-4">
+          <h3 class="font-['FS_Emeric'] font-bold text-[16px] text-[#3A4332] mb-4">
             Descrição do Produto
           </h3>
           <div
-            class="text-[#3A4332]"
+            class="text-[#3A4332] text-[14px] font-['FS_Emeric']"
             dangerouslySetInnerHTML={{ __html: description }}
           />
         </div>
@@ -43,10 +43,10 @@ export default function ProductDescriptionIsland({ page }: Props) {
       title: "Especificações Técnicas",
       content: (
         <div class="py-6">
-          <h3 class="font-['FS_Emeric'] font-bold text-lg text-[#3A4332] mb-4">
+          <h3 class="font-['FS_Emeric'] font-bold text-[16px] text-[#3A4332] mb-4">
             Detalhes Técnicos
           </h3>
-          <table class="w-full text-[#3A4332] font-['FS_Emeric']">
+          <table class="w-full text-[#3A4332] font-['FS_Emeric'] text-[14px]">
             <tbody>
               {especificacoes.map((spec) => (
                 <tr key={spec.name} class="border-b border-[#9AA192]">
@@ -66,10 +66,10 @@ export default function ProductDescriptionIsland({ page }: Props) {
       title: "Diferenciais",
       content: (
         <div class="py-6">
-          <h3 class="font-['FS_Emeric'] font-bold text-lg text-[#3A4332] mb-4">
+          <h3 class="font-['FS_Emeric'] font-bold text-[16px] text-[#3A4332] mb-4">
             Nossos Diferenciais
           </h3>
-          <pre class="text-[#3A4332] whitespace-pre-wrap font-['FS_Emeric']">
+          <pre class="text-[#3A4332] whitespace-pre-wrap font-['FS_Emeric'] text-[14px]">
             {diferenciais}
           </pre>
         </div>

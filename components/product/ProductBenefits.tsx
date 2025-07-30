@@ -32,7 +32,7 @@ const BenefitItem = ({ benefit }: BenefitItemProps) => {
           />
         </div>
         <div
-          className="flex-1 min-w-0 font-['FS_Emeric'] text-[#273D28] text-[12px]"
+          className="flex-1 min-w-0 font-['FS_Emeric'] text-[#273D28] text-[12px] lg:text-[14px]"
           dangerouslySetInnerHTML={{ __html: benefit.benefitText }}
         />
       </div>

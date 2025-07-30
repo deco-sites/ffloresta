@@ -4377,6 +4377,9 @@ details.collapse summary::-webkit-details-marker {
 .transform-gpu {
   transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+.cursor-none {
+  cursor: none;
+}
 .cursor-pointer {
   cursor: pointer;
 }
@@ -5371,10 +5374,6 @@ details.collapse summary::-webkit-details-marker {
   --tw-text-opacity: 1;
   color: rgb(5 126 181 / var(--tw-text-opacity));
 }
-.text-\[\#121212\] {
-  --tw-text-opacity: 1;
-  color: rgb(18 18 18 / var(--tw-text-opacity));
-}
 .text-\[\#1F251C\] {
   --tw-text-opacity: 1;
   color: rgb(31 37 28 / var(--tw-text-opacity));
@@ -5397,6 +5396,10 @@ details.collapse summary::-webkit-details-marker {
 .text-\[\#3A4332\] {
   --tw-text-opacity: 1;
   color: rgb(58 67 50 / var(--tw-text-opacity));
+}
+.text-\[\#3c4233\] {
+  --tw-text-opacity: 1;
+  color: rgb(60 66 51 / var(--tw-text-opacity));
 }
 .text-\[\#495941\] {
   --tw-text-opacity: 1;
@@ -6022,6 +6025,11 @@ input[type="checkbox"]:checked::after {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
+.hover\:bg-\[\#23911f\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(35 145 31 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-\[\#293023\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(41 48 35 / var(--tw-bg-opacity));
@@ -6630,16 +6638,8 @@ input[type="checkbox"]:checked::after {
     line-height: 1;
   }
 
-  .md\:text-\[17px\] {
-    font-size: 17px;
-  }
-
   .md\:text-\[18px\] {
     font-size: 18px;
-  }
-
-  .md\:text-\[24px\] {
-    font-size: 24px;
   }
 
   .md\:text-base {
@@ -6874,6 +6874,14 @@ input[type="checkbox"]:checked::after {
     gap: 14px;
   }
 
+  .lg\:bg-transparent {
+    background-color: transparent;
+  }
+
+  .lg\:p-0 {
+    padding: 0px;
+  }
+
   .lg\:p-\[4\%\] {
     padding: 4%;
   }
@@ -6924,6 +6932,10 @@ input[type="checkbox"]:checked::after {
   .lg\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .lg\:text-\[14px\] {
+    font-size: 14px;
   }
 
   .lg\:text-\[16px\] {

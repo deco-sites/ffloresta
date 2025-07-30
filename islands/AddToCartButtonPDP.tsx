@@ -42,7 +42,7 @@ export default function AddToCartButtonPDP({
 
     // Abre o minicart
     const minicartCheckbox = document.getElementById(
-      "minicart-drawer", // ID do minicart
+      "minicart-drawer" // ID do minicart
     ) as HTMLInputElement | null;
     if (minicartCheckbox) {
       minicartCheckbox.checked = true;
@@ -65,7 +65,7 @@ export default function AddToCartButtonPDP({
       <div class="w-full flex items-center gap-2">
         <button
           onClick={buyNow}
-          class="w-full min-h-8 flex items-center justify-center bg-[#05C100] text-white font-['FS_Emeric'] text-[13px] font-bold transition-all duration-300 hover:bg-[#2bbd48]"
+          class="w-full min-h-8 flex items-center justify-center bg-[#05C100] text-white font-['FS_Emeric'] text-[16px] font-bold transition-all duration-300 hover:bg-[#2bbd48]"
         >
           COMPRAR
         </button>

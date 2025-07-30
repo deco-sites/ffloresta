@@ -25,16 +25,23 @@ const onLoad = (containerID: string) => {
   });
 };
 
-function SignIn({ variant }: { variant: "mobile" | "desktop" }) {
+interface Props {
+  variant: "mobile" | "desktop";
+  showText?: boolean;
+}
+
+function SignIn({ variant, showText = true }: Props) {
   const id = useId();
+
   return (
     <div id={id}>
+      {/* Login */}
       <a
         class={clx(
           "flex items-center justify-center",
           TEXT_STYLE,
           TEXT_COLOR,
-          GAP,
+          GAP
         )}
         href="/login"
         aria-label="Login"
@@ -59,14 +66,16 @@ function SignIn({ variant }: { variant: "mobile" | "desktop" }) {
             stroke-width="1.40556"
           />
         </svg>
-        <span>Fazer Login</span>
+        {showText && <span>Fazer Login</span>}
       </a>
+
+      {/* Minha Conta */}
       <a
         class={clx(
           "hidden flex items-center justify-center",
           TEXT_STYLE,
           TEXT_COLOR,
-          GAP,
+          GAP
         )}
         href="/account"
         aria-label="Account"
@@ -91,8 +100,10 @@ function SignIn({ variant }: { variant: "mobile" | "desktop" }) {
             stroke-width="1.40556"
           />
         </svg>
-        <span>Minha Conta</span>
+        {showText && <span>Minha Conta</span>}
       </a>
+
+      {/* Script de comportamento login/account */}
       <script
         type="module"
         dangerouslySetInnerHTML={{ __html: useScript(onLoad, id) }}
