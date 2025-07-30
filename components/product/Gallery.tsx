@@ -32,10 +32,9 @@ export default function GallerySlider(props: Props) {
     <>
       <div
         id={id}
-        class="grid grid-flow-row sm:grid-flow-col grid-cols-1 sm:grid-cols-[84px_1fr] gap-3 relative"
+        class="grid grid-flow-row sm:grid-flow-col grid-cols-1 sm:grid-cols-[95px_1fr] gap-3 relative"
       >
-        {/* Thumbnails - Desktop */}
-        <div class="hidden sm:flex flex-col gap-4 overflow-y-auto max-h-[615px]">
+        <div class="hidden sm:flex flex-col gap-4 overflow-y-scroll overflow-x-hidden max-h-[500px] custom-scrollbar">
           {images.map((img, index) => (
             <Slider.Dot index={index} class="w-[84px]">
               <Image

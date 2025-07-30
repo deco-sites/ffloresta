@@ -176,9 +176,7 @@ function MenuItem({ item }: { item: SiteNavigationElement }) {
                 isOpen.value = !isOpen.value;
               }}
             >
-              {isOpen.value ? (
-                <MinusWhite />
-              ) : (
+              {isOpen.value ? <MinusWhite /> : (
                 <span class="group-hover:hidden">
                   <PlusGreen />
                 </span>

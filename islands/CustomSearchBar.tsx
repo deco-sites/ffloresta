@@ -221,31 +221,33 @@ export default function CustomSearchBar({
 
   return (
     <div class="relative w-full lg:max-w-[638px]">
-      <form
-        onSubmit={handleSubmit}
-        class="join w-full h-[60px] lg:h-9 bg-[#D9D9D9]"
-      >
-        <input
-          class="input join-item flex-grow h-[60px] lg:h-9 rounded-none border-none outline-none focus:outline-none bg-[#D9D9D9] placeholder:text-[#1F251C]"
-          name="q"
-          placeholder={placeholder}
-          value={query.value}
-          onInput={(e) => (query.value = e.currentTarget.value)}
-          onFocus={() => (focused.value = true)}
-          onBlur={() => setTimeout(() => (focused.value = false), 200)}
-          autocomplete="off"
-          aria-label="Buscar produtos"
-        />
-
-        <button
-          type="submit"
-          class="btn join-item bg-[#D9D9D9] no-animation p-0 px-3 min-h-[unset] h-[60px] lg:h-9 lg:max-h-9 rounded-none border-none outline-none focus:outline-none hover:rounded-none hover:bg-[#D9D9D9] hover:no-animation"
-          aria-label="Buscar"
-          disabled={loading.value}
+      <div className="py-3 px-4 bg-[#3A4332]">
+        <form
+          onSubmit={handleSubmit}
+          class="join w-full h-[36px] lg:h-9 bg-[#D9D9D9]"
         >
-          <Icon id="search" size={20} />
-        </button>
-      </form>
+          <input
+            class="input join-item flex-grow h-[36px] lg:h-9 rounded-none border-none outline-none focus:outline-none bg-[#D9D9D9] placeholder:text-[#1F251C]"
+            name="q"
+            placeholder={placeholder}
+            value={query.value}
+            onInput={(e) => (query.value = e.currentTarget.value)}
+            onFocus={() => (focused.value = true)}
+            onBlur={() => setTimeout(() => (focused.value = false), 200)}
+            autocomplete="off"
+            aria-label="Buscar produtos"
+          />
+
+          <button
+            type="submit"
+            class="btn join-item bg-[#D9D9D9] no-animation p-0 px-3 min-h-[unset] h-[36px] lg:h-9 lg:max-h-9 rounded-none border-none outline-none focus:outline-none hover:rounded-none hover:bg-[#D9D9D9] hover:no-animation"
+            aria-label="Buscar"
+            disabled={loading.value}
+          >
+            <Icon id="search" size={20} />
+          </button>
+        </form>
+      </div>
 
       {error.value && <div class="text-error text-sm mt-1">{error.value}</div>}
 
