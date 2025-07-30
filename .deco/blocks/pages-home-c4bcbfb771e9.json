@@ -159,6 +159,12 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
+        "__resolveType": "PromoCountDownBannerDefault"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
         "__resolveType": "site/sections/Product/ProductShelf.tsx",
         "title": "FERRAMENTAS",
         "headerIcon": "https://assets.decocache.com/ffloresta/28daeeed-da2e-4353-9b47-094d244c40dd/home-second-shelf-title-icon.svg",
@@ -305,12 +311,6 @@
         },
         "videoUrl": "https://youtu.be/dSX5s9FML_U?si=khXj_dPOYXLncob5",
         "youtubeVideoId": "dSX5s9FML_U?si=Qk8YX6y3Htdd0wPN"
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "PromoCountDownBannerDefault"
       }
     },
     {
