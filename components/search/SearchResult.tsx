@@ -120,7 +120,7 @@ function PageResult(props: SectionProps<typeof loader>) {
             <a
               rel="next"
               class={clx(
-                "w-full max-w-32 p-3 bg-[#3A4332] text-[white] h-8 flex items-center justify-center font-bold text-[14.06px] leading-[170%] tracking-[16%] hover:bg-[#293023] cursor-pointer transition",
+                "w-full p-3 bg-[#3A4332] text-[white] h-8 flex items-center justify-center font-bold text-[14.06px] leading-[170%] tracking-[16%] hover:bg-[#293023] cursor-pointer transition",
                 (!nextPageUrl || partial === "hideMore") && "hidden"
               )}
               hx-swap="outerHTML show:parent:top"
