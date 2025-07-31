@@ -2,7 +2,7 @@ import { Suggestion } from "apps/commerce/types.ts";
 import type { AppContext } from "../../../apps/site.ts";
 import { clx } from "../../../sdk/clx.ts";
 import { ComponentProps } from "../../../sections/Component.tsx";
-import ProductCard from "../../product/ProductCard.tsx";
+import ProductCard from "../../product/ProductCard/ProductCard.tsx";
 import Icon from "../../ui/Icon.tsx";
 import Slider from "../../ui/Slider.tsx";
 import { ACTION, NAME } from "./Form.tsx";
@@ -15,29 +15,33 @@ export interface Props {
   loader: Resolved<Suggestion | null>;
 }
 export const action = async (props: Props, req: Request, ctx: AppContext) => {
-  const { loader: { __resolveType, ...loaderProps } } = props;
+  const {
+    loader: { __resolveType, ...loaderProps },
+  } = props;
   const form = await req.formData();
   const query = `${form.get(NAME ?? "q")}`;
   // @ts-expect-error This is a dynamic resolved loader
-  const suggestion = await ctx.invoke(__resolveType, {
+  const suggestion = (await ctx.invoke(__resolveType, {
     ...loaderProps,
     query,
-  }) as Suggestion | null;
+  })) as Suggestion | null;
   return { suggestion };
 };
 export const loader = async (props: Props, req: Request, ctx: AppContext) => {
-  const { loader: { __resolveType, ...loaderProps } } = props;
+  const {
+    loader: { __resolveType, ...loaderProps },
+  } = props;
   const query = new URL(req.url).searchParams.get(NAME ?? "q");
   // @ts-expect-error This is a dynamic resolved loader
-  const suggestion = await ctx.invoke(__resolveType, {
+  const suggestion = (await ctx.invoke(__resolveType, {
     ...loaderProps,
     query,
-  }) as Suggestion | null;
+  })) as Suggestion | null;
   return { suggestion };
 };
-function Suggestions(
-  { suggestion }: ComponentProps<typeof loader, typeof action>,
-) {
+function Suggestions({
+  suggestion,
+}: ComponentProps<typeof loader, typeof action>) {
   const { products = [], searches = [] } = suggestion ?? {};
   const hasProducts = Boolean(products.length);
   const hasTerms = Boolean(searches.length);
