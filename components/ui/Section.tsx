@@ -25,9 +25,9 @@ function Header({ title, cta, icon, headerBanner }: Props) {
     >
       <div class="flex items-center gap-2">
         {icon && <img src={icon} alt={title} />}
-        <span class="font-['FS_Emeric'] font-bold text-[#1F251C] text-[18px] leading-[100%] sm:text-[26.14px]">
+        <h2 class="font-['FS_Emeric'] font-bold text-[#1F251C] text-[18px] leading-[100%] sm:text-[26.14px]">
           {title}
-        </span>
+        </h2>
       </div>
       {cta && (
         <a class="text-sm font-medium text-primary" href={cta}>
@@ -35,7 +35,11 @@ function Header({ title, cta, icon, headerBanner }: Props) {
         </a>
       )}
       {headerBanner && (
-        <img className="w-full xl:w-auto" src={headerBanner} alt={title} />
+        <img
+          className="hidden lg:block w-full xl:w-auto "
+          src={headerBanner}
+          alt={title}
+        />
       )}
     </div>
   );
