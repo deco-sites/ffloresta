@@ -1,6 +1,6 @@
 import { Product } from "apps/commerce/types.ts";
 import Slider from "../../islands/Slider.tsx";
-import ProductCard from "./ProductCard.tsx";
+import ProductCard from "./ProductCard/ProductCard.tsx";
 import { useId } from "../../sdk/useId.ts";
 
 interface Props {

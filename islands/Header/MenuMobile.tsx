@@ -62,7 +62,7 @@ function ThirdLevelMenuItem({ item }: { item: SiteNavigationElement }) {
       <div class="flex justify-between items-center w-full">
         <a
           href={item.url}
-          class="py-2 font-['FS_Emeric'] text-[16px] text-[#1F251C] hover:underline group-hover:text-white"
+          class="py-2 font-['FS_Emeric'] text-[16px] hover:underline text-white"
         >
           {item.name}
         </a>
@@ -178,7 +178,9 @@ function MenuItem({ item }: { item: SiteNavigationElement }) {
                 isOpen.value = !isOpen.value;
               }}
             >
-              {isOpen.value ? <MinusWhite /> : (
+              {isOpen.value ? (
+                <MinusWhite />
+              ) : (
                 <span class="group-hover:hidden">
                   <PlusGreen />
                 </span>
