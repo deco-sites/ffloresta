@@ -78,3 +78,8 @@ input[type="checkbox"]:checked::after {
 .scrollbar-hidden::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
 }
+
+.dragging {
+  cursor: grabbing;
+  user-select: none;
+}

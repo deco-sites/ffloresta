@@ -42,7 +42,7 @@ export default function AddToCartButtonPDP({
 
     // Abre o minicart
     const minicartCheckbox = document.getElementById(
-      "minicart-drawer", // ID do minicart
+      "minicart-drawer" // ID do minicart
     ) as HTMLInputElement | null;
     if (minicartCheckbox) {
       minicartCheckbox.checked = true;

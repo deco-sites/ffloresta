@@ -85,7 +85,7 @@ export default function BannerMosaic({
   return (
     <div
       id={id}
-      class={`container flex flex-col md:flex-row flex-wrap items-stretch justify-center px-5 lg:px-[4rem] py-6 md:py-11 gap-${gap}`}
+      class={`container flex flex-col md:flex-row flex-wrap items-stretch justify-center py-6 md:py-11 gap-${gap} 2xl:px-0`}
     >
       {images?.slice(0, itemsToShow).map((image, index) => (
         <div class={`flex-1 w-full md:max-w-[${100 / itemsToShow}%]`}>

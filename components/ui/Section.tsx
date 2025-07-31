@@ -36,7 +36,7 @@ function Header({ title, cta, icon, headerBanner }: Props) {
       )}
       {headerBanner && (
         <img
-          className="hidden lg:block w-full xl:w-auto "
+          className="hidden 2xl:block w-full xl:w-auto "
           src={headerBanner}
           alt={title}
         />

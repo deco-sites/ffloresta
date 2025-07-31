@@ -1,7 +1,7 @@
 import type { ImageWidget } from "apps/admin/widgets.ts";
-import { Picture, Source } from "apps/website/components/Picture.tsx";
+import { Picture } from "apps/website/components/Picture.tsx";
 import Section from "../../components/ui/Section.tsx";
-import Slider from "../../islands/Slider.tsx";
+import Slider from "../../components/ui/Slider.tsx";
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
@@ -38,30 +38,32 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
     event: { name: "view_promotion", params },
   });
 
-  const hasAction = action &&
-    (action.href || action.title || action.subTitle || action.label);
+  const hasAction =
+    action && (action.href || action.title || action.subTitle || action.label);
 
   return (
     <a
       {...(hasAction ? selectPromotionEvent : {})}
       href={action?.href ?? "#"}
       aria-label={action?.label}
-      class="relative block overflow-y-hidden w-full"
+      class="relative block w-full overflow-hidden"
     >
       {hasAction && (
         <div
           class={clx(
-            "absolute h-full w-full top-0 left-0",
+            "absolute h-full w-full top-0 left-0 z-10",
             "flex flex-col justify-center items-center",
             "px-5 sm:px-0",
-            "sm:left-40 sm:items-start sm:max-w-96",
+            "sm:left-40 sm:items-start sm:max-w-96"
           )}
         >
           {action.title && (
-            <span class="text-7xl font-bold text-base-100">{action.title}</span>
+            <span class="text-4xl md:text-7xl font-bold text-base-100">
+              {action.title}
+            </span>
           )}
           {action.subTitle && (
-            <span class="font-normal text-base text-base-100 pt-4 pb-12">
+            <span class="font-normal text-base text-base-100 pt-4 pb-8 md:pb-12">
               {action.subTitle}
             </span>
           )}
@@ -77,13 +79,13 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
       )}
       <Picture preload={lcp} {...viewPromotionEvent}>
         <img
-          class="block lg:hidden object-cover w-full h-full"
+          class="block lg:hidden object-cover w-full h-full select-none pointer-events-none"
           loading={lcp ? "eager" : "lazy"}
           src={mobile}
           alt={alt}
         />
         <img
-          class="hidden lg:block object-cover w-full h-full"
+          class="hidden lg:block object-cover w-full h-full select-none pointer-events-none"
           loading={lcp ? "eager" : "lazy"}
           src={desktop}
           alt={alt}
@@ -101,7 +103,7 @@ function Carousel({ images = [], preload, interval }: Props) {
       id={id}
       class={clx(
         "relative",
-        "w-full max-w-full overflow-hidden flex min-h-[unset] h-fit",
+        "w-full max-w-full overflow-hidden flex min-h-[unset] h-fit"
       )}
     >
       <Slider
@@ -109,10 +111,10 @@ function Carousel({ images = [], preload, interval }: Props) {
         interval={interval ?? 5000}
         infinite
         autoplay
-        class="carousel carousel-center w-full gap-6"
+        class="carousel carousel-center w-full gap-6 cursor-grab active:cursor-grabbing select-none"
       >
         {images.map((image, index) => (
-          <Slider.Item index={index} class="carousel-item w-full">
+          <Slider.Item index={index} class="carousel-item w-full" key={index}>
             <BannerItem image={image} lcp={index === 0 && preload} />
           </Slider.Item>
         ))}
@@ -122,20 +124,19 @@ function Carousel({ images = [], preload, interval }: Props) {
         <>
           <ul
             class={clx(
-              "absolute bottom-4 left-0 right-0 z-10 h-3",
-              "carousel justify-center gap-2",
+              "absolute bottom-4 left-0 right-0 z-20 h-3",
+              "carousel justify-center gap-2"
             )}
           >
             {images.map((_, index) => (
-              <li class="carousel-item h-3">
+              <li class="carousel-item h-3" key={index}>
                 <Slider.Dot
                   index={index}
                   class={clx(
                     "bg-white h-3 w-3 no-animation rounded-full",
-                    "disabled:bg-[#2D2D2D] transition-[background]",
+                    "disabled:bg-[#2D2D2D] transition-[background]"
                   )}
-                >
-                </Slider.Dot>
+                />
               </li>
             ))}
           </ul>
@@ -151,6 +152,7 @@ function Carousel({ images = [], preload, interval }: Props) {
     </div>
   );
 }
+
 export default Carousel;
 
 export const LoadingFallback = () => <Section.Placeholder height="300px" />;
