@@ -338,7 +338,7 @@
         ],
         "itemsToShow": 3,
         "enableSlider": false,
-        "gap": 40
+        "gap": "40px"
       }
     },
     {
