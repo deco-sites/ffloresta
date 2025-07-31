@@ -1,4 +1,5 @@
 import { SectionProps } from "deco/types.ts";
+import Section from "../../components/ui/Section.tsx";
 import PromoCountdownIsland from "../../islands/ProductPagePromoBanner.tsx";
 import type { ImageWidget as Image } from "apps/admin/widgets.ts";
 
@@ -16,7 +17,7 @@ export default function PromoCountdownSection({
   promoName,
 }: SectionProps<typeof loader>) {
   return (
-    <div class="w-full container mx-4">
+    <div class="w-full container mx-auto px-0">
       <PromoCountdownIsland
         image={image}
         countdownDate={countdownDate}
@@ -30,3 +31,5 @@ export default function PromoCountdownSection({
 export const loader = ({ image, countdownDate, title, promoName }: Props) => {
   return { image, countdownDate, title, promoName };
 };
+
+export const LoadingFallback = () => <Section.Placeholder height="100px" />;

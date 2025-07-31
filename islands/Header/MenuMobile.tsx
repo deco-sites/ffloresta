@@ -154,8 +154,10 @@ function MenuItem({ item }: { item: SiteNavigationElement }) {
   return (
     <div class="group relative">
       <div
-        class={`collapse-title !p-0 bg-white group-hover:bg-[rgba(21,31,22,0.6)] group-hover:backdrop-blur-[12px] !px-4 min-h-[auto] border-none ${
-          isOpen.value ? "bg-[rgba(21,31,22,0.6)] backdrop-blur-[12px]" : ""
+        class={`collapse-title !p-0  group-hover:bg-[rgba(21,31,22,0.6)] group-hover:backdrop-blur-[12px] !px-4 min-h-[auto] border-none ${
+          isOpen.value
+            ? "bg-[rgba(21,31,22,0.6)] backdrop-blur-[12px]"
+            : "bg-white"
         }`}
       >
         <div class="flex justify-between items-center w-full">
@@ -176,7 +178,9 @@ function MenuItem({ item }: { item: SiteNavigationElement }) {
                 isOpen.value = !isOpen.value;
               }}
             >
-              {isOpen.value ? <MinusWhite /> : (
+              {isOpen.value ? (
+                <MinusWhite />
+              ) : (
                 <span class="group-hover:hidden">
                   <PlusGreen />
                 </span>
@@ -191,8 +195,8 @@ function MenuItem({ item }: { item: SiteNavigationElement }) {
         </div>
       </div>
       {hasChildren && isOpen.value && (
-        <div class="!px-0 px-4 bg-[rgba(21,31,22,0.6)] backdrop-blur-[12px] group-hover:text-white">
-          <ul>
+        <div class="!px-0 bg-[rgba(21,31,22,0.6)] backdrop-blur-[12px] group-hover:text-white">
+          <ul class="max-h-[calc(10*48px)] overflow-y-scroll">
             {item.children!.map((child) => (
               <li key={child.url}>
                 <SubMenuItem item={child} />

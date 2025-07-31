@@ -3953,6 +3953,9 @@ details.collapse summary::-webkit-details-marker {
 .h-\[57px\] {
   height: 57px;
 }
+.h-\[6px\] {
+  height: 6px;
+}
 .h-\[98\%\] {
   height: 98%;
 }
@@ -4026,6 +4029,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .max-h-\[80px\] {
   max-height: 80px;
+}
+.max-h-\[calc\(10\*48px\)\] {
+  max-height: calc(10 * 48px);
 }
 .max-h-\[calc\(100vh-172px-16px\)\] {
   max-height: calc(100vh - 172px - 16px);
@@ -4179,6 +4185,9 @@ details.collapse summary::-webkit-details-marker {
 .w-min {
   width: -moz-min-content;
   width: min-content;
+}
+.w-screen {
+  width: 100vw;
 }
 .min-w-0 {
   min-width: 0px;
@@ -4968,6 +4977,10 @@ details.collapse summary::-webkit-details-marker {
 .object-scale-down {
   -o-object-fit: scale-down;
      object-fit: scale-down;
+}
+.object-\[50\%\] {
+  -o-object-position: 50%;
+     object-position: 50%;
 }
 .\!p-0 {
   padding: 0px !important;
@@ -6760,10 +6773,6 @@ input[type="checkbox"]:checked::after {
 
   .lg\:max-h-\[600px\] {
     max-height: 600px;
-  }
-
-  .lg\:min-h-\[460px\] {
-    min-height: 460px;
   }
 
   .lg\:w-1\/2 {
