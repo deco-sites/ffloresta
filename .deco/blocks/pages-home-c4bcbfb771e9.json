@@ -337,7 +337,8 @@
           }
         ],
         "itemsToShow": 3,
-        "enableSlider": false
+        "enableSlider": false,
+        "gap": 40
       }
     },
     {
