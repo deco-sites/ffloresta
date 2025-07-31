@@ -227,7 +227,7 @@ export default function CustomSearchBar({
           class="join w-full h-[36px] lg:h-9 bg-[#D9D9D9]"
         >
           <input
-            class="input join-item flex-grow h-[36px] lg:h-9 rounded-none border-none outline-none focus:outline-none bg-[#D9D9D9] placeholder:text-[#1F251C] placeholder:text-['FS_Emeric']"
+            class="input join-item flex-grow h-[36px] lg:h-9 rounded-none border-none outline-none focus:outline-none bg-[#D9D9D9] placeholder:text-[#1F251C] placeholder:font-['FS_Emeric']"
             name="q"
             placeholder={placeholder}
             value={query.value}
