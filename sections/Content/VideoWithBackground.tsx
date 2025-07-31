@@ -20,8 +20,7 @@ export default function VideoWithBackground({
   background,
   youtubeVideoId,
 }: Props) {
-  const youtubeEmbedUrl =
-    `https://www.youtube.com/embed/${youtubeVideoId}?autoplay=0&rel=0`;
+  const youtubeEmbedUrl = `https://www.youtube.com/embed/${youtubeVideoId}?autoplay=0&rel=0`;
 
   return (
     <div class="container relative w-full h-screen max-h-[507px]">
@@ -33,7 +32,7 @@ export default function VideoWithBackground({
           <img
             src={background.desktop.src}
             alt={background.desktop.alt || "Background"}
-            class="container w-full h-full object-cover lg:px-[4rem]"
+            class="container w-full h-full object-cover"
           />
         </picture>
       </div>
@@ -50,8 +49,7 @@ export default function VideoWithBackground({
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               title="YouTube video player"
-            >
-            </iframe>
+            ></iframe>
           </div>
         </div>
 
@@ -66,8 +64,7 @@ export default function VideoWithBackground({
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               title="YouTube video player"
-            >
-            </iframe>
+            ></iframe>
           </div>
         </div>
       </div>

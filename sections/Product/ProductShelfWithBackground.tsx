@@ -76,7 +76,7 @@ export default function ProductShelfWithBackground({
               />
               <img
                 src={background.desktop.src}
-                alt={background.desktop.alt}
+                alt="Prateleira de Produtos com Imagem de Fundo"
                 class="w-full h-full object-cover"
               />
             </picture>

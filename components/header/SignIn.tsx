@@ -4,7 +4,7 @@ import { useScript } from "@deco/deco/hooks";
 
 // Tamanhos e estilos padronizados
 const ICON_SIZE = 20;
-const TEXT_STYLE = "font-['FS_Emeric'] font-normal text-[16px] leading-none";
+const TEXT_STYLE = "font-['FS_Emeric'] font-normal text-[14px] leading-none";
 const TEXT_COLOR = "text-[#1F251C] lg:text-white";
 const GAP = "gap-3.5 lg:gap-[14px]";
 
@@ -41,7 +41,7 @@ function SignIn({ variant, showText = true }: Props) {
           "flex items-center justify-center",
           TEXT_STYLE,
           TEXT_COLOR,
-          GAP,
+          GAP
         )}
         href="/login"
         aria-label="Login"
@@ -75,7 +75,7 @@ function SignIn({ variant, showText = true }: Props) {
           "hidden flex items-center justify-center",
           TEXT_STYLE,
           TEXT_COLOR,
-          GAP,
+          GAP
         )}
         href="/account"
         aria-label="Account"
