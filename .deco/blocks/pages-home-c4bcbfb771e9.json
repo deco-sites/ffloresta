@@ -318,6 +318,31 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
+        "__resolveType": "site/sections/Content/BannerMosaic.tsx",
+        "images": [
+          {
+            "desktop": "https://assets.decocache.com/ffloresta/e3a3a9f2-21e5-4cfe-9059-96cddad688cf/Screenshot_62.png",
+            "mobile": "https://assets.decocache.com/ffloresta/e3a3a9f2-21e5-4cfe-9059-96cddad688cf/Screenshot_62.png",
+            "alt": "01"
+          },
+          {
+            "desktop": "https://assets.decocache.com/ffloresta/e3a3a9f2-21e5-4cfe-9059-96cddad688cf/Screenshot_62.png",
+            "mobile": "https://assets.decocache.com/ffloresta/e3a3a9f2-21e5-4cfe-9059-96cddad688cf/Screenshot_62.png",
+            "alt": "01"
+          },
+          {
+            "desktop": "https://assets.decocache.com/ffloresta/e3a3a9f2-21e5-4cfe-9059-96cddad688cf/Screenshot_62.png",
+            "mobile": "https://assets.decocache.com/ffloresta/e3a3a9f2-21e5-4cfe-9059-96cddad688cf/Screenshot_62.png",
+            "alt": "01"
+          }
+        ],
+        "itemsToShow": 3,
+        "enableSlider": false
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
         "__resolveType": "site/sections/Content/VideoWithBackground.tsx",
         "background": {
           "desktop": {
