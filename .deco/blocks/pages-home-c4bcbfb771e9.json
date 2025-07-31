@@ -40,6 +40,13 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
+        "__resolveType": "site/sections/Content/BannerFaixa.tsx",
+        "bannerFaixa": "https://assets.decocache.com/ffloresta/07763fc7-1602-43e8-b1f6-04aa2862a5d4/download.svg"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
         "__resolveType": "site/sections/Content/Benefits.tsx",
         "benefits": [
           {
@@ -97,6 +104,7 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Product/ProductShelfWithBackground.tsx",
+        "title": "DESTAQUE FLORESTA",
         "products": {
           "__resolveType": "vtex/loaders/intelligentSearch/productSearchValidator.ts",
           "props": {
@@ -105,7 +113,6 @@
             "count": 7
           }
         },
-        "title": "DESTAQUE FLORESTA",
         "background": {
           "desktop": {
             "src": "https://assets.decocache.com/ffloresta/f8ba9f96-6cf8-4d4b-b0e9-8b52e645df7e/image.png"
