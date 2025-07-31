@@ -5464,6 +5464,9 @@ details.collapse summary::-webkit-details-marker {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+.text-\[\'FS_Emeric\'\] {
+  color: 'FS Emeric';
+}
 .text-\[white\] {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -5993,6 +5996,14 @@ input[type="checkbox"]:checked::after {
 .placeholder\:text-\[\#1F251C\]::placeholder {
   --tw-text-opacity: 1;
   color: rgb(31 37 28 / var(--tw-text-opacity));
+}
+
+.placeholder\:text-\[\'FS_Emeric\'\]::-moz-placeholder {
+  color: 'FS Emeric';
+}
+
+.placeholder\:text-\[\'FS_Emeric\'\]::placeholder {
+  color: 'FS Emeric';
 }
 
 .first\:ml-4:first-child {

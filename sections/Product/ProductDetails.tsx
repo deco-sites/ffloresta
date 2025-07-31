@@ -1,10 +1,8 @@
 import { ProductDetailsPage } from "apps/commerce/types.ts";
-import ImageGallerySlider from "../../components/product/Gallery.tsx";
+import GallerySlider from "../../components/product/Gallery.tsx";
 import ProductInfo from "../../components/product/ProductInfo.tsx";
-import Section from "../../components/ui/Section.tsx";
 import { clx } from "../../sdk/clx.ts";
 import ProductDescription from "../../islands/ProductDescription.tsx";
-import { type LoadingFallbackProps } from "@deco/deco";
 import PromoCountdownIsland from "../../islands/ProductPagePromoBanner.tsx";
 import type { ImageWidget as Image } from "apps/admin/widgets.ts";
 import { HTMLWidget as HTML } from "apps/admin/widgets.ts";
@@ -64,13 +62,13 @@ export default function ProductDetails({
           spec.priceType === "https://schema.org/SalePrice" &&
           spec.billingDuration &&
           spec.billingIncrement &&
-          spec.billingIncrement * spec.billingDuration === offer.price,
+          spec.billingIncrement * spec.billingDuration === offer.price
       );
     }
   }
 
   return (
-    <div class="w-full flex flex-col">
+    <div class="w-full flex flex-col bg-white">
       <div class="block lg:hidden mt-6">
         {productBanner && <PromoCountdownIsland {...productBanner} />}
       </div>
@@ -85,11 +83,11 @@ export default function ProductDetails({
         class={clx(
           "container grid md:mt-8",
           "grid-cols-1 gap-9 py-0",
-          "lg:grid-cols-[1fr_380px] lg:gap-11",
+          "lg:grid-cols-[1fr_380px] lg:gap-11"
         )}
       >
         <div class="w-full flex flex-col">
-          <ImageGallerySlider page={page} />
+          <GallerySlider page={page} />
         </div>
         <div class="h-fit px-5 pb-4 shadow-[5px_5px_7px_0px_rgba(0,0,0,0.15)] mb-10 lg:mb-0">
           {productBanner && (

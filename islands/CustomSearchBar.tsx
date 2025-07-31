@@ -130,7 +130,7 @@ function ProductCard({
                 <span class="font-bold text-[14px] leading-[170%] tracking-[3%] line-through">
                   {formatPrice(listPrice, offers?.priceCurrency).replace(
                     "R$",
-                    "",
+                    ""
                   )}
                 </span>
               </div>
@@ -227,7 +227,7 @@ export default function CustomSearchBar({
           class="join w-full h-[36px] lg:h-9 bg-[#D9D9D9]"
         >
           <input
-            class="input join-item flex-grow h-[36px] lg:h-9 rounded-none border-none outline-none focus:outline-none bg-[#D9D9D9] placeholder:text-[#1F251C]"
+            class="input join-item flex-grow h-[36px] lg:h-9 rounded-none border-none outline-none focus:outline-none bg-[#D9D9D9] placeholder:text-[#1F251C] placeholder:text-['FS_Emeric']"
             name="q"
             placeholder={placeholder}
             value={query.value}
@@ -261,26 +261,27 @@ export default function CustomSearchBar({
                 <ul class="space-y-1 md:space-y-2">
                   {(isMobile.value
                     ? searchTerms.value.slice(0, 3)
-                    : searchTerms.value).map((term, index) => (
-                      <li key={index}>
-                        <a
-                          href={`/s?q=${encodeURIComponent(term.term)}`}
-                          class="block py-1 md:py-2 hover:bg-base-200 rounded"
-                          onMouseDown={(e) => e.preventDefault()}
-                        >
-                          <div class="flex justify-between items-center">
-                            <span class="text-sm md:text-base text-capitalize">
-                              {term.term}
+                    : searchTerms.value
+                  ).map((term, index) => (
+                    <li key={index}>
+                      <a
+                        href={`/s?q=${encodeURIComponent(term.term)}`}
+                        class="block py-1 md:py-2 hover:bg-base-200 rounded"
+                        onMouseDown={(e) => e.preventDefault()}
+                      >
+                        <div class="flex justify-between items-center">
+                          <span class="text-sm md:text-base text-capitalize">
+                            {term.term}
+                          </span>
+                          {term.count && (
+                            <span class="text-xs md:text-sm text-gray-500">
+                              {term.count}
                             </span>
-                            {term.count && (
-                              <span class="text-xs md:text-sm text-gray-500">
-                                {term.count}
-                              </span>
-                            )}
-                          </div>
-                        </a>
-                      </li>
-                    ))}
+                          )}
+                        </div>
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </div>
             )}

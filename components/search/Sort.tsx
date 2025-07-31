@@ -24,7 +24,7 @@ const labels: Record<string, string> = {
 function Sort({ sortOptions, url }: Props) {
   const current = getUrl(
     url,
-    new URL(url).searchParams.get(SORT_QUERY_PARAM) ?? "",
+    new URL(url).searchParams.get(SORT_QUERY_PARAM) ?? ""
   );
   const options = sortOptions?.map(({ value, label }) => ({
     value: getUrl(url, value),
@@ -40,7 +40,7 @@ function Sort({ sortOptions, url }: Props) {
       </label>
       <select
         name="sort"
-        class="select w-full md:max-w-40 max-h-9 h-9 min-h-9 md:ml-2 text-sm rounded-none uppercase border-[#BCBCBC]"
+        class="select w-full md:max-w-40 max-h-9 h-9 min-h-9 md:ml-2 text-sm rounded-none uppercase border-[#BCBCBC] text-['FS_Emeric']"
         hx-on:change={useScript(() => {
           const select = event!.currentTarget as HTMLSelectElement;
           window.location.href = select.value;
@@ -51,6 +51,7 @@ function Sort({ sortOptions, url }: Props) {
             label={labels[label] ?? label}
             value={value}
             selected={value === current}
+            class="text-['FS_Emeric']"
           >
             {label}
           </option>
