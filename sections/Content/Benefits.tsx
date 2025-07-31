@@ -58,7 +58,7 @@ const Benefits = ({ benefits }: Props) => {
       </div>
 
       {/* Mobile View - Slider */}
-      <div id={id} className="md:hidden relative mt-6 mb-11">
+      <div id={id} className="md:hidden relative mt-[38px] mb-4">
         <div className="relative">
           <Slider
             class="carousel carousel-center w-full"

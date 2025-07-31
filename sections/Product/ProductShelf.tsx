@@ -47,7 +47,7 @@ export default function ProductShelf({
   });
 
   return (
-    <Section.Container {...viewItemListEvent} class="container px-0">
+    <Section.Container {...viewItemListEvent} class="container">
       <div class="w-full mx-auto lg:mx-0 xl:max-w-none mt-8">
         <div class="px-4 lg:px-0">
           <Section.Header

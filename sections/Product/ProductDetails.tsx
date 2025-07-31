@@ -37,6 +37,7 @@ export default function ProductDetails({
   /**
    * Rendered when a not found is returned by any of the loaders run on this page
    */
+
   if (!page) {
     return (
       <div class="w-full flex justify-center items-center py-28">
@@ -67,6 +68,9 @@ export default function ProductDetails({
     }
   }
 
+  const breadcrumbItems = [...page.breadcrumbList.itemListElement];
+  breadcrumbItems.pop();
+
   return (
     <div class="w-full flex flex-col bg-white">
       <div class="block lg:hidden mt-6">
@@ -75,7 +79,7 @@ export default function ProductDetails({
 
       {page.breadcrumbList.itemListElement && (
         <div class="container mt-6 lg:mt-20">
-          <Breadcrumb itemListElement={page.breadcrumbList.itemListElement} />
+          <Breadcrumb itemListElement={breadcrumbItems} />
         </div>
       )}
 

@@ -469,7 +469,7 @@ html {
   }
 
   body {
-    background: #fdfff5 !important;
+    background: #ffffff !important;
   }
 
   /* Disable scroll once drawer/modal is openned */
@@ -3830,6 +3830,9 @@ details.collapse summary::-webkit-details-marker {
 .mt-\[30px\] {
   margin-top: 30px;
 }
+.mt-\[38px\] {
+  margin-top: 38px;
+}
 .mt-\[50px\] {
   margin-top: 50px;
 }
@@ -4252,9 +4255,6 @@ details.collapse summary::-webkit-details-marker {
 }
 .max-w-2xl {
   max-width: 42rem;
-}
-.max-w-32 {
-  max-width: 8rem;
 }
 .max-w-4 {
   max-width: 1rem;
