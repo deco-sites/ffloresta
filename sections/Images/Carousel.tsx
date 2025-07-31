@@ -76,18 +76,14 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
         </div>
       )}
       <Picture preload={lcp} {...viewPromotionEvent}>
-        <Source
-          media="(max-width: 767px)"
-          fetchPriority={lcp ? "high" : "auto"}
+        <img
+          class="block lg:hidden object-cover w-full h-full"
+          loading={lcp ? "eager" : "lazy"}
           src={mobile}
-        />
-        <Source
-          media="(min-width: 768px)"
-          fetchPriority={lcp ? "high" : "auto"}
-          src={desktop}
+          alt={alt}
         />
         <img
-          class="object-cover w-full h-full"
+          class="hidden lg:block object-cover w-full h-full"
           loading={lcp ? "eager" : "lazy"}
           src={desktop}
           alt={alt}
@@ -104,54 +100,57 @@ function Carousel({ images = [], preload, interval }: Props) {
     <div
       id={id}
       class={clx(
-        "grid",
-        "grid-rows-[1fr_32px_1fr_42px]",
-        "grid-cols-[32px_1fr_32px]",
-        "sm:grid-cols-[112px_1fr_42px] sm:min-h-min",
-        "w-full max-w-full overflow-hidden",
+        "relative",
+        "w-full max-w-full overflow-hidden flex min-h-[unset] h-fit",
       )}
     >
-      <div class="col-span-full row-span-full">
-        <Slider
-          rootId={id}
-          interval={5000}
-          infinite
-          autoplay
-          class="carousel carousel-center w-full gap-6"
-        >
-          {images.map((image, index) => (
-            <Slider.Item index={index} class="carousel-item w-full">
-              <BannerItem image={image} lcp={index === 0 && preload} />
-            </Slider.Item>
-          ))}
-        </Slider>
-      </div>
-
-      <ul
-        class={clx(
-          "col-span-full row-start-4 z-10 h-3",
-          "carousel justify-center gap-2",
-        )}
+      <Slider
+        rootId={id}
+        interval={interval ?? 5000}
+        infinite
+        autoplay
+        class="carousel carousel-center w-full gap-6"
       >
-        {images.map((_, index) => (
-          <li class="carousel-item h-3">
-            <Slider.Dot
-              index={index}
-              class={clx(
-                "bg-white h-3 w-3 no-animation rounded-full",
-                "disabled:bg-[#2D2D2D] transition-[background]",
-              )}
-            >
-            </Slider.Dot>
-          </li>
+        {images.map((image, index) => (
+          <Slider.Item index={index} class="carousel-item w-full">
+            <BannerItem image={image} lcp={index === 0 && preload} />
+          </Slider.Item>
         ))}
-      </ul>
+      </Slider>
 
-      <Slider.JS rootId={id} interval={5000} infinite autoplay={true} />
+      {images.length > 1 && (
+        <>
+          <ul
+            class={clx(
+              "absolute bottom-4 left-0 right-0 z-10 h-3",
+              "carousel justify-center gap-2",
+            )}
+          >
+            {images.map((_, index) => (
+              <li class="carousel-item h-3">
+                <Slider.Dot
+                  index={index}
+                  class={clx(
+                    "bg-white h-3 w-3 no-animation rounded-full",
+                    "disabled:bg-[#2D2D2D] transition-[background]",
+                  )}
+                >
+                </Slider.Dot>
+              </li>
+            ))}
+          </ul>
+
+          <Slider.JS
+            rootId={id}
+            interval={interval ?? 5000}
+            infinite
+            autoplay={true}
+          />
+        </>
+      )}
     </div>
   );
 }
-
 export default Carousel;
 
 export const LoadingFallback = () => <Section.Placeholder height="300px" />;

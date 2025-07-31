@@ -3592,6 +3592,9 @@ details.collapse summary::-webkit-details-marker {
 .bottom-0 {
   bottom: 0px;
 }
+.bottom-4 {
+  bottom: 1rem;
+}
 .bottom-6 {
   bottom: 1.5rem;
 }
@@ -4451,17 +4454,11 @@ details.collapse summary::-webkit-details-marker {
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
-.grid-cols-\[32px_1fr_32px\] {
-  grid-template-columns: 32px 1fr 32px;
-}
 .grid-cols-\[48px_1fr_48px\] {
   grid-template-columns: 48px 1fr 48px;
 }
 .grid-rows-1 {
   grid-template-rows: repeat(1, minmax(0, 1fr));
-}
-.grid-rows-\[1fr_32px_1fr_42px\] {
-  grid-template-rows: 1fr 32px 1fr 42px;
 }
 .grid-rows-\[auto_1fr\] {
   grid-template-rows: auto 1fr;
@@ -6322,11 +6319,6 @@ input[type="checkbox"]:checked::after {
     height: 273px;
   }
 
-  .sm\:min-h-min {
-    min-height: -moz-min-content;
-    min-height: min-content;
-  }
-
   .sm\:w-1\/2 {
     width: 50%;
   }
@@ -6381,10 +6373,6 @@ input[type="checkbox"]:checked::after {
 
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .sm\:grid-cols-\[112px_1fr_42px\] {
-    grid-template-columns: 112px 1fr 42px;
   }
 
   .sm\:grid-cols-\[150px_1fr\] {

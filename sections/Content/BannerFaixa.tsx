@@ -20,5 +20,3 @@ export default function BannerMosaic({ bannerFaixa }: Props) {
     </>
   );
 }
-
-export const LoadingFallback = () => <Section.Placeholder height="6px" />;
