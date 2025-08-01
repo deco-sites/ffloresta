@@ -6934,8 +6934,8 @@ input[type="checkbox"]:checked::after {
     justify-content: normal;
   }
 
-  .lg\:justify-start {
-    justify-content: flex-start;
+  .lg\:justify-end {
+    justify-content: flex-end;
   }
 
   .lg\:justify-center {
@@ -6970,6 +6970,10 @@ input[type="checkbox"]:checked::after {
     padding: 0px;
   }
 
+  .lg\:p-4 {
+    padding: 1rem;
+  }
+
   .lg\:p-\[4\%\] {
     padding: 4%;
   }
@@ -7002,10 +7006,6 @@ input[type="checkbox"]:checked::after {
   .lg\:py-36 {
     padding-top: 9rem;
     padding-bottom: 9rem;
-  }
-
-  .lg\:pl-10 {
-    padding-left: 2.5rem;
   }
 
   .lg\:text-left {

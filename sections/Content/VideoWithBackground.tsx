@@ -29,22 +29,23 @@ export default function VideoWithBackground({
   return (
     <div
       id={id}
-      class="relative w-full h-auto aspect-[1180/355] overflow-hidden"
+      class="container relative w-full h-auto aspect-[1180/355] overflow-hidden max-w-[1535px]:px-[4rem]"
     >
       {/* Imagem de fundo */}
       <div class="absolute inset-0 z-0">
-        <picture>
-          <source media="(max-width: 1024px)" srcset={bgImgDesktop.src} />
-          <source media="(min-width: 1024px)" srcset={bgImgMobile.src} />
-          <img
-            src={bgImgDesktop.src}
-            alt={"Background"}
-            class="w-full h-full object-cover"
-          />
-        </picture>
+        <img
+          src={bgImgDesktop}
+          alt={"Background"}
+          class="hidden lg:block w-full h-full object-cover"
+        />
+        <img
+          src={bgImgMobile}
+          alt={"Background"}
+          class="block lg:hidden w-full h-full object-cover"
+        />
       </div>
 
-      <div class="absolute inset-0 z-10 flex items-center justify-center lg:justify-start lg:pl-10">
+      <div class="absolute inset-0 z-10 flex items-center justify-center lg:justify-end lg:items-center lg:p-4">
         <Video
           loading="eager"
           autoPlay
