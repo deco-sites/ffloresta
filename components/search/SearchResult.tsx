@@ -26,6 +26,10 @@ export interface SeoText {
 
 export interface Props {
   page: ProductListingPage | null;
+  topBanner?: {
+    desktop: ImageWidget;
+    mobile: ImageWidget;
+  };
   layout?: Layout;
   startingPage?: 0 | 1;
   partial?: "hideMore" | "hideLess";
@@ -84,7 +88,7 @@ function PageResult(props: SectionProps<typeof loader>) {
       >
         <a
           rel="prev"
-          class="w-full p-3 bg-[#3A4332] text-[#97A37F]font-['FS_Emeric']  h-8 flex items-center justify-center font-bold text-[14.06px] leading-[170%] tracking-[16%] hover:bg-[#293023] cursor-pointer transition"
+          class="w-full p-3 bg-[#3A4332] text-[#97A37F] font-['FS_Emeric'] h-8 flex items-center justify-center font-bold text-[14.06px] leading-[170%] tracking-[16%] hover:bg-[#293023] cursor-pointer transition"
           hx-swap="outerHTML show:parent:top"
           hx-get={partialPrev}
         >
@@ -97,9 +101,9 @@ function PageResult(props: SectionProps<typeof loader>) {
         data-product-list
         class={clx(
           "grid items-center",
-          "grid-cols-2 gap-4", // Base
-          "lg:grid-cols-3", // ≥1024px
-          "2xl:grid-cols-4", // ≥1240px
+          "grid-cols-2 gap-4",
+          "lg:grid-cols-3",
+          "2xl:grid-cols-4",
           "w-full"
         )}
       >
@@ -191,8 +195,16 @@ function Result(props: SectionProps<typeof loader>) {
   const container = useId();
   const controls = useId();
   const device = useDevice();
-  const { startingPage = 0, url, partial, bannerImage } = props;
-  const page = props.page!;
+  const {
+    startingPage = 0,
+    url,
+    partial,
+    bannerImage,
+    topBanner,
+    page: pageProp,
+  } = props;
+
+  const page = pageProp!;
   const { products, filters, breadcrumb, pageInfo, sortOptions } = page;
   const perPage = pageInfo?.recordPerPage || products.length;
   const zeroIndexedOffsetPage = pageInfo.currentPage - startingPage;
@@ -240,140 +252,125 @@ function Result(props: SectionProps<typeof loader>) {
   );
 
   return (
-    <>
-      <div id={container} {...viewItemListEvent} class="w-full">
-        {partial ? (
-          <PageResult {...props} />
-        ) : (
-          <div class="container flex flex-col gap-4 sm:gap-5 w-full py-4 sm:py-5 px-5 lg:px-[4rem]">
-            <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
+    <div id={container} {...viewItemListEvent} class="w-full">
+      <div class="container px-5 lg:px-[4rem] pt-4 sm:pt-5">
+        <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
+      </div>
 
-            {device === "mobile" && (
-              <Drawer
-                id={controls}
-                aside={
-                  <div class="bg-white flex flex-col h-full w-full divide-y overflow-y-hidden">
-                    <div class="flex justify-between items-center">
-                      <h1 class="px-4 py-3">
-                        <span class="font-medium text-2xl">Filtro</span>
-                      </h1>
-                      <label
-                        class="btn btn-ghost cursor-pointer"
-                        for={controls}
-                      >
-                        <Icon id="close" />
-                      </label>
-                    </div>
-                    <div class="flex-grow overflow-auto">
-                      <Filters filters={filters} />
-                    </div>
-                  </div>
-                }
-              >
-                <div class="flex sm:hidden flex-col items-start">
-                  <div class="flex">{results}</div>
-                  <div class="w-full flex justify-between items-center gap-4 mt-5">
-                    <div class="flex max-w-1/2 w-full">
-                      <label
-                        class="cursor-pointer w-full h-9 min-h9 max-h-9 p-0 rounded-none flex items-center justify-center gap-2 bg-[#c6cfba] text-[#323f2d] font-['FS_Emeric'] text-sm font-bold uppercase"
-                        for={controls}
-                      >
-                        <svg
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M21 4H14M10 4H3M21 12H12M8 12H3M21 20H16M12 20H3M14 2V6M8 10V14M16 18V22"
-                            stroke="#2D3B26"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                        Filtro
-                      </label>
-                    </div>
-                    <div class="flex max-w-1/2 w-full font-['FS_Emeric']">
-                      {sortBy}
-                    </div>
-                  </div>
+      {topBanner && (
+        <div class="w-full my-4">
+          <picture>
+            <source media="(max-width: 767px)" srcSet={topBanner.mobile} />
+            <img
+              src={topBanner.desktop}
+              alt="Categoria"
+              class="w-full h-auto object-cover"
+              loading="lazy"
+            />
+          </picture>
+        </div>
+      )}
+
+      <div class="container flex flex-col gap-4 sm:gap-5 w-full py-4 sm:py-5 px-5 lg:px-[4rem]">
+        {device === "mobile" && (
+          <Drawer
+            id={controls}
+            aside={
+              <div class="bg-white flex flex-col h-full w-full divide-y overflow-y-hidden">
+                <div class="flex justify-between items-center">
+                  <h1 class="px-4 py-3">
+                    <span class="font-medium text-2xl">Filtro</span>
+                  </h1>
+                  <label class="btn btn-ghost cursor-pointer" for={controls}>
+                    <Icon id="close" />
+                  </label>
                 </div>
-              </Drawer>
-            )}
-
-            <div class="grid grid-cols-1 sm:grid-cols-[250px_1fr] lg:gap-8">
-              {device === "desktop" && (
-                <aside class="place-self-start flex flex-col gap-9 w-full">
-                  <span class="text-base font-medium h-12 flex items-center text-md text-[#1F251C]">
-                    Filtro
-                  </span>
-                  {/* {bannerImage && (
-                    <img
-                      src={bannerImage}
-                      alt="banner categoria"
-                      class="w-full rounded"
-                    />
-                  )} */}
+                <div class="flex-grow overflow-auto">
                   <Filters filters={filters} />
-                </aside>
-              )}
-
-              <div class="flex flex-col gap-9">
-                {device === "desktop" && (
-                  <div class="flex justify-between items-center">
-                    {results}
-                    <div>{sortBy}</div>
-                  </div>
-                )}
-
-                <PageResult {...props} />
-
-                {(seoText?.title || seoText?.description) && (
-                  <div class="flex flex-col gap-2 sm:gap-3 text-[#1F251C] font-['FS_Emeric'] px-2 sm:px-0 pt-8 border-t border-[#CCCCCC]">
-                    {seoText.title && (
-                      <h2 class="text-[18px] font-['FS_Emeric'] sm:text-[20px] font-medium">
-                        {seoText.title}
-                      </h2>
-                    )}
-                    {seoText.description && (
-                      <>
-                        <p
-                          id="seo-text-truncated"
-                          class="text-[14px] sm:text-[16px]  font-['FS_Emeric']leading-relaxed line-clamp-3"
-                        >
-                          {seoText.description}
-                        </p>
-                        <p
-                          id="seo-text-full"
-                          class="text-[14px] sm:text-[16px] font-['FS_Emeric'] leading-relaxed hidden"
-                        >
-                          {seoText.description}
-                        </p>
-                        <button
-                          onclick="document.getElementById('seo-text-truncated').classList.toggle('hidden'); document.getElementById('seo-text-full').classList.toggle('hidden'); this.textContent = this.textContent === 'Ver mais' ? 'Ver menos' : 'Ver mais';"
-                          class="text-[#3A4332] font-['FS_Emeric'] font-bold text-sm hover:underline"
-                        >
-                          Ver mais
-                        </button>
-                      </>
-                    )}
-                  </div>
-                )}
-
-                {device === "mobile" && bannerImage && (
-                  <img
-                    src={bannerImage}
-                    alt="banner categoria"
-                    class="w-full rounded"
-                  />
-                )}
+                </div>
+              </div>
+            }
+          >
+            <div class="flex sm:hidden flex-col items-start">
+              <div class="flex">{results}</div>
+              <div class="w-full flex justify-between items-center gap-4 mt-5">
+                <div class="flex max-w-1/2 w-full">
+                  <label
+                    class="cursor-pointer w-full h-9 min-h9 max-h-9 p-0 rounded-none flex items-center justify-center gap-2 bg-[#c6cfba] text-[#323f2d] font-['FS_Emeric'] text-sm font-bold uppercase"
+                    for={controls}
+                  >
+                    Filtro
+                  </label>
+                </div>
+                <div class="flex max-w-1/2 w-full font-['FS_Emeric']">
+                  {sortBy}
+                </div>
               </div>
             </div>
-          </div>
+          </Drawer>
         )}
+
+        <div class="grid grid-cols-1 sm:grid-cols-[250px_1fr] lg:gap-8">
+          {device === "desktop" && (
+            <aside class="place-self-start flex flex-col gap-9 w-full">
+              <span class="text-base font-medium h-12 flex items-center text-md text-[#1F251C]">
+                Filtro
+              </span>
+              <Filters filters={filters} />
+            </aside>
+          )}
+
+          <div class="flex flex-col gap-9">
+            {device === "desktop" && (
+              <div class="flex justify-between items-center">
+                {results}
+                <div>{sortBy}</div>
+              </div>
+            )}
+
+            <PageResult {...props} />
+
+            {(seoText?.title || seoText?.description) && (
+              <div class="flex flex-col gap-2 sm:gap-3 text-[#1F251C] font-['FS_Emeric'] px-2 sm:px-0 pt-8 border-t border-[#CCCCCC]">
+                {seoText.title && (
+                  <h2 class="text-[18px] font-['FS_Emeric'] sm:text-[20px] font-medium">
+                    {seoText.title}
+                  </h2>
+                )}
+                {seoText.description && (
+                  <>
+                    <p
+                      id="seo-text-truncated"
+                      class="text-[14px] sm:text-[16px] font-['FS_Emeric'] leading-relaxed line-clamp-3"
+                    >
+                      {seoText.description}
+                    </p>
+                    <p
+                      id="seo-text-full"
+                      class="text-[14px] sm:text-[16px] font-['FS_Emeric'] leading-relaxed hidden"
+                    >
+                      {seoText.description}
+                    </p>
+                    <button
+                      onclick="document.getElementById('seo-text-truncated').classList.toggle('hidden'); document.getElementById('seo-text-full').classList.toggle('hidden'); this.textContent = this.textContent === 'Ver mais' ? 'Ver menos' : 'Ver mais';"
+                      class="text-[#3A4332] font-['FS_Emeric'] font-bold text-sm hover:underline"
+                    >
+                      Ver mais
+                    </button>
+                  </>
+                )}
+              </div>
+            )}
+
+            {device === "mobile" && bannerImage && (
+              <img
+                src={bannerImage}
+                alt="banner categoria"
+                class="w-full rounded"
+              />
+            )}
+          </div>
+        </div>
       </div>
 
       <script
@@ -386,7 +383,7 @@ function Result(props: SectionProps<typeof loader>) {
           ),
         }}
       />
-    </>
+    </div>
   );
 }
 
