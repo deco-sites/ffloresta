@@ -23,9 +23,12 @@ export default function ProductDescriptionIsland({ page }: Props) {
 
   if (description) {
     tabs.push({
-      title: "Descrição do Produto",
+      title: "Descrição",
       content: (
         <div class="py-6">
+          <h3 class="font-['FS_Emeric'] font-bold text-[16px] text-[#3A4332] mb-4">
+            Descrição do Produto
+          </h3>
           <div
             class="text-[#3A4332] text-[14px] font-['FS_Emeric'] description-text"
             dangerouslySetInnerHTML={{ __html: description }}

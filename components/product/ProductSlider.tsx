@@ -18,7 +18,7 @@ function ProductSlider({ products, itemListName }: Props) {
           interval={8000}
           autoplay
           infinite
-          class="flex gap-3 lg:gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hidden ml-2"
+          class="flex gap-3 lg:gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hidden"
         >
           {products.map((product, index) => (
             <Slider.Item
