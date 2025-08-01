@@ -4887,10 +4887,6 @@ details.collapse summary::-webkit-details-marker {
   --tw-bg-opacity: 1;
   background-color: rgb(227 231 222 / var(--tw-bg-opacity));
 }
-.bg-\[\#F5F5F5\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(245 245 245 / var(--tw-bg-opacity));
-}
 .bg-\[\#FDFFF5\] {
   --tw-bg-opacity: 1;
   background-color: rgb(253 255 245 / var(--tw-bg-opacity));

@@ -49,13 +49,13 @@ function CartItem({ item, index, locale, currency }: Props) {
       <div class="flex flex-col gap-3">
         {/* Name and Remove button */}
         <div class="flex justify-between items-start">
-          <legend class="font-['FS_Emeric'] text-[#3A4332] font-bold text-[14px] leading-[137%] tracking-[0%] uppercase">
+          <legend class="font-['FS_Emeric'] text-[#3A4332] text-[14px] leading-[137%] tracking-[0%] uppercase">
             {name}
           </legend>
           <button
             class={clx(
               isGift && "hidden",
-              "btn btn-ghost btn-square no-animation p-0 hover:bg-transparent",
+              "btn btn-ghost btn-square no-animation p-0 hover:bg-transparent"
             )}
             hx-on:click={useScript(removeItemHandler)}
           >
@@ -63,27 +63,29 @@ function CartItem({ item, index, locale, currency }: Props) {
           </button>
         </div>
 
-        {/* Price Block */}
-        <div class="flex items-center gap-2">
-          {listPrice > price && (
-            <span class="line-through font-['FS_Emeric'] text-[12px] text-[#6B7280]">
-              {formatPrice(listPrice, currency, locale)}
+        <div class="flex items-center justify-between">
+          {/* Price Block */}
+          <div class="flex items-center gap-2">
+            {listPrice > price && (
+              <span class="line-through font-['FS_Emeric'] text-[12px] text-[#6B7280]">
+                {formatPrice(listPrice, currency, locale)}
+              </span>
+            )}
+            <span class="font-['FS_Emeric'] text-[16px] font-bold leading-[170%] tracking-[3%] text-[#1F251C]">
+              {isGift ? "Grátis" : formatPrice(price, currency, locale)}
             </span>
-          )}
-          <span class="font-['FS_Emeric'] font-normal text-[14px] leading-[170%] tracking-[3%] text-[#1F251C]">
-            {isGift ? "Grátis" : formatPrice(price, currency, locale)}
-          </span>
-        </div>
+          </div>
 
-        {/* Quantity Selector */}
-        <div class={clx(isGift && "hidden", "mt-2")}>
-          <QuantitySelector
-            min={0}
-            max={QUANTITY_MAX_VALUE}
-            value={quantity}
-            name={`item::${index}`}
-            class="flex items-center justify-center text-center border border-[#E5E5E5] rounded-none h-[32px]"
-          />
+          {/* Quantity Selector */}
+          <div class={clx(isGift && "hidden", "mt-2")}>
+            <QuantitySelector
+              min={0}
+              max={QUANTITY_MAX_VALUE}
+              value={quantity}
+              name={`item::${index}`}
+              class="flex items-center justify-center text-center border border-[#E5E5E5] rounded-none h-[32px]"
+            />
+          </div>
         </div>
       </div>
     </fieldset>
