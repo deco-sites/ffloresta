@@ -83,3 +83,11 @@ input[type="checkbox"]:checked::after {
   cursor: grabbing;
   user-select: none;
 }
+
+.description-text {
+  color: #3a4332 !important;
+}
+
+.description-text a {
+  color: #3a4332 !important;
+}

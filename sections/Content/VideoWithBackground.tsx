@@ -1,73 +1,86 @@
-import type { ImageWidget } from "apps/admin/widgets.ts";
-
-export interface BackgroundProps {
-  desktop: {
-    src: ImageWidget;
-    alt?: string;
-  };
-  mobile: {
-    src: ImageWidget;
-    alt?: string;
-  };
-}
+import { useId } from "preact/hooks";
+import { ImageWidget } from "apps/admin/widgets.ts";
+import { VideoWidget } from "apps/admin/widgets.ts";
+import Video from "apps/website/components/Video.tsx";
+import Section from "../../components/ui/Section.tsx";
 
 export interface Props {
-  background: BackgroundProps;
-  youtubeVideoId: string;
+  /** @title Imagem de fundo para desktop */
+  bgImgDesktop: ImageWidget;
+  /** @title Imagem de fundo para mobile */
+  bgImgMobile: ImageWidget;
+  /** @title Vídeo desktop */
+  videoDesktop: VideoWidget;
+  /** @title Vídeo mobile */
+  videoMobile: VideoWidget;
+  /** @title Texto alternativo do vídeo */
+  alt?: string;
 }
 
 export default function VideoWithBackground({
-  background,
-  youtubeVideoId,
+  bgImgDesktop,
+  bgImgMobile,
+  videoDesktop,
+  videoMobile,
+  alt,
 }: Props) {
-  const youtubeEmbedUrl = `https://www.youtube.com/embed/${youtubeVideoId}?autoplay=0&rel=0`;
+  const id = useId();
 
   return (
-    <div class="container relative w-full h-screen max-h-[507px]">
-      {/* Background Image */}
+    <div
+      id={id}
+      class="relative w-full h-auto aspect-[1180/355] overflow-hidden"
+    >
+      {/* Imagem de fundo */}
       <div class="absolute inset-0 z-0">
         <picture>
-          <source media="(max-width: 767px)" srcset={background.mobile.src} />
-          <source media="(min-width: 768px)" srcset={background.desktop.src} />
+          <source media="(max-width: 1024px)" srcset={bgImgDesktop.src} />
+          <source media="(min-width: 1024px)" srcset={bgImgMobile.src} />
           <img
-            src={background.desktop.src}
-            alt={background.desktop.alt || "Background"}
-            class="container w-full h-full object-cover min-w-[1535px]:px-0"
+            src={bgImgDesktop.src}
+            alt={"Background"}
+            class="w-full h-full object-cover"
           />
         </picture>
       </div>
 
-      {/* Grid Container */}
-      <div class="relative z-10 h-full w-full flex items-center justify-center lg:grid lg:grid-cols-2">
-        {/* Em telas menores que 1024px, o vídeo ocupará a tela toda e ficará centralizado */}
-        <div class="w-full h-full flex items-center justify-center p-4 lg:hidden">
-          <div class="w-full h-auto aspect-video max-w-2xl">
-            <iframe
-              src={youtubeEmbedUrl}
-              class="w-full h-full"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              title="YouTube video player"
-            ></iframe>
-          </div>
-        </div>
+      <div class="absolute inset-0 z-10 flex items-center justify-center lg:justify-start lg:pl-10">
+        <Video
+          loading="eager"
+          autoPlay
+          loop
+          controls={false}
+          muted
+          width="auto"
+          height={355}
+          media="(max-width: 767px)"
+          class="object-cover h-[200px] w-[90%] md:hidden"
+          alt={alt}
+          sizes="(max-width: 767px) 90vw"
+          src={videoMobile}
+        />
 
-        {/* Layout para telas maiores que 1024px (mantendo o layout original) */}
-        <div class="hidden lg:block bg-transparent"></div>
-        <div class="hidden lg:flex items-center justify-center p-4">
-          <div class="w-full h-auto aspect-video max-w-2xl">
-            <iframe
-              src={youtubeEmbedUrl}
-              class="w-full h-full"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              title="YouTube video player"
-            ></iframe>
-          </div>
-        </div>
+        <Video
+          loading="eager"
+          autoPlay
+          loop
+          controls={false}
+          muted
+          width={1180}
+          height={355}
+          media="(min-width: 768px)"
+          class="object-cover hidden md:block w-[60%] max-w-[560px] h-auto"
+          alt={alt}
+          sizes="(min-width: 768px) 50vw"
+          src={videoDesktop}
+        />
       </div>
     </div>
   );
 }
+
+export const LoadingFallback = () => (
+  <Section.Container>
+    <Section.Placeholder height="355px" />;
+  </Section.Container>
+);

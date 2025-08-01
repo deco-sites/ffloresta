@@ -56,9 +56,28 @@ export interface Props {
   autoplay?: boolean;
 }
 
-const onLoad = ({ rootId, scroll, interval, infinite, autoplay }: Props) => {
+function onLoad({
+  rootId,
+  scroll = "smooth",
+  interval,
+  infinite = false,
+  autoplay = false,
+}: Props) {
   function init() {
     const THRESHOLD = 0.6;
+    const root = document.getElementById(rootId);
+    if (!root) return;
+
+    const slider = root.querySelector<HTMLElement>("ul[data-slider]");
+    const items = root.querySelectorAll<HTMLElement>("li[data-slider-item]");
+    const prev = root.querySelector<HTMLElement>('button[data-slide="prev"]');
+    const next = root.querySelector<HTMLElement>('button[data-slide="next"]');
+    const dots = root.querySelectorAll<HTMLElement>("button[data-dot]");
+
+    if (!slider || items.length === 0) {
+      console.warn("Slider not initialized correctly", { rootId });
+      return;
+    }
 
     const intersectionX = (element: DOMRect, container: DOMRect): number => {
       const delta = container.width / 1000;
@@ -74,18 +93,6 @@ const onLoad = ({ rootId, scroll, interval, infinite, autoplay }: Props) => {
     const isHTMLElement = (x: Element): x is HTMLElement =>
       typeof (x as any).offsetLeft === "number";
 
-    const root = document.getElementById(rootId);
-    const slider = root?.querySelector<HTMLElement>("[data-slider]");
-    const items = root?.querySelectorAll<HTMLElement>("[data-slider-item]");
-    const prev = root?.querySelector<HTMLElement>('[data-slide="prev"]');
-    const next = root?.querySelector<HTMLElement>('[data-slide="next"]');
-    const dots = root?.querySelectorAll<HTMLElement>("[data-dot]");
-
-    if (!root || !slider || !items || items.length === 0) {
-      console.warn("Slider não inicializado corretamente", { rootId });
-      return;
-    }
-
     const getElementsInsideContainer = () => {
       const indices: number[] = [];
       const sliderRect = slider.getBoundingClientRect();
@@ -100,17 +107,20 @@ const onLoad = ({ rootId, scroll, interval, infinite, autoplay }: Props) => {
 
     const goToItem = (to: number) => {
       const item = items.item(to);
-      if (!isHTMLElement(item)) return;
+      if (!isHTMLElement(item) || !slider) return;
+
       slider.scrollTo({
         top: 0,
         behavior: scroll,
-        left: item.offsetLeft - slider.offsetLeft,
+        left: item.offsetLeft - (slider.offsetLeft || 0),
       });
     };
 
     const onClickPrev = (event?: Event) => {
       event?.stopPropagation();
       const indices = getElementsInsideContainer();
+      if (indices.length === 0) return;
+
       const itemsPerPage = indices.length;
       const isShowingFirst = indices[0] === 0;
       const pageIndex = Math.floor(indices[indices.length - 1] / itemsPerPage);
@@ -122,6 +132,8 @@ const onLoad = ({ rootId, scroll, interval, infinite, autoplay }: Props) => {
     const onClickNext = (event?: Event) => {
       event?.stopPropagation();
       const indices = getElementsInsideContainer();
+      if (indices.length === 0) return;
+
       const itemsPerPage = indices.length;
       const isShowingLast = indices[indices.length - 1] === items.length - 1;
       const pageIndex = Math.floor(indices[0] / itemsPerPage);
@@ -129,10 +141,11 @@ const onLoad = ({ rootId, scroll, interval, infinite, autoplay }: Props) => {
     };
 
     const observer = new IntersectionObserver(
-      (elements) =>
+      (elements) => {
         elements.forEach((e) => {
           const index = Number(e.target.getAttribute("data-slider-item")) || 0;
           const dot = dots?.item(index);
+
           if (e.isIntersecting) {
             dot?.setAttribute("disabled", "");
           } else {
@@ -141,39 +154,32 @@ const onLoad = ({ rootId, scroll, interval, infinite, autoplay }: Props) => {
 
           if (!infinite) {
             if (index === 0) {
-              e.isIntersecting
-                ? prev?.setAttribute("disabled", "")
-                : prev?.removeAttribute("disabled");
+              prev?.toggleAttribute("disabled", e.isIntersecting);
             }
             if (index === items.length - 1) {
-              e.isIntersecting
-                ? next?.setAttribute("disabled", "")
-                : next?.removeAttribute("disabled");
+              next?.toggleAttribute("disabled", e.isIntersecting);
             }
           }
-        }),
+        });
+      },
       { threshold: THRESHOLD, root: slider }
     );
 
     items.forEach((item) => observer.observe(item));
 
-    for (let it = 0; it < (dots?.length ?? 0); it++) {
-      dots.item(it)?.addEventListener("click", () => goToItem(it));
-    }
+    dots?.forEach((dot, index) => {
+      dot.addEventListener("click", () => goToItem(index));
+    });
 
     prev?.addEventListener("click", onClickPrev);
     next?.addEventListener("click", onClickNext);
 
-    // Autoplay (somente se ativado)
     if (interval && autoplay) {
       let intervalId: number | null = null;
 
       const startAutoplay = () => {
         if (intervalId === null) {
-          intervalId = setInterval(
-            () => onClickNext(),
-            interval
-          ) as unknown as number;
+          intervalId = setInterval(onClickNext, interval) as unknown as number;
         }
       };
 
@@ -195,7 +201,7 @@ const onLoad = ({ rootId, scroll, interval, infinite, autoplay }: Props) => {
       slider.addEventListener("pointerup", startAutoplay);
     }
 
-    // Drag-to-scroll no desktop
+    // Drag-to-scroll
     let isDown = false;
     let startX: number;
     let scrollLeft: number;
@@ -231,7 +237,7 @@ const onLoad = ({ rootId, scroll, interval, infinite, autoplay }: Props) => {
   } else {
     document.addEventListener("DOMContentLoaded", init);
   }
-};
+}
 
 function JS({
   rootId,

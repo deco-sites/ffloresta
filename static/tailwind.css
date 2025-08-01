@@ -3888,11 +3888,11 @@ details.collapse summary::-webkit-details-marker {
 .hidden {
   display: none;
 }
+.aspect-\[1180\/355\] {
+  aspect-ratio: 1180/355;
+}
 .aspect-\[156\/87\] {
   aspect-ratio: 156/87;
-}
-.aspect-video {
-  aspect-ratio: 16 / 9;
 }
 .h-1 {
   height: 0.25rem;
@@ -3929,6 +3929,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .h-\[174px\] {
   height: 174px;
+}
+.h-\[200px\] {
+  height: 200px;
 }
 .h-\[20px\] {
   height: 20px;
@@ -3986,9 +3989,6 @@ details.collapse summary::-webkit-details-marker {
 .h-px {
   height: 1px;
 }
-.h-screen {
-  height: 100vh;
-}
 .max-h-4 {
   max-height: 1rem;
 }
@@ -4018,9 +4018,6 @@ details.collapse summary::-webkit-details-marker {
 }
 .max-h-\[500px\] {
   max-height: 500px;
-}
-.max-h-\[507px\] {
-  max-height: 507px;
 }
 .max-h-\[50px\] {
   max-height: 50px;
@@ -4163,8 +4160,14 @@ details.collapse summary::-webkit-details-marker {
 .w-\[57px\] {
   width: 57px;
 }
+.w-\[60\%\] {
+  width: 60%;
+}
 .w-\[84px\] {
   width: 84px;
+}
+.w-\[90\%\] {
+  width: 90%;
 }
 .w-\[98\%\] {
   width: 98%;
@@ -4257,9 +4260,6 @@ details.collapse summary::-webkit-details-marker {
   min-width: -moz-max-content;
   min-width: max-content;
 }
-.max-w-2xl {
-  max-width: 42rem;
-}
 .max-w-4 {
   max-width: 1rem;
 }
@@ -4328,6 +4328,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .max-w-\[522px\] {
   max-width: 522px;
+}
+.max-w-\[560px\] {
+  max-width: 560px;
 }
 .max-w-\[640px\] {
   max-width: 640px;
@@ -5729,6 +5732,14 @@ input[type="checkbox"]:checked::after {
           user-select: none;
 }
 
+.description-text {
+  color: #3a4332 !important;
+}
+
+.description-text a {
+  color: #3a4332 !important;
+}
+
 .invalid\:input-error:invalid {
   --tw-border-opacity: 1;
   border-color: var(--fallback-er,oklch(var(--er)/var(--tw-border-opacity)));
@@ -6775,10 +6786,6 @@ input[type="checkbox"]:checked::after {
     display: block;
   }
 
-  .lg\:flex {
-    display: flex;
-  }
-
   .lg\:grid {
     display: grid;
   }
@@ -6927,6 +6934,10 @@ input[type="checkbox"]:checked::after {
     justify-content: normal;
   }
 
+  .lg\:justify-start {
+    justify-content: flex-start;
+  }
+
   .lg\:justify-center {
     justify-content: center;
   }
@@ -6991,6 +7002,10 @@ input[type="checkbox"]:checked::after {
   .lg\:py-36 {
     padding-top: 9rem;
     padding-bottom: 9rem;
+  }
+
+  .lg\:pl-10 {
+    padding-left: 2.5rem;
   }
 
   .lg\:text-left {
