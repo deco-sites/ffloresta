@@ -354,7 +354,12 @@
           }
         },
         "videoUrl": "https://youtu.be/dSX5s9FML_U?si=khXj_dPOYXLncob5",
-        "youtubeVideoId": "dSX5s9FML_U?si=Qk8YX6y3Htdd0wPN"
+        "youtubeVideoId": "dSX5s9FML_U?si=Qk8YX6y3Htdd0wPN",
+        "bgImgDesktop": "https://assets.decocache.com/ffloresta/2804b7d2-3cc5-4a77-86af-111d1bf985fb/banner-video-1.webp",
+        "bgImgMobile": "https://assets.decocache.com/ffloresta/2aad2234-d568-478a-a0f7-79534a2dd46b/Group-2368-(1).png",
+        "alt": "Ferragens floresta",
+        "videoDesktop": "https://assets.decocache.com/ffloresta/536f0b91-8c9f-46a4-9fcc-08896bcb3bd2/ac82ae16b70c0cf1_ebfb2ebed673490493f79f4dd974b477.webm",
+        "videoMobile": "https://assets.decocache.com/ffloresta/536f0b91-8c9f-46a4-9fcc-08896bcb3bd2/ac82ae16b70c0cf1_ebfb2ebed673490493f79f4dd974b477.webm"
       }
     },
     {
