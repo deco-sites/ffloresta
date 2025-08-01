@@ -193,32 +193,22 @@
         "images": [
           {
             "desktop": "https://assets.decocache.com/ffloresta/366a9bbd-28fc-4e1d-b549-06f201b0bc60/banner-mosaic-01.png",
-            "mobile": "https://assets.decocache.com/ffloresta/366a9bbd-28fc-4e1d-b549-06f201b0bc60/banner-mosaic-01.png",
+            "mobile": "https://assets.decocache.com/ffloresta/97260087-190f-42d1-82b5-0b31a6b2372f/image-(40).png",
             "alt": "01"
           },
           {
             "desktop": "https://assets.decocache.com/ffloresta/1d01d5ca-7bca-4e9b-a03f-5570d77079ab/banner-mosaic-02.png",
-            "mobile": "https://assets.decocache.com/ffloresta/1d01d5ca-7bca-4e9b-a03f-5570d77079ab/banner-mosaic-02.png",
+            "mobile": "https://assets.decocache.com/ffloresta/4399c9fc-874d-4cc1-abca-16f0e7bff0cc/image-(41).png",
             "alt": "02"
           },
           {
             "desktop": "https://assets.decocache.com/ffloresta/b7901a03-42a3-4407-93c0-80c0dea1eeaa/banner-mosaic-03.png",
-            "mobile": "https://assets.decocache.com/ffloresta/b7901a03-42a3-4407-93c0-80c0dea1eeaa/banner-mosaic-03.png",
+            "mobile": "https://assets.decocache.com/ffloresta/07f16511-48f0-458c-9c55-585823324c35/image-(42).png",
             "alt": "03"
           }
         ],
         "itemsToShow": 3,
         "enableSlider": false
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Images/Banner.tsx",
-        "images": {
-          "mobile": "https://assets.decocache.com/ffloresta/7e385bd1-8aeb-455f-bb1e-f28536af7ac1/Screenshot_60.png",
-          "desktop": "https://assets.decocache.com/ffloresta/7e385bd1-8aeb-455f-bb1e-f28536af7ac1/Screenshot_60.png"
-        }
       }
     },
     {
