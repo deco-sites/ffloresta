@@ -23,7 +23,7 @@ export default function ProductDescriptionIsland({ page }: Props) {
 
   if (description) {
     tabs.push({
-      title: "Descrição",
+      title: "Descrição do Produto",
       content: (
         <div class="py-6">
           <div
