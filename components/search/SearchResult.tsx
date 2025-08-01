@@ -26,14 +26,23 @@ export interface SeoText {
 
 export interface Props {
   page: ProductListingPage | null;
+  /**
+   * @title Banner de Categoria
+   */
   topBanner?: {
     desktop: ImageWidget;
     mobile: ImageWidget;
   };
+  /**
+   * @title Configurações de Layout
+   */
   layout?: Layout;
   startingPage?: 0 | 1;
   partial?: "hideMore" | "hideLess";
   bannerImage?: ImageWidget;
+  /**
+   * @title Texto de Seo
+   */
   seoText?: SeoText;
 }
 
@@ -252,7 +261,11 @@ function Result(props: SectionProps<typeof loader>) {
   );
 
   return (
-    <div id={container} {...viewItemListEvent} class="w-full">
+    <div
+      id={container}
+      {...viewItemListEvent}
+      class="w-full mt:0 2xl:mt-[52px]"
+    >
       <div class="container px-5 lg:px-[4rem] pt-4 sm:pt-5">
         <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
       </div>

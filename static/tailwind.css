@@ -7090,6 +7090,10 @@ input[type="checkbox"]:checked::after {
 
 @media (min-width: 1536px) {
 
+  .\32xl\:mt-\[52px\] {
+    margin-top: 52px;
+  }
+
   .\32xl\:block {
     display: block;
   }
