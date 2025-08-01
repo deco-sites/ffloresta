@@ -111,7 +111,7 @@ function Carousel({ images = [], preload, interval }: Props) {
         interval={interval ?? 5000}
         infinite
         autoplay
-        class="carousel carousel-center w-full gap-6 cursor-grab active:cursor-grabbing select-none"
+        class="carousel carousel-center w-full cursor-grab active:cursor-grabbing select-none"
       >
         {images.map((image, index) => (
           <Slider.Item index={index} class="carousel-item w-full" key={index}>
