@@ -4076,6 +4076,9 @@ details.collapse summary::-webkit-details-marker {
 .min-h-\[42px\] {
   min-height: 42px;
 }
+.min-h-\[450px\] {
+  min-height: 450px;
+}
 .min-h-\[460px\] {
   min-height: 460px;
 }
@@ -6808,6 +6811,10 @@ input[type="checkbox"]:checked::after {
 
   .lg\:max-h-\[600px\] {
     max-height: 600px;
+  }
+
+  .lg\:min-h-\[unset\] {
+    min-height: unset;
   }
 
   .lg\:w-1\/2 {
