@@ -26,7 +26,7 @@ export default function BrandGrid({ brands = [], title, cta, icon }: Props) {
   }
 
   return (
-    <div class="py-12 bg-white">
+    <div>
       <BrandGridIsland
         items={brands}
         title={title}

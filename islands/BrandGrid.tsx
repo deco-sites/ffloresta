@@ -22,14 +22,12 @@ function Card({ image, href, label }: Item) {
   return (
     <a
       href={href}
-      class="flex flex-col items-center justify-center gap-4 w-full h-full px-2.5"
+      class="flex flex-col items-center justify-center gap-4 w-full h-full"
     >
-      <div class="rounded-full flex justify-center items-center w-full h-full max-w-[160px] mx-auto">
+      <div class="rounded-full flex justify-center items-center w-full h-full">
         <Image
           src={image}
           alt={label || "Brand"}
-          width={160}
-          height={160}
           loading="lazy"
           class="w-full h-full object-contain"
         />
@@ -214,9 +212,11 @@ function BrandGridIsland({ title, cta, items, icon }: Props) {
               key={index}
               class={clx(
                 "flex-shrink-0 snap-start",
-                "w-1/2", // 2 cards no mobile (50% cada)
-                "md:w-1/3", // 3 cards no tablet
-                "lg:w-1/4" // 4 cards no desktop
+                "w-[calc(50%-(20px/2))]", // 2 cards no mobile (50% cada)
+                "sm:w-[calc(33.3%-(20px))]", // 3 cards no tablet
+                "md:w-[calc(25%-(20px))]", // 3 cards no tablet
+                "lg:w-[calc(20%-(20px))]", // 5 cards no desktop
+                "2xl:w-[calc(16.6%-(20px))]" // 6 cards no desktop
               )}
             >
               <Card {...item} />
@@ -226,17 +226,19 @@ function BrandGridIsland({ title, cta, items, icon }: Props) {
 
         {/* Dots de navegação */}
         {dotsCount > 1 && (
-          <div class="flex justify-center gap-2 mt-6">
+          <div class="flex justify-center gap-2 mt-6 2xl:hidden">
             {Array.from({ length: dotsCount }).map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToDot(index)}
                 class="focus:outline-none"
+                aria-label={`Go to slide ${index + 1}`}
               >
                 <div
                   class={clx(
-                    "w-2 h-2 rounded-full transition-colors",
-                    activeDot === index ? "bg-[#292929]" : "bg-[#D9D9D9]"
+                    "w-3 h-3 border transition-all duration-300",
+                    "border-[#273D28]",
+                    activeDot === index ? "bg-[#273D28]" : "bg-transparent"
                   )}
                 />
               </button>
