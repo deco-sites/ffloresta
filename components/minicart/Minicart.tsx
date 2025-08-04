@@ -155,12 +155,12 @@ export default function Cart({
         >
           {count === 0 ? (
             <div class="flex flex-col gap-6 items-center justify-center h-full">
-              <span class="font-['FS_Emeric'] font-normal text-[16px] text-[#1F251C]">
+              <span class="font-['Lato'] font-normal text-[16px] text-[#1F251C]">
                 Seu carrinho está vazio
               </span>
               <label
                 for={MINICART_DRAWER_ID}
-                class="btn no-animation bg-[#3A4332] text-white hover:bg-[#3A4332] hover:text-white border-none font-['FS_Emeric'] font-normal text-[16px] px-6 py-3"
+                class="btn no-animation bg-[#3A4332] text-white hover:bg-[#3A4332] hover:text-white border-none font-['Lato'] font-normal text-[16px] px-6 py-3"
               >
                 Ver produtos
               </label>
@@ -200,21 +200,21 @@ export default function Cart({
                 <div class="border-t border-[#E5E5E5] py-4 flex flex-col gap-2">
                   {discounts > 0 && (
                     <div class="flex justify-between items-center px-4">
-                      <span class="font-['FS_Emeric'] uppercase text-[16px] text-[#1F251C]">
+                      <span class="font-['Lato'] uppercase text-[16px] text-[#1F251C]">
                         Descontos
                       </span>
-                      <span class="font-['FS_Emeric'] uppercase text-[16px] text-[#1F251C]">
+                      <span class="font-['Lato'] uppercase text-[16px] text-[#1F251C]">
                         {formatPrice(discounts, currency, locale)}
                       </span>
                     </div>
                   )}
                   <div class="w-full flex justify-between px-4">
-                    <span class="font-['FS_Emeric'] uppercase text-[16px] text-[#1F251C]">
+                    <span class="font-['Lato'] uppercase text-[16px] text-[#1F251C]">
                       Subtotal
                     </span>
                     <output
                       form={MINICART_FORM_ID}
-                      class="font-['FS_Emeric'] uppercase text-[16px] text-[#1F251C]"
+                      class="font-['Lato'] uppercase text-[16px] text-[#1F251C]"
                     >
                       {formatPrice(subtotal, currency, locale)}
                     </output>
@@ -225,24 +225,24 @@ export default function Cart({
                 {/* Total */}
                 <div class="border-t border-[#E5E5E5] pt-4 pb-6 flex flex-col justify-end items-end gap-2 px-4">
                   <div class="flex justify-between items-center w-full">
-                    <span class="font-['FS_Emeric'] uppercase text-[16px] leading-[170%] tracking-[3%]">
+                    <span class="font-['Lato'] uppercase text-[16px] leading-[170%] tracking-[3%]">
                       Total
                     </span>
                     <output
                       form={MINICART_FORM_ID}
-                      class="font-['FS_Emeric'] uppercase font-bold text-[16px] leading-[170%] tracking-[3%] text-[#1F251C]"
+                      class="font-['Lato'] uppercase font-bold text-[16px] leading-[170%] tracking-[3%] text-[#1F251C]"
                     >
                       {formatPrice(total, currency, locale)}
                     </output>
                   </div>
-                  <span class="font-['FS_Emeric'] text-[16px] text-[#6B7280]">
+                  <span class="font-['Lato'] text-[16px] text-[#6B7280]">
                     Frete e taxas serão calculados na próxima etapa.
                   </span>
                 </div>
 
                 <div class="px-4 pb-8">
                   <a
-                    class="btn w-full no-animation bg-[#05C100] text-white hover:bg-[#3A4332] hover:text-white border-none font-['FS_Emeric'] font-normal text-[16px] h-[50px]"
+                    class="btn w-full no-animation bg-[#05C100] text-white hover:bg-[#3A4332] hover:text-white border-none font-['Lato'] font-normal text-[16px] h-[50px]"
                     href={checkoutHref}
                     hx-on:click={useScript(sendBeginCheckoutEvent)}
                   >

@@ -469,7 +469,7 @@ html {
   }
 
   body {
-    background: #ffffff !important;
+    background: #fdfff5 !important;
   }
 
   /* Disable scroll once drawer/modal is openned */
@@ -4232,9 +4232,6 @@ details.collapse summary::-webkit-details-marker {
 .min-w-\[243px\] {
   min-width: 243px;
 }
-.min-w-\[250px\] {
-  min-width: 250px;
-}
 .min-w-\[30px\] {
   min-width: 30px;
 }
@@ -5125,10 +5122,6 @@ details.collapse summary::-webkit-details-marker {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
-.py-7 {
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem;
-}
 .py-9 {
   padding-top: 2.25rem;
   padding-bottom: 2.25rem;
@@ -5217,8 +5210,8 @@ details.collapse summary::-webkit-details-marker {
 .text-end {
   text-align: end;
 }
-.font-\[\'FS_Emeric\'\] {
-  font-family: 'FS Emeric';
+.font-\[\'Lato\'\] {
+  font-family: 'Lato';
 }
 .text-2xl {
   font-size: 1.5rem;
@@ -5760,22 +5753,6 @@ input[type="checkbox"]:checked::after {
   --animation-input: 0;
 }
 
-.disabled\:loading:disabled {
-  pointer-events: none;
-  display: inline-block;
-  aspect-ratio: 1 / 1;
-  width: 1.5rem;
-  background-color: currentColor;
-  -webkit-mask-size: 100%;
-          mask-size: 100%;
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-          mask-position: center;
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' stroke='%23000' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_V8m1%7Btransform-origin:center;animation:spinner_zKoa 2s linear infinite%7D.spinner_V8m1 circle%7Bstroke-linecap:round;animation:spinner_YpZS 1.5s ease-out infinite%7D%40keyframes spinner_zKoa%7B100%25%7Btransform:rotate(360deg)%7D%7D%40keyframes spinner_YpZS%7B0%25%7Bstroke-dasharray:0 150;stroke-dashoffset:0%7D47.5%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-16%7D95%25%2C100%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-59%7D%7D%3C%2Fstyle%3E%3Cg class='spinner_V8m1'%3E%3Ccircle cx='12' cy='12' r='9.5' fill='none' stroke-width='3'%3E%3C%2Fcircle%3E%3C%2Fg%3E%3C%2Fsvg%3E");
-          mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' stroke='%23000' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_V8m1%7Btransform-origin:center;animation:spinner_zKoa 2s linear infinite%7D.spinner_V8m1 circle%7Bstroke-linecap:round;animation:spinner_YpZS 1.5s ease-out infinite%7D%40keyframes spinner_zKoa%7B100%25%7Btransform:rotate(360deg)%7D%7D%40keyframes spinner_YpZS%7B0%25%7Bstroke-dasharray:0 150;stroke-dashoffset:0%7D47.5%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-16%7D95%25%2C100%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-59%7D%7D%3C%2Fstyle%3E%3Cg class='spinner_V8m1'%3E%3Ccircle cx='12' cy='12' r='9.5' fill='none' stroke-width='3'%3E%3C%2Fcircle%3E%3C%2Fg%3E%3C%2Fsvg%3E");
-}
-
 .has-\[\:invalid\]\:tooltip:has(:invalid) {
   position: relative;
   display: inline-block;
@@ -6018,12 +5995,12 @@ input[type="checkbox"]:checked::after {
   }
 }
 
-.placeholder\:font-\[\'FS_Emeric\'\]::-moz-placeholder {
-  font-family: 'FS Emeric';
+.placeholder\:font-\[\'Lato\'\]::-moz-placeholder {
+  font-family: 'Lato';
 }
 
-.placeholder\:font-\[\'FS_Emeric\'\]::placeholder {
-  font-family: 'FS Emeric';
+.placeholder\:font-\[\'Lato\'\]::placeholder {
+  font-family: 'Lato';
 }
 
 .placeholder\:text-\[\#1F251C\]::-moz-placeholder {
@@ -6773,10 +6750,6 @@ input[type="checkbox"]:checked::after {
     margin-right: 3em;
   }
 
-  .lg\:mt-0 {
-    margin-top: 0px;
-  }
-
   .lg\:mt-20 {
     margin-top: 5rem;
   }
@@ -6823,18 +6796,6 @@ input[type="checkbox"]:checked::after {
 
   .lg\:w-1\/4 {
     width: 25%;
-  }
-
-  .lg\:w-28 {
-    width: 7rem;
-  }
-
-  .lg\:w-\[240px\] {
-    width: 240px;
-  }
-
-  .lg\:w-\[280px\] {
-    width: 280px;
   }
 
   .lg\:w-\[40\%\] {
@@ -6887,10 +6848,6 @@ input[type="checkbox"]:checked::after {
 
   .lg\:max-w-xl {
     max-width: 36rem;
-  }
-
-  .lg\:flex-1 {
-    flex: 1 1 0%;
   }
 
   .lg\:flex-\[100px\] {
@@ -7047,11 +7004,6 @@ input[type="checkbox"]:checked::after {
 
   .lg\:text-\[22px\] {
     font-size: 22px;
-  }
-
-  .lg\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
   }
 
   .lg\:text-xl {

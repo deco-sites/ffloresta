@@ -33,13 +33,13 @@ const useStyles = (value: string, checked: boolean) => {
       checked ? "ring-primary" : "ring-transparent",
       "w-[21px] h-[21px]",
       "md:w-[21px] md:h-[21px]",
-      "w-[57px] h-[57px] md:w-[21px] md:h-[21px]", // Mobile size
+      "w-[57px] h-[57px] md:w-[21px] md:h-[21px]" // Mobile size
     );
   }
   return clx(
     "btn btn-ghost border-[#C9CFCF] hover:bg-base-200 hover:border-[#C9CFCF]",
     "ring-2 ring-offset-2",
-    checked ? "ring-primary" : "ring-transparent border-[#C9CFCF]",
+    checked ? "ring-primary" : "ring-transparent border-[#C9CFCF]"
   );
 };
 
@@ -68,7 +68,7 @@ function VariantSelector({ product }: Props) {
 
   const filteredNames = Object.keys(possibilities).filter(
     (name) =>
-      name.toLowerCase() !== "title" && name.toLowerCase() !== "default title",
+      name.toLowerCase() !== "title" && name.toLowerCase() !== "default title"
   );
 
   if (filteredNames.length === 0) {
@@ -89,16 +89,16 @@ function VariantSelector({ product }: Props) {
     <ul class="flex flex-col gap-6">
       {filteredNames.map((name) => {
         const selectedValue = getSelectedValue(name);
-        const isColor = name.toLowerCase() === "cor" ||
-          name.toLowerCase() === "color";
+        const isColor =
+          name.toLowerCase() === "cor" || name.toLowerCase() === "color";
 
         return (
           <li key={name} class="flex flex-col items-start">
             {/* Header */}
             <span
               class={clx(
-                "font-['FS_Emeric']",
-                "font-normal text-sm leading-[170%] text-[#1F251C]",
+                "font-['Lato']",
+                "font-normal text-sm leading-[170%] text-[#1F251C]"
               )}
             >
               {isColor
@@ -113,7 +113,7 @@ function VariantSelector({ product }: Props) {
                 isColor
                   ? "flex flex-wrap gap-1.5 justify-start md:justify-start"
                   : "flex flex-wrap gap-x-2 gap-y-1",
-                "w-full",
+                "w-full"
               )}
             >
               {Object.entries(possibilities[name])
@@ -129,7 +129,7 @@ function VariantSelector({ product }: Props) {
                       class={clx(
                         "cursor-pointer grid grid-cols-1 grid-rows-1 place-items-center relative",
                         "[.htmx-request_&]:opacity-50",
-                        disabled && "opacity-30 pointer-events-none",
+                        disabled && "opacity-30 pointer-events-none"
                       )}
                       {...(!disabled && {
                         "hx-get": useSection({ href: relativeLink }),
@@ -143,26 +143,24 @@ function VariantSelector({ product }: Props) {
                         disabled={disabled}
                       />
 
-                      {isColor
-                        ? (
-                          <div class="relative">
-                            <Ring value={value} checked={checked} />
-                          </div>
-                        )
-                        : (
-                          <div
-                            class={clx(
-                              "min-h-[20px] md:min-h-[20px] px-2 py-1",
-                              "text-xs leading-[170%] font-normal font-['FS_Emeric']",
-                              "border border-black",
-                              "flex items-center justify-center text-center",
-                              "min-h-[41px] md:min-h-[20px]",
-                              disabled && "opacity-30",
-                            )}
-                          >
-                            {value}
-                          </div>
-                        )}
+                      {isColor ? (
+                        <div class="relative">
+                          <Ring value={value} checked={checked} />
+                        </div>
+                      ) : (
+                        <div
+                          class={clx(
+                            "min-h-[20px] md:min-h-[20px] px-2 py-1",
+                            "text-xs leading-[170%] font-normal font-['Lato']",
+                            "border border-black",
+                            "flex items-center justify-center text-center",
+                            "min-h-[41px] md:min-h-[20px]",
+                            disabled && "opacity-30"
+                          )}
+                        >
+                          {value}
+                        </div>
+                      )}
                     </label>
                   );
                 })}

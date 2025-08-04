@@ -49,7 +49,7 @@ function CartItem({ item, index, locale, currency }: Props) {
       <div class="flex flex-col gap-3">
         {/* Name and Remove button */}
         <div class="flex justify-between items-start">
-          <legend class="font-['FS_Emeric'] text-[#3A4332] text-[14px] leading-[137%] tracking-[0%] uppercase">
+          <legend class="font-['Lato'] text-[#3A4332] text-[14px] leading-[137%] tracking-[0%] uppercase">
             {name}
           </legend>
           <button
@@ -67,11 +67,11 @@ function CartItem({ item, index, locale, currency }: Props) {
           {/* Price Block */}
           <div class="flex items-center gap-2">
             {listPrice > price && (
-              <span class="line-through font-['FS_Emeric'] text-[12px] text-[#6B7280]">
+              <span class="line-through font-['Lato'] text-[12px] text-[#6B7280]">
                 {formatPrice(listPrice, currency, locale)}
               </span>
             )}
-            <span class="font-['FS_Emeric'] text-[16px] font-bold leading-[170%] tracking-[3%] text-[#1F251C]">
+            <span class="font-['Lato'] text-[16px] font-bold leading-[170%] tracking-[3%] text-[#1F251C]">
               {isGift ? "Grátis" : formatPrice(price, currency, locale)}
             </span>
           </div>

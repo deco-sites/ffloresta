@@ -53,7 +53,7 @@ function ProductCard({
     <div
       {...event}
       class={clx(
-        "bg-white flex flex-col font-['FS_Emeric'] shadow-[5px_5px_7px_0px_rgba(0,0,0,0.15)] p-4 w-[98%] h-[98%]",
+        "bg-white flex flex-col font-['Lato'] shadow-[5px_5px_7px_0px_rgba(0,0,0,0.15)] p-4 w-[98%] h-[98%]",
         _class
       )}
     >

@@ -35,21 +35,22 @@ export async function action(props: Props, req: Request, ctx: AppContext) {
 }
 
 export default function Results({ result }: ComponentProps<typeof action>) {
-  const methods = result?.logisticsInfo?.reduce(
-    (initial, { slas }) => [...initial, ...slas],
-    [] as Sla[],
-  ) ?? [];
+  const methods =
+    result?.logisticsInfo?.reduce(
+      (initial, { slas }) => [...initial, ...slas],
+      [] as Sla[]
+    ) ?? [];
 
   if (!methods.length) {
     return (
-      <div class="p-2 font-['FS_Emeric']">
+      <div class="p-2 font-['Lato']">
         <span>CEP inválido</span>
       </div>
     );
   }
 
   return (
-    <ul class="flex flex-col gap-4 p-4 border border-base-400  font-['FS_Emeric']">
+    <ul class="flex flex-col gap-4 p-4 border border-base-400  font-['Lato']">
       {methods.map((method) => (
         <li class="flex justify-between items-center border-base-200 not-first-child:border-t">
           <span class="text-button text-center">Entrega {method.name}</span>

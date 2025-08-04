@@ -48,10 +48,10 @@ export default function PromoCountdownIsland({
           <h2 class="text-lg md:text-sm">{title}</h2>
 
           <div class="flex flex-col items-center justify-end text-lg md:text-xl">
-            <p class="font-['FS_Emeric'] text-left text-[12px] leading-none uppercase tracking-wide text-white">
+            <p class="font-['Lato'] text-left text-[12px] leading-none uppercase tracking-wide text-white">
               Termina em:
             </p>
-            <div class="font-['FS_Emeric'] leading-none flex items-center gap-1">
+            <div class="font-['Lato'] leading-none flex items-center gap-1">
               <span class="text-[12px]">{days}D</span>
               <div class="flex items-center leading-none">
                 <span class="text-[12px] leading-none">
@@ -69,7 +69,7 @@ export default function PromoCountdownIsland({
         </div>
       </div>
       <div class="bg-[#97a37f]  flex items-center justify-start gap-2 p-2">
-        <strong class="font-['FS_Emeric'] text-base text-[#3A4332]">
+        <strong class="font-['Lato'] text-base text-[#3A4332]">
           {promoName}
         </strong>
       </div>

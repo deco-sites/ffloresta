@@ -72,7 +72,7 @@ export default function ProductDetails({
   breadcrumbItems.pop();
 
   return (
-    <div class="w-full flex flex-col bg-white">
+    <div class="w-full flex flex-col">
       <div class="block lg:hidden mt-6">
         {productBanner && <PromoCountdownIsland {...productBanner} />}
       </div>

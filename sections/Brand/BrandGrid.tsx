@@ -40,7 +40,7 @@ function Card({ image, href, label }: Item) {
         />
       </div>
       {label && (
-        <span class="font-['FS_Emeric'] font-bold text-[14px] leading-[170%] tracking-[0.16em] text-[#3A4332] text-center">
+        <span class="font-['Lato'] font-bold text-[14px] leading-[170%] tracking-[0.16em] text-[#3A4332] text-center">
           {label}
         </span>
       )}
@@ -70,7 +70,7 @@ function BrandGrid({ title, cta, items, showArrows = true, icon }: Props) {
                 // Tablet (640px ou mais): 4 itens
                 "min-[640px]:w-[calc(25%-15px)]",
                 // Desktop (1024px ou mais): 6 itens
-                "lg:w-[calc(16.666%-15px)]",
+                "lg:w-[calc(16.666%-15px)]"
               )}
             >
               <Card {...i} />

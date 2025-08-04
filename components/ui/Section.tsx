@@ -25,7 +25,7 @@ function Header({ title, cta, icon, headerBanner }: Props) {
     >
       <div class="flex items-center gap-2">
         {icon && <img src={icon} alt={title} />}
-        <h2 class="font-['FS_Emeric'] font-bold text-[#1F251C] text-[18px] leading-[100%] sm:text-[26.14px]">
+        <h2 class="font-['Lato'] font-bold text-[#1F251C] text-[18px] leading-[100%] sm:text-[26.14px]">
           {title}
         </h2>
       </div>
@@ -58,7 +58,7 @@ function Container({ class: _class, ...props }: JSX.IntrinsicElements["div"]) {
     <div
       {...props}
       class={clx(
-        "bg-white container flex flex-col gap-4 sm:gap-6 w-full py-5 sm:py-10 2xl:px-0",
+        "container flex flex-col gap-4 sm:gap-6 w-full py-5 sm:py-10 2xl:px-0",
         _class?.toString()
       )}
     />

@@ -62,7 +62,7 @@ function ThirdLevelMenuItem({ item }: { item: SiteNavigationElement }) {
       <div class="flex justify-between items-center w-full">
         <a
           href={item.url}
-          class="py-2 font-['FS_Emeric'] text-[16px] hover:underline text-white"
+          class="py-2 font-['Lato'] text-[16px] hover:underline text-white"
         >
           {item.name}
         </a>
@@ -85,7 +85,7 @@ function ThirdLevelMenuItem({ item }: { item: SiteNavigationElement }) {
             <li key={child.url}>
               <a
                 href={child.url}
-                class="block py-2 font-['FS_Emeric'] text-[16px] text-[#1F251C] hover:underline group-hover:text-white"
+                class="block py-2 font-['Lato'] text-[16px] text-[#1F251C] hover:underline group-hover:text-white"
               >
                 {child.name}
               </a>
@@ -105,7 +105,7 @@ function SubMenuItem({ item }: { item: SiteNavigationElement }) {
     return (
       <a
         href={item.url}
-        class="block px-4 py-3 font-['FS_Emeric'] text-[16px] text-white transition-all duration-200"
+        class="block px-4 py-3 font-['Lato'] text-[16px] text-white transition-all duration-200"
       >
         {item.name}
       </a>
@@ -117,7 +117,7 @@ function SubMenuItem({ item }: { item: SiteNavigationElement }) {
       <div class="flex justify-between items-center w-full">
         <a
           href={item.url}
-          class="py-3 font-['FS_Emeric'] text-[16px] text-white group-hover:text-white flex-grow"
+          class="py-3 font-['Lato'] text-[16px] text-white group-hover:text-white flex-grow"
         >
           {item.name}
         </a>
@@ -163,7 +163,7 @@ function MenuItem({ item }: { item: SiteNavigationElement }) {
         <div class="flex justify-between items-center w-full">
           <a
             href={item.url}
-            class={`py-3 font-['FS_Emeric'] text-[16px] text-[#1F251C] group-hover:text-white flex-grow ${
+            class={`py-3 font-['Lato'] text-[16px] text-[#1F251C] group-hover:text-white flex-grow ${
               isOpen.value ? "text-white" : ""
             }`}
           >

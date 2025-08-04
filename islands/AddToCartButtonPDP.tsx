@@ -65,7 +65,7 @@ export default function AddToCartButtonPDP({
       <div class="w-full flex items-center gap-2">
         <button
           onClick={buyNow}
-          class="w-full min-h-8 flex items-center justify-center bg-[#05C100] text-white font-['FS_Emeric'] text-[16px] font-bold transition-all duration-300 hover:bg-[#2bbd48]"
+          class="w-full min-h-8 flex items-center justify-center bg-[#05C100] text-white font-['Lato'] text-[16px] font-bold transition-all duration-300 hover:bg-[#2bbd48]"
         >
           COMPRAR
         </button>
