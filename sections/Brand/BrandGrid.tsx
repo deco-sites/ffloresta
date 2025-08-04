@@ -40,7 +40,7 @@ function Card({ image, href, label }: Item) {
         />
       </div>
       {label && (
-        <span class="font-['Lato'] font-bold text-[14px] leading-[170%] tracking-[0.16em] text-[#3A4332] text-center">
+        <span class="font-bold text-[14px] leading-[170%] tracking-[0.16em] text-[#3A4332] text-center">
           {label}
         </span>
       )}

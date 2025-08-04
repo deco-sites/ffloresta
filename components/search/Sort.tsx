@@ -40,7 +40,7 @@ function Sort({ sortOptions, url }: Props) {
       </label>
       <select
         name="sort"
-        class="select w-full md:max-w-40 max-h-9 h-9 min-h-9 md:ml-2 text-sm rounded-none uppercase border-[#BCBCBC] font-['Lato']"
+        class="select w-full md:max-w-40 max-h-9 h-9 min-h-9 md:ml-2 text-sm rounded-none uppercase border-[#BCBCBC]"
         hx-on:change={useScript(() => {
           const select = event!.currentTarget as HTMLSelectElement;
           window.location.href = select.value;
@@ -51,7 +51,6 @@ function Sort({ sortOptions, url }: Props) {
             label={labels[label] ?? label}
             value={value}
             selected={value === current}
-            class="font-['Lato']"
           >
             {label}
           </option>

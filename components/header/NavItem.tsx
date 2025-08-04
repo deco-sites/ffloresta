@@ -50,7 +50,7 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
     >
       <a
         href={url}
-        class="h-[50px] flex items-center justify-center px-4 font-['Lato'] font-normal text-[16px] leading-[100%] text-[#1F251C] hover:text-white hover:bg-[#3A4332] transition-all duration-300"
+        class="h-[50px] flex items-center justify-center px-4 font-normal text-[16px] leading-[100%] text-[#1F251C] hover:text-white hover:bg-[#3A4332] transition-all duration-300"
       >
         {name}
       </a>
@@ -70,7 +70,7 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
               {children.map((node, i) => (
                 <li class="pl-0 py-1" key={`${node.url}-${i}`}>
                   <a
-                    class="hover:border-b hover:border-white font-['Lato'] font-normal text-[10.5px] leading-[100%] text-white transition-all duration-300 ease-in-out"
+                    class="hover:border-b hover:border-white font-normal text-[10.5px] leading-[100%] text-white transition-all duration-300 ease-in-out"
                     href={node.url}
                   >
                     <span>{node.name}</span>

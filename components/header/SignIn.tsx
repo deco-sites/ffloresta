@@ -2,9 +2,8 @@ import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
 import { useScript } from "@deco/deco/hooks";
 
-// Tamanhos e estilos padronizados
 const ICON_SIZE = 20;
-const TEXT_STYLE = "font-['Lato'] font-normal text-[14px] leading-none";
+const TEXT_STYLE = "font-normal text-[14px] leading-none";
 const TEXT_COLOR = "text-[#1F251C] lg:text-white";
 const GAP = "gap-3.5 lg:gap-[14px]";
 

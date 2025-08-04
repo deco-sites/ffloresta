@@ -25,7 +25,7 @@ function Header({ title, cta, icon, headerBanner }: Props) {
     >
       <div class="flex items-center gap-2">
         {icon && <img src={icon} alt={title} />}
-        <h2 class="font-['Lato'] font-bold text-[#1F251C] text-[18px] leading-[100%] sm:text-[26.14px]">
+        <h2 class="font-bold text-[#1F251C] text-[18px] leading-[100%] sm:text-[26.14px]">
           {title}
         </h2>
       </div>

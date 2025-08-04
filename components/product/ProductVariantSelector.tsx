@@ -96,10 +96,7 @@ function VariantSelector({ product }: Props) {
           <li key={name} class="flex flex-col items-start">
             {/* Header */}
             <span
-              class={clx(
-                "font-['Lato']",
-                "font-normal text-sm leading-[170%] text-[#1F251C]"
-              )}
+              class={clx("font-normal text-sm leading-[170%] text-[#1F251C]")}
             >
               {isColor
                 ? `Cor${selectedValue ? `\u00A0\u00A0${selectedValue}` : ""}`
@@ -151,7 +148,7 @@ function VariantSelector({ product }: Props) {
                         <div
                           class={clx(
                             "min-h-[20px] md:min-h-[20px] px-2 py-1",
-                            "text-xs leading-[170%] font-normal font-['Lato']",
+                            "text-xs leading-[170%] font-normal",
                             "border border-black",
                             "flex items-center justify-center text-center",
                             "min-h-[41px] md:min-h-[20px]",

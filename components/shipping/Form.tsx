@@ -10,7 +10,7 @@ export default function Form({ items }: Props) {
   const slot = useId();
 
   return (
-    <div class="flex flex-col  font-['Lato']">
+    <div class="flex flex-col">
       <form
         class="relative join gap-2 mb-2"
         hx-target={`#${slot}`}
@@ -23,7 +23,7 @@ export default function Form({ items }: Props) {
         <input
           as="input"
           type="text"
-          class="w-full bg-[#D9D9D9] p-0 px-2 border-none outline-none font-['Lato']"
+          class="w-full bg-[#D9D9D9] p-0 px-2 border-none outline-none "
           placeholder="00000000"
           name="postalCode"
           maxLength={8}
@@ -31,7 +31,7 @@ export default function Form({ items }: Props) {
         />
         <button
           type="submit"
-          class="border-none outline-none bg-[#495941] min-w-[160px] h-8 py-1 px-3 font-['Lato'] text-white text-[13px] font-bold flex items-center justify-center gap-2 transition-all duration-300  hover:bg-[rgba(108,131,88,0.9)]"
+          class="border-none outline-none bg-[#495941] min-w-[160px] h-8 py-1 px-3  text-white text-[13px] font-bold flex items-center justify-center gap-2 transition-all duration-300  hover:bg-[rgba(108,131,88,0.9)]"
         >
           <span class="[.htmx-request_&]:hidden inline">CALCULAR FRETE</span>
           <span class="[.htmx-request_&]:inline hidden loading loading-spinner loading-xs" />

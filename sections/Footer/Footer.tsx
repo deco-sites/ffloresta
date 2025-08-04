@@ -265,7 +265,7 @@ function Footer({
         </div>
 
         <div>
-          <p class="font-bold text-[16px] text-[#273D28] font-['Lato'] mb-[30px] mt-[50px]">
+          <p class="font-bold text-[16px] text-[#273D28] mb-[30px] mt-[50px]">
             {lojas.title}
           </p>
           <div class="flex flex-col lg:flex-row gap-x-[20px]">

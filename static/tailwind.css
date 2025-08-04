@@ -470,6 +470,19 @@ html {
 
   body {
     background: #fdfff5 !important;
+    font-family: "Lato", sans-serif !important;
+  }
+
+  input,
+  textarea,
+  button,
+  input:focus,
+  textarea:focus,
+  button:focus,
+  :-ms-input-placeholder,
+  ::-ms-input-placeholder,
+  ::placeholder {
+    font-family: "Lato", sans-serif !important;
   }
 
   /* Disable scroll once drawer/modal is openned */
@@ -5210,9 +5223,6 @@ details.collapse summary::-webkit-details-marker {
 .text-end {
   text-align: end;
 }
-.font-\[\'Lato\'\] {
-  font-family: 'Lato';
-}
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -5993,14 +6003,6 @@ input[type="checkbox"]:checked::after {
       max-width: 1240px;
     }
   }
-}
-
-.placeholder\:font-\[\'Lato\'\]::-moz-placeholder {
-  font-family: 'Lato';
-}
-
-.placeholder\:font-\[\'Lato\'\]::placeholder {
-  font-family: 'Lato';
 }
 
 .placeholder\:text-\[\#1F251C\]::-moz-placeholder {

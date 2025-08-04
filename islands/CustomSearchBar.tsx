@@ -53,7 +53,7 @@ function ProductCard({
 
   if (isMobile) {
     return (
-      <div class="bg-white flex p-2 w-full border-solid border-[0.7px] border-[#8D98A0] font-['Lato']">
+      <div class="bg-white flex p-2 w-full border-solid border-[0.7px] border-[#8D98A0] ">
         {/* Imagem à esquerda */}
         <a href={relativeUrl} class="w-1/3 flex-shrink-0">
           <Image
@@ -95,7 +95,7 @@ function ProductCard({
 
   // Versão desktop
   return (
-    <div class="bg-white flex flex-col p-[12px_18px] w-full max-w-[258px] border-solid border-[0.7px] border-[#8D98A0] font-['Lato']">
+    <div class="bg-white flex flex-col p-[12px_18px] w-full max-w-[258px] border-solid border-[0.7px] border-[#8D98A0] ">
       <figure class="relative">
         <a
           href={relativeUrl}
@@ -227,7 +227,7 @@ export default function CustomSearchBar({
           class="join w-full h-[36px] lg:h-9 bg-[#D9D9D9]"
         >
           <input
-            class="input join-item flex-grow h-[36px] lg:h-9 rounded-none border-none outline-none focus:outline-none bg-[#D9D9D9] placeholder:text-[#1F251C] placeholder:font-['Lato']"
+            class="input join-item flex-grow h-[36px] lg:h-9 rounded-none border-none outline-none focus:outline-none bg-[#D9D9D9] placeholder:text-[#1F251C] placeholder:"
             name="q"
             placeholder={placeholder}
             value={query.value}

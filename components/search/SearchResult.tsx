@@ -97,7 +97,7 @@ function PageResult(props: SectionProps<typeof loader>) {
       >
         <a
           rel="prev"
-          class="w-full p-3 bg-[#3A4332] text-[#97A37F] font-['Lato'] h-8 flex items-center justify-center font-bold text-[14.06px] leading-[170%] tracking-[16%] hover:bg-[#293023] cursor-pointer transition"
+          class="w-full p-3 bg-[#3A4332] text-[#97A37F] h-8 flex items-center justify-center font-bold text-[14.06px] leading-[170%] tracking-[16%] hover:bg-[#293023] cursor-pointer transition"
           hx-swap="outerHTML show:parent:top"
           hx-get={partialPrev}
         >
@@ -139,9 +139,7 @@ function PageResult(props: SectionProps<typeof loader>) {
               hx-swap="outerHTML show:parent:top"
               hx-get={partialNext}
             >
-              <span class="inline [.htmx-request_&]:hidden font-['Lato']">
-                Mostrar mais
-              </span>
+              <span class="inline [.htmx-request_&]:hidden">Mostrar mais</span>
               <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
             </a>
           </div>
@@ -251,7 +249,7 @@ function Result(props: SectionProps<typeof loader>) {
   });
 
   const results = (
-    <span class="text-md text-[#1F251C] font-['Lato'] uppercase font-normal">
+    <span class="text-md text-[#1F251C] uppercase font-normal">
       {page.pageInfo.records} produtos encontrados
     </span>
   );
@@ -309,13 +307,13 @@ function Result(props: SectionProps<typeof loader>) {
               <div class="w-full flex justify-between items-center gap-4 mt-5">
                 <div class="flex max-w-1/2 w-full">
                   <label
-                    class="cursor-pointer w-full h-9 min-h9 max-h-9 p-0 rounded-none flex items-center justify-center gap-2 bg-[#c6cfba] text-[#323f2d] font-['Lato'] text-sm font-bold uppercase"
+                    class="cursor-pointer w-full h-9 min-h9 max-h-9 p-0 rounded-none flex items-center justify-center gap-2 bg-[#c6cfba] text-[#323f2d] text-sm font-bold uppercase"
                     for={controls}
                   >
                     Filtro
                   </label>
                 </div>
-                <div class="flex max-w-1/2 w-full font-['Lato']">{sortBy}</div>
+                <div class="flex max-w-1/2 w-full">{sortBy}</div>
               </div>
             </div>
           </Drawer>
@@ -342,9 +340,9 @@ function Result(props: SectionProps<typeof loader>) {
             <PageResult {...props} />
 
             {(seoText?.title || seoText?.description) && (
-              <div class="flex flex-col gap-2 sm:gap-3 text-[#1F251C] font-['Lato'] px-2 sm:px-0 pt-8 border-t border-[#CCCCCC]">
+              <div class="flex flex-col gap-2 sm:gap-3 text-[#1F251C] px-2 sm:px-0 pt-8 border-t border-[#CCCCCC]">
                 {seoText.title && (
-                  <h2 class="text-[18px] font-['Lato'] sm:text-[20px] font-medium">
+                  <h2 class="text-[18px] sm:text-[20px] font-medium">
                     {seoText.title}
                   </h2>
                 )}
@@ -352,19 +350,19 @@ function Result(props: SectionProps<typeof loader>) {
                   <>
                     <p
                       id="seo-text-truncated"
-                      class="text-[14px] sm:text-[16px] font-['Lato'] leading-relaxed line-clamp-3"
+                      class="text-[14px] sm:text-[16px] leading-relaxed line-clamp-3"
                     >
                       {seoText.description}
                     </p>
                     <p
                       id="seo-text-full"
-                      class="text-[14px] sm:text-[16px] font-['Lato'] leading-relaxed hidden"
+                      class="text-[14px] sm:text-[16px] leading-relaxed hidden"
                     >
                       {seoText.description}
                     </p>
                     <button
                       onclick="document.getElementById('seo-text-truncated').classList.toggle('hidden'); document.getElementById('seo-text-full').classList.toggle('hidden'); this.textContent = this.textContent === 'Ver mais' ? 'Ver menos' : 'Ver mais';"
-                      class="text-[#3A4332] font-['Lato'] font-bold text-sm hover:underline"
+                      class="text-[#3A4332] font-bold text-sm hover:underline"
                     >
                       Ver mais
                     </button>

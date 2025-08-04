@@ -31,7 +31,7 @@ function ProductDescription({
           {tabs.map((tab) => (
             <button
               key={tab.title}
-              class={`font-['Lato'] font-normal text-sm leading-[170%] text-[#3A4332] whitespace-nowrap p-0 m-0 ${
+              class={`font-normal text-sm leading-[170%] text-[#3A4332] whitespace-nowrap p-0 m-0 ${
                 activeTab === tab.title
                   ? "font-bold border-b border-[#9AA192]"
                   : ""

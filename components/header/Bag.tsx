@@ -5,7 +5,7 @@ import { useScript } from "@deco/deco/hooks";
 
 // Usando as mesmas constantes de estilo
 const ICON_SIZE = 20;
-const TEXT_STYLE = "font-['Lato'] font-normal text-[14px] leading-none";
+const TEXT_STYLE = "font-normal text-[14px] leading-none";
 const TEXT_COLOR = "text-white";
 const GAP = "gap-3.5 lg:gap-[14px]";
 

@@ -43,14 +43,14 @@ export default function Results({ result }: ComponentProps<typeof action>) {
 
   if (!methods.length) {
     return (
-      <div class="p-2 font-['Lato']">
+      <div class="p-2">
         <span>CEP inválido</span>
       </div>
     );
   }
 
   return (
-    <ul class="flex flex-col gap-4 p-4 border border-base-400  font-['Lato']">
+    <ul class="flex flex-col gap-4 p-4 border border-base-400 ">
       {methods.map((method) => (
         <li class="flex justify-between items-center border-base-200 not-first-child:border-t">
           <span class="text-button text-center">Entrega {method.name}</span>

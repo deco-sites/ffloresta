@@ -79,23 +79,21 @@ function ProductInfo({ page }: Props) {
     <div {...viewItemEvent} class="flex flex-col" id={id}>
       {/* SKU and Product Name */}
       <div class="flex flex-col gap-0.5">
-        <span class="font-['Lato'] font-normal text-[14px] leading-[140%] text-[#3A4332]">
+        <span class="font-normal text-[14px] leading-[140%] text-[#3A4332]">
           SKU: {product.sku}
         </span>
-        <h1 class="font-['Lato'] leading-[140%] text-[#3A4332] text-[24px]">
-          {title}
-        </h1>
+        <h1 class="leading-[140%] text-[#3A4332] text-[24px]">{title}</h1>
       </div>
 
       {/* Prices */}
       <div class="mt-1.5 md:mt-5 flex flex-col gap-0">
         <div class="flex flex-col items-start gap-0">
           {listPrice && (
-            <span class="font-['Lato'] font-light text-[20px] leading-[170%] tracking-[3%] text-left text-[#3c4233] line-through">
+            <span class="font-light text-[20px] leading-[170%] tracking-[3%] text-left text-[#3c4233] line-through">
               {formatPrice(listPrice, offers?.priceCurrency)}
             </span>
           )}
-          <span class="font-['Lato'] font-bold text-[24px] leading-[170%] text-left text-[#677357]">
+          <span class="font-bold text-[24px] leading-[170%] text-left text-[#677357]">
             {formatPrice(price, offers?.priceCurrency)} à vista
           </span>
         </div>
