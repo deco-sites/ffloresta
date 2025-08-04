@@ -97,7 +97,7 @@ function PageResult(props: SectionProps<typeof loader>) {
       >
         <a
           rel="prev"
-          class="w-full p-3 bg-[#3A4332] text-[#97A37F] h-8 flex items-center justify-center font-bold text-[14.06px] leading-[170%] tracking-[16%] hover:bg-[#293023] cursor-pointer transition"
+          class="w-full p-3 bg-[#3A4332] text-[#97A37F] h-8 flex items-center justify-center font-bold text-[14px] leading-[170%] tracking-[16%] hover:bg-[#293023] cursor-pointer transition"
           hx-swap="outerHTML show:parent:top"
           hx-get={partialPrev}
         >
@@ -133,7 +133,7 @@ function PageResult(props: SectionProps<typeof loader>) {
             <a
               rel="next"
               class={clx(
-                "w-full p-3 bg-[#3A4332] text-[white] h-8 flex items-center justify-center font-bold text-[14.06px] leading-[170%] tracking-[16%] hover:bg-[#293023] cursor-pointer transition",
+                "p-3 bg-[#3A4332] text-white h-8 flex items-center justify-center font-bold text-[14px] leading-[170%] tracking-[16%] hover:bg-[#293023] cursor-pointer transition",
                 (!nextPageUrl || partial === "hideMore") && "hidden"
               )}
               hx-swap="outerHTML show:parent:top"
@@ -249,7 +249,7 @@ function Result(props: SectionProps<typeof loader>) {
   });
 
   const results = (
-    <span class="text-md text-[#1F251C] uppercase font-normal">
+    <span class="text-md text-[#1F251C] font-normal">
       {page.pageInfo.records} produtos encontrados
     </span>
   );
@@ -307,7 +307,7 @@ function Result(props: SectionProps<typeof loader>) {
               <div class="w-full flex justify-between items-center gap-4 mt-5">
                 <div class="flex max-w-1/2 w-full">
                   <label
-                    class="cursor-pointer w-full h-9 min-h9 max-h-9 p-0 rounded-none flex items-center justify-center gap-2 bg-[#c6cfba] text-[#323f2d] text-sm font-bold uppercase"
+                    class="cursor-pointer w-full h-9 min-h9 max-h-9 p-0 rounded-none flex items-center justify-center gap-2 bg-[#c6cfba] text-[#323f2d] text-sm font-bold"
                     for={controls}
                   >
                     Filtro

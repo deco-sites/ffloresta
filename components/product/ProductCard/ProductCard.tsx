@@ -104,7 +104,7 @@ function ProductCard({
               item={item}
               class={clx(
                 "w-full bg-[#05C100] text-white h-8 flex items-center justify-center",
-                "font-bold text-[14.06px] leading-[170%] tracking-[16%]",
+                "font-bold text-[14px] leading-[170%] tracking-[16%]",
                 "hover:bg-[#23911f] transition duration-300 ease-in-out"
               )}
             />
@@ -113,7 +113,7 @@ function ProductCard({
               href={relativeUrl}
               class={clx(
                 "w-full bg-[#293023] text-white h-8 flex items-center justify-center",
-                "font-bold text-[14.06px] leading-[170%] tracking-[16%] cursor-none"
+                "font-bold text-[14px] leading-[170%] tracking-[16%] cursor-none"
               )}
             >
               INDISPONÍVEL

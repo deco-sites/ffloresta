@@ -23,12 +23,12 @@ export default function ProductDescriptionIsland({ page }: Props) {
 
   if (description) {
     tabs.push({
-      title: "Descrição",
+      title: "Descrição do Produto",
       content: (
         <div class="py-6">
-          <h3 class="font-bold text-[16px] text-[#3A4332] mb-4">
+          {/* <h3 class="font-bold text-[16px] text-[#3A4332] mb-4">
             Descrição do Produto
-          </h3>
+          </h3> */}
           <div
             class="text-[#3A4332] text-[14px] description-text"
             dangerouslySetInnerHTML={{ __html: description }}
@@ -43,9 +43,9 @@ export default function ProductDescriptionIsland({ page }: Props) {
       title: "Especificações Técnicas",
       content: (
         <div class="py-6">
-          <h3 class="font-bold text-[16px] text-[#3A4332] mb-4">
+          {/* <h3 class="font-bold text-[16px] text-[#3A4332] mb-4">
             Detalhes Técnicos
-          </h3>
+          </h3> */}
           <table class="w-full text-[#3A4332] text-[14px] description-text">
             <tbody>
               {especificacoes.map((spec) => (
@@ -66,9 +66,9 @@ export default function ProductDescriptionIsland({ page }: Props) {
       title: "Diferenciais",
       content: (
         <div class="py-6">
-          <h3 class="font-bold text-[16px] text-[#3A4332] mb-4">
+          {/* <h3 class="font-bold text-[16px] text-[#3A4332] mb-4">
             Nossos Diferenciais
-          </h3>
+          </h3> */}
           <pre class="text-[#3A4332] whitespace-pre-wrap text-[14px] description-text">
             {diferenciais}
           </pre>

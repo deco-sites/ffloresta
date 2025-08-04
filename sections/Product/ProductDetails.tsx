@@ -72,7 +72,7 @@ export default function ProductDetails({
   breadcrumbItems.pop();
 
   return (
-    <div class="w-full flex flex-col">
+    <div class="w-full flex flex-col bg-white">
       <div class="block lg:hidden mt-6">
         {productBanner && <PromoCountdownIsland {...productBanner} />}
       </div>
@@ -93,7 +93,7 @@ export default function ProductDetails({
         <div class="w-full flex flex-col">
           <GallerySlider page={page} />
         </div>
-        <div class="h-fit px-5 pb-4 shadow-[5px_5px_7px_0px_rgba(0,0,0,0.15)] mb-10 lg:mb-0">
+        <div class="h-fit px-5 pb-4 shadow-[5px_5px_7px_0px_rgba(0,0,0,0.15)] mb-10 lg:mb-0 bg-[#fdfff5]">
           {productBanner && (
             <div class="hidden lg:block mb-5">
               {productBanner && <PromoCountdownIsland {...productBanner} />}

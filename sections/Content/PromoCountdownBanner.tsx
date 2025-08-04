@@ -17,7 +17,7 @@ export default function PromoCountdownSection({
   promoName,
 }: SectionProps<typeof loader>) {
   return (
-    <div class="w-full container mx-auto">
+    <div class="w-full container mx-auto 2xl:px-0">
       <PromoCountdownIsland
         image={image}
         countdownDate={countdownDate}

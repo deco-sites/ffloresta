@@ -49,7 +49,7 @@ function CartItem({ item, index, locale, currency }: Props) {
       <div class="flex flex-col gap-3">
         {/* Name and Remove button */}
         <div class="flex justify-between items-start">
-          <legend class="text-[#3A4332] text-[14px] leading-[137%] tracking-[0%] uppercase">
+          <legend class="text-[#3A4332] text-[14px] leading-[137%] tracking-[0%]">
             {name}
           </legend>
           <button

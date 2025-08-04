@@ -4107,6 +4107,9 @@ details.collapse summary::-webkit-details-marker {
 .min-h-\[66px\] {
   min-height: 66px;
 }
+.min-h-\[6px\] {
+  min-height: 6px;
+}
 .min-h-\[auto\] {
   min-height: auto;
 }
@@ -4911,6 +4914,10 @@ details.collapse summary::-webkit-details-marker {
   --tw-bg-opacity: 1;
   background-color: rgb(198 207 186 / var(--tw-bg-opacity));
 }
+.bg-\[\#fdfff5\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 255 245 / var(--tw-bg-opacity));
+}
 .bg-\[rgba\(14\2c 20\2c 15\2c 0\.6\)\] {
   background-color: rgba(14,20,15,0.6);
 }
@@ -5263,9 +5270,6 @@ details.collapse summary::-webkit-details-marker {
 .text-\[13px\] {
   font-size: 13px;
 }
-.text-\[14\.06px\] {
-  font-size: 14.06px;
-}
 .text-\[14px\] {
   font-size: 14px;
 }
@@ -5437,10 +5441,6 @@ details.collapse summary::-webkit-details-marker {
   --tw-text-opacity: 1;
   color: rgb(50 63 45 / var(--tw-text-opacity));
 }
-.text-\[\#353535\] {
-  --tw-text-opacity: 1;
-  color: rgb(53 53 53 / var(--tw-text-opacity));
-}
 .text-\[\#3A4332\] {
   --tw-text-opacity: 1;
   color: rgb(58 67 50 / var(--tw-text-opacity));
@@ -5465,10 +5465,6 @@ details.collapse summary::-webkit-details-marker {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
 }
-.text-\[\#777777\] {
-  --tw-text-opacity: 1;
-  color: rgb(119 119 119 / var(--tw-text-opacity));
-}
 .text-\[\#8D98A0\] {
   --tw-text-opacity: 1;
   color: rgb(141 152 160 / var(--tw-text-opacity));
@@ -5482,10 +5478,6 @@ details.collapse summary::-webkit-details-marker {
   color: rgb(174 175 174 / var(--tw-text-opacity));
 }
 .text-\[\#ffffff\] {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-.text-\[white\] {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -5539,8 +5531,8 @@ details.collapse summary::-webkit-details-marker {
 .line-through {
   text-decoration-line: line-through;
 }
-.decoration-\[\#273D28\] {
-  text-decoration-color: #273D28;
+.decoration-white {
+  text-decoration-color: #fff;
 }
 .placeholder-white::-moz-placeholder {
   --tw-placeholder-opacity: 1;
@@ -7013,10 +7005,6 @@ input[type="checkbox"]:checked::after {
   .lg\:text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
-  }
-
-  .group:hover .lg\:group-hover\:opacity-100 {
-    opacity: 1;
   }
 }
 

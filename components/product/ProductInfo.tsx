@@ -76,7 +76,7 @@ function ProductInfo({ page }: Props) {
   );
 
   return (
-    <div {...viewItemEvent} class="flex flex-col" id={id}>
+    <div {...viewItemEvent} class="flex flex-col bg-[#fdfff5]" id={id}>
       {/* SKU and Product Name */}
       <div class="flex flex-col gap-0.5">
         <span class="font-normal text-[14px] leading-[140%] text-[#3A4332]">

@@ -29,7 +29,7 @@ function ProductImage({
       href={relativeUrl}
       aria-label="view product"
       class={clx(
-        "grid grid-cols-1 grid-rows-1",
+        "group grid grid-cols-1 grid-rows-1", // Adicionado 'group' aqui
         "w-full mt-10",
         !inStock && "opacity-70"
       )}
@@ -56,7 +56,8 @@ function ProductImage({
           "object-cover",
           "w-full",
           "col-span-full row-span-full",
-          "transition-opacity opacity-0 lg:group-hover:opacity-100"
+          "transition-opacity duration-300", // Adicionada duração
+          "opacity-0 group-hover:opacity-100" // Removido lg: para funcionar em todos os tamanhos
         )}
         sizes="(max-width: 640px) 50vw, 20vw"
         loading="lazy"

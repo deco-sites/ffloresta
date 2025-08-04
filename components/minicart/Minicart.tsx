@@ -200,21 +200,17 @@ export default function Cart({
                 <div class="border-t border-[#E5E5E5] py-4 flex flex-col gap-2">
                   {discounts > 0 && (
                     <div class="flex justify-between items-center px-4">
-                      <span class="uppercase text-[16px] text-[#1F251C]">
-                        Descontos
-                      </span>
-                      <span class="uppercase text-[16px] text-[#1F251C]">
+                      <span class=" text-[16px] text-[#1F251C]">Descontos</span>
+                      <span class=" text-[16px] text-[#1F251C]">
                         {formatPrice(discounts, currency, locale)}
                       </span>
                     </div>
                   )}
                   <div class="w-full flex justify-between px-4">
-                    <span class="uppercase text-[16px] text-[#1F251C]">
-                      Subtotal
-                    </span>
+                    <span class=" text-[16px] text-[#1F251C]">Subtotal</span>
                     <output
                       form={MINICART_FORM_ID}
-                      class="uppercase text-[16px] text-[#1F251C]"
+                      class=" text-[16px] text-[#1F251C]"
                     >
                       {formatPrice(subtotal, currency, locale)}
                     </output>
@@ -225,12 +221,12 @@ export default function Cart({
                 {/* Total */}
                 <div class="border-t border-[#E5E5E5] pt-4 pb-6 flex flex-col justify-end items-end gap-2 px-4">
                   <div class="flex justify-between items-center w-full">
-                    <span class="uppercase text-[16px] leading-[170%] tracking-[3%]">
+                    <span class=" text-[16px] leading-[170%] tracking-[3%]">
                       Total
                     </span>
                     <output
                       form={MINICART_FORM_ID}
-                      class="uppercase font-bold text-[16px] leading-[170%] tracking-[3%] text-[#1F251C]"
+                      class=" font-bold text-[16px] leading-[170%] tracking-[3%] text-[#1F251C]"
                     >
                       {formatPrice(total, currency, locale)}
                     </output>
@@ -240,9 +236,9 @@ export default function Cart({
                   </span>
                 </div>
 
-                <div class="px-4 pb-8">
+                <div class="p-4">
                   <a
-                    class="btn w-full no-animation bg-[#05C100] text-white hover:bg-[#3A4332] hover:text-white border-none font-normal text-[16px] h-[50px]"
+                    class="btn w-full no-animation bg-[#05C100] text-white hover:bg-[#3A4332] hover:text-white border-none text-[16px] h-[50px] font-bold rounded-none"
                     href={checkoutHref}
                     hx-on:click={useScript(sendBeginCheckoutEvent)}
                   >
