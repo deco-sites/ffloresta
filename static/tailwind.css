@@ -4107,6 +4107,9 @@ details.collapse summary::-webkit-details-marker {
 .min-h-\[66px\] {
   min-height: 66px;
 }
+.min-h-\[6px\] {
+  min-height: 6px;
+}
 .min-h-\[auto\] {
   min-height: auto;
 }
