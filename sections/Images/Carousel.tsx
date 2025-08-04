@@ -133,7 +133,7 @@ function Carousel({ images = [], preload, interval }: Props) {
                 <Slider.Dot
                   index={index}
                   class={clx(
-                    "bg-white h-3 w-3 no-animation rounded-full",
+                    "bg-white h-2 w-2 no-animation",
                     "disabled:bg-[#2D2D2D] transition-[background]"
                   )}
                 />
