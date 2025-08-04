@@ -1,5 +1,4 @@
 import { ImageWidget } from "apps/admin/widgets.ts";
-import Section from "../../components/ui/Section.tsx";
 
 export interface Props {
   bannerFaixa: ImageWidget;
@@ -20,3 +19,5 @@ export default function BannerMosaic({ bannerFaixa }: Props) {
     </>
   );
 }
+
+export const LoadingFallback = () => <div class="min-h-[6px]" />;
