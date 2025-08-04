@@ -267,6 +267,32 @@
             "image": "https://assets.decocache.com/ffloresta/91fc6b96-2a3b-4404-954b-2efe9362ebc8/brand-06.svg",
             "href": "/"
           }
+        ],
+        "brands": [
+          {
+            "image": "https://assets.decocache.com/ffloresta/5449f31d-af59-4b85-89ec-85d6158f7a8c/brand-01.svg",
+            "href": "/"
+          },
+          {
+            "image": "https://assets.decocache.com/ffloresta/3e69bcad-8472-4ee8-ab55-2b5ce9373337/brand-02.svg",
+            "href": "/"
+          },
+          {
+            "image": "https://assets.decocache.com/ffloresta/2ce3a6f1-6e07-40a7-94e0-760524b8bac6/brand-03.svg",
+            "href": "/"
+          },
+          {
+            "image": "https://assets.decocache.com/ffloresta/8fd78072-2f18-44c8-ab49-801bef198e79/brand-04.svg",
+            "href": "/"
+          },
+          {
+            "image": "https://assets.decocache.com/ffloresta/02567902-0ede-47e3-bf78-70e1e0ed07a3/brand-05.svg",
+            "href": "/"
+          },
+          {
+            "image": "https://assets.decocache.com/ffloresta/91fc6b96-2a3b-4404-954b-2efe9362ebc8/brand-06.svg",
+            "href": "/"
+          }
         ]
       }
     },
