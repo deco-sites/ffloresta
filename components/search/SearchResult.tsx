@@ -6,8 +6,8 @@ import Filters from "../../components/search/Filters.tsx";
 import Icon from "../../components/ui/Icon.tsx";
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
-import { useOffer } from "../../sdk/useOffer.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
+import { useOffer } from "../../sdk/useOffer.ts";
 import Breadcrumb from "../ui/Breadcrumb.tsx";
 import Drawer from "../ui/Drawer.tsx";
 import Sort from "./Sort.tsx";
@@ -262,24 +262,49 @@ function Result(props: SectionProps<typeof loader>) {
     <div
       id={container}
       {...viewItemListEvent}
-      class="w-full mt:0 2xl:mt-[52px]"
+      class="w-full mt:0 2xl:mt-[-10px]"
     >
-      <div class="container px-5 lg:px-[4rem] pt-4 sm:pt-5">
-        <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
-      </div>
-
-      {topBanner && (
-        <div class="w-full my-4">
-          <picture>
-            <source media="(max-width: 767px)" srcSet={topBanner.mobile} />
-            <img
-              src={topBanner.desktop}
-              alt="Categoria"
-              class="w-full h-auto object-cover"
-              loading="lazy"
-            />
-          </picture>
-        </div>
+      {/* Ordem diferente para desktop e mobile */}
+      {device === "desktop" ? (
+        <>
+          {/* Desktop: Banner -> Breadcrumb */}
+          {topBanner && (
+            <div class="w-full my-4">
+              <picture>
+                <source media="(max-width: 767px)" srcSet={topBanner.mobile} />
+                <img
+                  src={topBanner.desktop}
+                  alt="Categoria"
+                  class="w-full h-auto object-cover"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+          )}
+          <div class="container px-5 lg:px-[4rem] pt-4 sm:pt-5">
+            <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
+          </div>
+        </>
+      ) : (
+        <>
+          {/* Mobile: Breadcrumb -> Banner */}
+          <div class="container px-5 lg:px-[4rem] pt-4 sm:pt-5">
+            <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
+          </div>
+          {topBanner && (
+            <div class="w-full my-4">
+              <picture>
+                <source media="(max-width: 767px)" srcSet={topBanner.mobile} />
+                <img
+                  src={topBanner.desktop}
+                  alt="Categoria"
+                  class="w-full h-auto object-cover"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+          )}
+        </>
       )}
 
       <div class="container flex flex-col gap-4 sm:gap-5 w-full py-4 sm:py-5 px-5 lg:px-[4rem]">

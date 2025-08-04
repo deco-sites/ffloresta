@@ -4252,6 +4252,9 @@ details.collapse summary::-webkit-details-marker {
 .w-\[calc\(20\%-21px\)\] {
   width: calc(20% - 21px);
 }
+.w-\[calc\(20\%-24px\)\] {
+  width: calc(20% - 24px);
+}
 .w-\[calc\(50\%-\(20px\/2\)\)\] {
   width: calc(50% - (20px / 2));
 }
@@ -7115,8 +7118,8 @@ input[type="checkbox"]:checked::after {
 
 @media (min-width: 1536px) {
 
-  .\32xl\:mt-\[52px\] {
-    margin-top: 52px;
+  .\32xl\:mt-\[-10px\] {
+    margin-top: -10px;
   }
 
   .\32xl\:block {
