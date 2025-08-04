@@ -83,7 +83,7 @@ function CartItem({ item, index, locale, currency }: Props) {
               max={QUANTITY_MAX_VALUE}
               value={quantity}
               name={`item::${index}`}
-              class="flex items-center justify-center text-center border border-[#E5E5E5] rounded-none h-[32px]"
+              class="flex items-center justify-center text-center rounded-none h-[32px]"
             />
           </div>
         </div>

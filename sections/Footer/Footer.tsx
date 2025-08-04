@@ -54,7 +54,6 @@ interface LojasItens {
 interface Lojas {
   title: string;
   lojas: LojasItens[];
-  verMais: string;
 }
 
 interface Props {
@@ -75,18 +74,18 @@ function Footer({
   logo,
   logoLinha,
   trademark,
-  lojas = { title: "", lojas: [], verMais: "/" },
+  lojas = { title: "", lojas: [] },
 }: Props) {
   const device = useDevice();
+  const isMobile = device === "mobile";
 
   return (
     <footer class="sm:px-0 mt-5 sm:mt-10" style={{ backgroundColor: "#fff" }}>
       <Newsletter />
-      {device === "mobile" ? (
-        ""
-      ) : (
+
+      {!isMobile && (
         <div class="bg-[#1F251C] min-h-[100px] flex items-center ps-[4%]">
-          <div class=" w-full">
+          <div class="w-full">
             {logoLinha && (
               <Image
                 src={logoLinha}
@@ -101,7 +100,7 @@ function Footer({
       )}
 
       <div class="w-full bg-[#3A4332]">
-        <div class="container flex flex-col lg:p-[4%]  w-full p-5">
+        <div class="container flex flex-col lg:p-[4%] w-full p-5">
           <div class="w-full pb-[30px]">
             {logo && (
               <Image
@@ -109,69 +108,41 @@ function Footer({
                 alt="Logo"
                 loading="lazy"
                 class="max-w-[250px]"
-                width={device === "mobile" ? 120 : 300}
+                width={isMobile ? 120 : 300}
                 height={100}
               />
             )}
           </div>
 
           <div class="flex flex-col sm:grid sm:grid-flow-row lg:grid-cols-2 gap-6">
-            {device === "mobile" ? (
+            {isMobile ? (
               <div>
                 {links.map(({ title, itens }, index) => (
-                  <details
-                    open
-                    key={title + index}
-                    class="flex flex-col gap-[12px]"
-                  >
-                    <summary class="font-normal text-[16px]  text-white cursor-pointer flex justify-between items-center min-h-[48px]">
-                      <span>{title}</span>
-
-                      <span class="transform transition-transform duration-300">
-                        <svg
-                          width="12"
-                          height="7"
-                          viewBox="0 0 12 7"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0.52124 0.966797C0.537437 0.755898 0.622525 0.570573 0.775146 0.417969L0.842529 0.357422C1.00278 0.224673 1.19303 0.157278 1.40796 0.157227C1.62312 0.157227 1.814 0.224465 1.97436 0.357422L2.04077 0.417969L6.00757 4.38574L9.97534 0.417968L10.0408 0.359375C10.1973 0.230598 10.3865 0.165388 10.6013 0.162109L10.6931 0.165039C10.8737 0.17901 11.0351 0.24329 11.1736 0.357421L11.241 0.417968C11.4141 0.591095 11.5026 0.805113 11.5027 1.05078C11.5027 1.26578 11.4353 1.45689 11.3025 1.61719L11.241 1.68457L6.74683 6.17871C6.66749 6.25802 6.58242 6.32291 6.49097 6.37012L6.39722 6.41113C6.27539 6.45627 6.14515 6.47848 6.00854 6.47852C5.87192 6.47852 5.74172 6.45623 5.61987 6.41113L5.52612 6.37012C5.43441 6.32286 5.34882 6.25824 5.26929 6.17871L0.775146 1.68457L0.716553 1.61914C0.587624 1.46258 0.522622 1.27346 0.519287 1.05859L0.52124 0.966797Z"
-                            fill="#292929"
-                            stroke="white"
-                            stroke-width="0.3"
-                          />
-                        </svg>
-                      </span>
-                    </summary>
-
+                  <AccordionItem key={title + index} title={title}>
                     <div class="flex flex-col gap-[12px] mt-2 mb-[20px]">
                       {itens.map(({ title, href }, idx) => (
                         <a
                           key={title + idx}
-                          class="font-normal text-[14px]  text-white"
+                          class="font-normal text-[14px] text-white"
                           href={href}
                         >
                           {title}
                         </a>
                       ))}
                     </div>
-                  </details>
+                  </AccordionItem>
                 ))}
               </div>
             ) : (
               <div class="grid grid-flow-row sm:grid-flow-col gap-6">
                 {links.map(({ title, itens }, index) => (
                   <div key={title + index} class="flex flex-col gap-[18px]">
-                    <div class="font-normal text-[16px]  text-white">
-                      <p>{title}</p>
-                      <hr class="w-full max-w-[75px] h-1 bg-[#273D28] rounded-sm" />
-                    </div>
+                    <SectionTitle title={title} />
                     <div class="flex flex-col gap-[18px]">
                       {itens.map(({ title, href }, idx) => (
                         <a
                           key={title + idx}
-                          class="font-normal text-[14px]  text-white"
+                          class="font-normal text-[14px] text-white"
                           href={href}
                         >
                           {title}
@@ -187,16 +158,8 @@ function Footer({
               <div class="w-full">
                 {social.map(({ title, itens }, index) => (
                   <div class="w-full" key={title + index}>
-                    <div class={`font-normal text-[16px] text-white`}>
-                      <p>{title}</p>
-                      {device === "mobile" ? (
-                        ""
-                      ) : (
-                        <hr class="w-full max-w-[75px] h-1 bg-[#273D28] rounded-sm" />
-                      )}
-                    </div>
-                    <div class="flex items-center  lg:flex-col gap-[15px]  lg:max-w-[210px] mt-[20px]">
-                      {/* Primeira imagem (índice 0) */}
+                    <SectionTitle title={title} showDivider={!isMobile} />
+                    <div class="flex items-center lg:flex-col gap-[15px] lg:max-w-[210px] mt-[20px]">
                       {itens.length > 0 && (
                         <a
                           href={itens[0].href}
@@ -213,9 +176,8 @@ function Footer({
                         </a>
                       )}
 
-                      {/* Demais imagens (se houver) */}
                       {itens.length > 1 && (
-                        <div class="grid grid-cols-3 gap-[10px] ">
+                        <div class="grid grid-cols-3 gap-[10px]">
                           {itens.slice(1).map(({ image, alt, href }, idx) => (
                             <a key={idx} href={href} class="">
                               <Image
@@ -238,14 +200,7 @@ function Footer({
               <div class="flex flex-wrap gap-2">
                 {paymentMethods.map(({ title, payments }, index) => (
                   <div key={title + index}>
-                    <div class="font-normal text-[16px]   text-white">
-                      <p>{title}</p>
-                      {device === "mobile" ? (
-                        ""
-                      ) : (
-                        <hr class="w-full max-w-[75px] h-1 bg-[#273D28] rounded-sm" />
-                      )}
-                    </div>
+                    <SectionTitle title={title} showDivider={!isMobile} />
                     <div class="flex flex-wrap max-w-[300px] lg:max-w-[360px] mt-[20px]">
                       {payments.map(({ image, alt, href }, idx) => (
                         <a key={idx} href={href} class="mb-[15px] mr-[5px]">
@@ -253,8 +208,8 @@ function Footer({
                             src={image}
                             alt={alt}
                             loading="lazy"
-                            width={device === "mobile" ? 46 : 65}
-                            height={device === "mobile" ? 32 : 44}
+                            width={isMobile ? 46 : 65}
+                            height={isMobile ? 32 : 44}
                           />
                         </a>
                       ))}
@@ -265,41 +220,65 @@ function Footer({
             </div>
           </div>
 
+          {/* Seção de Lojas com dropdown apenas no mobile */}
           <div>
-            <p class="font-bold text-[16px] text-white mb-[30px] mt-[50px]">
-              {lojas.title}
-            </p>
-            <div class="flex flex-col lg:flex-row gap-x-[20px]">
-              {device === "mobile" ? (
-                <div class="flex flex-col gap-y-[10px]">
-                  <p class="text-[#273D28] text-[14px]">
-                    {lojas.lojas[0].title}
-                  </p>
-                  <p class="text-white text-[12px] font-bold underline decoration-white">
-                    {lojas.lojas[0].tuor}
-                  </p>
-                  <p class="text-white text-[12px]">{lojas.lojas[0].end}</p>
-                  <div class="flex flex-row flex-wrap">
-                    <p class="text-white text-[12px] font-bold">TELEFONE:</p>
-                    <p class="text-white text-[12px]">{lojas.lojas[0].tel}</p>
+            {isMobile ? (
+              <div class="mt-6">
+                <details class="group">
+                  <summary class="font-bold text-[16px] text-white cursor-pointer flex justify-between items-center min-h-[48px] list-none">
+                    <span>{lojas.title}</span>
+                    <svg
+                      width="12"
+                      height="7"
+                      viewBox="0 0 12 7"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="transform group-open:rotate-180 transition-transform duration-300"
+                    >
+                      <path
+                        d="M0.52124 0.966797C0.537437 0.755898 0.622525 0.570573 0.775146 0.417969L0.842529 0.357422C1.00278 0.224673 1.19303 0.157278 1.40796 0.157227C1.62312 0.157227 1.814 0.224465 1.97436 0.357422L2.04077 0.417969L6.00757 4.38574L9.97534 0.417968L10.0408 0.359375C10.1973 0.230598 10.3865 0.165388 10.6013 0.162109L10.6931 0.165039C10.8737 0.17901 11.0351 0.24329 11.1736 0.357421L11.241 0.417968C11.4141 0.591095 11.5026 0.805113 11.5027 1.05078C11.5027 1.26578 11.4353 1.45689 11.3025 1.61719L11.241 1.68457L6.74683 6.17871C6.66749 6.25802 6.58242 6.32291 6.49097 6.37012L6.39722 6.41113C6.27539 6.45627 6.14515 6.47848 6.00854 6.47852C5.87192 6.47852 5.74172 6.45623 5.61987 6.41113L5.52612 6.37012C5.43441 6.32286 5.34882 6.25824 5.26929 6.17871L0.775146 1.68457L0.716553 1.61914C0.587624 1.46258 0.522622 1.27346 0.519287 1.05859L0.52124 0.966797Z"
+                        fill="#ffffff"
+                        stroke="white"
+                        stroke-width="0.3"
+                      />
+                    </svg>
+                  </summary>
+                  <div class="flex flex-col gap-y-[10px] mt-4">
+                    {lojas.lojas.map((loja, idx) => (
+                      <div key={idx} class="mb-4">
+                        <p class="text-white text-[14px]">{loja.title}</p>
+                        <p class="text-white text-[12px] font-bold underline">
+                          {loja.tuor}
+                        </p>
+                        <p class="text-white text-[12px]">{loja.end}</p>
+                        <div class="flex flex-row flex-wrap">
+                          <p class="text-white text-[12px] font-bold">
+                            TELEFONE:
+                          </p>
+                          <p class="text-white text-[12px] ml-1">{loja.tel}</p>
+                        </div>
+                        <div>
+                          <p class="text-white text-[12px] font-bold underline">
+                            HORÁRIO DE ATENDIMENTO
+                          </p>
+                          <p class="text-white text-[12px]">{loja.horario}</p>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                  <div>
-                    <p class="text-white text-[12px] font-bold underline decoration-white">
-                      HORÁRIO DE ATENDIMENTO
-                    </p>
-                    <p class="text-white text-[12px]">
-                      {lojas.lojas[0].horario}
-                    </p>
-                  </div>
-                </div>
-              ) : (
-                <div class="flex flex-col lg:flex-row gap-x-[20px]">
-                  {" "}
+                </details>
+              </div>
+            ) : (
+              <>
+                <p class="font-bold text-[16px] text-white mb-[30px] mt-[50px]">
+                  {lojas.title}
+                </p>
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-x-[20px]">
                   {lojas.lojas.map(
                     ({ title, tuor, end, tel, horario }, idx) => (
-                      <div key={idx} class="flex flex-col gap-y-[10px]">
+                      <div key={idx} class="flex flex-col gap-y-[10px] mb-6">
                         <p class="text-white text-[16px]">{title}</p>
-                        <p class="text-white text-[14px] font-bold underline decoration-white">
+                        <p class="text-white text-[14px] font-bold underline">
                           {tuor}
                         </p>
                         <p class="text-white text-[14px]">{end}</p>
@@ -307,10 +286,10 @@ function Footer({
                           <p class="text-white text-[14px] font-bold">
                             TELEFONE:
                           </p>
-                          <p class="text-white text-[14px]">{tel}</p>
+                          <p class="text-white text-[14px] ml-1">{tel}</p>
                         </div>
                         <div>
-                          <p class="text-white text-[14px] font-bold underline decoration-white">
+                          <p class="text-white text-[14px] font-bold underline">
                             HORÁRIO DE ATENDIMENTO
                           </p>
                           <p class="text-white text-[14px]">{horario}</p>
@@ -319,23 +298,11 @@ function Footer({
                     )
                   )}
                 </div>
-              )}
-            </div>
-            {device === "mobile" ? (
-              <a
-                href={lojas.verMais}
-                class="text-white underline decoration-white text-[12px] mt-[16px]"
-              >
-                Ver mais lojas
-              </a>
-            ) : (
-              ""
+              </>
             )}
           </div>
 
-          {device === "mobile" ? (
-            ""
-          ) : (
+          {!isMobile && (
             <hr class="w-full text-base-400 mt-[50px] bg-[#A3A3A3] h-[2px]" />
           )}
 
@@ -346,7 +313,7 @@ function Footer({
               </span>
             </div>
 
-            <div class="flex flex-row items-start gap-4">
+            <div class="flex flex-row items-start gap-4 mt-4 lg:mt-0">
               <div class="flex flex-col items-center justify-center gap-4">
                 <span class="text-sm font-normal text-white">Powered by</span>
                 <svg
@@ -369,39 +336,35 @@ function Footer({
                   Developed by
                 </span>
                 <svg
-                  width="98"
-                  height="25"
-                  viewBox="0 0 98 25"
+                  width="857"
+                  height="264"
+                  viewBox="0 0 857 264"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  class="max-w-[97px] max-h-[24px]"
                 >
-                  <rect
-                    x="0.560791"
-                    y="0.552734"
-                    width="97"
-                    height="23.8615"
-                    fill="url(#pattern0_654_910)"
+                  <path
+                    d="M257.4 230.5C255.8 227.5 253.4 225.5 250.5 224.4C248 223.6 245.1 223.2 241.8 223.2C237.9 223.2 234.6 222.7 231.9 221.9C229.5 221.2 227.6 219.9 226 218.1C224.4 216.2 223.1 213.7 222.3 210.8C221.5 207.7 221.1 203.9 221.1 199.5V20.2C221.1 16.5 220.6 13.2 219.8 10.5C218.8 7.1 216.6 4.40005 213.4 2.80005C210.5 1.20005 206.5 0.5 201 0.5C195.7 0.5 191.8 1.3 188.9 3C185.7 4.8 183.6 7.50005 182.6 10.8C181.8 13.6 181.4 16.8999 181.4 20.8999V199.9C181.4 208.7 182.1 216.6 183.6 223.3C185.1 230.1 187.5 236.2 190.7 241.2C194 246.3 198.1 250.5 203 253.6C207.8 256.8 213.6 259 220.3 260.3C226.8 261.5 234 262.1 241.8 262.1C245 262.1 247.9 261.8 250.3 261.1C253.4 260.2 255.8 258.1 257.5 254.9C259 252 259.7 247.9 259.7 242.5C259.7 237.2 259 233.3 257.4 230.5Z"
+                    fill="white"
                   />
-                  <defs>
-                    <pattern
-                      id="pattern0_654_910"
-                      patternContentUnits="objectBoundingBox"
-                      width="1"
-                      height="1"
-                    >
-                      <use
-                        xlink:href="#image0_654_910"
-                        transform="matrix(0.00332425 0 0 0.0135135 0.099428 0)"
-                      />
-                    </pattern>
-                    <image
-                      id="image0_654_910"
-                      width="241"
-                      height="74"
-                      preserveAspectRatio="none"
-                      xlink:href="data:image/png;base64,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"
-                    />
-                  </defs>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M534.5 167.2V242C534.5 245.9 534.1 249.3 533.2 252.1C532.1 255.8 529.9 258.6 526.6 260.6C523.6 262.5 519.3 263.4 513.5 263.4C508 263.4 503.7 262.4 500.5 260.5C496.9 258.3 494.5 255.2 493.6 251.5C492.9 248.7 492.6 245.5 492.6 241.7V166.9C492.6 157 491.3 148.3 488.9 141C486.6 134 483.3 128.7 479 125C474.9 121.5 469.6 119.8 462.7 119.8C455.1 119.8 448.6 121.7 442.9 125.4C437.1 129.2 432.7 134.4 429.5 141.3C426.3 148.3 424.6 156.9 424.6 166.9V242.4C424.6 246.8 423.7 250.8 421.9 254.2C419.8 258 416.7 260.6 412.7 262.1C410.4 263 407.7 263.4 404.9 263.4C403.167 263.4 401.367 263.267 399.5 263C394.9 262.6 391.3 261.4 388.6 259.2C385.7 256.8 383.9 253.9 383.1 250.5C382.6 247.9 382.3 244.9 382.3 241.7V166.9C382.3 157 381.1 148.2 378.8 140.9C376.6 134 373.3 128.7 369 125.1C364.8 121.5 359.4 119.8 352.5 119.8C344.9 119.8 338.4 121.7 332.7 125.6C326.9 129.5 322.5 134.8 319.3 141.8C316 149 314.4 157.4 314.4 166.9V242C314.4 245.9 314 249.3 313.1 252.1C312 255.8 309.6 258.7 306.2 260.7C303.1 262.5 298.8 263.4 293.1 263.4C287.4 263.4 283.2 262.4 280.1 260.3C277 258.2 274.8 255.3 273.7 251.8C272.9 248.9 272.4 245.5 272.4 241.7V99.8999C272.4 96.2999 272.9 93.1 273.7 90.3C274.9 86.7 277.3 83.9001 280.8 82.1001C283.8 80.5001 288 79.7 293.4 79.7C300 79.7 304.9 81.1 308.2 84C311.3 86.8 313 91.1 313.3 96.7C316.3 93.9 319.7 91.3 323.4 89C328.4 86 333.8 83.5 339.4 81.7C345.2 79.9 351.1 79 357.1 79C366.2 79 374.4 80.5999 381.7 83.8999C388.8 87.0999 395.3 91.8 401 97.8C404.7 101.7 408.1 106.2 411 111.3C414.5 106.3 418.1 101.8 421.9 97.8999C427.7 91.7999 434.4 87.0999 441.8 83.8999C449.3 80.5999 457.7 79 467 79C481.9 79 494.6 82.7 504.7 90.2C514.6 97.6 522.2 108 527.2 121.2C532.1 134 534.5 149.5 534.5 167.2ZM404.9 258.2C405.033 258.2 405.167 258.2 405.3 258.2C405.1 258.2 404.933 258.2 404.8 258.2C404.8 258.2 404.833 258.2 404.9 258.2Z"
+                    fill="white"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M114.1 246.7C102.9 256.7 86.2 263.4 66.1 263.4C27.7 263.4 0.5 240 0.5 206.8C0.5 174.8 23.9 152 71.6 149C89.9 147.9 100 145.3 105.2 140.8V132.6C105.2 116.2 94.4 105.4 77.6 105.4C64.6 105.4 56.7 111.4 54.1 120.3C51.1 129.7 43.7 135.6 33.6 135.6C19.5 135.6 13.5 124.1 13.5 115.9C13.5 108 16.9 102.5 22.1 96.5C31 84.9 49.7 73.3999 77.2 73.3999C120.8 73.3999 147.7 96.9 147.7 139.7V215C147.7 218.7 148 219.8 149.5 219.8C150.6 219.8 152.1 219.1 154.7 219.1C165.9 219.1 172.6 227.7 172.6 237.4C172.6 250 161.5 260.5 142.8 260.5C131.6 260.5 120.8 256 114.1 246.7ZM105.2 219.5V172.1C98.1 175.9 88 178.8 72.4 180C54.1 181.5 43.7 191.9 43.7 205.7C43.7 219.8 55.6 230.7 73.5 230.7C88 230.7 98.1 226.2 105.2 219.5Z"
+                    fill="white"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M856.3 237.922C856.3 249.522 845.8 259.022 829.4 259.022C809 259.022 793 243.322 793 219.822C793 191.222 807.3 170.122 807.3 144.522C807.3 130.922 797.4 120.722 783.8 120.722C763.7 120.722 748.3 138.022 741.8 174.522L735 215.422C734 221.922 732.1 233.022 731.2 238.122C729.9 246.422 715.8 258.822 703.3 262.622C709 258.622 712.8 252.022 712.8 244.522C712.8 232.322 702.9 222.422 690.7 222.422C678.5 222.422 668.6 232.322 668.6 244.522C668.6 251.522 672 257.822 677.1 261.822C667.2 258.122 660.2 249.722 657.8 246.422C646.8 256.322 630.2 263.022 610.3 263.022C572.3 263.022 545.4 239.722 545.4 206.922C545.4 175.222 568.6 152.722 615.8 149.822C633.9 148.722 643.8 146.122 649 141.722V133.622C649 117.422 638.3 106.722 621.7 106.722C608.8 106.722 601.1 112.622 598.5 121.422C595.6 130.622 588.2 136.522 578.2 136.522C564.2 136.522 558.3 125.122 558.3 117.022C558.3 109.222 561.6 103.722 566.8 97.8222C575.6 86.4222 594.1 75.0221 621.4 75.0221C641.6 75.0221 653.1 77.122 662.8 82.622C674.8 89.522 678.3 94.3221 685.9 111.222C695.3 132.222 692.5 205.522 692.5 205.522C692.5 205.522 717.3 72.3221 717.3 67.0221C717.3 55.4221 718.8 46.7222 711.4 38.8222C706.9 34.0222 697.3 27.1221 700.7 15.7221C704.6 3.0221 714.5 1.922 730.7 3.622C743.5 5.022 761.3 22.5222 761.3 48.8222C761.3 54.6222 760.2 63.1221 759.2 68.2221L752.1 108.122C763 95.422 776.9 87.9221 793.3 87.9221C828.1 87.9221 846.8 112.822 846.8 142.122C846.8 169.122 830.4 196.022 830.4 218.122C830.4 221.522 831.8 222.622 833.2 222.622C835.2 222.622 836.6 221.522 840 221.522C849.2 221.522 856.3 228.722 856.3 237.922ZM649 172.622C642 176.322 632 179.322 616.6 180.422C598.5 181.922 588.2 192.222 588.2 205.822C588.2 219.822 600 230.522 617.7 230.522C632 230.522 642 226.122 649 219.522V172.622Z"
+                    fill="white"
+                  />
                 </svg>
               </div>
             </div>
@@ -411,6 +374,55 @@ function Footer({
     </footer>
   );
 }
+
+// Componente Auxiliar para Títulos de Seção
+const SectionTitle = ({
+  title,
+  showDivider = true,
+}: {
+  title: string;
+  showDivider?: boolean;
+}) => (
+  <div class="font-normal text-[16px] text-white mb-2">
+    <p>{title}</p>
+    {showDivider && (
+      <hr class="w-full max-w-[75px] h-1 bg-[#273D28] rounded-sm mt-1" />
+    )}
+  </div>
+);
+
+// Componente Auxiliar para Itens de Acordeão (usado apenas para links)
+const AccordionItem = ({
+  title,
+  children,
+  class: className = "",
+}: {
+  title: string;
+  children: preact.ComponentChildren;
+  class?: string;
+}) => (
+  <details open class={`flex flex-col gap-[12px] ${className}`}>
+    <summary class="font-normal text-[16px] text-white cursor-pointer flex justify-between items-center min-h-[48px] list-none">
+      <span>{title}</span>
+      <svg
+        width="12"
+        height="7"
+        viewBox="0 0 12 7"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="transform transition-transform duration-300"
+      >
+        <path
+          d="M0.52124 0.966797C0.537437 0.755898 0.622525 0.570573 0.775146 0.417969L0.842529 0.357422C1.00278 0.224673 1.19303 0.157278 1.40796 0.157227C1.62312 0.157227 1.814 0.224465 1.97436 0.357422L2.04077 0.417969L6.00757 4.38574L9.97534 0.417968L10.0408 0.359375C10.1973 0.230598 10.3865 0.165388 10.6013 0.162109L10.6931 0.165039C10.8737 0.17901 11.0351 0.24329 11.1736 0.357421L11.241 0.417968C11.4141 0.591095 11.5026 0.805113 11.5027 1.05078C11.5027 1.26578 11.4353 1.45689 11.3025 1.61719L11.241 1.68457L6.74683 6.17871C6.66749 6.25802 6.58242 6.32291 6.49097 6.37012L6.39722 6.41113C6.27539 6.45627 6.14515 6.47848 6.00854 6.47852C5.87192 6.47852 5.74172 6.45623 5.61987 6.41113L5.52612 6.37012C5.43441 6.32286 5.34882 6.25824 5.26929 6.17871L0.775146 1.68457L0.716553 1.61914C0.587624 1.46258 0.522622 1.27346 0.519287 1.05859L0.52124 0.966797Z"
+          fill="#ffffff"
+          stroke="white"
+          stroke-width="0.3"
+        />
+      </svg>
+    </summary>
+    {children}
+  </details>
+);
 
 export const LoadingFallback = () => <Section.Placeholder height="1145px" />;
 
