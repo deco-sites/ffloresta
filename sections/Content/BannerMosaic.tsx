@@ -9,7 +9,7 @@ export interface Props extends BannerMosaicProps {
 
 export default function BannerMosaicSection(props: Props) {
   return (
-    <div class="w-full container 2xl:px-0">
+    <div class="w-full container 2xl:px-0 mb-5">
       <BannerMosaicIsland {...props} />
     </div>
   );
