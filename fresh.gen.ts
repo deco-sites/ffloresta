@@ -4,6 +4,7 @@
 
 import * as $_app from "./routes/_app.tsx";
 import * as $AddToCartButtonPDP from "./islands/AddToCartButtonPDP.tsx";
+import * as $BannerMosaicIsland from "./islands/BannerMosaicIsland.tsx";
 import * as $BrandGrid from "./islands/BrandGrid.tsx";
 import * as $CarouselSlider from "./islands/CarouselSlider.tsx";
 import * as $CustomSearchBar from "./islands/CustomSearchBar.tsx";
@@ -21,6 +22,7 @@ const manifest = {
   },
   islands: {
     "./islands/AddToCartButtonPDP.tsx": $AddToCartButtonPDP,
+    "./islands/BannerMosaicIsland.tsx": $BannerMosaicIsland,
     "./islands/BrandGrid.tsx": $BrandGrid,
     "./islands/CarouselSlider.tsx": $CarouselSlider,
     "./islands/CustomSearchBar.tsx": $CustomSearchBar,

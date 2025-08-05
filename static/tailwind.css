@@ -4336,9 +4336,6 @@ details.collapse summary::-webkit-details-marker {
 .min-w-\[80\%\] {
   min-width: 80%;
 }
-.min-w-\[calc\(50\%-6px\)\] {
-  min-width: calc(50% - 6px);
-}
 .min-w-max {
   min-width: -moz-max-content;
   min-width: max-content;
@@ -4994,6 +4991,9 @@ details.collapse summary::-webkit-details-marker {
 .bg-\[rgba\(21\2c 31\2c 22\2c 0\.6\)\] {
   background-color: rgba(21,31,22,0.6);
 }
+.bg-\[rgba\(21\2c 31\2c 22\2c 0\.8\)\] {
+  background-color: rgba(21,31,22,0.8);
+}
 .bg-\[var\(--bg-color\)\] {
   background-color: var(--bg-color);
 }
@@ -5012,9 +5012,17 @@ details.collapse summary::-webkit-details-marker {
 .bg-black\/40 {
   background-color: rgb(0 0 0 / 0.4);
 }
+.bg-gray-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
 .bg-neutral-content {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-nc,oklch(var(--nc)/var(--tw-bg-opacity)));
+}
+.bg-primary {
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-p,oklch(var(--p)/var(--tw-bg-opacity)));
 }
 .bg-secondary {
   --tw-bg-opacity: 1;
@@ -6269,16 +6277,8 @@ input[type="checkbox"]:checked::after {
   font-weight: 600;
 }
 
-.group:hover .group-hover\:block {
-  display: block;
-}
-
 .group:hover .group-hover\:flex {
   display: flex;
-}
-
-.group:hover .group-hover\:hidden {
-  display: none;
 }
 
 .group:hover .group-hover\:-translate-x-40 {
@@ -6423,10 +6423,6 @@ input[type="checkbox"]:checked::after {
 
   .sm\:w-\[calc\(50\%-16px\)\] {
     width: calc(50% - 16px);
-  }
-
-  .sm\:min-w-\[calc\(25\%-9px\)\] {
-    min-width: calc(25% - 9px);
   }
 
   .sm\:max-w-96 {
@@ -6589,16 +6585,8 @@ input[type="checkbox"]:checked::after {
     line-height: 28px;
   }
 
-  .sm\:first\:ml-0:first-child {
-    margin-left: 0px;
-  }
-
   .first\:sm\:pl-0:first-child {
     padding-left: 0px;
-  }
-
-  .sm\:last\:mr-0:last-child {
-    margin-right: 0px;
   }
 
   .last\:sm\:pr-0:last-child {
@@ -6631,6 +6619,10 @@ input[type="checkbox"]:checked::after {
 
   .md\:inline {
     display: inline;
+  }
+
+  .md\:flex {
+    display: flex;
   }
 
   .md\:grid {
@@ -6892,10 +6884,6 @@ input[type="checkbox"]:checked::after {
 
   .lg\:w-full {
     width: 100%;
-  }
-
-  .lg\:min-w-\[calc\(20\%-12px\)\] {
-    min-width: calc(20% - 12px);
   }
 
   .lg\:max-w-3xl {

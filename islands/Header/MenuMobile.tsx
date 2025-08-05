@@ -102,7 +102,7 @@ function SubMenuItem({ item }: { item: SiteNavigationElement }) {
     return (
       <a
         href={item.url}
-        class="block px-4 py-3 text-[16px] text-white transition-all duration-200"
+        class="block px-4 py-3 text-[16px] text-white transition-all duration-200 "
       >
         {item.name}
       </a>
@@ -114,7 +114,7 @@ function SubMenuItem({ item }: { item: SiteNavigationElement }) {
       <div class="flex justify-between items-center w-full">
         <a
           href={item.url}
-          class="py-3 text-[16px] text-white group-hover:text-white flex-grow"
+          class="py-3 text-[16px] text-white group-hover:text-white flex-grow  "
         >
           {item.name}
         </a>
@@ -151,19 +151,12 @@ function MenuItem({ item }: { item: SiteNavigationElement }) {
   return (
     <div class="group relative">
       <div
-        class={`collapse-title !p-0  group-hover:bg-[rgba(21,31,22,0.6)] group-hover:backdrop-blur-[12px] !px-4 min-h-[auto] border-none ${
-          isOpen.value
-            ? "bg-[rgba(21,31,22,0.6)] backdrop-blur-[12px]"
-            : "bg-white"
+        class={`collapse-title !p-0 bg-[rgba(21,31,22,0.6)] backdrop-blur-[12px] !px-4 min-h-[auto] border-none ${
+          isOpen.value ? "bg-[rgba(21,31,22,0.8)]" : ""
         }`}
       >
         <div class="flex justify-between items-center w-full">
-          <a
-            href={item.url}
-            class={`py-3 text-[16px] text-[#1F251C] group-hover:text-white flex-grow ${
-              isOpen.value ? "text-white" : ""
-            }`}
-          >
+          <a href={item.url} class={`py-3 text-[16px] text-white flex-grow`}>
             {item.name}
           </a>
           {hasChildren && (
@@ -175,24 +168,13 @@ function MenuItem({ item }: { item: SiteNavigationElement }) {
                 isOpen.value = !isOpen.value;
               }}
             >
-              {isOpen.value ? (
-                <MinusWhite />
-              ) : (
-                <span class="group-hover:hidden">
-                  <PlusGreen />
-                </span>
-              )}
-              {!isOpen.value && (
-                <span class="hidden group-hover:block">
-                  <PlusWhite />
-                </span>
-              )}
+              {isOpen.value ? <MinusWhite /> : <PlusWhite />}
             </button>
           )}
         </div>
       </div>
       {hasChildren && isOpen.value && (
-        <div class="!px-0 bg-[rgba(21,31,22,0.6)] backdrop-blur-[12px] group-hover:text-white">
+        <div class="!px-0 bg-[rgba(21,31,22,0.8)] backdrop-blur-[12px] group-hover:text-white">
           <ul class="max-h-[calc(10*48px)] overflow-y-scroll">
             {item.children!.map((child) => (
               <li key={child.url}>
@@ -216,7 +198,7 @@ export default function MenuMobile({ navItems = [] }: Props) {
           </li>
         ))}
       </ul>
-      <div class="h-full bg-white"></div>
+      <div class="h-full bg-[rgba(21,31,22,0.6)] backdrop-blur-[12px]"></div>
     </div>
   );
 }
