@@ -4855,6 +4855,10 @@ details.collapse summary::-webkit-details-marker {
   --tw-border-opacity: 1;
   border-color: rgb(39 61 40 / var(--tw-border-opacity));
 }
+.border-\[\#2D2D2D\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(45 45 45 / var(--tw-border-opacity));
+}
 .border-\[\#8D98A0\] {
   --tw-border-opacity: 1;
   border-color: rgb(141 152 160 / var(--tw-border-opacity));
@@ -4928,6 +4932,10 @@ details.collapse summary::-webkit-details-marker {
 .bg-\[\#293023\] {
   --tw-bg-opacity: 1;
   background-color: rgb(41 48 35 / var(--tw-bg-opacity));
+}
+.bg-\[\#2D2D2D\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(45 45 45 / var(--tw-bg-opacity));
 }
 .bg-\[\#3A4332\] {
   --tw-bg-opacity: 1;
@@ -5012,17 +5020,9 @@ details.collapse summary::-webkit-details-marker {
 .bg-black\/40 {
   background-color: rgb(0 0 0 / 0.4);
 }
-.bg-gray-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
-}
 .bg-neutral-content {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-nc,oklch(var(--nc)/var(--tw-bg-opacity)));
-}
-.bg-primary {
-  --tw-bg-opacity: 1;
-  background-color: var(--fallback-p,oklch(var(--p)/var(--tw-bg-opacity)));
 }
 .bg-secondary {
   --tw-bg-opacity: 1;
@@ -6842,6 +6842,10 @@ input[type="checkbox"]:checked::after {
     display: none;
   }
 
+  .lg\:h-3 {
+    height: 0.75rem;
+  }
+
   .lg\:h-9 {
     height: 2.25rem;
   }
@@ -6868,6 +6872,10 @@ input[type="checkbox"]:checked::after {
 
   .lg\:w-1\/4 {
     width: 25%;
+  }
+
+  .lg\:w-3 {
+    width: 0.75rem;
   }
 
   .lg\:w-\[40\%\] {

@@ -13,6 +13,8 @@ export interface Props {
   }[];
   itemsToShow?: number;
   gap?: number;
+  autoplay?: boolean;
+  autoplayInterval?: number;
 }
 
 function MosaicImage({
@@ -56,6 +58,8 @@ export default function BannerMosaicIsland({
   images,
   itemsToShow = 4,
   gap = 3,
+  autoplay = true,
+  autoplayInterval = 5000,
 }: Props) {
   const id = useId();
   const sliderRef = useRef<HTMLDivElement>(null);
@@ -63,8 +67,8 @@ export default function BannerMosaicIsland({
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+  const autoplayTimer = useRef<NodeJS.Timeout | null>(null);
 
-  // Atualiza o dot ativo durante o scroll
   const updateActiveDot = () => {
     if (!sliderRef.current) return;
     const scrollPosition = sliderRef.current.scrollLeft;
@@ -73,7 +77,35 @@ export default function BannerMosaicIsland({
     setActiveDot(newActiveDot);
   };
 
-  // Configura eventos de arraste
+  const goToNextSlide = () => {
+    if (!sliderRef.current || images.length <= 1) return;
+
+    const nextSlide = (activeDot + 1) % images.length;
+
+    sliderRef.current.scrollTo({
+      left: sliderRef.current.offsetWidth * nextSlide,
+      behavior: "smooth",
+    });
+    setActiveDot(nextSlide);
+  };
+
+  const startAutoplay = () => {
+    if (!autoplay || images.length <= 1) return;
+
+    stopAutoplay();
+
+    autoplayTimer.current = setInterval(() => {
+      goToNextSlide();
+    }, autoplayInterval);
+  };
+
+  const stopAutoplay = () => {
+    if (autoplayTimer.current) {
+      clearInterval(autoplayTimer.current);
+      autoplayTimer.current = null;
+    }
+  };
+
   useEffect(() => {
     const slider = sliderRef.current;
     if (!slider) return;
@@ -82,6 +114,7 @@ export default function BannerMosaicIsland({
       setIsDragging(true);
       setStartX("pageX" in e ? e.pageX : e.touches[0].pageX);
       setScrollLeft(slider.scrollLeft);
+      stopAutoplay();
     };
 
     const handleDragMove = (e: MouseEvent | TouchEvent) => {
@@ -95,6 +128,7 @@ export default function BannerMosaicIsland({
     const handleDragEnd = () => {
       setIsDragging(false);
       updateActiveDot();
+      startAutoplay();
     };
 
     slider.addEventListener("mousedown", handleDragStart);
@@ -118,7 +152,16 @@ export default function BannerMosaicIsland({
     };
   }, [isDragging, startX, scrollLeft]);
 
-  // Desktop: Grid layout
+  useEffect(() => {
+    if (autoplay && images.length > 1) {
+      startAutoplay();
+    } else {
+      stopAutoplay();
+    }
+
+    return () => stopAutoplay();
+  }, [autoplay, autoplayInterval, images.length]);
+
   const desktopView = (
     <div
       class={clx(
@@ -134,7 +177,6 @@ export default function BannerMosaicIsland({
     </div>
   );
 
-  // Mobile: Slider com dots
   const mobileView = (
     <div class="md:hidden relative">
       <div
@@ -147,6 +189,9 @@ export default function BannerMosaicIsland({
           msOverflowStyle: "none",
           WebkitOverflowScrolling: "touch",
         }}
+        onMouseEnter={stopAutoplay}
+        onMouseLeave={startAutoplay}
+        onTouchStart={stopAutoplay}
       >
         {images?.map((image, index) => (
           <div
@@ -159,27 +204,30 @@ export default function BannerMosaicIsland({
         ))}
       </div>
 
-      {/* Dots de navegação */}
       {images.length > 1 && (
         <div class="flex justify-center gap-2 mt-4">
           {images.map((_, index) => (
             <button
               key={index}
               onClick={() => {
+                stopAutoplay();
                 if (sliderRef.current) {
                   sliderRef.current.scrollTo({
                     left: sliderRef.current.offsetWidth * index,
                     behavior: "smooth",
                   });
                 }
+                setTimeout(startAutoplay, autoplayInterval);
               }}
               class="focus:outline-none"
               aria-label={`Ir para slide ${index + 1}`}
             >
               <div
                 class={clx(
-                  "w-2 h-2 rounded-full transition-all duration-300",
-                  activeDot === index ? "bg-primary" : "bg-gray-300"
+                  "w-2 h-2 lg:w-3 lg:h-3 transition-all duration-300",
+                  activeDot === index
+                    ? "bg-[#2D2D2D]"
+                    : "bg-transparent border border-[#2D2D2D]"
                 )}
               />
             </button>
@@ -190,11 +238,11 @@ export default function BannerMosaicIsland({
   );
 
   return (
-    <Section id={id} class="container px-5 2xl:px-0 py-6 md:py-11">
+    <div id={id}>
       {desktopView}
       {mobileView}
-    </Section>
+    </div>
   );
 }
 
-export const LoadingFallback = () => <Section.Placeholder height="136px" />;
+export const LoadingFallback = () => <Section.Placeholder height="400px" />;

@@ -85,7 +85,7 @@ function Header({ alerts = [], logo, navItems, loading, searchBar }: Props) {
 const Desktop = ({ navItems, logo, searchBar }: Props) => (
   <>
     <div>
-      <div class="bg-[#1F251C] w-full">
+      <div class="bg-[#1F251C] w-full mt-[-1px]">
         <div class="container flex items-center justify-between py-5 gap-4 ">
           <div class="place-self-start">
             <a href="/" aria-label="Store logo">
@@ -114,7 +114,7 @@ const Desktop = ({ navItems, logo, searchBar }: Props) => (
       </div>
 
       {navItems && (
-        <div>
+        <div class="mt-[-1px]">
           <NavItemIsland navItems={navItems} />
         </div>
       )}
@@ -129,7 +129,7 @@ const Mobile = ({
   searchBar,
 }: Props & { alerts: HTMLWidget[] }) => (
   <div class="w-full">
-    <div class="flex items-center justify-between w-full py-3 px-4 gap-2 bg-[#1F251C]">
+    <div class="flex items-center justify-between w-full py-3 px-4 gap-2 bg-[#1F251C] mt-[-1px]">
       <div class="flex-1 flex justify-start">
         <label
           for={SIDEMENU_DRAWER_ID}
@@ -160,7 +160,7 @@ const Mobile = ({
 
     {/* Searchbar row - full width */}
     {searchBar && (
-      <div class="w-full">
+      <div class="w-full mt-[-1px]">
         <SearchBarIsland {...searchBar} showProductSuggestions={true} />
       </div>
     )}
