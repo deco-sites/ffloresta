@@ -36,7 +36,7 @@ export default function VideoWithBackground({
         <img
           src={bgImgDesktop}
           alt={"Background"}
-          class="hidden lg:block w-full h-full object-cover"
+          class="hidden lg:block w-full h-full object-contain"
         />
         <img
           src={bgImgMobile}

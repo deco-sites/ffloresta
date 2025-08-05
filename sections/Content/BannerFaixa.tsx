@@ -8,7 +8,7 @@ export default function BannerMosaic({ bannerFaixa }: Props) {
   return (
     <>
       {bannerFaixa && (
-        <div class="w-full ">
+        <div class="w-full mt-[-1px]">
           <img
             src={bannerFaixa}
             alt="BannerFaixa"

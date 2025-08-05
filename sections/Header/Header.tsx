@@ -147,12 +147,7 @@ const Mobile = ({
             class="inline-flex items-center justify-center"
             aria-label="Store logo"
           >
-            <Image
-              src={logo.srcMobile}
-              alt={logo.alt}
-              width={logo.width || 100}
-              height={logo.height || 13}
-            />
+            <Image src={logo.srcMobile} alt={logo.alt} width={50} height={50} />
           </a>
         )}
       </div>

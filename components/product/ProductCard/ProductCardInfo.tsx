@@ -48,7 +48,7 @@ function ProductCardInfo({
             </span>
           </div>
           {percent > 0 && (
-            <span class="min-w-[30px] bg-[#3A4332] text-white font-bold text-[8px] tracking-[3%] text-center px-1">
+            <span class="min-w-[30px] bg-[#3A4332] text-white font-bold text-[10px] tracking-[3%] text-center px-1">
               {percent}% OFF
             </span>
           )}

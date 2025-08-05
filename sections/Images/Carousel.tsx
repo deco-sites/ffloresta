@@ -125,7 +125,7 @@ function Carousel({ images = [], preload, interval }: Props) {
         <>
           <div class="hidden lg:block">
             <Slider.PrevButton
-              class="absolute left-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              class="absolute left-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"
               disabled={false}
             >
               <div class="p-2 rounded-full bg-[rgba(21,31,22,0.6)] backdrop-blur-[12px] transition-all duration-300 hover:bg-[rgba(21,31,22,0.8)]">
@@ -147,7 +147,7 @@ function Carousel({ images = [], preload, interval }: Props) {
               </div>
             </Slider.PrevButton>
             <Slider.NextButton
-              class="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              class="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"
               disabled={false}
             >
               <div class="p-2 rounded-full bg-[rgba(21,31,22,0.6)] backdrop-blur-[12px] transition-all duration-300 hover:bg-[rgba(21,31,22,0.8)]">

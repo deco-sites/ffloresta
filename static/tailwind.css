@@ -3896,6 +3896,9 @@ details.collapse summary::-webkit-details-marker {
 .mt-8 {
   margin-top: 2rem;
 }
+.mt-\[-1px\] {
+  margin-top: -1px;
+}
 .mt-\[20px\] {
   margin-top: 20px;
 }
@@ -5364,9 +5367,6 @@ details.collapse summary::-webkit-details-marker {
 .text-\[80px\] {
   font-size: 80px;
 }
-.text-\[8px\] {
-  font-size: 8px;
-}
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -5623,6 +5623,11 @@ details.collapse summary::-webkit-details-marker {
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+.shadow-\[2px_4px_12px_rgba\(0\2c 0\2c 0\2c 0\.145\)\] {
+  --tw-shadow: 2px 4px 12px rgba(0,0,0,0.145);
+  --tw-shadow-colored: 2px 4px 12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
 .shadow-\[5px_5px_7px_0px_rgba\(0\2c 0\2c 0\2c 0\.15\)\] {
   --tw-shadow: 5px 5px 7px 0px rgba(0,0,0,0.15);
   --tw-shadow-colored: 5px 5px 7px 0px var(--tw-shadow-color);
@@ -5722,6 +5727,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .duration-300 {
   transition-duration: 300ms;
+}
+.duration-500 {
+  transition-duration: 500ms;
 }
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
