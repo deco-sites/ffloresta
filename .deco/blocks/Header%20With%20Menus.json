@@ -20,7 +20,8 @@
     "src": "https://assets.decocache.com/ffloresta/aae798a2-c101-47eb-b414-8057f7cb6378/logo-branco.svg",
     "alt": "Deco Storefront",
     "width": 200,
-    "height": 50
+    "height": 50,
+    "srcMobile": "https://assets.decocache.com/ffloresta/c3fa3c01-38b9-4848-ab1d-2d77014a56ab/logo-branco.svg"
   },
   "navItems": [
     {
