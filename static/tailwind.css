@@ -759,6 +759,12 @@ html {
     --tw-bg-opacity: 1;
     background-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity)));
   }
+
+  .table-zebra tr.hover:hover,
+  .table-zebra tr.hover:nth-child(even):hover {
+    --tw-bg-opacity: 1;
+    background-color: var(--fallback-b3,oklch(var(--b3)/var(--tw-bg-opacity)));
+  }
 }
 .btn {
   display: inline-flex;
@@ -6165,6 +6171,10 @@ input[type="checkbox"]:checked::after {
   background-color: rgba(108,131,88,0.9);
 }
 
+.hover\:bg-\[rgba\(21\2c 31\2c 22\2c 0\.8\)\]:hover {
+  background-color: rgba(21,31,22,0.8);
+}
+
 .hover\:bg-\[rgba\(255\2c 255\2c 255\2c 0\.075\)\]:hover {
   background-color: rgba(255,255,255,0.075);
 }
@@ -6816,6 +6826,10 @@ input[type="checkbox"]:checked::after {
     margin-top: 1rem;
   }
 
+  .lg\:mt-\[52px\] {
+    margin-top: 52px;
+  }
+
   .lg\:block {
     display: block;
   }
@@ -6832,8 +6846,8 @@ input[type="checkbox"]:checked::after {
     height: 2.25rem;
   }
 
-  .lg\:h-\[124px\] {
-    height: 124px;
+  .lg\:h-\[122px\] {
+    height: 122px;
   }
 
   .lg\:max-h-9 {

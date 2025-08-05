@@ -49,7 +49,7 @@ const Benefits = ({ benefits }: Props) => {
   return (
     <>
       {/* Desktop View - Grid */}
-      <div className="hidden md:grid container grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-3 my-6 w-full px-5 lg:px-[4rem]">
+      <div className="hidden md:grid container grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-3 my-6 w-full px-5 lg:px-[4rem] lg:mt-[52px]">
         {benefits?.map((benefit: Benefit) => (
           <div key={benefit.benefitText} className="min-w-0">
             <BenefitItem benefit={benefit} />

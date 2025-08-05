@@ -1,7 +1,7 @@
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import { Picture } from "apps/website/components/Picture.tsx";
 import Section from "../../components/ui/Section.tsx";
-import Slider from "../../components/ui/Slider.tsx";
+import Slider from "../../islands/CarouselSlider.tsx";
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
@@ -46,7 +46,7 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
       {...(hasAction ? selectPromotionEvent : {})}
       href={action?.href ?? "#"}
       aria-label={action?.label}
-      class="relative block w-full overflow-hidden"
+      class="relative block w-full overflow-hidden group"
     >
       {hasAction && (
         <div
@@ -102,7 +102,7 @@ function Carousel({ images = [], preload, interval }: Props) {
     <div
       id={id}
       class={clx(
-        "relative",
+        "relative group",
         "w-full max-w-full overflow-hidden flex min-h-[unset] h-fit"
       )}
     >
@@ -120,8 +120,56 @@ function Carousel({ images = [], preload, interval }: Props) {
         ))}
       </Slider>
 
+      {/* Navigation arrows - only visible on desktop and on hover */}
       {images.length > 1 && (
         <>
+          <div class="hidden lg:block">
+            <Slider.PrevButton
+              class="absolute left-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              disabled={false}
+            >
+              <div class="p-2 rounded-full bg-[rgba(21,31,22,0.6)] backdrop-blur-[12px] transition-all duration-300 hover:bg-[rgba(21,31,22,0.8)]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="white"
+                  aria-hidden="true"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 19l-7-7 7-7"
+                  ></path>
+                </svg>
+              </div>
+            </Slider.PrevButton>
+            <Slider.NextButton
+              class="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              disabled={false}
+            >
+              <div class="p-2 rounded-full bg-[rgba(21,31,22,0.6)] backdrop-blur-[12px] transition-all duration-300 hover:bg-[rgba(21,31,22,0.8)]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="white"
+                  aria-hidden="true"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </div>
+            </Slider.NextButton>
+          </div>
+
           <ul
             class={clx(
               "absolute bottom-4 left-0 right-0 z-20 h-3",
