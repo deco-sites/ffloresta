@@ -14,6 +14,7 @@ import MenuMobile from "../../islands/Header/MenuMobile.tsx";
 
 export interface Logo {
   src: ImageWidget;
+  srcMobile: ImageWidget;
   alt: string;
   width?: number;
   height?: number;
@@ -147,7 +148,7 @@ const Mobile = ({
             aria-label="Store logo"
           >
             <Image
-              src={logo.src}
+              src={logo.srcMobile}
               alt={logo.alt}
               width={logo.width || 100}
               height={logo.height || 13}
@@ -173,17 +174,17 @@ const Mobile = ({
       id={SIDEMENU_DRAWER_ID}
       aside={
         <HeaderDrawer.Aside drawer={SIDEMENU_DRAWER_ID}>
-          {loading === "lazy"
-            ? (
-              <div
-                id={SIDEMENU_CONTAINER_ID}
-                class="h-full bg-white flex items-center justify-center"
-                style={{ minWidth: "100vw" }}
-              >
-                <span class="loading loading-spinner" />
-              </div>
-            )
-            : <MenuMobile navItems={navItems ?? []} />}
+          {loading === "lazy" ? (
+            <div
+              id={SIDEMENU_CONTAINER_ID}
+              class="h-full bg-white flex items-center justify-center"
+              style={{ minWidth: "100vw" }}
+            >
+              <span class="loading loading-spinner" />
+            </div>
+          ) : (
+            <MenuMobile navItems={navItems ?? []} />
+          )}
         </HeaderDrawer.Aside>
       }
     />
