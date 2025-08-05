@@ -151,7 +151,7 @@
                 },
                 {
                   "benefitImgAltText": "Entregamos em todo o Brasil",
-                  "benefitText": "<p><span style=\"font-size: 14px\">Entregamos em todo o Brasil</span></p>",
+                  "benefitText": "<p><span style=\"font-size: 14px\">Entregamos em </span><strong><span style=\"font-size: 14px\">todo</span></strong><span style=\"font-size: 14px\"> o Brasil</span></p>",
                   "benefitImgSrc": "https://assets.decocache.com/ffloresta/e62b308d-131c-4b24-b669-6f7dc5a363f8/home-benefit-icon-03.png"
                 },
                 {
