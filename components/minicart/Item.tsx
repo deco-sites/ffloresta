@@ -33,7 +33,7 @@ function CartItem({ item, index, locale, currency }: Props) {
   return (
     <fieldset
       data-item-id={(item as any).item_id}
-      class="grid grid-rows-1 gap-4"
+      class="grid grid-rows-1 gap-4 items-start"
       style={{ gridTemplateColumns: "80px 1fr" }}
     >
       <Image
@@ -55,7 +55,7 @@ function CartItem({ item, index, locale, currency }: Props) {
           <button
             class={clx(
               isGift && "hidden",
-              "btn btn-ghost btn-square no-animation p-0 hover:bg-transparent",
+              "btn btn-ghost btn-square no-animation p-0 hover:bg-transparent"
             )}
             hx-on:click={useScript(removeItemHandler)}
           >

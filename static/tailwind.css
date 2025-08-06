@@ -5253,6 +5253,9 @@ details.collapse summary::-webkit-details-marker {
 .pl-3 {
   padding-left: 0.75rem;
 }
+.pl-4 {
+  padding-left: 1rem;
+}
 .pr-2 {
   padding-right: 0.5rem;
 }
@@ -6832,6 +6835,10 @@ input[type="checkbox"]:checked::after {
 
   .lg\:block {
     display: block;
+  }
+
+  .lg\:flex {
+    display: flex;
   }
 
   .lg\:grid {

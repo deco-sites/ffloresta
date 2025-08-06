@@ -9,13 +9,13 @@ function Newsletter() {
     try {
       loading.value = true;
       const nameInput = document.getElementById(
-        "name"
+        "name",
       ) as HTMLInputElement | null;
       const emailInput = document.getElementById(
-        "email"
+        "email",
       ) as HTMLInputElement | null;
       const politicaInput = document.getElementById(
-        "politica"
+        "politica",
       ) as HTMLInputElement | null;
 
       if (!nameInput || !emailInput || !politicaInput) {
@@ -109,21 +109,25 @@ function Newsletter() {
               </p>
             </label>
 
-            {loading.value === true ? (
-              <div class="text-white text-center font-bold">
-                Enviando dados...
-              </div>
-            ) : (
-              ""
-            )}
+            {loading.value === true
+              ? (
+                <div class="text-white text-center font-bold">
+                  Enviando dados...
+                </div>
+              )
+              : (
+                ""
+              )}
 
-            {response.value !== null ? (
-              <div class="text-white text-center font-bold">
-                Inscrição concluída com sucesso!
-              </div>
-            ) : (
-              ""
-            )}
+            {response.value !== null
+              ? (
+                <div class="text-white text-center font-bold">
+                  Inscrição concluída com sucesso!
+                </div>
+              )
+              : (
+                ""
+              )}
           </div>
         </div>
       </div>

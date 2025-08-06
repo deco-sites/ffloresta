@@ -7,7 +7,7 @@ const onClick = (delta: number) => {
   event!.stopPropagation();
   const button = event!.currentTarget as HTMLButtonElement;
   const input = button.parentElement?.querySelector<HTMLInputElement>(
-    'input[type="number"]',
+    'input[type="number"]'
   )!;
   const min = Number(input.min) || -Infinity;
   const max = Number(input.max) || Infinity;
@@ -23,7 +23,7 @@ function QuantitySelector({
     <div class="join border rounded w-full">
       <button
         type="button"
-        class="p-3 cursor-pointer text-[16px]"
+        class="p-3 cursor-pointer text-[24px] font-bold leading-none"
         hx-on:click={useScript(onClick, -1)}
         disabled={disabled}
       >
@@ -34,14 +34,14 @@ function QuantitySelector({
         class={clx(
           "flex-grow join-item",
           "flex justify-center items-center",
-          "has-[:invalid]:tooltip has-[:invalid]:tooltip-error has-[:invalid]:tooltip-open has-[:invalid]:tooltip-bottom",
+          "has-[:invalid]:tooltip has-[:invalid]:tooltip-error has-[:invalid]:tooltip-open has-[:invalid]:tooltip-bottom"
         )}
       >
         <input
           id={id}
           class={clx(
             "input text-center flex-grow [appearance:textfield]",
-            "invalid:input-error border-none",
+            "invalid:input-error border-none"
           )}
           disabled={disabled}
           inputMode="numeric"
@@ -51,7 +51,7 @@ function QuantitySelector({
       </div>
       <button
         type="button"
-        class="p-3 cursor-pointer text-[24px] leading-none"
+        class="p-3 cursor-pointer text-[24px] font-bold leading-none"
         hx-on:click={useScript(onClick, 1)}
         disabled={disabled}
       >

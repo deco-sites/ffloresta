@@ -113,7 +113,8 @@ export default function BrandGridIsland({ title, cta, items, icon }: Props) {
 
     const handleDragStart = (e: MouseEvent | TouchEvent) => {
       isDraggingRef.current = true;
-      startXRef.current = (e as MouseEvent).pageX ??
+      startXRef.current =
+        (e as MouseEvent).pageX ??
         (e as TouchEvent).touches?.[0]?.pageX ??
         slider.offsetLeft;
       scrollLeftRef.current = slider.scrollLeft;
@@ -130,7 +131,8 @@ export default function BrandGridIsland({ title, cta, items, icon }: Props) {
     const handleDragMove = (e: MouseEvent | TouchEvent) => {
       if (!isDraggingRef.current) return;
       e.preventDefault();
-      const x = (e as MouseEvent).pageX ??
+      const x =
+        (e as MouseEvent).pageX ??
         (e as TouchEvent).touches?.[0]?.pageX ??
         startXRef.current;
       const walk = (x - startXRef.current) * 2;
@@ -166,6 +168,8 @@ export default function BrandGridIsland({ title, cta, items, icon }: Props) {
       slider.removeEventListener("scroll", updateActiveDot);
       window.removeEventListener("resize", handleResize);
     };
+
+    console.log("Hidration working");
   }, []);
 
   const dotsCount = getDotsCount();
@@ -194,7 +198,7 @@ export default function BrandGridIsland({ title, cta, items, icon }: Props) {
                 "sm:w-[calc(33.3%-(40px/3))]", // 3 items
                 "md:w-[calc(25%-(60px/4))]", // 4 items
                 "lg:w-[calc(20%-(80px/5))]", // 5 items
-                "2xl:w-[calc(16.6%-(100px/6))]", // 6 items
+                "2xl:w-[calc(16.6%-(100px/6))]" // 6 items
               )}
             >
               <Card {...item} />
@@ -215,7 +219,7 @@ export default function BrandGridIsland({ title, cta, items, icon }: Props) {
                   class={clx(
                     "w-3 h-3 transition-all duration-300",
                     "border border-[#273D28]",
-                    activeDot === index ? "bg-[#273D28]" : "bg-transparent",
+                    activeDot === index ? "bg-[#273D28]" : "bg-transparent"
                   )}
                 />
               </button>

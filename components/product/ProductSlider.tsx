@@ -35,7 +35,7 @@ function ProductSlider({ products, itemListName }: Props) {
         </Slider>
 
         <Slider.PrevButton
-          class="absolute -left-2 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md p-2 rounded-full w-8 h-8 flex items-center justify-center"
+          class="hidden lg:flex absolute -left-2 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md p-2 rounded-full w-8 h-8  items-center justify-center"
           aria-label="Produtos anteriores"
         >
           <svg
@@ -57,7 +57,7 @@ function ProductSlider({ products, itemListName }: Props) {
         </Slider.PrevButton>
 
         <Slider.NextButton
-          class="absolute -right-2 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md p-2 rounded-full w-8 h-8 flex items-center justify-center"
+          class="hidden lg:flex absolute -right-2 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md p-2 rounded-full w-8 h-8 flex items-center justify-center"
           aria-label="Próximos produtos"
         >
           <svg

@@ -165,7 +165,7 @@ function MenuItem({ item }: { item: SiteNavigationElement }) {
         <div class="flex justify-between items-center w-full">
           <a
             href={item.url}
-            class={`text-[16px] font-bold text-[#1F251C] flex-grow`}
+            class={`text-[18px] font-bold text-[#1F251C] flex-grow`}
           >
             {item.name}
           </a>
@@ -185,7 +185,7 @@ function MenuItem({ item }: { item: SiteNavigationElement }) {
       </div>
       {hasChildren && isOpen.value && (
         <div class="bg-white">
-          <ul class="max-h-[calc(10*48px)] overflow-y-scroll">
+          <ul class="max-h-[calc(10*48px)] overflow-y-scroll pl-4">
             {item.children!.map((child) => (
               <li key={child.url}>
                 <SubMenuItem item={child} />
