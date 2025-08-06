@@ -92,7 +92,7 @@ function PageResult(props: SectionProps<typeof loader>) {
       <div
         class={clx(
           "pb-2 sm:pb-10",
-          (!prevPageUrl || partial === "hideLess") && "hidden",
+          (!prevPageUrl || partial === "hideLess") && "hidden"
         )}
       >
         <a
@@ -113,7 +113,7 @@ function PageResult(props: SectionProps<typeof loader>) {
           "grid-cols-2 gap-4",
           "lg:grid-cols-3",
           "2xl:grid-cols-4",
-          "w-full",
+          "w-full"
         )}
       >
         {products?.map((product, index) => (
@@ -128,50 +128,46 @@ function PageResult(props: SectionProps<typeof loader>) {
       </div>
 
       <div class={clx("pt-5 sm:pt-10 w-full")}>
-        {infinite
-          ? (
-            <div class="flex justify-center [&_section]:contents">
-              <a
-                rel="next"
-                class={clx(
-                  "p-3 bg-[#3A4332] text-white h-8 flex items-center justify-center font-bold text-[14px] leading-[170%] tracking-[16%] hover:bg-[#293023] cursor-pointer transition",
-                  (!nextPageUrl || partial === "hideMore") && "hidden",
-                )}
-                hx-swap="outerHTML show:parent:top"
-                hx-get={partialNext}
-              >
-                <span class="inline [.htmx-request_&]:hidden">
-                  Mostrar mais
-                </span>
-                <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
-              </a>
-            </div>
-          )
-          : (
-            <div class={clx("join", infinite && "hidden")}>
-              <a
-                rel="prev"
-                aria-label="previous page link"
-                href={prevPageUrl ?? "#"}
-                disabled={!prevPageUrl}
-                class="btn btn-ghost join-item"
-              >
-                <Icon id="chevron-right" class="rotate-180" />
-              </a>
-              <span class="btn btn-ghost join-item">
-                Page {zeroIndexedOffsetPage + 1}
-              </span>
-              <a
-                rel="next"
-                aria-label="next page link"
-                href={nextPageUrl ?? "#"}
-                disabled={!nextPageUrl}
-                class="btn btn-ghost join-item"
-              >
-                <Icon id="chevron-right" />
-              </a>
-            </div>
-          )}
+        {infinite ? (
+          <div class="flex justify-center [&_section]:contents">
+            <a
+              rel="next"
+              class={clx(
+                "p-3 bg-[#3A4332] text-white h-8 flex items-center justify-center font-bold text-[14px] leading-[170%] tracking-[16%] hover:bg-[#293023] cursor-pointer transition",
+                (!nextPageUrl || partial === "hideMore") && "hidden"
+              )}
+              hx-swap="outerHTML show:parent:top"
+              hx-get={partialNext}
+            >
+              <span class="inline [.htmx-request_&]:hidden">Mostrar mais</span>
+              <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
+            </a>
+          </div>
+        ) : (
+          <div class={clx("join", infinite && "hidden")}>
+            <a
+              rel="prev"
+              aria-label="previous page link"
+              href={prevPageUrl ?? "#"}
+              disabled={!prevPageUrl}
+              class="btn btn-ghost join-item"
+            >
+              <Icon id="chevron-right" class="rotate-180" />
+            </a>
+            <span class="btn btn-ghost join-item">
+              Page {zeroIndexedOffsetPage + 1}
+            </span>
+            <a
+              rel="next"
+              aria-label="next page link"
+              href={nextPageUrl ?? "#"}
+              disabled={!nextPageUrl}
+              class="btn btn-ghost join-item"
+            >
+              <Icon id="chevron-right" />
+            </a>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -223,11 +219,12 @@ function Result(props: SectionProps<typeof loader>) {
 
   const fallbackSeoText: SeoText = {
     title: typeof document !== "undefined" ? document.title : undefined,
-    description: typeof document !== "undefined"
-      ? document
-        .querySelector("meta[name='description']")
-        ?.getAttribute("content") ?? undefined
-      : undefined,
+    description:
+      typeof document !== "undefined"
+        ? document
+            .querySelector("meta[name='description']")
+            ?.getAttribute("content") ?? undefined
+        : undefined,
   };
 
   const seoText = props.seoText ?? fallbackSeoText;
@@ -252,7 +249,7 @@ function Result(props: SectionProps<typeof loader>) {
   });
 
   const results = (
-    <span class="text-md text-[#1F251C] font-normal">
+    <span class="text-md text-[#1F251C] font-normal w-full">
       {page.pageInfo.records} produtos encontrados
     </span>
   );
@@ -268,55 +265,47 @@ function Result(props: SectionProps<typeof loader>) {
       class="w-full mt:0 2xl:mt-[-10px]"
     >
       {/* Ordem diferente para desktop e mobile */}
-      {device === "desktop"
-        ? (
-          <>
-            {/* Desktop: Banner -> Breadcrumb */}
-            {topBanner && (
-              <div class="w-full my-4">
-                <picture>
-                  <source
-                    media="(max-width: 767px)"
-                    srcSet={topBanner.mobile}
-                  />
-                  <img
-                    src={topBanner.desktop}
-                    alt="Categoria"
-                    class="w-full h-auto object-cover"
-                    loading="lazy"
-                  />
-                </picture>
-              </div>
-            )}
-            <div class="container px-5 lg:px-[4rem] pt-4 sm:pt-5">
-              <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
+      {device === "desktop" ? (
+        <>
+          {/* Desktop: Banner -> Breadcrumb */}
+          {topBanner && (
+            <div class="w-full my-4">
+              <picture>
+                <source media="(max-width: 767px)" srcSet={topBanner.mobile} />
+                <img
+                  src={topBanner.desktop}
+                  alt="Categoria"
+                  class="w-full h-auto object-cover"
+                  loading="lazy"
+                />
+              </picture>
             </div>
-          </>
-        )
-        : (
-          <>
-            {/* Mobile: Breadcrumb -> Banner */}
-            <div class="container px-5 lg:px-[4rem] pt-4 sm:pt-5">
-              <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
+          )}
+          <div class="container px-5 lg:px-[4rem] pt-4 sm:pt-5">
+            <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
+          </div>
+        </>
+      ) : (
+        <>
+          {/* Mobile: Breadcrumb -> Banner */}
+          <div class="container px-5 lg:px-[4rem] pt-4 sm:pt-5">
+            <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
+          </div>
+          {topBanner && (
+            <div class="w-full my-4">
+              <picture>
+                <source media="(max-width: 767px)" srcSet={topBanner.mobile} />
+                <img
+                  src={topBanner.desktop}
+                  alt="Categoria"
+                  class="w-full h-auto object-cover"
+                  loading="lazy"
+                />
+              </picture>
             </div>
-            {topBanner && (
-              <div class="w-full my-4">
-                <picture>
-                  <source
-                    media="(max-width: 767px)"
-                    srcSet={topBanner.mobile}
-                  />
-                  <img
-                    src={topBanner.desktop}
-                    alt="Categoria"
-                    class="w-full h-auto object-cover"
-                    loading="lazy"
-                  />
-                </picture>
-              </div>
-            )}
-          </>
-        )}
+          )}
+        </>
+      )}
 
       <div class="container flex flex-col gap-4 sm:gap-5 w-full py-4 sm:py-5 px-5 lg:px-[4rem]">
         {device === "mobile" && (
@@ -369,7 +358,7 @@ function Result(props: SectionProps<typeof loader>) {
             {device === "desktop" && (
               <div class="flex justify-between items-center">
                 {results}
-                <div>{sortBy}</div>
+                <div class="w-full">{sortBy}</div>
               </div>
             )}
 
@@ -424,7 +413,7 @@ function Result(props: SectionProps<typeof loader>) {
           __html: useScript(
             setPageQuerystring,
             `${pageInfo.currentPage}`,
-            container,
+            container
           ),
         }}
       />

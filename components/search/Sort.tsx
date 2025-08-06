@@ -24,14 +24,14 @@ const labels: Record<string, string> = {
 function Sort({ sortOptions, url }: Props) {
   const current = getUrl(
     url,
-    new URL(url).searchParams.get(SORT_QUERY_PARAM) ?? "",
+    new URL(url).searchParams.get(SORT_QUERY_PARAM) ?? ""
   );
   const options = sortOptions?.map(({ value, label }) => ({
     value: getUrl(url, value),
     label,
   }));
   return (
-    <div class="flex items-center w-full md:w-auto">
+    <div class="flex items-center w-full md:w-auto justify-end">
       <label
         for="sort"
         class="text-md text-[#1F251C] font-normal hidden md:inline"

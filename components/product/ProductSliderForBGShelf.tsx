@@ -1,5 +1,5 @@
 import { Product } from "apps/commerce/types.ts";
-import Slider from "../../islands/Slider.tsx";
+import ProductCarouselSlider from "../../islands/Sliders/ProductCarouselSlider.tsx";
 import ProductCard from "./ProductCard/ProductCard.tsx";
 import { useId } from "../../sdk/useId.ts";
 
@@ -10,18 +10,20 @@ interface Props {
 
 function ProductSliderForBGShelf({ products, itemListName }: Props) {
   const id = useId();
+  const groupSize = 2;
+  const dotCount = Math.ceil(products.length / groupSize);
 
   return (
     <>
       <div id={id} class="relative container mx-auto px-4 lg:px-[48px]">
-        <Slider
+        <ProductCarouselSlider
           interval={8000}
           autoplay
           infinite
           class="flex gap-3 lg:gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hidden"
         >
           {products.map((product, index) => (
-            <Slider.Item
+            <ProductCarouselSlider.Item
               index={index}
               class="snap-start flex-shrink-0 min-h-[460px] max-[450px]:min-h-[450px]  max-[768px]:w-[calc(50%-(12px/2))] max-[1024px]:w-[calc(33.3%-(24px/3))] max-[1240px]:w-[calc(25%-(72px/4))] w-[calc(20%-(96px/5))]"
             >
@@ -31,12 +33,22 @@ function ProductSliderForBGShelf({ products, itemListName }: Props) {
                 itemListName={itemListName}
                 class="shadow-[5px_5px_7px_0px_rgba(0,0,0,0.15)] w-[98%] h-[98%]"
               />
-            </Slider.Item>
+            </ProductCarouselSlider.Item>
           ))}
-        </Slider>
+        </ProductCarouselSlider>
+
+        {/* Dots no mobile */}
+        <div class="flex justify-center items-center gap-2 mt-4 lg:hidden">
+          {Array.from({ length: dotCount }).map((_, index) => (
+            <ProductCarouselSlider.Dot
+              index={index}
+              class="w-2 h-2 lg:w-3 lg:h-3  bg-transparent border border-[#ffffff] data-[active]:bg-[#ffffff] transition-colors"
+            />
+          ))}
+        </div>
 
         {/* Botões de navegação com SVG personalizado */}
-        <Slider.PrevButton
+        <ProductCarouselSlider.PrevButton
           class="absolute -left-2 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md p-2 rounded-full w-8 h-8 flex items-center justify-center"
           aria-label="Produtos anteriores"
         >
@@ -56,9 +68,9 @@ function ProductSliderForBGShelf({ products, itemListName }: Props) {
             />
           </svg>
           <span class="sr-only">Produtos anteriores</span>
-        </Slider.PrevButton>
+        </ProductCarouselSlider.PrevButton>
 
-        <Slider.NextButton
+        <ProductCarouselSlider.NextButton
           class="absolute -right-2 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md p-2 rounded-full w-8 h-8 flex items-center justify-center"
           aria-label="Próximos produtos"
         >
@@ -78,9 +90,9 @@ function ProductSliderForBGShelf({ products, itemListName }: Props) {
             />
           </svg>
           <span class="sr-only">Próximos produtos</span>
-        </Slider.NextButton>
+        </ProductCarouselSlider.NextButton>
       </div>
-      <Slider.JS rootId={id} interval={8000} autoplay />
+      <ProductCarouselSlider.JS rootId={id} interval={8000} autoplay />
     </>
   );
 }
