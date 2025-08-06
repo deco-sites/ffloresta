@@ -37,7 +37,12 @@ function Item({
 // Botão "Próximo"
 function NextButton(props: JSX.IntrinsicElements["button"]) {
   return (
-    <button disabled data-slide="next" aria-label="Next item" {...props} />
+    <button
+      disabled
+      data-slide="next"
+      aria-label="Next item"
+      {...props}
+    />
   );
 }
 
@@ -83,10 +88,12 @@ function onLoad({
       const delta = container.width / 1000;
       if (element.right < container.left - delta) return 0.0;
       if (element.left > container.right + delta) return 0.0;
-      if (element.left < container.left - delta)
+      if (element.left < container.left - delta) {
         return element.right - container.left + delta;
-      if (element.right > container.right + delta)
+      }
+      if (element.right > container.right + delta) {
         return container.right - element.left + delta;
+      }
       return element.width;
     };
 
@@ -125,7 +132,7 @@ function onLoad({
       const isShowingFirst = indices[0] === 0;
       const pageIndex = Math.floor(indices[indices.length - 1] / itemsPerPage);
       goToItem(
-        isShowingFirst ? items.length - 1 : (pageIndex - 1) * itemsPerPage
+        isShowingFirst ? items.length - 1 : (pageIndex - 1) * itemsPerPage,
       );
     };
 
@@ -162,7 +169,7 @@ function onLoad({
           }
         });
       },
-      { threshold: THRESHOLD, root: slider }
+      { threshold: THRESHOLD, root: slider },
     );
 
     items.forEach((item) => observer.observe(item));

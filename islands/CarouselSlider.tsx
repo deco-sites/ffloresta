@@ -79,10 +79,12 @@ function onLoad({
       const delta = container.width / 1000;
       if (element.right < container.left - delta) return 0.0;
       if (element.left > container.right + delta) return 0.0;
-      if (element.left < container.left - delta)
+      if (element.left < container.left - delta) {
         return element.right - container.left + delta;
-      if (element.right > container.right + delta)
+      }
+      if (element.right > container.right + delta) {
         return container.right - element.left + delta;
+      }
       return element.width;
     };
 
@@ -126,8 +128,11 @@ function onLoad({
       if (indices.length === 0) return;
 
       const firstVisible = indices[0];
-      const targetIndex =
-        firstVisible > 0 ? firstVisible - 1 : infinite ? items.length - 1 : 0;
+      const targetIndex = firstVisible > 0
+        ? firstVisible - 1
+        : infinite
+        ? items.length - 1
+        : 0;
       goToItem(targetIndex);
     };
 
@@ -138,12 +143,11 @@ function onLoad({
       if (indices.length === 0) return;
 
       const lastVisible = indices[indices.length - 1];
-      const targetIndex =
-        lastVisible < items.length - 1
-          ? lastVisible + 1
-          : infinite
-          ? 0
-          : items.length - 1;
+      const targetIndex = lastVisible < items.length - 1
+        ? lastVisible + 1
+        : infinite
+        ? 0
+        : items.length - 1;
       goToItem(targetIndex);
     };
 
@@ -160,7 +164,7 @@ function onLoad({
           }
         });
       },
-      { threshold: THRESHOLD, root: slider }
+      { threshold: THRESHOLD, root: slider },
     );
 
     items.forEach((item) => observer.observe(item));

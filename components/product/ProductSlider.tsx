@@ -23,13 +23,12 @@ function ProductSlider({ products, itemListName }: Props) {
           {products.map((product, index) => (
             <Slider.Item
               index={index}
-              class="snap-start flex-shrink-0 min-h-[500px] max-[450px]:min-h-[450px]  max-[768px]:w-[calc(50%-10px)] max-[1024px]:w-[calc(33.3%-10px)] max-[1240px]:w-[calc(25%-20px)] w-[calc(20%-24px)]"
+              class="snap-start flex-shrink-0 min-h-[500px] max-[450px]:min-h-[450px]  max-[768px]:w-[calc(50%-(12px/2))] max-[1024px]:w-[calc(33.3%-(24px/3))] max-[1240px]:w-[calc(25%-(72px/4))] w-[calc(20%-(96px/5))]"
             >
               <ProductCard
                 index={index}
                 product={product}
                 itemListName={itemListName}
-                class="w-full"
               />
             </Slider.Item>
           ))}

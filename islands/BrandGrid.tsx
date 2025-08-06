@@ -69,8 +69,9 @@ function BrandGridIsland({ title, cta, items, icon }: Props) {
   const updateStepSize = () => {
     if (!sliderRef.current) return;
 
-    const firstItem =
-      sliderRef.current.querySelector<HTMLDivElement>(".flex-shrink-0");
+    const firstItem = sliderRef.current.querySelector<HTMLDivElement>(
+      ".flex-shrink-0",
+    );
     if (!firstItem) return;
 
     // Obtém o gap computado do container
@@ -122,8 +123,7 @@ function BrandGridIsland({ title, cta, items, icon }: Props) {
     // Configura eventos de arraste
     const handleDragStart = (e: MouseEvent | TouchEvent) => {
       isDraggingRef.current = true;
-      startXRef.current =
-        (e as MouseEvent).pageX ||
+      startXRef.current = (e as MouseEvent).pageX ||
         (e as TouchEvent).touches?.[0]?.pageX ||
         slider.offsetLeft;
       scrollLeftRef.current = slider.scrollLeft;
@@ -144,8 +144,7 @@ function BrandGridIsland({ title, cta, items, icon }: Props) {
       if (!isDraggingRef.current) return;
 
       e.preventDefault();
-      const x =
-        (e as MouseEvent).pageX ||
+      const x = (e as MouseEvent).pageX ||
         (e as TouchEvent).touches?.[0]?.pageX ||
         startXRef.current;
       const walk = (x - startXRef.current) * 2;
@@ -216,7 +215,7 @@ function BrandGridIsland({ title, cta, items, icon }: Props) {
                 "sm:w-[calc(33.3%-(20px))]", // 3 cards no tablet
                 "md:w-[calc(25%-(20px))]", // 3 cards no tablet
                 "lg:w-[calc(20%-(20px))]", // 5 cards no desktop
-                "2xl:w-[calc(16.6%-(20px))]" // 6 cards no desktop
+                "2xl:w-[calc(16.6%-(20px))]", // 6 cards no desktop
               )}
             >
               <Card {...item} />
@@ -238,7 +237,7 @@ function BrandGridIsland({ title, cta, items, icon }: Props) {
                   class={clx(
                     "w-3 h-3 border transition-all duration-300",
                     "border-[#273D28]",
-                    activeDot === index ? "bg-[#273D28]" : "bg-transparent"
+                    activeDot === index ? "bg-[#273D28]" : "bg-transparent",
                   )}
                 />
               </button>

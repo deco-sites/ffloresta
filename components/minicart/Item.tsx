@@ -55,7 +55,7 @@ function CartItem({ item, index, locale, currency }: Props) {
           <button
             class={clx(
               isGift && "hidden",
-              "btn btn-ghost btn-square no-animation p-0 hover:bg-transparent"
+              "btn btn-ghost btn-square no-animation p-0 hover:bg-transparent",
             )}
             hx-on:click={useScript(removeItemHandler)}
           >

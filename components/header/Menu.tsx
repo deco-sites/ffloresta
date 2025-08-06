@@ -15,68 +15,70 @@ function ThirdLevelMenu({ items }: { items: SiteNavigationElement[] }) {
 
         return (
           <li key={`${thirdItem.url}-${i}`} class="group">
-            {hasChildren ? (
-              <div class="collapse rounded-none group">
-                <input
-                  type="checkbox"
-                  ref={checkboxRef}
-                  class="peer absolute opacity-0" // Escondemos o input real
-                />
-                <div class="collapse-title !p-0 !pr-4 min-h-[0] h-fit">
-                  <div class="flex justify-between items-center w-full">
-                    <a
-                      href={thirdItem.url}
-                      class="py-2 text-[16px] text-[#1F251C] hover:underline group-hover:text-white peer-checked:text-white flex-grow"
-                    >
-                      {thirdItem.name}
-                    </a>
-                    <button
-                      class="btn btn-ghost btn-xs px-2 flex items-center justify-center"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        if (checkboxRef.current) {
-                          checkboxRef.current.checked =
-                            !checkboxRef.current.checked;
-                        }
-                      }}
-                    >
-                      <Icon
-                        id="Plus"
-                        size={16}
-                        class="text-[#1F251C] group-hover:text-white peer-checked:hidden transition-colors"
-                      />
-                      <Icon
-                        id="Minus"
-                        size={16}
-                        class="hidden peer-checked:block text-white transition-colors"
-                      />
-                    </button>
+            {hasChildren
+              ? (
+                <div class="collapse rounded-none group">
+                  <input
+                    type="checkbox"
+                    ref={checkboxRef}
+                    class="peer absolute opacity-0" // Escondemos o input real
+                  />
+                  <div class="collapse-title !p-0 !pr-4 min-h-[0] h-fit">
+                    <div class="flex justify-between items-center w-full">
+                      <a
+                        href={thirdItem.url}
+                        class="py-2 text-[16px] text-[#1F251C] hover:underline group-hover:text-white peer-checked:text-white flex-grow"
+                      >
+                        {thirdItem.name}
+                      </a>
+                      <button
+                        class="btn btn-ghost btn-xs px-2 flex items-center justify-center"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          if (checkboxRef.current) {
+                            checkboxRef.current.checked = !checkboxRef.current
+                              .checked;
+                          }
+                        }}
+                      >
+                        <Icon
+                          id="Plus"
+                          size={16}
+                          class="text-[#1F251C] group-hover:text-white peer-checked:hidden transition-colors"
+                        />
+                        <Icon
+                          id="Minus"
+                          size={16}
+                          class="hidden peer-checked:block text-white transition-colors"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="collapse-content !px-0 px-4">
+                    <ul>
+                      {thirdItem.children!.map((child, idx) => (
+                        <li key={`${child.url}-${idx}`}>
+                          <a
+                            href={child.url}
+                            class="block py-2 text-[16px] text-[#1F251C] hover:underline group-hover:text-white peer-checked:text-white"
+                          >
+                            {child.name}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
-                <div class="collapse-content !px-0 px-4">
-                  <ul>
-                    {thirdItem.children!.map((child, idx) => (
-                      <li key={`${child.url}-${idx}`}>
-                        <a
-                          href={child.url}
-                          class="block py-2 text-[16px] text-[#1F251C] hover:underline group-hover:text-white peer-checked:text-white"
-                        >
-                          {child.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ) : (
-              <a
-                href={thirdItem.url}
-                class="block py-2 text-[16px] text-[#1F251C] hover:underline group-hover:text-white"
-              >
-                {thirdItem.name}
-              </a>
-            )}
+              )
+              : (
+                <a
+                  href={thirdItem.url}
+                  class="block py-2 text-[16px] text-[#1F251C] hover:underline group-hover:text-white"
+                >
+                  {thirdItem.name}
+                </a>
+              )}
           </li>
         );
       })}

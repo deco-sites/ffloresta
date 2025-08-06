@@ -16,13 +16,13 @@ function ProductCardInstallments({ priceSpecs, price, priceCurrency }: Props) {
       spec.billingDuration &&
       spec.billingIncrement &&
       price &&
-      spec.billingIncrement * spec.billingDuration <= price
+      spec.billingIncrement * spec.billingDuration <= price,
   );
 
   const bestInstallment = noInterestInstallments.reduce(
     (max, curr) =>
       !max || curr.billingDuration > max.billingDuration ? curr : max,
-    null
+    null,
   );
 
   if (!bestInstallment) return null;

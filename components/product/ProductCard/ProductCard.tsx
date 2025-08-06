@@ -53,8 +53,8 @@ function ProductCard({
     <div
       {...event}
       class={clx(
-        "bg-white flex flex-col shadow-[5px_5px_7px_0px_rgba(0,0,0,0.15)] p-4 w-[98%] h-[98%]",
-        _class
+        "bg-white flex flex-col shadow-[5px_5px_7px_0px_rgba(0,0,0,0.15)] p-4 w-[95%] lg:w-[97%] h-[98%]",
+        _class,
       )}
     >
       <figure class="relative">
@@ -97,28 +97,30 @@ function ProductCard({
         </div>
 
         <div class="mt-auto pt-4">
-          {inStock ? (
-            <AddToCartButton
-              product={product}
-              seller={seller}
-              item={item}
-              class={clx(
-                "w-full bg-[#05C100] text-white h-8 flex items-center justify-center",
-                "font-bold text-[14px] leading-[170%] tracking-[16%]",
-                "hover:bg-[#23911f] transition duration-300 ease-in-out"
-              )}
-            />
-          ) : (
-            <a
-              href={relativeUrl}
-              class={clx(
-                "w-full bg-[#293023] text-white h-8 flex items-center justify-center",
-                "font-bold text-[14px] leading-[170%] tracking-[16%] cursor-none"
-              )}
-            >
-              INDISPONÍVEL
-            </a>
-          )}
+          {inStock
+            ? (
+              <AddToCartButton
+                product={product}
+                seller={seller}
+                item={item}
+                class={clx(
+                  "w-full bg-[#05C100] text-white h-8 flex items-center justify-center",
+                  "font-bold text-[14px] leading-[170%] tracking-[16%]",
+                  "hover:bg-[#23911f] transition duration-300 ease-in-out",
+                )}
+              />
+            )
+            : (
+              <a
+                href={relativeUrl}
+                class={clx(
+                  "w-full bg-[#293023] text-white h-8 flex items-center justify-center",
+                  "font-bold text-[14px] leading-[170%] tracking-[16%] cursor-none",
+                )}
+              >
+                INDISPONÍVEL
+              </a>
+            )}
         </div>
       </div>
     </div>

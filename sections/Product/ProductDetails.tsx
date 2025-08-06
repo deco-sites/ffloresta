@@ -63,7 +63,7 @@ export default function ProductDetails({
           spec.priceType === "https://schema.org/SalePrice" &&
           spec.billingDuration &&
           spec.billingIncrement &&
-          spec.billingIncrement * spec.billingDuration === offer.price
+          spec.billingIncrement * spec.billingDuration === offer.price,
       );
     }
   }
@@ -87,7 +87,7 @@ export default function ProductDetails({
         class={clx(
           "container grid md:mt-8",
           "grid-cols-1 gap-9 py-0",
-          "lg:grid-cols-[1fr_380px] lg:gap-11"
+          "lg:grid-cols-[1fr_380px] lg:gap-11",
         )}
       >
         <div class="w-full flex flex-col">

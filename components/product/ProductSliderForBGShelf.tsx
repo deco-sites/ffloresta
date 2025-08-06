@@ -23,13 +23,13 @@ function ProductSliderForBGShelf({ products, itemListName }: Props) {
           {products.map((product, index) => (
             <Slider.Item
               index={index}
-              class="snap-start flex-shrink-0 min-h-[460px] max-[450px]:min-h-[450px]  max-[768px]:w-[calc(50%-10px)] max-[1024px]:w-[calc(33.3%-10px)] max-[1240px]:w-[calc(25%-20px)] w-[calc(20%-21px)]"
+              class="snap-start flex-shrink-0 min-h-[460px] max-[450px]:min-h-[450px]  max-[768px]:w-[calc(50%-(12px/2))] max-[1024px]:w-[calc(33.3%-(24px/3))] max-[1240px]:w-[calc(25%-(72px/4))] w-[calc(20%-(96px/5))]"
             >
               <ProductCard
                 index={index}
                 product={product}
                 itemListName={itemListName}
-                class="shadow-[5px_5px_7px_0px_rgba(0,0,0,0.15)] w-full h-[98%]"
+                class="shadow-[5px_5px_7px_0px_rgba(0,0,0,0.15)] w-[98%] h-[98%]"
               />
             </Slider.Item>
           ))}

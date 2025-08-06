@@ -1,7 +1,7 @@
 import { useId } from "../sdk/useId.ts";
 import { ImageWidget as Image } from "apps/admin/widgets.ts";
 import Section from "../components/ui/Section.tsx";
-import { useRef, useState, useEffect } from "preact/hooks";
+import { useEffect, useRef, useState } from "preact/hooks";
 import { clx } from "../sdk/clx.ts";
 
 export interface Props {
@@ -166,7 +166,7 @@ export default function BannerMosaicIsland({
     <div
       class={clx(
         "hidden md:flex flex-wrap items-stretch justify-center",
-        `gap-${gap}`
+        `gap-${gap}`,
       )}
     >
       {images?.slice(0, itemsToShow).map((image, index) => (
@@ -227,7 +227,7 @@ export default function BannerMosaicIsland({
                   "w-2 h-2 lg:w-3 lg:h-3 transition-all duration-300",
                   activeDot === index
                     ? "bg-[#2D2D2D]"
-                    : "bg-transparent border border-[#2D2D2D]"
+                    : "bg-transparent border border-[#2D2D2D]",
                 )}
               />
             </button>

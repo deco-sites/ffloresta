@@ -40,8 +40,7 @@ export const getClusterFlags = (product: Product) => {
     ? new Date(product.releaseDate)
     : null;
   const now = new Date();
-  const isNew =
-    releaseDate &&
+  const isNew = releaseDate &&
     now.getTime() - releaseDate.getTime() < 30 * 24 * 60 * 60 * 1000;
 
   if (isNew && !flags.some((f) => f.text === "Novidade")) {
