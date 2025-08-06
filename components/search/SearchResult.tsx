@@ -7,6 +7,7 @@ import Breadcrumb from "../ui/Breadcrumb.tsx";
 import Drawer from "../ui/Drawer.tsx";
 import Sort from "./Sort.tsx";
 import { useDevice } from "@deco/deco/hooks";
+import { ImageWidget } from "apps/admin/widgets.ts";
 import PaginationButtons from "../../islands/Search/PaginationButtons.tsx";
 
 export interface SeoText {
@@ -17,12 +18,12 @@ export interface SeoText {
 export interface Props {
   page: ProductListingPage | null;
   categoryBanner?: {
-    desktop: string;
-    mobile: string;
+    desktop: ImageWidget;
+    mobile: ImageWidget;
   };
   filterBanner?: {
-    desktop: string;
-    mobile: string;
+    desktop: ImageWidget;
+    mobile: ImageWidget;
   };
   seoText?: SeoText;
 }
