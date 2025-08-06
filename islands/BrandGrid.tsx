@@ -50,81 +50,72 @@ function BrandGridIsland({ title, cta, items, icon }: Props) {
   const [stepSize, setStepSize] = useState(0);
   const [activeDot, setActiveDot] = useState(0);
 
-  // Quantidade de itens visíveis por breakpoint
   const getItemsPerPage = () => {
     if (!sliderRef.current) return 2;
     const width = sliderRef.current.offsetWidth;
-    if (width >= 1024) return 4; // desktop
-    if (width >= 768) return 3; // tablet
-    return 2; // mobile
+    if (width >= 1280) return 6;
+    if (width >= 1024) return 5;
+    if (width >= 768) return 4;
+    if (width >= 640) return 3;
+    return 2;
   };
 
-  // Calcula a quantidade de pontos de navegação
   const getDotsCount = () => {
     const itemsPerPage = getItemsPerPage();
-    return Math.max(items.length - itemsPerPage + 1, 1);
+    return Math.ceil(items.length / itemsPerPage);
   };
 
-  // Atualiza o tamanho do passo (largura de um item + gap)
   const updateStepSize = () => {
     if (!sliderRef.current) return;
-
-    const firstItem = sliderRef.current.querySelector<HTMLDivElement>(
-      ".flex-shrink-0",
-    );
-    if (!firstItem) return;
-
-    // Obtém o gap computado do container
-    const sliderStyle = window.getComputedStyle(sliderRef.current);
-    const gap = parseFloat(sliderStyle.gap) || 0;
-
-    setStepSize(firstItem.offsetWidth + gap);
+    setStepSize(sliderRef.current.offsetWidth);
   };
 
-  // Navega para um ponto específico
   const goToDot = (dotIndex: number) => {
-    if (!sliderRef.current || stepSize === 0) return;
+    const slider = sliderRef.current;
+    const width = slider?.offsetWidth ?? 0;
+    const effectiveStep = stepSize || width;
 
-    const position = dotIndex * stepSize;
-    sliderRef.current.scrollTo({
+    if (!slider || effectiveStep === 0) return;
+
+    const position = dotIndex * effectiveStep;
+    slider.scrollTo({
       left: position,
       behavior: "smooth",
     });
+
+    // Atualiza dot imediatamente (antes do scroll terminar)
     setActiveDot(dotIndex);
   };
 
-  // Atualiza o dot ativo baseado na posição de rolagem
   const updateActiveDot = () => {
-    if (!sliderRef.current || stepSize === 0) return;
+    const slider = sliderRef.current;
+    const width = slider?.offsetWidth ?? 0;
+    const effectiveStep = stepSize || width;
 
-    const scrollPosition = sliderRef.current.scrollLeft;
-    const dotIndex = Math.round(scrollPosition / stepSize);
+    if (!slider || effectiveStep === 0) return;
 
-    // Garante que o índice esteja dentro dos limites
+    const scrollPosition = slider.scrollLeft;
+    const dotIndex = Math.round(scrollPosition / effectiveStep);
+
     const maxDotIndex = getDotsCount() - 1;
     const safeIndex = Math.min(Math.max(dotIndex, 0), maxDotIndex);
-
     setActiveDot(safeIndex);
   };
 
-  // Configura os eventos de arraste e redimensionamento
   useEffect(() => {
     const slider = sliderRef.current;
     if (!slider) return;
 
-    // Atualiza o tamanho do passo quando a janela é redimensionada
     const handleResize = () => {
       updateStepSize();
       updateActiveDot();
     };
 
-    window.addEventListener("resize", handleResize);
-
-    // Configura eventos de arraste
     const handleDragStart = (e: MouseEvent | TouchEvent) => {
       isDraggingRef.current = true;
-      startXRef.current = (e as MouseEvent).pageX ||
-        (e as TouchEvent).touches?.[0]?.pageX ||
+      startXRef.current =
+        (e as MouseEvent).pageX ??
+        (e as TouchEvent).touches?.[0]?.pageX ??
         slider.offsetLeft;
       scrollLeftRef.current = slider.scrollLeft;
       slider.classList.add("dragging");
@@ -134,39 +125,35 @@ function BrandGridIsland({ title, cta, items, icon }: Props) {
       if (!isDraggingRef.current) return;
       isDraggingRef.current = false;
       slider.classList.remove("dragging");
-
-      // Encaixa na posição mais próxima após arrastar
       updateActiveDot();
-      setTimeout(() => goToDot(activeDot), 100);
     };
 
     const handleDragMove = (e: MouseEvent | TouchEvent) => {
       if (!isDraggingRef.current) return;
-
       e.preventDefault();
-      const x = (e as MouseEvent).pageX ||
-        (e as TouchEvent).touches?.[0]?.pageX ||
+      const x =
+        (e as MouseEvent).pageX ??
+        (e as TouchEvent).touches?.[0]?.pageX ??
         startXRef.current;
       const walk = (x - startXRef.current) * 2;
       slider.scrollLeft = scrollLeftRef.current - walk;
     };
 
-    // Eventos de mouse
     slider.addEventListener("mousedown", handleDragStart);
     slider.addEventListener("mouseleave", handleDragEnd);
     slider.addEventListener("mouseup", handleDragEnd);
     slider.addEventListener("mousemove", handleDragMove);
 
-    // Eventos de touch
     slider.addEventListener("touchstart", handleDragStart);
     slider.addEventListener("touchend", handleDragEnd);
     slider.addEventListener("touchmove", handleDragMove);
 
-    // Evento de scroll
     slider.addEventListener("scroll", updateActiveDot);
+    window.addEventListener("resize", handleResize);
 
-    // Inicializa o tamanho do passo
+    // Força cálculo imediato no mount
     updateStepSize();
+    updateActiveDot();
 
     return () => {
       slider.removeEventListener("mousedown", handleDragStart);
@@ -181,12 +168,7 @@ function BrandGridIsland({ title, cta, items, icon }: Props) {
       slider.removeEventListener("scroll", updateActiveDot);
       window.removeEventListener("resize", handleResize);
     };
-  }, [stepSize, activeDot]);
-
-  // Inicializa o dot ativo
-  useEffect(() => {
-    updateActiveDot();
-  }, [stepSize]);
+  }, []);
 
   const dotsCount = getDotsCount();
 
@@ -195,7 +177,6 @@ function BrandGridIsland({ title, cta, items, icon }: Props) {
       <Section.Header title={title} cta={cta} icon={icon} />
 
       <div id={id} class="relative">
-        {/* Container do slider */}
         <div
           ref={sliderRef}
           class="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory w-full gap-5"
@@ -211,11 +192,11 @@ function BrandGridIsland({ title, cta, items, icon }: Props) {
               key={index}
               class={clx(
                 "flex-shrink-0 snap-start",
-                "w-[calc(50%-(20px/2))]", // 2 cards no mobile (50% cada)
-                "sm:w-[calc(33.3%-(20px))]", // 3 cards no tablet
-                "md:w-[calc(25%-(20px))]", // 3 cards no tablet
-                "lg:w-[calc(20%-(20px))]", // 5 cards no desktop
-                "2xl:w-[calc(16.6%-(20px))]", // 6 cards no desktop
+                "w-[calc(50%-(20px/2))]", // 2 items
+                "sm:w-[calc(33.3%-(40px/3))]", // 3 items
+                "md:w-[calc(25%-(60px/4))]", // 4 items
+                "lg:w-[calc(20%-(80px/5))]", // 5 items
+                "2xl:w-[calc(16.6%-(100px/6))]" // 6 items
               )}
             >
               <Card {...item} />
@@ -223,9 +204,8 @@ function BrandGridIsland({ title, cta, items, icon }: Props) {
           ))}
         </div>
 
-        {/* Dots de navegação */}
         {dotsCount > 1 && (
-          <div class="flex justify-center gap-2 mt-6 2xl:hidden">
+          <div class="flex justify-center gap-2 mt-6">
             {Array.from({ length: dotsCount }).map((_, index) => (
               <button
                 key={index}
@@ -235,9 +215,9 @@ function BrandGridIsland({ title, cta, items, icon }: Props) {
               >
                 <div
                   class={clx(
-                    "w-3 h-3 border transition-all duration-300",
-                    "border-[#273D28]",
-                    activeDot === index ? "bg-[#273D28]" : "bg-transparent",
+                    "w-3 h-3 transition-all duration-300",
+                    "border border-[#273D28]",
+                    activeDot === index ? "bg-[#273D28]" : "bg-transparent"
                   )}
                 />
               </button>

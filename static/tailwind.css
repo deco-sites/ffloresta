@@ -7140,10 +7140,6 @@ input[type="checkbox"]:checked::after {
     display: block;
   }
 
-  .\32xl\:hidden {
-    display: none;
-  }
-
   .\32xl\:w-\[calc\(16\.6\%-\(20px\)\)\] {
     width: calc(16.6% - (20px));
   }
