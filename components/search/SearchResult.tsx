@@ -1,23 +1,13 @@
-// SearchResult.tsx
 import type { ProductListingPage } from "apps/commerce/types.ts";
-import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
+import { type SectionProps } from "@deco/deco";
 import ProductCard from "../../components/product/ProductCard/ProductCard.tsx";
 import Filters from "../../components/search/Filters.tsx";
 import Icon from "../../components/ui/Icon.tsx";
-import { clx } from "../../sdk/clx.ts";
-import { useId } from "../../sdk/useId.ts";
-import { useSendEvent } from "../../sdk/useSendEvent.ts";
-import { useOffer } from "../../sdk/useOffer.ts";
 import Breadcrumb from "../ui/Breadcrumb.tsx";
 import Drawer from "../ui/Drawer.tsx";
 import Sort from "./Sort.tsx";
-import { useDevice, useScript, useSection } from "@deco/deco/hooks";
-import { type SectionProps } from "@deco/deco";
-import type { ImageWidget } from "apps/admin/widgets.ts";
-
-export interface Layout {
-  pagination?: "show-more" | "pagination";
-}
+import { useDevice } from "@deco/deco/hooks";
+import PaginationButtons from "../../islands/Search/PaginationButtons.tsx";
 
 export interface SeoText {
   title?: string;
@@ -26,344 +16,176 @@ export interface SeoText {
 
 export interface Props {
   page: ProductListingPage | null;
-  /**
-   * @title Banner de Categoria
-   */
-  topBanner?: {
-    desktop: ImageWidget;
-    mobile: ImageWidget;
+  categoryBanner?: {
+    desktop: string;
+    mobile: string;
   };
-  /**
-   * @title Configurações de Layout
-   */
-  layout?: Layout;
-  startingPage?: 0 | 1;
-  partial?: "hideMore" | "hideLess";
-  bannerImage?: ImageWidget;
-  /**
-   * @title Texto de Seo
-   */
+  filterBanner?: {
+    desktop: string;
+    mobile: string;
+  };
   seoText?: SeoText;
 }
 
 function NotFound() {
   return (
     <div class="w-full flex justify-center items-center py-10">
-      <span>Not Found!</span>
+      <span>Página não encontrada!</span>
     </div>
   );
 }
 
-const useUrlRebased = (overrides: string | undefined, base: string) => {
-  let url: string | undefined = undefined;
-  if (overrides) {
-    const temp = new URL(overrides, base);
-    const final = new URL(base);
-    final.pathname = temp.pathname;
-    for (const [key, value] of temp.searchParams.entries()) {
-      final.searchParams.set(key, value);
-    }
-    url = final.href;
-  }
-  return url;
-};
-
-function PageResult(props: SectionProps<typeof loader>) {
-  const { layout, startingPage = 0, url, partial } = props;
-  const page = props.page!;
-  const { products, pageInfo } = page;
-  const perPage = pageInfo?.recordPerPage || products.length;
-  const zeroIndexedOffsetPage = pageInfo.currentPage - startingPage;
-  const offset = zeroIndexedOffsetPage * perPage;
-  const nextPageUrl = useUrlRebased(pageInfo.nextPage, url);
-  const prevPageUrl = useUrlRebased(pageInfo.previousPage, url);
-  const partialPrev = useSection({
-    href: prevPageUrl,
-    props: { partial: "hideMore" },
-  });
-  const partialNext = useSection({
-    href: nextPageUrl,
-    props: { partial: "hideLess" },
-  });
-  const infinite = layout?.pagination !== "pagination";
-
-  return (
-    <div class="grid grid-flow-row grid-cols-1 place-items-center">
-      <div
-        class={clx(
-          "pb-2 sm:pb-10",
-          (!prevPageUrl || partial === "hideLess") && "hidden"
-        )}
-      >
-        <a
-          rel="prev"
-          class="w-full p-3 bg-[#3A4332] text-[#97A37F] h-8 flex items-center justify-center font-bold text-[14px] leading-[170%] tracking-[16%] hover:bg-[#293023] cursor-pointer transition"
-          hx-swap="outerHTML show:parent:top"
-          hx-get={partialPrev}
-        >
-          <span class="inline [.htmx-request_&]:hidden">Mostrar menos</span>
-          <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
-        </a>
-      </div>
-
-      <div
-        data-product-list
-        class={clx(
-          "grid items-center",
-          "grid-cols-2 gap-4",
-          "lg:grid-cols-3",
-          "2xl:grid-cols-4",
-          "w-full"
-        )}
-      >
-        {products?.map((product, index) => (
-          <ProductCard
-            key={`product-card-${product.productID}`}
-            product={product}
-            preload={index === 0}
-            index={offset + index}
-            class="h-[98%] w-[98%] shadow-[5px_5px_7px_0px_rgba(0,0,0,0.15)]"
-          />
-        ))}
-      </div>
-
-      <div class={clx("pt-5 sm:pt-10 w-full")}>
-        {infinite ? (
-          <div class="flex justify-center [&_section]:contents">
-            <a
-              rel="next"
-              class={clx(
-                "p-3 bg-[#3A4332] text-white h-8 flex items-center justify-center font-bold text-[14px] leading-[170%] tracking-[16%] hover:bg-[#293023] cursor-pointer transition",
-                (!nextPageUrl || partial === "hideMore") && "hidden"
-              )}
-              hx-swap="outerHTML show:parent:top"
-              hx-get={partialNext}
-            >
-              <span class="inline [.htmx-request_&]:hidden">Mostrar mais</span>
-              <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
-            </a>
-          </div>
-        ) : (
-          <div class={clx("join", infinite && "hidden")}>
-            <a
-              rel="prev"
-              aria-label="previous page link"
-              href={prevPageUrl ?? "#"}
-              disabled={!prevPageUrl}
-              class="btn btn-ghost join-item"
-            >
-              <Icon id="chevron-right" class="rotate-180" />
-            </a>
-            <span class="btn btn-ghost join-item">
-              Page {zeroIndexedOffsetPage + 1}
-            </span>
-            <a
-              rel="next"
-              aria-label="next page link"
-              href={nextPageUrl ?? "#"}
-              disabled={!nextPageUrl}
-              class="btn btn-ghost join-item"
-            >
-              <Icon id="chevron-right" />
-            </a>
-          </div>
-        )}
-      </div>
-    </div>
-  );
-}
-
-const setPageQuerystring = (page: string, id: string) => {
-  const element = document
-    .getElementById(id)
-    ?.querySelector("[data-product-list]");
-  if (!element) return;
-
-  new IntersectionObserver((entries) => {
-    const url = new URL(location.href);
-    const prevPage = url.searchParams.get("page");
-
-    for (const entry of entries) {
-      if (entry.isIntersecting) {
-        url.searchParams.set("page", page);
-      } else if (
-        typeof history.state?.prevPage === "string" &&
-        history.state?.prevPage !== page
-      ) {
-        url.searchParams.set("page", history.state.prevPage);
-      }
-    }
-
-    history.replaceState({ prevPage }, "", url.href);
-  }).observe(element);
-};
-
-function Result(props: SectionProps<typeof loader>) {
-  const container = useId();
-  const controls = useId();
+export default function SearchResult(props: SectionProps<typeof loader>) {
   const device = useDevice();
-  const {
-    startingPage = 0,
-    url,
-    partial,
-    bannerImage,
-    topBanner,
-    page: pageProp,
-  } = props;
+  const { page, categoryBanner, filterBanner, seoText } = props;
 
-  const page = pageProp!;
-  const { products, filters, breadcrumb, pageInfo, sortOptions } = page;
-  const perPage = pageInfo?.recordPerPage || products.length;
-  const zeroIndexedOffsetPage = pageInfo.currentPage - startingPage;
-  const offset = zeroIndexedOffsetPage * perPage;
+  if (!page) return <NotFound />;
 
-  const fallbackSeoText: SeoText = {
-    title: typeof document !== "undefined" ? document.title : undefined,
-    description:
-      typeof document !== "undefined"
-        ? document
-            .querySelector("meta[name='description']")
-            ?.getAttribute("content") ?? undefined
-        : undefined,
-  };
-
-  const seoText = props.seoText ?? fallbackSeoText;
-
-  const viewItemListEvent = useSendEvent({
-    on: "view",
-    event: {
-      name: "view_item_list",
-      params: {
-        item_list_name: breadcrumb.itemListElement?.at(-1)?.name,
-        item_list_id: breadcrumb.itemListElement?.at(-1)?.item,
-        items: products?.map((product, index) =>
-          mapProductToAnalyticsItem({
-            ...useOffer(product.offers),
-            index: offset + index,
-            product,
-            breadcrumbList: breadcrumb,
-          })
-        ),
-      },
-    },
-  });
-
-  const results = (
-    <span class="text-md text-[#1F251C] font-normal w-full">
-      {page.pageInfo.records} produtos encontrados
-    </span>
-  );
-
-  const sortBy = sortOptions.length > 0 && (
-    <Sort sortOptions={sortOptions} url={url} />
-  );
+  console.log(page.pageInfo, "page.products");
 
   return (
-    <div
-      id={container}
-      {...viewItemListEvent}
-      class="w-full mt:0 2xl:mt-[-10px]"
-    >
-      {/* Ordem diferente para desktop e mobile */}
-      {device === "desktop" ? (
-        <>
-          {/* Desktop: Banner -> Breadcrumb */}
-          {topBanner && (
-            <div class="w-full my-4">
-              <picture>
-                <source media="(max-width: 767px)" srcSet={topBanner.mobile} />
-                <img
-                  src={topBanner.desktop}
-                  alt="Categoria"
-                  class="w-full h-auto object-cover"
-                  loading="lazy"
-                />
-              </picture>
-            </div>
-          )}
-          <div class="container px-5 lg:px-[4rem] pt-4 sm:pt-5">
-            <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
+    <div class="w-full">
+      {/* Desktop: Breadcrumb -> Banner */}
+      <div class="hidden lg:flex flex-col">
+        {categoryBanner && (
+          <div class="w-full my-4">
+            <img
+              src={categoryBanner.desktop || ""}
+              alt="Categoria"
+              class="w-full h-auto object-cover"
+              loading="lazy"
+            />
           </div>
-        </>
-      ) : (
-        <>
-          {/* Mobile: Breadcrumb -> Banner */}
+        )}
+
+        {page.breadcrumb?.itemListElement && (
           <div class="container px-5 lg:px-[4rem] pt-4 sm:pt-5">
-            <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
+            <Breadcrumb itemListElement={page.breadcrumb?.itemListElement} />
           </div>
-          {topBanner && (
-            <div class="w-full my-4">
-              <picture>
-                <source media="(max-width: 767px)" srcSet={topBanner.mobile} />
-                <img
-                  src={topBanner.desktop}
-                  alt="Categoria"
-                  class="w-full h-auto object-cover"
-                  loading="lazy"
-                />
-              </picture>
-            </div>
-          )}
-        </>
-      )}
+        )}
+      </div>
+
+      <div class="lg:hidden flex flex-col">
+        <div class="container px-5 lg:px-[4rem] pt-4 sm:pt-5">
+          <Breadcrumb itemListElement={page.breadcrumb?.itemListElement} />
+        </div>
+        {categoryBanner && (
+          <div class="w-full my-4">
+            <img
+              src={categoryBanner.mobile || ""}
+              alt="Categoria"
+              class="w-full h-auto object-cover"
+              loading="lazy"
+            />
+          </div>
+        )}
+      </div>
 
       <div class="container flex flex-col gap-4 sm:gap-5 w-full py-4 sm:py-5 px-5 lg:px-[4rem]">
+        {/* Mobile Filters Drawer */}
         {device === "mobile" && (
           <Drawer
-            id={controls}
+            id="mobile-filters"
             aside={
               <div class="bg-white flex flex-col h-full w-full divide-y overflow-y-hidden">
                 <div class="flex justify-between items-center">
                   <h1 class="px-4 py-3">
                     <span class="font-medium text-2xl">Filtro</span>
                   </h1>
-                  <label class="btn btn-ghost cursor-pointer" for={controls}>
-                    <Icon id="close" />
+                  <label
+                    class="btn btn-ghost cursor-pointer"
+                    for="mobile-filters"
+                  >
+                    <Icon id="close" size={24} />
                   </label>
                 </div>
                 <div class="flex-grow overflow-auto">
-                  <Filters filters={filters} />
+                  <Filters filters={page.filters} />
                 </div>
               </div>
             }
           >
-            <div class="flex sm:hidden flex-col items-start">
-              <div class="flex">{results}</div>
+            <div class="flex sm:hidden flex-col items-start w-full">
               <div class="w-full flex justify-between items-center gap-4 mt-5">
-                <div class="flex max-w-1/2 w-full">
+                <div class="flex w-1/2">
                   <label
                     class="cursor-pointer w-full h-9 min-h9 max-h-9 p-0 rounded-none flex items-center justify-center gap-2 bg-[#c6cfba] text-[#323f2d] text-sm font-bold"
-                    for={controls}
+                    for="mobile-filters"
                   >
                     Filtro
                   </label>
                 </div>
-                <div class="flex max-w-1/2 w-full">{sortBy}</div>
+                <div class="flex w-1/2">
+                  <Sort sortOptions={page.sortOptions} url={props.url} />
+                </div>
               </div>
             </div>
           </Drawer>
         )}
 
         <div class="grid grid-cols-1 sm:grid-cols-[250px_1fr] lg:gap-8">
+          {/* Desktop Filters */}
           {device === "desktop" && (
             <aside class="place-self-start flex flex-col gap-9 w-full">
               <span class="text-base font-medium h-12 flex items-center text-md text-[#1F251C]">
                 Filtro
               </span>
-              <Filters filters={filters} />
+              <Filters filters={page.filters} />
+              {filterBanner && (
+                <img
+                  src={filterBanner}
+                  alt="Filtro banner"
+                  class="w-full rounded mt-4"
+                />
+              )}
             </aside>
           )}
 
+          {/* Product Gallery */}
           <div class="flex flex-col gap-9">
-            {device === "desktop" && (
-              <div class="flex justify-between items-center">
-                {results}
-                <div class="w-full">{sortBy}</div>
-              </div>
-            )}
+            {/* Results Header */}
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+              <span class="text-md text-[#1F251C] font-normal w-full">
+                {page.pageInfo.records} produtos encontrados
+              </span>
+              {device === "desktop" && page.sortOptions.length > 0 && (
+                <div class="w-full sm:w-auto">
+                  <Sort sortOptions={page.sortOptions} url={props.url} />
+                </div>
+              )}
+            </div>
 
-            <PageResult {...props} />
+            {/* Product Grid */}
+            <div
+              class={`
+                grid grid-cols-2 gap-4
+                sm:grid-cols-3
+                lg:grid-cols-4
+                w-full
+              `}
+            >
+              {page.products?.map((product, index) => (
+                <ProductCard
+                  key={`product-card-${product.productID}`}
+                  product={product}
+                  preload={index === 0}
+                  index={index}
+                  class="h-[98%] w-[98%] shadow-[5px_5px_7px_0px_rgba(0,0,0,0.15)]"
+                />
+              ))}
+            </div>
 
+            {/* Pagination Buttons */}
+            {page.pageInfo &&
+              page.pageInfo.records > page.pageInfo.recordPerPage && (
+                <PaginationButtons
+                  currentPage={page.pageInfo.currentPage}
+                  records={page.pageInfo.records}
+                  recordPerPage={page.pageInfo.recordPerPage}
+                />
+              )}
+
+            {/* SEO Text */}
             {(seoText?.title || seoText?.description) && (
               <div class="flex flex-col gap-2 sm:gap-3 text-[#1F251C] px-2 sm:px-0 pt-8 border-t border-[#CCCCCC]">
                 {seoText.title && (
@@ -386,7 +208,13 @@ function Result(props: SectionProps<typeof loader>) {
                       {seoText.description}
                     </p>
                     <button
-                      onclick="document.getElementById('seo-text-truncated').classList.toggle('hidden'); document.getElementById('seo-text-full').classList.toggle('hidden'); this.textContent = this.textContent === 'Ver mais' ? 'Ver menos' : 'Ver mais';"
+                      onclick="
+                        const truncated = document.getElementById('seo-text-truncated');
+                        const full = document.getElementById('seo-text-full');
+                        truncated.classList.toggle('hidden');
+                        full.classList.toggle('hidden');
+                        this.textContent = this.textContent === 'Ver mais' ? 'Ver menos' : 'Ver mais';
+                      "
                       class="text-[#3A4332] font-bold text-sm hover:underline"
                     >
                       Ver mais
@@ -395,46 +223,16 @@ function Result(props: SectionProps<typeof loader>) {
                 )}
               </div>
             )}
-
-            {device === "mobile" && bannerImage && (
-              <img
-                src={bannerImage}
-                alt="banner categoria"
-                class="w-full rounded"
-              />
-            )}
           </div>
         </div>
       </div>
-
-      <script
-        type="module"
-        dangerouslySetInnerHTML={{
-          __html: useScript(
-            setPageQuerystring,
-            `${pageInfo.currentPage}`,
-            container
-          ),
-        }}
-      />
     </div>
   );
-}
-
-function SearchResult({ page, ...props }: SectionProps<typeof loader>) {
-  if (!page) {
-    return <NotFound />;
-  }
-  return <Result {...props} page={page} />;
 }
 
 export const loader = (props: Props, req: Request) => {
   return {
     ...props,
     url: req.url,
-    bannerImage: props.bannerImage,
-    seoText: props.seoText,
   };
 };
-
-export default SearchResult;
