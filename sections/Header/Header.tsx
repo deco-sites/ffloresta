@@ -7,7 +7,7 @@ import Icon from "../../components/ui/Icon.tsx";
 import { SIDEMENU_CONTAINER_ID, SIDEMENU_DRAWER_ID } from "../../constants.ts";
 import { type LoadingFallbackProps } from "@deco/deco";
 import SignIn from "../../components/header/SignIn.tsx";
-import NavItemIsland from "../../islands/NavItemIsland.tsx";
+import NavItemIsland from "../../islands/Header/NavItemIsland.tsx";
 import SearchBarIsland from "../../islands/CustomSearchBar.tsx";
 import HeaderDrawer from "../../components/header/HeaderDrawer.tsx";
 import MenuMobile from "../../islands/Header/MenuMobile.tsx";
@@ -41,7 +41,6 @@ export interface SearchBarProps {
    * @title Nome da conta VTEX
    * @description Exemplo: 'minhaloja'
    */
-  vtexAccount: string;
 }
 
 export interface SectionProps {
@@ -169,17 +168,17 @@ const Mobile = ({
       id={SIDEMENU_DRAWER_ID}
       aside={
         <HeaderDrawer.Aside drawer={SIDEMENU_DRAWER_ID}>
-          {loading === "lazy"
-            ? (
-              <div
-                id={SIDEMENU_CONTAINER_ID}
-                class="h-full bg-white flex items-center justify-center"
-                style={{ minWidth: "100vw" }}
-              >
-                <span class="loading loading-spinner" />
-              </div>
-            )
-            : <MenuMobile navItems={navItems ?? []} />}
+          {loading === "lazy" ? (
+            <div
+              id={SIDEMENU_CONTAINER_ID}
+              class="h-full bg-white flex items-center justify-center"
+              style={{ minWidth: "100vw" }}
+            >
+              <span class="loading loading-spinner" />
+            </div>
+          ) : (
+            <MenuMobile navItems={navItems ?? []} />
+          )}
         </HeaderDrawer.Aside>
       }
     />
@@ -187,7 +186,7 @@ const Mobile = ({
 );
 
 export const LoadingFallback = (props: LoadingFallbackProps<Props>) => (
-  <Header {...(props as any)} loading="lazy" />
+  <Header {...(props as Props)} loading="lazy" />
 );
 
 export default Header;

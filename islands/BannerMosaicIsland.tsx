@@ -1,6 +1,5 @@
 import { useId } from "../sdk/useId.ts";
 import { ImageWidget as Image } from "apps/admin/widgets.ts";
-import Section from "../components/ui/Section.tsx";
 import { useEffect, useRef, useState } from "preact/hooks";
 import { clx } from "../sdk/clx.ts";
 
@@ -244,5 +243,3 @@ export default function BannerMosaicIsland({
     </div>
   );
 }
-
-export const LoadingFallback = () => <Section.Placeholder height="400px" />;

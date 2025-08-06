@@ -3,7 +3,6 @@ import { JSX } from "preact";
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
 import { usePlatform } from "../../sdk/usePlatform.tsx";
-import { MINICART_DRAWER_ID } from "../../constants.ts";
 import { useScript } from "@deco/deco/hooks";
 
 export interface Props extends JSX.HTMLAttributes<HTMLButtonElement> {
@@ -17,13 +16,13 @@ const onClick = () => {
   const button = event?.currentTarget as HTMLButtonElement | null;
   const container = button!.closest<HTMLDivElement>("div[data-cart-item]")!;
   const { item, platformProps } = JSON.parse(
-    decodeURIComponent(container.getAttribute("data-cart-item")!),
+    decodeURIComponent(container.getAttribute("data-cart-item")!)
   );
   window.STOREFRONT.CART.addToCart(item, platformProps);
 
   // abre o drawer de forma segura
   const minicartCheckbox = document.getElementById(
-    "minicart-drawer", // 👈 literal fixo
+    "minicart-drawer" // 👈 literal fixo
   ) as HTMLInputElement | null;
   if (minicartCheckbox) {
     minicartCheckbox.checked = true;
@@ -48,7 +47,7 @@ const useAddToCart = ({ product, seller }: Props) => {
       quantity: 1,
       itemId: productID,
       attributes: Object.fromEntries(
-        additionalProperty.map(({ name, value }) => [name, value]),
+        additionalProperty.map(({ name, value }) => [name, value])
       ),
     };
   }
@@ -64,7 +63,7 @@ const useAddToCart = ({ product, seller }: Props) => {
       itemId: Number(productGroupID),
       add_to_cart_enhanced: "1",
       attributes: Object.fromEntries(
-        additionalProperty.map(({ name, value }) => [name, value]),
+        additionalProperty.map(({ name, value }) => [name, value])
       ),
     };
   }
@@ -89,7 +88,7 @@ function AddToCartButton(props: Props) {
       class="flex"
       data-item-id={product.productID}
       data-cart-item={encodeURIComponent(
-        JSON.stringify({ item, platformProps }),
+        JSON.stringify({ item, platformProps })
       )}
     >
       <button

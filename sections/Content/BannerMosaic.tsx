@@ -1,6 +1,7 @@
 import BannerMosaicIsland, {
   Props as BannerMosaicProps,
 } from "../../islands/BannerMosaicIsland.tsx";
+import Section from "../../components/ui/Section.tsx";
 
 export interface Props extends BannerMosaicProps {
   title?: string;
@@ -14,3 +15,5 @@ export default function BannerMosaicSection(props: Props) {
     </div>
   );
 }
+
+export const LoadingFallback = () => <Section.Placeholder height="400px" />;

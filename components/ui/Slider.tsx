@@ -37,12 +37,7 @@ function Item({
 // Botão "Próximo"
 function NextButton(props: JSX.IntrinsicElements["button"]) {
   return (
-    <button
-      disabled
-      data-slide="next"
-      aria-label="Next item"
-      {...props}
-    />
+    <button disabled data-slide="next" aria-label="Next item" {...props} />
   );
 }
 
@@ -98,7 +93,7 @@ function onLoad({
     };
 
     const isHTMLElement = (x: Element): x is HTMLElement =>
-      typeof (x as any).offsetLeft === "number";
+      typeof (x as Element).offsetLeft === "number";
 
     const getElementsInsideContainer = () => {
       const indices: number[] = [];
@@ -132,7 +127,7 @@ function onLoad({
       const isShowingFirst = indices[0] === 0;
       const pageIndex = Math.floor(indices[indices.length - 1] / itemsPerPage);
       goToItem(
-        isShowingFirst ? items.length - 1 : (pageIndex - 1) * itemsPerPage,
+        isShowingFirst ? items.length - 1 : (pageIndex - 1) * itemsPerPage
       );
     };
 
@@ -169,7 +164,7 @@ function onLoad({
           }
         });
       },
-      { threshold: THRESHOLD, root: slider },
+      { threshold: THRESHOLD, root: slider }
     );
 
     items.forEach((item) => observer.observe(item));

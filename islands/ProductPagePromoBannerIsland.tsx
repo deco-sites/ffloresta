@@ -8,7 +8,7 @@ export interface ProductPagePromoBannerProps {
   title: string;
   promoName: string;
 }
-export default function PromoCountdownIsland({
+export default function ProductPagePromoBannerIsland({
   image,
   countdownDate,
   title,

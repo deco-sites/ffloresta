@@ -1,5 +1,3 @@
-// islands/CustomSearchBar.tsx
-
 import { useSignal } from "@preact/signals";
 import { useEffect } from "preact/hooks";
 import Icon from "../components/ui/Icon.tsx";
@@ -31,7 +29,6 @@ export interface Props {
    * @title Nome da conta VTEX
    * @description Exemplo: 'minhaloja'
    */
-  vtexAccount: string;
 }
 
 interface SearchTerm {
@@ -130,7 +127,7 @@ function ProductCard({
                 <span class="font-bold text-[14px] leading-[170%] tracking-[3%] line-through">
                   {formatPrice(listPrice, offers?.priceCurrency).replace(
                     "R$",
-                    "",
+                    ""
                   )}
                 </span>
               </div>
@@ -154,7 +151,6 @@ export default function CustomSearchBar({
   placeholder = "Buscar produtos...",
   showProductSuggestions = true,
   showSearchTerms = true,
-  vtexAccount,
 }: Props) {
   const query = useSignal("");
   const products = useSignal<Product[]>([]);
@@ -261,26 +257,27 @@ export default function CustomSearchBar({
                 <ul class="space-y-1 md:space-y-2">
                   {(isMobile.value
                     ? searchTerms.value.slice(0, 3)
-                    : searchTerms.value).map((term, index) => (
-                      <li key={index}>
-                        <a
-                          href={`/s?q=${encodeURIComponent(term.term)}`}
-                          class="block py-1 md:py-2 hover:bg-base-200 rounded"
-                          onMouseDown={(e) => e.preventDefault()}
-                        >
-                          <div class="flex justify-between items-center">
-                            <span class="text-sm md:text-base text-capitalize">
-                              {term.term}
+                    : searchTerms.value
+                  ).map((term, index) => (
+                    <li key={index}>
+                      <a
+                        href={`/s?q=${encodeURIComponent(term.term)}`}
+                        class="block py-1 md:py-2 hover:bg-base-200 rounded"
+                        onMouseDown={(e) => e.preventDefault()}
+                      >
+                        <div class="flex justify-between items-center">
+                          <span class="text-sm md:text-base text-capitalize">
+                            {term.term}
+                          </span>
+                          {term.count && (
+                            <span class="text-xs md:text-sm text-gray-500">
+                              {term.count}
                             </span>
-                            {term.count && (
-                              <span class="text-xs md:text-sm text-gray-500">
-                                {term.count}
-                              </span>
-                            )}
-                          </div>
-                        </a>
-                      </li>
-                    ))}
+                          )}
+                        </div>
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </div>
             )}

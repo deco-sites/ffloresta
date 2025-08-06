@@ -1630,7 +1630,6 @@
   "searchBar": {
     "placeholder": "O que você está procurando?",
     "showProductSuggestions": true,
-    "showSearchTerms": true,
-    "vtexAccount": "ferragemfloresta"
+    "showSearchTerms": true
   }
 }

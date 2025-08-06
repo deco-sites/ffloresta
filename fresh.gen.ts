@@ -5,15 +5,15 @@
 import * as $_app from "./routes/_app.tsx";
 import * as $AddToCartButtonPDP from "./islands/AddToCartButtonPDP.tsx";
 import * as $BannerMosaicIsland from "./islands/BannerMosaicIsland.tsx";
-import * as $BrandGrid from "./islands/BrandGrid.tsx";
-import * as $CarouselSlider from "./islands/CarouselSlider.tsx";
+import * as $BrandGridIsland from "./islands/BrandGridIsland.tsx";
 import * as $CustomSearchBar from "./islands/CustomSearchBar.tsx";
 import * as $Header_MenuMobile from "./islands/Header/MenuMobile.tsx";
-import * as $NavItemIsland from "./islands/NavItemIsland.tsx";
+import * as $Header_NavItemIsland from "./islands/Header/NavItemIsland.tsx";
 import * as $Newsletter from "./islands/Newsletter.tsx";
-import * as $ProductDescription from "./islands/ProductDescription.tsx";
-import * as $ProductPagePromoBanner from "./islands/ProductPagePromoBanner.tsx";
+import * as $ProductDescriptionIsland from "./islands/ProductDescriptionIsland.tsx";
+import * as $ProductPagePromoBannerIsland from "./islands/ProductPagePromoBannerIsland.tsx";
 import * as $Slider from "./islands/Slider.tsx";
+import * as $Sliders_CarouselSlider from "./islands/Sliders/CarouselSlider.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -23,15 +23,15 @@ const manifest = {
   islands: {
     "./islands/AddToCartButtonPDP.tsx": $AddToCartButtonPDP,
     "./islands/BannerMosaicIsland.tsx": $BannerMosaicIsland,
-    "./islands/BrandGrid.tsx": $BrandGrid,
-    "./islands/CarouselSlider.tsx": $CarouselSlider,
+    "./islands/BrandGridIsland.tsx": $BrandGridIsland,
     "./islands/CustomSearchBar.tsx": $CustomSearchBar,
     "./islands/Header/MenuMobile.tsx": $Header_MenuMobile,
-    "./islands/NavItemIsland.tsx": $NavItemIsland,
+    "./islands/Header/NavItemIsland.tsx": $Header_NavItemIsland,
     "./islands/Newsletter.tsx": $Newsletter,
-    "./islands/ProductDescription.tsx": $ProductDescription,
-    "./islands/ProductPagePromoBanner.tsx": $ProductPagePromoBanner,
+    "./islands/ProductDescriptionIsland.tsx": $ProductDescriptionIsland,
+    "./islands/ProductPagePromoBannerIsland.tsx": $ProductPagePromoBannerIsland,
     "./islands/Slider.tsx": $Slider,
+    "./islands/Sliders/CarouselSlider.tsx": $Sliders_CarouselSlider,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

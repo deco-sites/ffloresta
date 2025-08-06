@@ -1,5 +1,5 @@
 import type { JSX } from "preact";
-import { clx } from "../sdk/clx.ts";
+import { clx } from "../../sdk/clx.ts";
 import { useScript } from "@deco/deco/hooks";
 
 // Dot de navegação
@@ -20,7 +20,7 @@ function Dot({
 }
 
 // Componente raiz do slider
-function Slider(props: JSX.IntrinsicElements["ul"]) {
+export default function CarouselSlider(props: JSX.IntrinsicElements["ul"]) {
   return <ul data-slider {...props} />;
 }
 
@@ -264,10 +264,8 @@ function JS({
   );
 }
 
-Slider.Dot = Dot;
-Slider.Item = Item;
-Slider.NextButton = NextButton;
-Slider.PrevButton = PrevButton;
-Slider.JS = JS;
-
-export default Slider;
+CarouselSlider.Dot = Dot;
+CarouselSlider.Item = Item;
+CarouselSlider.NextButton = NextButton;
+CarouselSlider.PrevButton = PrevButton;
+CarouselSlider.JS = JS;

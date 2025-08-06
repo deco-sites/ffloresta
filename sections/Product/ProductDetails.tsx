@@ -2,8 +2,8 @@ import { ProductDetailsPage } from "apps/commerce/types.ts";
 import GallerySlider from "../../components/product/Gallery.tsx";
 import ProductInfo from "../../components/product/ProductInfo.tsx";
 import { clx } from "../../sdk/clx.ts";
-import ProductDescription from "../../islands/ProductDescription.tsx";
-import PromoCountdownIsland from "../../islands/ProductPagePromoBanner.tsx";
+import ProductDescriptionIsland from "../../islands/ProductDescriptionIsland.tsx";
+import ProductPagePromoBannerIsland from "../../islands/ProductPagePromoBannerIsland.tsx";
 import type { ImageWidget as Image } from "apps/admin/widgets.ts";
 import { HTMLWidget as HTML } from "apps/admin/widgets.ts";
 import Breadcrumb from "../../components/ui/Breadcrumb.tsx";
@@ -74,7 +74,7 @@ export default function ProductDetails({
   return (
     <div class="w-full flex flex-col bg-white">
       <div class="block lg:hidden mt-6">
-        {productBanner && <PromoCountdownIsland {...productBanner} />}
+        {productBanner && <ProductPagePromoBannerIsland {...productBanner} />}
       </div>
 
       {page.breadcrumbList.itemListElement && (
@@ -96,7 +96,9 @@ export default function ProductDetails({
         <div class="h-fit px-5 pb-4 pt-6 shadow-[2px_4px_12px_rgba(0,0,0,0.145)] mb-10 lg:mb-0 bg-[#fdfff5]">
           {productBanner && (
             <div class="hidden lg:block mb-5">
-              {productBanner && <PromoCountdownIsland {...productBanner} />}
+              {productBanner && (
+                <ProductPagePromoBannerIsland {...productBanner} />
+              )}
             </div>
           )}
           <ProductInfo page={page} />
@@ -106,7 +108,7 @@ export default function ProductDetails({
         {benefits && <ProductBenefits benefits={benefits} />}
       </div>
 
-      <ProductDescription page={page} />
+      <ProductDescriptionIsland page={page} />
     </div>
   );
 }

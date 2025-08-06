@@ -1,7 +1,7 @@
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import { Picture } from "apps/website/components/Picture.tsx";
 import Section from "../../components/ui/Section.tsx";
-import Slider from "../../islands/CarouselSlider.tsx";
+import CarouselSlider from "../../islands/Sliders/CarouselSlider.tsx";
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
@@ -106,7 +106,7 @@ function Carousel({ images = [], preload, interval }: Props) {
         "w-full max-w-full overflow-hidden flex min-h-[unset] h-fit",
       )}
     >
-      <Slider
+      <CarouselSlider
         rootId={id}
         interval={interval ?? 5000}
         infinite
@@ -114,17 +114,21 @@ function Carousel({ images = [], preload, interval }: Props) {
         class="carousel carousel-center w-full cursor-grab active:cursor-grabbing select-none"
       >
         {images.map((image, index) => (
-          <Slider.Item index={index} class="carousel-item w-full" key={index}>
+          <CarouselSlider.Item
+            index={index}
+            class="carousel-item w-full"
+            key={index}
+          >
             <BannerItem image={image} lcp={index === 0 && preload} />
-          </Slider.Item>
+          </CarouselSlider.Item>
         ))}
-      </Slider>
+      </CarouselSlider>
 
       {/* Navigation arrows - only visible on desktop and on hover */}
       {images.length > 1 && (
         <>
           <div class="hidden lg:block">
-            <Slider.PrevButton
+            <CarouselSlider.PrevButton
               class="absolute left-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"
               disabled={false}
             >
@@ -146,8 +150,8 @@ function Carousel({ images = [], preload, interval }: Props) {
                   </path>
                 </svg>
               </div>
-            </Slider.PrevButton>
-            <Slider.NextButton
+            </CarouselSlider.PrevButton>
+            <CarouselSlider.NextButton
               class="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"
               disabled={false}
             >
@@ -169,7 +173,7 @@ function Carousel({ images = [], preload, interval }: Props) {
                   </path>
                 </svg>
               </div>
-            </Slider.NextButton>
+            </CarouselSlider.NextButton>
           </div>
 
           <ul
@@ -180,7 +184,7 @@ function Carousel({ images = [], preload, interval }: Props) {
           >
             {images.map((_, index) => (
               <li class="carousel-item h-3" key={index}>
-                <Slider.Dot
+                <CarouselSlider.Dot
                   index={index}
                   class={clx(
                     "bg-transparent border border-[#2D2D2D] h-2 w-2 no-animation",
@@ -191,7 +195,7 @@ function Carousel({ images = [], preload, interval }: Props) {
             ))}
           </ul>
 
-          <Slider.JS
+          <CarouselSlider.JS
             rootId={id}
             interval={interval ?? 5000}
             infinite

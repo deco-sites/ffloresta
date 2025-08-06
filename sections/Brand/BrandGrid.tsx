@@ -1,9 +1,6 @@
 import { ImageWidget } from "apps/admin/widgets.ts";
-import BrandGridIsland from "../../islands/BrandGrid.tsx";
+import BrandGridIsland from "../../islands/BrandGridIsland.tsx";
 
-/**
- * @titleBy label
- */
 export interface BrandItem {
   image: ImageWidget;
   href: string;
