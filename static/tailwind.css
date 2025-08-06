@@ -2791,11 +2791,6 @@ details.collapse summary::-webkit-details-marker {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-bc,oklch(var(--bc)/var(--tw-bg-opacity)));
 }
-.progress-primary::-moz-progress-bar {
-  border-radius: var(--rounded-box, 1rem);
-  --tw-bg-opacity: 1;
-  background-color: var(--fallback-p,oklch(var(--p)/var(--tw-bg-opacity)));
-}
 .progress:indeterminate {
   --progress-color: var(--fallback-bc,oklch(var(--bc)/1));
   background-image: repeating-linear-gradient(
@@ -2809,9 +2804,6 @@ details.collapse summary::-webkit-details-marker {
   background-position-x: 15%;
   animation: progress-loading 5s ease-in-out infinite;
 }
-.progress-primary:indeterminate {
-  --progress-color: var(--fallback-p,oklch(var(--p)/1));
-}
 .progress::-webkit-progress-bar {
   border-radius: var(--rounded-box, 1rem);
   background-color: transparent;
@@ -2820,10 +2812,6 @@ details.collapse summary::-webkit-details-marker {
   border-radius: var(--rounded-box, 1rem);
   --tw-bg-opacity: 1;
   background-color: var(--fallback-bc,oklch(var(--bc)/var(--tw-bg-opacity)));
-}
-.progress-primary::-webkit-progress-value {
-  --tw-bg-opacity: 1;
-  background-color: var(--fallback-p,oklch(var(--p)/var(--tw-bg-opacity)));
 }
 .progress:indeterminate::-moz-progress-bar {
   background-color: transparent;
@@ -5516,6 +5504,10 @@ details.collapse summary::-webkit-details-marker {
   --tw-text-opacity: 1;
   color: rgb(50 63 45 / var(--tw-text-opacity));
 }
+.text-\[\#325710\] {
+  --tw-text-opacity: 1;
+  color: rgb(50 87 16 / var(--tw-text-opacity));
+}
 .text-\[\#3A4332\] {
   --tw-text-opacity: 1;
   color: rgb(58 67 50 / var(--tw-text-opacity));
@@ -6850,8 +6842,8 @@ input[type="checkbox"]:checked::after {
     height: 2.25rem;
   }
 
-  .lg\:h-\[122px\] {
-    height: 122px;
+  .lg\:h-\[120px\] {
+    height: 120px;
   }
 
   .lg\:max-h-9 {
@@ -7160,6 +7152,16 @@ input[type="checkbox"]:checked::after {
     padding-left: 0px;
     padding-right: 0px;
   }
+}
+
+.\[\&\:\:-moz-progress-bar\]\:bg-\[\#325710\]::-moz-progress-bar {
+  --tw-bg-opacity: 1;
+  background-color: rgb(50 87 16 / var(--tw-bg-opacity));
+}
+
+.\[\&\:\:-webkit-progress-value\]\:bg-\[\#325710\]::-webkit-progress-value {
+  --tw-bg-opacity: 1;
+  background-color: rgb(50 87 16 / var(--tw-bg-opacity));
 }
 
 .\[\&_section\]\:contents section {
