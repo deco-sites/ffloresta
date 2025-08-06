@@ -30,7 +30,7 @@
         "__resolveType": "site/sections/Product/SearchResult.tsx",
         "page": {
           "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
-          "count": 12,
+          "count": 16,
           "advancedConfigs": {
             "includeOriginalAttributes": []
           },
@@ -52,6 +52,14 @@
         "topBanner": {
           "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
           "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+        },
+        "categoryBanner": {
+          "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+          "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+        },
+        "filterBanner": {
+          "desktop": "https://assets.decocache.com/ffloresta/33330e97-eafc-4362-8d8b-5f709ad63088/Group-2404.png",
+          "mobile": "https://assets.decocache.com/ffloresta/33330e97-eafc-4362-8d8b-5f709ad63088/Group-2404.png"
         }
       }
     },
