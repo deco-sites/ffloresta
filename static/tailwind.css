@@ -6336,6 +6336,11 @@ input[type="checkbox"]:checked::after {
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
+.data-\[active\]\:bg-\[\#2D2D2D\][data-active] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(45 45 45 / var(--tw-bg-opacity));
+}
+
 @media (max-width: 1240px) {
 
   .max-\[1240px\]\:w-\[calc\(25\%-\(72px\/4\)\)\] {

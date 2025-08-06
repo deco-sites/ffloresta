@@ -14,6 +14,7 @@ import * as $ProductDescriptionIsland from "./islands/ProductDescriptionIsland.t
 import * as $ProductPagePromoBannerIsland from "./islands/ProductPagePromoBannerIsland.tsx";
 import * as $Slider from "./islands/Slider.tsx";
 import * as $Sliders_CarouselSlider from "./islands/Sliders/CarouselSlider.tsx";
+import * as $Sliders_ProductCarouselSlider from "./islands/Sliders/ProductCarouselSlider.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -32,6 +33,8 @@ const manifest = {
     "./islands/ProductPagePromoBannerIsland.tsx": $ProductPagePromoBannerIsland,
     "./islands/Slider.tsx": $Slider,
     "./islands/Sliders/CarouselSlider.tsx": $Sliders_CarouselSlider,
+    "./islands/Sliders/ProductCarouselSlider.tsx":
+      $Sliders_ProductCarouselSlider,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;
