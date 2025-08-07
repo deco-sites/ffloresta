@@ -52,11 +52,12 @@ function ProductInfo({ page }: Props) {
     },
   });
 
-  const hasValidVariants = isVariantOf?.hasVariant?.some(
-    (variant) =>
-      variant?.name?.toLowerCase() !== "title" &&
-      variant?.name?.toLowerCase() !== "default title",
-  ) ?? false;
+  const hasValidVariants =
+    isVariantOf?.hasVariant?.some(
+      (variant) =>
+        variant?.name?.toLowerCase() !== "title" &&
+        variant?.name?.toLowerCase() !== "default title"
+    ) ?? false;
 
   // Calculate best installment (copied from ProductCard)
   const priceSpecs = product.offers?.offers?.[0]?.priceSpecification ?? [];
@@ -66,17 +67,16 @@ function ProductInfo({ page }: Props) {
       spec.priceType === "https://schema.org/SalePrice" &&
       spec.billingDuration &&
       spec.billingIncrement &&
-      spec.billingIncrement * spec.billingDuration <= price,
+      spec.billingIncrement * spec.billingDuration <= price
   );
   const bestInstallment = noInterestInstallments.reduce(
     (max, curr) =>
       !max || curr.billingDuration > max.billingDuration ? curr : max,
-    null,
+    null
   );
 
   return (
     <div {...viewItemEvent} class="flex flex-col bg-[#fdfff5]" id={id}>
-      {/* SKU and Product Name */}
       <div class="flex flex-col gap-0.5">
         <span class="font-normal text-[14px] leading-[140%] text-[#3A4332]">
           SKU: {product.sku}
@@ -84,7 +84,6 @@ function ProductInfo({ page }: Props) {
         <h1 class="leading-[140%] text-[#3A4332] text-[24px]">{title}</h1>
       </div>
 
-      {/* Prices */}
       <div class="mt-1.5 md:mt-5 flex flex-col gap-0">
         <div class="flex flex-col items-start gap-0">
           {listPrice && (
@@ -97,7 +96,6 @@ function ProductInfo({ page }: Props) {
           </span>
         </div>
 
-        {/* Cash Price with SVG */}
         <div class="flex items-center gap-2 mt-1">
           <svg
             width="18"
@@ -119,56 +117,48 @@ function ProductInfo({ page }: Props) {
 
           <span class="font-gotham font-normal text-[12px] leading-[170%] text-[#677357]">
             {bestInstallment
-              ? `${bestInstallment.billingDuration}x de ${
-                formatPrice(
+              ? `${bestInstallment.billingDuration}x de ${formatPrice(
                   bestInstallment.billingIncrement,
-                  offers?.priceCurrency,
-                )
-              } sem juros`
-              : `1x de ${
-                formatPrice(
+                  offers?.priceCurrency
+                )} sem juros`
+              : `1x de ${formatPrice(
                   price,
-                  offers?.priceCurrency,
-                )
-              } no cartão de crédito`}
+                  offers?.priceCurrency
+                )} no cartão de crédito`}
           </span>
         </div>
       </div>
 
-      {/* Border bottom */}
       <div class="mt-5 md:mt-5 pb-5 border-b border-black" />
 
-      {/* Variant Selector */}
-
-      {/* Add to Cart Button */}
       <div class="mt-4 ">
-        {availability === "https://schema.org/InStock"
-          ? (
-            <>
-              {hasValidVariants && (
-                <div class="mb-6">
-                  <ProductSelector product={product} />
-                </div>
-              )}
-              <AddToCartButtonPDP
-                item={item}
-                seller={seller}
-                product={product}
-                platform={platform}
-                class="mb-[14px]"
-                disabled={false}
-              />
-
-              <div>
-                <ShippingSimulationForm
-                  items={[
-                    { id: Number(product.sku), quantity: 1, seller: seller },
-                  ]}
-                />
+        {availability === "https://schema.org/InStock" ? (
+          <>
+            {hasValidVariants && (
+              <div class="mb-6">
+                <ProductSelector product={product} />
               </div>
-            </>
-          )
-          : <OutOfStock productID={productID} />}
+            )}
+            <AddToCartButtonPDP
+              item={item}
+              seller={seller}
+              product={product}
+              platform={platform}
+              class="mb-[14px]"
+              disabled={false}
+            />
+
+            <div>
+              <ShippingSimulationForm
+                items={[
+                  { id: Number(product.sku), quantity: 1, seller: seller },
+                ]}
+              />
+            </div>
+          </>
+        ) : (
+          <OutOfStock productID={productID} />
+        )}
       </div>
     </div>
   );

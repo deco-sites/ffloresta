@@ -1,5 +1,5 @@
 import { ProductDetailsPage } from "apps/commerce/types.ts";
-import GallerySlider from "../../components/product/Gallery.tsx";
+import ProductImagesGallery from "../../islands/ProductImagesGallery.tsx";
 import ProductInfo from "../../components/product/ProductInfo.tsx";
 import { clx } from "../../sdk/clx.ts";
 import ProductDescriptionIsland from "../../islands/ProductDescriptionIsland.tsx";
@@ -51,22 +51,22 @@ export default function ProductDetails({
     );
   }
 
-  if (page.product.offers?.offers?.length) {
-    const offer = page.product.offers.offers[0];
+  // if (page.product.offers?.offers?.length) {
+  //   const offer = page.product.offers.offers[0];
 
-    // Debug: Log das especificações de preço (parcelamento)
-    if (offer.priceSpecification?.length) {
-      // Filtra apenas as parcelas sem juros para debug
-      const noInterestInstallments = offer.priceSpecification.filter(
-        (spec) =>
-          spec.priceComponentType === "https://schema.org/Installment" &&
-          spec.priceType === "https://schema.org/SalePrice" &&
-          spec.billingDuration &&
-          spec.billingIncrement &&
-          spec.billingIncrement * spec.billingDuration === offer.price,
-      );
-    }
-  }
+  //   // Debug: Log das especificações de preço (parcelamento)
+  //   if (offer.priceSpecification?.length) {
+  //     // Filtra apenas as parcelas sem juros para debug
+  //     const noInterestInstallments = offer.priceSpecification.filter(
+  //       (spec) =>
+  //         spec.priceComponentType === "https://schema.org/Installment" &&
+  //         spec.priceType === "https://schema.org/SalePrice" &&
+  //         spec.billingDuration &&
+  //         spec.billingIncrement &&
+  //         spec.billingIncrement * spec.billingDuration === offer.price
+  //     );
+  //   }
+  // }
 
   const breadcrumbItems = [...page.breadcrumbList.itemListElement];
   breadcrumbItems.pop();
@@ -87,11 +87,11 @@ export default function ProductDetails({
         class={clx(
           "container grid md:mt-8",
           "grid-cols-1 gap-9 py-0",
-          "lg:grid-cols-[1fr_380px] lg:gap-11",
+          "lg:grid-cols-[1fr_380px] lg:gap-11"
         )}
       >
         <div class="w-full flex flex-col">
-          <GallerySlider page={page} />
+          <ProductImagesGallery page={page} />
         </div>
         <div class="h-fit px-5 pb-4 pt-6 shadow-[2px_4px_12px_rgba(0,0,0,0.145)] mb-10 lg:mb-0 bg-[#fdfff5]">
           {productBanner && (
@@ -104,11 +104,11 @@ export default function ProductDetails({
           <ProductInfo page={page} />
         </div>
       </div>
-      <div class="container">
+      {/* <div class="container">
         {benefits && <ProductBenefits benefits={benefits} />}
-      </div>
+      </div> */}
 
-      <ProductDescriptionIsland page={page} />
+      {/* <ProductDescriptionIsland page={page} /> */}
     </div>
   );
 }
