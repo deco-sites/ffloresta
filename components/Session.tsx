@@ -9,17 +9,20 @@ import Drawer from "./ui/Drawer.tsx";
 import UserProvider from "./user/Provider.tsx";
 import WishlistProvider, { type Wishlist } from "./wishlist/Provider.tsx";
 import { useScript } from "@deco/deco/hooks";
+
 declare global {
   interface Window {
     STOREFRONT: SDK;
   }
 }
+
 export interface Cart {
   currency: string;
   coupon: string;
   value: string;
   items: Item[];
 }
+
 export interface SDK {
   CART: {
     getCart: () => Cart | null;
@@ -50,39 +53,57 @@ export interface SDK {
     dispatch: (form: HTMLFormElement) => void;
   };
 }
+
 const sdk = () => {
   const target = new EventTarget();
+
   const createCartSDK = (): SDK["CART"] => {
     let form: HTMLFormElement | null = null;
-    const getCart = (): Cart =>
-      form &&
-      JSON.parse(
-        decodeURIComponent(
-          form.querySelector<HTMLInputElement>('input[name="storefront-cart"]')
-            ?.value || "[]",
-        ),
-      );
+
+    const getCart = (): Cart | null => {
+      if (!form) return null;
+
+      try {
+        const cartInput = form.querySelector<HTMLInputElement>(
+          'input[name="storefront-cart"]',
+        );
+        return cartInput?.value
+          ? JSON.parse(decodeURIComponent(cartInput.value))
+          : null;
+      } catch (error) {
+        console.error("Error parsing cart data:", error);
+        return null;
+      }
+    };
+
     const sdk: SDK["CART"] = {
       getCart,
-      getQuantity: (itemId) =>
-        form?.querySelector<HTMLInputElement>(
+      getQuantity: (itemId) => {
+        if (!form) return undefined;
+        const input = form.querySelector<HTMLInputElement>(
           `[data-item-id="${itemId}"] input[type="number"]`,
-        )?.valueAsNumber,
+        );
+        return input?.valueAsNumber;
+      },
       setQuantity: (itemId, quantity) => {
-        const input = form?.querySelector<HTMLInputElement>(
+        if (!form) return false;
+
+        const input = form.querySelector<HTMLInputElement>(
           `[data-item-id="${itemId}"] input[type="number"]`,
         );
-        const item = getCart()?.items.find(
-          (item) =>
-            // deno-lint-ignore no-explicit-any
-            (item as any).item_id === itemId,
+        const cart = getCart();
+        const item = cart?.items.find(
+          (item) => (item as any).item_id === itemId,
         );
+
         if (!input || !item) {
           return false;
         }
+
         input.value = quantity.toString();
+
         if (input.validity.valid) {
-          window.DECO.events.dispatch({
+          window.DECO?.events?.dispatch({
             name: item.quantity < input.valueAsNumber
               ? "add_to_cart"
               : "remove_from_cart",
@@ -93,22 +114,32 @@ const sdk = () => {
         return true;
       },
       addToCart: (item, platformProps) => {
-        const input = form?.querySelector<HTMLInputElement>(
+        if (!form) return false;
+
+        const input = form.querySelector<HTMLInputElement>(
           'input[name="add-to-cart"]',
         );
-        const button = form?.querySelector<HTMLButtonElement>(
+        const button = form.querySelector<HTMLButtonElement>(
           `button[name="action"][value="add-to-cart"]`,
         );
+
         if (!input || !button) {
           return false;
         }
-        window.DECO.events.dispatch({
+
+        window.DECO?.events?.dispatch({
           name: "add_to_cart",
           params: { items: { item } },
         });
-        input.value = encodeURIComponent(JSON.stringify(platformProps));
-        button.click();
-        return true;
+
+        try {
+          input.value = encodeURIComponent(JSON.stringify(platformProps));
+          button.click();
+          return true;
+        } catch (error) {
+          console.error("Error adding to cart:", error);
+          return false;
+        }
       },
       subscribe: (cb, opts) => {
         target.addEventListener("cart", () => cb(sdk), opts);
@@ -123,63 +154,69 @@ const sdk = () => {
     };
     return sdk;
   };
+
   const createAnalyticsSDK = () => {
     addEventListener("load", () => {
       function sendEvent(e: Element | null) {
-        const event = e?.getAttribute("data-event");
-        if (!event) {
-          return;
+        if (!e) return;
+
+        const event = e.getAttribute("data-event");
+        if (!event) return;
+
+        try {
+          const decoded = JSON.parse(decodeURIComponent(event));
+          window.DECO?.events?.dispatch(decoded);
+        } catch (error) {
+          console.error("Error dispatching event:", error);
         }
-        const decoded = JSON.parse(decodeURIComponent(event));
-        window.DECO.events.dispatch(decoded);
       }
+
       function handleClick(e: Event) {
         e.stopPropagation();
         sendEvent(e.currentTarget as HTMLElement | null);
       }
+
       // Only available on newer safari versions
       const handleView = typeof IntersectionObserver !== "undefined"
         ? new IntersectionObserver((items) => {
           for (const item of items) {
             const { isIntersecting, target } = item;
-            if (!isIntersecting) {
-              continue;
-            }
-            handleView!.unobserve(target);
+            if (!isIntersecting) continue;
+            handleView?.unobserve(target);
             sendEvent(target);
           }
         })
         : null;
+
       const listener = (node: Element) => {
         const maybeTrigger = node.getAttribute("data-event-trigger");
         const on = maybeTrigger === "click" ? "click" : "view";
 
         if (on === "click") {
-          node.addEventListener("click", handleClick, {
-            passive: true,
-          });
+          node.addEventListener("click", handleClick, { passive: true });
           return;
         }
 
         if (on === "view") {
           handleView?.observe(node);
-          return;
         }
       };
 
-      document.body.querySelectorAll("[data-event]").forEach(listener);
+      // Safe querySelectorAll with null check
+      const eventElements = document.body?.querySelectorAll("[data-event]");
+      eventElements?.forEach(listener);
 
-      document.body.addEventListener(
-        "htmx:load",
-        (e) =>
-          (e as unknown as { detail: { elt: HTMLElement } }).detail.elt
-            .querySelectorAll("[data-event]")
-            .forEach(listener),
-      );
+      document.body?.addEventListener("htmx:load", (e) => {
+        const target = (e as unknown as { detail: { elt: HTMLElement } }).detail
+          .elt;
+        target?.querySelectorAll("[data-event]")?.forEach(listener);
+      });
     });
   };
+
   const createUserSDK = () => {
     let person: Person | null = null;
+
     const sdk: SDK["USER"] = {
       getUser: () => person,
       subscribe: (cb, opts) => {
@@ -193,22 +230,33 @@ const sdk = () => {
     };
     return sdk;
   };
+
   const createWishlistSDK = () => {
     let form: HTMLFormElement | null = null;
     let productIDs: Set<string> = new Set();
+
     const sdk: SDK["WISHLIST"] = {
       toggle: (productID: string, productGroupID: string) => {
         if (!form) {
           console.error("Missing wishlist Provider");
           return false;
         }
-        form.querySelector<HTMLInputElement>(
+
+        const productIdInput = form.querySelector<HTMLInputElement>(
           'input[name="product-id"]',
-        )!.value = productID;
-        form.querySelector<HTMLInputElement>(
+        );
+        const productGroupInput = form.querySelector<HTMLInputElement>(
           'input[name="product-group-id"]',
-        )!.value = productGroupID;
-        form.querySelector<HTMLButtonElement>("button")?.click();
+        );
+        const button = form.querySelector<HTMLButtonElement>("button");
+
+        if (!productIdInput || !productGroupInput || !button) {
+          return false;
+        }
+
+        productIdInput.value = productID;
+        productGroupInput.value = productGroupID;
+        button.click();
         return true;
       },
       inWishlist: (id: string) => productIDs.has(id),
@@ -221,22 +269,31 @@ const sdk = () => {
         const script = f.querySelector<HTMLScriptElement>(
           'script[type="application/json"]',
         );
-        const wishlist: Wishlist | null = script
-          ? JSON.parse(script.innerText)
-          : null;
-        productIDs = new Set(wishlist?.productIDs);
+
+        if (script) {
+          try {
+            const wishlist: Wishlist | null = JSON.parse(script.innerText);
+            productIDs = new Set(wishlist?.productIDs);
+          } catch (error) {
+            console.error("Error parsing wishlist data:", error);
+          }
+        }
+
         target.dispatchEvent(new Event("wishlist"));
       },
     };
     return sdk;
   };
+
   createAnalyticsSDK();
+
   window.STOREFRONT = {
     CART: createCartSDK(),
     USER: createUserSDK(),
     WISHLIST: createWishlistSDK(),
   };
 };
+
 export const action = async (
   _props: unknown,
   _req: Request,
@@ -247,6 +304,7 @@ export const action = async (
     ctx.invoke("site/loaders/wishlist.ts"),
     ctx.invoke("site/loaders/user.ts"),
   ]);
+
   return {
     mode: "eager",
     minicart,
@@ -254,17 +312,20 @@ export const action = async (
     user,
   };
 };
+
 export const loader = (_props: unknown, _req: Request, _ctx: AppContext) => {
   return {
     mode: "lazy",
   };
 };
+
 interface Props {
   minicart?: Minicart | null;
   wishlist?: Wishlist | null;
   user?: Person | null;
   mode?: "eager" | "lazy";
 }
+
 export default function Session({
   minicart,
   wishlist,
@@ -284,6 +345,7 @@ export default function Session({
       </>
     );
   }
+
   return (
     <>
       {/* Minicart Drawer */}
@@ -299,7 +361,7 @@ export default function Session({
                 maxWidth: "425px",
               }}
             >
-              <CartProvider cart={minicart!} />
+              <CartProvider cart={minicart ?? null} />
             </div>
           </Drawer.Aside>
         }

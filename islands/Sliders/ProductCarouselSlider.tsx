@@ -121,7 +121,7 @@ const onLoad = ({
       if (interval && autoplay && !autoplayInterval) {
         autoplayInterval = setInterval(
           scrollNext,
-          interval
+          interval,
         ) as unknown as number;
       }
     };
@@ -163,7 +163,7 @@ const onLoad = ({
       {
         root: slider,
         threshold: 0.6, // O item deve estar 60% visível para ser considerado ativo
-      }
+      },
     );
 
     items.forEach((item) => observer.observe(item));

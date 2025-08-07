@@ -179,12 +179,12 @@ export default function SearchResult(props: SectionProps<typeof loader>) {
             {/* Pagination Buttons */}
             {page.pageInfo &&
               page.pageInfo.records > page.pageInfo.recordPerPage && (
-                <PaginationButtons
-                  currentPage={page.pageInfo.currentPage}
-                  records={page.pageInfo.records}
-                  recordPerPage={page.pageInfo.recordPerPage}
-                />
-              )}
+              <PaginationButtons
+                currentPage={page.pageInfo.currentPage}
+                records={page.pageInfo.records}
+                recordPerPage={page.pageInfo.recordPerPage}
+              />
+            )}
 
             {/* SEO Text */}
             {(seoText?.title || seoText?.description) && (

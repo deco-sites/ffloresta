@@ -1,6 +1,5 @@
 import type { JSX } from "preact";
 import { clx } from "../../sdk/clx.ts";
-import { useScript } from "@deco/deco/hooks";
 
 // Dot de navegação
 function Dot({
@@ -252,13 +251,18 @@ function JS({
     <script
       type="module"
       dangerouslySetInnerHTML={{
-        __html: useScript(onLoad, {
-          rootId,
-          scroll,
-          interval,
-          infinite,
-          autoplay,
-        }),
+        __html: `
+          (function() {
+            ${onLoad.toString()}
+            onLoad({
+              rootId: "${rootId}",
+              scroll: "${scroll}",
+              interval: ${interval},
+              infinite: ${infinite},
+              autoplay: ${autoplay}
+            });
+          })();
+        `,
       }}
     />
   );
