@@ -4488,6 +4488,9 @@ details.collapse summary::-webkit-details-marker {
 .cursor-none {
   cursor: none;
 }
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
 .cursor-pointer {
   cursor: pointer;
 }
@@ -4998,6 +5001,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .bg-\[rgba\(14\2c 20\2c 15\2c 0\.6\)\] {
   background-color: rgba(14,20,15,0.6);
+}
+.bg-\[rgba\(21\2c 31\2c 22\2c 0\.3\)\] {
+  background-color: rgba(21,31,22,0.3);
 }
 .bg-\[rgba\(21\2c 31\2c 22\2c 0\.6\)\] {
   background-color: rgba(21,31,22,0.6);
@@ -5623,6 +5629,9 @@ details.collapse summary::-webkit-details-marker {
 .opacity-30 {
   opacity: 0.3;
 }
+.opacity-50 {
+  opacity: 0.5;
+}
 .opacity-70 {
   opacity: 0.7;
 }
@@ -6125,6 +6134,12 @@ input[type="checkbox"]:checked::after {
   display: flex;
 }
 
+.hover\:scale-105:hover {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .hover\:scale-125:hover {
   --tw-scale-x: 1.25;
   --tw-scale-y: 1.25;
@@ -6153,14 +6168,14 @@ input[type="checkbox"]:checked::after {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
-.hover\:bg-\[\#23911f\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(35 145 31 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-\[\#2D3326\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(45 51 38 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-\[\#2a3124\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(42 49 36 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-\[\#2bbd48\]:hover {
@@ -6215,6 +6230,10 @@ input[type="checkbox"]:checked::after {
 
 .hover\:underline:hover {
   text-decoration-line: underline;
+}
+
+.hover\:opacity-100:hover {
+  opacity: 1;
 }
 
 .focus\:outline-none:focus {
