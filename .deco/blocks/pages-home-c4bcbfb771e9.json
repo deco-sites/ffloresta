@@ -15,7 +15,7 @@
           "mobile": "https://assets.decocache.com/ffloresta/7e81d038-dd95-440a-89b0-735d84926bbb/banner-mobile.png",
           "alt": "Banner Principal",
           "action": {
-            "href": "/"
+            "href": "/puxadores"
           }
         },
         {
@@ -164,7 +164,7 @@
         "brands": [
           {
             "image": "https://assets.decocache.com/ffloresta/c49ee659-cc68-4f63-9b43-236c32256167/category1.png",
-            "href": "/"
+            "href": "/ferramentas"
           },
           {
             "image": "https://assets.decocache.com/ffloresta/497d65db-5ee7-4aba-bc2b-aa0a594830ef/category2.png",
@@ -176,11 +176,11 @@
           },
           {
             "image": "https://assets.decocache.com/ffloresta/d96e85f1-c4b2-4ae0-b0fc-23992e0d9f70/category4.png",
-            "href": "/"
+            "href": "/fechaduras"
           },
           {
             "image": "https://assets.decocache.com/ffloresta/592d1ac9-6cef-46dc-a3fc-2ec662e35cb5/category5.png",
-            "href": "/"
+            "href": "/ferramentas"
           },
           {
             "image": "https://assets.decocache.com/ffloresta/c49ee659-cc68-4f63-9b43-236c32256167/category1.png",
@@ -220,17 +220,20 @@
           {
             "desktop": "https://assets.decocache.com/ffloresta/c376d2e4-cdc4-4b19-955c-8f01b5a1bff2/image.jpg",
             "mobile": "https://assets.decocache.com/ffloresta/2f6ccdcc-a5d2-489d-9dc4-1afda8362d38/image.png",
-            "alt": "01"
+            "alt": "01",
+            "href": "/puxadores"
           },
           {
             "desktop": "https://assets.decocache.com/ffloresta/5a919b3a-a71e-4091-b559-2ea7bc07165e/image-(2).jpg",
             "mobile": "https://assets.decocache.com/ffloresta/254d4d94-54a6-4f8d-bbc7-83b3234bf32a/image-(1).png",
-            "alt": "02"
+            "alt": "02",
+            "href": "/fechaduras"
           },
           {
             "desktop": "https://assets.decocache.com/ffloresta/595ff356-38b8-4369-a46e-cc4dae9a7264/image-(1).jpg",
             "mobile": "https://assets.decocache.com/ffloresta/a11d658a-1251-4feb-875b-710f71e3ce69/Frame-29128.png",
-            "alt": "03"
+            "alt": "03",
+            "href": "/ferramentas"
           }
         ],
         "itemsToShow": 3,
@@ -271,27 +274,27 @@
         "brands": [
           {
             "image": "https://assets.decocache.com/ffloresta/5449f31d-af59-4b85-89ec-85d6158f7a8c/brand-01.svg",
-            "href": "/"
+            "href": "/bosch"
           },
           {
             "image": "https://assets.decocache.com/ffloresta/3e69bcad-8472-4ee8-ab55-2b5ce9373337/brand-02.svg",
-            "href": "/"
+            "href": "/Dewalt"
           },
           {
             "image": "https://assets.decocache.com/ffloresta/2ce3a6f1-6e07-40a7-94e0-760524b8bac6/brand-03.svg",
-            "href": "/"
+            "href": "/Hafele"
           },
           {
             "image": "https://assets.decocache.com/ffloresta/8fd78072-2f18-44c8-ab49-801bef198e79/brand-04.svg",
-            "href": "/"
+            "href": "/La-Fonte"
           },
           {
             "image": "https://assets.decocache.com/ffloresta/02567902-0ede-47e3-bf78-70e1e0ed07a3/brand-05.svg",
-            "href": "/"
+            "href": "/Milwaukee"
           },
           {
             "image": "https://assets.decocache.com/ffloresta/91fc6b96-2a3b-4404-954b-2efe9362ebc8/brand-06.svg",
-            "href": "/"
+            "href": "/vonder"
           }
         ]
       }
