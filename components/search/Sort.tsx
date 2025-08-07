@@ -31,7 +31,7 @@ function Sort({ sortOptions, url }: Props) {
     label,
   }));
   return (
-    <div class="flex items-center w-full md:w-auto justify-end">
+    <div class="flex items-center w-full justify-end">
       <label
         for="sort"
         class="text-md text-[#1F251C] font-normal hidden md:inline"

@@ -45,7 +45,7 @@ export default function SearchResult(props: SectionProps<typeof loader>) {
   console.log(page.pageInfo, "page.products");
 
   return (
-    <div class="w-full">
+    <div class="w-full lg:mt-[-15px]">
       {/* Desktop: Breadcrumb -> Banner */}
       <div class="hidden lg:flex flex-col">
         {categoryBanner && (
@@ -134,7 +134,7 @@ export default function SearchResult(props: SectionProps<typeof loader>) {
               <Filters filters={page.filters} />
               {filterBanner && (
                 <img
-                  src={filterBanner}
+                  src={filterBanner.desktop}
                   alt="Filtro banner"
                   class="w-full rounded mt-4"
                 />
@@ -150,7 +150,7 @@ export default function SearchResult(props: SectionProps<typeof loader>) {
                 {page.pageInfo.records} produtos encontrados
               </span>
               {device === "desktop" && page.sortOptions.length > 0 && (
-                <div class="w-full sm:w-auto">
+                <div class="w-full">
                   <Sort sortOptions={page.sortOptions} url={props.url} />
                 </div>
               )}

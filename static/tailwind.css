@@ -6430,10 +6430,6 @@ input[type="checkbox"]:checked::after {
     width: calc(50% - 16px);
   }
 
-  .sm\:w-auto {
-    width: auto;
-  }
-
   .sm\:max-w-96 {
     max-width: 24rem;
   }
@@ -6670,10 +6666,6 @@ input[type="checkbox"]:checked::after {
     width: calc(33.333% - 16px);
   }
 
-  .md\:w-auto {
-    width: auto;
-  }
-
   .md\:max-w-40 {
     max-width: 10rem;
   }
@@ -6833,6 +6825,10 @@ input[type="checkbox"]:checked::after {
 
   .lg\:mt-4 {
     margin-top: 1rem;
+  }
+
+  .lg\:mt-\[-15px\] {
+    margin-top: -15px;
   }
 
   .lg\:mt-\[52px\] {
