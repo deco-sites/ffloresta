@@ -35,10 +35,11 @@ export async function action(props: Props, req: Request, ctx: AppContext) {
 }
 
 export default function Results({ result }: ComponentProps<typeof action>) {
-  const methods = result?.logisticsInfo?.reduce(
-    (initial, { slas }) => [...initial, ...slas],
-    [] as Sla[],
-  ) ?? [];
+  const methods =
+    result?.logisticsInfo?.reduce(
+      (initial, { slas }) => [...initial, ...slas],
+      [] as Sla[]
+    ) ?? [];
 
   if (!methods.length) {
     return (
@@ -52,7 +53,7 @@ export default function Results({ result }: ComponentProps<typeof action>) {
     <ul class="flex flex-col gap-4 p-4 border border-base-400 ">
       {methods.map((method) => (
         <li class="flex justify-between items-center border-base-200 not-first-child:border-t">
-          <span class="text-button text-center">Entrega {method.name}</span>
+          <span class="text-button text-center">{method.name}</span>
           <span class="text-button">
             até {formatShippingEstimate(method.shippingEstimate)}
           </span>

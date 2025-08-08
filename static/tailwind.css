@@ -4153,6 +4153,9 @@ details.collapse summary::-webkit-details-marker {
 .min-h-\[500px\] {
   min-height: 500px;
 }
+.min-h-\[64px\] {
+  min-height: 64px;
+}
 .min-h-\[66px\] {
   min-height: 66px;
 }
@@ -7186,6 +7189,27 @@ input[type="checkbox"]:checked::after {
 .\[\&\:\:-webkit-progress-value\]\:bg-\[\#325710\]::-webkit-progress-value {
   --tw-bg-opacity: 1;
   background-color: rgb(50 87 16 / var(--tw-bg-opacity));
+}
+
+.\[\&\>ol\]\:list-decimal>ol {
+  list-style-type: decimal;
+}
+
+.\[\&\>ol\]\:pl-5>ol {
+  padding-left: 1.25rem;
+}
+
+.\[\&\>p\]\:my-2>p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.\[\&\>ul\]\:list-disc>ul {
+  list-style-type: disc;
+}
+
+.\[\&\>ul\]\:pl-5>ul {
+  padding-left: 1.25rem;
 }
 
 .htmx-request .\[\.htmx-request_\&\]\:pointer-events-none {

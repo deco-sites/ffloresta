@@ -9,10 +9,11 @@ import Sort from "./Sort.tsx";
 import { useDevice } from "@deco/deco/hooks";
 import { ImageWidget } from "apps/admin/widgets.ts";
 import PaginationButtons from "../../islands/Search/PaginationButtons.tsx";
+import { HTMLWidget } from "apps/admin/widgets.ts";
 
 export interface SeoText {
   title?: string;
-  description?: string;
+  htmlContent?: HTMLWidget;
 }
 
 export interface Props {
@@ -41,8 +42,6 @@ export default function SearchResult(props: SectionProps<typeof loader>) {
   const { page, categoryBanner, filterBanner, seoText } = props;
 
   if (!page) return <NotFound />;
-
-  console.log(page.pageInfo, "page.products");
 
   return (
     <div class="w-full lg:mt-[-15px]">
@@ -202,27 +201,25 @@ export default function SearchResult(props: SectionProps<typeof loader>) {
               )}
 
             {/* SEO Text */}
-            {(seoText?.title || seoText?.description) && (
+            {(seoText?.title || seoText?.htmlContent) && (
               <div class="flex flex-col gap-2 sm:gap-3 text-[#1F251C] px-2 sm:px-0 pt-8 border-t border-[#CCCCCC]">
                 {seoText.title && (
                   <h2 class="text-[18px] sm:text-[20px] font-medium">
                     {seoText.title}
                   </h2>
                 )}
-                {seoText.description && (
+                {seoText.htmlContent && (
                   <>
-                    <p
+                    <div
                       id="seo-text-truncated"
-                      class="text-[14px] sm:text-[16px] leading-relaxed line-clamp-3"
-                    >
-                      {seoText.description}
-                    </p>
-                    <p
+                      class="text-[14px] sm:text-[16px] leading-relaxed line-clamp-3 [&>p]:my-2 [&>ul]:list-disc [&>ul]:pl-5 [&>ol]:list-decimal [&>ol]:pl-5"
+                      dangerouslySetInnerHTML={{ __html: seoText.htmlContent }}
+                    />
+                    <div
                       id="seo-text-full"
-                      class="text-[14px] sm:text-[16px] leading-relaxed hidden"
-                    >
-                      {seoText.description}
-                    </p>
+                      class="text-[14px] sm:text-[16px] leading-relaxed hidden [&>p]:my-2 [&>ul]:list-disc [&>ul]:pl-5 [&>ol]:list-decimal [&>ol]:pl-5"
+                      dangerouslySetInnerHTML={{ __html: seoText.htmlContent }}
+                    />
                     <button
                       onclick="
                         const truncated = document.getElementById('seo-text-truncated');
