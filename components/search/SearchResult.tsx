@@ -146,7 +146,7 @@ export default function SearchResult(props: SectionProps<typeof loader>) {
                 Filtro
               </span>
               <Filters filters={page.filters} />
-              {filterBanner && (
+              {filterBanner.desktop && (
                 <img
                   src={filterBanner.desktop}
                   alt="Filtro banner"
