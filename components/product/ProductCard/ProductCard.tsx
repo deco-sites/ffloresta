@@ -69,13 +69,13 @@ function ProductCard({
           relativeUrl={relativeUrl}
         />
 
-        {inStock && (
-          <div class="mt-2">
+        <div class="mt-2 min-h-[15px]">
+          {inStock && (
             <span class="text-xs text-white bg-[#087D38] h-[15px] flex items-center px-2 w-max">
               Chegará amanhã
             </span>
-          </div>
-        )}
+          )}
+        </div>
       </figure>
 
       <div class="mt-2 flex flex-col flex-grow">
@@ -88,7 +88,7 @@ function ProductCard({
           relativeUrl={relativeUrl}
         />
 
-        <div class="mt-1 flex flex-col items-start">
+        <div class="mt-1 flex flex-col items-start min-h-[20px]">
           <ProductInstallments
             priceSpecs={priceSpecs}
             price={price}
@@ -103,7 +103,7 @@ function ProductCard({
               seller={seller}
               item={item}
               class={clx(
-                "w-full bg-[#3A4332] text-white h-8 flex items-center justify-center",
+                "w-full bg-[#3A4332] border border-[#3A4332] text-white h-8 flex items-center justify-center",
                 "font-bold text-[14px] leading-[170%] tracking-[16%]",
                 "hover:bg-[#2a3124] transition duration-300 ease-in-out"
               )}
@@ -112,7 +112,7 @@ function ProductCard({
             <a
               href={relativeUrl}
               class={clx(
-                "w-full bg-[#293023] text-white h-8 flex items-center justify-center",
+                "w-full bg-transparent border border-[#3A4332] text-#3A4332 h-8 flex items-center justify-center",
                 "font-bold text-[14px] leading-[170%] tracking-[16%] cursor-none"
               )}
             >

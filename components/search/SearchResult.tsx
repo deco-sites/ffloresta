@@ -19,12 +19,12 @@ export interface SeoText {
 export interface Props {
   page: ProductListingPage | null;
   categoryBanner?: {
-    desktop: ImageWidget;
-    mobile: ImageWidget;
+    desktop?: ImageWidget;
+    mobile?: ImageWidget;
   };
   filterBanner?: {
-    desktop: ImageWidget;
-    mobile: ImageWidget;
+    desktop?: ImageWidget;
+    mobile?: ImageWidget;
   };
   seoText?: SeoText;
 }
@@ -185,7 +185,7 @@ export default function SearchResult(props: SectionProps<typeof loader>) {
                   product={product}
                   preload={index === 0}
                   index={index}
-                  class="h-[98%] w-[98%] shadow-[5px_5px_7px_0px_rgba(0,0,0,0.15)]"
+                  class="h-[98%] w-[98%] shadow-[5px_5px_7px_0px_rgba(0,0,0,0.15)] min-h-[430px]"
                 />
               ))}
             </div>
