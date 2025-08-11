@@ -677,7 +677,9 @@ html {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   transition-duration: 200ms;
@@ -1124,7 +1126,9 @@ html {
   --tw-scale-x: .95;
   --tw-scale-y: .95;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   transition-duration: 200ms;
@@ -1615,7 +1619,9 @@ html {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
   padding: 1.5rem;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   transition-duration: 200ms;
@@ -2600,7 +2606,9 @@ details.collapse summary::-webkit-details-marker {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   text-align: start;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   transition-duration: 200ms;
@@ -3777,10 +3785,6 @@ details.collapse summary::-webkit-details-marker {
   margin-top: 5rem;
   margin-bottom: 5rem;
 }
-.my-4 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
 .my-6 {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
@@ -4139,9 +4143,6 @@ details.collapse summary::-webkit-details-marker {
 .min-h-\[42px\] {
   min-height: 42px;
 }
-.min-h-\[430px\] {
-  min-height: 430px;
-}
 .min-h-\[450px\] {
   min-height: 450px;
 }
@@ -4171,9 +4172,6 @@ details.collapse summary::-webkit-details-marker {
 }
 .min-h-screen {
   min-height: 100vh;
-}
-.w-1\/2 {
-  width: 50%;
 }
 .w-1\/3 {
   width: 33.333333%;
@@ -4334,6 +4332,9 @@ details.collapse summary::-webkit-details-marker {
 .min-w-max {
   min-width: -moz-max-content;
   min-width: max-content;
+}
+.max-w-32 {
+  max-width: 8rem;
 }
 .max-w-4 {
   max-width: 1rem;
@@ -4877,10 +4878,6 @@ details.collapse summary::-webkit-details-marker {
   --tw-border-opacity: 1;
   border-color: rgb(201 207 207 / var(--tw-border-opacity));
 }
-.border-\[\#CCCCCC\] {
-  --tw-border-opacity: 1;
-  border-color: rgb(204 204 204 / var(--tw-border-opacity));
-}
 .border-\[\#E5E5E5\] {
   --tw-border-opacity: 1;
   border-color: rgb(229 229 229 / var(--tw-border-opacity));
@@ -5240,6 +5237,9 @@ details.collapse summary::-webkit-details-marker {
 .pb-12 {
   padding-bottom: 3rem;
 }
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
 .pb-4 {
   padding-bottom: 1rem;
 }
@@ -5294,11 +5294,11 @@ details.collapse summary::-webkit-details-marker {
 .pt-4 {
   padding-top: 1rem;
 }
+.pt-5 {
+  padding-top: 1.25rem;
+}
 .pt-6 {
   padding-top: 1.5rem;
-}
-.pt-8 {
-  padding-top: 2rem;
 }
 .pt-\[30px\] {
   padding-top: 30px;
@@ -5357,6 +5357,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .text-\[13px\] {
   font-size: 13px;
+}
+.text-\[14\.06px\] {
+  font-size: 14.06px;
 }
 .text-\[14px\] {
   font-size: 14px;
@@ -5558,6 +5561,10 @@ details.collapse summary::-webkit-details-marker {
   --tw-text-opacity: 1;
   color: rgb(141 152 160 / var(--tw-text-opacity));
 }
+.text-\[\#97A37F\] {
+  --tw-text-opacity: 1;
+  color: rgb(151 163 127 / var(--tw-text-opacity));
+}
 .text-\[\#aeafae\] {
   --tw-text-opacity: 1;
   color: rgb(174 175 174 / var(--tw-text-opacity));
@@ -5568,6 +5575,10 @@ details.collapse summary::-webkit-details-marker {
 }
 .text-\[\'Lato\'\] {
   color: 'Lato';
+}
+.text-\[white\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 .text-accent {
   --tw-text-opacity: 1;
@@ -5652,6 +5663,11 @@ details.collapse summary::-webkit-details-marker {
   --tw-shadow-colored: 2px 4px 12px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+.shadow-\[5\.62px_5\.62px_7\.03px_0px_rgba\(0\2c 0\2c 0\2c 0\.15\)\] {
+  --tw-shadow: 5.62px 5.62px 7.03px 0px rgba(0,0,0,0.15);
+  --tw-shadow-colored: 5.62px 5.62px 7.03px 0px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
 .shadow-\[5px_5px_7px_0px_rgba\(0\2c 0\2c 0\2c 0\.15\)\] {
   --tw-shadow: 5px 5px 7px 0px rgba(0,0,0,0.15);
   --tw-shadow-colored: 5px 5px 7px 0px var(--tw-shadow-color);
@@ -5708,10 +5724,13 @@ details.collapse summary::-webkit-details-marker {
 }
 .backdrop-blur-\[12px\] {
   --tw-backdrop-blur: blur(12px);
-  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 .transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -5887,7 +5906,9 @@ input[type="checkbox"]:checked::after {
 
 .has-\[\:invalid\]\:tooltip:has(:invalid):before,.has-\[\:invalid\]\:tooltip:has(:invalid):after {
   opacity: 0;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-delay: 100ms;
   transition-duration: 200ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -6190,6 +6211,11 @@ input[type="checkbox"]:checked::after {
   background-color: rgb(15 19 14 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-\[\#293023\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(41 48 35 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-\[\#2D3326\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(45 51 38 / var(--tw-bg-opacity));
@@ -6337,7 +6363,8 @@ input[type="checkbox"]:checked::after {
 
 .group:hover .group-hover\:backdrop-blur-\[12px\] {
   --tw-backdrop-blur: blur(12px);
-  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 .group:disabled .group-disabled\:bg-\[\#0D1717\] {
@@ -6364,7 +6391,8 @@ input[type="checkbox"]:checked::after {
 
 .peer:checked ~ .peer-checked\:backdrop-blur-\[12px\] {
   --tw-backdrop-blur: blur(12px);
-  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 .data-\[active\]\:bg-\[\#2D2D2D\][data-active] {
@@ -6505,10 +6533,6 @@ input[type="checkbox"]:checked::after {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .sm\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
   .sm\:grid-cols-\[150px_1fr\] {
     grid-template-columns: 150px 1fr;
   }
@@ -6539,10 +6563,6 @@ input[type="checkbox"]:checked::after {
 
   .sm\:items-end {
     align-items: flex-end;
-  }
-
-  .sm\:items-center {
-    align-items: center;
   }
 
   .sm\:justify-center {
@@ -6605,8 +6625,12 @@ input[type="checkbox"]:checked::after {
     padding-bottom: 1.25rem;
   }
 
-  .sm\:pt-5 {
-    padding-top: 1.25rem;
+  .sm\:pb-10 {
+    padding-bottom: 2.5rem;
+  }
+
+  .sm\:pt-10 {
+    padding-top: 2.5rem;
   }
 
   .sm\:text-start {
@@ -6864,10 +6888,6 @@ input[type="checkbox"]:checked::after {
 
   .lg\:mt-4 {
     margin-top: 1rem;
-  }
-
-  .lg\:mt-\[-15px\] {
-    margin-top: -15px;
   }
 
   .lg\:mt-\[52px\] {
@@ -7164,6 +7184,10 @@ input[type="checkbox"]:checked::after {
     max-width: none;
   }
 
+  .xl\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .xl\:flex-row {
     flex-direction: row;
   }
@@ -7208,29 +7232,16 @@ input[type="checkbox"]:checked::after {
   background-color: rgb(50 87 16 / var(--tw-bg-opacity));
 }
 
-.\[\&\>ol\]\:list-decimal>ol {
-  list-style-type: decimal;
-}
-
-.\[\&\>ol\]\:pl-5>ol {
-  padding-left: 1.25rem;
-}
-
-.\[\&\>p\]\:my-2>p {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.\[\&\>ul\]\:list-disc>ul {
-  list-style-type: disc;
-}
-
-.\[\&\>ul\]\:pl-5>ul {
-  padding-left: 1.25rem;
+.\[\&_section\]\:contents section {
+  display: contents;
 }
 
 .htmx-request .\[\.htmx-request_\&\]\:pointer-events-none {
   pointer-events: none;
+}
+
+.htmx-request .\[\.htmx-request_\&\]\:block {
+  display: block;
 }
 
 .htmx-request .\[\.htmx-request_\&\]\:inline {
