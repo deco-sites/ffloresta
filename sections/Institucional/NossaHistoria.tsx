@@ -49,7 +49,7 @@ function Institucional({ title, description, description2, images }: Props) {
                 class="font-bold mb-4"
                 style={{
                   color: "var(--Cores-de-Texto-Preta, #353535)",
-                  fontFamily: '"FS Emeric"',
+                  fontFamily: '"Lato"',
                   fontSize: "28px",
                 }}
               >
@@ -61,7 +61,7 @@ function Institucional({ title, description, description2, images }: Props) {
                 class="leading-relaxed mb-4"
                 style={{
                   color: "var(--Cores-de-Texto-Preta, #353535)",
-                  fontFamily: '"FS Emeric"',
+                  fontFamily: '"Lato"',
                   fontSize: "16px",
                 }}
                 dangerouslySetInnerHTML={{ __html: description }}
@@ -72,7 +72,7 @@ function Institucional({ title, description, description2, images }: Props) {
                 class="leading-relaxed mb-4"
                 style={{
                   color: "var(--Cores-de-Texto-Preta, #353535)",
-                  fontFamily: '"FS Emeric"',
+                  fontFamily: '"Lato"',
                   fontSize: "16px",
                 }}
                 dangerouslySetInnerHTML={{ __html: description2 }}

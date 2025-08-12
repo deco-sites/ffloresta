@@ -380,7 +380,7 @@ function Result(props: SectionProps<typeof loader>) {
                 <PageResult {...props} />
 
                 {(seoText?.title || seoText?.description) && (
-                  <div class="flex flex-col gap-2 sm:gap-3 text-[#1F251C] px-2 sm:px-0">
+                  <div class="flex flex-col gap-2 sm:gap-3 text-[#1F251C] px-2 sm:px-0 pt-6 border-t border-[#C6CFBA]">
                     {seoText.title && (
                       <h2 class="text-[18px] sm:text-[20px] font-medium">
                         {seoText.title}
