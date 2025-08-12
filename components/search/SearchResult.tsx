@@ -36,7 +36,7 @@ export interface Props {
 function NotFound() {
   return (
     <>
-      <div className="container w-full flex justify-center items-center py-2 mt-8">
+      <div className="container w-full flex justify-center items-center py-2 mt-20">
         <div className="mb-8">
           <div className="max-w-container w-full mx-auto px-4 flex flex-col items-center justify-center text-center py-12">
             <h1 className="text-[25px] leading-[25px] font-bold mb-6 uppercase">
@@ -114,11 +114,29 @@ function PageResult(props: SectionProps<typeof loader>) {
       >
         <a
           rel="prev"
-          class="w-full max-w-32 p-3 bg-[#3A4332] text-[#97A37F] h-8 flex items-center justify-center font-bold text-[14.06px] leading-[170%] tracking-[16%] hover:bg-[#293023] cursor-pointer transition"
+          class="cursor-pointer"
           hx-swap="outerHTML show:parent:top"
           hx-get={partialPrev}
         >
-          <span class="inline [.htmx-request_&]:hidden">Mostrar menos</span>
+          <span class="inline [.htmx-request_&]:hidden">
+            <div class="p-2 rounded-full bg-[rgba(21,31,22,0.6)] backdrop-blur-[12px] transition-all duration-300 hover:bg-[rgba(21,31,22,0.8)]">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18 15L12 9L6 15"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </span>
           <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
         </a>
       </div>
@@ -149,13 +167,32 @@ function PageResult(props: SectionProps<typeof loader>) {
             <a
               rel="next"
               class={clx(
-                "w-full max-w-32 p-3 bg-[#3A4332] text-[white] h-8 flex items-center justify-center font-bold text-[14.06px] leading-[170%] tracking-[16%] hover:bg-[#293023] cursor-pointer transition",
+                "cursor-pointer",
                 (!nextPageUrl || partial === "hideMore") && "hidden"
               )}
               hx-swap="outerHTML show:parent:top"
               hx-get={partialNext}
             >
-              <span class="inline [.htmx-request_&]:hidden">Mostrar mais</span>
+              <span class="inline [.htmx-request_&]:hidden">
+                {" "}
+                <div class="p-2 rounded-full bg-[rgba(21,31,22,0.6)] backdrop-blur-[12px] transition-all duration-300 hover:bg-[rgba(21,31,22,0.8)]">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 9L12 15L18 9"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </span>
               <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
             </a>
           </div>
