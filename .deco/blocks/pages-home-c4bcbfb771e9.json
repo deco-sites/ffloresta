@@ -2,10 +2,7 @@
   "name": "Home Page",
   "sections": [
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "Header With Menus"
-      }
+      "__resolveType": "Header With Menus"
     },
     {
       "__resolveType": "site/sections/Images/Carousel.tsx",
@@ -38,380 +35,335 @@
       "preload": true
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Content/BannerFaixa.tsx",
-        "bannerFaixa": "https://assets.decocache.com/ffloresta/2fa277a2-202b-49e5-9ecb-f560ee2040ba/faixa-site.svg"
-      }
+      "__resolveType": "site/sections/Content/BannerFaixa.tsx",
+      "bannerFaixa": "https://assets.decocache.com/ffloresta/2fa277a2-202b-49e5-9ecb-f560ee2040ba/faixa-site.svg"
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Content/Benefits.tsx",
-        "benefits": [
-          {
-            "benefitImgSrc": "https://assets.decocache.com/ffloresta/b7d07fbb-44b7-4c3e-8934-eb6cc3751182/home-benefit-icon-01.png",
-            "benefitImgAltText": "Cartão de Crédito",
-            "benefitTitle": "COMPRE EM ATÉ 10X SEM JUROS NO CARTÃO DE CRÉDITO EM COMPRAS ACIMA DE R$ 480,00",
-            "benefitText": "<p><strong><span style=\"font-size: 14px\">Parcele em até 10x sem juros no cartão</span></strong><span style=\"font-size: 14px\"><br>para compras acima de R$590,00</span></p>"
-          },
-          {
-            "benefitImgSrc": "https://assets.decocache.com/ffloresta/11de435f-bde0-4ab8-b30e-c5a6f94b9361/home-benefit-icon-02.png",
-            "benefitImgAltText": "Pix",
-            "benefitText": "<p><strong><span style=\"font-size: 14px\">10% off no PIX ou boleto</span></strong></p><p><span style=\"font-size: 14px\">*Exceto para promoções, ferramentas e produtos ZEN</span></p>"
-          },
-          {
-            "benefitImgSrc": "https://assets.decocache.com/ffloresta/e62b308d-131c-4b24-b669-6f7dc5a363f8/home-benefit-icon-03.png",
-            "benefitImgAltText": "Frete",
-            "benefitText": "<p><span style=\"font-size: 14px\">Entregamos em todo o Brasil</span></p>"
-          },
-          {
-            "benefitImgSrc": "https://assets.decocache.com/ffloresta/3fa6bd86-4c00-4e9a-8320-3b1ab15625ef/home-benefit-icon-04.png",
-            "benefitImgAltText": "Localização",
-            "benefitText": "<p><span style=\"font-size: 14px\">5 </span><strong><span style=\"font-size: 14px\">Lojas </span></strong><span style=\"font-size: 14px\">físicas:</span></p><p><span style=\"font-size: 14px\">Pinheiros, Brás, Santo André, Campinas e Sorocaba</span></p><p></p>"
-          }
-        ]
-      }
+      "__resolveType": "site/sections/Content/Benefits.tsx",
+      "benefits": [
+        {
+          "benefitImgSrc": "https://assets.decocache.com/ffloresta/b7d07fbb-44b7-4c3e-8934-eb6cc3751182/home-benefit-icon-01.png",
+          "benefitImgAltText": "Cartão de Crédito",
+          "benefitTitle": "COMPRE EM ATÉ 10X SEM JUROS NO CARTÃO DE CRÉDITO EM COMPRAS ACIMA DE R$ 480,00",
+          "benefitText": "<p><strong><span style=\"font-size: 14px\">Parcele em até 10x sem juros no cartão</span></strong><span style=\"font-size: 14px\"><br>para compras acima de R$590,00</span></p>"
+        },
+        {
+          "benefitImgSrc": "https://assets.decocache.com/ffloresta/11de435f-bde0-4ab8-b30e-c5a6f94b9361/home-benefit-icon-02.png",
+          "benefitImgAltText": "Pix",
+          "benefitText": "<p><strong><span style=\"font-size: 14px\">10% off no PIX ou boleto</span></strong></p><p><span style=\"font-size: 14px\">*Exceto para promoções, ferramentas e produtos ZEN</span></p>"
+        },
+        {
+          "benefitImgSrc": "https://assets.decocache.com/ffloresta/e62b308d-131c-4b24-b669-6f7dc5a363f8/home-benefit-icon-03.png",
+          "benefitImgAltText": "Frete",
+          "benefitText": "<p><span style=\"font-size: 14px\">Entregamos em todo o Brasil</span></p>"
+        },
+        {
+          "benefitImgSrc": "https://assets.decocache.com/ffloresta/3fa6bd86-4c00-4e9a-8320-3b1ab15625ef/home-benefit-icon-04.png",
+          "benefitImgAltText": "Localização",
+          "benefitText": "<p><span style=\"font-size: 14px\">5 </span><strong><span style=\"font-size: 14px\">Lojas </span></strong><span style=\"font-size: 14px\">físicas:</span></p><p><span style=\"font-size: 14px\">Pinheiros, Brás, Santo André, Campinas e Sorocaba</span></p><p></p>"
+        }
+      ]
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Product/ProductShelfWithBanner.tsx",
-        "products": {
-          "__resolveType": "vtex/loaders/intelligentSearch/productSearchValidator.ts",
-          "props": {
-            "sort": "price:desc",
-            "collection": "150",
-            "count": 20
-          }
+      "__resolveType": "site/sections/Product/ProductShelfWithBanner.tsx",
+      "products": {
+        "__resolveType": "vtex/loaders/intelligentSearch/productSearchValidator.ts",
+        "props": {
+          "sort": "price:desc",
+          "collection": "150",
+          "count": 20
+        }
+      },
+      "banner": {
+        "mobile": {
+          "src": "https://assets.decocache.com/ffloresta/8c864d95-f30b-4564-a3d6-d0df84ca4923/image-12.png",
+          "alt": "Banner de Topo Shelf"
         },
-        "banner": {
-          "mobile": {
-            "src": "https://assets.decocache.com/ffloresta/8c864d95-f30b-4564-a3d6-d0df84ca4923/image-12.png",
-            "alt": "Banner de Topo Shelf"
-          },
-          "desktop": {
-            "src": "https://assets.decocache.com/ffloresta/2a062699-1996-4d40-8cbf-a4cd8399aca9/home-top-banner-shelf-desk.png",
-            "alt": "Banner de Topo Shelf"
-          },
-          "href": "/"
+        "desktop": {
+          "src": "https://assets.decocache.com/ffloresta/2a062699-1996-4d40-8cbf-a4cd8399aca9/home-top-banner-shelf-desk.png",
+          "alt": "Banner de Topo Shelf"
         },
-        "orientation": "vertical",
-        "icon": "https://assets.decocache.com/ffloresta/8e934bf1-704a-43a4-9ec5-abe3998e9fc0/Logo-header.svg"
-      }
+        "href": "/"
+      },
+      "orientation": "vertical",
+      "icon": "https://assets.decocache.com/ffloresta/8e934bf1-704a-43a4-9ec5-abe3998e9fc0/Logo-header.svg"
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Product/ProductShelfWithBackground.tsx",
-        "title": "DESTAQUE FLORESTA",
-        "products": {
-          "__resolveType": "vtex/loaders/intelligentSearch/productSearchValidator.ts",
-          "props": {
-            "sort": "price:desc",
-            "collection": "150",
-            "count": 7
-          }
+      "__resolveType": "site/sections/Product/ProductShelfWithBackground.tsx",
+      "title": "DESTAQUE FLORESTA",
+      "products": {
+        "__resolveType": "vtex/loaders/intelligentSearch/productSearchValidator.ts",
+        "props": {
+          "sort": "price:desc",
+          "collection": "150",
+          "count": 7
+        }
+      },
+      "background": {
+        "desktop": {
+          "src": "https://assets.decocache.com/ffloresta/f8ba9f96-6cf8-4d4b-b0e9-8b52e645df7e/image.png"
         },
-        "background": {
-          "desktop": {
-            "src": "https://assets.decocache.com/ffloresta/f8ba9f96-6cf8-4d4b-b0e9-8b52e645df7e/image.png"
-          },
-          "mobile": {
-            "src": "https://assets.decocache.com/ffloresta/69b40089-2979-4077-9522-0f87b68682ee/image-(1).png"
-          }
+        "mobile": {
+          "src": "https://assets.decocache.com/ffloresta/69b40089-2979-4077-9522-0f87b68682ee/image-(1).png"
         }
       }
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Brand/BrandGrid.tsx",
-        "title": "CATEGORIAS",
-        "items": [
-          {
-            "href": "/",
-            "image": "https://assets.decocache.com/ffloresta/bcf27d4c-9968-4025-8fe7-e691d92b671d/category1.png",
-            "label": "Marceneiro"
-          },
-          {
-            "href": "/",
-            "image": "https://assets.decocache.com/ffloresta/497d65db-5ee7-4aba-bc2b-aa0a594830ef/category2.png",
-            "label": "Puxadores"
-          },
-          {
-            "href": "/",
-            "image": "https://assets.decocache.com/ffloresta/4dcff94e-9416-47af-9c0c-62acc2282904/category3.png",
-            "label": "Ferragens"
-          },
-          {
-            "href": "/",
-            "image": "https://assets.decocache.com/ffloresta/d96e85f1-c4b2-4ae0-b0fc-23992e0d9f70/category4.png",
-            "label": "Fechadura"
-          },
-          {
-            "href": "/",
-            "image": "https://assets.decocache.com/ffloresta/592d1ac9-6cef-46dc-a3fc-2ec662e35cb5/category5.png",
-            "label": "Ferramentas"
-          },
-          {
-            "href": "/",
-            "image": "https://assets.decocache.com/ffloresta/bcf27d4c-9968-4025-8fe7-e691d92b671d/category1.png",
-            "label": "Marceneiro"
-          }
-        ],
-        "icon": "https://assets.decocache.com/ffloresta/25532a3b-7eb8-4e13-9da7-e0e7f978d512/Group-13.svg",
-        "brands": [
-          {
-            "image": "https://assets.decocache.com/ffloresta/c49ee659-cc68-4f63-9b43-236c32256167/category1.png",
-            "href": "/ferramentas"
-          },
-          {
-            "image": "https://assets.decocache.com/ffloresta/497d65db-5ee7-4aba-bc2b-aa0a594830ef/category2.png",
-            "href": "/"
-          },
-          {
-            "image": "https://assets.decocache.com/ffloresta/4dcff94e-9416-47af-9c0c-62acc2282904/category3.png",
-            "href": "/"
-          },
-          {
-            "image": "https://assets.decocache.com/ffloresta/d96e85f1-c4b2-4ae0-b0fc-23992e0d9f70/category4.png",
-            "href": "/fechaduras"
-          },
-          {
-            "image": "https://assets.decocache.com/ffloresta/592d1ac9-6cef-46dc-a3fc-2ec662e35cb5/category5.png",
-            "href": "/ferramentas"
-          },
-          {
-            "image": "https://assets.decocache.com/ffloresta/c49ee659-cc68-4f63-9b43-236c32256167/category1.png",
-            "href": "/"
-          }
-        ]
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "PromoCountDownBannerDefault"
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Product/ProductShelf.tsx",
-        "title": "FERRAMENTAS",
-        "headerIcon": "https://assets.decocache.com/ffloresta/28daeeed-da2e-4353-9b47-094d244c40dd/home-second-shelf-title-icon.svg",
-        "products": {
-          "__resolveType": "vtex/loaders/intelligentSearch/productSearchValidator.ts",
-          "props": {
-            "sort": "price:desc",
-            "collection": "150",
-            "count": 30
-          }
+      "__resolveType": "site/sections/Brand/BrandGrid.tsx",
+      "title": "CATEGORIAS",
+      "items": [
+        {
+          "href": "/",
+          "image": "https://assets.decocache.com/ffloresta/bcf27d4c-9968-4025-8fe7-e691d92b671d/category1.png",
+          "label": "Marceneiro"
         },
-        "icon": "https://assets.decocache.com/ffloresta/411928eb-5e4b-4c3b-83d1-1c788f576a64/icon_prancheta.svg"
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Content/BannerMosaic.tsx",
-        "images": [
-          {
-            "desktop": "https://assets.decocache.com/ffloresta/c376d2e4-cdc4-4b19-955c-8f01b5a1bff2/image.jpg",
-            "mobile": "https://assets.decocache.com/ffloresta/2f6ccdcc-a5d2-489d-9dc4-1afda8362d38/image.png",
-            "alt": "01",
-            "href": "/puxadores"
-          },
-          {
-            "desktop": "https://assets.decocache.com/ffloresta/5a919b3a-a71e-4091-b559-2ea7bc07165e/image-(2).jpg",
-            "mobile": "https://assets.decocache.com/ffloresta/254d4d94-54a6-4f8d-bbc7-83b3234bf32a/image-(1).png",
-            "alt": "02",
-            "href": "/fechaduras"
-          },
-          {
-            "desktop": "https://assets.decocache.com/ffloresta/595ff356-38b8-4369-a46e-cc4dae9a7264/image-(1).jpg",
-            "mobile": "https://assets.decocache.com/ffloresta/a11d658a-1251-4feb-875b-710f71e3ce69/Frame-29128.png",
-            "alt": "03",
-            "href": "/ferramentas"
-          }
-        ],
-        "itemsToShow": 3,
-        "enableSlider": false
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Brand/BrandGrid.tsx",
-        "title": "COMPRE POR MARCA",
-        "items": [
-          {
-            "image": "https://assets.decocache.com/ffloresta/5449f31d-af59-4b85-89ec-85d6158f7a8c/brand-01.svg",
-            "href": "/"
-          },
-          {
-            "image": "https://assets.decocache.com/ffloresta/3e69bcad-8472-4ee8-ab55-2b5ce9373337/brand-02.svg",
-            "href": "/"
-          },
-          {
-            "image": "https://assets.decocache.com/ffloresta/2ce3a6f1-6e07-40a7-94e0-760524b8bac6/brand-03.svg",
-            "href": "/"
-          },
-          {
-            "image": "https://assets.decocache.com/ffloresta/8fd78072-2f18-44c8-ab49-801bef198e79/brand-04.svg",
-            "href": "/"
-          },
-          {
-            "image": "https://assets.decocache.com/ffloresta/02567902-0ede-47e3-bf78-70e1e0ed07a3/brand-05.svg",
-            "href": "/"
-          },
-          {
-            "image": "https://assets.decocache.com/ffloresta/91fc6b96-2a3b-4404-954b-2efe9362ebc8/brand-06.svg",
-            "href": "/"
-          }
-        ],
-        "brands": [
-          {
-            "image": "https://assets.decocache.com/ffloresta/5449f31d-af59-4b85-89ec-85d6158f7a8c/brand-01.svg",
-            "href": "/bosch"
-          },
-          {
-            "image": "https://assets.decocache.com/ffloresta/3e69bcad-8472-4ee8-ab55-2b5ce9373337/brand-02.svg",
-            "href": "/Dewalt"
-          },
-          {
-            "image": "https://assets.decocache.com/ffloresta/2ce3a6f1-6e07-40a7-94e0-760524b8bac6/brand-03.svg",
-            "href": "/Hafele"
-          },
-          {
-            "image": "https://assets.decocache.com/ffloresta/8fd78072-2f18-44c8-ab49-801bef198e79/brand-04.svg",
-            "href": "/La-Fonte"
-          },
-          {
-            "image": "https://assets.decocache.com/ffloresta/02567902-0ede-47e3-bf78-70e1e0ed07a3/brand-05.svg",
-            "href": "/Milwaukee"
-          },
-          {
-            "image": "https://assets.decocache.com/ffloresta/91fc6b96-2a3b-4404-954b-2efe9362ebc8/brand-06.svg",
-            "href": "/vonder"
-          }
-        ]
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Product/ProductShelf.tsx",
-        "title": "PUXADORES",
-        "headerIcon": "https://assets.decocache.com/ffloresta/28daeeed-da2e-4353-9b47-094d244c40dd/home-second-shelf-title-icon.svg",
-        "products": {
-          "__resolveType": "vtex/loaders/intelligentSearch/productSearchValidator.ts",
-          "props": {
-            "sort": "price:desc",
-            "collection": "150",
-            "count": 30
-          }
+        {
+          "href": "/",
+          "image": "https://assets.decocache.com/ffloresta/497d65db-5ee7-4aba-bc2b-aa0a594830ef/category2.png",
+          "label": "Puxadores"
         },
-        "icon": "https://assets.decocache.com/ffloresta/1e5baa2f-3844-4f09-a3f0-28039a7432ad/Prancheta-2.png",
-        "banner": "https://assets.decocache.com/ffloresta/783c3412-c1c4-4632-af24-1e5036f8c340/Mask-group.png",
-        "headerBanner": "https://assets.decocache.com/ffloresta/9a798c44-bf86-49eb-be92-3633ca83a640/image-8.png"
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Product/ProductShelf.tsx",
-        "title": "FECHADURAS",
-        "headerIcon": "https://assets.decocache.com/ffloresta/28daeeed-da2e-4353-9b47-094d244c40dd/home-second-shelf-title-icon.svg",
-        "products": {
-          "__resolveType": "vtex/loaders/intelligentSearch/productSearchValidator.ts",
-          "props": {
-            "sort": "price:desc",
-            "collection": "150",
-            "count": 30
-          }
+        {
+          "href": "/",
+          "image": "https://assets.decocache.com/ffloresta/4dcff94e-9416-47af-9c0c-62acc2282904/category3.png",
+          "label": "Ferragens"
         },
-        "icon": "https://assets.decocache.com/ffloresta/d26b1d31-88e1-41c0-ae15-82e146758d3f/Prancheta-1-3.svg",
-        "banner": "https://assets.decocache.com/ffloresta/783c3412-c1c4-4632-af24-1e5036f8c340/Mask-group.png",
-        "headerBanner": "https://assets.decocache.com/ffloresta/9a798c44-bf86-49eb-be92-3633ca83a640/image-8.png"
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Content/BannerMosaicWithMobileSlider.tsx",
-        "images": [
-          {
-            "desktop": "https://assets.decocache.com/ffloresta/286be8bc-fd44-453f-88fd-ae6a85889412/image.png",
-            "mobile": "https://assets.decocache.com/ffloresta/286be8bc-fd44-453f-88fd-ae6a85889412/image.png",
-            "alt": "01"
-          },
-          {
-            "desktop": "https://assets.decocache.com/ffloresta/6b8d4f85-af98-4347-b984-c649289d685e/image-(2).png",
-            "mobile": "https://assets.decocache.com/ffloresta/0278081e-3117-4b8d-b5cc-67d5dd908528/image-(2).png",
-            "alt": "02"
-          },
-          {
-            "desktop": "https://assets.decocache.com/ffloresta/77d6f44e-0090-4e21-9ec4-d3ce8becaf5f/image-(1).png",
-            "mobile": "https://assets.decocache.com/ffloresta/77d6f44e-0090-4e21-9ec4-d3ce8becaf5f/image-(1).png",
-            "alt": "03"
-          }
-        ]
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Content/BannerMosaic.tsx",
-        "images": [
-          {
-            "desktop": "https://assets.decocache.com/ffloresta/78f156c8-6c5b-4a19-afc3-ecfb58cae170/Prancheta-1.png",
-            "mobile": "https://assets.decocache.com/ffloresta/78f156c8-6c5b-4a19-afc3-ecfb58cae170/Prancheta-1.png",
-            "alt": "01"
-          },
-          {
-            "desktop": "https://assets.decocache.com/ffloresta/177afd76-5b72-494f-89e7-68ad8c3d5b77/Prancheta-2.png",
-            "mobile": "https://assets.decocache.com/ffloresta/177afd76-5b72-494f-89e7-68ad8c3d5b77/Prancheta-2.png",
-            "alt": "01"
-          },
-          {
-            "desktop": "https://assets.decocache.com/ffloresta/e03832bb-5fd3-49b7-bf3d-1a091377e5a1/Prancheta-3.png",
-            "mobile": "https://assets.decocache.com/ffloresta/e3a3a9f2-21e5-4cfe-9059-96cddad688cf/Screenshot_62.png",
-            "alt": "01"
-          }
-        ],
-        "itemsToShow": 3,
-        "enableSlider": false,
-        "gap": 10
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Content/VideoWithBackground.tsx",
-        "background": {
-          "desktop": {
-            "src": "https://assets.decocache.com/ffloresta/2804b7d2-3cc5-4a77-86af-111d1bf985fb/banner-video-1.webp"
-          },
-          "mobile": {
-            "src": "https://assets.decocache.com/ffloresta/2aad2234-d568-478a-a0f7-79534a2dd46b/Group-2368-(1).png"
-          }
+        {
+          "href": "/",
+          "image": "https://assets.decocache.com/ffloresta/d96e85f1-c4b2-4ae0-b0fc-23992e0d9f70/category4.png",
+          "label": "Fechadura"
         },
-        "videoUrl": "https://youtu.be/dSX5s9FML_U?si=khXj_dPOYXLncob5",
-        "youtubeVideoId": "dSX5s9FML_U?si=Qk8YX6y3Htdd0wPN",
-        "bgImgDesktop": "https://assets.decocache.com/ffloresta/71b2a321-de52-4d91-a2b5-4dc79749b24e/banner-video.jpg",
-        "bgImgMobile": "https://assets.decocache.com/ffloresta/07550bdf-ba30-4c4e-ab77-19a807244c7e/banner-video-mobile.jpg",
-        "alt": "Ferragens floresta",
-        "videoDesktop": "https://assets.decocache.com/ffloresta/536f0b91-8c9f-46a4-9fcc-08896bcb3bd2/ac82ae16b70c0cf1_ebfb2ebed673490493f79f4dd974b477.webm",
-        "videoMobile": "https://assets.decocache.com/ffloresta/536f0b91-8c9f-46a4-9fcc-08896bcb3bd2/ac82ae16b70c0cf1_ebfb2ebed673490493f79f4dd974b477.webm"
-      }
+        {
+          "href": "/",
+          "image": "https://assets.decocache.com/ffloresta/592d1ac9-6cef-46dc-a3fc-2ec662e35cb5/category5.png",
+          "label": "Ferramentas"
+        },
+        {
+          "href": "/",
+          "image": "https://assets.decocache.com/ffloresta/bcf27d4c-9968-4025-8fe7-e691d92b671d/category1.png",
+          "label": "Marceneiro"
+        }
+      ],
+      "icon": "https://assets.decocache.com/ffloresta/25532a3b-7eb8-4e13-9da7-e0e7f978d512/Group-13.svg",
+      "brands": [
+        {
+          "image": "https://assets.decocache.com/ffloresta/c49ee659-cc68-4f63-9b43-236c32256167/category1.png",
+          "href": "/ferramentas"
+        },
+        {
+          "image": "https://assets.decocache.com/ffloresta/497d65db-5ee7-4aba-bc2b-aa0a594830ef/category2.png",
+          "href": "/"
+        },
+        {
+          "image": "https://assets.decocache.com/ffloresta/4dcff94e-9416-47af-9c0c-62acc2282904/category3.png",
+          "href": "/"
+        },
+        {
+          "image": "https://assets.decocache.com/ffloresta/d96e85f1-c4b2-4ae0-b0fc-23992e0d9f70/category4.png",
+          "href": "/fechaduras"
+        },
+        {
+          "image": "https://assets.decocache.com/ffloresta/592d1ac9-6cef-46dc-a3fc-2ec662e35cb5/category5.png",
+          "href": "/ferramentas"
+        },
+        {
+          "image": "https://assets.decocache.com/ffloresta/c49ee659-cc68-4f63-9b43-236c32256167/category1.png",
+          "href": "/"
+        }
+      ]
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "Footer"
-      }
+      "__resolveType": "PromoCountDownBannerDefault"
+    },
+    {
+      "__resolveType": "site/sections/Product/ProductShelf.tsx",
+      "title": "FERRAMENTAS",
+      "headerIcon": "https://assets.decocache.com/ffloresta/28daeeed-da2e-4353-9b47-094d244c40dd/home-second-shelf-title-icon.svg",
+      "products": {
+        "__resolveType": "vtex/loaders/intelligentSearch/productSearchValidator.ts",
+        "props": {
+          "sort": "price:desc",
+          "collection": "150",
+          "count": 30
+        }
+      },
+      "icon": "https://assets.decocache.com/ffloresta/411928eb-5e4b-4c3b-83d1-1c788f576a64/icon_prancheta.svg"
+    },
+    {
+      "__resolveType": "site/sections/Content/BannerMosaic.tsx",
+      "images": [
+        {
+          "desktop": "https://assets.decocache.com/ffloresta/c376d2e4-cdc4-4b19-955c-8f01b5a1bff2/image.jpg",
+          "mobile": "https://assets.decocache.com/ffloresta/2f6ccdcc-a5d2-489d-9dc4-1afda8362d38/image.png",
+          "alt": "01",
+          "href": "/puxadores"
+        },
+        {
+          "desktop": "https://assets.decocache.com/ffloresta/5a919b3a-a71e-4091-b559-2ea7bc07165e/image-(2).jpg",
+          "mobile": "https://assets.decocache.com/ffloresta/254d4d94-54a6-4f8d-bbc7-83b3234bf32a/image-(1).png",
+          "alt": "02",
+          "href": "/fechaduras"
+        },
+        {
+          "desktop": "https://assets.decocache.com/ffloresta/595ff356-38b8-4369-a46e-cc4dae9a7264/image-(1).jpg",
+          "mobile": "https://assets.decocache.com/ffloresta/a11d658a-1251-4feb-875b-710f71e3ce69/Frame-29128.png",
+          "alt": "03",
+          "href": "/ferramentas"
+        }
+      ],
+      "itemsToShow": 3,
+      "enableSlider": false
+    },
+    {
+      "__resolveType": "site/sections/Brand/BrandGrid.tsx",
+      "title": "COMPRE POR MARCA",
+      "items": [
+        {
+          "image": "https://assets.decocache.com/ffloresta/5449f31d-af59-4b85-89ec-85d6158f7a8c/brand-01.svg",
+          "href": "/"
+        },
+        {
+          "image": "https://assets.decocache.com/ffloresta/3e69bcad-8472-4ee8-ab55-2b5ce9373337/brand-02.svg",
+          "href": "/"
+        },
+        {
+          "image": "https://assets.decocache.com/ffloresta/2ce3a6f1-6e07-40a7-94e0-760524b8bac6/brand-03.svg",
+          "href": "/"
+        },
+        {
+          "image": "https://assets.decocache.com/ffloresta/8fd78072-2f18-44c8-ab49-801bef198e79/brand-04.svg",
+          "href": "/"
+        },
+        {
+          "image": "https://assets.decocache.com/ffloresta/02567902-0ede-47e3-bf78-70e1e0ed07a3/brand-05.svg",
+          "href": "/"
+        },
+        {
+          "image": "https://assets.decocache.com/ffloresta/91fc6b96-2a3b-4404-954b-2efe9362ebc8/brand-06.svg",
+          "href": "/"
+        }
+      ],
+      "brands": [
+        {
+          "image": "https://assets.decocache.com/ffloresta/5449f31d-af59-4b85-89ec-85d6158f7a8c/brand-01.svg",
+          "href": "/bosch"
+        },
+        {
+          "image": "https://assets.decocache.com/ffloresta/3e69bcad-8472-4ee8-ab55-2b5ce9373337/brand-02.svg",
+          "href": "/Dewalt"
+        },
+        {
+          "image": "https://assets.decocache.com/ffloresta/2ce3a6f1-6e07-40a7-94e0-760524b8bac6/brand-03.svg",
+          "href": "/Hafele"
+        },
+        {
+          "image": "https://assets.decocache.com/ffloresta/8fd78072-2f18-44c8-ab49-801bef198e79/brand-04.svg",
+          "href": "/La-Fonte"
+        },
+        {
+          "image": "https://assets.decocache.com/ffloresta/02567902-0ede-47e3-bf78-70e1e0ed07a3/brand-05.svg",
+          "href": "/Milwaukee"
+        },
+        {
+          "image": "https://assets.decocache.com/ffloresta/91fc6b96-2a3b-4404-954b-2efe9362ebc8/brand-06.svg",
+          "href": "/vonder"
+        }
+      ]
+    },
+    {
+      "__resolveType": "site/sections/Product/ProductShelf.tsx",
+      "title": "PUXADORES",
+      "headerIcon": "https://assets.decocache.com/ffloresta/28daeeed-da2e-4353-9b47-094d244c40dd/home-second-shelf-title-icon.svg",
+      "products": {
+        "__resolveType": "vtex/loaders/intelligentSearch/productSearchValidator.ts",
+        "props": {
+          "sort": "price:desc",
+          "collection": "150",
+          "count": 30
+        }
+      },
+      "icon": "https://assets.decocache.com/ffloresta/1e5baa2f-3844-4f09-a3f0-28039a7432ad/Prancheta-2.png",
+      "banner": "https://assets.decocache.com/ffloresta/783c3412-c1c4-4632-af24-1e5036f8c340/Mask-group.png",
+      "headerBanner": "https://assets.decocache.com/ffloresta/9a798c44-bf86-49eb-be92-3633ca83a640/image-8.png"
+    },
+    {
+      "__resolveType": "site/sections/Product/ProductShelf.tsx",
+      "title": "FECHADURAS",
+      "headerIcon": "https://assets.decocache.com/ffloresta/28daeeed-da2e-4353-9b47-094d244c40dd/home-second-shelf-title-icon.svg",
+      "products": {
+        "__resolveType": "vtex/loaders/intelligentSearch/productSearchValidator.ts",
+        "props": {
+          "sort": "price:desc",
+          "collection": "150",
+          "count": 30
+        }
+      },
+      "icon": "https://assets.decocache.com/ffloresta/d26b1d31-88e1-41c0-ae15-82e146758d3f/Prancheta-1-3.svg",
+      "banner": "https://assets.decocache.com/ffloresta/783c3412-c1c4-4632-af24-1e5036f8c340/Mask-group.png",
+      "headerBanner": "https://assets.decocache.com/ffloresta/9a798c44-bf86-49eb-be92-3633ca83a640/image-8.png"
+    },
+    {
+      "__resolveType": "site/sections/Content/BannerMosaicWithMobileSlider.tsx",
+      "images": [
+        {
+          "desktop": "https://assets.decocache.com/ffloresta/286be8bc-fd44-453f-88fd-ae6a85889412/image.png",
+          "mobile": "https://assets.decocache.com/ffloresta/286be8bc-fd44-453f-88fd-ae6a85889412/image.png",
+          "alt": "01"
+        },
+        {
+          "desktop": "https://assets.decocache.com/ffloresta/6b8d4f85-af98-4347-b984-c649289d685e/image-(2).png",
+          "mobile": "https://assets.decocache.com/ffloresta/0278081e-3117-4b8d-b5cc-67d5dd908528/image-(2).png",
+          "alt": "02"
+        },
+        {
+          "desktop": "https://assets.decocache.com/ffloresta/77d6f44e-0090-4e21-9ec4-d3ce8becaf5f/image-(1).png",
+          "mobile": "https://assets.decocache.com/ffloresta/77d6f44e-0090-4e21-9ec4-d3ce8becaf5f/image-(1).png",
+          "alt": "03"
+        }
+      ]
+    },
+    {
+      "__resolveType": "site/sections/Content/BannerMosaic.tsx",
+      "images": [
+        {
+          "desktop": "https://assets.decocache.com/ffloresta/78f156c8-6c5b-4a19-afc3-ecfb58cae170/Prancheta-1.png",
+          "mobile": "https://assets.decocache.com/ffloresta/78f156c8-6c5b-4a19-afc3-ecfb58cae170/Prancheta-1.png",
+          "alt": "01"
+        },
+        {
+          "desktop": "https://assets.decocache.com/ffloresta/177afd76-5b72-494f-89e7-68ad8c3d5b77/Prancheta-2.png",
+          "mobile": "https://assets.decocache.com/ffloresta/177afd76-5b72-494f-89e7-68ad8c3d5b77/Prancheta-2.png",
+          "alt": "01"
+        },
+        {
+          "desktop": "https://assets.decocache.com/ffloresta/e03832bb-5fd3-49b7-bf3d-1a091377e5a1/Prancheta-3.png",
+          "mobile": "https://assets.decocache.com/ffloresta/e3a3a9f2-21e5-4cfe-9059-96cddad688cf/Screenshot_62.png",
+          "alt": "01"
+        }
+      ],
+      "itemsToShow": 3,
+      "enableSlider": false,
+      "gap": 10
+    },
+    {
+      "__resolveType": "site/sections/Content/VideoWithBackground.tsx",
+      "background": {
+        "desktop": {
+          "src": "https://assets.decocache.com/ffloresta/2804b7d2-3cc5-4a77-86af-111d1bf985fb/banner-video-1.webp"
+        },
+        "mobile": {
+          "src": "https://assets.decocache.com/ffloresta/2aad2234-d568-478a-a0f7-79534a2dd46b/Group-2368-(1).png"
+        }
+      },
+      "videoUrl": "https://youtu.be/dSX5s9FML_U?si=khXj_dPOYXLncob5",
+      "youtubeVideoId": "dSX5s9FML_U?si=Qk8YX6y3Htdd0wPN",
+      "bgImgDesktop": "https://assets.decocache.com/ffloresta/71b2a321-de52-4d91-a2b5-4dc79749b24e/banner-video.jpg",
+      "bgImgMobile": "https://assets.decocache.com/ffloresta/07550bdf-ba30-4c4e-ab77-19a807244c7e/banner-video-mobile.jpg",
+      "alt": "Ferragens floresta",
+      "videoDesktop": "https://assets.decocache.com/ffloresta/536f0b91-8c9f-46a4-9fcc-08896bcb3bd2/ac82ae16b70c0cf1_ebfb2ebed673490493f79f4dd974b477.webm",
+      "videoMobile": "https://assets.decocache.com/ffloresta/536f0b91-8c9f-46a4-9fcc-08896bcb3bd2/ac82ae16b70c0cf1_ebfb2ebed673490493f79f4dd974b477.webm"
+    },
+    {
+      "__resolveType": "Footer"
     }
   ],
   "__resolveType": "website/pages/Page.tsx",
