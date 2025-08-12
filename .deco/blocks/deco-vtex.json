@@ -6,7 +6,7 @@
   },
   "platform": "vtex",
   "account": "ferragemfloresta",
-  "publicUrl": "secure.ferragemfloresta.com.br",
+  "publicUrl": "www.ferragensfloresta.com.br",
   "appKey": {
     "encrypted": "209d619828b05f9a22a2e844c40700e2015c37d657c94a30feb5dbd29de4919dc0197a46a8f6ad93b7c536379ab97b4f",
     "__resolveType": "website/loaders/secret.ts"
