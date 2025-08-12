@@ -6,7 +6,7 @@ export interface Props {
   page: ProductDetailsPage | null;
 }
 
-export default function ProductGallery(props: Props) {
+export default function ProductImagesGallery(props: Props) {
   const currentIndex = useSignal(0);
 
   if (!props.page) return null;
@@ -75,9 +75,7 @@ export default function ProductGallery(props: Props) {
           key={currentIndex.value} // Força recarregar componente quando muda
           src={thumbs[currentIndex.value]?.url}
           alt={thumbs[currentIndex.value]?.alt || "Imagem do produto"}
-          width={800}
-          height={600}
-          class="w-full object-contain transition-opacity duration-300"
+          class="w-full max-h-[550px] object-contain transition-opacity duration-300"
           loading={currentIndex.value === 0 ? "eager" : "lazy"}
         />
 
@@ -111,7 +109,7 @@ export default function ProductGallery(props: Props) {
               </button>
             </div>
 
-            {/* Navegação Mobile */}
+            {/* Navegação Mobile - Modificado para mostrar miniaturas */}
             <div class="lg:hidden flex items-center justify-center gap-4 mt-4">
               <button
                 onClick={prev}
@@ -124,21 +122,30 @@ export default function ProductGallery(props: Props) {
                 </svg>
               </button>
 
-              <div class="flex gap-2">
-                {thumbs.map((_, index) => (
+              <div class="flex gap-2 overflow-x-auto max-w-[calc(84px*4+12px*3)] py-2">
+                {thumbs.map((thumb, index) => (
                   <button
                     key={index}
                     onClick={() => {
                       currentIndex.value = index;
-                      console.log("Dot clicado, índice:", index);
+                      console.log("Thumb clicada, índice:", index);
                     }}
-                    class={`w-3 h-3 rounded-full transition-colors ${
+                    class={`w-[84px] h-[70px] border rounded transition-colors ${
                       index === currentIndex.value
-                        ? "bg-primary"
-                        : "bg-gray-300"
+                        ? "border-base-400"
+                        : "border-transparent"
                     }`}
                     aria-label={`Ir para imagem ${index + 1}`}
-                  />
+                  >
+                    <Image
+                      src={thumb.url}
+                      alt={thumb.alt}
+                      width={84}
+                      height={70}
+                      class="object-cover w-full h-full rounded"
+                      loading="lazy"
+                    />
+                  </button>
                 ))}
               </div>
 

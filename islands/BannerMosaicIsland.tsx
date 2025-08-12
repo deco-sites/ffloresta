@@ -4,16 +4,59 @@ import { useEffect, useRef, useState } from "preact/hooks";
 import { clx } from "../sdk/clx.ts";
 
 export interface Props {
-  images: {
+  /**
+   * @title Configurações do Banner Mosaico
+   */
+  settings?: {
+    /**
+     * @title Quantidade de itens visíveis
+     * @description Número de imagens visíveis simultaneamente no desktop
+     * @default 4
+     */
+    itemsToShow?: number;
+    /**
+     * @title Espaçamento entre itens
+     * @description Espaço entre as imagens em pixels, aplicado apenas no desktop pois o mobile é um slider com um item por vez
+     * @default 3
+     */
+    gap?: number;
+    /**
+     * @title Autoplay
+     * @description Ativar rotação automática das imagens
+     * @default true
+     */
+    autoplay?: boolean;
+    /**
+     * @title Intervalo do Autoplay
+     * @description Tempo em milissegundos entre cada transição
+     * @default 5000
+     */
+    autoplayInterval?: number;
+  };
+
+  /**
+   * @title Imagens do Banner
+   */
+  images: Array<{
+    /**
+     * @title Imagem para Desktop
+     */
     desktop: Image;
+    /**
+     * @title Imagem para Mobile
+     */
     mobile: Image;
+    /**
+     * @title Texto alternativo
+     * @description Texto que descreve a imagem para acessibilidade
+     */
     alt: string;
+    /**
+     * @title Link
+     * @description URL para onde o usuário será direcionado ao clicar na imagem
+     */
     href?: string;
-  }[];
-  itemsToShow?: number;
-  gap?: number;
-  autoplay?: boolean;
-  autoplayInterval?: number;
+  }>;
 }
 
 function MosaicImage({
@@ -53,13 +96,14 @@ function MosaicImage({
   return <div class="block h-full w-full">{content}</div>;
 }
 
-export default function BannerMosaicIsland({
-  images,
-  itemsToShow = 4,
-  gap = 3,
-  autoplay = true,
-  autoplayInterval = 5000,
-}: Props) {
+export default function BannerMosaicIsland({ images, settings = {} }: Props) {
+  const {
+    itemsToShow = 4,
+    gap = 3,
+    autoplay = true,
+    autoplayInterval = 5000,
+  } = settings;
+
   const id = useId();
   const sliderRef = useRef<HTMLDivElement>(null);
   const [activeDot, setActiveDot] = useState(0);
@@ -68,30 +112,42 @@ export default function BannerMosaicIsland({
   const [scrollLeft, setScrollLeft] = useState(0);
   const autoplayTimer = useRef<NodeJS.Timeout | null>(null);
 
+  console.log("Componente está sendo hidratado");
+
   const updateActiveDot = () => {
     if (!sliderRef.current) return;
     const scrollPosition = sliderRef.current.scrollLeft;
     const slideWidth = sliderRef.current.offsetWidth;
     const newActiveDot = Math.round(scrollPosition / slideWidth);
+
+    console.log("Atualizando dot ativo:", newActiveDot);
+
     setActiveDot(newActiveDot);
   };
 
-  const goToNextSlide = () => {
+  const goToSlide = (index: number) => {
     if (!sliderRef.current || images.length <= 1) return;
 
-    const nextSlide = (activeDot + 1) % images.length;
+    console.log("Indo para slide:", index);
 
     sliderRef.current.scrollTo({
-      left: sliderRef.current.offsetWidth * nextSlide,
+      left: sliderRef.current.offsetWidth * index,
       behavior: "smooth",
     });
-    setActiveDot(nextSlide);
+    setActiveDot(index);
+  };
+
+  const goToNextSlide = () => {
+    const nextSlide = (activeDot + 1) % images.length;
+    goToSlide(nextSlide);
   };
 
   const startAutoplay = () => {
     if (!autoplay || images.length <= 1) return;
 
     stopAutoplay();
+
+    console.log("Iniciando autoplay");
 
     autoplayTimer.current = setInterval(() => {
       goToNextSlide();
@@ -100,6 +156,7 @@ export default function BannerMosaicIsland({
 
   const stopAutoplay = () => {
     if (autoplayTimer.current) {
+      console.log("Parando autoplay");
       clearInterval(autoplayTimer.current);
       autoplayTimer.current = null;
     }
@@ -110,6 +167,7 @@ export default function BannerMosaicIsland({
     if (!slider) return;
 
     const handleDragStart = (e: MouseEvent | TouchEvent) => {
+      console.log("Drag iniciado");
       setIsDragging(true);
       setStartX("pageX" in e ? e.pageX : e.touches[0].pageX);
       setScrollLeft(slider.scrollLeft);
@@ -125,9 +183,14 @@ export default function BannerMosaicIsland({
     };
 
     const handleDragEnd = () => {
+      console.log("Drag finalizado");
       setIsDragging(false);
       updateActiveDot();
       startAutoplay();
+    };
+
+    const handleScroll = () => {
+      updateActiveDot();
     };
 
     slider.addEventListener("mousedown", handleDragStart);
@@ -139,6 +202,8 @@ export default function BannerMosaicIsland({
     slider.addEventListener("touchmove", handleDragMove);
     slider.addEventListener("touchend", handleDragEnd);
 
+    slider.addEventListener("scroll", handleScroll);
+
     return () => {
       slider.removeEventListener("mousedown", handleDragStart);
       slider.removeEventListener("mousemove", handleDragMove);
@@ -148,10 +213,13 @@ export default function BannerMosaicIsland({
       slider.removeEventListener("touchstart", handleDragStart);
       slider.removeEventListener("touchmove", handleDragMove);
       slider.removeEventListener("touchend", handleDragEnd);
+
+      slider.removeEventListener("scroll", handleScroll);
     };
   }, [isDragging, startX, scrollLeft]);
 
   useEffect(() => {
+    console.log("Efeito de autoplay sendo executado");
     if (autoplay && images.length > 1) {
       startAutoplay();
     } else {
@@ -165,7 +233,7 @@ export default function BannerMosaicIsland({
     <div
       class={clx(
         "hidden md:flex flex-wrap items-stretch justify-center",
-        `gap-${gap}`,
+        `gap-[${gap}px]`
       )}
     >
       {images?.slice(0, itemsToShow).map((image, index) => (
@@ -181,7 +249,6 @@ export default function BannerMosaicIsland({
       <div
         ref={sliderRef}
         class="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory w-full"
-        onScroll={updateActiveDot}
         style={{
           scrollSnapType: "x mandatory",
           scrollbarWidth: "none",
@@ -210,12 +277,7 @@ export default function BannerMosaicIsland({
               key={index}
               onClick={() => {
                 stopAutoplay();
-                if (sliderRef.current) {
-                  sliderRef.current.scrollTo({
-                    left: sliderRef.current.offsetWidth * index,
-                    behavior: "smooth",
-                  });
-                }
+                goToSlide(index);
                 setTimeout(startAutoplay, autoplayInterval);
               }}
               class="focus:outline-none"
@@ -226,7 +288,7 @@ export default function BannerMosaicIsland({
                   "w-2 h-2 lg:w-3 lg:h-3 transition-all duration-300",
                   activeDot === index
                     ? "bg-[#2D2D2D]"
-                    : "bg-transparent border border-[#2D2D2D]",
+                    : "bg-transparent border border-[#2D2D2D]"
                 )}
               />
             </button>

@@ -207,7 +207,7 @@ export default function BrandGridIsland({ title, cta, items, icon }: Props) {
         </div>
 
         {dotsCount > 1 && (
-          <div class="flex justify-center gap-2 mt-6">
+          <div class="flex justify-center gap-2 mt-6 lg:hidden">
             {Array.from({ length: dotsCount }).map((_, index) => (
               <button
                 key={index}
@@ -217,7 +217,7 @@ export default function BrandGridIsland({ title, cta, items, icon }: Props) {
               >
                 <div
                   class={clx(
-                    "w-3 h-3 transition-all duration-300",
+                    "w-2 h-2 lg:w-3 lg:h-3 transition-all duration-300",
                     "border border-[#273D28]",
                     activeDot === index ? "bg-[#273D28]" : "bg-transparent"
                   )}
