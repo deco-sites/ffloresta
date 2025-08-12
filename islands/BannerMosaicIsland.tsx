@@ -112,23 +112,17 @@ export default function BannerMosaicIsland({ images, settings = {} }: Props) {
   const [scrollLeft, setScrollLeft] = useState(0);
   const autoplayTimer = useRef<NodeJS.Timeout | null>(null);
 
-  console.log("Componente está sendo hidratado");
-
   const updateActiveDot = () => {
     if (!sliderRef.current) return;
     const scrollPosition = sliderRef.current.scrollLeft;
     const slideWidth = sliderRef.current.offsetWidth;
     const newActiveDot = Math.round(scrollPosition / slideWidth);
 
-    console.log("Atualizando dot ativo:", newActiveDot);
-
     setActiveDot(newActiveDot);
   };
 
   const goToSlide = (index: number) => {
     if (!sliderRef.current || images.length <= 1) return;
-
-    console.log("Indo para slide:", index);
 
     sliderRef.current.scrollTo({
       left: sliderRef.current.offsetWidth * index,
@@ -147,8 +141,6 @@ export default function BannerMosaicIsland({ images, settings = {} }: Props) {
 
     stopAutoplay();
 
-    console.log("Iniciando autoplay");
-
     autoplayTimer.current = setInterval(() => {
       goToNextSlide();
     }, autoplayInterval);
@@ -156,7 +148,6 @@ export default function BannerMosaicIsland({ images, settings = {} }: Props) {
 
   const stopAutoplay = () => {
     if (autoplayTimer.current) {
-      console.log("Parando autoplay");
       clearInterval(autoplayTimer.current);
       autoplayTimer.current = null;
     }
@@ -167,7 +158,6 @@ export default function BannerMosaicIsland({ images, settings = {} }: Props) {
     if (!slider) return;
 
     const handleDragStart = (e: MouseEvent | TouchEvent) => {
-      console.log("Drag iniciado");
       setIsDragging(true);
       setStartX("pageX" in e ? e.pageX : e.touches[0].pageX);
       setScrollLeft(slider.scrollLeft);
@@ -183,7 +173,6 @@ export default function BannerMosaicIsland({ images, settings = {} }: Props) {
     };
 
     const handleDragEnd = () => {
-      console.log("Drag finalizado");
       setIsDragging(false);
       updateActiveDot();
       startAutoplay();
@@ -219,7 +208,6 @@ export default function BannerMosaicIsland({ images, settings = {} }: Props) {
   }, [isDragging, startX, scrollLeft]);
 
   useEffect(() => {
-    console.log("Efeito de autoplay sendo executado");
     if (autoplay && images.length > 1) {
       startAutoplay();
     } else {

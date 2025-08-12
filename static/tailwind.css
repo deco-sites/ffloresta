@@ -3961,6 +3961,9 @@ details.collapse summary::-webkit-details-marker {
 .aspect-\[156\/87\] {
   aspect-ratio: 156/87;
 }
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
 .h-1 {
   height: 0.25rem;
 }
@@ -4090,6 +4093,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .max-h-\[50px\] {
   max-height: 50px;
+}
+.max-h-\[520px\] {
+  max-height: 520px;
 }
 .max-h-\[550px\] {
   max-height: 550px;
@@ -4427,9 +4433,6 @@ details.collapse summary::-webkit-details-marker {
 }
 .max-w-\[calc\(100vw-25px\)\] {
   max-width: calc(100vw - 25px);
-}
-.max-w-\[calc\(84px\*4\+12px\*3\)\] {
-  max-width: calc(84px * 4 + 12px * 3);
 }
 .max-w-full {
   max-width: 100%;
@@ -7236,11 +7239,6 @@ input[type="checkbox"]:checked::after {
 
   .\32xl\:w-\[calc\(16\.6\%-\(100px\/6\)\)\] {
     width: calc(16.6% - (100px / 6));
-  }
-
-  .\32xl\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
   }
 }
 

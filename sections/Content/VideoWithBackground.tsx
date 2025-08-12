@@ -29,7 +29,7 @@ export default function VideoWithBackground({
   return (
     <div
       id={id}
-      class="container relative w-full h-auto aspect-[1180/355] overflow-hidden min-h-[450px] lg:min-h-[unset]"
+      class="container relative w-full h-auto aspect-[1180/355] overflow-hidden min-h-[450px] lg:min-h-[unset] lg:mt-4"
     >
       {/* Imagem de fundo */}
       <div class="absolute inset-0 z-0">

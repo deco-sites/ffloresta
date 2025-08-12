@@ -168,8 +168,6 @@ export default function BrandGridIsland({ title, cta, items, icon }: Props) {
       slider.removeEventListener("scroll", updateActiveDot);
       window.removeEventListener("resize", handleResize);
     };
-
-    console.log("Hidration working");
   }, []);
 
   const dotsCount = getDotsCount();

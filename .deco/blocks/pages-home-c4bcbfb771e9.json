@@ -302,26 +302,6 @@
       "headerBanner": "https://assets.decocache.com/ffloresta/9a798c44-bf86-49eb-be92-3633ca83a640/image-8.png"
     },
     {
-      "__resolveType": "site/sections/Content/BannerMosaicWithMobileSlider.tsx",
-      "images": [
-        {
-          "desktop": "https://assets.decocache.com/ffloresta/286be8bc-fd44-453f-88fd-ae6a85889412/image.png",
-          "mobile": "https://assets.decocache.com/ffloresta/286be8bc-fd44-453f-88fd-ae6a85889412/image.png",
-          "alt": "01"
-        },
-        {
-          "desktop": "https://assets.decocache.com/ffloresta/6b8d4f85-af98-4347-b984-c649289d685e/image-(2).png",
-          "mobile": "https://assets.decocache.com/ffloresta/0278081e-3117-4b8d-b5cc-67d5dd908528/image-(2).png",
-          "alt": "02"
-        },
-        {
-          "desktop": "https://assets.decocache.com/ffloresta/77d6f44e-0090-4e21-9ec4-d3ce8becaf5f/image-(1).png",
-          "mobile": "https://assets.decocache.com/ffloresta/77d6f44e-0090-4e21-9ec4-d3ce8becaf5f/image-(1).png",
-          "alt": "03"
-        }
-      ]
-    },
-    {
       "__resolveType": "site/sections/Content/BannerMosaic.tsx",
       "images": [
         {

@@ -9,13 +9,13 @@ function Dot({
     <button
       {...props}
       data-dot={index}
-      aria-label={`Ir para o grupo ${index + 1}`}
+      aria-label={`go to slider item ${index}`}
       class={clx("focus:outline-none group", props.class?.toString())}
     />
   );
 }
 
-function ProductCarouselSlider(props: JSX.IntrinsicElements["ul"]) {
+function BenefitsSlider(props: JSX.IntrinsicElements["ul"]) {
   return <ul data-slider {...props} />;
 }
 
@@ -40,40 +40,19 @@ export interface Props {
   interval?: number;
   infinite?: boolean;
   autoplay?: boolean;
-  groupSize?: number;
 }
 
-const onLoad = ({
-  rootId,
-  scroll,
-  interval,
-  infinite,
-  autoplay,
-  groupSize = 1,
-}: Props) => {
+const onLoad = ({ rootId, scroll, interval, infinite, autoplay }: Props) => {
   function init() {
     const root = document.getElementById(rootId);
     const slider = root?.querySelector<HTMLElement>("[data-slider]");
     const items = root?.querySelectorAll<HTMLElement>("[data-slider-item]");
     const prev = root?.querySelector<HTMLElement>('[data-slide="prev"]');
     const next = root?.querySelector<HTMLElement>('[data-slide="next"]');
-    const dots = root?.querySelectorAll<HTMLButtonElement>("[data-dot]");
 
     if (!slider || !items?.length) return;
 
     let currentIndex = 0;
-
-    const setActiveDot = (index: number) => {
-      if (!dots) return;
-      const activeDotIndex = Math.floor(index / groupSize);
-      dots.forEach((dot, idx) => {
-        if (idx === activeDotIndex) {
-          dot.setAttribute("data-active", "true");
-        } else {
-          dot.removeAttribute("data-active");
-        }
-      });
-    };
 
     const scrollToItem = (index: number) => {
       const item = items[index];
@@ -85,36 +64,28 @@ const onLoad = ({
         behavior: scroll,
       });
       currentIndex = index;
-      setActiveDot(index);
     };
 
     const scrollNext = () => {
-      if (currentIndex < items.length - groupSize) {
-        scrollToItem(currentIndex + groupSize);
+      if (currentIndex < items.length - 1) {
+        scrollToItem(currentIndex + 1);
       } else if (infinite) {
         scrollToItem(0);
       }
     };
 
     const scrollPrev = () => {
-      if (currentIndex >= groupSize) {
-        scrollToItem(currentIndex - groupSize);
+      if (currentIndex > 0) {
+        scrollToItem(currentIndex - 1);
       } else if (infinite) {
-        scrollToItem(items.length - groupSize);
+        scrollToItem(items.length - 1);
       }
     };
 
-    // Eventos de clique
     prev?.addEventListener("click", scrollPrev);
     next?.addEventListener("click", scrollNext);
 
-    dots?.forEach((dot, idx) => {
-      dot.addEventListener("click", () => {
-        scrollToItem(idx * groupSize);
-      });
-    });
-
-    // Autoplay
+    // autoplay
     let autoplayInterval: number | null = null;
     const startAutoplay = () => {
       if (interval && autoplay && !autoplayInterval) {
@@ -135,41 +106,9 @@ const onLoad = ({
       startAutoplay();
       slider.addEventListener("mouseenter", stopAutoplay);
       slider.addEventListener("mouseleave", startAutoplay);
-      slider.addEventListener("touchstart", stopAutoplay);
-      slider.addEventListener("touchend", startAutoplay);
     }
 
-    // IntersectionObserver para atualizar dot com scroll
-    const observer = new IntersectionObserver(
-      (entries) => {
-        let maxRatio = 0;
-        let mostVisibleIndex = currentIndex;
-
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.intersectionRatio > maxRatio) {
-            const indexAttr = entry.target.getAttribute("data-slider-item");
-            const index = indexAttr ? parseInt(indexAttr) : NaN;
-            if (!isNaN(index)) {
-              mostVisibleIndex = index;
-              maxRatio = entry.intersectionRatio;
-            }
-          }
-        });
-
-        if (mostVisibleIndex !== currentIndex) {
-          currentIndex = mostVisibleIndex;
-          setActiveDot(currentIndex);
-        }
-      },
-      {
-        root: slider,
-        threshold: 0.6,
-      }
-    );
-
-    items.forEach((item) => observer.observe(item));
-
-    // Inicializa na posição inicial
+    // inicializa na posição correta
     scrollToItem(0);
   }
 
@@ -186,7 +125,6 @@ function JS({
   interval,
   infinite = false,
   autoplay = false,
-  groupSize = 1,
 }: Props) {
   const scriptContent = `(${onLoad.toString()})(${JSON.stringify({
     rootId,
@@ -194,7 +132,6 @@ function JS({
     interval,
     infinite,
     autoplay,
-    groupSize,
   })})`;
 
   return (
@@ -202,15 +139,14 @@ function JS({
   );
 }
 
-// Expondo a função globalmente para acesso direto
 if (typeof window !== "undefined") {
-  window.ProductCarouselSliderOnLoad = onLoad;
+  window.BenefitsSliderOnLoad = onLoad;
 }
 
-ProductCarouselSlider.Dot = Dot;
-ProductCarouselSlider.Item = Item;
-ProductCarouselSlider.NextButton = NextButton;
-ProductCarouselSlider.PrevButton = PrevButton;
-ProductCarouselSlider.JS = JS;
+BenefitsSlider.Dot = Dot;
+BenefitsSlider.Item = Item;
+BenefitsSlider.NextButton = NextButton;
+BenefitsSlider.PrevButton = PrevButton;
+BenefitsSlider.JS = JS;
 
-export default ProductCarouselSlider;
+export default BenefitsSlider;

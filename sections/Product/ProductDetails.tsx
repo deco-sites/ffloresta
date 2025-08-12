@@ -8,6 +8,7 @@ import type { ImageWidget as Image } from "apps/admin/widgets.ts";
 import { HTMLWidget as HTML } from "apps/admin/widgets.ts";
 import Breadcrumb from "../../components/ui/Breadcrumb.tsx";
 import ProductBenefits from "../../components/product/ProductBenefits.tsx";
+import Section from "../../components/ui/Section.tsx";
 
 interface Benefit {
   benefitImgSrc: Image;
@@ -51,22 +52,22 @@ export default function ProductDetails({
     );
   }
 
-  // if (page.product.offers?.offers?.length) {
-  //   const offer = page.product.offers.offers[0];
+  if (page.product.offers?.offers?.length) {
+    const offer = page.product.offers.offers[0];
 
-  //   // Debug: Log das especificações de preço (parcelamento)
-  //   if (offer.priceSpecification?.length) {
-  //     // Filtra apenas as parcelas sem juros para debug
-  //     const noInterestInstallments = offer.priceSpecification.filter(
-  //       (spec) =>
-  //         spec.priceComponentType === "https://schema.org/Installment" &&
-  //         spec.priceType === "https://schema.org/SalePrice" &&
-  //         spec.billingDuration &&
-  //         spec.billingIncrement &&
-  //         spec.billingIncrement * spec.billingDuration === offer.price
-  //     );
-  //   }
-  // }
+    // Debug: Log das especificações de preço (parcelamento)
+    if (offer.priceSpecification?.length) {
+      // Filtra apenas as parcelas sem juros para debug
+      const noInterestInstallments = offer.priceSpecification.filter(
+        (spec) =>
+          spec.priceComponentType === "https://schema.org/Installment" &&
+          spec.priceType === "https://schema.org/SalePrice" &&
+          spec.billingDuration &&
+          spec.billingIncrement &&
+          spec.billingIncrement * spec.billingDuration === offer.price
+      );
+    }
+  }
 
   const breadcrumbItems = [...page.breadcrumbList.itemListElement];
   breadcrumbItems.pop();
@@ -104,11 +105,17 @@ export default function ProductDetails({
           <ProductInfo page={page} />
         </div>
       </div>
-      {/* <div class="container">
+      <div class="container">
         {benefits && <ProductBenefits benefits={benefits} />}
-      </div> */}
+      </div>
 
-      {/* <ProductDescriptionIsland page={page} /> */}
+      <ProductDescriptionIsland page={page} />
     </div>
   );
 }
+
+export const LoadingFallback = () => (
+  <Section.Container>
+    <Section.Placeholder height="555px" />;
+  </Section.Container>
+);

@@ -18,37 +18,24 @@ export default function ProductImagesGallery(props: Props) {
     alt: img.alternateName,
   }));
 
-  // Debug: verifique se as imagens estão carregando
-  console.log("Imagens disponíveis:", thumbs);
-  console.log("Índice atual:", currentIndex.value);
-
-  // Navegação
   const next = () => {
     currentIndex.value = (currentIndex.value + 1) % thumbs.length;
-    console.log("Próxima imagem, novo índice:", currentIndex.value);
   };
 
   const prev = () => {
     currentIndex.value =
       (currentIndex.value - 1 + thumbs.length) % thumbs.length;
-    console.log("Imagem anterior, novo índice:", currentIndex.value);
   };
-
-  // Efeito para observar mudanças
-  effect(() => {
-    console.log("Índice alterado para:", currentIndex.value);
-  });
 
   return (
     <div class="flex flex-col lg:flex-row gap-4">
       {/* Thumbnails Vertical (Desktop) */}
-      <div class="hidden lg:flex flex-col gap-2 overflow-y-auto max-h-[550px] custom-scrollbar">
+      <div class="hidden lg:flex flex-col gap-2 overflow-y-auto max-h-[520px] custom-scrollbar">
         {thumbs.map((thumb, index) => (
           <button
             key={index}
             onClick={() => {
               currentIndex.value = index;
-              console.log("Thumb clicada, índice:", index);
             }}
             class={`w-20 h-20 border-2 rounded transition-colors ${
               index === currentIndex.value
@@ -75,7 +62,7 @@ export default function ProductImagesGallery(props: Props) {
           key={currentIndex.value} // Força recarregar componente quando muda
           src={thumbs[currentIndex.value]?.url}
           alt={thumbs[currentIndex.value]?.alt || "Imagem do produto"}
-          class="w-full max-h-[550px] object-contain transition-opacity duration-300"
+          class="w-full max-h-[550px] object-contain transition-opacity duration-300 aspect-square"
           loading={currentIndex.value === 0 ? "eager" : "lazy"}
         />
 
@@ -122,13 +109,12 @@ export default function ProductImagesGallery(props: Props) {
                 </svg>
               </button>
 
-              <div class="flex gap-2 overflow-x-auto max-w-[calc(84px*4+12px*3)] py-2">
+              <div class="flex gap-2 overflow-x-auto  py-2">
                 {thumbs.map((thumb, index) => (
                   <button
                     key={index}
                     onClick={() => {
                       currentIndex.value = index;
-                      console.log("Thumb clicada, índice:", index);
                     }}
                     class={`w-[84px] h-[70px] border rounded transition-colors ${
                       index === currentIndex.value
@@ -140,9 +126,7 @@ export default function ProductImagesGallery(props: Props) {
                     <Image
                       src={thumb.url}
                       alt={thumb.alt}
-                      width={84}
-                      height={70}
-                      class="object-cover w-full h-full rounded"
+                      class="object-contain w-full h-full rounded"
                       loading="lazy"
                     />
                   </button>

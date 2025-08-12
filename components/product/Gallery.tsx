@@ -18,26 +18,14 @@ export default function ProductGallery(props: Props) {
     alt: img.alternateName,
   }));
 
-  // Debug: verifique se as imagens estão carregando
-  console.log("Imagens disponíveis:", thumbs);
-  console.log("Índice atual:", currentIndex.value);
-
-  // Navegação
   const next = () => {
     currentIndex.value = (currentIndex.value + 1) % thumbs.length;
-    console.log("Próxima imagem, novo índice:", currentIndex.value);
   };
 
   const prev = () => {
     currentIndex.value =
       (currentIndex.value - 1 + thumbs.length) % thumbs.length;
-    console.log("Imagem anterior, novo índice:", currentIndex.value);
   };
-
-  // Efeito para observar mudanças
-  effect(() => {
-    console.log("Índice alterado para:", currentIndex.value);
-  });
 
   return (
     <div class="flex flex-col lg:flex-row gap-4">
@@ -48,7 +36,6 @@ export default function ProductGallery(props: Props) {
             key={index}
             onClick={() => {
               currentIndex.value = index;
-              console.log("Thumb clicada, índice:", index);
             }}
             class={`w-20 h-20 border-2 rounded transition-colors ${
               index === currentIndex.value
@@ -130,7 +117,6 @@ export default function ProductGallery(props: Props) {
                     key={index}
                     onClick={() => {
                       currentIndex.value = index;
-                      console.log("Dot clicado, índice:", index);
                     }}
                     class={`w-3 h-3 rounded-full transition-colors ${
                       index === currentIndex.value

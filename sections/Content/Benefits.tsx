@@ -2,7 +2,7 @@ import { useId } from "../../sdk/useId.ts";
 import { ImageWidget as Image } from "apps/admin/widgets.ts";
 import { HTMLWidget as HTML } from "apps/admin/widgets.ts";
 import Section from "../../components/ui/Section.tsx";
-import Slider from "../../islands/Slider.tsx";
+import BenefitsSlider from "../../islands/Sliders/BenefitsSlider.tsx";
 
 export interface Props {
   benefits: Benefit[];
@@ -60,7 +60,7 @@ const Benefits = ({ benefits }: Props) => {
       {/* Mobile View - Slider */}
       <div id={id} className="md:hidden relative mt-[38px] mb-4">
         <div className="relative">
-          <Slider
+          <BenefitsSlider
             class="carousel carousel-center w-full"
             rootId={id}
             interval={8000}
@@ -68,28 +68,33 @@ const Benefits = ({ benefits }: Props) => {
             infinite={true}
           >
             {benefits?.map((benefit, index) => (
-              <Slider.Item index={index} class="carousel-item w-full">
+              <BenefitsSlider.Item index={index} class="carousel-item w-full">
                 <div className="w-full px-4">
                   <BenefitItem benefit={benefit} />
                 </div>
-              </Slider.Item>
+              </BenefitsSlider.Item>
             ))}
-          </Slider>
+          </BenefitsSlider>
         </div>
 
         {/* Dots de navegação */}
         <div class="flex justify-center gap-2 mt-4 hidden">
           {benefits?.map((_, index) => (
-            <Slider.Dot
+            <BenefitsSlider.Dot
               index={index}
               class="w-3 h-3 border border-[#273D28] focus:outline-none disabled:bg-[#273D28] transition-colors"
             >
               <span class="sr-only">Benefício {index + 1}</span>
-            </Slider.Dot>
+            </BenefitsSlider.Dot>
           ))}
         </div>
       </div>
-      <Slider.JS rootId={id} interval={8000} autoplay={true} infinite={true} />
+      <BenefitsSlider.JS
+        rootId={id}
+        interval={8000}
+        autoplay={true}
+        infinite={true}
+      />
     </>
   );
 };

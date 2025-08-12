@@ -2,7 +2,7 @@ import { useId } from "../../sdk/useId.ts";
 import { ImageWidget as Image } from "apps/admin/widgets.ts";
 import { HTMLWidget as HTML } from "apps/admin/widgets.ts";
 import Section from "../../components/ui/Section.tsx";
-import Slider from "../../islands/Slider.tsx";
+import Slider from "../../islands/Sliders/BenefitsSlider.tsx";
 
 export interface Props {
   benefits: Benefit[];
