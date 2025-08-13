@@ -8,28 +8,36 @@
       "__resolveType": "site/sections/Images/Carousel.tsx",
       "images": [
         {
-          "desktop": "https://assets.decocache.com/ffloresta/a006b1b6-3b7c-4695-b454-12e384801886/BANNER-SITE-NOVO.jpg",
-          "mobile": "https://assets.decocache.com/ffloresta/7e81d038-dd95-440a-89b0-735d84926bbb/banner-mobile.png",
+          "desktop": "https://assets.decocache.com/ffloresta/68c25252-5b8b-46e9-94c5-2f2e06ea5687/1-a.jpg",
+          "mobile": "https://assets.decocache.com/ffloresta/cefa5c02-aac6-4e8b-bccf-c613946294d0/1b.jpg",
           "alt": "Banner Principal",
           "action": {
-            "href": "/puxadores"
+            "href": "/ferramentas/wesco?initialMap=c&initialQuery=ferramentas&map=category-1,brand"
           }
         },
         {
-          "desktop": "https://assets.decocache.com/ffloresta/a006b1b6-3b7c-4695-b454-12e384801886/BANNER-SITE-NOVO.jpg",
-          "mobile": "https://assets.decocache.com/ffloresta/7e81d038-dd95-440a-89b0-735d84926bbb/banner-mobile.png",
+          "desktop": "https://assets.decocache.com/ffloresta/fcda384f-9e24-4270-900b-b4a1d00d9644/2-a.jpg",
+          "mobile": "https://assets.decocache.com/ffloresta/38159590-6556-4e15-8940-27c3fb33ac47/2b.jpg",
           "alt": "Banner Principal",
           "action": {
-            "href": "/"
+            "href": "/Ferragens/Sistemas-de-Gavetas"
           }
         },
         {
-          "desktop": "https://assets.decocache.com/ffloresta/a006b1b6-3b7c-4695-b454-12e384801886/BANNER-SITE-NOVO.jpg",
-          "mobile": "https://assets.decocache.com/ffloresta/7e81d038-dd95-440a-89b0-735d84926bbb/banner-mobile.png",
+          "desktop": "https://assets.decocache.com/ffloresta/4432aa6b-51d9-4b22-a420-733bfe5acad5/3-a.jpg",
+          "mobile": "https://assets.decocache.com/ffloresta/808eb854-a4b4-4948-a56f-223fea12f6b4/3b.jpg",
           "alt": "Banner Principal",
           "action": {
-            "href": "/"
+            "href": "/ferramentas/armazenamento/toughbuilt?initialMap=c&initialQuery=ferramentas&map=category-1,category-2,brand"
           }
+        },
+        {
+          "desktop": "https://assets.decocache.com/ffloresta/c10c2b77-9c2d-4b53-9b6b-a9596429737b/4-a.jpg",
+          "mobile": "https://assets.decocache.com/ffloresta/a757cac4-a068-4448-ad7e-a6760d70b6f3/4c.jpg",
+          "action": {
+            "href": "/"
+          },
+          "alt": "Frete Grátis"
         }
       ],
       "preload": true
@@ -76,11 +84,11 @@
       },
       "banner": {
         "mobile": {
-          "src": "https://assets.decocache.com/ffloresta/8c864d95-f30b-4564-a3d6-d0df84ca4923/image-12.png",
+          "src": "https://assets.decocache.com/ffloresta/b5a48df9-b389-4795-892c-e2cfdb65d24a/2-(3).png",
           "alt": "Banner de Topo Shelf"
         },
         "desktop": {
-          "src": "https://assets.decocache.com/ffloresta/2a062699-1996-4d40-8cbf-a4cd8399aca9/home-top-banner-shelf-desk.png",
+          "src": "https://assets.decocache.com/ffloresta/3f148746-bccd-45ab-a349-7dfed737453f/1-(3).png",
           "alt": "Banner de Topo Shelf"
         },
         "href": "/"
@@ -146,28 +154,24 @@
       "icon": "https://assets.decocache.com/ffloresta/25532a3b-7eb8-4e13-9da7-e0e7f978d512/Group-13.svg",
       "brands": [
         {
-          "image": "https://assets.decocache.com/ffloresta/c49ee659-cc68-4f63-9b43-236c32256167/category1.png",
+          "image": "https://assets.decocache.com/ffloresta/05271e7b-44ed-407b-8394-1e29bea1078e/Prancheta-1_1.png",
           "href": "/ferramentas"
         },
         {
-          "image": "https://assets.decocache.com/ffloresta/497d65db-5ee7-4aba-bc2b-aa0a594830ef/category2.png",
+          "image": "https://assets.decocache.com/ffloresta/c3564369-e5ee-4b0a-afe0-58faf8466b12/Prancheta-1_2.png",
           "href": "/"
         },
         {
-          "image": "https://assets.decocache.com/ffloresta/4dcff94e-9416-47af-9c0c-62acc2282904/category3.png",
+          "image": "https://assets.decocache.com/ffloresta/97866645-aeaf-4d95-a3c2-2e3f786136b4/Prancheta-1_3.png",
           "href": "/"
         },
         {
-          "image": "https://assets.decocache.com/ffloresta/d96e85f1-c4b2-4ae0-b0fc-23992e0d9f70/category4.png",
+          "image": "https://assets.decocache.com/ffloresta/f08ffa4e-051f-4102-ad95-9507a0523ceb/Prancheta-1_4.png",
           "href": "/fechaduras"
         },
         {
-          "image": "https://assets.decocache.com/ffloresta/592d1ac9-6cef-46dc-a3fc-2ec662e35cb5/category5.png",
+          "image": "https://assets.decocache.com/ffloresta/8c8195e7-60e4-4938-8ba5-587b62fd7a88/Prancheta-1.png",
           "href": "/ferramentas"
-        },
-        {
-          "image": "https://assets.decocache.com/ffloresta/c49ee659-cc68-4f63-9b43-236c32256167/category1.png",
-          "href": "/"
         }
       ]
     },
@@ -244,28 +248,24 @@
       ],
       "brands": [
         {
-          "image": "https://assets.decocache.com/ffloresta/5449f31d-af59-4b85-89ec-85d6158f7a8c/brand-01.svg",
-          "href": "/bosch"
+          "image": "https://assets.decocache.com/ffloresta/822e0075-7f1c-49cc-bbda-b24d8bac3a82/Prancheta-1_1-(1).png",
+          "href": "/Zen"
         },
         {
-          "image": "https://assets.decocache.com/ffloresta/3e69bcad-8472-4ee8-ab55-2b5ce9373337/brand-02.svg",
-          "href": "/Dewalt"
+          "image": "https://assets.decocache.com/ffloresta/609edaf1-637e-43f7-ae7a-397bd55f9340/Prancheta-1_2-(1).png",
+          "href": "/FGV/TN"
         },
         {
-          "image": "https://assets.decocache.com/ffloresta/2ce3a6f1-6e07-40a7-94e0-760524b8bac6/brand-03.svg",
+          "image": "https://assets.decocache.com/ffloresta/0a172c06-5c06-414a-8b46-ae24492ae5ad/Prancheta-1_3-(1).png",
           "href": "/Hafele"
         },
         {
-          "image": "https://assets.decocache.com/ffloresta/8fd78072-2f18-44c8-ab49-801bef198e79/brand-04.svg",
-          "href": "/La-Fonte"
+          "image": "https://assets.decocache.com/ffloresta/aaf97827-3107-45f8-8203-29b301f7d065/Prancheta-1_4-(1).png",
+          "href": "/Bosch"
         },
         {
-          "image": "https://assets.decocache.com/ffloresta/02567902-0ede-47e3-bf78-70e1e0ed07a3/brand-05.svg",
-          "href": "/Milwaukee"
-        },
-        {
-          "image": "https://assets.decocache.com/ffloresta/91fc6b96-2a3b-4404-954b-2efe9362ebc8/brand-06.svg",
-          "href": "/vonder"
+          "image": "https://assets.decocache.com/ffloresta/f42415cc-5634-4404-978c-2f29e3e8b452/Prancheta-1-(1).png",
+          "href": "/Rometal"
         }
       ]
     },
@@ -283,7 +283,7 @@
       },
       "icon": "https://assets.decocache.com/ffloresta/1e5baa2f-3844-4f09-a3f0-28039a7432ad/Prancheta-2.png",
       "banner": "https://assets.decocache.com/ffloresta/783c3412-c1c4-4632-af24-1e5036f8c340/Mask-group.png",
-      "headerBanner": "https://assets.decocache.com/ffloresta/9a798c44-bf86-49eb-be92-3633ca83a640/image-8.png"
+      "headerBanner": "https://assets.decocache.com/ffloresta/b63d5845-d83d-4b8b-a833-876d5e6e6e97/1-(1).jpg"
     },
     {
       "__resolveType": "site/sections/Product/ProductShelf.tsx",
@@ -299,24 +299,24 @@
       },
       "icon": "https://assets.decocache.com/ffloresta/d26b1d31-88e1-41c0-ae15-82e146758d3f/Prancheta-1-3.svg",
       "banner": "https://assets.decocache.com/ffloresta/783c3412-c1c4-4632-af24-1e5036f8c340/Mask-group.png",
-      "headerBanner": "https://assets.decocache.com/ffloresta/9a798c44-bf86-49eb-be92-3633ca83a640/image-8.png"
+      "headerBanner": "https://assets.decocache.com/ffloresta/fbf8a9f1-c375-4093-84f2-c40ebe61650a/2.jpg"
     },
     {
       "__resolveType": "site/sections/Content/BannerMosaic.tsx",
       "images": [
         {
-          "desktop": "https://assets.decocache.com/ffloresta/78f156c8-6c5b-4a19-afc3-ecfb58cae170/Prancheta-1.png",
-          "mobile": "https://assets.decocache.com/ffloresta/78f156c8-6c5b-4a19-afc3-ecfb58cae170/Prancheta-1.png",
+          "desktop": "https://assets.decocache.com/ffloresta/ac6f41df-eca1-4aa8-a724-cd1379a2c45a/1-a-(1).jpg",
+          "mobile": "https://assets.decocache.com/ffloresta/6b641410-7848-4aa3-8a3e-a33a0eeee7f8/1-a-(2).jpg",
           "alt": "01"
         },
         {
-          "desktop": "https://assets.decocache.com/ffloresta/177afd76-5b72-494f-89e7-68ad8c3d5b77/Prancheta-2.png",
-          "mobile": "https://assets.decocache.com/ffloresta/177afd76-5b72-494f-89e7-68ad8c3d5b77/Prancheta-2.png",
+          "desktop": "https://assets.decocache.com/ffloresta/d25ea01d-3ebd-45e2-be73-588bac471ecd/2-a-(1).jpg",
+          "mobile": "https://assets.decocache.com/ffloresta/e54a452e-44a4-4deb-929d-d8faeb2d7041/2-a-(2).jpg",
           "alt": "01"
         },
         {
-          "desktop": "https://assets.decocache.com/ffloresta/e03832bb-5fd3-49b7-bf3d-1a091377e5a1/Prancheta-3.png",
-          "mobile": "https://assets.decocache.com/ffloresta/e3a3a9f2-21e5-4cfe-9059-96cddad688cf/Screenshot_62.png",
+          "desktop": "https://assets.decocache.com/ffloresta/b8443d21-1b94-4926-a73e-2832f5933213/3-a-(1).jpg",
+          "mobile": "https://assets.decocache.com/ffloresta/7f240b96-2543-47ca-96ee-99edeb32bbf2/3-a-(2).jpg",
           "alt": "01"
         }
       ],
@@ -336,8 +336,8 @@
       },
       "videoUrl": "https://youtu.be/dSX5s9FML_U?si=khXj_dPOYXLncob5",
       "youtubeVideoId": "dSX5s9FML_U?si=Qk8YX6y3Htdd0wPN",
-      "bgImgDesktop": "https://assets.decocache.com/ffloresta/71b2a321-de52-4d91-a2b5-4dc79749b24e/banner-video.jpg",
-      "bgImgMobile": "https://assets.decocache.com/ffloresta/07550bdf-ba30-4c4e-ab77-19a807244c7e/banner-video-mobile.jpg",
+      "bgImgDesktop": "https://assets.decocache.com/ffloresta/2f67aba6-8922-43b3-aa74-38ec13ad01dc/banner-video-1.jpg",
+      "bgImgMobile": "https://assets.decocache.com/ffloresta/a4e36edb-dbc2-4865-ae2b-1b37c151221b/banner-video-2-a.jpg",
       "alt": "Ferragens floresta",
       "videoDesktop": "https://assets.decocache.com/ffloresta/536f0b91-8c9f-46a4-9fcc-08896bcb3bd2/ac82ae16b70c0cf1_ebfb2ebed673490493f79f4dd974b477.webm",
       "videoMobile": "https://assets.decocache.com/ffloresta/536f0b91-8c9f-46a4-9fcc-08896bcb3bd2/ac82ae16b70c0cf1_ebfb2ebed673490493f79f4dd974b477.webm"
