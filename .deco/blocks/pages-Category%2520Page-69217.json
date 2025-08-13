@@ -50,8 +50,258 @@
               },
               "startingPage": 1,
               "seoText": {
-                "title": "Texto Seo",
-                "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+              },
+              "topBanner": {
+                "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+                "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+              },
+              "categoryBanner": {
+                "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+                "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+              },
+              "filterBanner": {},
+              "bannerImage": "https://assets.decocache.com/ffloresta/eede3285-a1ee-42c7-95fd-fbc73e215745/Prancheta-1-(2).png"
+            },
+            "rule": {
+              "__resolveType": "website/matchers/pathname.ts",
+              "case": {
+                "type": "Equals",
+                "pathname": "/puxadores"
+              }
+            }
+          },
+          {
+            "value": {
+              "__resolveType": "site/sections/Product/SearchResult.tsx",
+              "page": {
+                "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+                "count": 16,
+                "advancedConfigs": {
+                  "includeOriginalAttributes": []
+                },
+                "pageOffset": 1
+              },
+              "layout": {
+                "columns": {
+                  "mobile": 2,
+                  "desktop": 4
+                },
+                "variant": "aside",
+                "pagination": "show-more"
+              },
+              "startingPage": 1,
+              "seoText": {
+                "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+              },
+              "topBanner": {
+                "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+                "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+              },
+              "categoryBanner": {
+                "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+                "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+              },
+              "filterBanner": {},
+              "bannerImage": "https://assets.decocache.com/ffloresta/6140d083-326b-435e-8dfe-da3ae073bb15/Prancheta-1_5.png"
+            },
+            "rule": {
+              "__resolveType": "website/matchers/pathname.ts",
+              "case": {
+                "type": "Equals",
+                "pathname": "/ferramentas"
+              }
+            }
+          },
+          {
+            "value": {
+              "__resolveType": "site/sections/Product/SearchResult.tsx",
+              "page": {
+                "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+                "count": 16,
+                "advancedConfigs": {
+                  "includeOriginalAttributes": []
+                },
+                "pageOffset": 1
+              },
+              "layout": {
+                "columns": {
+                  "mobile": 2,
+                  "desktop": 4
+                },
+                "variant": "aside",
+                "pagination": "show-more"
+              },
+              "startingPage": 1,
+              "seoText": {
+                "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+              },
+              "topBanner": {
+                "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+                "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+              },
+              "categoryBanner": {
+                "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+                "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+              },
+              "filterBanner": {},
+              "bannerImage": "https://assets.decocache.com/ffloresta/dae63181-18e9-41c3-b469-44ff5457fdb0/Prancheta-1_4-(2).png"
+            },
+            "rule": {
+              "__resolveType": "website/matchers/pathname.ts",
+              "case": {
+                "type": "Equals",
+                "pathname": "/Ferragens-de-Projetos"
+              }
+            }
+          },
+          {
+            "value": {
+              "__resolveType": "site/sections/Product/SearchResult.tsx",
+              "page": {
+                "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+                "count": 16,
+                "advancedConfigs": {
+                  "includeOriginalAttributes": []
+                },
+                "pageOffset": 1
+              },
+              "layout": {
+                "columns": {
+                  "mobile": 2,
+                  "desktop": 4
+                },
+                "variant": "aside",
+                "pagination": "show-more"
+              },
+              "startingPage": 1,
+              "seoText": {
+                "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+              },
+              "topBanner": {
+                "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+                "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+              },
+              "categoryBanner": {
+                "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+                "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+              },
+              "filterBanner": {},
+              "bannerImage": "https://assets.decocache.com/ffloresta/1249bfc6-d28a-4b3d-81f6-0e7bafd98cf6/Prancheta-1_3-(2).png"
+            },
+            "rule": {
+              "__resolveType": "website/matchers/pathname.ts",
+              "case": {
+                "type": "Equals",
+                "pathname": "/ambientes"
+              }
+            }
+          },
+          {
+            "value": {
+              "__resolveType": "site/sections/Product/SearchResult.tsx",
+              "page": {
+                "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+                "count": 16,
+                "advancedConfigs": {
+                  "includeOriginalAttributes": []
+                },
+                "pageOffset": 1
+              },
+              "layout": {
+                "columns": {
+                  "mobile": 2,
+                  "desktop": 4
+                },
+                "variant": "aside",
+                "pagination": "show-more"
+              },
+              "startingPage": 1,
+              "seoText": {
+                "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+              },
+              "topBanner": {
+                "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+                "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+              },
+              "categoryBanner": {
+                "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+                "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+              },
+              "filterBanner": {},
+              "bannerImage": "https://assets.decocache.com/ffloresta/fe7a9295-2d84-48b8-90f3-834963dee1d6/Prancheta-1_2-(2).png"
+            },
+            "rule": {
+              "__resolveType": "website/matchers/pathname.ts",
+              "case": {
+                "type": "Equals",
+                "pathname": "/fechaduras"
+              }
+            }
+          },
+          {
+            "value": {
+              "__resolveType": "site/sections/Product/SearchResult.tsx",
+              "page": {
+                "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+                "count": 16,
+                "advancedConfigs": {
+                  "includeOriginalAttributes": []
+                },
+                "pageOffset": 1
+              },
+              "layout": {
+                "columns": {
+                  "mobile": 2,
+                  "desktop": 4
+                },
+                "variant": "aside",
+                "pagination": "show-more"
+              },
+              "startingPage": 1,
+              "seoText": {
+                "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+              },
+              "topBanner": {
+                "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+                "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+              },
+              "categoryBanner": {
+                "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+                "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+              },
+              "filterBanner": {},
+              "bannerImage": "https://assets.decocache.com/ffloresta/44d2b6db-4203-4956-893c-409df5151177/Prancheta-1_1-(2).png"
+            },
+            "rule": {
+              "__resolveType": "website/matchers/pathname.ts",
+              "case": {
+                "type": "Equals",
+                "pathname": "/ferragens"
+              }
+            }
+          },
+          {
+            "value": {
+              "__resolveType": "site/sections/Product/SearchResult.tsx",
+              "page": {
+                "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+                "count": 16,
+                "advancedConfigs": {
+                  "includeOriginalAttributes": []
+                },
+                "pageOffset": 1
+              },
+              "layout": {
+                "columns": {
+                  "mobile": 2,
+                  "desktop": 4
+                },
+                "variant": "aside",
+                "pagination": "show-more"
+              },
+              "startingPage": 1,
+              "seoText": {
                 "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
               },
               "topBanner": {
