@@ -201,7 +201,7 @@ function MenuItem({ item }: { item: SiteNavigationElement }) {
 export default function MenuMobile({ navItems = [] }: Props) {
   return (
     <div class="flex flex-col min-h-screen w-full bg-[rgba(21,31,22,0.6)] backdrop-blur-[12px]">
-      <ul class="flex-grow flex flex-col p-4 pt-12 gap-4">
+      <ul class="flex-grow flex flex-col p-4 pt-12 gap-4 max-h-[calc(100vh-48px)] overflow-y-scroll">
         {navItems.map((item) => (
           <li key={item.url}>
             <MenuItem item={item} />
