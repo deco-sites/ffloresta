@@ -120,7 +120,7 @@ const onLoad = ({
       if (interval && autoplay && !autoplayInterval) {
         autoplayInterval = setInterval(
           scrollNext,
-          interval
+          interval,
         ) as unknown as number;
       }
     };
@@ -164,7 +164,7 @@ const onLoad = ({
       {
         root: slider,
         threshold: 0.6,
-      }
+      },
     );
 
     items.forEach((item) => observer.observe(item));
@@ -188,14 +188,16 @@ function JS({
   autoplay = false,
   groupSize = 1,
 }: Props) {
-  const scriptContent = `(${onLoad.toString()})(${JSON.stringify({
-    rootId,
-    scroll,
-    interval,
-    infinite,
-    autoplay,
-    groupSize,
-  })})`;
+  const scriptContent = `(${onLoad.toString()})(${
+    JSON.stringify({
+      rootId,
+      scroll,
+      interval,
+      infinite,
+      autoplay,
+      groupSize,
+    })
+  })`;
 
   return (
     <script type="module" dangerouslySetInnerHTML={{ __html: scriptContent }} />

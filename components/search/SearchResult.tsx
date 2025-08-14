@@ -29,7 +29,11 @@ export interface Props {
   layout?: Layout;
   startingPage?: 0 | 1;
   partial?: "hideMore" | "hideLess";
-  bannerImage?: ImageWidget;
+  bannerImage?: {
+    mobile?: ImageWidget;
+    desktop?: ImageWidget;
+    altText: string;
+  };
   seoText?: SeoText;
 }
 
@@ -47,21 +51,21 @@ function NotFound() {
             </h2>
             <ul className="mb-5">
               <li className="text-[13px] leading-[13px]">
-                <span className="text-lg inline-block mr-1">•</span> Verifique
-                se não há erro de digitação.
+                <span className="text-lg inline-block mr-1">•</span>{" "}
+                Verifique se não há erro de digitação.
               </li>
               <li className="text-[13px] leading-[13px]">
-                <span className="text-lg inline-block mr-1">•</span> Tente
-                utilizar uma única palavra.
+                <span className="text-lg inline-block mr-1">•</span>{" "}
+                Tente utilizar uma única palavra.
               </li>
               <li className="text-[13px] leading-[13px]">
-                <span className="text-lg inline-block mr-1">•</span> Tente
-                buscar por termos menos específicos e posteriormente use os
-                filtros da busca.
+                <span className="text-lg inline-block mr-1">•</span>{" "}
+                Tente buscar por termos menos específicos e posteriormente use
+                os filtros da busca.
               </li>
               <li className="text-[13px] leading-[13px]">
-                <span className="text-lg inline-block mr-1">•</span> Procure
-                utilizar sinônimos ao termo desejado.
+                <span className="text-lg inline-block mr-1">•</span>{" "}
+                Procure utilizar sinônimos ao termo desejado.
               </li>
             </ul>
           </div>
@@ -109,7 +113,7 @@ function PageResult(props: SectionProps<typeof loader>) {
       <div
         class={clx(
           "pb-2 sm:pb-10",
-          (!prevPageUrl || partial === "hideLess") && "hidden"
+          (!prevPageUrl || partial === "hideLess") && "hidden",
         )}
       >
         <a
@@ -147,7 +151,7 @@ function PageResult(props: SectionProps<typeof loader>) {
           "grid items-center",
           "grid-cols-2 gap-4", // Base
           "xl:grid-cols-4", // ≥1240px
-          "w-full"
+          "w-full",
         )}
       >
         {products?.map((product, index) => (
@@ -162,65 +166,67 @@ function PageResult(props: SectionProps<typeof loader>) {
       </div>
 
       <div class={clx("pt-5 sm:pt-10 w-full")}>
-        {infinite ? (
-          <div class="flex justify-center [&_section]:contents">
-            <a
-              rel="next"
-              class={clx(
-                "cursor-pointer",
-                (!nextPageUrl || partial === "hideMore") && "hidden"
-              )}
-              hx-swap="outerHTML show:parent:top"
-              hx-get={partialNext}
-            >
-              <span class="inline [.htmx-request_&]:hidden">
-                {" "}
-                <div class="p-2 rounded-full bg-[rgba(21,31,22,0.6)] backdrop-blur-[12px] transition-all duration-300 hover:bg-[rgba(21,31,22,0.8)]">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6 9L12 15L18 9"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
+        {infinite
+          ? (
+            <div class="flex justify-center [&_section]:contents">
+              <a
+                rel="next"
+                class={clx(
+                  "cursor-pointer",
+                  (!nextPageUrl || partial === "hideMore") && "hidden",
+                )}
+                hx-swap="outerHTML show:parent:top"
+                hx-get={partialNext}
+              >
+                <span class="inline [.htmx-request_&]:hidden">
+                  {" "}
+                  <div class="p-2 rounded-full bg-[rgba(21,31,22,0.6)] backdrop-blur-[12px] transition-all duration-300 hover:bg-[rgba(21,31,22,0.8)]">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6 9L12 15L18 9"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </span>
+                <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
+              </a>
+            </div>
+          )
+          : (
+            <div class={clx("join", infinite && "hidden")}>
+              <a
+                rel="prev"
+                aria-label="previous page link"
+                href={prevPageUrl ?? "#"}
+                disabled={!prevPageUrl}
+                class="btn btn-ghost join-item"
+              >
+                <Icon id="chevron-right" class="rotate-180" />
+              </a>
+              <span class="btn btn-ghost join-item">
+                Page {zeroIndexedOffsetPage + 1}
               </span>
-              <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
-            </a>
-          </div>
-        ) : (
-          <div class={clx("join", infinite && "hidden")}>
-            <a
-              rel="prev"
-              aria-label="previous page link"
-              href={prevPageUrl ?? "#"}
-              disabled={!prevPageUrl}
-              class="btn btn-ghost join-item"
-            >
-              <Icon id="chevron-right" class="rotate-180" />
-            </a>
-            <span class="btn btn-ghost join-item">
-              Page {zeroIndexedOffsetPage + 1}
-            </span>
-            <a
-              rel="next"
-              aria-label="next page link"
-              href={nextPageUrl ?? "#"}
-              disabled={!nextPageUrl}
-              class="btn btn-ghost join-item"
-            >
-              <Icon id="chevron-right" />
-            </a>
-          </div>
-        )}
+              <a
+                rel="next"
+                aria-label="next page link"
+                href={nextPageUrl ?? "#"}
+                disabled={!nextPageUrl}
+                class="btn btn-ghost join-item"
+              >
+                <Icon id="chevron-right" />
+              </a>
+            </div>
+          )}
       </div>
     </div>
   );
@@ -264,12 +270,11 @@ function Result(props: SectionProps<typeof loader>) {
 
   const fallbackSeoText: SeoText = {
     title: typeof document !== "undefined" ? document.title : undefined,
-    description:
-      typeof document !== "undefined"
-        ? document
-            .querySelector("meta[name='description']")
-            ?.getAttribute("content") ?? undefined
-        : undefined,
+    description: typeof document !== "undefined"
+      ? document
+        .querySelector("meta[name='description']")
+        ?.getAttribute("content") ?? undefined
+      : undefined,
   };
 
   const seoText = props.seoText ?? fallbackSeoText;
@@ -306,121 +311,120 @@ function Result(props: SectionProps<typeof loader>) {
   return (
     <>
       <div id={container} {...viewItemListEvent} class="w-full">
-        {partial ? (
-          <PageResult {...props} />
-        ) : (
-          <div class="container flex flex-col gap-4 sm:gap-5 w-full py-4 sm:py-5 px-5 lg:px-[4rem]">
-            <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
-
-            {device === "mobile" && (
-              <Drawer
-                id={controls}
-                aside={
-                  <div class="bg-white flex flex-col h-full w-full divide-y overflow-y-hidden">
-                    <div class="flex justify-between items-center">
-                      <h1 class="px-4 py-3">
-                        <span class="font-medium text-2xl">Filtro</span>
-                      </h1>
-                      <label
-                        class="btn btn-ghost cursor-pointer"
-                        for={controls}
-                      >
-                        <Icon id="close" />
-                      </label>
-                    </div>
-                    <div class="flex-grow overflow-auto">
-                      <Filters filters={filters} />
-                    </div>
-                  </div>
-                }
-              >
-                <div class="flex sm:hidden flex-col items-start">
-                  <div class="flex">{results}</div>
-                  <div class="w-full flex justify-between items-center gap-4 mt-5">
-                    <div class="flex max-w-1/2 w-full">
-                      <label
-                        class="cursor-pointer w-full h-9 min-h9 max-h-9 p-0 rounded-none flex items-center justify-center gap-2 bg-[#c6cfba] text-[#323f2d] text-sm font-bold uppercase"
-                        for={controls}
-                      >
-                        <Icon id="filter" />
-                        Filtro
-                      </label>
-                    </div>
-                    <div class="flex max-w-1/2 w-full">{sortBy}</div>
-                  </div>
-                </div>
-              </Drawer>
+        {partial ? <PageResult {...props} /> : (
+          <>
+            {/* Banner full width - fora do container */}
+            {bannerImage && (
+              <div class="w-full">
+                <img
+                  src={device === "mobile"
+                    ? bannerImage.mobile || bannerImage.desktop
+                    : bannerImage.desktop || bannerImage.mobile}
+                  alt={bannerImage.altText}
+                  class="w-full"
+                />
+              </div>
             )}
 
-            <div class="grid grid-cols-1 sm:grid-cols-[250px_1fr] lg:gap-8">
-              {device === "desktop" && (
-                <aside class="place-self-start flex flex-col gap-9 w-full">
-                  <span class="text-base font-medium h-12 flex items-center text-md text-[#1F251C]">
-                    Filtro
-                  </span>
-                  {/* {bannerImage && (
-                    <img
-                      src={bannerImage}
-                      alt="banner categoria"
-                      class="w-full rounded"
-                    />
-                  )} */}
-                  <Filters filters={filters} />
-                </aside>
+            {/* Restante do conteúdo dentro do container */}
+            <div class="container flex flex-col gap-4 sm:gap-5 w-full py-4 sm:py-5 px-5 lg:px-[4rem]">
+              <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
+
+              {device === "mobile" && (
+                <Drawer
+                  id={controls}
+                  aside={
+                    <div class="bg-white flex flex-col h-full w-full divide-y overflow-y-hidden">
+                      <div class="flex justify-between items-center">
+                        <h1 class="px-4 py-3">
+                          <span class="font-medium text-2xl">Filtro</span>
+                        </h1>
+                        <label
+                          class="btn btn-ghost cursor-pointer"
+                          for={controls}
+                        >
+                          <Icon id="close" />
+                        </label>
+                      </div>
+                      <div class="flex-grow overflow-auto">
+                        <Filters filters={filters} />
+                      </div>
+                    </div>
+                  }
+                >
+                  <div class="flex sm:hidden flex-col items-start">
+                    <div class="flex">{results}</div>
+                    <div class="w-full flex justify-between items-center gap-4 mt-5">
+                      <div class="flex max-w-1/2 w-full">
+                        <label
+                          class="cursor-pointer w-full h-9 min-h9 max-h-9 p-0 rounded-none flex items-center justify-center gap-2 bg-[#c6cfba] text-[#323f2d] text-sm font-bold uppercase"
+                          for={controls}
+                        >
+                          <Icon id="filter" />
+                          Filtro
+                        </label>
+                      </div>
+                      <div class="flex max-w-1/2 w-full">{sortBy}</div>
+                    </div>
+                  </div>
+                </Drawer>
               )}
 
-              <div class="flex flex-col gap-9">
+              <div class="grid grid-cols-1 sm:grid-cols-[250px_1fr] lg:gap-8">
                 {device === "desktop" && (
-                  <div class="flex justify-between items-center">
-                    {results}
-                    <div>{sortBy}</div>
-                  </div>
+                  <aside class="place-self-start flex flex-col gap-9 w-full">
+                    <span class="text-base font-medium h-12 flex items-center text-md text-[#1F251C]">
+                      Filtro
+                    </span>
+                    <Filters filters={filters} />
+                  </aside>
                 )}
 
-                <PageResult {...props} />
+                <div class="flex flex-col gap-9">
+                  {device === "desktop" && (
+                    <div class="flex justify-between items-center">
+                      {results}
+                      <div>{sortBy}</div>
+                    </div>
+                  )}
 
-                {(seoText?.title || seoText?.description) && (
-                  <div class="flex flex-col gap-2 sm:gap-3 text-[#1F251C] px-2 sm:px-0 pt-6 border-t border-[#C6CFBA]">
-                    {seoText.title && (
-                      <h2 class="text-[18px] sm:text-[20px] font-medium">
-                        {seoText.title}
-                      </h2>
-                    )}
-                    {seoText.description && (
-                      <>
-                        <p
-                          id="seo-text-truncated"
-                          class="text-[14px] sm:text-[16px] leading-relaxed line-clamp-3"
-                        >
-                          {seoText.description}
-                        </p>
-                        <p
-                          id="seo-text-full"
-                          class="text-[14px] sm:text-[16px] leading-relaxed hidden"
-                        >
-                          {seoText.description}
-                        </p>
-                        <button
-                          onclick="document.getElementById('seo-text-truncated').classList.toggle('hidden'); document.getElementById('seo-text-full').classList.toggle('hidden'); this.textContent = this.textContent === 'Ver mais' ? 'Ver menos' : 'Ver mais';"
-                          class="text-[#3A4332] font-bold text-sm hover:underline"
-                        >
-                          Ver mais
-                        </button>
-                      </>
-                    )}
-                  </div>
-                )}
+                  <PageResult {...props} />
 
-                {device === "mobile" && bannerImage && (
-                  <img
-                    src={bannerImage}
-                    alt="banner categoria"
-                    class="w-full rounded"
-                  />
-                )}
+                  {(seoText?.title || seoText?.description) && (
+                    <div class="flex flex-col gap-2 sm:gap-3 text-[#1F251C] px-2 sm:px-0 pt-6 border-t border-[#C6CFBA]">
+                      {seoText.title && (
+                        <h2 class="text-[18px] sm:text-[20px] font-medium">
+                          {seoText.title}
+                        </h2>
+                      )}
+                      {seoText.description && (
+                        <>
+                          <p
+                            id="seo-text-truncated"
+                            class="text-[14px] sm:text-[16px] leading-relaxed line-clamp-3"
+                          >
+                            {seoText.description}
+                          </p>
+                          <p
+                            id="seo-text-full"
+                            class="text-[14px] sm:text-[16px] leading-relaxed hidden"
+                          >
+                            {seoText.description}
+                          </p>
+                          <button
+                            onclick="document.getElementById('seo-text-truncated').classList.toggle('hidden'); document.getElementById('seo-text-full').classList.toggle('hidden'); this.textContent = this.textContent === 'Ver mais' ? 'Ver menos' : 'Ver mais';"
+                            class="text-[#3A4332] font-bold text-sm hover:underline"
+                          >
+                            Ver mais
+                          </button>
+                        </>
+                      )}
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
+          </>
         )}
       </div>
 
@@ -430,7 +434,7 @@ function Result(props: SectionProps<typeof loader>) {
           __html: useScript(
             setPageQuerystring,
             `${pageInfo.currentPage}`,
-            container
+            container,
           ),
         }}
       />

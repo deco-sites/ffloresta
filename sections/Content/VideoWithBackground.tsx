@@ -29,50 +29,47 @@ export default function VideoWithBackground({
   return (
     <div
       id={id}
-      class="container relative w-full h-auto aspect-[1180/355] overflow-hidden min-h-[450px] lg:min-h-[unset] lg:mt-4"
+      class="w-full container aspect-[15/13] md:aspect-[1180/355] flex items-center justify-center md:grid md:grid-cols-2 overflow-hidden relative mt-9"
     >
-      {/* Imagem de fundo */}
-      <div class="absolute inset-0 z-0">
-        <img
-          src={bgImgDesktop}
-          alt={"Background"}
-          class="hidden lg:block w-full h-full object-cover"
-        />
-        <img
-          src={bgImgMobile}
-          alt={"Background"}
-          class="block lg:hidden w-full h-full object-contain"
-        />
-      </div>
-
-      <div class="absolute inset-0 z-10 flex items-center justify-center lg:justify-end lg:items-center lg:p-4">
+      <img
+        src={bgImgMobile}
+        alt=""
+        class="w-full container absolute block md:hidden"
+      />
+      <img
+        src={bgImgDesktop}
+        alt=""
+        class="w-full container hidden md:block absolute "
+      />
+      <div class="hidden md:block"></div>
+      <div class="p-4 w-[95%] sm:w-[80%] md:w-full md:max-h-[220px] lg:max-h-[267px] xl:max-h-[330px] z-10">
+        {/* Vídeo Mobile */}
         <Video
           loading="eager"
           autoPlay
           loop
           controls={false}
           muted
-          width="auto"
-          height={355}
+          width="100%"
+          height="100%"
           media="(max-width: 767px)"
-          class="object-cover h-[200px] w-[90%] md:hidden"
+          class="object-contain w-full h-full md:hidden "
           alt={alt}
-          sizes="(max-width: 767px) 90vw"
           src={videoMobile}
         />
 
+        {/* Vídeo Desktop */}
         <Video
           loading="eager"
           autoPlay
           loop
           controls={false}
           muted
-          width={1180}
-          height={355}
+          width="100%"
+          height="100%"
           media="(min-width: 768px)"
-          class="object-cover hidden md:block w-[60%] max-w-[560px] h-auto"
+          class="object-cover hidden md:block w-full h-full aspect-auto"
           alt={alt}
-          sizes="(min-width: 768px) 50vw"
           src={videoDesktop}
         />
       </div>
@@ -82,6 +79,6 @@ export default function VideoWithBackground({
 
 export const LoadingFallback = () => (
   <Section.Container>
-    <Section.Placeholder height="355px" />;
+    <Section.Placeholder height="355px" />
   </Section.Container>
 );

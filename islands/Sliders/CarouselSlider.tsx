@@ -127,8 +127,11 @@ function onLoad({
       if (indices.length === 0) return;
 
       const firstVisible = indices[0];
-      const targetIndex =
-        firstVisible > 0 ? firstVisible - 1 : infinite ? items.length - 1 : 0;
+      const targetIndex = firstVisible > 0
+        ? firstVisible - 1
+        : infinite
+        ? items.length - 1
+        : 0;
       goToItem(targetIndex);
     };
 
@@ -139,12 +142,11 @@ function onLoad({
       if (indices.length === 0) return;
 
       const lastVisible = indices[indices.length - 1];
-      const targetIndex =
-        lastVisible < items.length - 1
-          ? lastVisible + 1
-          : infinite
-          ? 0
-          : items.length - 1;
+      const targetIndex = lastVisible < items.length - 1
+        ? lastVisible + 1
+        : infinite
+        ? 0
+        : items.length - 1;
       goToItem(targetIndex);
     };
 
@@ -161,7 +163,7 @@ function onLoad({
           }
         });
       },
-      { threshold: THRESHOLD, root: slider }
+      { threshold: THRESHOLD, root: slider },
     );
 
     items.forEach((item) => observer.observe(item));
@@ -245,13 +247,15 @@ function JS({
   infinite = false,
   autoplay = false,
 }: Props) {
-  const scriptContent = `(${onLoad.toString()})(${JSON.stringify({
-    rootId,
-    scroll,
-    interval,
-    infinite,
-    autoplay,
-  })})`;
+  const scriptContent = `(${onLoad.toString()})(${
+    JSON.stringify({
+      rootId,
+      scroll,
+      interval,
+      infinite,
+      autoplay,
+    })
+  })`;
 
   return (
     <script type="module" dangerouslySetInnerHTML={{ __html: scriptContent }} />

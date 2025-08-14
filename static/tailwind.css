@@ -624,6 +624,12 @@ html {
     max-width: 1240px;
   }
 }
+@media (min-width: 1280px) {
+
+  .container {
+    max-width: 1280px;
+  }
+}
 .alert {
   display: grid;
   width: 100%;
@@ -677,7 +683,9 @@ html {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   transition-duration: 200ms;
@@ -1124,7 +1132,9 @@ html {
   --tw-scale-x: .95;
   --tw-scale-y: .95;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   transition-duration: 200ms;
@@ -1615,7 +1625,9 @@ html {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
   padding: 1.5rem;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   transition-duration: 200ms;
@@ -2600,7 +2612,9 @@ details.collapse summary::-webkit-details-marker {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   text-align: start;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   transition-duration: 200ms;
@@ -3884,6 +3898,9 @@ details.collapse summary::-webkit-details-marker {
 .mt-8 {
   margin-top: 2rem;
 }
+.mt-9 {
+  margin-top: 2.25rem;
+}
 .mt-\[-1px\] {
   margin-top: -1px;
 }
@@ -3947,11 +3964,14 @@ details.collapse summary::-webkit-details-marker {
 .hidden {
   display: none;
 }
-.aspect-\[1180\/355\] {
-  aspect-ratio: 1180/355;
+.aspect-\[15\/13\] {
+  aspect-ratio: 15/13;
 }
 .aspect-\[156\/87\] {
   aspect-ratio: 156/87;
+}
+.aspect-auto {
+  aspect-ratio: auto;
 }
 .aspect-square {
   aspect-ratio: 1 / 1;
@@ -3997,9 +4017,6 @@ details.collapse summary::-webkit-details-marker {
 }
 .h-\[174px\] {
   height: 174px;
-}
-.h-\[200px\] {
-  height: 200px;
 }
 .h-\[210px\] {
   height: 210px;
@@ -4149,9 +4166,6 @@ details.collapse summary::-webkit-details-marker {
 .min-h-\[42px\] {
   min-height: 42px;
 }
-.min-h-\[450px\] {
-  min-height: 450px;
-}
 .min-h-\[460px\] {
   min-height: 460px;
 }
@@ -4245,14 +4259,8 @@ details.collapse summary::-webkit-details-marker {
 .w-\[57px\] {
   width: 57px;
 }
-.w-\[60\%\] {
-  width: 60%;
-}
 .w-\[84px\] {
   width: 84px;
-}
-.w-\[90\%\] {
-  width: 90%;
 }
 .w-\[95\%\] {
   width: 95%;
@@ -4335,9 +4343,6 @@ details.collapse summary::-webkit-details-marker {
 .min-w-\[50\%\] {
   min-width: 50%;
 }
-.min-w-\[80\%\] {
-  min-width: 80%;
-}
 .min-w-max {
   min-width: -moz-max-content;
   min-width: max-content;
@@ -4407,9 +4412,6 @@ details.collapse summary::-webkit-details-marker {
 }
 .max-w-\[522px\] {
   max-width: 522px;
-}
-.max-w-\[560px\] {
-  max-width: 560px;
 }
 .max-w-\[640px\] {
   max-width: 640px;
@@ -5740,10 +5742,13 @@ details.collapse summary::-webkit-details-marker {
 }
 .backdrop-blur-\[12px\] {
   --tw-backdrop-blur: blur(12px);
-  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 .transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -5919,7 +5924,9 @@ input[type="checkbox"]:checked::after {
 
 .has-\[\:invalid\]\:tooltip:has(:invalid):before,.has-\[\:invalid\]\:tooltip:has(:invalid):after {
   opacity: 0;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-delay: 100ms;
   transition-duration: 200ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -6118,6 +6125,13 @@ input[type="checkbox"]:checked::after {
       max-width: 1240px;
     }
   }
+
+  @media (min-width: 1280px) {
+
+    .xl\:container {
+      max-width: 1280px;
+    }
+  }
 }
 
 .placeholder\:text-sm::-moz-placeholder {
@@ -6144,20 +6158,12 @@ input[type="checkbox"]:checked::after {
   margin-left: 1rem;
 }
 
-.first\:ml-6:first-child {
-  margin-left: 1.5rem;
-}
-
 .first\:pl-5:first-child {
   padding-left: 1.25rem;
 }
 
 .last\:mr-4:last-child {
   margin-right: 1rem;
-}
-
-.last\:mr-6:last-child {
-  margin-right: 1.5rem;
 }
 
 .last\:pr-5:last-child {
@@ -6379,7 +6385,8 @@ input[type="checkbox"]:checked::after {
 
 .group:hover .group-hover\:backdrop-blur-\[12px\] {
   --tw-backdrop-blur: blur(12px);
-  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 .group:disabled .group-disabled\:bg-\[\#0D1717\] {
@@ -6406,7 +6413,8 @@ input[type="checkbox"]:checked::after {
 
 .peer:checked ~ .peer-checked\:backdrop-blur-\[12px\] {
   --tw-backdrop-blur: blur(12px);
-  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 .data-\[active\]\:bg-\[\#2D2D2D\][data-active] {
@@ -6501,6 +6509,10 @@ input[type="checkbox"]:checked::after {
 
   .sm\:w-\[552px\] {
     width: 552px;
+  }
+
+  .sm\:w-\[80\%\] {
+    width: 80%;
   }
 
   .sm\:w-\[calc\(33\.3\%-\(40px\/3\)\)\] {
@@ -6711,12 +6723,20 @@ input[type="checkbox"]:checked::after {
     display: none;
   }
 
+  .md\:aspect-\[1180\/355\] {
+    aspect-ratio: 1180/355;
+  }
+
   .md\:h-\[21px\] {
     height: 21px;
   }
 
   .md\:max-h-80 {
     max-height: 20rem;
+  }
+
+  .md\:max-h-\[220px\] {
+    max-height: 220px;
   }
 
   .md\:min-h-\[20px\] {
@@ -6737,6 +6757,10 @@ input[type="checkbox"]:checked::after {
 
   .md\:w-\[calc\(33\.333\%-16px\)\] {
     width: calc(33.333% - 16px);
+  }
+
+  .md\:w-full {
+    width: 100%;
   }
 
   .md\:max-w-40 {
@@ -6795,11 +6819,6 @@ input[type="checkbox"]:checked::after {
   .md\:py-10 {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
-  }
-
-  .md\:py-11 {
-    padding-top: 2.75rem;
-    padding-bottom: 2.75rem;
   }
 
   .md\:py-2 {
@@ -6936,12 +6955,12 @@ input[type="checkbox"]:checked::after {
     max-height: 2.25rem;
   }
 
-  .lg\:max-h-\[600px\] {
-    max-height: 600px;
+  .lg\:max-h-\[267px\] {
+    max-height: 267px;
   }
 
-  .lg\:min-h-\[unset\] {
-    min-height: unset;
+  .lg\:max-h-\[600px\] {
+    max-height: 600px;
   }
 
   .lg\:w-1\/2 {
@@ -7056,10 +7075,6 @@ input[type="checkbox"]:checked::after {
     justify-content: normal;
   }
 
-  .lg\:justify-end {
-    justify-content: flex-end;
-  }
-
   .lg\:justify-center {
     justify-content: center;
   }
@@ -7090,10 +7105,6 @@ input[type="checkbox"]:checked::after {
 
   .lg\:p-0 {
     padding: 0px;
-  }
-
-  .lg\:p-4 {
-    padding: 1rem;
   }
 
   .lg\:p-\[4\%\] {
@@ -7180,6 +7191,10 @@ input[type="checkbox"]:checked::after {
   .xl\:mx-auto {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .xl\:max-h-\[330px\] {
+    max-height: 330px;
   }
 
   .xl\:w-\[calc\(20\%-20px\)\] {

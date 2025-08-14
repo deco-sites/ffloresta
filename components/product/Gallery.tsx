@@ -1,4 +1,4 @@
-import { useSignal, effect } from "@preact/signals";
+import { effect, useSignal } from "@preact/signals";
 import { ProductDetailsPage } from "apps/commerce/types.ts";
 import Image from "apps/website/components/Image.tsx";
 
@@ -11,8 +11,8 @@ export default function ProductGallery(props: Props) {
 
   if (!props.page) return null;
 
-  const images =
-    props.page.product.image || props.page.product.isVariantOf?.image || [];
+  const images = props.page.product.image ||
+    props.page.product.isVariantOf?.image || [];
   const thumbs = images.map((img) => ({
     url: img.url!,
     alt: img.alternateName,
@@ -23,8 +23,8 @@ export default function ProductGallery(props: Props) {
   };
 
   const prev = () => {
-    currentIndex.value =
-      (currentIndex.value - 1 + thumbs.length) % thumbs.length;
+    currentIndex.value = (currentIndex.value - 1 + thumbs.length) %
+      thumbs.length;
   };
 
   return (

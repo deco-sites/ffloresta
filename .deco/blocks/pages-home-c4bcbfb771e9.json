@@ -226,7 +226,10 @@
         }
       ],
       "itemsToShow": 3,
-      "enableSlider": false
+      "enableSlider": false,
+      "settings": {
+        "gap": 3
+      }
     },
     {
       "__resolveType": "site/sections/Brand/BrandGrid.tsx",
@@ -337,7 +340,11 @@
       ],
       "itemsToShow": 3,
       "enableSlider": false,
-      "gap": 10
+      "gap": 10,
+      "settings": {
+        "gap": 4
+      },
+      "spacing": {}
     },
     {
       "__resolveType": "site/sections/Content/VideoWithBackground.tsx",

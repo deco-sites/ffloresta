@@ -115,44 +115,46 @@ function Footer({
           </div>
 
           <div class="flex flex-col sm:grid sm:grid-flow-row lg:grid-cols-2 gap-6">
-            {isMobile ? (
-              <div>
-                {links.map(({ title, itens }, index) => (
-                  <AccordionItem key={title + index} title={title}>
-                    <div class="flex flex-col gap-[12px] mt-2 mb-[20px]">
-                      {itens.map(({ title, href }, idx) => (
-                        <a
-                          key={title + idx}
-                          class="font-normal text-[14px] text-white"
-                          href={href}
-                        >
-                          {title}
-                        </a>
-                      ))}
+            {isMobile
+              ? (
+                <div>
+                  {links.map(({ title, itens }, index) => (
+                    <AccordionItem key={title + index} title={title}>
+                      <div class="flex flex-col gap-[12px] mt-2 mb-[20px]">
+                        {itens.map(({ title, href }, idx) => (
+                          <a
+                            key={title + idx}
+                            class="font-normal text-[14px] text-white"
+                            href={href}
+                          >
+                            {title}
+                          </a>
+                        ))}
+                      </div>
+                    </AccordionItem>
+                  ))}
+                </div>
+              )
+              : (
+                <div class="grid grid-flow-row sm:grid-flow-col gap-6">
+                  {links.map(({ title, itens }, index) => (
+                    <div key={title + index} class="flex flex-col gap-[18px]">
+                      <SectionTitle title={title} />
+                      <div class="flex flex-col gap-[18px]">
+                        {itens.map(({ title, href }, idx) => (
+                          <a
+                            key={title + idx}
+                            class="font-normal text-[14px] text-white"
+                            href={href}
+                          >
+                            {title}
+                          </a>
+                        ))}
+                      </div>
                     </div>
-                  </AccordionItem>
-                ))}
-              </div>
-            ) : (
-              <div class="grid grid-flow-row sm:grid-flow-col gap-6">
-                {links.map(({ title, itens }, index) => (
-                  <div key={title + index} class="flex flex-col gap-[18px]">
-                    <SectionTitle title={title} />
-                    <div class="flex flex-col gap-[18px]">
-                      {itens.map(({ title, href }, idx) => (
-                        <a
-                          key={title + idx}
-                          class="font-normal text-[14px] text-white"
-                          href={href}
-                        >
-                          {title}
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
+                  ))}
+                </div>
+              )}
 
             <div class="flex flex-col sm:flex-row gap-12 justify-between items-start">
               <div class="w-full">
@@ -222,84 +224,90 @@ function Footer({
 
           {/* Seção de Lojas com dropdown apenas no mobile */}
           <div>
-            {isMobile ? (
-              <div class="mt-6">
-                <details class="group">
-                  <summary class="font-bold text-[16px] text-white cursor-pointer flex justify-between items-center min-h-[48px] list-none">
-                    <span>{lojas.title}</span>
-                    <svg
-                      width="12"
-                      height="7"
-                      viewBox="0 0 12 7"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="transform group-open:rotate-180 transition-transform duration-300"
-                    >
-                      <path
-                        d="M0.52124 0.966797C0.537437 0.755898 0.622525 0.570573 0.775146 0.417969L0.842529 0.357422C1.00278 0.224673 1.19303 0.157278 1.40796 0.157227C1.62312 0.157227 1.814 0.224465 1.97436 0.357422L2.04077 0.417969L6.00757 4.38574L9.97534 0.417968L10.0408 0.359375C10.1973 0.230598 10.3865 0.165388 10.6013 0.162109L10.6931 0.165039C10.8737 0.17901 11.0351 0.24329 11.1736 0.357421L11.241 0.417968C11.4141 0.591095 11.5026 0.805113 11.5027 1.05078C11.5027 1.26578 11.4353 1.45689 11.3025 1.61719L11.241 1.68457L6.74683 6.17871C6.66749 6.25802 6.58242 6.32291 6.49097 6.37012L6.39722 6.41113C6.27539 6.45627 6.14515 6.47848 6.00854 6.47852C5.87192 6.47852 5.74172 6.45623 5.61987 6.41113L5.52612 6.37012C5.43441 6.32286 5.34882 6.25824 5.26929 6.17871L0.775146 1.68457L0.716553 1.61914C0.587624 1.46258 0.522622 1.27346 0.519287 1.05859L0.52124 0.966797Z"
-                        fill="#ffffff"
-                        stroke="white"
-                        stroke-width="0.3"
-                      />
-                    </svg>
-                  </summary>
-                  <div class="flex flex-col gap-y-[10px] mt-4">
-                    {lojas.lojas.map((loja, idx) => (
-                      <div key={idx} class="mb-4">
-                        <p class="text-white text-[14px]">{loja.title}</p>
-                        <p class="text-white text-[12px] font-bold underline">
-                          {loja.tuor}
-                        </p>
-                        <p class="text-white text-[12px]">{loja.end}</p>
-                        <div class="flex flex-row flex-wrap">
-                          <p class="text-white text-[12px] font-bold">
-                            TELEFONE:
-                          </p>
-                          <p class="text-white text-[12px] ml-1">{loja.tel}</p>
-                        </div>
-                        <div>
+            {isMobile
+              ? (
+                <div class="mt-6">
+                  <details class="group">
+                    <summary class="font-bold text-[16px] text-white cursor-pointer flex justify-between items-center min-h-[48px] list-none">
+                      <span>{lojas.title}</span>
+                      <svg
+                        width="12"
+                        height="7"
+                        viewBox="0 0 12 7"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="transform group-open:rotate-180 transition-transform duration-300"
+                      >
+                        <path
+                          d="M0.52124 0.966797C0.537437 0.755898 0.622525 0.570573 0.775146 0.417969L0.842529 0.357422C1.00278 0.224673 1.19303 0.157278 1.40796 0.157227C1.62312 0.157227 1.814 0.224465 1.97436 0.357422L2.04077 0.417969L6.00757 4.38574L9.97534 0.417968L10.0408 0.359375C10.1973 0.230598 10.3865 0.165388 10.6013 0.162109L10.6931 0.165039C10.8737 0.17901 11.0351 0.24329 11.1736 0.357421L11.241 0.417968C11.4141 0.591095 11.5026 0.805113 11.5027 1.05078C11.5027 1.26578 11.4353 1.45689 11.3025 1.61719L11.241 1.68457L6.74683 6.17871C6.66749 6.25802 6.58242 6.32291 6.49097 6.37012L6.39722 6.41113C6.27539 6.45627 6.14515 6.47848 6.00854 6.47852C5.87192 6.47852 5.74172 6.45623 5.61987 6.41113L5.52612 6.37012C5.43441 6.32286 5.34882 6.25824 5.26929 6.17871L0.775146 1.68457L0.716553 1.61914C0.587624 1.46258 0.522622 1.27346 0.519287 1.05859L0.52124 0.966797Z"
+                          fill="#ffffff"
+                          stroke="white"
+                          stroke-width="0.3"
+                        />
+                      </svg>
+                    </summary>
+                    <div class="flex flex-col gap-y-[10px] mt-4">
+                      {lojas.lojas.map((loja, idx) => (
+                        <div key={idx} class="mb-4">
+                          <p class="text-white text-[14px]">{loja.title}</p>
                           <p class="text-white text-[12px] font-bold underline">
-                            HORÁRIO DE ATENDIMENTO
+                            {loja.tuor}
                           </p>
-                          <p class="text-white text-[12px]">{loja.horario}</p>
+                          <p class="text-white text-[12px]">{loja.end}</p>
+                          <div class="flex flex-row flex-wrap">
+                            <p class="text-white text-[12px] font-bold">
+                              TELEFONE:
+                            </p>
+                            <p class="text-white text-[12px] ml-1">
+                              {loja.tel}
+                            </p>
+                          </div>
+                          <div>
+                            <p class="text-white text-[12px] font-bold underline">
+                              HORÁRIO DE ATENDIMENTO
+                            </p>
+                            <p class="text-white text-[12px]">{loja.horario}</p>
+                          </div>
                         </div>
-                      </div>
-                    ))}
-                  </div>
-                </details>
-              </div>
-            ) : (
-              <>
-                <p class="font-bold text-[16px] text-white mb-[30px] mt-[50px]">
-                  {lojas.title}
-                </p>
-                <div class="grid grid-cols-1 lg:grid-cols-5 gap-x-[20px]">
-                  {lojas.lojas.map(
-                    ({ title, tuor, end, tel, horario }, idx) => (
-                      <div key={idx} class="flex flex-col gap-y-[10px] mb-6">
-                        <p class="text-white text-[16px]">{title}</p>
-                        <p class="text-white text-[14px] font-bold underline">
-                          {tuor}
-                        </p>
-                        <p class="text-white text-[14px] min-h-[64px]">{end}</p>
-                        <div class="flex flex-row flex-wrap">
-                          <p class="text-white text-[14px] font-bold">
-                            TELEFONE:
-                          </p>
-                          <p class="text-white text-[14px] ml-1">{tel}</p>
-                        </div>
-                        <div>
-                          <p class="text-white text-[14px] font-bold underline">
-                            HORÁRIO DE ATENDIMENTO
-                          </p>
-                          <p class="text-white text-[14px]">{horario}</p>
-                        </div>
-                      </div>
-                    )
-                  )}
+                      ))}
+                    </div>
+                  </details>
                 </div>
-              </>
-            )}
+              )
+              : (
+                <>
+                  <p class="font-bold text-[16px] text-white mb-[30px] mt-[50px]">
+                    {lojas.title}
+                  </p>
+                  <div class="grid grid-cols-1 lg:grid-cols-5 gap-x-[20px]">
+                    {lojas.lojas.map(
+                      ({ title, tuor, end, tel, horario }, idx) => (
+                        <div key={idx} class="flex flex-col gap-y-[10px] mb-6">
+                          <p class="text-white text-[16px]">{title}</p>
+                          <p class="text-white text-[14px] font-bold underline">
+                            {tuor}
+                          </p>
+                          <p class="text-white text-[14px] min-h-[64px]">
+                            {end}
+                          </p>
+                          <div class="flex flex-row flex-wrap">
+                            <p class="text-white text-[14px] font-bold">
+                              TELEFONE:
+                            </p>
+                            <p class="text-white text-[14px] ml-1">{tel}</p>
+                          </div>
+                          <div>
+                            <p class="text-white text-[14px] font-bold underline">
+                              HORÁRIO DE ATENDIMENTO
+                            </p>
+                            <p class="text-white text-[14px]">{horario}</p>
+                          </div>
+                        </div>
+                      ),
+                    )}
+                  </div>
+                </>
+              )}
           </div>
 
           {!isMobile && (

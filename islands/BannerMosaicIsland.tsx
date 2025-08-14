@@ -16,7 +16,7 @@ export interface Props {
     itemsToShow?: number;
     /**
      * @title Espaçamento entre itens
-     * @description Espaço entre as imagens em pixels, aplicado apenas no desktop pois o mobile é um slider com um item por vez
+     * @description Espaço entre as imagens em pixels no desktop, o número digitado será multiplicado por 4x, devido aos padrões de espaçamento. Exemplo: 3 = 12px
      * @default 3
      */
     gap?: number;
@@ -96,13 +96,28 @@ function MosaicImage({
   return <div class="block h-full w-full">{content}</div>;
 }
 
-export default function BannerMosaicIsland({ images, settings = {} }: Props) {
+export default function BannerMosaicIsland({
+  images,
+  settings = {},
+  spacing = {},
+}: Props) {
   const {
     itemsToShow = 4,
     gap = 3,
     autoplay = true,
     autoplayInterval = 5000,
   } = settings;
+
+  const {
+    marginTop = 0,
+    marginBottom = 0,
+    marginLeft = 0,
+    marginRight = 0,
+    paddingTop = 0,
+    paddingBottom = 0,
+    paddingLeft = 0,
+    paddingRight = 0,
+  } = spacing;
 
   const id = useId();
   const sliderRef = useRef<HTMLDivElement>(null);
@@ -217,11 +232,22 @@ export default function BannerMosaicIsland({ images, settings = {} }: Props) {
     return () => stopAutoplay();
   }, [autoplay, autoplayInterval, images.length]);
 
+  const containerStyle = {
+    marginTop: `${marginTop}px`,
+    marginBottom: `${marginBottom}px`,
+    marginLeft: `${marginLeft}px`,
+    marginRight: `${marginRight}px`,
+    paddingTop: `${paddingTop}px`,
+    paddingBottom: `${paddingBottom}px`,
+    paddingLeft: `${paddingLeft}px`,
+    paddingRight: `${paddingRight}px`,
+  };
+
   const desktopView = (
     <div
       class={clx(
         "hidden md:flex flex-wrap items-stretch justify-center",
-        `gap-[${gap}px]`
+        `gap-${gap}`,
       )}
     >
       {images?.slice(0, itemsToShow).map((image, index) => (
@@ -276,7 +302,7 @@ export default function BannerMosaicIsland({ images, settings = {} }: Props) {
                   "w-2 h-2 lg:w-3 lg:h-3 transition-all duration-300",
                   activeDot === index
                     ? "bg-[#2D2D2D]"
-                    : "bg-transparent border border-[#2D2D2D]"
+                    : "bg-transparent border border-[#2D2D2D]",
                 )}
               />
             </button>
