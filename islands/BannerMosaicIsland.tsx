@@ -4,57 +4,16 @@ import { useEffect, useRef, useState } from "preact/hooks";
 import { clx } from "../sdk/clx.ts";
 
 export interface Props {
-  /**
-   * @title Configurações do Banner Mosaico
-   */
   settings?: {
-    /**
-     * @title Quantidade de itens visíveis
-     * @description Número de imagens visíveis simultaneamente no desktop
-     * @default 4
-     */
     itemsToShow?: number;
-    /**
-     * @title Espaçamento entre itens
-     * @description Espaço entre as imagens em pixels no desktop, o número digitado será multiplicado por 4x, devido aos padrões de espaçamento. Exemplo: 3 = 12px
-     * @default 3
-     */
     gap?: number;
-    /**
-     * @title Autoplay
-     * @description Ativar rotação automática das imagens
-     * @default true
-     */
     autoplay?: boolean;
-    /**
-     * @title Intervalo do Autoplay
-     * @description Tempo em milissegundos entre cada transição
-     * @default 5000
-     */
     autoplayInterval?: number;
   };
-
-  /**
-   * @title Imagens do Banner
-   */
   images: Array<{
-    /**
-     * @title Imagem para Desktop
-     */
     desktop: Image;
-    /**
-     * @title Imagem para Mobile
-     */
     mobile: Image;
-    /**
-     * @title Texto alternativo
-     * @description Texto que descreve a imagem para acessibilidade
-     */
     alt: string;
-    /**
-     * @title Link
-     * @description URL para onde o usuário será direcionado ao clicar na imagem
-     */
     href?: string;
   }>;
 }
@@ -96,11 +55,7 @@ function MosaicImage({
   return <div class="block h-full w-full">{content}</div>;
 }
 
-export default function BannerMosaicIsland({
-  images,
-  settings = {},
-  spacing = {},
-}: Props) {
+export default function BannerMosaicIsland({ images, settings = {} }: Props) {
   const {
     itemsToShow = 4,
     gap = 3,
@@ -108,23 +63,17 @@ export default function BannerMosaicIsland({
     autoplayInterval = 5000,
   } = settings;
 
-  const {
-    marginTop = 0,
-    marginBottom = 0,
-    marginLeft = 0,
-    marginRight = 0,
-    paddingTop = 0,
-    paddingBottom = 0,
-    paddingLeft = 0,
-    paddingRight = 0,
-  } = spacing;
-
   const id = useId();
   const sliderRef = useRef<HTMLDivElement>(null);
   const [activeDot, setActiveDot] = useState(0);
+
+  // Estado de arraste
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
+  const [startY, setStartY] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+  const [isHorizontalScroll, setIsHorizontalScroll] = useState(false);
+
   const autoplayTimer = useRef<NodeJS.Timeout | null>(null);
 
   const updateActiveDot = () => {
@@ -153,12 +102,8 @@ export default function BannerMosaicIsland({
 
   const startAutoplay = () => {
     if (!autoplay || images.length <= 1) return;
-
     stopAutoplay();
-
-    autoplayTimer.current = setInterval(() => {
-      goToNextSlide();
-    }, autoplayInterval);
+    autoplayTimer.current = setInterval(goToNextSlide, autoplayInterval);
   };
 
   const stopAutoplay = () => {
@@ -173,18 +118,35 @@ export default function BannerMosaicIsland({
     if (!slider) return;
 
     const handleDragStart = (e: MouseEvent | TouchEvent) => {
+      const pageX = "pageX" in e ? e.pageX : e.touches[0].pageX;
+      const pageY = "pageY" in e ? e.pageY : e.touches[0].pageY;
+
       setIsDragging(true);
-      setStartX("pageX" in e ? e.pageX : e.touches[0].pageX);
+      setIsHorizontalScroll(false); // ainda não sabemos a direção
+      setStartX(pageX);
+      setStartY(pageY);
       setScrollLeft(slider.scrollLeft);
       stopAutoplay();
     };
 
     const handleDragMove = (e: MouseEvent | TouchEvent) => {
       if (!isDragging) return;
-      e.preventDefault();
+
       const x = "pageX" in e ? e.pageX : e.touches[0].pageX;
-      const walk = (x - startX) * 1.5;
-      slider.scrollLeft = scrollLeft - walk;
+      const y = "pageY" in e ? e.pageY : e.touches[0].pageY;
+      const deltaX = x - startX;
+      const deltaY = y - startY;
+
+      // Detecta direção apenas na primeira movimentação
+      if (!isHorizontalScroll && Math.abs(deltaX) > Math.abs(deltaY)) {
+        setIsHorizontalScroll(true);
+      }
+
+      if (isHorizontalScroll) {
+        e.preventDefault(); // bloqueia scroll vertical
+        const walk = deltaX * 1.5;
+        slider.scrollLeft = scrollLeft - walk;
+      }
     };
 
     const handleDragEnd = () => {
@@ -193,20 +155,16 @@ export default function BannerMosaicIsland({
       startAutoplay();
     };
 
-    const handleScroll = () => {
-      updateActiveDot();
-    };
-
     slider.addEventListener("mousedown", handleDragStart);
     slider.addEventListener("mousemove", handleDragMove);
     slider.addEventListener("mouseup", handleDragEnd);
     slider.addEventListener("mouseleave", handleDragEnd);
 
-    slider.addEventListener("touchstart", handleDragStart);
-    slider.addEventListener("touchmove", handleDragMove);
+    slider.addEventListener("touchstart", handleDragStart, { passive: true });
+    slider.addEventListener("touchmove", handleDragMove, { passive: false });
     slider.addEventListener("touchend", handleDragEnd);
 
-    slider.addEventListener("scroll", handleScroll);
+    slider.addEventListener("scroll", updateActiveDot);
 
     return () => {
       slider.removeEventListener("mousedown", handleDragStart);
@@ -218,9 +176,9 @@ export default function BannerMosaicIsland({
       slider.removeEventListener("touchmove", handleDragMove);
       slider.removeEventListener("touchend", handleDragEnd);
 
-      slider.removeEventListener("scroll", handleScroll);
+      slider.removeEventListener("scroll", updateActiveDot);
     };
-  }, [isDragging, startX, scrollLeft]);
+  }, [isDragging, startX, startY, scrollLeft, isHorizontalScroll]);
 
   useEffect(() => {
     if (autoplay && images.length > 1) {
@@ -228,26 +186,14 @@ export default function BannerMosaicIsland({
     } else {
       stopAutoplay();
     }
-
     return () => stopAutoplay();
   }, [autoplay, autoplayInterval, images.length]);
-
-  const containerStyle = {
-    marginTop: `${marginTop}px`,
-    marginBottom: `${marginBottom}px`,
-    marginLeft: `${marginLeft}px`,
-    marginRight: `${marginRight}px`,
-    paddingTop: `${paddingTop}px`,
-    paddingBottom: `${paddingBottom}px`,
-    paddingLeft: `${paddingLeft}px`,
-    paddingRight: `${paddingRight}px`,
-  };
 
   const desktopView = (
     <div
       class={clx(
         "hidden md:flex flex-wrap items-stretch justify-center",
-        `gap-${gap}`,
+        `gap-${gap}`
       )}
     >
       {images?.slice(0, itemsToShow).map((image, index) => (
@@ -302,7 +248,7 @@ export default function BannerMosaicIsland({
                   "w-2 h-2 lg:w-3 lg:h-3 transition-all duration-300",
                   activeDot === index
                     ? "bg-[#2D2D2D]"
-                    : "bg-transparent border border-[#2D2D2D]",
+                    : "bg-transparent border border-[#2D2D2D]"
                 )}
               />
             </button>

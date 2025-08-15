@@ -46,6 +46,8 @@ export default function BrandGridIsland({ title, cta, items, icon }: Props) {
   const sliderRef = useRef<HTMLDivElement>(null);
   const isDraggingRef = useRef(false);
   const startXRef = useRef(0);
+  const startYRef = useRef(0); // Novo
+  const isHorizontalScrollRef = useRef(false); // Novo
   const scrollLeftRef = useRef(0);
   const [stepSize, setStepSize] = useState(0);
   const [activeDot, setActiveDot] = useState(0);
@@ -83,7 +85,6 @@ export default function BrandGridIsland({ title, cta, items, icon }: Props) {
       behavior: "smooth",
     });
 
-    // Atualiza dot imediatamente (antes do scroll terminar)
     setActiveDot(dotIndex);
   };
 
@@ -113,9 +114,9 @@ export default function BrandGridIsland({ title, cta, items, icon }: Props) {
 
     const handleDragStart = (e: MouseEvent | TouchEvent) => {
       isDraggingRef.current = true;
-      startXRef.current = (e as MouseEvent).pageX ??
-        (e as TouchEvent).touches?.[0]?.pageX ??
-        slider.offsetLeft;
+      isHorizontalScrollRef.current = false;
+      startXRef.current = "pageX" in e ? e.pageX : e.touches[0].pageX;
+      startYRef.current = "pageY" in e ? e.pageY : e.touches[0].pageY;
       scrollLeftRef.current = slider.scrollLeft;
       slider.classList.add("dragging");
     };
@@ -129,12 +130,26 @@ export default function BrandGridIsland({ title, cta, items, icon }: Props) {
 
     const handleDragMove = (e: MouseEvent | TouchEvent) => {
       if (!isDraggingRef.current) return;
-      e.preventDefault();
-      const x = (e as MouseEvent).pageX ??
-        (e as TouchEvent).touches?.[0]?.pageX ??
-        startXRef.current;
-      const walk = (x - startXRef.current) * 2;
-      slider.scrollLeft = scrollLeftRef.current - walk;
+
+      const x = "pageX" in e ? e.pageX : e.touches[0].pageX;
+      const y = "pageY" in e ? e.pageY : e.touches[0].pageY;
+
+      const deltaX = x - startXRef.current;
+      const deltaY = y - startYRef.current;
+
+      // Detecta direção na primeira movimentação
+      if (
+        !isHorizontalScrollRef.current &&
+        Math.abs(deltaX) > Math.abs(deltaY)
+      ) {
+        isHorizontalScrollRef.current = true;
+      }
+
+      if (isHorizontalScrollRef.current) {
+        e.preventDefault();
+        const walk = deltaX * 2;
+        slider.scrollLeft = scrollLeftRef.current - walk;
+      }
     };
 
     slider.addEventListener("mousedown", handleDragStart);
@@ -142,14 +157,13 @@ export default function BrandGridIsland({ title, cta, items, icon }: Props) {
     slider.addEventListener("mouseup", handleDragEnd);
     slider.addEventListener("mousemove", handleDragMove);
 
-    slider.addEventListener("touchstart", handleDragStart);
+    slider.addEventListener("touchstart", handleDragStart, { passive: true });
     slider.addEventListener("touchend", handleDragEnd);
-    slider.addEventListener("touchmove", handleDragMove);
+    slider.addEventListener("touchmove", handleDragMove, { passive: false });
 
     slider.addEventListener("scroll", updateActiveDot);
     window.addEventListener("resize", handleResize);
 
-    // Força cálculo imediato no mount
     updateStepSize();
     updateActiveDot();
 
@@ -190,11 +204,11 @@ export default function BrandGridIsland({ title, cta, items, icon }: Props) {
               key={index}
               class={clx(
                 "flex-shrink-0 snap-start",
-                "w-[calc(50%-(20px/2))]", // 2 items
-                "sm:w-[calc(33.3%-(40px/3))]", // 3 items
-                "md:w-[calc(25%-(60px/4))]", // 4 items
-                "lg:w-[calc(20%-(80px/5))]", // 5 items
-                "2xl:w-[calc(16.6%-(100px/6))]", // 6 items
+                "w-[calc(50%-(20px/2))]",
+                "sm:w-[calc(33.3%-(40px/3))]",
+                "md:w-[calc(25%-(60px/4))]",
+                "lg:w-[calc(20%-(80px/5))]",
+                "2xl:w-[calc(16.6%-(100px/6))]"
               )}
             >
               <Card {...item} />
@@ -215,7 +229,7 @@ export default function BrandGridIsland({ title, cta, items, icon }: Props) {
                   class={clx(
                     "w-2 h-2 lg:w-3 lg:h-3 transition-all duration-300",
                     "border border-[#273D28]",
-                    activeDot === index ? "bg-[#273D28]" : "bg-transparent",
+                    activeDot === index ? "bg-[#273D28]" : "bg-transparent"
                   )}
                 />
               </button>
