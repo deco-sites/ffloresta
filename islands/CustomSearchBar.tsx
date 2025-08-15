@@ -127,7 +127,7 @@ function ProductCard({
                 <span class="font-bold text-[14px] leading-[170%] tracking-[3%] line-through">
                   {formatPrice(listPrice, offers?.priceCurrency).replace(
                     "R$",
-                    "",
+                    ""
                   )}
                 </span>
               </div>
@@ -240,7 +240,21 @@ export default function CustomSearchBar({
             aria-label="Buscar"
             disabled={loading.value}
           >
-            <Icon id="search" size={20} />
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.5 17.5L13.8833 13.8833M15.8333 9.16667C15.8333 12.8486 12.8486 15.8333 9.16667 15.8333C5.48477 15.8333 2.5 12.8486 2.5 9.16667C2.5 5.48477 5.48477 2.5 9.16667 2.5C12.8486 2.5 15.8333 5.48477 15.8333 9.16667Z"
+                stroke="#1F251C"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
           </button>
         </form>
       </div>
@@ -257,26 +271,27 @@ export default function CustomSearchBar({
                 <ul class="space-y-1 md:space-y-2">
                   {(isMobile.value
                     ? searchTerms.value.slice(0, 3)
-                    : searchTerms.value).map((term, index) => (
-                      <li key={index}>
-                        <a
-                          href={`/s?q=${encodeURIComponent(term.term)}`}
-                          class="block py-1 md:py-2 hover:bg-base-200 rounded"
-                          onMouseDown={(e) => e.preventDefault()}
-                        >
-                          <div class="flex justify-between items-center">
-                            <span class="text-sm md:text-base text-capitalize">
-                              {term.term}
+                    : searchTerms.value
+                  ).map((term, index) => (
+                    <li key={index}>
+                      <a
+                        href={`/s?q=${encodeURIComponent(term.term)}`}
+                        class="block py-1 md:py-2 hover:bg-base-200 rounded"
+                        onMouseDown={(e) => e.preventDefault()}
+                      >
+                        <div class="flex justify-between items-center">
+                          <span class="text-sm md:text-base text-capitalize">
+                            {term.term}
+                          </span>
+                          {term.count && (
+                            <span class="text-xs md:text-sm text-gray-500">
+                              {term.count}
                             </span>
-                            {term.count && (
-                              <span class="text-xs md:text-sm text-gray-500">
-                                {term.count}
-                              </span>
-                            )}
-                          </div>
-                        </a>
-                      </li>
-                    ))}
+                          )}
+                        </div>
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </div>
             )}
