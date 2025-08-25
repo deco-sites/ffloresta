@@ -3973,6 +3973,9 @@ details.collapse summary::-webkit-details-marker {
 .aspect-auto {
   aspect-ratio: auto;
 }
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
 .h-1 {
   height: 0.25rem;
 }
@@ -4002,9 +4005,6 @@ details.collapse summary::-webkit-details-marker {
 }
 .h-9 {
   height: 2.25rem;
-}
-.h-96 {
-  height: 24rem;
 }
 .h-\[10px\] {
   height: 10px;
@@ -4048,11 +4048,11 @@ details.collapse summary::-webkit-details-marker {
 .h-\[57px\] {
   height: 57px;
 }
-.h-\[60px\] {
-  height: 60px;
-}
 .h-\[6px\] {
   height: 6px;
+}
+.h-\[70px\] {
+  height: 70px;
 }
 .h-\[98\%\] {
   height: 98%;
@@ -4099,6 +4099,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .max-h-\[430px\] {
   max-height: 430px;
+}
+.max-h-\[435px\] {
+  max-height: 435px;
 }
 .max-h-\[50px\] {
   max-height: 50px;
@@ -4265,6 +4268,9 @@ details.collapse summary::-webkit-details-marker {
 .w-\[57px\] {
   width: 57px;
 }
+.w-\[84px\] {
+  width: 84px;
+}
 .w-\[95\%\] {
   width: 95%;
 }
@@ -4345,9 +4351,6 @@ details.collapse summary::-webkit-details-marker {
 }
 .min-w-\[50\%\] {
   min-width: 50%;
-}
-.min-w-\[70px\] {
-  min-width: 70px;
 }
 .min-w-max {
   min-width: -moz-max-content;
@@ -4909,9 +4912,9 @@ details.collapse summary::-webkit-details-marker {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
-.border-blue-500 {
+.border-blue-600 {
   --tw-border-opacity: 1;
-  border-color: rgb(59 130 246 / var(--tw-border-opacity));
+  border-color: rgb(37 99 235 / var(--tw-border-opacity));
 }
 .border-gray-300 {
   --tw-border-opacity: 1;
@@ -5050,13 +5053,13 @@ details.collapse summary::-webkit-details-marker {
 .bg-black\/40 {
   background-color: rgb(0 0 0 / 0.4);
 }
-.bg-gray-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-}
 .bg-gray-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+.bg-gray-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 .bg-neutral-content {
   --tw-bg-opacity: 1;
@@ -5632,10 +5635,6 @@ details.collapse summary::-webkit-details-marker {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
-.text-blue-600 {
-  --tw-text-opacity: 1;
-  color: rgb(37 99 235 / var(--tw-text-opacity));
-}
 .text-error {
   --tw-text-opacity: 1;
   color: var(--fallback-er,oklch(var(--er)/var(--tw-text-opacity)));
@@ -5643,6 +5642,10 @@ details.collapse summary::-webkit-details-marker {
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+.text-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 .text-primary {
   --tw-text-opacity: 1;
@@ -6240,9 +6243,9 @@ input[type="checkbox"]:checked::after {
   border-color: rgb(201 207 207 / var(--tw-border-opacity));
 }
 
-.hover\:border-blue-500:hover {
+.hover\:border-gray-200:hover {
   --tw-border-opacity: 1;
-  border-color: rgb(59 130 246 / var(--tw-border-opacity));
+  border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
 
 .hover\:border-gray-300:hover {
@@ -6300,6 +6303,11 @@ input[type="checkbox"]:checked::after {
 .hover\:bg-base-200:hover {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity)));
+}
+
+.hover\:bg-gray-100:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-transparent:hover {
