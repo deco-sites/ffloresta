@@ -66,33 +66,53 @@ export default function BannerMosaicIsland({ images, settings = {} }: Props) {
   const id = useId();
   const sliderRef = useRef<HTMLDivElement>(null);
   const [activeDot, setActiveDot] = useState(0);
-
-  // Estado de arraste
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [startY, setStartY] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
-  const [isHorizontalScroll, setIsHorizontalScroll] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const autoplayTimer = useRef<NodeJS.Timeout | null>(null);
+  const isDragging = useRef(false);
+  const startX = useRef(0);
+  const scrollLeft = useRef(0);
+  const lastScrollTime = useRef(0);
 
-  const updateActiveDot = () => {
-    if (!sliderRef.current) return;
-    const scrollPosition = sliderRef.current.scrollLeft;
-    const slideWidth = sliderRef.current.offsetWidth;
-    const newActiveDot = Math.round(scrollPosition / slideWidth);
-
-    setActiveDot(newActiveDot);
-  };
-
+  // Função para ir para um slide específico com transição suave
   const goToSlide = (index: number) => {
-    if (!sliderRef.current || images.length <= 1) return;
+    if (isTransitioning || !sliderRef.current || images.length <= 1) return;
 
-    sliderRef.current.scrollTo({
-      left: sliderRef.current.offsetWidth * index,
+    setIsTransitioning(true);
+    setActiveDot(index);
+
+    const slider = sliderRef.current;
+    const scrollPosition = index * slider.offsetWidth;
+
+    slider.scrollTo({
+      left: scrollPosition,
       behavior: "smooth",
     });
-    setActiveDot(index);
+
+    // Resetar após a transição
+    setTimeout(() => {
+      setIsTransitioning(false);
+    }, 800);
+  };
+
+  const updateActiveDot = () => {
+    if (!sliderRef.current || isTransitioning) return;
+
+    const slider = sliderRef.current;
+    const scrollPosition = slider.scrollLeft;
+    const slideWidth = slider.offsetWidth;
+
+    if (slideWidth === 0) return;
+
+    const newActiveDot = Math.round(scrollPosition / slideWidth);
+
+    if (
+      newActiveDot !== activeDot &&
+      newActiveDot >= 0 &&
+      newActiveDot < images.length
+    ) {
+      setActiveDot(newActiveDot);
+    }
   };
 
   const goToNextSlide = () => {
@@ -101,7 +121,7 @@ export default function BannerMosaicIsland({ images, settings = {} }: Props) {
   };
 
   const startAutoplay = () => {
-    if (!autoplay || images.length <= 1) return;
+    if (!autoplay || images.length <= 1 || isDragging.current) return;
     stopAutoplay();
     autoplayTimer.current = setInterval(goToNextSlide, autoplayInterval);
   };
@@ -117,83 +137,122 @@ export default function BannerMosaicIsland({ images, settings = {} }: Props) {
     const slider = sliderRef.current;
     if (!slider) return;
 
-    const handleDragStart = (e: MouseEvent | TouchEvent) => {
-      const pageX = "pageX" in e ? e.pageX : e.touches[0].pageX;
-      const pageY = "pageY" in e ? e.pageY : e.touches[0].pageY;
+    // Função debounce para o scroll
+    let scrollTimeout: number;
+    const handleScroll = () => {
+      const now = Date.now();
+      // Só atualiza a cada 50ms para melhor performance
+      if (now - lastScrollTime.current > 50) {
+        lastScrollTime.current = now;
+        updateActiveDot();
+      }
 
-      setIsDragging(true);
-      setIsHorizontalScroll(false); // ainda não sabemos a direção
-      setStartX(pageX);
-      setStartY(pageY);
-      setScrollLeft(slider.scrollLeft);
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        updateActiveDot();
+      }, 100) as unknown as number;
+    };
+
+    const handleMouseDown = (e: MouseEvent) => {
+      isDragging.current = true;
+      startX.current = e.pageX - slider.offsetLeft;
+      scrollLeft.current = slider.scrollLeft;
       stopAutoplay();
+      slider.style.cursor = "grabbing";
+      slider.style.scrollSnapType = "none";
     };
 
-    const handleDragMove = (e: MouseEvent | TouchEvent) => {
-      if (!isDragging) return;
-
-      const x = "pageX" in e ? e.pageX : e.touches[0].pageX;
-      const y = "pageY" in e ? e.pageY : e.touches[0].pageY;
-      const deltaX = x - startX;
-      const deltaY = y - startY;
-
-      // Detecta direção apenas na primeira movimentação
-      if (!isHorizontalScroll && Math.abs(deltaX) > Math.abs(deltaY)) {
-        setIsHorizontalScroll(true);
-      }
-
-      if (isHorizontalScroll) {
-        e.preventDefault(); // bloqueia scroll vertical
-        const walk = deltaX * 1.5;
-        slider.scrollLeft = scrollLeft - walk;
-      }
+    const handleTouchStart = (e: TouchEvent) => {
+      isDragging.current = true;
+      startX.current = e.touches[0].pageX - slider.offsetLeft;
+      scrollLeft.current = slider.scrollLeft;
+      stopAutoplay();
+      slider.style.scrollSnapType = "none";
     };
 
-    const handleDragEnd = () => {
-      setIsDragging(false);
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!isDragging.current) return;
+      e.preventDefault();
+      const x = e.pageX - slider.offsetLeft;
+      const walk = (x - startX.current) * 2;
+      slider.scrollLeft = scrollLeft.current - walk;
+    };
+
+    const handleTouchMove = (e: TouchEvent) => {
+      if (!isDragging.current) return;
+      const x = e.touches[0].pageX - slider.offsetLeft;
+      const walk = (x - startX.current) * 2;
+      slider.scrollLeft = scrollLeft.current - walk;
+
+      // Atualiza o dot durante o drag para feedback imediato
       updateActiveDot();
-      startAutoplay();
     };
 
-    slider.addEventListener("mousedown", handleDragStart);
-    slider.addEventListener("mousemove", handleDragMove);
-    slider.addEventListener("mouseup", handleDragEnd);
-    slider.addEventListener("mouseleave", handleDragEnd);
+    const handleMouseUp = () => {
+      if (!isDragging.current) return;
+      isDragging.current = false;
+      slider.style.cursor = "grab";
+      slider.style.scrollSnapType = "x mandatory";
 
-    slider.addEventListener("touchstart", handleDragStart, { passive: true });
-    slider.addEventListener("touchmove", handleDragMove, { passive: false });
-    slider.addEventListener("touchend", handleDragEnd);
+      // Força a atualização do dot após o drag
+      setTimeout(() => {
+        updateActiveDot();
+        startAutoplay();
+      }, 50);
+    };
 
-    slider.addEventListener("scroll", updateActiveDot);
+    const handleTouchEnd = () => {
+      if (!isDragging.current) return;
+      isDragging.current = false;
+      slider.style.scrollSnapType = "x mandatory";
+
+      // Força a atualização do dot após o drag
+      setTimeout(() => {
+        updateActiveDot();
+        startAutoplay();
+      }, 50);
+    };
+
+    // Event listeners para mouse
+    slider.addEventListener("mousedown", handleMouseDown);
+    slider.addEventListener("mouseleave", handleMouseUp);
+    slider.addEventListener("mouseup", handleMouseUp);
+    slider.addEventListener("mousemove", handleMouseMove);
+
+    // Event listeners para touch
+    slider.addEventListener("touchstart", handleTouchStart, { passive: true });
+    slider.addEventListener("touchend", handleTouchEnd);
+    slider.addEventListener("touchmove", handleTouchMove, { passive: false });
+
+    // Event listener para scroll
+    slider.addEventListener("scroll", handleScroll);
+
+    // Iniciar autoplay
+    startAutoplay();
 
     return () => {
-      slider.removeEventListener("mousedown", handleDragStart);
-      slider.removeEventListener("mousemove", handleDragMove);
-      slider.removeEventListener("mouseup", handleDragEnd);
-      slider.removeEventListener("mouseleave", handleDragEnd);
+      // Remover event listeners
+      slider.removeEventListener("mousedown", handleMouseDown);
+      slider.removeEventListener("mouseleave", handleMouseUp);
+      slider.removeEventListener("mouseup", handleMouseUp);
+      slider.removeEventListener("mousemove", handleMouseMove);
 
-      slider.removeEventListener("touchstart", handleDragStart);
-      slider.removeEventListener("touchmove", handleDragMove);
-      slider.removeEventListener("touchend", handleDragEnd);
+      slider.removeEventListener("touchstart", handleTouchStart);
+      slider.removeEventListener("touchend", handleTouchEnd);
+      slider.removeEventListener("touchmove", handleTouchMove);
 
-      slider.removeEventListener("scroll", updateActiveDot);
-    };
-  }, [isDragging, startX, startY, scrollLeft, isHorizontalScroll]);
+      slider.removeEventListener("scroll", handleScroll);
 
-  useEffect(() => {
-    if (autoplay && images.length > 1) {
-      startAutoplay();
-    } else {
+      // Parar autoplay
       stopAutoplay();
-    }
-    return () => stopAutoplay();
-  }, [autoplay, autoplayInterval, images.length]);
+    };
+  }, [images.length, autoplay, autoplayInterval, activeDot, isTransitioning]);
 
   const desktopView = (
     <div
       class={clx(
         "hidden md:flex flex-wrap items-stretch justify-center",
-        `gap-${gap}`,
+        `gap-${gap}`
       )}
     >
       {images?.slice(0, itemsToShow).map((image, index) => (
@@ -208,16 +267,13 @@ export default function BannerMosaicIsland({ images, settings = {} }: Props) {
     <div class="md:hidden relative">
       <div
         ref={sliderRef}
-        class="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory w-full"
+        class="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory w-full cursor-grab"
         style={{
           scrollSnapType: "x mandatory",
           scrollbarWidth: "none",
           msOverflowStyle: "none",
           WebkitOverflowScrolling: "touch",
         }}
-        onMouseEnter={stopAutoplay}
-        onMouseLeave={startAutoplay}
-        onTouchStart={stopAutoplay}
       >
         {images?.map((image, index) => (
           <div
@@ -235,20 +291,17 @@ export default function BannerMosaicIsland({ images, settings = {} }: Props) {
           {images.map((_, index) => (
             <button
               key={index}
-              onClick={() => {
-                stopAutoplay();
-                goToSlide(index);
-                setTimeout(startAutoplay, autoplayInterval);
-              }}
+              onClick={() => goToSlide(index)}
               class="focus:outline-none"
               aria-label={`Ir para slide ${index + 1}`}
+              disabled={isTransitioning}
             >
               <div
                 class={clx(
                   "w-2 h-2 lg:w-3 lg:h-3 transition-all duration-300",
                   activeDot === index
                     ? "bg-[#2D2D2D]"
-                    : "bg-transparent border border-[#2D2D2D]",
+                    : "bg-transparent border border-[#2D2D2D]"
                 )}
               />
             </button>

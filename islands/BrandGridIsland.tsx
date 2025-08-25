@@ -44,17 +44,15 @@ function Card({ image, href, label }: Item) {
 export default function BrandGridIsland({ title, cta, items, icon }: Props) {
   const id = useId();
   const sliderRef = useRef<HTMLDivElement>(null);
-  const isDraggingRef = useRef(false);
-  const startXRef = useRef(0);
-  const startYRef = useRef(0); // Novo
-  const isHorizontalScrollRef = useRef(false); // Novo
-  const scrollLeftRef = useRef(0);
-  const [stepSize, setStepSize] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
   const [activeDot, setActiveDot] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [itemsPerPage, setItemsPerPage] = useState(2);
 
-  const getItemsPerPage = () => {
-    if (!sliderRef.current) return 2;
-    const width = sliderRef.current.offsetWidth;
+  // Calcular quantos itens cabem por página baseado no tamanho da tela
+  const calculateItemsPerPage = () => {
+    if (!containerRef.current) return 2;
+    const width = containerRef.current.offsetWidth;
     if (width >= 1280) return 6;
     if (width >= 1024) return 5;
     if (width >= 768) return 4;
@@ -62,133 +60,120 @@ export default function BrandGridIsland({ title, cta, items, icon }: Props) {
     return 2;
   };
 
-  const getDotsCount = () => {
-    const itemsPerPage = getItemsPerPage();
-    return Math.ceil(items.length / itemsPerPage);
-  };
+  // Calcular quantos dots são necessários
+  const dotsCount = Math.ceil(items.length / itemsPerPage);
 
-  const updateStepSize = () => {
-    if (!sliderRef.current) return;
-    setStepSize(sliderRef.current.offsetWidth);
-  };
-
+  // Função para ir para um dot específico com transição suave
   const goToDot = (dotIndex: number) => {
+    if (isTransitioning || !sliderRef.current) return;
+
+    setIsTransitioning(true);
+    setActiveDot(dotIndex);
+
     const slider = sliderRef.current;
-    const width = slider?.offsetWidth ?? 0;
-    const effectiveStep = stepSize || width;
+    const scrollPosition = dotIndex * slider.offsetWidth;
 
-    if (!slider || effectiveStep === 0) return;
-
-    const position = dotIndex * effectiveStep;
+    slider.style.scrollBehavior = "smooth";
     slider.scrollTo({
-      left: position,
+      left: scrollPosition,
       behavior: "smooth",
     });
 
-    setActiveDot(dotIndex);
+    // Resetar após a transição
+    setTimeout(() => {
+      setIsTransitioning(false);
+      slider.style.scrollBehavior = "auto";
+    }, 800);
   };
 
+  // Atualizar o dot ativo baseado na posição do scroll
   const updateActiveDot = () => {
+    if (!sliderRef.current || isTransitioning) return;
+
     const slider = sliderRef.current;
-    const width = slider?.offsetWidth ?? 0;
-    const effectiveStep = stepSize || width;
-
-    if (!slider || effectiveStep === 0) return;
-
     const scrollPosition = slider.scrollLeft;
-    const dotIndex = Math.round(scrollPosition / effectiveStep);
+    const slideWidth = slider.offsetWidth;
 
-    const maxDotIndex = getDotsCount() - 1;
-    const safeIndex = Math.min(Math.max(dotIndex, 0), maxDotIndex);
-    setActiveDot(safeIndex);
+    // Evitar divisão por zero
+    if (slideWidth === 0) return;
+
+    const newActiveDot = Math.round(scrollPosition / slideWidth);
+
+    // Só atualiza se for diferente e estiver dentro do range válido
+    if (
+      newActiveDot !== activeDot &&
+      newActiveDot >= 0 &&
+      newActiveDot < dotsCount
+    ) {
+      setActiveDot(newActiveDot);
+    }
   };
 
+  // Configurar os event listeners e calcular itens por página
   useEffect(() => {
     const slider = sliderRef.current;
-    if (!slider) return;
+    const container = containerRef.current;
 
+    if (!slider || !container) return;
+
+    // Calcular itens por página inicialmente e em redimensionamentos
     const handleResize = () => {
-      updateStepSize();
-      updateActiveDot();
+      const newItemsPerPage = calculateItemsPerPage();
+      setItemsPerPage(newItemsPerPage);
+      setTimeout(updateActiveDot, 100);
     };
 
-    const handleDragStart = (e: MouseEvent | TouchEvent) => {
-      isDraggingRef.current = true;
-      isHorizontalScrollRef.current = false;
-      startXRef.current = "pageX" in e ? e.pageX : e.touches[0].pageX;
-      startYRef.current = "pageY" in e ? e.pageY : e.touches[0].pageY;
-      scrollLeftRef.current = slider.scrollLeft;
-      slider.classList.add("dragging");
-    };
-
-    const handleDragEnd = () => {
-      if (!isDraggingRef.current) return;
-      isDraggingRef.current = false;
-      slider.classList.remove("dragging");
-      updateActiveDot();
-    };
-
-    const handleDragMove = (e: MouseEvent | TouchEvent) => {
-      if (!isDraggingRef.current) return;
-
-      const x = "pageX" in e ? e.pageX : e.touches[0].pageX;
-      const y = "pageY" in e ? e.pageY : e.touches[0].pageY;
-
-      const deltaX = x - startXRef.current;
-      const deltaY = y - startYRef.current;
-
-      // Detecta direção na primeira movimentação
-      if (
-        !isHorizontalScrollRef.current &&
-        Math.abs(deltaX) > Math.abs(deltaY)
-      ) {
-        isHorizontalScrollRef.current = true;
+    // Função debounce para o scroll para melhor performance
+    let scrollTimeout: number | null = null;
+    const handleScroll = () => {
+      if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
       }
-
-      if (isHorizontalScrollRef.current) {
-        e.preventDefault();
-        const walk = deltaX * 2;
-        slider.scrollLeft = scrollLeftRef.current - walk;
-      }
+      scrollTimeout = setTimeout(updateActiveDot, 100) as unknown as number;
     };
 
-    slider.addEventListener("mousedown", handleDragStart);
-    slider.addEventListener("mouseleave", handleDragEnd);
-    slider.addEventListener("mouseup", handleDragEnd);
-    slider.addEventListener("mousemove", handleDragMove);
-
-    slider.addEventListener("touchstart", handleDragStart, { passive: true });
-    slider.addEventListener("touchend", handleDragEnd);
-    slider.addEventListener("touchmove", handleDragMove, { passive: false });
-
-    slider.addEventListener("scroll", updateActiveDot);
+    // Adicionar event listeners
+    slider.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
 
-    updateStepSize();
-    updateActiveDot();
-
-    return () => {
-      slider.removeEventListener("mousedown", handleDragStart);
-      slider.removeEventListener("mouseleave", handleDragEnd);
-      slider.removeEventListener("mouseup", handleDragEnd);
-      slider.removeEventListener("mousemove", handleDragMove);
-
-      slider.removeEventListener("touchstart", handleDragStart);
-      slider.removeEventListener("touchend", handleDragEnd);
-      slider.removeEventListener("touchmove", handleDragMove);
-
-      slider.removeEventListener("scroll", updateActiveDot);
-      window.removeEventListener("resize", handleResize);
+    // Também adicionar event listeners para touch e mouse events
+    const handleInteractionEnd = () => {
+      // Pequeno delay para garantir que o scroll finalizou
+      setTimeout(updateActiveDot, 150);
     };
-  }, []);
 
-  const dotsCount = getDotsCount();
+    slider.addEventListener("touchend", handleInteractionEnd);
+    slider.addEventListener("mouseup", handleInteractionEnd);
+    slider.addEventListener("mouseleave", handleInteractionEnd);
+
+    // Calcular valores iniciais
+    handleResize();
+
+    // Cleanup
+    return () => {
+      slider.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+      slider.removeEventListener("touchend", handleInteractionEnd);
+      slider.removeEventListener("mouseup", handleInteractionEnd);
+      slider.removeEventListener("mouseleave", handleInteractionEnd);
+
+      if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
+      }
+    };
+  }, [dotsCount, activeDot]); // Adicionar dependências
+
+  // Recalcular dotsCount quando itemsPerPage mudar
+  useEffect(() => {
+    // Forçar atualização do dot ativo quando o número de dots mudar
+    updateActiveDot();
+  }, [itemsPerPage]);
 
   return (
     <Section.Container>
       <Section.Header title={title} cta={cta} icon={icon} />
 
-      <div id={id} class="relative">
+      <div id={id} class="relative" ref={containerRef}>
         <div
           ref={sliderRef}
           class="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory w-full gap-5"
@@ -203,7 +188,7 @@ export default function BrandGridIsland({ title, cta, items, icon }: Props) {
             <div
               key={index}
               class={clx(
-                "flex-shrink-0 snap-start",
+                "flex-shrink-0 snap-start transition-transform duration-700 ease-in-out",
                 "w-[calc(50%-(20px/2))]",
                 "sm:w-[calc(33.3%-(40px/3))]",
                 "md:w-[calc(25%-(60px/4))]",
@@ -224,6 +209,7 @@ export default function BrandGridIsland({ title, cta, items, icon }: Props) {
                 onClick={() => goToDot(index)}
                 class="focus:outline-none"
                 aria-label={`Go to slide ${index + 1}`}
+                disabled={isTransitioning}
               >
                 <div
                   class={clx(
