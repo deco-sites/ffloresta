@@ -161,27 +161,27 @@
         },
         {
           "image": "https://assets.decocache.com/ffloresta/c3564369-e5ee-4b0a-afe0-58faf8466b12/Prancheta-1_2.png",
-          "href": "/ferramentas",
+          "href": "/Ferramentas",
           "label": "Ferramentas"
         },
         {
           "image": "https://assets.decocache.com/ffloresta/97866645-aeaf-4d95-a3c2-2e3f786136b4/Prancheta-1_3.png",
-          "href": "/fechaduras",
+          "href": "/Fechaduras",
           "label": "Fechaduras"
         },
         {
           "image": "https://assets.decocache.com/ffloresta/f08ffa4e-051f-4102-ad95-9507a0523ceb/Prancheta-1_4.png",
-          "href": "/ferragens/articuladores/",
+          "href": "/ferragens/Articuladores/",
           "label": "Articuladores "
         },
         {
           "image": "https://assets.decocache.com/ffloresta/8c8195e7-60e4-4938-8ba5-587b62fd7a88/Prancheta-1.png",
-          "href": "/puxadores",
+          "href": "/Puxadores",
           "label": "Puxadores"
         },
         {
           "image": "https://assets.decocache.com/ffloresta/05271e7b-44ed-407b-8394-1e29bea1078e/Prancheta-1_1.png",
-          "href": "/ferragens/dobradicas",
+          "href": "/ferragens/Dobradicas",
           "label": "Dobradiças"
         }
       ]
