@@ -63,7 +63,7 @@
         {
           "benefitImgSrc": "https://assets.decocache.com/ffloresta/e62b308d-131c-4b24-b669-6f7dc5a363f8/home-benefit-icon-03.png",
           "benefitImgAltText": "Frete",
-          "benefitText": "<p><span style=\"font-size: 14px\">Entregamos em todo o Brasil</span></p>"
+          "benefitText": "<p><strong><span style=\"font-size: 14px\">Entregamos em todo o Brasil</span></strong></p>"
         },
         {
           "benefitImgSrc": "https://assets.decocache.com/ffloresta/3fa6bd86-4c00-4e9a-8320-3b1ab15625ef/home-benefit-icon-04.png",
@@ -156,7 +156,7 @@
       "brands": [
         {
           "image": "https://assets.decocache.com/ffloresta/05271e7b-44ed-407b-8394-1e29bea1078e/Prancheta-1_1.png",
-          "href": "/ferragens/dobradicas",
+          "href": "/ferragens/Dobradicas",
           "label": "Dobradiças"
         },
         {
