@@ -216,13 +216,13 @@
           "desktop": "https://assets.decocache.com/ffloresta/db849ace-31d5-4327-80e4-85f602e03cf3/2.png",
           "mobile": "https://assets.decocache.com/ffloresta/5fc8d07b-0524-424c-9261-00622d3c36ba/4.jpg",
           "alt": "02",
-          "href": "/fechaduras"
+          "href": "/Fechaduras"
         },
         {
           "desktop": "https://assets.decocache.com/ffloresta/428ded2a-c47f-4b1e-a7e3-23624799163c/3.png",
           "mobile": "https://assets.decocache.com/ffloresta/97df8fc6-32f6-458d-9f6d-89f1640b2730/5.jpg",
           "alt": "03",
-          "href": "/ferramentas"
+          "href": "/Ferramentas"
         }
       ],
       "itemsToShow": 3,
