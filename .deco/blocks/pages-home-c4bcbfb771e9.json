@@ -335,7 +335,8 @@
         {
           "desktop": "https://assets.decocache.com/ffloresta/b8443d21-1b94-4926-a73e-2832f5933213/3-a-(1).jpg",
           "mobile": "https://assets.decocache.com/ffloresta/7f240b96-2543-47ca-96ee-99edeb32bbf2/3-a-(2).jpg",
-          "alt": "01"
+          "alt": "01",
+          "href": "https://api.whatsapp.com/send?phone=551130936121&text=Ol%C3%A1,%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es"
         }
       ],
       "itemsToShow": 3,
