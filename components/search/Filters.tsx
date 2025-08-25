@@ -26,7 +26,7 @@ function ValueItem({ url, selected, label, quantity }: FilterToggleValue) {
         class="checkbox rounded-none w-4 h-4 max-w-4 max-h-4"
       />
       <span class="text-md text-[#1F251C]">{label}</span>
-      {quantity > 0 && <span class="text-sm text-base-400">({quantity})</span>}
+      {/* {quantity > 0 && <span class="text-sm text-base-400">({quantity})</span>} */}
     </a>
   );
 }
@@ -82,7 +82,7 @@ function formatPriceRange(min: number, max: number): string {
 
 function enhancePriceFilter(
   priceFilter: FilterToggle,
-  currentUrl: string,
+  currentUrl: string
 ): FilterToggle {
   const priceValues: number[] = [];
   const url = new URL(currentUrl);
@@ -127,9 +127,8 @@ function enhancePriceFilter(
         }
       });
 
-      const maxValue = range.max === Infinity
-        ? Math.max(...priceValues)
-        : range.max;
+      const maxValue =
+        range.max === Infinity ? Math.max(...priceValues) : range.max;
       const value = `${range.min}:${maxValue}`;
 
       // Create URL with current filters and toggle price filter
