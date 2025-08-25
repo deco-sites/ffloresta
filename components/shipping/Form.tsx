@@ -9,6 +9,40 @@ export interface Props {
 export default function Form({ items }: Props) {
   const slot = useId();
 
+  const handleInput = (e: Event) => {
+    const input = e.target as HTMLInputElement;
+    // Remove qualquer caractere não numérico
+    let value = input.value.replace(/\D/g, "");
+
+    // Limita a 8 dígitos
+    if (value.length > 8) {
+      value = value.substring(0, 8);
+    }
+
+    // Aplica a máscara de CEP (XXXXX-XXX) após 5 dígitos
+    if (value.length > 5) {
+      value = value.replace(/^(\d{5})(\d{0,3})/, "$1-$2");
+    }
+
+    input.value = value;
+  };
+
+  const handleSubmit = (e: Event) => {
+    e.preventDefault();
+    const form = e.target as HTMLFormElement;
+    const input = form.querySelector(
+      'input[name="postalCode"]',
+    ) as HTMLInputElement;
+
+    // Remove o hífen antes de enviar
+    if (input) {
+      input.value = input.value.replace(/\D/g, "");
+    }
+
+    // Dispara o submit programaticamente para o htmx processar
+    form.requestSubmit();
+  };
+
   return (
     <div class="flex flex-col">
       <form
@@ -19,15 +53,17 @@ export default function Form({ items }: Props) {
         hx-post={useComponent(import.meta.resolve("./Results.tsx"), {
           items,
         })}
+        onSubmit={handleSubmit}
       >
         <input
           as="input"
           type="text"
           class="w-full bg-[#D9D9D9] p-0 px-2 border-none outline-none "
-          placeholder="00000000"
+          placeholder="00000-000"
           name="postalCode"
-          maxLength={8}
-          size={8}
+          maxLength={9} // Aumentado para 9 para acomodar o hífen
+          size={9}
+          onInput={handleInput}
         />
         <button
           type="submit"
