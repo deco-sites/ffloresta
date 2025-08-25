@@ -3,57 +3,45 @@
   "path": "/s",
   "sections": [
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "commerce/sections/Seo/SeoPLPV2.tsx",
-        "jsonLD": {
-          "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
-          "sort": "price:desc",
-          "fuzzy": "automatic",
-          "selectedFacets": [],
-          "advancedConfigs": {
-            "includeOriginalAttributes": []
-          },
-          "count": 12
-        }
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "Header With Menus"
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Product/SearchResult.tsx",
-        "page": {
-          "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
-          "sort": "price:desc",
-          "fuzzy": "automatic",
-          "selectedFacets": [],
-          "advancedConfigs": {
-            "includeOriginalAttributes": []
-          },
-          "count": 12
+      "__resolveType": "commerce/sections/Seo/SeoPLPV2.tsx",
+      "jsonLD": {
+        "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+        "sort": "price:desc",
+        "fuzzy": "automatic",
+        "selectedFacets": [],
+        "advancedConfigs": {
+          "includeOriginalAttributes": []
         },
-        "layout": {
-          "columns": {
-            "mobile": 2,
-            "desktop": 4
-          },
-          "variant": "aside",
-          "pagination": "show-more"
-        },
-        "startingPage": 1
+        "count": 12
       }
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "Footer"
-      }
+      "__resolveType": "Header With Menus"
+    },
+    {
+      "__resolveType": "site/sections/Product/SearchResult.tsx",
+      "page": {
+        "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+        "sort": "price:desc",
+        "fuzzy": "automatic",
+        "selectedFacets": [],
+        "advancedConfigs": {
+          "includeOriginalAttributes": []
+        },
+        "count": 12
+      },
+      "layout": {
+        "columns": {
+          "mobile": 2,
+          "desktop": 4
+        },
+        "variant": "aside",
+        "pagination": "show-more"
+      },
+      "startingPage": 1
+    },
+    {
+      "__resolveType": "Footer"
     }
   ],
   "seo": {

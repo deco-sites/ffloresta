@@ -9,10 +9,10 @@ import Avatar from "../../components/ui/Avatar.tsx";
 import { clx } from "../../sdk/clx.ts";
 import { formatPrice } from "../../sdk/format.ts";
 import { h } from "preact";
-import { useState } from "preact/hooks";
 
 interface Props {
   filters: ProductListingPage["filters"];
+  url: string;
 }
 
 const isToggle = (filter: Filter): filter is FilterToggle =>
@@ -25,8 +25,8 @@ function ValueItem({ url, selected, label, quantity }: FilterToggleValue) {
         aria-checked={selected}
         class="checkbox rounded-none w-4 h-4 max-w-4 max-h-4"
       />
-      <span class="text-md ext-[#1F251C]">{label}</span>
-      {/* {quantity > 0 && <span class="text-sm text-base-400">({quantity})</span>} */}
+      <span class="text-md text-[#1F251C]">{label}</span>
+      {quantity > 0 && <span class="text-sm text-base-400">({quantity})</span>}
     </a>
   );
 }
@@ -69,6 +69,7 @@ function FilterValues({ key, values }: FilterToggle) {
     </ul>
   );
 }
+
 function formatPriceRange(min: number, max: number): string {
   const format = (value: number) =>
     value.toLocaleString("pt-BR", {
@@ -79,8 +80,15 @@ function formatPriceRange(min: number, max: number): string {
   return `R$ ${format(min)} - R$ ${format(max)}`;
 }
 
-function enhancePriceFilter(priceFilter: FilterToggle): FilterToggle {
+function enhancePriceFilter(
+  priceFilter: FilterToggle,
+  currentUrl: string
+): FilterToggle {
   const priceValues: number[] = [];
+  const url = new URL(currentUrl);
+
+  // Get current price filters from URL
+  const currentPriceFilters = url.searchParams.getAll("filter.price");
 
   priceFilter.values.forEach((item) => {
     const range = item.value.split(":").map(Number);
@@ -119,37 +127,55 @@ function enhancePriceFilter(priceFilter: FilterToggle): FilterToggle {
         }
       });
 
-      const maxValue = range.max === Infinity
-        ? Math.max(...priceValues)
-        : range.max;
+      const maxValue =
+        range.max === Infinity ? Math.max(...priceValues) : range.max;
       const value = `${range.min}:${maxValue}`;
+
+      // Create URL with current filters and toggle price filter
+      const newUrl = new URL(currentUrl);
+      const priceParams = newUrl.searchParams.getAll("filter.price");
+
+      // Remove all existing price filters
+      newUrl.searchParams.delete("filter.price");
+
+      // Add all other filters back
+      for (const [key, val] of url.searchParams.entries()) {
+        if (key !== "filter.price") {
+          newUrl.searchParams.append(key, val);
+        }
+      }
+
+      // Check if this price range is currently selected
+      const isSelected = currentPriceFilters.includes(value);
+
+      // If not selected, add this price filter
+      if (!isSelected) {
+        newUrl.searchParams.append("filter.price", value);
+      }
 
       return {
         value,
         quantity: Math.max(1, quantity),
-        selected: false,
-        url: `?filter.category-1=ferragens&filter.price=${
-          encodeURIComponent(
-            value,
-          )
-        }`,
+        selected: isSelected,
+        url: newUrl.toString(),
         label: range.label,
       };
     });
 
   if (enhancedValues.length === 0) {
+    const value = `0:${Math.max(...priceValues)}`;
+    const newUrl = new URL(currentUrl);
+    newUrl.searchParams.delete("filter.price");
+    newUrl.searchParams.append("filter.price", value);
+
     return {
       ...priceFilter,
       values: [
         {
-          value: `0:${Math.max(...priceValues)}`,
+          value,
           quantity: 1,
-          selected: false,
-          url: `?filter.category-1=ferragens&filter.price=0%3A${
-            Math.max(
-              ...priceValues,
-            )
-          }`,
+          selected: currentPriceFilters.includes(value),
+          url: newUrl.toString(),
           label: `R$ 0,00 - R$ ${Math.max(...priceValues).toFixed(2)}`,
         },
       ],
@@ -161,10 +187,11 @@ function enhancePriceFilter(priceFilter: FilterToggle): FilterToggle {
     values: enhancedValues,
   };
 }
-function Filters({ filters }: Props) {
+
+function Filters({ filters, url }: Props) {
   const enhancedFilters = filters.map((filter) => {
     if (isToggle(filter) && filter.key === "price") {
-      return enhancePriceFilter(filter);
+      return enhancePriceFilter(filter, url);
     }
     return filter;
   });
@@ -182,4 +209,5 @@ function Filters({ filters }: Props) {
     </ul>
   );
 }
+
 export default Filters;
