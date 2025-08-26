@@ -39,7 +39,14 @@
       "__resolveType": "vtex/loaders/proxy.ts",
       "extraPathsToProxy": [],
       "includeSiteMap": [],
-      "excludePathsFromDecoSiteMap": []
+      "excludePathsFromDecoSiteMap": [],
+      "includeScriptsToHead": {
+        "includes": [
+          {
+            "__resolveType": "analytics/loaders/OneDollarScript.ts"
+          }
+        ]
+      }
     },
     {
       "__resolveType": "website/loaders/pages.ts"
@@ -68,5 +75,7 @@
   },
   "flavor": {
     "framework": "htmx"
-  }
+  },
+  "whilelistURLs": [],
+  "whitelistPatterns": []
 }
