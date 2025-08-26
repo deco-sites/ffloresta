@@ -6388,6 +6388,11 @@ input[type="checkbox"]:checked::after {
   cursor: grabbing;
 }
 
+.active\:bg-gray-200:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
 .disabled\:hidden:disabled {
   display: none;
 }
@@ -6408,6 +6413,14 @@ input[type="checkbox"]:checked::after {
 
 .disabled\:opacity-30:disabled {
   opacity: 0.3;
+}
+
+.disabled\:opacity-50:disabled {
+  opacity: 0.5;
+}
+
+.disabled\:opacity-75:disabled {
+  opacity: 0.75;
 }
 
 .group[open] .group-open\:rotate-180 {

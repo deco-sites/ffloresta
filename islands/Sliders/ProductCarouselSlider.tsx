@@ -10,7 +10,10 @@ function Dot({
       {...props}
       data-dot={index}
       aria-label={`Ir para o grupo ${index + 1}`}
-      class={clx("focus:outline-none group", props.class?.toString())}
+      class={clx(
+        "focus:outline-none group cursor-pointer",
+        props.class?.toString(),
+      )}
     />
   );
 }
@@ -47,7 +50,7 @@ const onLoad = ({
   rootId,
   scroll,
   interval,
-  infinite,
+  infinite = false,
   autoplay,
   groupSize = 1,
 }: Props) => {
@@ -55,13 +58,44 @@ const onLoad = ({
     const root = document.getElementById(rootId);
     const slider = root?.querySelector<HTMLElement>("[data-slider]");
     const items = root?.querySelectorAll<HTMLElement>("[data-slider-item]");
-    const prev = root?.querySelector<HTMLElement>('[data-slide="prev"]');
-    const next = root?.querySelector<HTMLElement>('[data-slide="next"]');
+    const prev = root?.querySelector<HTMLButtonElement>('[data-slide="prev"]');
+    const next = root?.querySelector<HTMLButtonElement>('[data-slide="next"]');
     const dots = root?.querySelectorAll<HTMLButtonElement>("[data-dot]");
 
     if (!slider || !items?.length) return;
 
     let currentIndex = 0;
+    let isScrolling = false;
+    let autoplayInterval: number | null = null;
+
+    const stopAutoplay = () => {
+      if (autoplayInterval) {
+        clearInterval(autoplayInterval);
+        autoplayInterval = null;
+      }
+    };
+
+    const startAutoplay = () => {
+      if (interval && autoplay && !autoplayInterval) {
+        autoplayInterval = setInterval(
+          scrollNext,
+          interval,
+        ) as unknown as number;
+      }
+    };
+
+    const updateNavigationButtons = () => {
+      if (!prev || !next) return;
+
+      if (infinite) {
+        prev.disabled = false;
+        next.disabled = false;
+        return;
+      }
+
+      prev.disabled = currentIndex === 0;
+      next.disabled = currentIndex >= items.length - groupSize;
+    };
 
     const setActiveDot = (index: number) => {
       if (!dots) return;
@@ -76,19 +110,32 @@ const onLoad = ({
     };
 
     const scrollToItem = (index: number) => {
+      if (isScrolling) return; // Previne múltiplos cliques durante a animação
+
       const item = items[index];
       if (!item) return;
+
+      isScrolling = true;
 
       slider.scrollTo({
         left: item.offsetLeft - slider.offsetLeft,
         top: 0,
         behavior: scroll,
       });
+
       currentIndex = index;
       setActiveDot(index);
+      updateNavigationButtons();
+
+      // Libera o scrolling após a animação
+      setTimeout(() => {
+        isScrolling = false;
+      }, 300); // Tempo aproximado da animação
     };
 
     const scrollNext = () => {
+      if (isScrolling) return;
+
       if (currentIndex < items.length - groupSize) {
         scrollToItem(currentIndex + groupSize);
       } else if (infinite) {
@@ -97,6 +144,8 @@ const onLoad = ({
     };
 
     const scrollPrev = () => {
+      if (isScrolling) return;
+
       if (currentIndex >= groupSize) {
         scrollToItem(currentIndex - groupSize);
       } else if (infinite) {
@@ -104,44 +153,86 @@ const onLoad = ({
       }
     };
 
-    // Eventos de clique
-    prev?.addEventListener("click", scrollPrev);
-    next?.addEventListener("click", scrollNext);
+    // Eventos de clique com prevenção de múltiplos cliques
+    const handlePrevClick = () => {
+      if (!isScrolling) {
+        stopAutoplay();
+        scrollPrev();
+        setTimeout(startAutoplay, interval || 8000);
+      }
+    };
+
+    const handleNextClick = () => {
+      if (!isScrolling) {
+        stopAutoplay();
+        scrollNext();
+        setTimeout(startAutoplay, interval || 8000);
+      }
+    };
+
+    prev?.addEventListener("click", handlePrevClick);
+    next?.addEventListener("click", handleNextClick);
 
     dots?.forEach((dot, idx) => {
       dot.addEventListener("click", () => {
-        scrollToItem(idx * groupSize);
+        if (!isScrolling) {
+          stopAutoplay();
+          scrollToItem(idx * groupSize);
+          setTimeout(startAutoplay, interval || 8000);
+        }
       });
     });
 
-    // Autoplay
-    let autoplayInterval: number | null = null;
-    const startAutoplay = () => {
-      if (interval && autoplay && !autoplayInterval) {
-        autoplayInterval = setInterval(
-          scrollNext,
-          interval,
-        ) as unknown as number;
-      }
-    };
-    const stopAutoplay = () => {
-      if (autoplayInterval) {
-        clearInterval(autoplayInterval);
-        autoplayInterval = null;
-      }
-    };
-
+    // Melhor controle do autoplay
     if (autoplay) {
       startAutoplay();
-      slider.addEventListener("mouseenter", stopAutoplay);
-      slider.addEventListener("mouseleave", startAutoplay);
-      slider.addEventListener("touchstart", stopAutoplay);
-      slider.addEventListener("touchend", startAutoplay);
+
+      const handleMouseEnter = () => {
+        stopAutoplay();
+        // Remove event listeners temporários durante a interação
+        slider.removeEventListener("mouseleave", handleMouseLeave);
+        setTimeout(() => {
+          slider.addEventListener("mouseleave", handleMouseLeave);
+        }, 1000);
+      };
+
+      const handleMouseLeave = () => {
+        startAutoplay();
+      };
+
+      const handleTouchStart = () => {
+        stopAutoplay();
+        // Remove event listeners temporários durante a interação
+        slider.removeEventListener("touchend", handleTouchEnd);
+        setTimeout(() => {
+          slider.addEventListener("touchend", handleTouchEnd);
+        }, 1000);
+      };
+
+      const handleTouchEnd = () => {
+        setTimeout(startAutoplay, 1000); // Pequeno delay após toque
+      };
+
+      slider.addEventListener("mouseenter", handleMouseEnter);
+      slider.addEventListener("mouseleave", handleMouseLeave);
+      slider.addEventListener("touchstart", handleTouchStart);
+      slider.addEventListener("touchend", handleTouchEnd);
+
+      // Cleanup function
+      return () => {
+        slider.removeEventListener("mouseenter", handleMouseEnter);
+        slider.removeEventListener("mouseleave", handleMouseLeave);
+        slider.removeEventListener("touchstart", handleTouchStart);
+        slider.removeEventListener("touchend", handleTouchEnd);
+        stopAutoplay();
+      };
     }
 
-    // IntersectionObserver para atualizar dot com scroll
+    // IntersectionObserver melhorado
     const observer = new IntersectionObserver(
       (entries) => {
+        if (isScrolling) return; // Não atualiza durante animação programada
+
         let maxRatio = 0;
         let mostVisibleIndex = currentIndex;
 
@@ -159,24 +250,41 @@ const onLoad = ({
         if (mostVisibleIndex !== currentIndex) {
           currentIndex = mostVisibleIndex;
           setActiveDot(currentIndex);
+          updateNavigationButtons();
         }
       },
       {
         root: slider,
-        threshold: 0.6,
+        threshold: [0.1, 0.6, 0.9], // Múltiplos thresholds para melhor detecção
       },
     );
 
     items.forEach((item) => observer.observe(item));
 
-    // Inicializa na posição inicial
+    // Inicialização
     scrollToItem(0);
+    updateNavigationButtons();
+
+    // Cleanup
+    return () => {
+      stopAutoplay();
+      observer.disconnect();
+    };
   }
 
   if (document.readyState === "complete") {
-    init();
+    const cleanup = init();
+    // Adiciona cleanup se necessário
+    if (cleanup) {
+      window.addEventListener("beforeunload", cleanup);
+    }
   } else {
-    document.addEventListener("DOMContentLoaded", init);
+    document.addEventListener("DOMContentLoaded", () => {
+      const cleanup = init();
+      if (cleanup) {
+        window.addEventListener("beforeunload", cleanup);
+      }
+    });
   }
 };
 
