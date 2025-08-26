@@ -252,7 +252,7 @@ export default function BannerMosaicIsland({ images, settings = {} }: Props) {
     <div
       class={clx(
         "hidden md:flex flex-wrap items-stretch justify-center",
-        `gap-${gap}`
+        `gap-${gap}`,
       )}
     >
       {images?.slice(0, itemsToShow).map((image, index) => (
@@ -301,7 +301,7 @@ export default function BannerMosaicIsland({ images, settings = {} }: Props) {
                   "w-2 h-2 lg:w-3 lg:h-3 transition-all duration-300",
                   activeDot === index
                     ? "bg-[#2D2D2D]"
-                    : "bg-transparent border border-[#2D2D2D]"
+                    : "bg-transparent border border-[#2D2D2D]",
                 )}
               />
             </button>

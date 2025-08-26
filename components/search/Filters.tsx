@@ -82,7 +82,7 @@ function formatPriceRange(min: number, max: number): string {
 
 function enhancePriceFilter(
   priceFilter: FilterToggle,
-  currentUrl: string
+  currentUrl: string,
 ): FilterToggle {
   const priceValues: number[] = [];
   const url = new URL(currentUrl);
@@ -127,8 +127,9 @@ function enhancePriceFilter(
         }
       });
 
-      const maxValue =
-        range.max === Infinity ? Math.max(...priceValues) : range.max;
+      const maxValue = range.max === Infinity
+        ? Math.max(...priceValues)
+        : range.max;
       const value = `${range.min}:${maxValue}`;
 
       // Create URL with current filters and toggle price filter
