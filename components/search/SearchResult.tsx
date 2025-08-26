@@ -387,7 +387,7 @@ function Result(props: SectionProps<typeof loader>) {
                 {device === "desktop" && (
                   <aside class="place-self-start flex flex-col gap-9 w-full">
                     <span class="text-base font-medium h-12 flex items-center text-md text-[#1F251C]">
-                      Filtro
+                      Filtros
                     </span>
                     <Filters filters={filters} url={url} />
                   </aside>
