@@ -74,9 +74,11 @@ export default function ProductDetails({
 
   return (
     <div class="w-full flex flex-col bg-white">
-      <div class="block lg:hidden mt-6">
+      {
+        /* <div class="block lg:hidden mt-6">
         {productBanner && <ProductPagePromoBannerIsland {...productBanner} />}
-      </div>
+      </div> */
+      }
 
       {page.breadcrumbList.itemListElement && (
         <div class="container mt-6 lg:mt-20">
@@ -95,13 +97,15 @@ export default function ProductDetails({
           <ProductImagesGallery page={page} />
         </div>
         <div class="h-fit px-5 pb-4 pt-6 shadow-[2px_4px_12px_rgba(0,0,0,0.145)] mb-10 lg:mb-0 bg-[#fdfff5]">
-          {productBanner && (
+          {
+            /* {productBanner && (
             <div class="hidden lg:block mb-5">
               {productBanner && (
                 <ProductPagePromoBannerIsland {...productBanner} />
               )}
             </div>
-          )}
+          )} */
+          }
           <ProductInfo page={page} />
         </div>
       </div>
