@@ -187,9 +187,6 @@
       ]
     },
     {
-      "__resolveType": "PromoCountDownBannerDefault"
-    },
-    {
       "__resolveType": "site/sections/Product/ProductShelf.tsx",
       "title": "FERRAMENTAS",
       "headerIcon": "https://assets.decocache.com/ffloresta/28daeeed-da2e-4353-9b47-094d244c40dd/home-second-shelf-title-icon.svg",
