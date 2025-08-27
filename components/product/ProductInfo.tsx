@@ -52,11 +52,12 @@ function ProductInfo({ page }: Props) {
     },
   });
 
-  const hasValidVariants = isVariantOf?.hasVariant?.some(
-    (variant) =>
-      variant?.name?.toLowerCase() !== "title" &&
-      variant?.name?.toLowerCase() !== "default title",
-  ) ?? false;
+  const hasValidVariants =
+    isVariantOf?.hasVariant?.some(
+      (variant) =>
+        variant?.name?.toLowerCase() !== "title" &&
+        variant?.name?.toLowerCase() !== "default title"
+    ) ?? false;
 
   // Calculate best installment (copied from ProductCard)
   const priceSpecs = product.offers?.offers?.[0]?.priceSpecification ?? [];
@@ -66,19 +67,21 @@ function ProductInfo({ page }: Props) {
       spec.priceType === "https://schema.org/SalePrice" &&
       spec.billingDuration &&
       spec.billingIncrement &&
-      spec.billingIncrement * spec.billingDuration <= price,
+      spec.billingIncrement * spec.billingDuration <= price
   );
   const bestInstallment = noInterestInstallments.reduce(
     (max, curr) =>
       !max || curr.billingDuration > max.billingDuration ? curr : max,
-    null,
+    null
   );
+
+  console.log(product, "product");
 
   return (
     <div {...viewItemEvent} class="flex flex-col bg-[#fdfff5]" id={id}>
       <div class="flex flex-col gap-0.5">
         <span class="font-normal text-[14px] leading-[140%] text-[#3A4332]">
-          SKU: {product.sku}
+          REF: {product.additionalProperty?.[7]?.value}
         </span>
         <h1 class="leading-[140%] text-[#3A4332] text-[24px]">{title}</h1>
       </div>
@@ -116,18 +119,14 @@ function ProductInfo({ page }: Props) {
 
           <span class="font-gotham font-normal text-[12px] leading-[170%] text-[#677357]">
             {bestInstallment
-              ? `${bestInstallment.billingDuration}x de ${
-                formatPrice(
+              ? `${bestInstallment.billingDuration}x de ${formatPrice(
                   bestInstallment.billingIncrement,
-                  offers?.priceCurrency,
-                )
-              } sem juros`
-              : `1x de ${
-                formatPrice(
+                  offers?.priceCurrency
+                )} sem juros`
+              : `1x de ${formatPrice(
                   price,
-                  offers?.priceCurrency,
-                )
-              } no cartão de crédito`}
+                  offers?.priceCurrency
+                )} no cartão de crédito`}
           </span>
         </div>
       </div>
@@ -135,33 +134,33 @@ function ProductInfo({ page }: Props) {
       <div class="mt-5 md:mt-5 pb-5 border-b border-black" />
 
       <div class="mt-4 ">
-        {availability === "https://schema.org/InStock"
-          ? (
-            <>
-              {hasValidVariants && (
-                <div class="mb-6">
-                  <ProductSelector product={product} />
-                </div>
-              )}
-              <AddToCartButtonPDP
-                item={item}
-                seller={seller}
-                product={product}
-                platform={platform}
-                class="mb-[14px]"
-                disabled={false}
-              />
-
-              <div>
-                <ShippingSimulationForm
-                  items={[
-                    { id: Number(product.sku), quantity: 1, seller: seller },
-                  ]}
-                />
+        {availability === "https://schema.org/InStock" ? (
+          <>
+            {hasValidVariants && (
+              <div class="mb-6">
+                <ProductSelector product={product} />
               </div>
-            </>
-          )
-          : <OutOfStock productID={productID} />}
+            )}
+            <AddToCartButtonPDP
+              item={item}
+              seller={seller}
+              product={product}
+              platform={platform}
+              class="mb-[14px]"
+              disabled={false}
+            />
+
+            <div>
+              <ShippingSimulationForm
+                items={[
+                  { id: Number(product.sku), quantity: 1, seller: seller },
+                ]}
+              />
+            </div>
+          </>
+        ) : (
+          <OutOfStock productID={productID} />
+        )}
       </div>
     </div>
   );

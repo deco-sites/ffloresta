@@ -3,13 +3,13 @@ import { useId } from "../../sdk/useId.ts";
 
 interface Props {
   total: number;
-  target: number;
   locale: string;
   currency: string;
 }
 
-function FreeShippingProgressBar({ target, total, currency, locale }: Props) {
+function FreeShippingProgressBar({ total, currency, locale }: Props) {
   const id = useId();
+  const target = 590;
   const remaining = target - total;
   const percent = Math.floor((total / target) * 100);
 
@@ -32,18 +32,16 @@ function FreeShippingProgressBar({ target, total, currency, locale }: Props) {
           />
         </svg>
 
-        {remaining > 0
-          ? (
-            <label for={id} class="text-[#325710]">
-              Faltam apenas {formatPrice(remaining, currency, locale)}{" "}
-              para o frete grátis!
-            </label>
-          )
-          : (
-            <label class="text-[#325710]" for={id}>
-              Você ganhou frete grátis!
-            </label>
-          )}
+        {remaining > 0 ? (
+          <label for={id} class="text-[#325710]">
+            Faltam apenas {formatPrice(remaining, currency, locale)} para o
+            frete grátis!
+          </label>
+        ) : (
+          <label class="text-[#325710]" for={id}>
+            Você ganhou frete grátis!
+          </label>
+        )}
       </div>
       <progress
         id={id}
