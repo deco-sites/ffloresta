@@ -9,10 +9,7 @@ import { ImageWidget } from "apps/admin/widgets.ts";
 
 export interface Props {
   products: Product[] | null;
-  /** @description Section title */
   title?: string;
-
-  /** @description See all link */
   cta?: string;
   icon?: ImageWidget;
   headerBanner?: ImageWidget;

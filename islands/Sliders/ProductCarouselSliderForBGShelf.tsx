@@ -70,11 +70,29 @@ const onLoad = ({ rootId, scroll, interval, infinite, autoplay }: Props) => {
       if (!prev || !next) return;
 
       const maxScroll = slider.scrollWidth - slider.clientWidth;
-      prev.disabled = slider.scrollLeft <= 0 && !infinite;
-      next.disabled = slider.scrollLeft >= maxScroll && !infinite;
+      const isAtStart = slider.scrollLeft <= 0;
+      const isAtEnd = slider.scrollLeft >= maxScroll - 5; // Margem de 5px para evitar problemas de arredondamento
 
-      prev.classList.toggle("opacity-50", prev.disabled);
-      next.classList.toggle("opacity-50", next.disabled);
+      // Atualiza o estado disabled dos botões
+      prev.disabled = isAtStart && !infinite;
+      next.disabled = isAtEnd && !infinite;
+
+      // Atualiza as classes CSS baseadas no estado disabled
+      if (prev.disabled) {
+        prev.classList.add("opacity-50", "cursor-not-allowed");
+        prev.classList.remove("cursor-pointer", "hover:bg-gray-100");
+      } else {
+        prev.classList.remove("opacity-50", "cursor-not-allowed");
+        prev.classList.add("cursor-pointer", "hover:bg-gray-100");
+      }
+
+      if (next.disabled) {
+        next.classList.add("opacity-50", "cursor-not-allowed");
+        next.classList.remove("cursor-pointer", "hover:bg-gray-100");
+      } else {
+        next.classList.remove("opacity-50", "cursor-not-allowed");
+        next.classList.add("cursor-pointer", "hover:bg-gray-100");
+      }
     };
 
     const scrollToItem = (index: number) => {
@@ -96,6 +114,12 @@ const onLoad = ({ rootId, scroll, interval, infinite, autoplay }: Props) => {
     const scrollNext = () => {
       const maxScroll = slider.scrollWidth - slider.clientWidth;
       const scrollLeft = slider.scrollLeft;
+
+      // Se estiver no final e não for infinito, não faz nada
+      if (scrollLeft >= maxScroll - 5 && !infinite) {
+        updateButtons();
+        return;
+      }
 
       // encontra o primeiro item que esteja depois do scroll atual
       for (let i = 0; i < items.length; i++) {
@@ -119,6 +143,12 @@ const onLoad = ({ rootId, scroll, interval, infinite, autoplay }: Props) => {
     const scrollPrev = () => {
       const scrollLeft = slider.scrollLeft;
 
+      // Se estiver no início e não for infinito, não faz nada
+      if (scrollLeft <= 5 && !infinite) {
+        updateButtons();
+        return;
+      }
+
       // encontra o último item que esteja antes do scroll atual
       for (let i = items.length - 1; i >= 0; i--) {
         const itemLeft = items[i].offsetLeft - slider.offsetLeft;
@@ -138,8 +168,30 @@ const onLoad = ({ rootId, scroll, interval, infinite, autoplay }: Props) => {
       }
     };
 
+    // Adiciona event listener para scroll manual
+    const handleScroll = () => {
+      updateButtons();
+
+      // Atualiza o dot ativo baseado na posição do scroll
+      const scrollLeft = slider.scrollLeft;
+      for (let i = 0; i < items.length; i++) {
+        const itemLeft = items[i].offsetLeft - slider.offsetLeft;
+        const itemWidth = items[i].offsetWidth;
+
+        if (
+          scrollLeft >= itemLeft - itemWidth / 2 &&
+          scrollLeft < itemLeft + itemWidth / 2
+        ) {
+          currentIndex = i;
+          setActiveDot(i);
+          break;
+        }
+      }
+    };
+
     prev?.addEventListener("click", scrollPrev);
     next?.addEventListener("click", scrollNext);
+    slider.addEventListener("scroll", handleScroll);
 
     dots?.forEach((dot, idx) => {
       dot.addEventListener("click", () => {
@@ -174,6 +226,9 @@ const onLoad = ({ rootId, scroll, interval, infinite, autoplay }: Props) => {
 
     // Inicializa
     scrollToItem(0);
+
+    // Adiciona resize listener para atualizar os botões quando a janela é redimensionada
+    window.addEventListener("resize", updateButtons);
   }
 
   if (document.readyState === "complete") {

@@ -10,20 +10,14 @@ interface Props {
 
 function ProductSlider({ products, itemListName }: Props) {
   const id = useId();
-  const groupSize = 2;
-  const dotCount = Math.ceil(products.length / groupSize);
 
   return (
     <>
-      <div
-        id={id}
-        data-group-size={groupSize}
-        class="relative container mx-auto px-0"
-      >
+      <div id={id} class="relative container mx-auto px-0">
         <ProductCarouselSlider
           interval={8000}
           autoplay
-          infinite
+          infinite={false}
           class="flex gap-3 lg:gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hidden"
         >
           {products.map((product, index) => (
@@ -40,19 +34,19 @@ function ProductSlider({ products, itemListName }: Props) {
           ))}
         </ProductCarouselSlider>
 
-        {/* Dots no mobile */}
+        {/* Dots */}
         <div class="flex justify-center items-center gap-2 mt-4 lg:hidden">
-          {Array.from({ length: dotCount }).map((_, index) => (
+          {products.map((_, index) => (
             <ProductCarouselSlider.Dot
               index={index}
-              class="w-2 h-2 lg:w-3 lg:h-3  bg-transparent border border-[#2D2D2D] data-[active]:bg-[#2D2D2D] transition-colors"
+              class="w-2 h-2 lg:w-3 lg:h-3 bg-transparent border border-[#2D2D2D] data-[active]:bg-[#2D2D2D] transition-colors"
             />
           ))}
         </div>
 
-        {/* Botões desktop */}
+        {/* Botões */}
         <ProductCarouselSlider.PrevButton
-          class="hidden lg:flex absolute -left-2 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md p-2 rounded-full w-8 h-8 items-center justify-center"
+          class="hidden lg:flex absolute -left-2 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md p-2 rounded-full w-8 h-8 items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
           aria-label="Produtos anteriores"
         >
           <svg
@@ -69,11 +63,10 @@ function ProductSlider({ products, itemListName }: Props) {
               d="M15 19l-7-7 7-7"
             />
           </svg>
-          <span class="sr-only">Produtos anteriores</span>
         </ProductCarouselSlider.PrevButton>
 
         <ProductCarouselSlider.NextButton
-          class="hidden lg:flex absolute -right-2 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md p-2 rounded-full w-8 h-8 flex items-center justify-center"
+          class="hidden lg:flex absolute -right-2 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md p-2 rounded-full w-8 h-8 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
           aria-label="Próximos produtos"
         >
           <svg
@@ -90,16 +83,10 @@ function ProductSlider({ products, itemListName }: Props) {
               d="M9 5l7 7-7 7"
             />
           </svg>
-          <span class="sr-only">Próximos produtos</span>
         </ProductCarouselSlider.NextButton>
       </div>
 
-      <ProductCarouselSlider.JS
-        rootId={id}
-        interval={8000}
-        autoplay
-        groupSize={groupSize}
-      />
+      <ProductCarouselSlider.JS rootId={id} interval={8000} autoplay />
     </>
   );
 }
