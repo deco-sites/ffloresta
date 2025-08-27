@@ -81,7 +81,9 @@ function ProductInfo({ page }: Props) {
     <div {...viewItemEvent} class="flex flex-col bg-[#fdfff5]" id={id}>
       <div class="flex flex-col gap-0.5">
         <span class="font-normal text-[14px] leading-[140%] text-[#3A4332]">
-          REF: {product.additionalProperty?.[7]?.value}
+          {product.additionalProperty?.[7]?.value
+            ? `REF: ${product.additionalProperty?.[7]?.value}`
+            : `SKU: ${product.productID}`}
         </span>
         <h1 class="leading-[140%] text-[#3A4332] text-[24px]">{title}</h1>
       </div>
