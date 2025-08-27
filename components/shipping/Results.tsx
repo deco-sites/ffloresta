@@ -16,42 +16,53 @@ const formatShippingEstimate = (estimate: string) => {
   if (type === "bd") return `${time} dias úteis`;
   if (type === "d") return `${time} dias`;
   if (type === "h") return `${time} horas`;
+  return estimate;
 };
 
 export async function action(props: Props, req: Request, ctx: AppContext) {
   const form = await req.formData();
+  const postalCode = `${form.get("postalCode") ?? ""}`.replace(/\D/g, "");
 
   try {
     const result = (await ctx.invoke("vtex/actions/cart/simulation.ts", {
-      items: props.items,
-      postalCode: `${form.get("postalCode") ?? ""}`,
+      items: props.items.map((sku) => ({
+        id: sku.id,
+        quantity: sku.quantity ?? 1,
+        seller: sku.seller ?? "1",
+      })),
+      postalCode,
       country: "BRA",
     })) as SimulationOrderForm | null;
 
     return { result };
-  } catch {
+  } catch (err) {
+    console.error("Erro na simulação de frete:", err);
     return { result: null };
   }
 }
 
 export default function Results({ result }: ComponentProps<typeof action>) {
-  const methods = result?.logisticsInfo?.reduce(
-    (initial, { slas }) => [...initial, ...slas],
-    [] as Sla[],
-  ) ?? [];
+  const methods =
+    result?.logisticsInfo?.reduce(
+      (initial, { slas }) => [...initial, ...slas],
+      [] as Sla[]
+    ) ?? [];
 
   if (!methods.length) {
     return (
       <div class="p-2">
-        <span>CEP inválido</span>
+        <span>CEP inválido ou frete indisponível</span>
       </div>
     );
   }
 
   return (
-    <ul class="flex flex-col gap-4 p-4 border border-base-400 ">
+    <ul class="flex flex-col gap-4 p-4 border border-base-400">
       {methods.map((method) => (
-        <li class="flex justify-between items-center border-base-200 not-first-child:border-t">
+        <li
+          class="flex justify-between items-center border-base-200 not-first-child:border-t"
+          key={method.id}
+        >
           <span class="text-button text-center">{method.name}</span>
           <span class="text-button">
             até {formatShippingEstimate(method.shippingEstimate)}
