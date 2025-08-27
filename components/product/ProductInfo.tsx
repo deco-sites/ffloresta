@@ -9,6 +9,7 @@ import AddToCartButtonPDP from "../../islands/AddToCartButtonPDP.tsx";
 import OutOfStock from "./OutOfStock.tsx";
 import ProductSelector from "./ProductVariantSelector.tsx";
 import { useOffer } from "../../sdk/useOffer.ts";
+import ShippingForm from "../../islands/ShippingForm.tsx";
 
 interface Props {
   page: ProductDetailsPage | null;
@@ -158,7 +159,7 @@ function ProductInfo({ page }: Props) {
             />
 
             <div>
-              <ShippingSimulationForm
+              <ShippingForm
                 items={[
                   { id: Number(product.sku), quantity: 1, seller: seller },
                 ]}

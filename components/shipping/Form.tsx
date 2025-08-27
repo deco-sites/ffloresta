@@ -1,6 +1,5 @@
 import type { SKU } from "apps/vtex/utils/types.ts";
 import { useId } from "../../sdk/useId.ts";
-import { useComponent } from "../../sections/Component.tsx";
 
 export interface Props {
   items: SKU[];
@@ -11,15 +10,12 @@ export default function Form({ items }: Props) {
 
   const handleInput = (e: Event) => {
     const input = e.target as HTMLInputElement;
-    // Remove qualquer caractere não numérico
     let value = input.value.replace(/\D/g, "");
 
-    // Limita a 8 dígitos
     if (value.length > 8) {
       value = value.substring(0, 8);
     }
 
-    // Aplica a máscara de CEP (XXXXX-XXX) após 5 dígitos
     if (value.length > 5) {
       value = value.replace(/^(\d{5})(\d{0,3})/, "$1-$2");
     }
@@ -34,12 +30,22 @@ export default function Form({ items }: Props) {
       'input[name="postalCode"]'
     ) as HTMLInputElement;
 
-    // Remove o hífen antes de enviar
     if (input) {
       input.value = input.value.replace(/\D/g, "");
     }
 
-    // Dispara o submit programaticamente para o htmx processar
+    // Adiciona input hidden com os items
+    let itemsInput = form.querySelector(
+      'input[name="items"]'
+    ) as HTMLInputElement;
+    if (!itemsInput) {
+      itemsInput = document.createElement("input");
+      itemsInput.type = "hidden";
+      itemsInput.name = "items";
+      form.appendChild(itemsInput);
+    }
+    itemsInput.value = JSON.stringify(items);
+
     form.requestSubmit();
   };
 
@@ -50,18 +56,15 @@ export default function Form({ items }: Props) {
         hx-target={`#${slot}`}
         hx-swap="innerHTML"
         hx-sync="this:replace"
-        hx-post={useComponent(import.meta.resolve("./Results.tsx"), {
-          items,
-        })}
+        hx-post="/api/calculate-shipping"
         onSubmit={handleSubmit}
       >
         <input
-          as="input"
           type="text"
           class="w-full bg-[#D9D9D9] p-0 px-2 border-none outline-none"
           placeholder="00000-000"
           name="postalCode"
-          maxLength={9} // Aumentado para 9 para acomodar o hífen
+          maxLength={9}
           size={9}
           onInput={handleInput}
         />

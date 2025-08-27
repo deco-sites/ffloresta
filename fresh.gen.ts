@@ -3,6 +3,7 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $_app from "./routes/_app.tsx";
+import * as $api_calculate_shipping from "./routes/api/calculate-shipping.ts";
 import * as $AddToCartButtonPDP from "./islands/AddToCartButtonPDP.tsx";
 import * as $BannerMosaicIsland from "./islands/BannerMosaicIsland.tsx";
 import * as $BrandGridIsland from "./islands/BrandGridIsland.tsx";
@@ -14,6 +15,7 @@ import * as $ProductDescriptionIsland from "./islands/ProductDescriptionIsland.t
 import * as $ProductImagesGallery from "./islands/ProductImagesGallery.tsx";
 import * as $ProductPagePromoBannerIsland from "./islands/ProductPagePromoBannerIsland.tsx";
 import * as $Search_PaginationButtons from "./islands/Search/PaginationButtons.tsx";
+import * as $ShippingForm from "./islands/ShippingForm.tsx";
 import * as $Slider from "./islands/Slider.tsx";
 import * as $Sliders_BenefitsSlider from "./islands/Sliders/BenefitsSlider.tsx";
 import * as $Sliders_CarouselSlider from "./islands/Sliders/CarouselSlider.tsx";
@@ -24,6 +26,7 @@ import type { Manifest } from "$fresh/server.ts";
 const manifest = {
   routes: {
     "./routes/_app.tsx": $_app,
+    "./routes/api/calculate-shipping.ts": $api_calculate_shipping,
   },
   islands: {
     "./islands/AddToCartButtonPDP.tsx": $AddToCartButtonPDP,
@@ -37,6 +40,7 @@ const manifest = {
     "./islands/ProductImagesGallery.tsx": $ProductImagesGallery,
     "./islands/ProductPagePromoBannerIsland.tsx": $ProductPagePromoBannerIsland,
     "./islands/Search/PaginationButtons.tsx": $Search_PaginationButtons,
+    "./islands/ShippingForm.tsx": $ShippingForm,
     "./islands/Slider.tsx": $Slider,
     "./islands/Sliders/BenefitsSlider.tsx": $Sliders_BenefitsSlider,
     "./islands/Sliders/CarouselSlider.tsx": $Sliders_CarouselSlider,
