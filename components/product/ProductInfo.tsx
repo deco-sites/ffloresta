@@ -75,16 +75,21 @@ function ProductInfo({ page }: Props) {
     null
   );
 
-  console.log(product, "product");
+  const refId =
+    product.additionalProperty?.find((prop) => prop.name === "RefId")?.value ||
+    product.isVariantOf?.additionalProperty?.find(
+      (prop) => prop.name === "RefId"
+    )?.value ||
+    product.productID;
 
   return (
     <div {...viewItemEvent} class="flex flex-col bg-[#fdfff5]" id={id}>
       <div class="flex flex-col gap-0.5">
-        <span class="font-normal text-[14px] leading-[140%] text-[#3A4332]">
-          {product.additionalProperty?.[7]?.value
-            ? `REF: ${product.additionalProperty?.[7]?.value}`
-            : `SKU: ${product.productID}`}
-        </span>
+        {refId && (
+          <span class="font-normal text-[14px] leading-[140%] text-[#3A4332]">
+            Ref: {refId}
+          </span>
+        )}
         <h1 class="leading-[140%] text-[#3A4332] text-[24px]">{title}</h1>
       </div>
 
