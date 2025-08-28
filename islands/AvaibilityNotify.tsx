@@ -1,6 +1,7 @@
 import { Product } from "apps/commerce/types.ts";
 import { useSignal } from "@preact/signals";
 import { useCallback } from "preact/hooks";
+import { IS_BROWSER } from "$fresh/runtime.ts";
 
 export interface Props {
   productID: Product["productID"];
@@ -13,7 +14,19 @@ interface NotifyMeData {
   createdAt: string;
 }
 
-export default function AvaibilityNotify({ productID }: Props) {
+// Função para obter a data/hora no fuso horário de Brasília (GMT-3)
+function getBrasiliaDateTime(): string {
+  const now = new Date();
+
+  // Converter para o fuso horário de Brasília (UTC-3)
+  const offset = -3 * 60; // Brasília é UTC-3 (em minutos)
+  const brasiliaTime = new Date(now.getTime() + offset * 60 * 1000);
+
+  // Formatar no formato ISO que a VTEX espera
+  return brasiliaTime.toISOString();
+}
+
+export default function AvailabilityNotify({ productID }: Props) {
   const isLoading = useSignal(false);
   const isSuccess = useSignal(false);
   const errorMessage = useSignal<string | null>(null);
@@ -21,6 +34,9 @@ export default function AvaibilityNotify({ productID }: Props) {
   const handleSubmit = useCallback(
     async (e: Event) => {
       e.preventDefault();
+      e.stopPropagation();
+
+      if (!IS_BROWSER) return;
 
       isLoading.value = true;
       errorMessage.value = null;
@@ -31,7 +47,9 @@ export default function AvaibilityNotify({ productID }: Props) {
 
       const name = `${formData.get("name") ?? ""}`;
       const email = `${formData.get("email") ?? ""}`;
-      const createdAt = new Date().toISOString();
+
+      // Usar a função corrigida para horário de Brasília
+      const createdAt = getBrasiliaDateTime();
 
       try {
         // Validação básica dos campos
@@ -51,8 +69,10 @@ export default function AvaibilityNotify({ productID }: Props) {
           createdAt,
         };
 
-        // Usar endpoint proxy no próprio site
-        const response = await fetch("/api/notify-proxy", {
+        console.log("Enviando dados com horário Brasil:", data);
+
+        // Chamar SUA ROTA CUSTOMIZADA no backend VTEX
+        const response = await fetch("/_v/createAvailabilityNotify", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -60,10 +80,9 @@ export default function AvaibilityNotify({ productID }: Props) {
           body: JSON.stringify(data),
         });
 
-        const result = await response.json();
-
         if (!response.ok) {
-          throw new Error(result.message || "Erro ao enviar os dados.");
+          const errorText = await response.text();
+          throw new Error(`Erro ${response.status}: ${errorText}`);
         }
 
         isSuccess.value = true;
@@ -78,14 +97,24 @@ export default function AvaibilityNotify({ productID }: Props) {
     [productID]
   );
 
+  const preventEnterSubmit = useCallback((e: KeyboardEvent) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+    }
+  }, []);
+
   return (
     <div class="notify-component">
-      <form class="form-control justify-start gap-2" onSubmit={handleSubmit}>
+      <form
+        class="form-control justify-start gap-2"
+        onSubmit={handleSubmit}
+        onKeyDown={preventEnterSubmit}
+      >
         <span class="text-base text-['Lato'] text-[#3A4332]">
-          Este produto está indisponivel no momento
+          Este produto está indisponível no momento
         </span>
         <span class="text-sm text-['Lato'] text-[#3A4332]">
-          Avise-me quando estiver disponivel
+          Avise-me quando estiver disponível
         </span>
 
         <input
