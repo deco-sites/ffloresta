@@ -205,7 +205,7 @@ const onLoad = ({ rootId, scroll, interval, infinite, autoplay }: Props) => {
       if (interval && autoplay && !autoplayInterval) {
         autoplayInterval = setInterval(
           scrollNext,
-          interval
+          interval,
         ) as unknown as number;
       }
     };
@@ -245,13 +245,15 @@ function JS({
   infinite = false,
   autoplay = false,
 }: Props) {
-  const scriptContent = `(${onLoad.toString()})(${JSON.stringify({
-    rootId,
-    scroll,
-    interval,
-    infinite,
-    autoplay,
-  })})`;
+  const scriptContent = `(${onLoad.toString()})(${
+    JSON.stringify({
+      rootId,
+      scroll,
+      interval,
+      infinite,
+      autoplay,
+    })
+  })`;
 
   return (
     <script type="module" dangerouslySetInnerHTML={{ __html: scriptContent }} />

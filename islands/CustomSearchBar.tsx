@@ -127,7 +127,7 @@ function ProductCard({
                 <span class="font-bold text-[14px] leading-[170%] tracking-[3%] line-through">
                   {formatPrice(listPrice, offers?.priceCurrency).replace(
                     "R$",
-                    ""
+                    "",
                   )}
                 </span>
               </div>
@@ -207,9 +207,11 @@ export default function CustomSearchBar({
     e.preventDefault();
     const searchQuery = query.value.trim();
     if (searchQuery) {
-      window.location.href = `/${encodeURIComponent(
-        searchQuery
-      )}?_q=${encodeURIComponent(searchQuery)}&map=ft`;
+      window.location.href = `/${
+        encodeURIComponent(
+          searchQuery,
+        )
+      }?_q=${encodeURIComponent(searchQuery)}&map=ft`;
     }
   };
 
@@ -273,29 +275,30 @@ export default function CustomSearchBar({
                 <ul class="space-y-1 md:space-y-2">
                   {(isMobile.value
                     ? searchTerms.value.slice(0, 3)
-                    : searchTerms.value
-                  ).map((term, index) => (
-                    <li key={index}>
-                      <a
-                        href={`/${encodeURIComponent(
-                          term.term
-                        )}?_q=${encodeURIComponent(term.term)}&map=ft`}
-                        class="block py-1 md:py-2 hover:bg-base-200 rounded"
-                        onMouseDown={(e) => e.preventDefault()}
-                      >
-                        <div class="flex justify-between items-center">
-                          <span class="text-sm md:text-base text-capitalize">
-                            {term.term}
-                          </span>
-                          {term.count && (
-                            <span class="text-xs md:text-sm text-gray-500">
-                              {term.count}
+                    : searchTerms.value).map((term, index) => (
+                      <li key={index}>
+                        <a
+                          href={`/${
+                            encodeURIComponent(
+                              term.term,
+                            )
+                          }?_q=${encodeURIComponent(term.term)}&map=ft`}
+                          class="block py-1 md:py-2 hover:bg-base-200 rounded"
+                          onMouseDown={(e) => e.preventDefault()}
+                        >
+                          <div class="flex justify-between items-center">
+                            <span class="text-sm md:text-base text-capitalize">
+                              {term.term}
                             </span>
-                          )}
-                        </div>
-                      </a>
-                    </li>
-                  ))}
+                            {term.count && (
+                              <span class="text-xs md:text-sm text-gray-500">
+                                {term.count}
+                              </span>
+                            )}
+                          </div>
+                        </a>
+                      </li>
+                    ))}
                 </ul>
               </div>
             )}
@@ -315,9 +318,11 @@ export default function CustomSearchBar({
                 </div>
                 <div class="text-center mt-4">
                   <a
-                    href={`/${encodeURIComponent(
-                      query.value
-                    )}?_q=${encodeURIComponent(query.value)}&map=ft`}
+                    href={`/${
+                      encodeURIComponent(
+                        query.value,
+                      )
+                    }?_q=${encodeURIComponent(query.value)}&map=ft`}
                     class="inline-block px-4 py-2 bg-[#3A4332] text-white rounded-none hover:bg-[#2D3326] transition-colors text-sm md:text-base"
                     onMouseDown={(e) => e.preventDefault()}
                   >

@@ -27,7 +27,7 @@ export default function Form({ items }: Props) {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
     const input = form.querySelector(
-      'input[name="postalCode"]'
+      'input[name="postalCode"]',
     ) as HTMLInputElement;
 
     if (input) {
@@ -36,7 +36,7 @@ export default function Form({ items }: Props) {
 
     // Adiciona input hidden com os items
     let itemsInput = form.querySelector(
-      'input[name="items"]'
+      'input[name="items"]',
     ) as HTMLInputElement;
     if (!itemsInput) {
       itemsInput = document.createElement("input");
