@@ -20,7 +20,7 @@
           "mobile": "https://assets.decocache.com/ffloresta/38159590-6556-4e15-8940-27c3fb33ac47/2b.jpg",
           "alt": "Banner Principal",
           "action": {
-            "href": "/Ferragens/Sistemas-de-Gavetas"
+            "href": "/ferragens?filter.category-1=ferragens&filter.brand=rometal&page=1"
           }
         },
         {
@@ -264,11 +264,11 @@
         },
         {
           "image": "https://assets.decocache.com/ffloresta/609edaf1-637e-43f7-ae7a-397bd55f9340/Prancheta-1_2-(1).png",
-          "href": "/FGV/TN"
+          "href": "/ferragens?filter.category-1=ferragens&filter.brand=fgv-tn&page=1"
         },
         {
           "image": "https://assets.decocache.com/ffloresta/0a172c06-5c06-414a-8b46-ae24492ae5ad/Prancheta-1_3-(1).png",
-          "href": "/Hafele"
+          "href": "/ferragens?filter.category-1=ferragens&filter.brand=hafele&page=1"
         },
         {
           "image": "https://assets.decocache.com/ffloresta/aaf97827-3107-45f8-8203-29b301f7d065/Prancheta-1_4-(1).png",
@@ -276,7 +276,7 @@
         },
         {
           "image": "https://assets.decocache.com/ffloresta/f42415cc-5634-4404-978c-2f29e3e8b452/Prancheta-1-(1).png",
-          "href": "/Rometal"
+          "href": "/ferragens?filter.category-1=ferragens&filter.brand=rometal&page=1"
         },
         {
           "image": "https://assets.decocache.com/ffloresta/822e0075-7f1c-49cc-bbda-b24d8bac3a82/Prancheta-1_1-(1).png",
