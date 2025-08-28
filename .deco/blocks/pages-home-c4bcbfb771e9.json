@@ -20,7 +20,7 @@
           "mobile": "https://assets.decocache.com/ffloresta/38159590-6556-4e15-8940-27c3fb33ac47/2b.jpg",
           "alt": "Banner Principal",
           "action": {
-            "href": "/Ferragens/Sistemas-de-Gavetas"
+            "href": "/ferragens?filter.category-1=ferragens&filter.brand=rometal&page=1"
           }
         },
         {
