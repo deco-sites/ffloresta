@@ -3,8 +3,9 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $_app from "./routes/_app.tsx";
-import * as $api_calculate_shipping from "./routes/api/calculate-shipping.ts";
+import * as $api_notify_proxy from "./routes/api/notify-proxy.ts";
 import * as $AddToCartButtonPDP from "./islands/AddToCartButtonPDP.tsx";
+import * as $AvaibilityNotify from "./islands/AvaibilityNotify.tsx";
 import * as $BannerMosaicIsland from "./islands/BannerMosaicIsland.tsx";
 import * as $BrandGridIsland from "./islands/BrandGridIsland.tsx";
 import * as $CustomSearchBar from "./islands/CustomSearchBar.tsx";
@@ -26,10 +27,11 @@ import type { Manifest } from "$fresh/server.ts";
 const manifest = {
   routes: {
     "./routes/_app.tsx": $_app,
-    "./routes/api/calculate-shipping.ts": $api_calculate_shipping,
+    "./routes/api/notify-proxy.ts": $api_notify_proxy,
   },
   islands: {
     "./islands/AddToCartButtonPDP.tsx": $AddToCartButtonPDP,
+    "./islands/AvaibilityNotify.tsx": $AvaibilityNotify,
     "./islands/BannerMosaicIsland.tsx": $BannerMosaicIsland,
     "./islands/BrandGridIsland.tsx": $BrandGridIsland,
     "./islands/CustomSearchBar.tsx": $CustomSearchBar,

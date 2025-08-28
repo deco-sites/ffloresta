@@ -3,13 +3,12 @@ import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalytic
 import { formatPrice } from "../../sdk/format.ts";
 import { useId } from "../../sdk/useId.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
-import ShippingSimulationForm from "../shipping/Form.tsx";
 import { usePlatform } from "../../sdk/usePlatform.tsx";
 import AddToCartButtonPDP from "../../islands/AddToCartButtonPDP.tsx";
-import OutOfStock from "./OutOfStock.tsx";
 import ProductSelector from "./ProductVariantSelector.tsx";
 import { useOffer } from "../../sdk/useOffer.ts";
 import ShippingForm from "../../islands/ShippingForm.tsx";
+import AvaibilityNotify from "../../islands/AvaibilityNotify.tsx";
 
 interface Props {
   page: ProductDetailsPage | null;
@@ -96,7 +95,7 @@ function ProductInfo({ page }: Props) {
 
       <div class="mt-1.5 md:mt-5 flex flex-col gap-0">
         <div class="flex flex-col items-start gap-0">
-          {listPrice && (
+          {listPrice && listPrice > price && (
             <span class="font-light text-[20px] leading-[170%] tracking-[3%] text-left text-[#3c4233] line-through">
               {formatPrice(listPrice, offers?.priceCurrency)}
             </span>
@@ -167,7 +166,7 @@ function ProductInfo({ page }: Props) {
             </div>
           </>
         ) : (
-          <OutOfStock productID={productID} />
+          <AvaibilityNotify productID={productID} />
         )}
       </div>
     </div>

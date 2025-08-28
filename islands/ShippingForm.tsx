@@ -114,6 +114,8 @@ export default function ShippingForm({ items }: Props) {
         });
       }
 
+      console.log("Metodos de entrega:", methods);
+
       if (methods.length > 0) {
         setResults(methods);
       } else {
