@@ -76,34 +76,13 @@ function Footer({
   logoLinha,
   trademark,
   lojas = { title: "", lojas: [] },
-  whatsAppLink =
-    "https://api.whatsapp.com/send?phone=551130936121&text=Ol%C3%A1,%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es",
+  whatsAppLink = "https://api.whatsapp.com/send?phone=551130936121&text=Ol%C3%A1,%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es",
 }: Props) {
   const device = useDevice();
   const isMobile = device === "mobile";
 
   return (
     <>
-      <div class="fixed bottom-4 right-4 z-50">
-        <a
-          href={whatsAppLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Entrar em contato via WhatsApp"
-          class="p-3 rounded-full bg-[rgba(21,31,22,0.6)] backdrop-blur-[12px] transition-all duration-300 hover:bg-[rgba(21,31,22,0.8)] flex items-center justify-center shadow-lg"
-          style={{ width: "50px", height: "50px" }}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            fill="white"
-            viewBox="0 0 16 16"
-          >
-            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
-          </svg>
-        </a>
-      </div>
       <footer class="sm:px-0 mt-5 sm:mt-10" style={{ backgroundColor: "#fff" }}>
         <Newsletter />
 
@@ -139,46 +118,44 @@ function Footer({
             </div>
 
             <div class="flex flex-col sm:grid sm:grid-flow-row lg:grid-cols-2 gap-6">
-              {isMobile
-                ? (
-                  <div>
-                    {links.map(({ title, itens }, index) => (
-                      <AccordionItem key={title + index} title={title}>
-                        <div class="flex flex-col gap-[12px] mt-2 mb-[20px]">
-                          {itens.map(({ title, href }, idx) => (
-                            <a
-                              key={title + idx}
-                              class="font-normal text-[14px] text-white"
-                              href={href}
-                            >
-                              {title}
-                            </a>
-                          ))}
-                        </div>
-                      </AccordionItem>
-                    ))}
-                  </div>
-                )
-                : (
-                  <div class="grid grid-flow-row sm:grid-flow-col gap-6">
-                    {links.map(({ title, itens }, index) => (
-                      <div key={title + index} class="flex flex-col gap-[18px]">
-                        <SectionTitle title={title} />
-                        <div class="flex flex-col gap-[18px]">
-                          {itens.map(({ title, href }, idx) => (
-                            <a
-                              key={title + idx}
-                              class="font-normal text-[14px] text-white"
-                              href={href}
-                            >
-                              {title}
-                            </a>
-                          ))}
-                        </div>
+              {isMobile ? (
+                <div>
+                  {links.map(({ title, itens }, index) => (
+                    <AccordionItem key={title + index} title={title}>
+                      <div class="flex flex-col gap-[12px] mt-2 mb-[20px]">
+                        {itens.map(({ title, href }, idx) => (
+                          <a
+                            key={title + idx}
+                            class="font-normal text-[14px] text-white"
+                            href={href}
+                          >
+                            {title}
+                          </a>
+                        ))}
                       </div>
-                    ))}
-                  </div>
-                )}
+                    </AccordionItem>
+                  ))}
+                </div>
+              ) : (
+                <div class="grid grid-flow-row sm:grid-flow-col gap-6">
+                  {links.map(({ title, itens }, index) => (
+                    <div key={title + index} class="flex flex-col gap-[18px]">
+                      <SectionTitle title={title} />
+                      <div class="flex flex-col gap-[18px]">
+                        {itens.map(({ title, href }, idx) => (
+                          <a
+                            key={title + idx}
+                            class="font-normal text-[14px] text-white"
+                            href={href}
+                          >
+                            {title}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
 
               <div class="flex flex-col sm:flex-row gap-12 justify-between items-start">
                 <div class="w-full">
@@ -248,95 +225,88 @@ function Footer({
 
             {/* Seção de Lojas com dropdown apenas no mobile */}
             <div>
-              {isMobile
-                ? (
-                  <div class="mt-6">
-                    <details class="group">
-                      <summary class="font-bold text-[16px] text-white cursor-pointer flex justify-between items-center min-h-[48px] list-none">
-                        <span>{lojas.title}</span>
-                        <svg
-                          width="12"
-                          height="7"
-                          viewBox="0 0 12 7"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="transform group-open:rotate-180 transition-transform duration-300"
-                        >
-                          <path
-                            d="M0.52124 0.966797C0.537437 0.755898 0.622525 0.570573 0.775146 0.417969L0.842529 0.357422C1.00278 0.224673 1.19303 0.157278 1.40796 0.157227C1.62312 0.157227 1.814 0.224465 1.97436 0.357422L2.04077 0.417969L6.00757 4.38574L9.97534 0.417968L10.0408 0.359375C10.1973 0.230598 10.3865 0.165388 10.6013 0.162109L10.6931 0.165039C10.8737 0.17901 11.0351 0.24329 11.1736 0.357421L11.241 0.417968C11.4141 0.591095 11.5026 0.805113 11.5027 1.05078C11.5027 1.26578 11.4353 1.45689 11.3025 1.61719L11.241 1.68457L6.74683 6.17871C6.66749 6.25802 6.58242 6.32291 6.49097 6.37012L6.39722 6.41113C6.27539 6.45627 6.14515 6.47848 6.00854 6.47852C5.87192 6.47852 5.74172 6.45623 5.61987 6.41113L5.52612 6.37012C5.43441 6.32286 5.34882 6.25824 5.26929 6.17871L0.775146 1.68457L0.716553 1.61914C0.587624 1.46258 0.522622 1.27346 0.519287 1.05859L0.52124 0.966797Z"
-                            fill="#ffffff"
-                            stroke="white"
-                            stroke-width="0.3"
-                          />
-                        </svg>
-                      </summary>
-                      <div class="flex flex-col gap-y-[10px] mt-4">
-                        {lojas.lojas.map((loja, idx) => (
-                          <div key={idx} class="mb-4">
-                            <p class="text-white text-[14px]">{loja.title}</p>
+              {isMobile ? (
+                <div class="mt-6">
+                  <details class="group">
+                    <summary class="font-bold text-[16px] text-white cursor-pointer flex justify-between items-center min-h-[48px] list-none">
+                      <span>{lojas.title}</span>
+                      <svg
+                        width="12"
+                        height="7"
+                        viewBox="0 0 12 7"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="transform group-open:rotate-180 transition-transform duration-300"
+                      >
+                        <path
+                          d="M0.52124 0.966797C0.537437 0.755898 0.622525 0.570573 0.775146 0.417969L0.842529 0.357422C1.00278 0.224673 1.19303 0.157278 1.40796 0.157227C1.62312 0.157227 1.814 0.224465 1.97436 0.357422L2.04077 0.417969L6.00757 4.38574L9.97534 0.417968L10.0408 0.359375C10.1973 0.230598 10.3865 0.165388 10.6013 0.162109L10.6931 0.165039C10.8737 0.17901 11.0351 0.24329 11.1736 0.357421L11.241 0.417968C11.4141 0.591095 11.5026 0.805113 11.5027 1.05078C11.5027 1.26578 11.4353 1.45689 11.3025 1.61719L11.241 1.68457L6.74683 6.17871C6.66749 6.25802 6.58242 6.32291 6.49097 6.37012L6.39722 6.41113C6.27539 6.45627 6.14515 6.47848 6.00854 6.47852C5.87192 6.47852 5.74172 6.45623 5.61987 6.41113L5.52612 6.37012C5.43441 6.32286 5.34882 6.25824 5.26929 6.17871L0.775146 1.68457L0.716553 1.61914C0.587624 1.46258 0.522622 1.27346 0.519287 1.05859L0.52124 0.966797Z"
+                          fill="#ffffff"
+                          stroke="white"
+                          stroke-width="0.3"
+                        />
+                      </svg>
+                    </summary>
+                    <div class="flex flex-col gap-y-[10px] mt-4">
+                      {lojas.lojas.map((loja, idx) => (
+                        <div key={idx} class="mb-4">
+                          <p class="text-white text-[14px]">{loja.title}</p>
+                          <p class="text-white text-[12px] font-bold underline">
+                            {loja.tuor}
+                          </p>
+                          <p class="text-white text-[12px]">{loja.end}</p>
+                          <div class="flex flex-row flex-wrap">
+                            <p class="text-white text-[12px] font-bold">
+                              TELEFONE:
+                            </p>
+                            <p class="text-white text-[12px] ml-1">
+                              {loja.tel}
+                            </p>
+                          </div>
+                          <div>
                             <p class="text-white text-[12px] font-bold underline">
-                              {loja.tuor}
+                              HORÁRIO DE ATENDIMENTO
                             </p>
-                            <p class="text-white text-[12px]">{loja.end}</p>
-                            <div class="flex flex-row flex-wrap">
-                              <p class="text-white text-[12px] font-bold">
-                                TELEFONE:
-                              </p>
-                              <p class="text-white text-[12px] ml-1">
-                                {loja.tel}
-                              </p>
-                            </div>
-                            <div>
-                              <p class="text-white text-[12px] font-bold underline">
-                                HORÁRIO DE ATENDIMENTO
-                              </p>
-                              <p class="text-white text-[12px]">
-                                {loja.horario}
-                              </p>
-                            </div>
+                            <p class="text-white text-[12px]">{loja.horario}</p>
                           </div>
-                        ))}
-                      </div>
-                    </details>
-                  </div>
-                )
-                : (
-                  <>
-                    <p class="font-bold text-[16px] text-white mb-[30px] mt-[50px]">
-                      {lojas.title}
-                    </p>
-                    <div class="grid grid-cols-1 lg:grid-cols-5 gap-x-[20px]">
-                      {lojas.lojas.map(
-                        ({ title, tuor, end, tel, horario }, idx) => (
-                          <div
-                            key={idx}
-                            class="flex flex-col gap-y-[10px] mb-6"
-                          >
-                            <p class="text-white text-[16px]">{title}</p>
-                            <p class="text-white text-[14px] font-bold underline">
-                              {tuor}
-                            </p>
-                            <p class="text-white text-[14px] min-h-[64px]">
-                              {end}
-                            </p>
-                            <div class="flex flex-row flex-wrap">
-                              <p class="text-white text-[14px] font-bold">
-                                TELEFONE:
-                              </p>
-                              <p class="text-white text-[14px] ml-1">{tel}</p>
-                            </div>
-                            <div>
-                              <p class="text-white text-[14px] font-bold underline">
-                                HORÁRIO DE ATENDIMENTO
-                              </p>
-                              <p class="text-white text-[14px]">{horario}</p>
-                            </div>
-                          </div>
-                        ),
-                      )}
+                        </div>
+                      ))}
                     </div>
-                  </>
-                )}
+                  </details>
+                </div>
+              ) : (
+                <>
+                  <p class="font-bold text-[16px] text-white mb-[30px] mt-[50px]">
+                    {lojas.title}
+                  </p>
+                  <div class="grid grid-cols-1 lg:grid-cols-5 gap-x-[20px]">
+                    {lojas.lojas.map(
+                      ({ title, tuor, end, tel, horario }, idx) => (
+                        <div key={idx} class="flex flex-col gap-y-[10px] mb-6">
+                          <p class="text-white text-[16px]">{title}</p>
+                          <p class="text-white text-[14px] font-bold underline">
+                            {tuor}
+                          </p>
+                          <p class="text-white text-[14px] min-h-[64px]">
+                            {end}
+                          </p>
+                          <div class="flex flex-row flex-wrap">
+                            <p class="text-white text-[14px] font-bold">
+                              TELEFONE:
+                            </p>
+                            <p class="text-white text-[14px] ml-1">{tel}</p>
+                          </div>
+                          <div>
+                            <p class="text-white text-[14px] font-bold underline">
+                              HORÁRIO DE ATENDIMENTO
+                            </p>
+                            <p class="text-white text-[14px]">{horario}</p>
+                          </div>
+                        </div>
+                      )
+                    )}
+                  </div>
+                </>
+              )}
             </div>
 
             {!isMobile && (
