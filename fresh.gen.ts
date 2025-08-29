@@ -3,6 +3,7 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $_app from "./routes/_app.tsx";
+import * as $AddToCartButton from "./islands/AddToCartButton.tsx";
 import * as $AddToCartButtonPDP from "./islands/AddToCartButtonPDP.tsx";
 import * as $AvaibilityNotify from "./islands/AvaibilityNotify.tsx";
 import * as $BannerMosaicIsland from "./islands/BannerMosaicIsland.tsx";
@@ -28,6 +29,7 @@ const manifest = {
     "./routes/_app.tsx": $_app,
   },
   islands: {
+    "./islands/AddToCartButton.tsx": $AddToCartButton,
     "./islands/AddToCartButtonPDP.tsx": $AddToCartButtonPDP,
     "./islands/AvaibilityNotify.tsx": $AvaibilityNotify,
     "./islands/BannerMosaicIsland.tsx": $BannerMosaicIsland,
