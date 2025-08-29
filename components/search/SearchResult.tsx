@@ -13,6 +13,7 @@ import Sort from "./Sort.tsx";
 import { useDevice, useScript, useSection } from "@deco/deco/hooks";
 import { type SectionProps } from "@deco/deco";
 import type { ImageWidget } from "apps/admin/widgets.ts";
+import { HTMLWidget as HTML } from "apps/admin/widgets.ts";
 
 export interface Layout {
   pagination?: "show-more" | "pagination";
@@ -20,7 +21,7 @@ export interface Layout {
 
 export interface SeoText {
   title?: string;
-  description?: string;
+  description?: HTML;
 }
 
 export interface Props {
@@ -412,18 +413,20 @@ function Result(props: SectionProps<typeof loader>) {
                       )}
                       {seoText.description && (
                         <>
-                          <p
+                          <div
                             id="seo-text-truncated"
-                            class="text-[14px] sm:text-[16px] leading-relaxed line-clamp-3"
-                          >
-                            {seoText.description}
-                          </p>
-                          <p
+                            class="text-[14px] sm:text-[16px] leading-relaxed line-clamp-3 [&_*]:text-[14px] [&_*]:sm:text-[16px] [&_*]:leading-relaxed [&_*]:text-[#1F251C]"
+                            dangerouslySetInnerHTML={{
+                              __html: seoText.description,
+                            }}
+                          />
+                          <div
                             id="seo-text-full"
-                            class="text-[14px] sm:text-[16px] leading-relaxed hidden"
-                          >
-                            {seoText.description}
-                          </p>
+                            class="text-[14px] sm:text-[16px] leading-relaxed hidden [&_*]:text-[14px] [&_*]:sm:text-[16px] [&_*]:leading-relaxed [&_*]:text-[#1F251C]"
+                            dangerouslySetInnerHTML={{
+                              __html: seoText.description,
+                            }}
+                          />
                           <button
                             onclick="document.getElementById('seo-text-truncated').classList.toggle('hidden'); document.getElementById('seo-text-full').classList.toggle('hidden'); this.textContent = this.textContent === 'Ver mais' ? 'Ver menos' : 'Ver mais';"
                             class="text-[#3A4332] font-bold text-sm hover:underline"

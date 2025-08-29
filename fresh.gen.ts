@@ -3,7 +3,6 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $_app from "./routes/_app.tsx";
-import * as $api_notify_proxy from "./routes/api/notify-proxy.ts";
 import * as $AddToCartButtonPDP from "./islands/AddToCartButtonPDP.tsx";
 import * as $AvaibilityNotify from "./islands/AvaibilityNotify.tsx";
 import * as $BannerMosaicIsland from "./islands/BannerMosaicIsland.tsx";
@@ -27,7 +26,6 @@ import type { Manifest } from "$fresh/server.ts";
 const manifest = {
   routes: {
     "./routes/_app.tsx": $_app,
-    "./routes/api/notify-proxy.ts": $api_notify_proxy,
   },
   islands: {
     "./islands/AddToCartButtonPDP.tsx": $AddToCartButtonPDP,
