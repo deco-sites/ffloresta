@@ -36,6 +36,22 @@ interface SearchTerm {
   count?: number;
 }
 
+// Função para formatar a URL de pesquisa
+const formatSearchUrl = (searchQuery: string) => {
+  // Remove acentos e caracteres especiais
+  const normalizedQuery = searchQuery
+    .normalize("NFD") // Decompõe os caracteres acentuados
+    .replace(/[\u0300-\u036f]/g, "") // Remove os diacríticos
+    .toLowerCase();
+
+  const formattedQuery = normalizedQuery
+    .trim()
+    .replace(/\s+/g, "-") // Substitui espaços por hífens
+    .replace(/[^a-z0-9-]/g, ""); // Remove caracteres especiais, mantendo apenas letras, números e hífens
+
+  return `/${formattedQuery}?q=${encodeURIComponent(searchQuery)}&map=ft`;
+};
+
 function ProductCard({
   product,
   isMobile = false,
@@ -207,11 +223,7 @@ export default function CustomSearchBar({
     e.preventDefault();
     const searchQuery = query.value.trim();
     if (searchQuery) {
-      window.location.href = `/${
-        encodeURIComponent(
-          searchQuery,
-        )
-      }?_q=${encodeURIComponent(searchQuery)}&map=ft`;
+      window.location.href = formatSearchUrl(searchQuery);
     }
   };
 
@@ -278,11 +290,7 @@ export default function CustomSearchBar({
                     : searchTerms.value).map((term, index) => (
                       <li key={index}>
                         <a
-                          href={`/${
-                            encodeURIComponent(
-                              term.term,
-                            )
-                          }?_q=${encodeURIComponent(term.term)}&map=ft`}
+                          href={formatSearchUrl(term.term)}
                           class="block py-1 md:py-2 hover:bg-base-200 rounded"
                           onMouseDown={(e) => e.preventDefault()}
                         >
@@ -318,11 +326,7 @@ export default function CustomSearchBar({
                 </div>
                 <div class="text-center mt-4">
                   <a
-                    href={`/${
-                      encodeURIComponent(
-                        query.value,
-                      )
-                    }?_q=${encodeURIComponent(query.value)}&map=ft`}
+                    href={formatSearchUrl(query.value)}
                     class="inline-block px-4 py-2 bg-[#3A4332] text-white rounded-none hover:bg-[#2D3326] transition-colors text-sm md:text-base"
                     onMouseDown={(e) => e.preventDefault()}
                   >
