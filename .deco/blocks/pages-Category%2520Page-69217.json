@@ -1144,7 +1144,8 @@
               "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png",
               "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
               "altText": "Categoria"
-            }
+            },
+            "products": null
           },
           "rule": {
             "__resolveType": "website/matchers/always.ts"
