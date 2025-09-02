@@ -27,7 +27,7 @@ function AddToCartButton(props: Props) {
       }
 
       const minicartCheckbox = document.getElementById(
-        "minicart-drawer"
+        "minicart-drawer",
       ) as HTMLInputElement | null;
 
       if (minicartCheckbox) {
