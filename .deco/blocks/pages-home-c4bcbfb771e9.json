@@ -38,6 +38,14 @@
             "href": "/"
           },
           "alt": "Frete Grátis"
+        },
+        {
+          "desktop": "https://assets.decocache.com/ffloresta/13045259-ea7d-42da-85bb-b397fae1166b/5.jpg",
+          "mobile": "https://assets.decocache.com/ffloresta/74655654-5bc6-4f3e-8c36-b58f602b1223/5b.jpg",
+          "alt": "Banner Principal",
+          "action": {
+            "href": "/180?map=productClusterIds&page=1"
+          }
         }
       ],
       "preload": true
