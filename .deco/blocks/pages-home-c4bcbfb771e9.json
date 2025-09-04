@@ -32,20 +32,12 @@
           }
         },
         {
-          "desktop": "https://assets.decocache.com/ffloresta/4432aa6b-51d9-4b22-a420-733bfe5acad5/3-a.jpg",
-          "mobile": "https://assets.decocache.com/ffloresta/808eb854-a4b4-4948-a56f-223fea12f6b4/3b.jpg",
-          "action": {
-            "href": "/ferramentas/armazenamento/toughbuilt?initialMap=c&initialQuery=ferramentas&map=category-1,category-2,brand"
-          },
-          "alt": "Banner Principal"
-        },
-        {
           "desktop": "https://assets.decocache.com/ffloresta/55f7b38a-0b4d-495d-bc06-d99b45230d49/4-a.jpg",
           "mobile": "https://assets.decocache.com/ffloresta/01822884-276a-4ce1-bfae-0a9e413330e8/4c.jpg",
-          "alt": "Frete Grátis",
           "action": {
             "href": "/"
-          }
+          },
+          "alt": "Frete Grátis"
         }
       ],
       "preload": true
