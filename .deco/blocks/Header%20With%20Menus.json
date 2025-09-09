@@ -1614,7 +1614,7 @@
         }
       ],
       "@type": "SiteNavigationElement",
-      "url": "/Ferramentas",
+      "url": "/ferramentas",
       "name": "Ferramentas",
       "image": null
     },
