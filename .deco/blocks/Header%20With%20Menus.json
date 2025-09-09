@@ -783,7 +783,7 @@
         }
       ],
       "@type": "SiteNavigationElement",
-      "url": "/Ferragens-de-Projetos",
+      "url": "/ferragens-de-projetos",
       "name": "Ferragens de Projetos",
       "image": null
     },
@@ -1072,7 +1072,7 @@
         }
       ],
       "@type": "SiteNavigationElement",
-      "url": "/Ambientes",
+      "url": "/ambientes",
       "name": "Ambientes",
       "image": null
     },

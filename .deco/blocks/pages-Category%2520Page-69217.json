@@ -446,7 +446,7 @@
             "__resolveType": "website/matchers/pathname.ts",
             "case": {
               "type": "Includes",
-              "pathname": "/Ambientes"
+              "pathname": "/ambientes"
             }
           }
         },
@@ -728,7 +728,7 @@
             "__resolveType": "website/matchers/pathname.ts",
             "case": {
               "type": "Includes",
-              "pathname": "/Ferragens-de-Projetos"
+              "pathname": "/ferragens-de-projetos"
             }
           }
         },
@@ -894,7 +894,8 @@
             },
             "startingPage": 1,
             "seoText": {
-              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
+              "description": "<h2 style=\"text-align: start\"><strong>Fechaduras</strong></h2><p>Seu projeto merece os melhores FEC para porta - e na Ferragens Floresta você encontra as melhores opções para todos os estilos e necessidades. Temos modelos de puxadores de alça, embutir, concha, botão e duplos — tudo com qualidade e design que fazem a diferença. Valorize cada detalhe do seu ambiente com nossos produtos!</p><h2><br><span style=\"color: rgb(0, 0, 0); font-size: 16pt\">Quais os principais tipos de puxadores para porta?</span></h2>"
             },
             "topBanner": {
               "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
@@ -1003,7 +1004,7 @@
               "94": "g",
               "mobile": "https://assets.decocache.com/ffloresta/8f0b81cc-69ca-465b-b58c-bee7dfd261bd/Prancheta-1_2.png",
               "desktop": "https://assets.decocache.com/ffloresta/b19fe399-33fd-4b6f-80b5-f79282f52c60/2.jpg",
-              "altText": "Puxadores"
+              "altText": "Fechaduras"
             }
           },
           "rule": {
