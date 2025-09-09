@@ -187,7 +187,7 @@
             "seoText": {
               "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
               "title": "Ferragens",
-              "description": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p><p></p><p></p><p></p><p><br></p><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p><p></p>"
+              "description": "<p></p>"
             },
             "topBanner": {
               "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
@@ -298,7 +298,7 @@
               "96": "g",
               "mobile": "https://assets.decocache.com/ffloresta/3f61641c-9f58-4518-84f9-ac4f0fed2597/Prancheta-1_1.png",
               "desktop": "https://assets.decocache.com/ffloresta/66bebcc3-80aa-4882-b171-43b29993f2fc/Prancheta-1_1_upscayl_4x_upscayl-standard-4x.png",
-              "altText": "Categoria"
+              "altText": "Ferragens"
             }
           },
           "rule": {
@@ -439,7 +439,7 @@
               "94": "g",
               "mobile": "https://assets.decocache.com/ffloresta/a5be6a21-4dac-43bb-a18a-ad230011c494/Prancheta-1_3.png",
               "desktop": "https://assets.decocache.com/ffloresta/8a582a57-fb0c-4397-bfb1-8548a07992b3/Prancheta-1_3_upscayl_4x_upscayl-standard-4x.png",
-              "altText": "Puxadores"
+              "altText": "Ambientes"
             }
           },
           "rule": {
@@ -580,7 +580,7 @@
               "94": "g",
               "mobile": "https://assets.decocache.com/ffloresta/5783cb8b-d679-456e-a6f6-0aedca0e3b51/Prancheta-1_5.png",
               "desktop": "https://assets.decocache.com/ffloresta/a87339b0-9494-4ec1-b0bd-2745ad0198aa/Prancheta-1_5_upscayl_4x_upscayl-standard-4x.png",
-              "altText": "Puxadores"
+              "altText": "Ferramentas"
             }
           },
           "rule": {
@@ -721,7 +721,7 @@
               "94": "g",
               "mobile": "https://assets.decocache.com/ffloresta/b18e47c0-5c2e-4adb-9ec3-f7b9c9d1f302/Prancheta-1_4.png",
               "desktop": "https://assets.decocache.com/ffloresta/f293f76c-baf2-4acd-b09f-e7fdc0c3878e/Prancheta-1_4_upscayl_4x_upscayl-standard-4x.png",
-              "altText": "Puxadores"
+              "altText": "Ferragens de projetos"
             }
           },
           "rule": {
@@ -862,7 +862,7 @@
               "94": "g",
               "mobile": "https://assets.decocache.com/ffloresta/44d2b6db-4203-4956-893c-409df5151177/Prancheta-1_1-(2).png",
               "desktop": "https://assets.decocache.com/ffloresta/c40ec064-5a59-4372-a4cb-8afa869b7ecc/Prancheta-1_1-(3).png",
-              "altText": "Puxadores"
+              "altText": "Ferragens"
             }
           },
           "rule": {
@@ -895,7 +895,7 @@
             "startingPage": 1,
             "seoText": {
               "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
-              "description": "<h2 style=\"text-align: start\"><strong>Fechaduras</strong></h2><p>Seu projeto merece os melhores FEC para porta - e na Ferragens Floresta você encontra as melhores opções para todos os estilos e necessidades. Temos modelos de puxadores de alça, embutir, concha, botão e duplos — tudo com qualidade e design que fazem a diferença. Valorize cada detalhe do seu ambiente com nossos produtos!</p><h2><br><span style=\"color: rgb(0, 0, 0); font-size: 16pt\">Quais os principais tipos de puxadores para porta?</span></h2>"
+              "description": "<p></p>"
             },
             "topBanner": {
               "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
