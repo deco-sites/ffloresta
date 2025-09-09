@@ -514,7 +514,7 @@
         }
       ],
       "@type": "SiteNavigationElement",
-      "url": "/Puxadores",
+      "url": "/puxadores",
       "name": "Puxadores",
       "image": null
     },
@@ -651,7 +651,7 @@
         }
       ],
       "@type": "SiteNavigationElement",
-      "url": "/Fechaduras",
+      "url": "/fechaduras",
       "name": "Fechaduras",
       "image": null
     },
