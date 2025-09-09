@@ -1010,7 +1010,7 @@
             "__resolveType": "website/matchers/pathname.ts",
             "case": {
               "type": "Includes",
-              "pathname": "/Fechaduras"
+              "pathname": "/fechaduras"
             }
           }
         },
