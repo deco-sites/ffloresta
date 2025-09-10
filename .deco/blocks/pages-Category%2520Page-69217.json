@@ -161,7 +161,7 @@
             "__resolveType": "website/matchers/pathname.ts",
             "case": {
               "type": "Includes",
-              "pathname": "puxadores/concha"
+              "pathname": "/puxadores/concha"
             }
           }
         },
