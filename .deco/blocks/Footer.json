@@ -57,32 +57,31 @@
       "itens": [
         {
           "alt": "Casa e Mercado",
-          "href": "#",
           "image": "https://assets.decocache.com/ffloresta/39fb75c9-e048-497b-87da-08678e864df4/casa_mercado.svg"
         },
         {
           "alt": "Facebook",
-          "href": "#",
+          "href": "https://www.facebook.com/ferragensflorestaNovo/?locale=pt_BR",
           "image": "https://assets.decocache.com/ffloresta/1733bfbe-6b7a-45b7-918e-2cf9fdcf6f4a/facebook-white.svg"
         },
         {
           "alt": "Instagram",
-          "href": "#",
+          "href": "https://www.instagram.com/ferragensfloresta/",
           "image": "https://assets.decocache.com/ffloresta/45b31e83-d4e5-4c9c-a552-13eb8155c7a3/instagram-white.svg"
         },
         {
           "alt": "TikTok",
-          "href": "#",
+          "href": "https://www.instagram.com/ferragensfloresta/",
           "image": "https://assets.decocache.com/ffloresta/d8ddfe19-c858-4bd9-a396-a33c0a11f12b/tiktok-white.svg"
         },
         {
           "alt": "Youtube",
-          "href": "#",
+          "href": "https://www.youtube.com/@ferragensflorestaa",
           "image": "https://assets.decocache.com/ffloresta/22e3b215-dfd2-42ef-9e09-abd5fd39d450/youtbe-white.svg"
         },
         {
           "alt": "Linkedin",
-          "href": "#",
+          "href": "https://www.linkedin.com/company/ferragens-floresta-ltda/posts/?feedView=all",
           "image": "https://assets.decocache.com/ffloresta/bbe6a666-36c8-4693-bfa2-1f7399f9d765/linkedin-white.svg"
         }
       ]
