@@ -6,17 +6,27 @@
       "__resolveType": "Header With Menus"
     },
     {
-      "__resolveType": "commerce/sections/Seo/SeoPLPV2.tsx",
-      "jsonLD": {
-        "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
-        "sort": "price:desc",
-        "fuzzy": "automatic",
-        "selectedFacets": [],
-        "advancedConfigs": {
-          "includeOriginalAttributes": []
-        },
-        "count": 12
-      }
+      "__resolveType": "website/flags/multivariate/section.ts",
+      "variants": [
+        {
+          "value": {
+            "__resolveType": "commerce/sections/Seo/SeoPLPV2.tsx",
+            "jsonLD": {
+              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "sort": "price:desc",
+              "fuzzy": "automatic",
+              "selectedFacets": [],
+              "advancedConfigs": {
+                "includeOriginalAttributes": []
+              },
+              "count": 12
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/never.ts"
+          }
+        }
+      ]
     },
     {
       "__resolveType": "website/flags/multivariate/section.ts",
