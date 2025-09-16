@@ -336,9 +336,9 @@ function Result(props: SectionProps<typeof loader>) {
                   aside={
                     <div class="bg-white flex flex-col h-full w-full divide-y overflow-y-hidden">
                       <div class="flex justify-between items-center">
-                        <h1 class="px-4 py-3">
+                        <h2 class="px-4 py-3">
                           <span class="font-medium text-2xl">Filtro</span>
-                        </h1>
+                        </h2>
                         <label
                           class="btn btn-ghost cursor-pointer"
                           for={controls}

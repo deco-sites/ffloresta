@@ -18,21 +18,26 @@ interface Props {
   children: Children;
 }
 const snippet = (id: string) => {
-  const observer = new IntersectionObserver(function (entries) {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("${animationClass}");
-        entry.target.classList.remove("opacity-0");
-        observer.disconnect();
-      }
-    });
-  }, { threshold: 0.50 });
+  const observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("${animationClass}");
+          entry.target.classList.remove("opacity-0");
+          observer.disconnect();
+        }
+      });
+    },
+    { threshold: 0.5 },
+  );
   const element = document.getElementById(id);
   element && observer.observe(element);
 };
-function Animation(
-  { children, animationType = "fade-in", duration = "0.3" }: Props,
-) {
+function Animation({
+  children,
+  animationType = "fade-in",
+  duration = "0.3",
+}: Props) {
   const { section } = children;
   const { Component, props } = section;
   const id = useId();
@@ -147,7 +152,7 @@ export function Preview() {
         class="flex justify-center items-center"
         style={{ animationDuration: "2s" }}
       >
-        <h1 class="text-9xl text-base-content font-semibold my-8">Animation</h1>
+        <h2 class="text-9xl text-base-content font-semibold my-8">Animation</h2>
       </div>
     </div>
   );

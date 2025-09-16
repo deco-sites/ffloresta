@@ -113,15 +113,19 @@ function Links(props: Props) {
   );
 
   const maybeLink = header?.logo?.link
-    ? <a href={header?.logo?.link!} target="_blank">{logo}</a>
+    ? (
+      <a href={header?.logo?.link!} target="_blank">
+        {logo}
+      </a>
+    )
     : logo;
 
   const ColorsNeutralAndHover = {
     color: links.style?.textColor,
     backgroundImage: `linear-gradient(to right, ${
-      links.style?.gradientColors.neutral.map((color) => color.color).join(
-        ", ",
-      )
+      links.style?.gradientColors.neutral
+        .map((color) => color.color)
+        .join(", ")
     })`,
   };
 
@@ -129,27 +133,19 @@ function Links(props: Props) {
     <BaseContainer background={background}>
       <>
         <header class="flex flex-col justify-center items-center gap-4">
-          {header?.logo?.img && (
-            <div class="rounded-full p-4">
-              {maybeLink}
-            </div>
-          )}
+          {header?.logo?.img && <div class="rounded-full p-4">{maybeLink}</div>}
 
           {header?.title && (
-            <h1
+            <h2
               class="text-5xl font-bold text-center"
               style={{ color: header.textColor }}
             >
               {header?.title}
-            </h1>
+            </h2>
           )}
 
           {header?.description && (
-            <p
-              style={{ color: header.textColor }}
-            >
-              {header?.description}
-            </p>
+            <p style={{ color: header.textColor }}>{header?.description}</p>
           )}
         </header>
 
@@ -163,16 +159,9 @@ function Links(props: Props) {
                   class="group h-[52px] px-6 rounded-full flex justify-start items-center font-bold gap-4"
                   style={ColorsNeutralAndHover}
                 >
-                  {Boolean(link.icon) && (
-                    <Icon
-                      size={20}
-                      id={link.icon!}
-                    />
-                  )}
+                  {Boolean(link.icon) && <Icon size={20} id={link.icon!} />}
 
-                  <span class="w-full text-center text-sm">
-                    {link.label}
-                  </span>
+                  <span class="w-full text-center text-sm">{link.label}</span>
 
                   <Icon
                     size={20}
@@ -215,11 +204,7 @@ function Links(props: Props) {
                 target="_blank"
               >
                 {props.footer.text && (
-                  <p
-                    style={{ color: header.textColor }}
-                  >
-                    {props.footer.text}
-                  </p>
+                  <p style={{ color: header.textColor }}>{props.footer.text}</p>
                 )}
                 {props.footer.image && (
                   <Image

@@ -22,9 +22,9 @@ export default function Intro({
         <div
           class={`flex flex-col gap-6 ${ALIGNMENT_TEXT[alignment ?? "Left"]}`}
         >
-          <h1 class="font-bold text-base-content text-[40px] leading-[120%]">
+          <h2 class="font-bold text-base-content text-[40px] leading-[120%]">
             {text}
-          </h1>
+          </h2>
           {subheading && (
             <p class="text-base-content text-[18px]">{subheading}</p>
           )}
