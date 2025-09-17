@@ -48,6 +48,7 @@ interface LojasItens {
   end: string;
   tel: string;
   horario: string;
+  tourUrl?: string;
 }
 
 /** @titleBy title */
@@ -254,9 +255,20 @@ function Footer({
                         {lojas.lojas.map((loja, idx) => (
                           <div key={idx} class="mb-4">
                             <p class="text-white text-[14px]">{loja.title}</p>
-                            <p class="text-white text-[12px] font-bold underline">
-                              {loja.tuor}
-                            </p>
+                            {loja.tourUrl ? (
+                              <a 
+                                href={loja.tourUrl} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                class="text-white text-[12px] font-bold underline hover:text-gray-300 transition-colors"
+                              >
+                                {loja.tuor}
+                              </a>
+                            ) : (
+                              <p class="text-white text-[12px] font-bold underline">
+                                {loja.tuor}
+                              </p>
+                            )}
                             <p class="text-white text-[12px]">{loja.end}</p>
                             <div class="flex flex-row flex-wrap">
                               <p class="text-white text-[12px] font-bold">
@@ -287,29 +299,40 @@ function Footer({
                     </p>
                     <div class="grid grid-cols-1 lg:grid-cols-5 gap-x-[20px]">
                       {lojas.lojas.map(
-                        ({ title, tuor, end, tel, horario }, idx) => (
+                        (loja, idx) => (
                           <div
                             key={idx}
                             class="flex flex-col gap-y-[10px] mb-6"
                           >
-                            <p class="text-white text-[16px]">{title}</p>
-                            <p class="text-white text-[14px] font-bold underline">
-                              {tuor}
-                            </p>
+                            <p class="text-white text-[16px]">{loja.title}</p>
+                            {loja.tourUrl ? (
+                              <a 
+                                href={loja.tourUrl} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                class="text-white text-[14px] font-bold underline hover:text-gray-300 transition-colors"
+                              >
+                                {loja.tuor}
+                              </a>
+                            ) : (
+                              <p class="text-white text-[14px] font-bold underline">
+                                {loja.tuor}
+                              </p>
+                            )}
                             <p class="text-white text-[14px] min-h-[64px]">
-                              {end}
+                              {loja.end}
                             </p>
                             <div class="flex flex-row flex-wrap">
                               <p class="text-white text-[14px] font-bold">
                                 TELEFONE:
                               </p>
-                              <p class="text-white text-[14px] ml-1">{tel}</p>
+                              <p class="text-white text-[14px] ml-1">{loja.tel}</p>
                             </div>
                             <div>
                               <p class="text-white text-[14px] font-bold underline">
                                 HORÁRIO DE ATENDIMENTO
                               </p>
-                              <p class="text-white text-[14px]">{horario}</p>
+                              <p class="text-white text-[14px]">{loja.horario}</p>
                             </div>
                           </div>
                         ),
