@@ -52,7 +52,6 @@ export default function AvailabilityNotify({ productID }: Props) {
       const createdAt = getBrasiliaDateTime();
 
       try {
-        // Validação básica dos campos
         if (!name.trim() || !email.trim()) {
           throw new Error("Por favor, preencha todos os campos.");
         }
@@ -61,7 +60,6 @@ export default function AvailabilityNotify({ productID }: Props) {
           throw new Error("Por favor, insira um email válido.");
         }
 
-        // Preparar dados para envio
         const data: NotifyMeData = {
           skuId: parseInt(productID),
           name: name.trim(),
@@ -69,9 +67,6 @@ export default function AvailabilityNotify({ productID }: Props) {
           createdAt,
         };
 
-        console.log("Enviando dados com horário Brasil:", data);
-
-        // Chamar SUA ROTA CUSTOMIZADA no backend VTEX
         const response = await fetch("/_v/createAvailabilityNotify", {
           method: "POST",
           headers: {
@@ -94,7 +89,7 @@ export default function AvailabilityNotify({ productID }: Props) {
         isLoading.value = false;
       }
     },
-    [productID],
+    [productID]
   );
 
   const preventEnterSubmit = useCallback((e: KeyboardEvent) => {
@@ -138,11 +133,11 @@ export default function AvailabilityNotify({ productID }: Props) {
           class="btn btn-primary no-animation rounded-none min-h-0 h-8 bg-[#3A4332] hover:bg-[#0f130e] border-none text-['Lato']"
           disabled={isLoading.value}
         >
-          {isLoading.value
-            ? <span class="loading loading-spinner loading-xs" />
-            : (
-              "Enviar"
-            )}
+          {isLoading.value ? (
+            <span class="loading loading-spinner loading-xs" />
+          ) : (
+            "Enviar"
+          )}
         </button>
       </form>
 

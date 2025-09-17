@@ -114,8 +114,6 @@ export default function ShippingForm({ items }: Props) {
         });
       }
 
-      console.log("Metodos de entrega:", methods);
-
       if (methods.length > 0) {
         setResults(methods);
       } else {
@@ -152,9 +150,11 @@ export default function ShippingForm({ items }: Props) {
           class="border-none outline-none bg-[#495941] min-w-[160px] h-8 py-1 px-3 text-white text-[13px] font-bold flex items-center justify-center gap-2 transition-all duration-300 hover:bg-[rgba(108,131,88,0.9)] disabled:opacity-50"
           disabled={loading || !cep}
         >
-          {loading
-            ? <span class="loading loading-spinner loading-xs" />
-            : <span>CALCULAR FRETE</span>}
+          {loading ? (
+            <span class="loading loading-spinner loading-xs" />
+          ) : (
+            <span>CALCULAR FRETE</span>
+          )}
         </button>
       </form>
 

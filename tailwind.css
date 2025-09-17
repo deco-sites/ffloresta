@@ -40,6 +40,50 @@
   }
 }
 
+@layer components {
+  .seo-content p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: #1f251c;
+  }
+
+  .seo-content br {
+    display: block;
+    content: "";
+    margin-bottom: 0.75rem;
+  }
+
+  .seo-content h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 1.5rem 0 1rem 0;
+    color: #1f251c;
+  }
+
+  .seo-content h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 1.25rem 0 0.75rem 0;
+    color: #1f251c;
+  }
+
+  .seo-content strong {
+    font-weight: 600;
+    color: #1f251c;
+  }
+
+  .seo-content ul,
+  .seo-content ol {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .seo-content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+  }
+}
+
 .group:disabled .group-disabled\:animate-progress {
   animation: progress-frame ease normal;
 }
