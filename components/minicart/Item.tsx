@@ -15,7 +15,7 @@ export interface Props {
   locale: string;
   currency: string;
 }
-const QUANTITY_MAX_VALUE = 100;
+const QUANTITY_MAX_VALUE = 300;
 const removeItemHandler = () => {
   const itemID = (event?.currentTarget as HTMLButtonElement | null)
     ?.closest("fieldset")
@@ -55,7 +55,7 @@ function CartItem({ item, index, locale, currency }: Props) {
           <button
             class={clx(
               isGift && "hidden",
-              "btn btn-ghost btn-square no-animation p-0 hover:bg-transparent",
+              "btn btn-ghost btn-square no-animation p-0 hover:bg-transparent"
             )}
             hx-on:click={useScript(removeItemHandler)}
           >
