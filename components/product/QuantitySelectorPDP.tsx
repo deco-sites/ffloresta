@@ -11,7 +11,7 @@ interface Props
 function QuantitySelectorPDP({
   id = useId(),
   min = 1,
-  max = 99,
+  max = 300,
   value,
   onChange,
   ...props
@@ -19,7 +19,7 @@ function QuantitySelectorPDP({
   const clamp = (v: number) => Math.min(Math.max(v, min), max);
 
   return (
-    <div class="flex items-center border-none bg-[#D9D9D9] text-black w-16">
+    <div class="flex items-center border-none bg-[#D9D9D9] text-black w-17">
       <button
         type="button"
         class="w-8 h-8 text-xl leading-none"
@@ -30,7 +30,7 @@ function QuantitySelectorPDP({
       <input
         id={id}
         class={clx(
-          "text-center text-[20px] w-full bg-transparent text-black border-0 outline-none",
+          "text-center text-[20px] w-full bg-transparent text-black border-0 outline-none"
         )}
         type="number"
         min={min}

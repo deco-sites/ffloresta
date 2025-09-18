@@ -102,9 +102,13 @@ function ValueItem({
     <a href={href} rel="nofollow" class="flex items-center gap-2">
       <div
         aria-checked={selected}
-        class="checkbox rounded-none w-4 h-4 max-w-4 max-h-4"
+        class={clx(
+          "checkbox rounded-none w-4 h-4 max-w-4 max-h-4 border border-[#CCCCCC]",
+          selected && "bg-[#1F251C] border-[#1F251C]"
+        )}
       />
       <span class="text-md text-[#1F251C]">{label}</span>
+      {quantity && <span class="text-sm text-gray-500">({quantity})</span>}
     </a>
   );
 }

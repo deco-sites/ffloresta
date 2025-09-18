@@ -42,7 +42,7 @@ export default function AddToCartButtonPDP({
 
     // Abre o minicart
     const minicartCheckbox = document.getElementById(
-      "minicart-drawer", // ID do minicart
+      "minicart-drawer" // ID do minicart
     ) as HTMLInputElement | null;
     if (minicartCheckbox) {
       minicartCheckbox.checked = true;
@@ -57,7 +57,7 @@ export default function AddToCartButtonPDP({
     <div class={clx("flex gap-[12px]", _class)}>
       <QuantitySelectorPDP
         min={1}
-        max={99}
+        max={300}
         value={quantity}
         onChange={setQuantity}
       />
