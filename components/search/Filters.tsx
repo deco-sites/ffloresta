@@ -18,19 +18,57 @@ interface Props {
 const isToggle = (filter: Filter): filter is FilterToggle =>
   filter["@type"] === "FilterToggle";
 
-// Função para converter URL de query parameters para formato de caminho VTEX
+// 🔧 Converter query params (?filter.xxx=) em path VTEX (/xxx/yyy?map=a,b)
 function convertToVtexPath(url: string, base: string): string {
   try {
-    // Garantir que a URL preserve todos os parâmetros necessários
     const targetUrl = new URL(url, base);
-    const baseUrl = new URL(base);
-    
-    // Se estamos mudando filtros, resetar a página para 1
-    if (targetUrl.searchParams.toString() !== baseUrl.searchParams.toString()) {
-      targetUrl.searchParams.set('page', '1');
+
+    // Coletar filtros aplicados
+    const filters: { key: string; value: string }[] = [];
+    for (const [key, value] of targetUrl.searchParams.entries()) {
+      if (key.startsWith("filter.")) {
+        filters.push({ key: key.replace("filter.", ""), value });
+      }
     }
-    
-    return targetUrl.href;
+
+    // Limpar query string
+    targetUrl.search = "";
+
+    // Construir pathname e map
+    let pathname = "";
+    let map: string[] = [];
+    let initialQuery = "";
+
+    for (const { key, value } of filters) {
+      pathname += `/${value}`;
+      map.push(key);
+
+      if (key.startsWith("category") && !initialQuery) {
+        initialQuery = value;
+      }
+    }
+
+    // Se não tiver categoria, usar o primeiro filtro como initialQuery
+    if (!initialQuery && filters.length > 0) {
+      initialQuery = filters[0].value;
+    }
+
+    // Atualizar pathname
+    targetUrl.pathname = pathname || targetUrl.pathname;
+
+    // Adicionar parâmetros obrigatórios VTEX
+    if (initialQuery) {
+      targetUrl.searchParams.set("initialMap", "c");
+      targetUrl.searchParams.set("initialQuery", initialQuery);
+    }
+    if (map.length > 0) {
+      targetUrl.searchParams.set("map", map.join(","));
+    }
+
+    // Sempre resetar para página 1 quando filtros mudarem
+    targetUrl.searchParams.set("page", "1");
+
+    return targetUrl.pathname + "?" + targetUrl.searchParams.toString();
   } catch (e) {
     console.error("Error converting URL:", e);
     return url;
@@ -47,9 +85,9 @@ function ValueItem({
   const href = convertToVtexPath(url, baseUrl);
 
   return (
-    <a 
-      href={href} 
-      rel="nofollow" 
+    <a
+      href={href}
+      rel="nofollow"
       class="flex items-center gap-2 transition-all duration-200 hover:opacity-80"
       data-filter-item
     >
@@ -58,8 +96,8 @@ function ValueItem({
         data-selected={selected}
         class={clx(
           "checkbox rounded-none w-4 h-4 max-w-4 max-h-4 border relative transition-all duration-200 flex items-center justify-center",
-          selected 
-            ? "bg-[#1F251C] border-[#1F251C]" 
+          selected
+            ? "bg-[#1F251C] border-[#1F251C]"
             : "border-[#CCCCCC] bg-white"
         )}
       >
@@ -69,14 +107,18 @@ function ValueItem({
             viewBox="0 0 16 16"
             fill="currentColor"
           >
-            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
           </svg>
         )}
       </div>
-      <span class={clx(
-        "text-md transition-colors duration-200",
-        selected ? "text-[#1F251C] font-medium" : "text-[#1F251C]"
-      )}>{label}</span>
+      <span
+        class={clx(
+          "text-md transition-colors duration-200",
+          selected ? "text-[#1F251C] font-medium" : "text-[#1F251C]"
+        )}
+      >
+        {label}
+      </span>
       {quantity && <span class="text-sm text-gray-500">({quantity})</span>}
     </a>
   );
@@ -117,7 +159,9 @@ function FilterValues({
                 <ValueItem
                   {...item}
                   baseUrl={baseUrl}
-                  label={`${formatPrice(range.from)} - ${formatPrice(range.to)}`}
+                  label={`${formatPrice(range.from)} - ${formatPrice(
+                    range.to
+                  )}`}
                 />
               </li>
             )
@@ -140,7 +184,10 @@ function Filters({ filters, url }: Props) {
   );
 
   return (
-    <ul class="flex flex-col gap-6 sm:p-0 divide-y divide-[#CCCCCC]" data-filters-container>
+    <ul
+      class="flex flex-col gap-6 sm:p-0 divide-y divide-[#CCCCCC]"
+      data-filters-container
+    >
       {filteredFilters.filter(isToggle).map((filter) => (
         <li key={filter.key} class="flex flex-col gap-4 pt-4 px-4 xl:px-0">
           <span class="text-md font-medium text-[#1F251C]">{filter.label}</span>
