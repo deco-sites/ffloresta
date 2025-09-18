@@ -99,21 +99,10 @@ function ValueItem({
   const href = convertToVtexPath(url, baseUrl);
 
   return (
-    <a
-      href={href}
-      rel="nofollow"
-      hx-get={href}
-      hx-push-url="true"
-      hx-swap="outerHTML show:window:top"
-      hx-target="#search-results"
-      class="flex items-center gap-2"
-    >
+    <a href={href} rel="nofollow" class="flex items-center gap-2">
       <div
         aria-checked={selected}
-        class={clx(
-          "checkbox rounded-none w-4 h-4 max-w-4 max-h-4 border border-[#CCCCCC]",
-          selected && "bg-[#1F251C] border-[#1F251C]"
-        )}
+        class="checkbox rounded-none w-4 h-4 max-w-4 max-h-4"
       />
       <span class="text-md text-[#1F251C]">{label}</span>
     </a>
@@ -135,14 +124,7 @@ function FilterValues({
 
         if (avatars) {
           return (
-            <a
-              href={convertToVtexPath(url, baseUrl)}
-              rel="nofollow"
-              hx-get={convertToVtexPath(url, baseUrl)}
-              hx-push-url="true"
-              hx-swap="outerHTML"
-              hx-target="#search-results"
-            >
+            <a href={convertToVtexPath(url, baseUrl)} rel="nofollow">
               <Avatar
                 content={value}
                 variant={selected ? "active" : "default"}
