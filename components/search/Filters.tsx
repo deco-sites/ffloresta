@@ -99,7 +99,15 @@ function ValueItem({
   const href = convertToVtexPath(url, baseUrl);
 
   return (
-    <a href={href} rel="nofollow" class="flex items-center gap-2">
+    <a
+      href={href}
+      rel="nofollow"
+      hx-get={href}
+      hx-push-url="true"
+      hx-swap="outerHTML show:window:top"
+      hx-target="#search-results"
+      class="flex items-center gap-2"
+    >
       <div
         aria-checked={selected}
         class={clx(
@@ -108,7 +116,6 @@ function ValueItem({
         )}
       />
       <span class="text-md text-[#1F251C]">{label}</span>
-      {/* {quantity && <span class="text-sm text-gray-500">({quantity})</span>} */}
     </a>
   );
 }
@@ -128,7 +135,14 @@ function FilterValues({
 
         if (avatars) {
           return (
-            <a href={convertToVtexPath(url, baseUrl)} rel="nofollow">
+            <a
+              href={convertToVtexPath(url, baseUrl)}
+              rel="nofollow"
+              hx-get={convertToVtexPath(url, baseUrl)}
+              hx-push-url="true"
+              hx-swap="outerHTML"
+              hx-target="#search-results"
+            >
               <Avatar
                 content={value}
                 variant={selected ? "active" : "default"}

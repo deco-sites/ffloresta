@@ -256,7 +256,6 @@ const setPageQuerystring = (page: string, id: string) => {
 };
 
 function Result(props: SectionProps<typeof loader>) {
-  const container = useId();
   const controls = useId();
   const device = useDevice();
   const { startingPage = 0, url, partial, bannerImage } = props;
@@ -309,7 +308,7 @@ function Result(props: SectionProps<typeof loader>) {
 
   return (
     <>
-      <div id={container} {...viewItemListEvent} class="w-full">
+      <div id="search-results" {...viewItemListEvent} class="w-full">
         {partial ? (
           <PageResult {...props} />
         ) : (
@@ -453,7 +452,7 @@ function Result(props: SectionProps<typeof loader>) {
           __html: useScript(
             setPageQuerystring,
             `${pageInfo.currentPage}`,
-            container
+            "search-results"
           ),
         }}
       />
