@@ -108,7 +108,7 @@ function ValueItem({
         )}
       />
       <span class="text-md text-[#1F251C]">{label}</span>
-      {quantity && <span class="text-sm text-gray-500">({quantity})</span>}
+      {/* {quantity && <span class="text-sm text-gray-500">({quantity})</span>} */}
     </a>
   );
 }
