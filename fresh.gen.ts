@@ -9,6 +9,7 @@ import * as $AvaibilityNotify from "./islands/AvaibilityNotify.tsx";
 import * as $BannerMosaicIsland from "./islands/BannerMosaicIsland.tsx";
 import * as $BrandGridIsland from "./islands/BrandGridIsland.tsx";
 import * as $CustomSearchBar from "./islands/CustomSearchBar.tsx";
+import * as $FilterInteraction from "./islands/FilterInteraction.tsx";
 import * as $Header_MenuMobile from "./islands/Header/MenuMobile.tsx";
 import * as $Header_NavItemIsland from "./islands/Header/NavItemIsland.tsx";
 import * as $Newsletter from "./islands/Newsletter.tsx";
@@ -35,6 +36,7 @@ const manifest = {
     "./islands/BannerMosaicIsland.tsx": $BannerMosaicIsland,
     "./islands/BrandGridIsland.tsx": $BrandGridIsland,
     "./islands/CustomSearchBar.tsx": $CustomSearchBar,
+    "./islands/FilterInteraction.tsx": $FilterInteraction,
     "./islands/Header/MenuMobile.tsx": $Header_MenuMobile,
     "./islands/Header/NavItemIsland.tsx": $Header_NavItemIsland,
     "./islands/Newsletter.tsx": $Newsletter,

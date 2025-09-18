@@ -14,6 +14,7 @@ import { useDevice, useScript, useSection } from "@deco/deco/hooks";
 import { type SectionProps } from "@deco/deco";
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import { HTMLWidget as HTML } from "apps/admin/widgets.ts";
+import FilterInteraction from "../../islands/FilterInteraction.tsx";
 
 export interface Layout {
   pagination?: "show-more" | "pagination";
@@ -81,9 +82,18 @@ const useUrlRebased = (overrides: string | undefined, base: string) => {
     const temp = new URL(overrides, base);
     const final = new URL(base);
     final.pathname = temp.pathname;
+    
+    // Primeiro, preservar todos os parâmetros da URL base (filtros atuais)
+    const baseUrl = new URL(base);
+    for (const [key, value] of baseUrl.searchParams.entries()) {
+      final.searchParams.set(key, value);
+    }
+    
+    // Depois, aplicar os overrides (principalmente a página)
     for (const [key, value] of temp.searchParams.entries()) {
       final.searchParams.set(key, value);
     }
+    
     url = final.href;
   }
   return url;
@@ -242,6 +252,7 @@ const setPageQuerystring = (page: string, id: string) => {
 
     for (const entry of entries) {
       if (entry.isIntersecting) {
+        // Preservar todos os parâmetros existentes ao atualizar a página
         url.searchParams.set("page", page);
       } else if (
         typeof history.state?.prevPage === "string" &&
@@ -251,7 +262,8 @@ const setPageQuerystring = (page: string, id: string) => {
       }
     }
 
-    history.replaceState({ prevPage }, "", url.href);
+    // Garantir que todos os filtros sejam preservados no histórico
+    history.replaceState({ prevPage, filters: url.searchParams.toString() }, "", url.href);
   }).observe(element);
 };
 
@@ -457,6 +469,56 @@ function Result(props: SectionProps<typeof loader>) {
           ),
         }}
       />
+      
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          .checkbox[data-selected="true"] {
+            background-color: #1F251C !important;
+            border-color: #1F251C !important;
+          }
+          .checkbox[data-selected="false"] {
+            background-color: white !important;
+            border-color: #CCCCCC !important;
+          }
+        `,
+      }} />
+      
+      <script
+        type="module"
+        dangerouslySetInnerHTML={{
+          __html: `
+            // Garantir que os filtros mantenham o estado visual correto
+            function updateFilterStates() {
+              const selectedCheckboxes = document.querySelectorAll('.checkbox[data-selected="true"]');
+              selectedCheckboxes.forEach((checkbox) => {
+                checkbox.classList.add('bg-[#1F251C]', 'border-[#1F251C]');
+                checkbox.classList.remove('border-[#CCCCCC]', 'bg-white');
+              });
+              
+              const unselectedCheckboxes = document.querySelectorAll('.checkbox[data-selected="false"]');
+              unselectedCheckboxes.forEach((checkbox) => {
+                checkbox.classList.remove('bg-[#1F251C]', 'border-[#1F251C]');
+                checkbox.classList.add('border-[#CCCCCC]', 'bg-white');
+              });
+            }
+            
+            // Executar na carga inicial
+            updateFilterStates();
+            
+            // Executar após mudanças do HTMX
+            document.addEventListener('htmx:afterSwap', function() {
+              setTimeout(updateFilterStates, 50);
+            });
+            
+            // Executar após requisições do HTMX
+            document.addEventListener('htmx:afterRequest', function() {
+              setTimeout(updateFilterStates, 50);
+            });
+          `,
+        }}
+      />
+      
+      <FilterInteraction url={url} />
     </>
   );
 }

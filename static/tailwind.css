@@ -4917,6 +4917,10 @@ details.collapse summary::-webkit-details-marker {
 .border-none {
   border-style: none;
 }
+.border-\[\#1F251C\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(31 37 28 / var(--tw-border-opacity));
+}
 .border-\[\#273D28\] {
   --tw-border-opacity: 1;
   border-color: rgb(39 61 40 / var(--tw-border-opacity));
@@ -4948,6 +4952,10 @@ details.collapse summary::-webkit-details-marker {
 .border-\[\#C9CFCF\] {
   --tw-border-opacity: 1;
   border-color: rgb(201 207 207 / var(--tw-border-opacity));
+}
+.border-\[\#CCCCCC\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(204 204 204 / var(--tw-border-opacity));
 }
 .border-\[\#E5E5E5\] {
   --tw-border-opacity: 1;
@@ -5821,9 +5829,13 @@ details.collapse summary::-webkit-details-marker {
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
-.ring-base-content {
+.ring-\[\#1F251C\] {
   --tw-ring-opacity: 1;
-  --tw-ring-color: var(--fallback-bc,oklch(var(--bc)/var(--tw-ring-opacity)));
+  --tw-ring-color: rgb(31 37 28 / var(--tw-ring-opacity));
+}
+.ring-gray-300 {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(209 213 219 / var(--tw-ring-opacity));
 }
 .ring-primary {
   --tw-ring-opacity: 1;
@@ -5831,6 +5843,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .ring-transparent {
   --tw-ring-color: transparent;
+}
+.ring-offset-1 {
+  --tw-ring-offset-width: 1px;
 }
 .ring-offset-2 {
   --tw-ring-offset-width: 2px;
@@ -6415,6 +6430,10 @@ input[type="checkbox"]:checked::after {
 
 .hover\:opacity-100:hover {
   opacity: 1;
+}
+
+.hover\:opacity-80:hover {
+  opacity: 0.8;
 }
 
 .focus\:outline-none:focus {

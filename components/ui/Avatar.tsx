@@ -23,26 +23,37 @@ const colors: Record<string, Record<string, string>> = {
 };
 
 const variants = {
-  active: "ring-base-content",
-  disabled: "line-through",
-  default: "ring-base-400",
+  active: "ring-2 ring-[#1F251C] ring-offset-2",
+  disabled: "line-through opacity-50",
+  default: "ring-1 ring-gray-300 ring-offset-1",
 };
 
 function Avatar({ content, variant = "default" }: Props) {
   return (
-    <div class="avatar placeholder">
+    <div class="avatar placeholder relative">
       <div
         class={clx(
           "h-6 w-6",
           "rounded-full",
-          "ring-1 ring-offset-2",
+          "transition-all duration-200",
           variants[variant],
         )}
         style={colors[content]}
       >
-        <span class="uppercase">
+        <span class="uppercase text-xs">
           {colors[content] ? "" : content.substring(0, 2)}
         </span>
+        {variant === "active" && (
+          <div class="absolute inset-0 rounded-full border-2 border-[#1F251C] bg-transparent">
+            <svg
+              class="absolute inset-0 w-full h-full text-[#1F251C]"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+            </svg>
+          </div>
+        )}
       </div>
     </div>
   );

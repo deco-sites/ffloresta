@@ -15,8 +15,11 @@ export default function PaginationButtons({
     if (newPage < 1 || newPage > totalPages) return;
 
     const url = new URL(window.location.href);
+    // Preservar todos os parâmetros existentes (filtros) e apenas atualizar a página
     url.searchParams.set("page", newPage.toString());
-    window.location.href = url.pathname + "?" + url.searchParams.toString();
+    
+    // Garantir que estamos navegando para a URL completa com todos os parâmetros
+    window.location.href = url.href;
   };
 
   const isFirstPage = currentPage <= 1;
