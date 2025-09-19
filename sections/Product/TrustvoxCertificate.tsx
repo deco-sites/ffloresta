@@ -5,7 +5,7 @@ export interface Props {
    * @default true
    */
   showFixedSeal?: boolean;
-  
+
   /**
    * @title Classe CSS personalizada
    * @description Classes CSS adicionais para personalizar o estilo do selo
@@ -13,9 +13,9 @@ export interface Props {
   customClass?: string;
 }
 
-export default function TrustvoxCertificate({ 
+export default function TrustvoxCertificate({
   showFixedSeal = true,
-  customClass = ""
+  customClass = "",
 }: Props) {
   if (!showFixedSeal) {
     return null;
@@ -24,7 +24,8 @@ export default function TrustvoxCertificate({
   return (
     <div class={`trustvox-certificate-container ${customClass}`}>
       {/* Trustvox - Selo fixo de Avaliações Confiáveis */}
-      <div data-trustvox-certificate-fixed="data-trustvox-certificate-fixed"></div>
+      <div data-trustvox-certificate-fixed="data-trustvox-certificate-fixed">
+      </div>
     </div>
   );
 }

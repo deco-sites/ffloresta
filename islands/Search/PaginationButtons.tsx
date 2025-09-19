@@ -17,7 +17,7 @@ export default function PaginationButtons({
     const url = new URL(window.location.href);
     // Preservar todos os parâmetros existentes (filtros) e apenas atualizar a página
     url.searchParams.set("page", newPage.toString());
-    
+
     // Garantir que estamos navegando para a URL completa com todos os parâmetros
     window.location.href = url.href;
   };

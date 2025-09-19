@@ -29,7 +29,7 @@ export default defineApp(async (_req, ctx) => {
 
         {/* Web Manifest */}
         <link rel="manifest" href={asset("/site.webmanifest")} />
-        
+
         {/* Script da Trustvox para estrelas nas listagens - Conforme documentação oficial */}
         <script
           type="text/javascript"
@@ -48,14 +48,17 @@ export default defineApp(async (_req, ctx) => {
             `,
           }}
         />
-        <script type="text/javascript" async src="//rate.trustvox.com.br/widget.js"></script>
+        <script
+          type="text/javascript"
+          async
+          src="//rate.trustvox.com.br/widget.js"
+        >
+        </script>
       </Head>
 
       {/* Rest of Preact tree */}
       <ctx.Component />
 
-
-      
       <script
         type="module"
         dangerouslySetInnerHTML={{ __html: useScript(serviceWorkerScript) }}

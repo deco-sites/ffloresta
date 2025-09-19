@@ -93,7 +93,7 @@ function ProductInfo({ page, storeId = "125156" }: Props) {
           </span>
         )}
         <h1 class="leading-[140%] text-[#3A4332] text-[24px]">{title}</h1>
-        
+
         {/* Estrelas da Trustvox com link clicável */}
         <div class="mt-2">
           <TrustvoxClickableRating

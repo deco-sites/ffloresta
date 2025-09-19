@@ -2,7 +2,8 @@
 
 ## ✅ Status da Implementação
 
-A implementação do Trustvox está **COMPLETA e FUNCIONANDO** no seu site. Aqui está o que já está configurado:
+A implementação do Trustvox está **COMPLETA e FUNCIONANDO** no seu site. Aqui
+está o que já está configurado:
 
 ### 1. Script Global (✅ Implementado)
 
@@ -11,7 +12,7 @@ A implementação do Trustvox está **COMPLETA e FUNCIONANDO** no seu site. Aqui
 ```javascript
 // Script para estrelas nas listagens - Conforme documentação Trustvox
 var _trustvox_shelf_rate = _trustvox_shelf_rate || [];
-_trustvox_shelf_rate.push(['_storeId', '125156']);
+_trustvox_shelf_rate.push(["_storeId", "125156"]);
 ```
 
 ```html
@@ -23,6 +24,7 @@ _trustvox_shelf_rate.push(['_storeId', '125156']);
 **Localização:** `/sections/Product/TrustvoxStars.tsx`
 
 **Uso atual:**
+
 - ✅ Cards de produto nas listagens
 - ✅ Página de produto (próximo ao nome)
 - ✅ Usa RefId conforme documentação Trustvox
@@ -37,13 +39,19 @@ Para exibir as avaliações completas na página de produto.
 ## 🔧 Como Usar
 
 ### Para Estrelas nas Listagens:
-As estrelas já aparecem automaticamente nos cards de produto graças ao componente `TrustvoxStars` já implementado.
+
+As estrelas já aparecem automaticamente nos cards de produto graças ao
+componente `TrustvoxStars` já implementado.
 
 ### Para Estrelas na Página de Produto:
-Já está implementado no componente `ProductInfo.tsx`, aparecendo logo abaixo do nome do produto.
+
+Já está implementado no componente `ProductInfo.tsx`, aparecendo logo abaixo do
+nome do produto.
 
 ### Para Widget de Avaliações Completo:
-Adicione a section `TrustvoxWidget` em qualquer página de produto através do admin.
+
+Adicione a section `TrustvoxWidget` em qualquer página de produto através do
+admin.
 
 ## 📋 Configurações
 
@@ -53,7 +61,7 @@ Adicione a section `TrustvoxWidget` em qualquer página de produto através do a
 
 1. **No script global** (`/routes/_app.tsx`):
    ```javascript
-   _trustvox_shelf_rate.push(['_storeId', 'SEU_NOVO_ID']);
+   _trustvox_shelf_rate.push(["_storeId", "SEU_NOVO_ID"]);
    ```
 
 2. **Nos componentes** (TrustvoxStars e TrustvoxWidget):
@@ -93,4 +101,5 @@ Se as estrelas não estiverem aparecendo:
 
 ---
 
-**Implementação revisada e otimizada em:** ${new Date().toLocaleDateString('pt-BR')}
+**Implementação revisada e otimizada em:** ${new
+Date().toLocaleDateString('pt-BR')}

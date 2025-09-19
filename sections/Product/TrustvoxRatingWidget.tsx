@@ -14,21 +14,24 @@ export interface Props {
   customClass?: string;
 }
 
-export default function TrustvoxRatingWidget({ 
-  storeId = "125156", 
+export default function TrustvoxRatingWidget({
+  storeId = "125156",
   product,
   page,
   productId,
-  customClass = ""
+  customClass = "",
 }: Props) {
   // Determina o produto a partir das props
   const finalProduct = product || page?.product;
-  
+
   // Determina o ID do produto - Usa inProductGroupWithID (ID do produto na VTEX) para Trustvox
-  const refId = finalProduct?.additionalProperty?.find(prop => prop.name === "RefId")?.value;
+  const refId = finalProduct?.additionalProperty?.find((prop) =>
+    prop.name === "RefId"
+  )?.value;
   const vtexProductId = finalProduct?.inProductGroupWithID; // ID do produto na VTEX
-  const finalProductId = productId || vtexProductId || refId || finalProduct?.sku || finalProduct?.productID || "";
-  
+  const finalProductId = productId || vtexProductId || refId ||
+    finalProduct?.sku || finalProduct?.productID || "";
+
   // Se não há ID do produto, não renderiza
   if (!finalProductId) {
     return null;

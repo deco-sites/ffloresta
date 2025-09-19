@@ -178,8 +178,8 @@ function Carousel({ images = [], preload, interval }: Props) {
 
           <ul
             class={clx(
-              "absolute bottom-4 left-0 right-0 z-20 h-3",
-              "carousel justify-center gap-2",
+              "bottom-4 left-0 right-0 z-20 h-3",
+              "justify-center gap-2 absolute flex",
             )}
           >
             {images.map((_, index) => (

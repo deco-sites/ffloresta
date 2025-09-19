@@ -15,25 +15,25 @@ const trustvoxCollectorScript = (storeId: string, token: string) => {
   if (!window._trustvox) {
     window._trustvox = [];
   }
-  
+
   // Configura os dados da loja
-  window._trustvox.push(['_storeId', storeId]);
-  window._trustvox.push(['_token', token]);
-  
+  window._trustvox.push(["_storeId", storeId]);
+  window._trustvox.push(["_token", token]);
+
   // Carrega o script da Trustvox se ainda não foi carregado
   if (!document.querySelector('script[src*="trustvox.com.br"]')) {
-    const script = document.createElement('script');
+    const script = document.createElement("script");
     script.async = true;
-    script.type = 'text/javascript';
-    script.src = '//static.trustvox.com.br/sincero/sincero.js';
+    script.type = "text/javascript";
+    script.src = "//static.trustvox.com.br/sincero/sincero.js";
     document.head.appendChild(script);
   }
 };
 
-export default function TrustvoxCollector({ 
-  storeId = "125156", 
+export default function TrustvoxCollector({
+  storeId = "125156",
   token = "-rpq7za52MCEnduJmBm4",
-  enableAutoCollection = true
+  enableAutoCollection = true,
 }: Props) {
   // Se a coleta automática não estiver habilitada, não renderiza nada
   if (!enableAutoCollection) {

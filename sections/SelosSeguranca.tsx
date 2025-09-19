@@ -6,21 +6,21 @@ export interface Props {
    * @description Título opcional para a seção de selos
    */
   title?: string;
-  
+
   /**
    * @title Exibir selo Trustvox
    * @description Ativa/desativa o selo de avaliações confiáveis do Reclame AQUI
    * @default true
    */
   showTrustvox?: boolean;
-  
+
   /**
    * @title Alinhamento
    * @description Como alinhar os selos
    * @default "center"
    */
   alignment?: "left" | "center" | "right";
-  
+
   /**
    * @title Espaçamento
    * @description Espaçamento vertical da seção
@@ -47,18 +47,18 @@ export default function SelosSeguranca({
   title,
   showTrustvox = true,
   alignment = "center",
-  spacing = "normal"
+  spacing = "normal",
 }: Props) {
   const alignmentClass = {
     left: "justify-start",
-    center: "justify-center", 
-    right: "justify-end"
+    center: "justify-center",
+    right: "justify-end",
   }[alignment];
-  
+
   const spacingClass = {
     small: "py-4",
     normal: "py-8",
-    large: "py-12"
+    large: "py-12",
   }[spacing];
 
   return (
@@ -69,12 +69,12 @@ export default function SelosSeguranca({
             {title}
           </h3>
         )}
-        
+
         <div class={`flex flex-wrap items-center gap-6 ${alignmentClass}`}>
           {showTrustvox && (
             <div class="flex flex-col items-center">
               {/* Selo fixo do Trustvox */}
-              <div 
+              <div
                 data-trustvox-certificate-fixed="data-trustvox-certificate-fixed"
                 class="min-h-[80px] flex items-center justify-center"
               >
@@ -85,15 +85,15 @@ export default function SelosSeguranca({
               </div>
             </div>
           )}
-          
+
           {/* Espaço para futuros selos */}
           {/* Você pode adicionar outros selos aqui no futuro */}
         </div>
       </div>
-      
+
       {/* Script do Trustvox apenas se habilitado */}
       {showTrustvox && (
-        <script 
+        <script
           type="text/javascript"
           dangerouslySetInnerHTML={{ __html: TRUSTVOX_SCRIPT }}
         />

@@ -17,15 +17,16 @@ export interface Props {
   title?: string;
 }
 
-export default function TrustvoxCarousel({ 
-  storeId = "ID-DA-LOJA", 
+export default function TrustvoxCarousel({
+  storeId = "ID-DA-LOJA",
   limit = 4,
-  title = "O que nossos clientes dizem"
+  title = "O que nossos clientes dizem",
 }: Props) {
   return (
     <>
       {/* Scripts da Trustvox - devem ser carregados antes da div */}
-      <script type="text/javascript" src="//colt.trustvox.com.br/colt.min.js"></script>
+      <script type="text/javascript" src="//colt.trustvox.com.br/colt.min.js">
+      </script>
       <script
         dangerouslySetInnerHTML={{
           __html: `
@@ -34,7 +35,7 @@ export default function TrustvoxCarousel({
           `,
         }}
       />
-      
+
       <section class="py-8 bg-gray-50">
         <div class="container mx-auto px-4">
           {title && (
@@ -44,7 +45,7 @@ export default function TrustvoxCarousel({
               </h2>
             </div>
           )}
-          
+
           {/* Container do carousel da Trustvox */}
           <div id="_trustvox_colt" class="w-full min-h-[200px]"></div>
         </div>

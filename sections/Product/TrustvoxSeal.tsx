@@ -17,25 +17,25 @@ const trustvoxSealScript = (storeId: string) => {
   if (!window._trustvox) {
     window._trustvox = [];
   }
-  
+
   // Configura o store ID
-  window._trustvox.push(['_storeId', storeId]);
-  
+  window._trustvox.push(["_storeId", storeId]);
+
   // Carrega o script da Trustvox se ainda não foi carregado
   if (!document.querySelector('script[src*="trustvox.com.br"]')) {
-    const script = document.createElement('script');
+    const script = document.createElement("script");
     script.async = true;
-    script.type = 'text/javascript';
-    script.src = '//static.trustvox.com.br/sincero/sincero.js';
+    script.type = "text/javascript";
+    script.src = "//static.trustvox.com.br/sincero/sincero.js";
     document.head.appendChild(script);
   }
 };
 
-export default function TrustvoxSeal({ 
-  storeId = "125156", 
+export default function TrustvoxSeal({
+  storeId = "125156",
   title = "Avaliações da Loja",
   showTitle = true,
-  customClass = ""
+  customClass = "",
 }: Props) {
   return (
     <div class={`w-full py-4 ${customClass}`}>
@@ -44,7 +44,7 @@ export default function TrustvoxSeal({
           <h2 class="text-xl font-bold text-gray-900">{title}</h2>
         </div>
       )}
-      
+
       <div class="container">
         {/* Selo da Trustvox */}
         <div id="_trustvox_seal" class="flex justify-center"></div>

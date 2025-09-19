@@ -17,7 +17,7 @@ const initTrustvoxStars = () => {
       window.Trustvox.shelf.init();
     }
   }, 500);
-  
+
   // Também tenta inicializar quando o script carregar
   const checkTrustvox = setInterval(() => {
     if (window.Trustvox && window.Trustvox.shelf) {
@@ -111,7 +111,7 @@ function ProductSlider({ products, itemListName }: Props) {
       </div>
 
       <ProductCarouselSlider.JS rootId={id} interval={8000} autoplay />
-      
+
       {/* Script para inicializar estrelas Trustvox */}
       <script
         type="module"

@@ -89,7 +89,7 @@ export default function AvailabilityNotify({ productID }: Props) {
         isLoading.value = false;
       }
     },
-    [productID]
+    [productID],
   );
 
   const preventEnterSubmit = useCallback((e: KeyboardEvent) => {
@@ -133,11 +133,11 @@ export default function AvailabilityNotify({ productID }: Props) {
           class="btn btn-primary no-animation rounded-none min-h-0 h-8 bg-[#3A4332] hover:bg-[#0f130e] border-none text-['Lato']"
           disabled={isLoading.value}
         >
-          {isLoading.value ? (
-            <span class="loading loading-spinner loading-xs" />
-          ) : (
-            "Enviar"
-          )}
+          {isLoading.value
+            ? <span class="loading loading-spinner loading-xs" />
+            : (
+              "Enviar"
+            )}
         </button>
       </form>
 

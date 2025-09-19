@@ -20,14 +20,14 @@ const trustvoxStarsScript = (storeId: string) => {
   }
 
   // Configura o store ID
-  window._trustvox_shelf_rate.push(['_storeId', storeId]);
+  window._trustvox_shelf_rate.push(["_storeId", storeId]);
 
   // Carrega o script da Trustvox se ainda não foi carregado
   if (!document.querySelector('script[src*="rate.trustvox.com.br"]')) {
-    const script = document.createElement('script');
+    const script = document.createElement("script");
     script.async = true;
-    script.type = 'text/javascript';
-    script.src = '//rate.trustvox.com.br/widget.js';
+    script.type = "text/javascript";
+    script.src = "//rate.trustvox.com.br/widget.js";
     document.head.appendChild(script);
   }
 
@@ -52,34 +52,37 @@ const trustvoxStarsScript = (storeId: string) => {
   }, 10000);
 };
 
-export default function TrustvoxStars({ 
-  storeId = "125156", 
+export default function TrustvoxStars({
+  storeId = "125156",
   product,
   productId,
-  customClass = ""
+  customClass = "",
 }: Props) {
   // Determina o ID do produto - PRIORIZA inProductGroupWithID conforme documentação atualizada
-  const refId = product?.additionalProperty?.find(prop => prop.name === "RefId")?.value;
+  const refId = product?.additionalProperty?.find((prop) =>
+    prop.name === "RefId"
+  )?.value;
   const vtexProductId = product?.inProductGroupWithID; // ID do produto na VTEX
   const sku = product?.sku;
   const productIdFallback = product?.productID;
-  
+
   // Ordem de prioridade igual ao TrustvoxClickableRating: productId > vtexProductId > refId > sku > productID
-  const finalProductId = productId || vtexProductId || refId || sku || productIdFallback || "";
-  
+  const finalProductId = productId || vtexProductId || refId || sku ||
+    productIdFallback || "";
+
   // Debug para verificar os IDs
   if (typeof window !== "undefined") {
-    console.log('TrustvoxStars - IDs disponíveis:', {
+    console.log("TrustvoxStars - IDs disponíveis:", {
       productId,
       vtexProductId,
       refId,
       sku,
       productIdFallback,
       finalProductId,
-      productName: product?.name
+      productName: product?.name,
     });
   }
-  
+
   // Se não há ID do produto, não renderiza
   if (!finalProductId) {
     return null;
@@ -89,12 +92,13 @@ export default function TrustvoxStars({
     <>
       <div class={`trustvox-stars ${customClass}`}>
         {/* Div onde as estrelinhas serão renderizadas - Conforme documentação oficial da Trustvox */}
-        <div 
-          class="trustvox-shelf-container" 
-          data-trustvox-product-code-js={finalProductId} 
-          data-trustvox-should-skip-filter="true" 
+        <div
+          class="trustvox-shelf-container"
+          data-trustvox-product-code-js={finalProductId}
+          data-trustvox-should-skip-filter="true"
           data-trustvox-display-rate-schema="false"
-        ></div>
+        >
+        </div>
       </div>
 
       {/* Script da Trustvox */}

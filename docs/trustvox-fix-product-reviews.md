@@ -2,7 +2,9 @@
 
 ## Problema Identificado
 
-O widget de avaliações estava mostrando as avaliações gerais da loja ao invés das avaliações específicas do produto. Isso acontecia devido a conflitos entre o script global (para estrelas nas listagens) e o script específico do produto.
+O widget de avaliações estava mostrando as avaliações gerais da loja ao invés
+das avaliações específicas do produto. Isso acontecia devido a conflitos entre o
+script global (para estrelas nas listagens) e o script específico do produto.
 
 ## Correções Implementadas
 
@@ -11,6 +13,7 @@ O widget de avaliações estava mostrando as avaliações gerais da loja ao inv�
 **Arquivo:** `/sections/Product/TrustvoxReviews.tsx`
 
 **Principais mudanças:**
+
 - Adicionado delay de 200ms para garantir que a página carregou completamente
 - Limpeza completa da configuração anterior (`delete window._trustvox`)
 - Validação do ID do produto antes de configurar
@@ -22,12 +25,15 @@ O widget de avaliações estava mostrando as avaliações gerais da loja ao inv�
 **Arquivo:** `/routes/_app.tsx`
 
 **Mudanças:**
-- Adicionado comentário claro que o script global é APENAS para estrelas nas listagens
+
+- Adicionado comentário claro que o script global é APENAS para estrelas nas
+  listagens
 - Adicionada flag `window.trustvoxShelfOnly = true` para evitar conflitos
 
 ### 3. Validação de IDs
 
 **Melhorias na detecção do ID do produto:**
+
 - Prioridade: `productId` manual → `RefId` → `sku` → `productID`
 - Validação se o ID tem pelo menos 3 caracteres
 - Logs detalhados mostrando todos os IDs disponíveis
@@ -37,6 +43,7 @@ O widget de avaliações estava mostrando as avaliações gerais da loja ao inv�
 ### 1. Verificar no Console do Navegador
 
 Ao acessar uma página de produto, você deve ver logs como:
+
 ```
 TrustvoxReviews - IDs disponíveis: {productId: null, refId: "12345", sku: "ABC123", ...}
 Trustvox: Configurando para produto específico: 12345
@@ -51,14 +58,16 @@ Script Trustvox carregado. Configuração final: [["_storeId", "125156"], ["_pro
 
 ### 3. Verificar Diferentes Produtos
 
-Teste com produtos que você sabe que têm avaliações na Trustvox para confirmar que está funcionando.
+Teste com produtos que você sabe que têm avaliações na Trustvox para confirmar
+que está funcionando.
 
 ## Estrutura dos IDs de Produto
 
-A Trustvox recomenda usar o **RefId** como identificador principal. A ordem de prioridade é:
+A Trustvox recomenda usar o **RefId** como identificador principal. A ordem de
+prioridade é:
 
 1. **RefId** (recomendado pela Trustvox)
-2. **SKU** 
+2. **SKU**
 3. **ProductID**
 
 ## Troubleshooting
@@ -98,4 +107,5 @@ A Trustvox recomenda usar o **RefId** como identificador principal. A ordem de p
 - **Script de Estrelas:** `//rate.trustvox.com.br/widget.js`
 - **Widget ID:** `_trustvox_widget`
 
-A implementação agora segue exatamente a documentação oficial da Trustvox e deve mostrar as avaliações corretas para cada produto específico.
+A implementação agora segue exatamente a documentação oficial da Trustvox e deve
+mostrar as avaliações corretas para cada produto específico.
