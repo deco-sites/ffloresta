@@ -1,0 +1,9 @@
+{
+  "name": "Trustvox Rating Widget - Example",
+  "__resolveType": "site/sections/Product/TrustvoxRatingWidget.tsx",
+  "storeId": "125156",
+  "linkText": "Clique e veja!",
+  "showOnlyWithProduct": false,
+  "productId": "123456",
+  "customClass": "my-4 text-center"
+}

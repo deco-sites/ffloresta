@@ -11,6 +11,7 @@ import ProductImage from "./ProductCardImage.tsx";
 import ProductInfo from "./ProductCardInfo.tsx";
 import ProductInstallments from "./ProductCardInstallments.tsx";
 import { calculatePercent } from "./utils.ts";
+import TrustvoxStars from "../../../sections/Product/TrustvoxStars.tsx";
 
 interface Props {
   product: Product;
@@ -95,6 +96,15 @@ function ProductCard({
             priceSpecs={priceSpecs}
             price={price}
             priceCurrency={offers?.priceCurrency}
+          />
+        </div>
+
+        {/* Estrelas da Trustvox */}
+        <div class="mt-2">
+          <TrustvoxStars
+            storeId="125156"
+            product={product}
+            customClass="text-sm"
           />
         </div>
 

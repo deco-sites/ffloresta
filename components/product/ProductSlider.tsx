@@ -2,11 +2,35 @@ import { Product } from "apps/commerce/types.ts";
 import ProductCarouselSlider from "../../islands/Sliders/ProductCarouselSlider.tsx";
 import ProductCard from "./ProductCard/ProductCard.tsx";
 import { useId } from "../../sdk/useId.ts";
+import { useScript } from "@deco/deco/hooks";
 
 interface Props {
   products: Product[];
   itemListName?: string;
 }
+
+// Script para forçar inicialização das estrelas Trustvox nos produtos do slider
+const initTrustvoxStars = () => {
+  // Aguarda um pouco para garantir que os elementos estão no DOM
+  setTimeout(() => {
+    if (window.Trustvox && window.Trustvox.shelf) {
+      window.Trustvox.shelf.init();
+    }
+  }, 500);
+  
+  // Também tenta inicializar quando o script carregar
+  const checkTrustvox = setInterval(() => {
+    if (window.Trustvox && window.Trustvox.shelf) {
+      window.Trustvox.shelf.init();
+      clearInterval(checkTrustvox);
+    }
+  }, 1000);
+
+  // Para o intervalo após 10 segundos
+  setTimeout(() => {
+    clearInterval(checkTrustvox);
+  }, 10000);
+};
 
 function ProductSlider({ products, itemListName }: Props) {
   const id = useId();
@@ -87,6 +111,14 @@ function ProductSlider({ products, itemListName }: Props) {
       </div>
 
       <ProductCarouselSlider.JS rootId={id} interval={8000} autoplay />
+      
+      {/* Script para inicializar estrelas Trustvox */}
+      <script
+        type="module"
+        dangerouslySetInnerHTML={{
+          __html: useScript(initTrustvoxStars),
+        }}
+      />
     </>
   );
 }

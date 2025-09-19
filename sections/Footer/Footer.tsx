@@ -42,6 +42,13 @@ interface PaymentMethods {
 }
 
 /** @titleBy title */
+interface SecuritySeals {
+  title: string;
+  showTrustvox?: boolean;
+  trustvoxAlignment?: "left" | "center" | "right";
+}
+
+/** @titleBy title */
 interface LojasItens {
   title: string;
   tuor: string;
@@ -61,6 +68,7 @@ interface Props {
   links?: Link[];
   social?: Social[];
   paymentMethods?: PaymentMethods[];
+  securitySeals?: SecuritySeals;
   policies?: Item[];
   logo?: ImageWidget;
   logoLinha?: ImageWidget;
@@ -73,6 +81,11 @@ function Footer({
   links = [],
   social = [],
   paymentMethods = [],
+  securitySeals = {
+    title: "Selos de Segurança",
+    showTrustvox: false,
+    trustvoxAlignment: "left"
+  },
   logo,
   logoLinha,
   trademark,
@@ -85,6 +98,14 @@ function Footer({
   return (
     <>
       <footer class="sm:px-0 mt-5 sm:mt-10" style={{ backgroundColor: "#fff" }}>
+        {/* Script Trustvox para Selo Fixo - Apenas se showTrustvox estiver habilitado */}
+        {securitySeals?.showTrustvox && (
+          <script 
+            type="text/javascript" 
+            src="//certificate.trustvox.com.br/widget.js"
+            async
+          ></script>
+        )}
         <Newsletter />
 
         {!isMobile && (
@@ -201,25 +222,44 @@ function Footer({
                   ))}
                 </div>
 
-                <div class="flex flex-wrap gap-2">
-                  {paymentMethods.map(({ title, payments }, index) => (
-                    <div key={title + index}>
-                      <SectionTitle title={title} showDivider={!isMobile} />
-                      <div class="flex flex-wrap max-w-[300px] lg:max-w-[360px] mt-[20px]">
-                        {payments.map(({ image, alt, href }, idx) => (
-                          <a key={idx} href={href} class="mb-[15px] mr-[5px]">
-                            <Image
-                              src={image}
-                              alt={alt}
-                              loading="lazy"
-                              width={isMobile ? 46 : 65}
-                              height={isMobile ? 32 : 44}
-                            />
-                          </a>
-                        ))}
+                <div class="flex flex-col gap-6">
+                  {/* Métodos de Pagamento */}
+                  <div class="flex flex-wrap gap-2">
+                    {paymentMethods.map(({ title, payments }, index) => (
+                      <div key={title + index}>
+                        <SectionTitle title={title} showDivider={!isMobile} />
+                        <div class="flex flex-wrap max-w-[300px] lg:max-w-[360px] mt-[20px]">
+                          {payments.map(({ image, alt, href }, idx) => (
+                            <a key={idx} href={href} class="mb-[15px] mr-[5px]">
+                              <Image
+                                src={image}
+                                alt={alt}
+                                loading="lazy"
+                                width={isMobile ? 46 : 65}
+                                height={isMobile ? 32 : 44}
+                              />
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Selos de Segurança */}
+                  {securitySeals && (
+                    <div>
+                      <SectionTitle title={securitySeals.title} showDivider={!isMobile} />
+                      <div class={`mt-[20px] flex ${securitySeals.trustvoxAlignment === 'center' ? 'justify-center' : securitySeals.trustvoxAlignment === 'right' ? 'justify-end' : 'justify-start'}`}>
+                        {securitySeals.showTrustvox && (
+                          <div 
+                            data-trustvox-certificate-fixed="data-trustvox-certificate-fixed"
+                            class="trustvox-seal"
+                            style="transform: scale(1.5); transform-origin: center; margin: 10px;"
+                          ></div>
+                        )}
                       </div>
                     </div>
-                  ))}
+                  )}
                 </div>
               </div>
             </div>

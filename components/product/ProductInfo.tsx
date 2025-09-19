@@ -9,12 +9,15 @@ import ProductSelector from "./ProductVariantSelector.tsx";
 import { useOffer } from "../../sdk/useOffer.ts";
 import ShippingForm from "../../islands/ShippingForm.tsx";
 import AvaibilityNotify from "../../islands/AvaibilityNotify.tsx";
+import TrustvoxClickableRating from "../../sections/Product/TrustvoxClickableRating.tsx";
 
 interface Props {
   page: ProductDetailsPage | null;
+  /** @title Store ID da Trustvox */
+  storeId?: string;
 }
 
-function ProductInfo({ page }: Props) {
+function ProductInfo({ page, storeId = "125156" }: Props) {
   const id = useId();
   const platform = usePlatform();
 
@@ -90,6 +93,16 @@ function ProductInfo({ page }: Props) {
           </span>
         )}
         <h1 class="leading-[140%] text-[#3A4332] text-[24px]">{title}</h1>
+        
+        {/* Estrelas da Trustvox com link clicável */}
+        <div class="mt-2">
+          <TrustvoxClickableRating
+            storeId={storeId}
+            product={product}
+            customClass="text-sm"
+            clickText="Clique e veja!"
+          />
+        </div>
       </div>
 
       <div class="mt-1.5 md:mt-5 flex flex-col gap-0">

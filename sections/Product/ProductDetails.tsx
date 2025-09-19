@@ -28,12 +28,15 @@ export interface Props {
     promoName: string;
   };
   benefits?: Benefit[];
+  /** @title Store ID da Trustvox */
+  storeId?: string;
 }
 
 export default function ProductDetails({
   page,
   productBanner,
   benefits,
+  storeId = "125156",
 }: Props) {
   /**
    * Rendered when a not found is returned by any of the loaders run on this page
@@ -106,7 +109,7 @@ export default function ProductDetails({
             </div>
           )} */
           }
-          <ProductInfo page={page} />
+          <ProductInfo page={page} storeId={storeId} />
         </div>
       </div>
       <div class="container">

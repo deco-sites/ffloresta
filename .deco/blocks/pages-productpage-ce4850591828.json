@@ -142,7 +142,8 @@
                 "benefitImgAltText": "Localização",
                 "benefitText": "<p><span style=\"font-size: 14px\">5 </span><strong><span style=\"font-size: 14px\">Lojas </span></strong><span style=\"font-size: 14px\">físicas:</span></p><p><span style=\"font-size: 14px\">Pinheiros, Brás, Santo André, Campinas e Sorocaba</span></p><p></p>"
               }
-            ]
+            ],
+            "storeId": 125156
           },
           "rule": {
             "__resolveType": "website/matchers/always.ts"
@@ -151,7 +152,25 @@
       ]
     },
     {
+      "__resolveType": "site/sections/Product/TrustvoxReviews.tsx",
+      "storeId": "125156",
+      "title": "Avaliações do Produto",
+      "page": {
+        "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
+        "slug": {
+          "__resolveType": "website/functions/requestToParam.ts",
+          "param": "slug"
+        },
+        "advancedConfigs": {
+          "includeOriginalAttributes": []
+        },
+        "indexingSkus": true
+      },
+      "customClass": "container mx-auto px-4 py-8"
+    },
+    {
       "__resolveType": "site/sections/Product/ProductShelf.tsx",
+      "title": "Quem viu, viu também",
       "products": {
         "__resolveType": "vtex/loaders/legacy/relatedProductsLoader.ts",
         "crossSelling": "whosawalsosaw",
@@ -161,11 +180,11 @@
           "__resolveType": "website/functions/requestToParam.ts",
           "param": "slug"
         }
-      },
-      "title": "Quem viu, viu também"
+      }
     },
     {
       "__resolveType": "site/sections/Product/ProductShelf.tsx",
+      "title": "Quem comprou, comprou também",
       "products": {
         "__resolveType": "vtex/loaders/legacy/relatedProductsLoader.ts",
         "crossSelling": "whoboughtalsobought",
@@ -175,8 +194,7 @@
           "__resolveType": "website/functions/requestToParam.ts",
           "param": "slug"
         }
-      },
-      "title": "Quem comprou, comprou também"
+      }
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",

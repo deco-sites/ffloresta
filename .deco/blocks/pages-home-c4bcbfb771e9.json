@@ -363,7 +363,16 @@
       "videoMobile": "https://assets.decocache.com/ffloresta/536f0b91-8c9f-46a4-9fcc-08896bcb3bd2/ac82ae16b70c0cf1_ebfb2ebed673490493f79f4dd974b477.webm"
     },
     {
-      "__resolveType": "Footer"
+      "__resolveType": "site/sections/Content/TrustvoxCarousel.tsx",
+      "storeId": "125156",
+      "limit": 4,
+      "title": "O que nossos clientes dizem"
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Footer"
+      }
     }
   ],
   "__resolveType": "website/pages/Page.tsx",
