@@ -8,9 +8,14 @@
       "__resolveType": "site/sections/Images/Carousel.tsx",
       "images": [
         {
-          "alt": "Banner Principal",
+          "desktopVideo": "https://assets.decocache.com/ffloresta/69ac352e-bf93-4ab5-b565-f24502dbaae2/0919-(1).mp4",
+          "mobileVideo": "https://assets.decocache.com/ffloresta/1646d6ab-588f-4888-aae5-96264c2ea9f9/0919-(2).mp4",
+          "alt": "teste"
+        },
+        {
           "desktop": "https://assets.decocache.com/ffloresta/13045259-ea7d-42da-85bb-b397fae1166b/5.jpg",
           "mobile": "https://assets.decocache.com/ffloresta/74655654-5bc6-4f3e-8c36-b58f602b1223/5b.jpg",
+          "alt": "Banner Principal",
           "action": {
             "href": "/180?map=productClusterIds&page=1"
           }
@@ -26,10 +31,10 @@
         {
           "desktop": "https://assets.decocache.com/ffloresta/fcda384f-9e24-4270-900b-b4a1d00d9644/2-a.jpg",
           "mobile": "https://assets.decocache.com/ffloresta/38159590-6556-4e15-8940-27c3fb33ac47/2b.jpg",
-          "alt": "Banner Principal",
           "action": {
             "href": "/ferragens?filter.category-1=ferragens&filter.brand=rometal&page=1"
-          }
+          },
+          "alt": "Banner Principal"
         },
         {
           "desktop": "https://assets.decocache.com/ffloresta/55f7b38a-0b4d-495d-bc06-d99b45230d49/4-a.jpg",
