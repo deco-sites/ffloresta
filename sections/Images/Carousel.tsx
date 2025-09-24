@@ -1,4 +1,5 @@
 import type { ImageWidget } from "apps/admin/widgets.ts";
+import type { VideoWidget } from "apps/admin/widgets.ts";
 import { Picture } from "apps/website/components/Picture.tsx";
 import Section from "../../components/ui/Section.tsx";
 import CarouselSlider from "../../islands/Sliders/CarouselSlider.tsx";
@@ -7,8 +8,15 @@ import { useId } from "../../sdk/useId.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
 
 export interface Banner {
-  desktop: ImageWidget;
-  mobile: ImageWidget;
+  /** @description Imagem para desktop (obrigatória se não houver vídeo) */
+  desktop?: ImageWidget;
+  /** @description Imagem para mobile (obrigatória se não houver vídeo) */
+  mobile?: ImageWidget;
+  /** @description Arquivo de vídeo MP4 para desktop (obrigatório se não houver imagem) */
+  desktopVideo?: VideoWidget;
+  /** @description Arquivo de vídeo MP4 para mobile (obrigatório se não houver imagem) */
+  mobileVideo?: VideoWidget;
+  /** @description Texto alternativo para acessibilidade */
   alt: string;
   action?: {
     href?: string;
@@ -25,8 +33,22 @@ export interface Props {
 }
 
 function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
-  const { alt, mobile, desktop, action } = image;
+  const { alt, mobile, desktop, desktopVideo, mobileVideo, action } = image;
   const params = { promotion_name: image.alt };
+
+  // Validação: deve ter pelo menos imagem OU vídeo
+  const hasDesktopContent = desktop || desktopVideo;
+  const hasMobileContent = mobile || mobileVideo;
+  
+  if (!hasDesktopContent && !hasMobileContent) {
+    return (
+      <div class="w-full h-64 bg-gray-200 flex items-center justify-center">
+        <p class="text-gray-500 text-center px-4">
+          ⚠️ Erro: É necessário adicionar pelo menos uma imagem ou um vídeo para este slide
+        </p>
+      </div>
+    );
+  }
 
   const selectPromotionEvent = useSendEvent({
     on: "click",
@@ -77,20 +99,81 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
           )}
         </div>
       )}
-      <Picture preload={lcp} {...viewPromotionEvent}>
-        <img
-          class="block lg:hidden object-cover w-full h-full select-none pointer-events-none"
-          loading={lcp ? "eager" : "lazy"}
-          src={mobile}
-          alt={alt}
-        />
-        <img
-          class="hidden lg:block object-cover w-full h-full select-none pointer-events-none"
-          loading={lcp ? "eager" : "lazy"}
-          src={desktop}
-          alt={alt}
-        />
-      </Picture>
+      <div {...viewPromotionEvent}>
+        {/* Mobile content */}
+        <div class="block lg:hidden w-full aspect-video bg-gray-100">
+          {mobileVideo ? (
+            <video
+              class="object-cover w-full h-full select-none pointer-events-none"
+              autoplay
+              muted
+              loop
+              playsInline
+              preload={lcp ? "auto" : "metadata"}
+            >
+              <source src={mobileVideo} type="video/mp4" />
+              {mobile && (
+                <img
+                  class="object-cover w-full h-full select-none pointer-events-none"
+                  loading={lcp ? "eager" : "lazy"}
+                  src={mobile}
+                  alt={alt}
+                />
+              )}
+            </video>
+          ) : mobile ? (
+            <img
+              class="object-cover w-full h-full select-none pointer-events-none"
+              loading={lcp ? "eager" : "lazy"}
+              src={mobile}
+              alt={alt}
+            />
+          ) : (
+            <div class="w-full h-64 bg-gray-200 flex items-center justify-center">
+              <p class="text-gray-500 text-center px-4">
+                ⚠️ Adicione uma imagem ou vídeo para mobile
+              </p>
+            </div>
+          )}
+        </div>
+        
+        {/* Desktop content */}
+        <div class="hidden lg:block w-full aspect-video bg-gray-100">
+          {desktopVideo ? (
+            <video
+              class="object-cover w-full h-full select-none pointer-events-none"
+              autoplay
+              muted
+              loop
+              playsInline
+              preload={lcp ? "auto" : "metadata"}
+            >
+              <source src={desktopVideo} type="video/mp4" />
+              {desktop && (
+                <img
+                  class="object-contain w-full h-full select-none pointer-events-none"
+                  loading={lcp ? "eager" : "lazy"}
+                  src={desktop}
+                  alt={alt}
+                />
+              )}
+            </video>
+          ) : desktop ? (
+            <img
+              class="object-cover w-full h-full select-none pointer-events-none"
+              loading={lcp ? "eager" : "lazy"}
+              src={desktop}
+              alt={alt}
+            />
+          ) : (
+            <div class="w-full h-64 bg-gray-200 flex items-center justify-center">
+              <p class="text-gray-500 text-center px-4">
+                ⚠️ Adicione uma imagem ou vídeo para desktop
+              </p>
+            </div>
+          )}
+        </div>
+      </div>
     </a>
   );
 }

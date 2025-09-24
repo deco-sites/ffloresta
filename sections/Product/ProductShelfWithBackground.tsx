@@ -19,6 +19,10 @@ export interface BackgroundProps {
 export interface Props {
   products: Product[] | null;
   background?: BackgroundProps;
+  /** @description Vídeo MP4 para desktop (opcional) */
+  desktopVideo?: string;
+  /** @description Vídeo MP4 para mobile (opcional) */
+  mobileVideo?: string;
   /** @description Section title */
   title?: string;
 
@@ -32,6 +36,8 @@ export default function ProductShelfWithBackground({
   title,
   cta,
   background,
+  desktopVideo,
+  mobileVideo,
   icon,
 }: Props) {
   if (!products || products.length === 0) {
@@ -62,24 +68,70 @@ export default function ProductShelfWithBackground({
 
       {/* Shelf Section - Com background */}
       <div class="relative w-full py-12">
-        {/* Background Image - Apenas na shelf */}
-        {background && (
+        {/* Background - Apenas na shelf */}
+        {(background || desktopVideo || mobileVideo) && (
           <div class="absolute inset-0 z-0">
-            <picture>
-              <source
-                media="(max-width: 767px)"
-                srcset={background.mobile.src}
-              />
-              <source
-                media="(min-width: 768px)"
-                srcset={background.desktop.src}
-              />
-              <img
-                src={background.desktop.src}
-                alt="Prateleira de Produtos com Imagem de Fundo"
-                class="w-full h-full object-cover"
-              />
-            </picture>
+            {/* Mobile content */}
+            <div class="block md:hidden w-full h-full">
+              {mobileVideo ? (
+                <video
+                  class="w-full h-full object-cover"
+                  autoplay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                >
+                  <source src={mobileVideo} type="video/mp4" />
+                  {background && (
+                    <img
+                      src={background.mobile.src}
+                      alt="Prateleira de Produtos com Imagem de Fundo"
+                      class="w-full h-full object-cover"
+                    />
+                  )}
+                </video>
+              ) : (
+                background && (
+                  <img
+                    src={background.mobile.src}
+                    alt="Prateleira de Produtos com Imagem de Fundo"
+                    class="w-full h-full object-cover"
+                  />
+                )
+              )}
+            </div>
+            
+            {/* Desktop content */}
+            <div class="hidden md:block w-full h-full">
+              {desktopVideo ? (
+                <video
+                  class="w-full h-full object-cover"
+                  autoplay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                >
+                  <source src={desktopVideo} type="video/mp4" />
+                  {background && (
+                    <img
+                      src={background.desktop.src}
+                      alt="Prateleira de Produtos com Imagem de Fundo"
+                      class="w-full h-full object-cover"
+                    />
+                  )}
+                </video>
+              ) : (
+                background && (
+                  <img
+                    src={background.desktop.src}
+                    alt="Prateleira de Produtos com Imagem de Fundo"
+                    class="w-full h-full object-cover"
+                  />
+                )
+              )}
+            </div>
           </div>
         )}
 

@@ -12,6 +12,8 @@ export interface Props {
   title: HTMLWidget;
   description: string;
   image?: ImageWidget;
+  /** @description Vídeo MP4 (opcional) */
+  video?: string;
   placement: "left" | "right";
   cta: CTA[];
 }
@@ -25,6 +27,7 @@ export default function HeroFlats({
   title = "Hero",
   description = "Your description here",
   image,
+  video,
   placement,
   cta,
 }: Props) {
@@ -33,25 +36,51 @@ export default function HeroFlats({
       <div class="mx-auto flex flex-col items-center gap-8">
         <div
           class={`flex w-full xl:container xl:mx-auto py-20 mx-5 md:mx-10 z-10 ${
-            image
+            (image || video)
               ? PLACEMENT[placement]
               : "flex-col items-center justify-center text-center"
           } lg:py-36 gap-12 md:gap-20 items-center`}
         >
-          {image && (
-            <Image
-              width={640}
-              class="w-full lg:w-1/2 object-fit"
-              sizes="(max-width: 640px) 100vw, 30vw"
-              src={image}
-              alt={image}
-              decoding="async"
-              loading="lazy"
-            />
+          {(image || video) && (
+            <div class="w-full lg:w-1/2">
+              {video ? (
+                <video
+                  class="w-full object-cover"
+                  autoplay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                >
+                  <source src={video} type="video/mp4" />
+                  {image && (
+                    <Image
+                      width={640}
+                      class="w-full object-fit"
+                      sizes="(max-width: 640px) 100vw, 30vw"
+                      src={image}
+                      alt={image}
+                      decoding="async"
+                      loading="lazy"
+                    />
+                  )}
+                </video>
+              ) : (
+                <Image
+                  width={640}
+                  class="w-full object-fit"
+                  sizes="(max-width: 640px) 100vw, 30vw"
+                  src={image}
+                  alt={image}
+                  decoding="async"
+                  loading="lazy"
+                />
+              )}
+            </div>
           )}
           <div
             class={`mx-6 lg:mx-auto lg:w-full space-y-4 gap-4 ${
-              image
+              (image || video)
                 ? "lg:w-1/2 lg:max-w-xl"
                 : "flex flex-col items-center justify-center lg:max-w-3xl"
             }`}

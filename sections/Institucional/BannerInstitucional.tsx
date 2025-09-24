@@ -11,6 +11,11 @@ export interface Props {
     mobile: ImageWidget;
     desktop: ImageWidget;
   };
+  
+  /** @description Vídeo MP4 para desktop (opcional) */
+  desktopVideo?: string;
+  /** @description Vídeo MP4 para mobile (opcional) */
+  mobileVideo?: string;
 
   cta?: {
     href?: string;
@@ -18,29 +23,69 @@ export interface Props {
   };
 }
 
-function Banner({ title, description, images, cta }: Props) {
+function Banner({ title, description, images, desktopVideo, mobileVideo, cta }: Props) {
   return (
     <Section.Container>
       <div>
-        <Picture>
-          <Source
-            media="(max-width: 640px)"
-            src={images.mobile}
-            width={360}
-            height={104}
-          />
-          <Source
-            media="(min-width: 640px)"
-            src={images.desktop}
-            width={1320}
-            height={480}
-          />
-          <img
-            src={images.desktop}
-            alt={title || "Banner"}
-            class="w-full object-cover"
-          />
-        </Picture>
+        {/* Mobile content */}
+        <div class="block sm:hidden w-full">
+          {mobileVideo ? (
+            <video
+              class="w-full object-cover"
+              autoplay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              style={{ height: '104px' }}
+            >
+              <source src={mobileVideo} type="video/mp4" />
+              <img
+                src={images.mobile}
+                alt={title || "Banner"}
+                class="w-full object-cover"
+                style={{ height: '104px' }}
+              />
+            </video>
+          ) : (
+            <img
+              src={images.mobile}
+              alt={title || "Banner"}
+              class="w-full object-cover"
+              style={{ height: '104px' }}
+            />
+          )}
+        </div>
+        
+        {/* Desktop content */}
+        <div class="hidden sm:block w-full">
+          {desktopVideo ? (
+            <video
+              class="w-full object-cover"
+              autoplay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              style={{ height: '480px' }}
+            >
+              <source src={desktopVideo} type="video/mp4" />
+              <img
+                src={images.desktop}
+                alt={title || "Banner"}
+                class="w-full object-cover"
+                style={{ height: '480px' }}
+              />
+            </video>
+          ) : (
+            <img
+              src={images.desktop}
+              alt={title || "Banner"}
+              class="w-full object-cover"
+              style={{ height: '480px' }}
+            />
+          )}
+        </div>
 
         {(title || description || (cta?.href && cta?.label)) && (
           <div

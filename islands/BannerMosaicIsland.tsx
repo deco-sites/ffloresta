@@ -1,5 +1,5 @@
 import { useId } from "../sdk/useId.ts";
-import { ImageWidget as Image } from "apps/admin/widgets.ts";
+import { ImageWidget as Image, VideoWidget } from "apps/admin/widgets.ts";
 import { useEffect, useRef, useState } from "preact/hooks";
 import { clx } from "../sdk/clx.ts";
 
@@ -13,6 +13,10 @@ export interface Props {
   images: Array<{
     desktop: Image;
     mobile: Image;
+    /** @description Vídeo MP4 para desktop (opcional) */
+    desktopVideo?: VideoWidget;
+    /** @description Vídeo MP4 para mobile (opcional) */
+    mobileVideo?: VideoWidget;
     alt: string;
     href?: string;
   }>;
@@ -25,22 +29,83 @@ function MosaicImage({
   image: Props["images"][number];
   lcp?: boolean;
 }) {
-  const { desktop, mobile, alt, href } = image;
+  const { desktop, mobile, desktopVideo, mobileVideo, alt, href } = image;
 
   const content = (
     <>
-      <img
-        src={mobile}
-        alt={alt}
-        class="object-cover w-full h-full md:hidden"
-        loading={lcp ? "eager" : "lazy"}
-      />
-      <img
-        src={desktop}
-        alt={alt}
-        class="object-cover w-full h-full hidden md:block"
-        loading={lcp ? "eager" : "lazy"}
-      />
+      {/* Mobile content */}
+      <div class="md:hidden w-full h-full">
+        {mobileVideo ? (
+          <video
+            class="object-cover w-full h-full select-none pointer-events-none"
+            autoplay
+            muted
+            loop
+            playsInline
+            preload={lcp ? "auto" : "metadata"}
+          >
+            <source src={mobileVideo} type="video/mp4" />
+            {mobile && (
+              <img
+                src={mobile}
+                alt={alt}
+                class="object-cover w-full h-full select-none pointer-events-none"
+                loading={lcp ? "eager" : "lazy"}
+              />
+            )}
+          </video>
+        ) : mobile ? (
+          <img
+            src={mobile}
+            alt={alt}
+            class="object-cover w-full h-full select-none pointer-events-none"
+            loading={lcp ? "eager" : "lazy"}
+          />
+        ) : (
+          <div class="w-full h-64 bg-gray-200 flex items-center justify-center">
+            <p class="text-gray-500 text-center px-4">
+              ⚠️ Adicione uma imagem ou vídeo para mobile
+            </p>
+          </div>
+        )}
+      </div>
+      
+      {/* Desktop content */}
+      <div class="hidden md:block w-full h-full">
+        {desktopVideo ? (
+          <video
+            class="object-cover w-full h-full select-none pointer-events-none"
+            autoplay
+            muted
+            loop
+            playsInline
+            preload={lcp ? "auto" : "metadata"}
+          >
+            <source src={desktopVideo} type="video/mp4" />
+            {desktop && (
+              <img
+                src={desktop}
+                alt={alt}
+                class="object-cover w-full h-full select-none pointer-events-none"
+                loading={lcp ? "eager" : "lazy"}
+              />
+            )}
+          </video>
+        ) : desktop ? (
+          <img
+            src={desktop}
+            alt={alt}
+            class="object-cover w-full h-full select-none pointer-events-none"
+            loading={lcp ? "eager" : "lazy"}
+          />
+        ) : (
+          <div class="w-full h-64 bg-gray-200 flex items-center justify-center">
+            <p class="text-gray-500 text-center px-4">
+              ⚠️ Adicione uma imagem ou vídeo para desktop
+            </p>
+          </div>
+        )}
+      </div>
     </>
   );
 
@@ -251,12 +316,12 @@ export default function BannerMosaicIsland({ images, settings = {} }: Props) {
   const desktopView = (
     <div
       class={clx(
-        "hidden md:flex flex-wrap items-stretch justify-center",
+        "hidden md:flex flex-wrap items-stretch justify-center min-h-[300px]",
         `gap-${gap}`,
       )}
     >
       {images?.slice(0, itemsToShow).map((image, index) => (
-        <div class={`flex-1 min-w-[calc(${100 / itemsToShow}% - ${gap}px)]`}>
+        <div key={index} class={`flex-1 min-w-[calc(${100 / itemsToShow}% - ${gap}px)] h-full`}>
           <MosaicImage image={image} lcp={index < 2} />
         </div>
       ))}

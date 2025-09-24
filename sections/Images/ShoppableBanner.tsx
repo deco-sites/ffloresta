@@ -8,6 +8,11 @@ export interface Props {
     desktop?: ImageWidget;
     altText: string;
   };
+  
+  /** @description Vídeo MP4 para desktop (opcional) */
+  desktopVideo?: string;
+  /** @description Vídeo MP4 para mobile (opcional) */
+  mobileVideo?: string;
 
   pins?: Pin[];
 
@@ -74,34 +79,73 @@ const DEFAULT_PROPS: Props = {
 };
 
 function ShoppableBanner(props: Props) {
-  const { link, text, title, image, pins } = { ...DEFAULT_PROPS, ...props };
+  const { link, text, title, image, pins, desktopVideo, mobileVideo } = { ...DEFAULT_PROPS, ...props };
 
   return (
     <div class="container">
       <div class="card lg:card-side rounded grid grid-cols-1 lg:grid-cols-2">
         <figure class="relative">
-          <Picture>
-            <Source
-              media="(max-width: 767px)"
-              src={image?.mobile}
-              width={150}
-              height={150}
-            />
-            <Source
-              media="(min-width: 768px)"
-              src={image?.desktop ? image?.desktop : image?.mobile}
-              width={384}
-              height={227}
-            />
-            <img
-              class="w-full h-full object-cover"
-              sizes="(max-width: 640px) 100vw, 30vw"
-              src={image?.mobile}
-              alt={image?.altText}
-              decoding="async"
-              loading="lazy"
-            />
-          </Picture>
+          {/* Mobile content */}
+          <div class="block md:hidden w-full h-full">
+            {mobileVideo ? (
+              <video
+                class="w-full h-full object-cover"
+                autoplay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+              >
+                <source src={mobileVideo} type="video/mp4" />
+                <img
+                  class="w-full h-full object-cover"
+                  src={image?.mobile}
+                  alt={image?.altText}
+                  decoding="async"
+                  loading="lazy"
+                />
+              </video>
+            ) : (
+              <img
+                class="w-full h-full object-cover"
+                src={image?.mobile}
+                alt={image?.altText}
+                decoding="async"
+                loading="lazy"
+              />
+            )}
+          </div>
+          
+          {/* Desktop content */}
+          <div class="hidden md:block w-full h-full">
+            {desktopVideo ? (
+              <video
+                class="w-full h-full object-cover"
+                autoplay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+              >
+                <source src={desktopVideo} type="video/mp4" />
+                <img
+                  class="w-full h-full object-cover"
+                  src={image?.desktop ? image?.desktop : image?.mobile}
+                  alt={image?.altText}
+                  decoding="async"
+                  loading="lazy"
+                />
+              </video>
+            ) : (
+              <img
+                class="w-full h-full object-cover"
+                src={image?.desktop ? image?.desktop : image?.mobile}
+                alt={image?.altText}
+                decoding="async"
+                loading="lazy"
+              />
+            )}
+          </div>
           {pins?.map(({ mobile, desktop, link, label }) => (
             <>
               <a

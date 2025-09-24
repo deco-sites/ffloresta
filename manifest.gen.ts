@@ -49,25 +49,26 @@ import * as $$$$$$29 from "./sections/Product/ProductShelf.tsx";
 import * as $$$$$$30 from "./sections/Product/ProductShelfTabbed.tsx";
 import * as $$$$$$31 from "./sections/Product/ProductShelfWithBackground.tsx";
 import * as $$$$$$32 from "./sections/Product/ProductShelfWithBanner.tsx";
-import * as $$$$$$33 from "./sections/Product/SearchResult.tsx";
-import * as $$$$$$34 from "./sections/Product/ShelfWithImage.tsx";
-import * as $$$$$$35 from "./sections/Product/TrustvoxCertificate.tsx";
-import * as $$$$$$36 from "./sections/Product/TrustvoxClickableRating.tsx";
-import * as $$$$$$37 from "./sections/Product/TrustvoxCollector.tsx";
-import * as $$$$$$38 from "./sections/Product/TrustvoxDebug.tsx";
-import * as $$$$$$39 from "./sections/Product/TrustvoxDebugStars.tsx";
-import * as $$$$$$40 from "./sections/Product/TrustvoxRatingWidget.tsx";
-import * as $$$$$$41 from "./sections/Product/TrustvoxReviews.tsx";
-import * as $$$$$$42 from "./sections/Product/TrustvoxSeal.tsx";
-import * as $$$$$$43 from "./sections/Product/TrustvoxStars.tsx";
-import * as $$$$$$44 from "./sections/Product/TrustvoxTest.tsx";
-import * as $$$$$$45 from "./sections/Product/TrustvoxWidget.tsx";
-import * as $$$$$$46 from "./sections/Product/Wishlist.tsx";
-import * as $$$$$$47 from "./sections/SelosSeguranca.tsx";
-import * as $$$$$$48 from "./sections/Session.tsx";
-import * as $$$$$$49 from "./sections/Social/InstagramPosts.tsx";
-import * as $$$$$$50 from "./sections/Social/WhatsApp.tsx";
-import * as $$$$$$51 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$33 from "./sections/Product/ProductVideoExample.tsx";
+import * as $$$$$$34 from "./sections/Product/SearchResult.tsx";
+import * as $$$$$$35 from "./sections/Product/ShelfWithImage.tsx";
+import * as $$$$$$36 from "./sections/Product/TrustvoxCertificate.tsx";
+import * as $$$$$$37 from "./sections/Product/TrustvoxClickableRating.tsx";
+import * as $$$$$$38 from "./sections/Product/TrustvoxCollector.tsx";
+import * as $$$$$$39 from "./sections/Product/TrustvoxDebug.tsx";
+import * as $$$$$$40 from "./sections/Product/TrustvoxDebugStars.tsx";
+import * as $$$$$$41 from "./sections/Product/TrustvoxRatingWidget.tsx";
+import * as $$$$$$42 from "./sections/Product/TrustvoxReviews.tsx";
+import * as $$$$$$43 from "./sections/Product/TrustvoxSeal.tsx";
+import * as $$$$$$44 from "./sections/Product/TrustvoxStars.tsx";
+import * as $$$$$$45 from "./sections/Product/TrustvoxTest.tsx";
+import * as $$$$$$46 from "./sections/Product/TrustvoxWidget.tsx";
+import * as $$$$$$47 from "./sections/Product/Wishlist.tsx";
+import * as $$$$$$48 from "./sections/SelosSeguranca.tsx";
+import * as $$$$$$49 from "./sections/Session.tsx";
+import * as $$$$$$50 from "./sections/Social/InstagramPosts.tsx";
+import * as $$$$$$51 from "./sections/Social/WhatsApp.tsx";
+import * as $$$$$$52 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
   "loaders": {
@@ -113,25 +114,26 @@ const manifest = {
     "site/sections/Product/ProductShelfTabbed.tsx": $$$$$$30,
     "site/sections/Product/ProductShelfWithBackground.tsx": $$$$$$31,
     "site/sections/Product/ProductShelfWithBanner.tsx": $$$$$$32,
-    "site/sections/Product/SearchResult.tsx": $$$$$$33,
-    "site/sections/Product/ShelfWithImage.tsx": $$$$$$34,
-    "site/sections/Product/TrustvoxCertificate.tsx": $$$$$$35,
-    "site/sections/Product/TrustvoxClickableRating.tsx": $$$$$$36,
-    "site/sections/Product/TrustvoxCollector.tsx": $$$$$$37,
-    "site/sections/Product/TrustvoxDebug.tsx": $$$$$$38,
-    "site/sections/Product/TrustvoxDebugStars.tsx": $$$$$$39,
-    "site/sections/Product/TrustvoxRatingWidget.tsx": $$$$$$40,
-    "site/sections/Product/TrustvoxReviews.tsx": $$$$$$41,
-    "site/sections/Product/TrustvoxSeal.tsx": $$$$$$42,
-    "site/sections/Product/TrustvoxStars.tsx": $$$$$$43,
-    "site/sections/Product/TrustvoxTest.tsx": $$$$$$44,
-    "site/sections/Product/TrustvoxWidget.tsx": $$$$$$45,
-    "site/sections/Product/Wishlist.tsx": $$$$$$46,
-    "site/sections/SelosSeguranca.tsx": $$$$$$47,
-    "site/sections/Session.tsx": $$$$$$48,
-    "site/sections/Social/InstagramPosts.tsx": $$$$$$49,
-    "site/sections/Social/WhatsApp.tsx": $$$$$$50,
-    "site/sections/Theme/Theme.tsx": $$$$$$51,
+    "site/sections/Product/ProductVideoExample.tsx": $$$$$$33,
+    "site/sections/Product/SearchResult.tsx": $$$$$$34,
+    "site/sections/Product/ShelfWithImage.tsx": $$$$$$35,
+    "site/sections/Product/TrustvoxCertificate.tsx": $$$$$$36,
+    "site/sections/Product/TrustvoxClickableRating.tsx": $$$$$$37,
+    "site/sections/Product/TrustvoxCollector.tsx": $$$$$$38,
+    "site/sections/Product/TrustvoxDebug.tsx": $$$$$$39,
+    "site/sections/Product/TrustvoxDebugStars.tsx": $$$$$$40,
+    "site/sections/Product/TrustvoxRatingWidget.tsx": $$$$$$41,
+    "site/sections/Product/TrustvoxReviews.tsx": $$$$$$42,
+    "site/sections/Product/TrustvoxSeal.tsx": $$$$$$43,
+    "site/sections/Product/TrustvoxStars.tsx": $$$$$$44,
+    "site/sections/Product/TrustvoxTest.tsx": $$$$$$45,
+    "site/sections/Product/TrustvoxWidget.tsx": $$$$$$46,
+    "site/sections/Product/Wishlist.tsx": $$$$$$47,
+    "site/sections/SelosSeguranca.tsx": $$$$$$48,
+    "site/sections/Session.tsx": $$$$$$49,
+    "site/sections/Social/InstagramPosts.tsx": $$$$$$50,
+    "site/sections/Social/WhatsApp.tsx": $$$$$$51,
+    "site/sections/Theme/Theme.tsx": $$$$$$52,
   },
   "actions": {
     "site/actions/minicart/submit.ts": $$$$$$$$$0,
