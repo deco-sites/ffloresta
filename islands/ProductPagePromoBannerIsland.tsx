@@ -4,15 +4,12 @@ import type { ImageWidget as Image } from "apps/admin/widgets.ts";
 
 export interface ProductPagePromoBannerProps {
   image: Image;
-  /** @description Vídeo MP4 (opcional) */
-  video?: string;
   countdownDate: string;
   title: string;
   promoName: string;
 }
 export default function ProductPagePromoBannerIsland({
   image,
-  video,
   countdownDate,
   title,
   promoName,
@@ -40,31 +37,12 @@ export default function ProductPagePromoBannerIsland({
   return (
     <div class="flex flex-col">
       <div class="relative w-full text-white text-center">
-        {video ? (
-          <video
-            class="w-full object-cover max-h-[60px]"
-            autoplay
-            muted
-            loop
-            playsInline
-            preload="auto"
-          >
-            <source src={video} type="video/mp4" />
-            <img
-              src={image}
-              alt={promoName}
-              class="w-full object-cover max-h-[60px]"
-              loading="eager"
-            />
-          </video>
-        ) : (
-          <img
-            src={image}
-            alt={promoName}
-            class="w-full object-cover max-h-[60px]"
-            loading="eager"
-          />
-        )}
+        <img
+          src={image}
+          alt={promoName}
+          class="w-full object-cover max-h-[60px]"
+          loading="eager"
+        />
 
         <div class="absolute inset-0 flex justify-between items-start p-3 bg-black/40">
           <h2 class="text-lg md:text-sm">{title}</h2>

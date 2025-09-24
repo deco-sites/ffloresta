@@ -5,7 +5,7 @@ import Section from "../../components/ui/Section.tsx";
 import { useOffer } from "../../sdk/useOffer.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import { type LoadingFallbackProps } from "@deco/deco";
-import { ImageWidget, VideoWidget } from "apps/admin/widgets.ts";
+import { ImageWidget } from "apps/admin/widgets.ts";
 
 export interface BannerProps {
   desktop?: {
@@ -17,12 +17,6 @@ export interface BannerProps {
     src: ImageWidget;
     alt: string;
   };
-  
-  /** @description Vídeo MP4 para desktop (opcional) */
-  desktopVideo?: VideoWidget;
-  /** @description Vídeo MP4 para mobile (opcional) */
-  mobileVideo?: VideoWidget;
-  
   href?: string;
 }
 
@@ -82,71 +76,18 @@ export default function ProductShelfWithBanner({
         {banner && (
           <div class={orientation === "vertical" ? "w-full" : "flex-1"}>
             <a href={banner.href} class="block">
-              {/* Mobile content */}
-              <div class="block md:hidden w-full h-auto bg-black">
-                {banner.mobileVideo ? (
-                  <video
-                    class="w-full h-auto object-contain select-none pointer-events-none"
-                    autoplay
-                    muted
-                    loop
-                    playsInline
-                    preload="metadata"
-                  >
-                    <source src={banner.mobileVideo} type="video/mp4" />
-                    {banner.mobile?.src && (
-                      <img
-                        src={banner.mobile.src}
-                        alt={banner.mobile.alt}
-                        class="w-full h-auto object-contain"
-                      />
-                    )}
-                  </video>
-                ) : banner.mobile?.src ? (
-                  <img
-                    src={banner.mobile.src}
-                    alt={banner.mobile.alt}
-                    class="w-full h-auto object-contain"
-                  />
-                ) : (
-                  <div class="w-full h-32 flex items-center justify-center text-gray-500">
-                    Nenhum conteúdo mobile configurado
-                  </div>
-                )}
-              </div>
-              
-              {/* Desktop content */}
-              <div class="hidden md:block w-full h-auto bg-black">
-                {banner.desktopVideo ? (
-                  <video
-                    class="w-full h-auto object-contain select-none pointer-events-none"
-                    autoplay
-                    muted
-                    loop
-                    playsInline
-                    preload="metadata"
-                  >
-                    <source src={banner.desktopVideo} type="video/mp4" />
-                    {banner.desktop?.src && (
-                      <img
-                        src={banner.desktop.src}
-                        alt={banner.desktop.alt}
-                        class="w-full h-auto object-contain"
-                      />
-                    )}
-                  </video>
-                ) : banner.desktop?.src ? (
-                  <img
-                    src={banner.desktop.src}
-                    alt={banner.desktop.alt}
-                    class="w-full h-auto object-contain"
-                  />
-                ) : (
-                  <div class="w-full h-32 flex items-center justify-center text-gray-500">
-                    Nenhum conteúdo desktop configurado
-                  </div>
-                )}
-              </div>
+              <picture>
+                <source media="(max-width: 767px)" srcset={banner.mobile.src} />
+                <source
+                  media="(min-width: 768px)"
+                  srcset={banner.desktop.src}
+                />
+                <img
+                  src={banner.desktop.src}
+                  alt={banner.desktop.alt}
+                  class="w-full h-auto object-cover"
+                />
+              </picture>
             </a>
           </div>
         )}

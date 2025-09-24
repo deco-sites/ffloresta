@@ -11,11 +11,6 @@ export interface Props {
     mobile: ImageWidget;
     desktop: ImageWidget;
   };
-  
-  /** @description Vídeo MP4 para desktop (opcional) */
-  desktopVideo?: string;
-  /** @description Vídeo MP4 para mobile (opcional) */
-  mobileVideo?: string;
 
   cta?: {
     href?: string;
@@ -23,69 +18,29 @@ export interface Props {
   };
 }
 
-function Banner({ title, description, images, desktopVideo, mobileVideo, cta }: Props) {
+function Banner({ title, description, images, cta }: Props) {
   return (
     <Section.Container>
       <div class="relative bg-base-200 mx-5 sm:mx-0">
-        {/* Mobile content */}
-        <div class="block sm:hidden w-full">
-          {mobileVideo ? (
-            <video
-              class="w-full object-cover"
-              autoplay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-              style={{ height: '572px' }}
-            >
-              <source src={mobileVideo} type="video/mp4" />
-              <img
-                src={images.mobile}
-                alt={title || "Banner"}
-                class="w-full object-cover"
-                style={{ height: '572px' }}
-              />
-            </video>
-          ) : (
-            <img
-              src={images.mobile}
-              alt={title || "Banner"}
-              class="w-full object-cover"
-              style={{ height: '572px' }}
-            />
-          )}
-        </div>
-        
-        {/* Desktop content */}
-        <div class="hidden sm:block w-full">
-          {desktopVideo ? (
-            <video
-              class="w-full object-cover"
-              autoplay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-              style={{ height: '480px' }}
-            >
-              <source src={desktopVideo} type="video/mp4" />
-              <img
-                src={images.desktop}
-                alt={title || "Banner"}
-                class="w-full object-cover"
-                style={{ height: '480px' }}
-              />
-            </video>
-          ) : (
-            <img
-              src={images.desktop}
-              alt={title || "Banner"}
-              class="w-full object-cover"
-              style={{ height: '480px' }}
-            />
-          )}
-        </div>
+        <Picture>
+          <Source
+            media="(max-width: 640px)"
+            src={images.mobile}
+            width={335}
+            height={572}
+          />
+          <Source
+            media="(min-width: 640px)"
+            src={images.desktop}
+            width={1320}
+            height={480}
+          />
+          <img
+            src={images.desktop}
+            alt={title || "Banner"}
+            class="w-full object-cover"
+          />
+        </Picture>
 
         {(title || description || (cta?.href && cta?.label)) && (
           <div
