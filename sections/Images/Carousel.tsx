@@ -59,17 +59,17 @@ export interface VideoBanner {
 /** @titleSlide Item */
 export type SlideItem =
   | {
-      /** @title Imagem */
-      type: "image";
-      /** @title Dados da Imagem */
-      data: Banner;
-    }
+    /** @title Imagem */
+    type: "image";
+    /** @title Dados da Imagem */
+    data: Banner;
+  }
   | {
-      /** @title Vídeo */
-      type: "video";
-      /** @title Dados do Vídeo */
-      data: VideoBanner;
-    };
+    /** @title Vídeo */
+    type: "video";
+    /** @title Dados do Vídeo */
+    data: VideoBanner;
+  };
 
 export interface Props {
   /** @title Slides */
@@ -109,8 +109,8 @@ function VideoBannerItem({
     event: { name: "view_promotion", params },
   });
 
-  const hasAction =
-    action && (action.href || action.title || action.subTitle || action.label);
+  const hasAction = action &&
+    (action.href || action.title || action.subTitle || action.label);
 
   return (
     <a
@@ -125,7 +125,7 @@ function VideoBannerItem({
             "absolute h-full w-full top-0 left-0 z-10",
             "flex flex-col justify-center items-center",
             "px-5 sm:px-0",
-            "sm:left-40 sm:items-start sm:max-w-96"
+            "sm:left-40 sm:items-start sm:max-w-96",
           )}
         >
           {action.title && (
@@ -201,8 +201,8 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
     event: { name: "view_promotion", params },
   });
 
-  const hasAction =
-    action && (action.href || action.title || action.subTitle || action.label);
+  const hasAction = action &&
+    (action.href || action.title || action.subTitle || action.label);
 
   return (
     <a
@@ -217,7 +217,7 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
             "absolute h-full w-full top-0 left-0 z-10",
             "flex flex-col justify-center items-center",
             "px-5 sm:px-0",
-            "sm:left-40 sm:items-start sm:max-w-96"
+            "sm:left-40 sm:items-start sm:max-w-96",
           )}
         >
           {action.title && (
@@ -274,7 +274,7 @@ function Carousel({ slides = [], preload, interval }: Props) {
       id={id}
       class={clx(
         "relative group",
-        "w-full max-w-full overflow-hidden flex min-h-[unset] h-fit"
+        "w-full max-w-full overflow-hidden flex min-h-[unset] h-fit",
       )}
     >
       <CarouselSlider
@@ -317,7 +317,8 @@ function Carousel({ slides = [], preload, interval }: Props) {
                     stroke-linejoin="round"
                     stroke-width="2"
                     d="M15 19l-7-7 7-7"
-                  ></path>
+                  >
+                  </path>
                 </svg>
               </div>
             </CarouselSlider.PrevButton>
@@ -339,7 +340,8 @@ function Carousel({ slides = [], preload, interval }: Props) {
                     stroke-linejoin="round"
                     stroke-width="2"
                     d="M9 5l7 7-7 7"
-                  ></path>
+                  >
+                  </path>
                 </svg>
               </div>
             </CarouselSlider.NextButton>
@@ -348,7 +350,7 @@ function Carousel({ slides = [], preload, interval }: Props) {
           <ul
             class={clx(
               "bottom-4 left-0 right-0 z-20 h-3",
-              "justify-center gap-2 absolute flex"
+              "justify-center gap-2 absolute flex",
             )}
           >
             {slides.map((_, index) => (
@@ -357,7 +359,7 @@ function Carousel({ slides = [], preload, interval }: Props) {
                   index={index}
                   class={clx(
                     "bg-transparent border border-[#2D2D2D] h-2 w-2 no-animation",
-                    "disabled:bg-[#2D2D2D] transition-[background]"
+                    "disabled:bg-[#2D2D2D] transition-[background]",
                   )}
                 />
               </li>
