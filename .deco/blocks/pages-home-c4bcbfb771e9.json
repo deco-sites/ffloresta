@@ -87,7 +87,8 @@
             "alt": "frete gratis"
           }
         }
-      ]
+      ],
+      "interval": 6000
     },
     {
       "__resolveType": "site/sections/Content/BannerFaixa.tsx",
