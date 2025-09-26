@@ -65,5 +65,10 @@
       "children": []
     }
   ],
-  "loading": "eager"
+  "loading": "eager",
+  "searchBar": {
+    "placeholder": "What are you looking for?",
+    "showProductSuggestions": true,
+    "showSearchTerms": true
+  }
 }
