@@ -1,5 +1,5 @@
 import { useState } from "preact/hooks";
-import type { SKU } from "apps/vtex/utils/types.ts";
+import type { SKU } from "apps/vtex/utils/types";
 
 export interface Props {
   items: SKU[];
@@ -54,6 +54,15 @@ export default function ShippingForm({ items }: Props) {
     }).format(price);
   };
 
+  // Nova função para limpar o nome da transportadora
+  const cleanShippingName = (name: string): string => {
+    // Remove números, underlines e parênteses vazios
+    return name
+      .replace(/\(\d+_\d+\)/g, "") // Remove padrões como (1_2), (1_1), etc.
+      .replace(/\s+/g, " ") // Remove espaços extras
+      .trim(); // Remove espaços no início e fim
+  };
+
   const calculateShipping = async () => {
     const cleanCep = cep.replace(/\D/g, "");
 
@@ -105,7 +114,7 @@ export default function ShippingForm({ items }: Props) {
             logisticInfo.slas.forEach((sla: any) => {
               methods.push({
                 id: sla.id,
-                name: sla.name,
+                name: cleanShippingName(sla.name), // Aplica a limpeza aqui
                 shippingEstimate: sla.shippingEstimate,
                 price: sla.price,
               });
@@ -150,9 +159,11 @@ export default function ShippingForm({ items }: Props) {
           class="border-none outline-none bg-[#495941] min-w-[160px] h-8 py-1 px-3 text-white text-[13px] font-bold flex items-center justify-center gap-2 transition-all duration-300 hover:bg-[rgba(108,131,88,0.9)] disabled:opacity-50"
           disabled={loading || !cep}
         >
-          {loading
-            ? <span class="loading loading-spinner loading-xs" />
-            : <span>CALCULAR FRETE</span>}
+          {loading ? (
+            <span class="loading loading-spinner loading-xs" />
+          ) : (
+            <span>CALCULAR FRETE</span>
+          )}
         </button>
       </form>
 
