@@ -40,7 +40,25 @@
           "alt": "Frete Grátis"
         }
       ],
-      "preload": true
+      "preload": true,
+      "slides": [
+        {
+          "type": "video",
+          "data": {
+            "desktop": "https://assets.decocache.com/ffloresta/e842d1ec-c568-49b9-bc6d-1c9196e3a582/0919_1.mp4",
+            "mobile": "https://assets.decocache.com/ffloresta/e842d1ec-c568-49b9-bc6d-1c9196e3a582/0919_1.mp4",
+            "alt": "Teste"
+          }
+        },
+        {
+          "type": "image",
+          "data": {
+            "desktop": "https://assets.decocache.com/ffloresta/562ac08b-c305-4706-ba23-1e80d4ef9527/banner-4.jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/04935a85-09e1-4695-87d8-50532e1d1fd0/banner-4-mob.jpg",
+            "alt": "frete gratis"
+          }
+        }
+      ]
     },
     {
       "__resolveType": "site/sections/Content/BannerFaixa.tsx",
