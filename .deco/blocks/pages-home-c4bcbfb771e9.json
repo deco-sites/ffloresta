@@ -45,8 +45,8 @@
         {
           "type": "video",
           "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/e842d1ec-c568-49b9-bc6d-1c9196e3a582/0919_1.mp4",
-            "mobile": "https://assets.decocache.com/ffloresta/e842d1ec-c568-49b9-bc6d-1c9196e3a582/0919_1.mp4",
+            "desktop": "https://assets.decocache.com/ffloresta/83238544-8631-4f91-ab82-799f8b1ef228/WhatsApp-Video-2025-09-26-at-10.58.42-AM.mp4",
+            "mobile": "https://assets.decocache.com/ffloresta/709f73ea-9f7b-4f2c-8a50-4a608786d07a/WhatsApp-Video-2025-09-26-at-10.58.43-AM.mp4",
             "alt": "Teste"
           }
         },
@@ -57,6 +57,34 @@
             "mobile": "https://assets.decocache.com/ffloresta/04935a85-09e1-4695-87d8-50532e1d1fd0/banner-4-mob.jpg",
             "alt": "frete gratis"
           }
+        },
+        {
+          "type": "image",
+          "data": {
+            "desktop": "https://assets.decocache.com/ffloresta/7f901266-ac99-4026-8bf1-75daa5df0d34/banner-3.jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/6159fe49-923e-4b55-afcc-ca9a09a26569/banner-3-mob.jpg",
+            "alt": "Eficiência em cada detalhe"
+          }
+        },
+        {
+          "type": "image",
+          "data": {
+            "desktop": "https://assets.decocache.com/ffloresta/cc2a4580-f9f3-4c80-ba55-bcb2e0b5933a/banner-2.jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/288cb78a-f33d-4f8b-89a9-48f2d9cff1f5/banner-2-mob.jpg",
+            "alt": "Ganhe um kit de pontas e brocas"
+          }
+        },
+        {
+          "type": "image",
+          "data": {
+            "desktop": "https://assets.decocache.com/ffloresta/989f7490-a76f-4c39-af64-4d23779712a0/banner-1.jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/daecf455-2f7c-47f0-9b30-6b258adb71a4/banner-1-mob.jpg",
+            "alt": "Ganhe um kit de pontas e brocas"
+          }
+        },
+        {
+          "type": "image",
+          "data": {}
         }
       ]
     },

@@ -34,11 +34,10 @@ const scrollbarStyles = `
 
 export default function NavItemIsland({ navItems }: Props) {
   const [hoveredItem, setHoveredItem] = useState<SiteNavigationElement | null>(
-    null,
+    null
   );
-  const [hoveredSubItem, setHoveredSubItem] = useState<
-    SiteNavigationElement | null
-  >(null);
+  const [hoveredSubItem, setHoveredSubItem] =
+    useState<SiteNavigationElement | null>(null);
   const [menuPosition, setMenuPosition] = useState({ left: 0, adjustX: 0 });
   const containerRef = useRef<HTMLDivElement>(null);
   const submenuRef = useRef<HTMLDivElement>(null);
@@ -106,10 +105,12 @@ export default function NavItemIsland({ navItems }: Props) {
           {navItems.map((item) => (
             <li
               key={item.url}
-              class="text-white px-4 cursor-pointer h-[50px] flex items-center hover:bg-[rgba(255,255,255,0.075)] transition-all duration-200 ease-in-out"
+              class="text-white cursor-pointer h-[50px] flex items-center hover:bg-[rgba(255,255,255,0.075)] transition-all duration-200 ease-in-out"
               onMouseEnter={(e) => handleItemHover(item, e)}
             >
-              <a href={item.url}>{item.name}</a>
+              <a class="px-4 w-full" href={item.url}>
+                {item.name}
+              </a>
             </li>
           ))}
         </div>
@@ -131,10 +132,12 @@ export default function NavItemIsland({ navItems }: Props) {
               {hoveredItem.children.map((child) => (
                 <li
                   key={child.url}
-                  class="text-white px-4 py-2 hover:bg-[rgba(255,255,255,0.075)] cursor-pointer transition-all duration-200 ease-in-out"
+                  class="text-white hover:bg-[rgba(255,255,255,0.075)] cursor-pointer transition-all duration-200 ease-in-out"
                   onMouseEnter={() => setHoveredSubItem(child)}
                 >
-                  <a href={child.url}>{child.name}</a>
+                  <a class="flex w-full px-4 py-2" href={child.url}>
+                    {child.name}
+                  </a>
                 </li>
               ))}
             </ul>
