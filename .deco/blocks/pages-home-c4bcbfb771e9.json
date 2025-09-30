@@ -45,6 +45,18 @@
         {
           "type": "video",
           "data": {
+            "desktop": "https://assets.decocache.com/ffloresta/8e08afc0-68c6-4a8c-9510-981ed2511ed9/9-(1).mp4",
+            "mobile": "https://assets.decocache.com/ffloresta/4ae34882-3b04-457b-8be8-da6f7550675a/9a.mp4",
+            "action": {
+              "href": "/ferragens-de-projetos/rometal/coplanar?page=1"
+            },
+            "autoplay": true,
+            "loop": true
+          }
+        },
+        {
+          "type": "video",
+          "data": {
             "desktop": "https://assets.decocache.com/ffloresta/af6b5963-6066-4d01-bd5b-17b0126e6c4b/0919-(1).mp4",
             "mobile": "https://assets.decocache.com/ffloresta/0fabb344-fe94-4107-9bc6-23f2fb663491/0919-(2).mp4",
             "alt": "Video principal",
@@ -74,17 +86,6 @@
             "alt": "Ganhe um kit de pontas e brocas",
             "action": {
               "href": "/179?map=productClusterIds&page=1"
-            }
-          }
-        },
-        {
-          "type": "image",
-          "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/7f901266-ac99-4026-8bf1-75daa5df0d34/banner-3.jpg",
-            "mobile": "https://assets.decocache.com/ffloresta/6159fe49-923e-4b55-afcc-ca9a09a26569/banner-3-mob.jpg",
-            "alt": "Eficiência em cada detalhe",
-            "action": {
-              "href": "/ferragens?filter.category-1=ferragens&filter.brand=rometal&page=1"
             }
           }
         },
