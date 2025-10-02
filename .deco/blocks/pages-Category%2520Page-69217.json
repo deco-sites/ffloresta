@@ -154,7 +154,7 @@
             "__resolveType": "website/matchers/pathname.ts",
             "case": {
               "type": "Includes",
-              "pathname": "/mes-verde-bosch"
+              "pathname": "/mes-bosch"
             }
           }
         },
