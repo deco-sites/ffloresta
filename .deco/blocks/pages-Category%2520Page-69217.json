@@ -2719,7 +2719,8 @@
               "altText": "Ferragens",
               "mobile": "https://assets.decocache.com/ffloresta/44d2b6db-4203-4956-893c-409df5151177/Prancheta-1_1-(2).png",
               "desktop": "https://assets.decocache.com/ffloresta/c40ec064-5a59-4372-a4cb-8afa869b7ecc/Prancheta-1_1-(3).png"
-            }
+            },
+            "title": "Teste"
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
