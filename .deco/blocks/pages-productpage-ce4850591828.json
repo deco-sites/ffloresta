@@ -119,7 +119,10 @@
               "image": "https://assets.decocache.com/ffloresta/0278081e-3117-4b8d-b5cc-67d5dd908528/image-(2).png",
               "countdownDate": "2025-10-25T23:59:59.999Z",
               "title": "CAMPANHA",
-              "promoName": "DESCONTO 50%"
+              "promoName": "DESCONTO 50%",
+              "displaySettings": {
+                "collectionIds": "176"
+              }
             },
             "benefits": [
               {
@@ -143,7 +146,8 @@
                 "benefitText": "<p><span style=\"font-size: 14px\">5 </span><strong><span style=\"font-size: 14px\">Lojas </span></strong><span style=\"font-size: 14px\">físicas:</span></p><p><span style=\"font-size: 14px\">Pinheiros, Brás, Santo André, Campinas e Sorocaba</span></p><p></p>"
               }
             ],
-            "storeId": 125156
+            "storeId": "125156",
+            "productBanners": []
           },
           "rule": {
             "__resolveType": "website/matchers/always.ts"
