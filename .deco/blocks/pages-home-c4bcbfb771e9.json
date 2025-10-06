@@ -55,19 +55,6 @@
           }
         },
         {
-          "type": "video",
-          "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/af6b5963-6066-4d01-bd5b-17b0126e6c4b/0919-(1).mp4",
-            "mobile": "https://assets.decocache.com/ffloresta/0fabb344-fe94-4107-9bc6-23f2fb663491/0919-(2).mp4",
-            "alt": "Video principal",
-            "action": {
-              "href": "https://www.ferragensfloresta.com.br/ferragens-de-projetos/blum/aventos?page=1"
-            },
-            "autoplay": true,
-            "loop": true
-          }
-        },
-        {
           "type": "image",
           "data": {
             "desktop": "https://assets.decocache.com/ffloresta/989f7490-a76f-4c39-af64-4d23779712a0/banner-1.jpg",
@@ -95,6 +82,16 @@
             "desktop": "https://assets.decocache.com/ffloresta/562ac08b-c305-4706-ba23-1e80d4ef9527/banner-4.jpg",
             "mobile": "https://assets.decocache.com/ffloresta/04935a85-09e1-4695-87d8-50532e1d1fd0/banner-4-mob.jpg",
             "alt": "frete gratis"
+          }
+        },
+        {
+          "type": "image",
+          "data": {
+            "desktop": "https://assets.decocache.com/ffloresta/cbbbfe83-2d69-41eb-a816-165bf6c230ac/Jador-1.jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/2d55a887-0cad-4e86-886e-30e132b5d705/Jador-2.jpg",
+            "action": {
+              "href": "https://www.ferragensfloresta.com.br/puxadores/jador?initialMap=c&initialQuery=puxadores&map=category-1%2Cbrand&page=1"
+            }
           }
         }
       ],
