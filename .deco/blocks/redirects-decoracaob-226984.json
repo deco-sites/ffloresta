@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/decoracao/banho-mais?PS=20",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

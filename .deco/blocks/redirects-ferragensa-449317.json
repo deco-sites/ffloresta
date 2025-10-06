@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/ferragens/area-de-servico/cestos-de-roupas/",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

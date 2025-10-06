@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/divisor-de-talheres-og-06-370mm-x-467mm-branco/p",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

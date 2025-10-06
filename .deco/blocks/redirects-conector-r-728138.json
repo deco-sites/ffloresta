@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/conector-reto-preto-link-12-unidades-rometal/p",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

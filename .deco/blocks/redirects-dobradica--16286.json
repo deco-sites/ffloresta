@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/dobradica--45-35mm-com-calco-8350/p",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/dobradica-metalla-clip-automatica-105-curva/p",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}
