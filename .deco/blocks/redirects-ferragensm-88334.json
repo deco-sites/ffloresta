@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/ferragens/marcenaria/dobradicas-de-copo/35mm/Reta/105/Amortecedor?PS=24&map=c,c,c,specificationFilter_127,specificationFilter_126,specificationFilter_128,specificationFilter_130",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

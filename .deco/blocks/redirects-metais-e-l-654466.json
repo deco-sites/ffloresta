@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/metais-e-loucas/banho/banho-mais",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

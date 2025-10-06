@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/puxador-moma-duplo-1500mm-inox-escovado-com-base-cromada-zen/p?idsku=12942",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/kit-ro-21-m-de-embutir-28397/p",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

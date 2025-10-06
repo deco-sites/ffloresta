@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/ponteira-facetato-pe-183-s7015-d-e-15mm-dourado-fosco-rometal/p",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

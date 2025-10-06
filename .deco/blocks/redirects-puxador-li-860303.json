@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/puxador-living-duplo-500mm-inox-escovado-e-cromado-zen/p",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

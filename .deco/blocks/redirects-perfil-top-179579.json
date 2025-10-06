@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/perfil-topo-rm-095-3-metros-inox-polido/p",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

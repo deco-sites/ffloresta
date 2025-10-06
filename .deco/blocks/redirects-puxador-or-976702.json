@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/puxador-orion-33mm-vecchio-turquesa/p",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}
