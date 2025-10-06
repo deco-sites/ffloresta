@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/gaveta-multiuso-inox-570mm-cozinha-28735/p",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

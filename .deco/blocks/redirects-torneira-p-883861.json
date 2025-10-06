@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/torneira-para-lavatorio-bica-alta-misturador-monocomando-giro-360-telca/p",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

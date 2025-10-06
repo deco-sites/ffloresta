@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/ferro-de-passar-roupas-blackdecker-vfa-cor-preto-e-prateado-220v/p/MLB15553603?pdp_filters=seller_id:320099593",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

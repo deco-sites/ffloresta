@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/kit-aventos-hl-20l125522-blum/p",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}
