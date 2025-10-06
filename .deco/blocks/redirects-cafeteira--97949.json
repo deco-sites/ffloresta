@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/cafeteira-mondial-dolce-arome-c-30-18x-semi-automatica-preta-de-filtro-127v/p/MLB18716122?pdp_filters=seller_id:320099593",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}
