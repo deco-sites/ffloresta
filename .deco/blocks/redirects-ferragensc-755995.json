@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/ferragens/cozinha/adegas?O=OrderByNameASC&PS=24",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

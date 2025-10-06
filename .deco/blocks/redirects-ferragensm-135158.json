@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/ferragens/marcenaria/dobradicas-de-copo/hafele/Aco/Amortecedor?O=OrderByReleaseDateDESC&PS=24&map=c,c,c,b,specificationFilter_129,specificationFilter_130",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

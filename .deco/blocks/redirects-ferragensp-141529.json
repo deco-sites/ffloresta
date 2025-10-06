@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/ferragens/p--porta/batedores?O=OrderByNameDESC&PS=24",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}
