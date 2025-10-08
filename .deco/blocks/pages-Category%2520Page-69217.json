@@ -2869,7 +2869,7 @@
             "__resolveType": "website/matchers/pathname.ts",
             "case": {
               "type": "Includes",
-              "pathname": "/fechaduras/eletronica"
+              "pathname": "/fechaduras"
             }
           }
         },

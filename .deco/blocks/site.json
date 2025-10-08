@@ -57,6 +57,11 @@
     },
     {
       "__resolveType": "website/loaders/redirects.ts"
+    },
+    {
+      "__resolveType": "website/loaders/redirectsFromCsv.ts",
+      "redirects": [],
+      "forcePermanentRedirects": true
     }
   ],
   "caching": {
