@@ -43,7 +43,10 @@ const OurStores = ({ ourStores }: Props) => {
               {store.name}
             </h2>
             <div class="flex flex-col lg:flex-row gap-9 items-center bg-white py-3 px-4 lg:px-8 border border-[#C2BFBF]">
-              <img src={store.cover} class="w-full" />
+              <img
+                src={store.cover}
+                class="w-full max-w-[311px] max-h-[200px] rounded-lg object-cover"
+              />
               <div>
                 <p class="flex items-start gap-4 text-[18px] mb-3">
                   <svg
@@ -82,10 +85,10 @@ const OurStores = ({ ourStores }: Props) => {
                 </p>
                 <p class="text-[16px] text-[#565656]">{store.address}</p>
               </div>
-              <div class="w-full flex flex-col items-center gap-3 lg:pl-9 border-t-[2px] lg:border-t-0 lg:border-l-[2px] border-[#3A4332] py-6">
+              <div class="w-fit flex flex-col items-center gap-3 lg:pl-9 border-t-[2px] lg:border-t-0 lg:border-l-[2px] border-[#3A4332] py-6">
                 <a
                   href={store.links.whatsapp}
-                  class="min-w-[230px] bg-[#3A4332] p-3 flex items-center justify-center gap-5 text-[14px] text-white w-full"
+                  class="min-w-[190px] max-w-[190px] bg-[#3A4332] p-3 flex items-center justify-center gap-5 text-[14px] text-white w-full"
                 >
                   <svg
                     width="18"
@@ -119,7 +122,7 @@ const OurStores = ({ ourStores }: Props) => {
                 </a>
                 <a
                   href={store.links.maps}
-                  class="min-w-[230px] bg-[#3A4332] p-3 flex items-center justify-center gap-5 text-[14px] text-white w-full"
+                  class="min-w-[190px] max-w-[190px] bg-[#3A4332] p-3 flex items-center justify-center gap-5 text-[14px] text-white w-full"
                 >
                   <svg
                     width="16"
@@ -139,7 +142,7 @@ const OurStores = ({ ourStores }: Props) => {
                 </a>
                 <a
                   href={store.links.coordinates}
-                  class="min-w-[230px] bg-[#3A4332] p-3 flex items-center justify-center gap-5 text-[14px] text-white w-full"
+                  class="min-w-[190px] max-w-[190px] bg-[#3A4332] p-3 flex items-center justify-center gap-5 text-[14px] text-white w-full"
                 >
                   <svg
                     width="29"

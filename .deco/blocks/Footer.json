@@ -56,33 +56,33 @@
       "title": "Social",
       "itens": [
         {
-          "alt": "Casa e Mercado",
-          "image": "https://assets.decocache.com/ffloresta/39fb75c9-e048-497b-87da-08678e864df4/casa_mercado.svg"
+          "alt": "Instagram",
+          "image": "https://assets.decocache.com/ffloresta/23660878-23f1-4c35-a8ef-5caf66fc8cb3/instagram-new-footer.svg",
+          "href": "https://www.instagram.com/ferragensfloresta/"
         },
         {
           "alt": "Facebook",
-          "href": "https://www.facebook.com/ferragensflorestaNovo/?locale=pt_BR",
-          "image": "https://assets.decocache.com/ffloresta/1733bfbe-6b7a-45b7-918e-2cf9fdcf6f4a/facebook-white.svg"
+          "image": "https://assets.decocache.com/ffloresta/28ee8bc8-a676-4457-8d6a-4e197a73ead1/facebook-new-footer.svg",
+          "href": "https://www.facebook.com/ferragensflorestaNovo/?locale=pt_BR"
         },
         {
-          "alt": "Instagram",
-          "href": "https://www.instagram.com/ferragensfloresta/",
-          "image": "https://assets.decocache.com/ffloresta/45b31e83-d4e5-4c9c-a552-13eb8155c7a3/instagram-white.svg"
+          "alt": "Youtube",
+          "image": "https://assets.decocache.com/ffloresta/794d406a-7698-4744-903e-fc535cd4611f/youtube-new-footer.svg",
+          "href": "https://www.youtube.com/@ferragensflorestaa"
         },
         {
           "alt": "TikTok",
           "href": "https://www.tiktok.com/@ferragens_floresta",
-          "image": "https://assets.decocache.com/ffloresta/d8ddfe19-c858-4bd9-a396-a33c0a11f12b/tiktok-white.svg"
+          "image": "https://assets.decocache.com/ffloresta/fb1fa408-3491-4c01-bb7a-e567c49bf2de/tiktok-new-footer.svg"
         },
         {
-          "alt": "Youtube",
-          "href": "https://www.youtube.com/@ferragensflorestaa",
-          "image": "https://assets.decocache.com/ffloresta/22e3b215-dfd2-42ef-9e09-abd5fd39d450/youtbe-white.svg"
+          "alt": "Casa e Mercado",
+          "image": "https://assets.decocache.com/ffloresta/9549e7a7-cc8a-4e94-8411-11340e1dcf03/pinterest-new-footer.svg"
         },
         {
           "alt": "Linkedin",
           "href": "https://www.linkedin.com/company/ferragens-floresta-ltda/posts/?feedView=all",
-          "image": "https://assets.decocache.com/ffloresta/bbe6a666-36c8-4693-bfa2-1f7399f9d765/linkedin-white.svg"
+          "image": "https://assets.decocache.com/ffloresta/627bd042-68da-44b2-b4a2-ce262cabe1c8/linkedin-new-footer.svg"
         }
       ]
     }
@@ -165,6 +165,50 @@
   "securitySeals": {
     "title": "Selos de Segurança",
     "showTrustvox": true,
-    "trustvoxAlignment": "left"
-  }
+    "trustvoxAlignment": "left",
+    "seals": [
+      {
+        "image": "https://assets.decocache.com/ffloresta/3e35b417-9319-4f41-a05e-701284d96859/image324.svg"
+      },
+      {
+        "image": "https://assets.decocache.com/ffloresta/c2e6ca0f-2778-444c-9bb4-99868d4ff9b5/Frame-28890.svg"
+      }
+    ]
+  },
+  "institutionalLinks": [
+    {
+      "title": "Sobre Nós",
+      "href": "/"
+    },
+    {
+      "title": "Nossas Lojas",
+      "href": "/"
+    },
+    {
+      "title": "Missão, Visão e Valores",
+      "href": "/"
+    },
+    {
+      "title": "Trabalhe Conosco",
+      "href": "/"
+    }
+  ],
+  "policyLinks": [
+    {
+      "title": "Política de Privacidade",
+      "href": "/"
+    },
+    {
+      "title": "Política de Cookies",
+      "href": "/"
+    },
+    {
+      "title": "Política de Trocas  e Devolução",
+      "href": "/"
+    },
+    {
+      "title": "Política de Entrega",
+      "href": "/"
+    }
+  ]
 }
