@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/puxador-radio-27mm-gold-com-diamond/p",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

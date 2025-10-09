@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/perfil-rm-257-touch--3-metros-supra-color/p",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

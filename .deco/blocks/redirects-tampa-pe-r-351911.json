@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/tampa-pe-rm-176-189-vazada-cromo-acetinado/p",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/jogo-de-serra-copo-64-a-127mm-8-pecas-mtx/p?idsku=9022",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

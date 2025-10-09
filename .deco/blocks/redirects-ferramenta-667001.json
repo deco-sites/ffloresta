@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/ferramentas/ferramentas-manuais/chaves/mtx?O=OrderByTopSaleDESC&PS=50",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

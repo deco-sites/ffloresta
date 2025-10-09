@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/ferragens/marcenaria/corredicas/40Kg/Aco/350MM/Amortecedor?O=OrderByNameDESC&PS=40&map=c,c,c,specificationFilter_122,specificationFilter_123,specificationFilter_124,specificationFilter_125",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

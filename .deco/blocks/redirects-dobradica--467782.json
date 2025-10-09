@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/dobradica-reforcada-1535-81kg-3-x-2-aco-antique/p",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/chaleira-eletrica-blackdecker-k2200-preta-220v-2l/p/MLB15796676?pdp_filters=seller_id:320099593",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

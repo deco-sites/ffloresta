@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/lamina-serra-tico-tico-clean-t128bhm-bosch/p",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

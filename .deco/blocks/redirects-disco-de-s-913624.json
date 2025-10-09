@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/disco-de-serra-circular-714-48d-iw14109-irwin/p/MLB22758710/specifications?modal=false",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

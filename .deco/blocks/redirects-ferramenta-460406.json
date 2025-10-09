@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/ferramentas/ferramentas-a-bateria/mondial?O=OrderByPriceASC&PS=24",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

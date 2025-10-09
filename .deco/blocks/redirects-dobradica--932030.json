@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/dobradica-tn-35mm-110-inox-slide-on-slow-super-curva--calco/p",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

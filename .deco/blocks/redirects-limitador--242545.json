@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/limitador-do-angulo-de-abertura-para-dobradica-107%C2%B0-blum/p",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

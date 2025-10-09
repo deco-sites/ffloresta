@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/saboneteira-woman-de-balcao-liquida-cromada-e-branca/p?idsku=4515",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

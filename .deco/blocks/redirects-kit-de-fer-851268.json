@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/kit-de-ferragens-para-cama-articulada-vertical-solteiro-prime-90x190cm-orangebed/p",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

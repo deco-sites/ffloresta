@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/ferragens/utilidades/aspiradores-de-po",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

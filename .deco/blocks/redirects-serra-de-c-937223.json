@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/serra-de-corte-rapido-14---2200w-127v-ssc22-br-stanley/p?idsku=1629",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

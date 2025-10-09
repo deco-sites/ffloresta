@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/organizador-de-gaveta-ambia-line-nogueira-com-preto-422mm-x-200mm/p",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

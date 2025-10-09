@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/kit-articolato-mais-2-folhas--dobradicas-3x2-rometal/p",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

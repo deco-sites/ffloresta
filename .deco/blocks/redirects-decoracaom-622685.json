@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/decoracao/mobiliario/mesas-laterais",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

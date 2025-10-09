@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/ferragens/cozinha/adegas/duler?O=OrderByNameDESC&PS=20",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

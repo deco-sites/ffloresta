@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/mop-giratorio-mop5010-8-litros-fit-balde-cabo-telescopico-flashlimp/p/MLB20778660?pdp_filters=seller_id:320099593",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

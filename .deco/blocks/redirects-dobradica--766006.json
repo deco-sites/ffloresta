@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/dobradica-fgv-165-click-slow-reta/p",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

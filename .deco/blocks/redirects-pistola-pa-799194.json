@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/pistola-para-pintura-tanque-alto-600ml-stels/p?idsku=12392",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/disco-serra-circular-optiline-wood-%C3%B8-184x15mm-24-dentes-bosch/p",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

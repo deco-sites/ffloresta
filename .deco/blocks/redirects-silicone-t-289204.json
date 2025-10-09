@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/silicone-tytan-uso-geral-bco-260g/p",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

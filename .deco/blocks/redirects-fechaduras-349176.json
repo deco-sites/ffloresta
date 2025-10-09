@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/fechaduras/imab?utmi_cp=Imab",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

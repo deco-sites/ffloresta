@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/ferragens/marcenaria/corredicas/25kg/500MM?O=OrderByPriceDESC&PS=40&map=c,c,c,specificationFilter_122,specificationFilter_124",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

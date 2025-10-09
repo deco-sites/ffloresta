@@ -43,25 +43,22 @@
       "preload": true,
       "slides": [
         {
-          "type": "video",
+          "type": "image",
           "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/8e08afc0-68c6-4a8c-9510-981ed2511ed9/9-(1).mp4",
-            "mobile": "https://assets.decocache.com/ffloresta/4ae34882-3b04-457b-8be8-da6f7550675a/9a.mp4",
+            "desktop": "https://assets.decocache.com/ffloresta/cbbbfe83-2d69-41eb-a816-165bf6c230ac/Jador-1.jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/2d55a887-0cad-4e86-886e-30e132b5d705/Jador-2.jpg",
             "action": {
-              "href": "/ferragens-de-projetos/rometal/coplanar?page=1"
-            },
-            "autoplay": true,
-            "loop": true
+              "href": "https://www.ferragensfloresta.com.br/puxadores/jador?initialMap=c&initialQuery=puxadores&map=category-1%2Cbrand&page=1"
+            }
           }
         },
         {
           "type": "video",
           "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/af6b5963-6066-4d01-bd5b-17b0126e6c4b/0919-(1).mp4",
-            "mobile": "https://assets.decocache.com/ffloresta/0fabb344-fe94-4107-9bc6-23f2fb663491/0919-(2).mp4",
-            "alt": "Video principal",
+            "desktop": "https://assets.decocache.com/ffloresta/d0976081-30a1-4066-87f8-2917736dab82/coplanar-1.mp4",
+            "mobile": "https://assets.decocache.com/ffloresta/8033580b-da0e-4f11-9e9b-e1ccbd8e8771/coplanar-2.mp4",
             "action": {
-              "href": "https://www.ferragensfloresta.com.br/ferragens-de-projetos/blum/aventos?page=1"
+              "href": "/ferragens-de-projetos/rometal/coplanar?page=1"
             },
             "autoplay": true,
             "loop": true
@@ -92,8 +89,8 @@
         {
           "type": "image",
           "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/562ac08b-c305-4706-ba23-1e80d4ef9527/banner-4.jpg",
-            "mobile": "https://assets.decocache.com/ffloresta/04935a85-09e1-4695-87d8-50532e1d1fd0/banner-4-mob.jpg",
+            "desktop": "https://assets.decocache.com/ffloresta/b44953b8-8bdc-4391-a19c-8b743ae38760/frete-gratis-1-a.jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/09f672ed-9f29-43cd-b5cf-0253e36e69e8/frete-gratis-2.jpg",
             "alt": "frete gratis"
           }
         }
@@ -162,8 +159,8 @@
         "__resolveType": "vtex/loaders/intelligentSearch/productSearchValidator.ts",
         "props": {
           "sort": "price:desc",
-          "collection": "176",
-          "count": 7
+          "collection": "181",
+          "count": 14
         }
       },
       "background": {

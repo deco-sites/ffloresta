@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/lista/construcao/aberturas/ferragens/puxadores-portas/alca-dupla_DisplayType_G",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

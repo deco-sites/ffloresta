@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/ferragens/p--porta/kits-aparente/rometal?PS=50",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

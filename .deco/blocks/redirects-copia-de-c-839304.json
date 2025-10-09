@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/copia-de-chave-europerfil-avulsa-keso/p",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

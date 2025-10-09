@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/ferragens/marcenaria/corredicas/hafele/Amortecedor/Aco/550MM?O=OrderByNameDESC&PS=24&map=c,c,c,b,specificationFilter_125,specificationFilter_123,specificationFilter_124",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

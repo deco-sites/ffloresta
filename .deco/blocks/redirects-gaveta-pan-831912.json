@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/gaveta-paneleiro-4533-inox-870mm/p",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

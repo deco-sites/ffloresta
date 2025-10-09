@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/Ferragens/Banheiros/Chuveiros",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

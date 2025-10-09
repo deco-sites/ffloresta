@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/monocomando-misturador-para-cozinha-yl2305b-preto-telca/p",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

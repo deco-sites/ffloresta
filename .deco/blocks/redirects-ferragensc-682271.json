@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/ferragens/cozinha/porta-condimentos/masutti/colunas",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}

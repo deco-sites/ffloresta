@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/torre-de-tomada-manual-20a-3-tomadas-cinza/p?idsku=8714",
+    "to": "/",
+    "type": "permanent"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}
