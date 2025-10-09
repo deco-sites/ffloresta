@@ -41,66 +41,57 @@ interface PaymentMethods {
   payments: PaymentMethodsItem[];
 }
 
-/** @titleBy alt */
-interface SecuritySealsItem {
-  alt?: string;
-  href?: string;
-  image: ImageWidget;
-}
-
 /** @titleBy title */
 interface SecuritySeals {
   title: string;
-  seals?: SecuritySealsItem[];
   showTrustvox?: boolean;
   trustvoxAlignment?: "left" | "center" | "right";
 }
 
+/** @titleBy title */
+interface LojasItens {
+  title: string;
+  tuor: string;
+  end: string;
+  tel: string;
+  horario: string;
+  tourUrl?: string;
+}
+
+/** @titleBy title */
+interface Lojas {
+  title: string;
+  lojas: LojasItens[];
+}
+
 interface Props {
-  logo?: ImageWidget;
-  logoLinha?: ImageWidget;
-  trademark?: string;
-  whatsAppLink?: string;
-  email?: string;
-  phone?: string;
-  businessHours?: string;
-  whatsappHours?: string;
-  institutionalLinks?: Item[];
-  policyLinks?: Item[];
+  links?: Link[];
   social?: Social[];
   paymentMethods?: PaymentMethods[];
   securitySeals?: SecuritySeals;
+  policies?: Item[];
+  logo?: ImageWidget;
+  logoLinha?: ImageWidget;
+  trademark?: string;
+  lojas?: Lojas;
+  whatsAppLink?: string;
 }
 
 function Footer({
-  logo,
-  logoLinha,
-  trademark,
-  whatsAppLink = "https://api.whatsapp.com/send?phone=551130936121&text=Ol%C3%A1,%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es",
-  email = "sac@ferragensforesta.com.br",
-  phone = "(11) 3093-6121",
-  businessHours = "Segunda a Sexta, das 8h às 17h",
-  whatsappHours = "Segunda a Sexta 08h as 17h | Sábado 08h as 13h",
-  institutionalLinks = [
-    { title: "Sobre Nós", href: "/sobre" },
-    { title: "Nossas Lojas", href: "/lojas" },
-    { title: "Missão, Visão e Valores", href: "/missao-visao-valores" },
-    { title: "Trabalhe Conosco", href: "/trabalhe-conosco" },
-  ],
-  policyLinks = [
-    { title: "Política de Privacidade", href: "/politica-privacidade" },
-    { title: "Política de Cookies", href: "/politica-cookies" },
-    { title: "Política de Trocas e Devolução", href: "/politica-trocas" },
-    { title: "Política de Entrega", href: "/politica-entrega" },
-  ],
+  links = [],
   social = [],
   paymentMethods = [],
   securitySeals = {
-    title: "Loja Segura",
-    seals: [],
+    title: "Selos de Segurança",
     showTrustvox: false,
     trustvoxAlignment: "left",
   },
+  logo,
+  logoLinha,
+  trademark,
+  lojas = { title: "", lojas: [] },
+  whatsAppLink =
+    "https://api.whatsapp.com/send?phone=551130936121&text=Ol%C3%A1,%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es",
 }: Props) {
   const device = useDevice();
   const isMobile = device === "mobile";
@@ -114,7 +105,8 @@ function Footer({
             type="text/javascript"
             src="//certificate.trustvox.com.br/widget.js"
             async
-          ></script>
+          >
+          </script>
         )}
         <Newsletter />
 
@@ -135,464 +127,137 @@ function Footer({
         )}
 
         <div class="w-full bg-[#3A4332]">
-          <div class="container flex flex-col w-full lg:pt-[72px] lg:pb-10">
-            {/* Logo Section */}
+          <div class="container flex flex-col lg:p-[4%] w-full p-5">
+            <div class="w-full pb-[30px]">
+              {logo && (
+                <Image
+                  src={logo}
+                  alt="Logo"
+                  loading="lazy"
+                  class="max-w-[250px]"
+                  width={isMobile ? 120 : 300}
+                  height={100}
+                />
+              )}
+            </div>
 
-            {/* Desktop Layout - 5 Columns */}
-            {!isMobile ? (
-              <div class="flex flex-col lg:grid lg:grid-cols-5 justify-between gap-3">
-                {/* Coluna 1 - Contato */}
-                <div class="flex flex-col gap-4">
+            <div class="flex flex-col sm:grid sm:grid-flow-row lg:grid-cols-2 gap-6">
+              {isMobile
+                ? (
                   <div>
-                    <div class="w-full">
-                      {logo && (
-                        <Image
-                          src={logo}
-                          alt="Logo"
-                          loading="lazy"
-                          class="max-w-[200px]"
-                          width={isMobile ? 200 : 300}
-                        />
-                      )}
-                    </div>
-                  </div>
-                  <div class="flex flex-col gap-1">
-                    <div>
-                      <p class="text-white text-[14px] font-bold italic">
-                        SAC:
-                      </p>
-                      <a
-                        href={`mailto:${email}`}
-                        class="text-white text-[14px] hover:underline"
-                      >
-                        {email}
-                      </a>
-                    </div>
-                    <div>
-                      <p class="text-white text-[14px] font-bold italic">
-                        Horário de atendimento:
-                      </p>
-                      <p class="text-white text-[14px]">{businessHours}</p>
-                    </div>
-                    <div>
-                      <p class="text-white text-[14px] font-bold italic">
-                        Telefone:
-                      </p>
-                      <a
-                        href={`tel:${phone}`}
-                        class="text-white text-[14px] hover:underline"
-                      >
-                        {phone}
-                      </a>
-                    </div>
-                  </div>
-
-                  {/* WhatsApp Section */}
-                  <div class="flex items-center gap-3">
-                    <svg
-                      width="25"
-                      height="26"
-                      viewBox="0 0 25 26"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M12.3445 23.0764C10.548 23.0764 8.86666 22.5913 7.41983 21.744C7.28316 21.6677 7.15157 21.5863 7.0238 21.5011L3.07745 22.5526L4.12887 18.6069C3.13275 17.0742 2.55428 15.2485 2.55428 13.2861C2.55428 7.88852 6.94688 3.49592 12.3445 3.49592C17.7421 3.49592 22.1347 7.88852 22.1347 13.2861C22.1347 18.6838 17.7421 23.0764 12.3445 23.0764ZM11.9332 0.948081C5.58079 1.15468 0.334453 6.2993 0.0159738 12.6473C-0.0984501 14.9358 0.406286 17.099 1.38779 18.9775L0.00898018 25.1532C-0.0495031 25.4329 0.19778 25.6802 0.477483 25.6217L6.65319 24.2429H6.65764C8.52275 25.2174 10.6637 25.7221 12.9351 25.6166C19.2729 25.3235 24.434 20.116 24.6794 13.7763C24.9572 6.59553 19.1038 0.71542 11.9332 0.948081Z"
-                        fill="#DAEFAE"
-                      />
-                      <path
-                        d="M18.1504 17.5963C17.9794 17.8524 17.8001 18.0915 17.5147 18.3775C16.8873 19.0043 16.0164 19.3202 15.1328 19.2306C13.5499 19.0685 11.3009 18.1938 9.36709 16.2645C7.43397 14.3314 6.55926 12.0823 6.40097 10.4988C6.31134 9.6152 6.62728 8.74494 7.2547 8.11751C7.54076 7.83145 7.77978 7.65219 8.03596 7.47738C8.50955 7.15699 9.15414 7.37058 9.3334 7.90837L9.9818 9.85421C10.1611 10.3882 10.0797 10.7251 9.84958 10.9514L9.33276 11.472C9.07658 11.7282 9.03399 12.1255 9.23042 12.4326C9.51648 12.8807 10.0543 13.5978 11.044 14.5875C12.0344 15.5779 12.7515 16.1157 13.1997 16.4018C13.5067 16.5982 13.9034 16.555 14.1595 16.2995L14.6808 15.7826C14.9071 15.5519 15.244 15.4712 15.7774 15.6504L17.7238 16.2988C18.2616 16.4781 18.4746 17.1227 18.1504 17.5963Z"
-                        fill="#DAEFAE"
-                      />
-                    </svg>
-
-                    <div>
-                      <a
-                        href={whatsAppLink}
-                        class="text-[#DAEFAE] italic text-[14px] hover:underline"
-                      >
-                        <strong>Compre pelo Whatsapp:</strong> {phone}
-                      </a>
-                    </div>
-                  </div>
-                  <div>
-                    <p class="text-white text-[14px] font-bold italic">
-                      Horário de atendimento:
-                    </p>
-                    <p class="text-white text-[12px]">{whatsappHours}</p>
-                  </div>
-                </div>
-
-                {/* Coluna 2 - Institucional */}
-                <div class="flex flex-col gap-4">
-                  <SectionTitle title="Institucional" />
-                  <div class="flex flex-col gap-3">
-                    {institutionalLinks.map((link, index) => (
-                      <a
-                        key={index}
-                        href={link.href}
-                        class="text-white text-[14px] hover:underline"
-                      >
-                        {link.title}
-                      </a>
+                    {links.map(({ title, itens }, index) => (
+                      <AccordionItem key={title + index} title={title}>
+                        <div class="flex flex-col gap-[12px] mt-2 mb-[20px]">
+                          {itens.map(({ title, href }, idx) => (
+                            <a
+                              key={title + idx}
+                              class="font-normal text-[14px] text-white"
+                              href={href}
+                            >
+                              {title}
+                            </a>
+                          ))}
+                        </div>
+                      </AccordionItem>
                     ))}
                   </div>
-
-                  {/* Minha Conta */}
-                  <div class="mt-4">
-                    <div class="flex items-center gap-[10px] border-t border-white pt-4">
-                      <svg
-                        width="26"
-                        height="26"
-                        viewBox="0 0 26 26"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M23.1575 12.5371C23.1575 6.66633 18.3983 1.90651 12.5276 1.90625C6.65665 1.90625 1.89673 6.66617 1.89673 12.5371C1.89699 18.4078 6.65681 23.167 12.5276 23.167C18.3981 23.1667 23.1572 18.4077 23.1575 12.5371ZM25.0637 12.5371C25.0635 19.4609 19.4514 25.073 12.5276 25.0732C5.60356 25.0732 -0.00926225 19.4611 -0.00952148 12.5371C-0.00952148 5.61293 5.6034 0 12.5276 0C19.4516 0.000259241 25.0637 5.61309 25.0637 12.5371Z"
-                          fill="#DAEFAE"
-                        />
-                        <path
-                          d="M15.7289 11.1262C15.7289 12.8946 14.2954 14.3281 12.5269 14.3281C10.7584 14.3281 9.32495 12.8946 9.32495 11.1262C9.32495 9.35768 10.7584 7.9242 12.5269 7.9242C14.2954 7.9242 15.7289 9.35768 15.7289 11.1262Z"
-                          fill="#DAEFAE"
-                        />
-                        <path
-                          d="M12.5268 24.1211C15.6944 24.1211 18.5626 22.8472 20.6534 20.7863C18.8436 18.248 15.8819 16.5869 12.5268 16.5869C9.17162 16.5869 6.20995 18.248 4.40015 20.7863C6.49092 22.8472 9.35915 24.1211 12.5268 24.1211Z"
-                          fill="#DAEFAE"
-                        />
-                      </svg>
-
-                      <a
-                        href="/minha-conta"
-                        class="text-[#DAEFAE] italic text-[14px] font-bold hover:underline"
-                      >
-                        Minha conta
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Coluna 3 - Políticas */}
-                <div class="flex flex-col gap-4">
-                  <SectionTitle title="Políticas" />
-                  <div class="flex flex-col gap-3">
-                    {policyLinks.map((link, index) => (
-                      <a
-                        key={index}
-                        href={link.href}
-                        class="text-white text-[14px] hover:underline"
-                      >
-                        {link.title}
-                      </a>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Coluna 4 - Redes Sociais */}
-                <div class="flex flex-col gap-4">
-                  <SectionTitle title="Redes Sociais" />
-                  <div class="flex flex-row flex-wrap gap-3">
-                    {social.map(({ itens }) =>
-                      itens.map((item, index) => (
-                        <a
-                          key={index}
-                          href={item.href}
-                          class="flex items-center justify-center"
-                        >
-                          <Image
-                            src={item.image}
-                            alt={item.alt || "Rede Social"}
-                            loading="lazy"
-                            width={40}
-                            height={40}
-                            class="max-w-[40px] max-h-[40px]"
-                          />
-                        </a>
-                      ))
-                    )}
-                  </div>
-                </div>
-
-                {/* Coluna 5 - Pagamentos e Segurança */}
-                <div class="flex flex-col gap-6">
-                  {/* Formas de Pagamento */}
-                  <div>
-                    <SectionTitle title="Formas de Pagamento" />
-                    <div class="flex flex-wrap gap-2 mt-3">
-                      {paymentMethods.map(({ payments }) =>
-                        payments.map((payment, index) => (
-                          <a key={index} href={payment.href} class="mb-2">
-                            <Image
-                              src={payment.image}
-                              alt={payment.alt || "Forma de Pagamento"}
-                              loading="lazy"
-                              width={50}
-                              height={30}
-                            />
-                          </a>
-                        ))
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Loja Segura */}
-                  {securitySeals && (
-                    <div>
-                      <SectionTitle title={securitySeals.title} />
-
-                      {/* Selos de Segurança - Lista de Imagens */}
-                      {securitySeals.seals &&
-                        securitySeals.seals.length > 0 && (
-                          <div class="flex flex-wrap gap-2 mt-3">
-                            {securitySeals.seals.map((seal, index) => (
-                              <a key={index} href={seal.href} class="mb-2">
-                                <Image
-                                  src={seal.image}
-                                  alt={seal.alt || "Selo de Segurança"}
-                                  loading="lazy"
-                                />
-                              </a>
-                            ))}
-                          </div>
-                        )}
-
-                      {/* TrustVox */}
-                      <div
-                        class={`mt-3 flex ${
-                          securitySeals.trustvoxAlignment === "center"
-                            ? "justify-center"
-                            : securitySeals.trustvoxAlignment === "right"
-                            ? "justify-end"
-                            : "justify-start"
-                        }`}
-                      >
-                        {securitySeals.showTrustvox && (
-                          <div
-                            data-trustvox-certificate-fixed="data-trustvox-certificate-fixed"
-                            class="trustvox-seal"
-                            style="transform: scale(1.2); transform-origin: center; margin: 5px;"
-                          ></div>
-                        )}
+                )
+                : (
+                  <div class="grid grid-flow-row sm:grid-flow-col gap-6">
+                    {links.map(({ title, itens }, index) => (
+                      <div key={title + index} class="flex flex-col gap-[18px]">
+                        <SectionTitle title={title} />
+                        <div class="flex flex-col gap-[18px]">
+                          {itens.map(({ title, href }, idx) => (
+                            <a
+                              key={title + idx}
+                              class="font-normal text-[14px] text-white"
+                              href={href}
+                            >
+                              {title}
+                            </a>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  )}
-                </div>
-              </div>
-            ) : (
-              /* Mobile Layout - Dropdowns */
-              <div class="flex flex-col gap-4 pt-6">
-                {/* Dropdown Atendimento */}
+                    ))}
+                  </div>
+                )}
+
+              <div class="flex flex-col sm:flex-row gap-12 justify-between items-start">
                 <div class="w-full">
-                  {logo && (
-                    <Image
-                      src={logo}
-                      alt="Logo"
-                      loading="lazy"
-                      class="max-w-[200px]"
-                      width={isMobile ? 200 : 300}
-                    />
-                  )}
-                </div>
-                <AccordionItem title="Atendimento">
-                  <div class="flex flex-col gap-3 mt-3">
-                    <div>
-                      <p class="text-white text-[14px] font-bold italic">
-                        SAC:
-                      </p>
-                      <a
-                        href={`mailto:${email}`}
-                        class="text-white text-[14px] hover:underline"
-                      >
-                        {email}
-                      </a>
-                    </div>
-                    <div>
-                      <p class="text-white text-[14px] font-bold italic">
-                        Horário de atendimento:
-                      </p>
-                      <p class="text-white text-[14px]">{businessHours}</p>
-                    </div>
-                    <div>
-                      <p class="text-white text-[14px] font-bold italic">
-                        Telefone:
-                      </p>
-                      <a
-                        href={`tel:${phone}`}
-                        class="text-white text-[14px] hover:underline"
-                      >
-                        {phone}
-                      </a>
-                    </div>
-
-                    {/* WhatsApp Section Mobile */}
-                    <div class="flex items-center gap-3 mt-4">
-                      <svg
-                        width="25"
-                        height="26"
-                        viewBox="0 0 25 26"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M12.3445 23.0764C10.548 23.0764 8.86666 22.5913 7.41983 21.744C7.28316 21.6677 7.15157 21.5863 7.0238 21.5011L3.07745 22.5526L4.12887 18.6069C3.13275 17.0742 2.55428 15.2485 2.55428 13.2861C2.55428 7.88852 6.94688 3.49592 12.3445 3.49592C17.7421 3.49592 22.1347 7.88852 22.1347 13.2861C22.1347 18.6838 17.7421 23.0764 12.3445 23.0764ZM11.9332 0.948081C5.58079 1.15468 0.334453 6.2993 0.0159738 12.6473C-0.0984501 14.9358 0.406286 17.099 1.38779 18.9775L0.00898018 25.1532C-0.0495031 25.4329 0.19778 25.6802 0.477483 25.6217L6.65319 24.2429H6.65764C8.52275 25.2174 10.6637 25.7221 12.9351 25.6166C19.2729 25.3235 24.434 20.116 24.6794 13.7763C24.9572 6.59553 19.1038 0.71542 11.9332 0.948081Z"
-                          fill="#DAEFAE"
-                        />
-                        <path
-                          d="M18.1504 17.5963C17.9794 17.8524 17.8001 18.0915 17.5147 18.3775C16.8873 19.0043 16.0164 19.3202 15.1328 19.2306C13.5499 19.0685 11.3009 18.1938 9.36709 16.2645C7.43397 14.3314 6.55926 12.0823 6.40097 10.4988C6.31134 9.6152 6.62728 8.74494 7.2547 8.11751C7.54076 7.83145 7.77978 7.65219 8.03596 7.47738C8.50955 7.15699 9.15414 7.37058 9.3334 7.90837L9.9818 9.85421C10.1611 10.3882 10.0797 10.7251 9.84958 10.9514L9.33276 11.472C9.07658 11.7282 9.03399 12.1255 9.23042 12.4326C9.51648 12.8807 10.0543 13.5978 11.044 14.5875C12.0344 15.5779 12.7515 16.1157 13.1997 16.4018C13.5067 16.5982 13.9034 16.555 14.1595 16.2995L14.6808 15.7826C14.9071 15.5519 15.244 15.4712 15.7774 15.6504L17.7238 16.2988C18.2616 16.4781 18.4746 17.1227 18.1504 17.5963Z"
-                          fill="#DAEFAE"
-                        />
-                      </svg>
-
-                      <div>
-                        <a
-                          href={whatsAppLink}
-                          class="text-[#DAEFAE] italic text-[14px] hover:underline"
-                        >
-                          <strong>Compre pelo Whatsapp:</strong> {phone}
-                        </a>
-                      </div>
-                    </div>
-                    <div>
-                      <p class="text-white text-[14px] font-bold italic">
-                        Horário de atendimento:
-                      </p>
-                      <p class="text-white text-[12px]">{whatsappHours}</p>
-                    </div>
-                  </div>
-                </AccordionItem>
-
-                {/* Dropdown Institucional */}
-                <AccordionItem title="Institucional">
-                  <div class="flex flex-col gap-3 mt-3">
-                    {institutionalLinks.map((link, index) => (
-                      <a
-                        key={index}
-                        href={link.href}
-                        class="text-white text-[14px] hover:underline"
-                      >
-                        {link.title}
-                      </a>
-                    ))}
-
-                    {/* Minha Conta Mobile */}
-                    <div class="flex items-center gap-[10px] border-t border-white pt-4 mt-4">
-                      <svg
-                        width="26"
-                        height="26"
-                        viewBox="0 0 26 26"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M23.1575 12.5371C23.1575 6.66633 18.3983 1.90651 12.5276 1.90625C6.65665 1.90625 1.89673 6.66617 1.89673 12.5371C1.89699 18.4078 6.65681 23.167 12.5276 23.167C18.3981 23.1667 23.1572 18.4077 23.1575 12.5371ZM25.0637 12.5371C25.0635 19.4609 19.4514 25.073 12.5276 25.0732C5.60356 25.0732 -0.00926225 19.4611 -0.00952148 12.5371C-0.00952148 5.61293 5.6034 0 12.5276 0C19.4516 0.000259241 25.0637 5.61309 25.0637 12.5371Z"
-                          fill="#DAEFAE"
-                        />
-                        <path
-                          d="M15.7289 11.1262C15.7289 12.8946 14.2954 14.3281 12.5269 14.3281C10.7584 14.3281 9.32495 12.8946 9.32495 11.1262C9.32495 9.35768 10.7584 7.9242 12.5269 7.9242C14.2954 7.9242 15.7289 9.35768 15.7289 11.1262Z"
-                          fill="#DAEFAE"
-                        />
-                        <path
-                          d="M12.5268 24.1211C15.6944 24.1211 18.5626 22.8472 20.6534 20.7863C18.8436 18.248 15.8819 16.5869 12.5268 16.5869C9.17162 16.5869 6.20995 18.248 4.40015 20.7863C6.49092 22.8472 9.35915 24.1211 12.5268 24.1211Z"
-                          fill="#DAEFAE"
-                        />
-                      </svg>
-
-                      <a
-                        href="/minha-conta"
-                        class="text-[#DAEFAE] italic text-[14px] font-bold hover:underline"
-                      >
-                        Minha conta
-                      </a>
-                    </div>
-                  </div>
-                </AccordionItem>
-
-                {/* Dropdown Políticas */}
-                <AccordionItem title="Políticas">
-                  <div class="flex flex-col gap-3 mt-3">
-                    {policyLinks.map((link, index) => (
-                      <a
-                        key={index}
-                        href={link.href}
-                        class="text-white text-[14px] hover:underline"
-                      >
-                        {link.title}
-                      </a>
-                    ))}
-                  </div>
-                </AccordionItem>
-
-                {/* Seções que não são dropdowns no mobile */}
-                <div class="flex flex-col gap-6">
-                  {/* Redes Sociais */}
-                  <div class="flex flex-col gap-4">
-                    <SectionTitle title="Redes Sociais" />
-                    <div class="flex flex-row lg:grid lg:grid-cols-3 gap-3">
-                      {social.map(({ itens }) =>
-                        itens.map((item, index) => (
+                  {social.map(({ title, itens }, index) => (
+                    <div class="w-full" key={title + index}>
+                      <SectionTitle title={title} showDivider={!isMobile} />
+                      <div class="flex items-center lg:flex-col gap-[15px] lg:max-w-[210px] mt-[20px]">
+                        {itens.length > 0 && (
                           <a
-                            key={index}
-                            href={item.href}
-                            class="flex items-center justify-center"
+                            href={itens[0].href}
+                            class="w-full max-w-[50%] min-w-[50%]"
                           >
                             <Image
-                              src={item.image}
-                              alt={item.alt || "Rede Social"}
+                              src={itens[0].image}
+                              alt={itens[0].alt}
                               loading="lazy"
-                              width={40}
-                              height={40}
-                              class="max-w-[40px] max-h-[40px]"
+                              width="100%"
+                              height="auto"
+                              class="w-full"
                             />
                           </a>
-                        ))
-                      )}
-                    </div>
-                  </div>
+                        )}
 
-                  {/* Formas de Pagamento */}
-                  <div>
-                    <SectionTitle title="Formas de Pagamento" />
-                    <div class="flex flex-wrap gap-2 mt-3">
-                      {paymentMethods.map(({ payments }) =>
-                        payments.map((payment, index) => (
-                          <a key={index} href={payment.href} class="mb-2">
-                            <Image
-                              src={payment.image}
-                              alt={payment.alt || "Forma de Pagamento"}
-                              loading="lazy"
-                              width={50}
-                              height={30}
-                            />
-                          </a>
-                        ))
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Loja Segura */}
-                  {securitySeals && (
-                    <div>
-                      <SectionTitle title={securitySeals.title} />
-
-                      {/* Selos de Segurança - Lista de Imagens */}
-                      {securitySeals.seals &&
-                        securitySeals.seals.length > 0 && (
-                          <div class="flex flex-wrap gap-2 mt-3">
-                            {securitySeals.seals.map((seal, index) => (
-                              <a key={index} href={seal.href} class="mb-2">
+                        {itens.length > 1 && (
+                          <div class="grid grid-cols-3 gap-[10px]">
+                            {itens.slice(1).map(({ image, alt, href }, idx) => (
+                              <a key={idx} href={href} class="">
                                 <Image
-                                  src={seal.image}
-                                  alt={seal.alt || "Selo de Segurança"}
+                                  src={image}
+                                  alt={alt}
                                   loading="lazy"
+                                  width={50}
+                                  height={50}
+                                  class="w-full h-auto max-w-[50px] max-h-[50px]"
                                 />
                               </a>
                             ))}
                           </div>
                         )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
 
-                      {/* TrustVox */}
+                <div class="flex flex-col gap-6">
+                  {/* Métodos de Pagamento */}
+                  <div class="flex flex-wrap gap-2">
+                    {paymentMethods.map(({ title, payments }, index) => (
+                      <div key={title + index}>
+                        <SectionTitle title={title} showDivider={!isMobile} />
+                        <div class="flex flex-wrap max-w-[300px] lg:max-w-[360px] mt-[20px]">
+                          {payments.map(({ image, alt, href }, idx) => (
+                            <a key={idx} href={href} class="mb-[15px] mr-[5px]">
+                              <Image
+                                src={image}
+                                alt={alt}
+                                loading="lazy"
+                                width={isMobile ? 46 : 65}
+                                height={isMobile ? 32 : 44}
+                              />
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Selos de Segurança */}
+                  {securitySeals && (
+                    <div>
+                      <SectionTitle
+                        title={securitySeals.title}
+                        showDivider={!isMobile}
+                      />
                       <div
-                        class={`mt-3 flex ${
+                        class={`mt-[20px] flex ${
                           securitySeals.trustvoxAlignment === "center"
                             ? "justify-center"
                             : securitySeals.trustvoxAlignment === "right"
@@ -604,22 +269,147 @@ function Footer({
                           <div
                             data-trustvox-certificate-fixed="data-trustvox-certificate-fixed"
                             class="trustvox-seal"
-                            style="transform: scale(1.2); transform-origin: center; margin: 5px;"
-                          ></div>
+                            style="transform: scale(1.5); transform-origin: center; margin: 10px;"
+                          >
+                          </div>
                         )}
                       </div>
                     </div>
                   )}
                 </div>
               </div>
+            </div>
+
+            {/* Seção de Lojas com dropdown apenas no mobile */}
+            <div>
+              {isMobile
+                ? (
+                  <div class="mt-6">
+                    <details class="group">
+                      <summary class="font-bold text-[16px] text-white cursor-pointer flex justify-between items-center min-h-[48px] list-none">
+                        <span>{lojas.title}</span>
+                        <svg
+                          width="12"
+                          height="7"
+                          viewBox="0 0 12 7"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="transform group-open:rotate-180 transition-transform duration-300"
+                        >
+                          <path
+                            d="M0.52124 0.966797C0.537437 0.755898 0.622525 0.570573 0.775146 0.417969L0.842529 0.357422C1.00278 0.224673 1.19303 0.157278 1.40796 0.157227C1.62312 0.157227 1.814 0.224465 1.97436 0.357422L2.04077 0.417969L6.00757 4.38574L9.97534 0.417968L10.0408 0.359375C10.1973 0.230598 10.3865 0.165388 10.6013 0.162109L10.6931 0.165039C10.8737 0.17901 11.0351 0.24329 11.1736 0.357421L11.241 0.417968C11.4141 0.591095 11.5026 0.805113 11.5027 1.05078C11.5027 1.26578 11.4353 1.45689 11.3025 1.61719L11.241 1.68457L6.74683 6.17871C6.66749 6.25802 6.58242 6.32291 6.49097 6.37012L6.39722 6.41113C6.27539 6.45627 6.14515 6.47848 6.00854 6.47852C5.87192 6.47852 5.74172 6.45623 5.61987 6.41113L5.52612 6.37012C5.43441 6.32286 5.34882 6.25824 5.26929 6.17871L0.775146 1.68457L0.716553 1.61914C0.587624 1.46258 0.522622 1.27346 0.519287 1.05859L0.52124 0.966797Z"
+                            fill="#ffffff"
+                            stroke="white"
+                            stroke-width="0.3"
+                          />
+                        </svg>
+                      </summary>
+                      <div class="flex flex-col gap-y-[10px] mt-4">
+                        {lojas.lojas.map((loja, idx) => (
+                          <div key={idx} class="mb-4">
+                            <p class="text-white text-[14px]">{loja.title}</p>
+                            {loja.tourUrl
+                              ? (
+                                <a
+                                  href={loja.tourUrl}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  class="text-white text-[12px] font-bold underline hover:text-gray-300 transition-colors"
+                                >
+                                  {loja.tuor}
+                                </a>
+                              )
+                              : (
+                                <p class="text-white text-[12px] font-bold underline">
+                                  {loja.tuor}
+                                </p>
+                              )}
+                            <p class="text-white text-[12px]">{loja.end}</p>
+                            <div class="flex flex-row flex-wrap">
+                              <p class="text-white text-[12px] font-bold">
+                                TELEFONE:
+                              </p>
+                              <p class="text-white text-[12px] ml-1">
+                                {loja.tel}
+                              </p>
+                            </div>
+                            <div>
+                              <p class="text-white text-[12px] font-bold underline">
+                                HORÁRIO DE ATENDIMENTO
+                              </p>
+                              <p class="text-white text-[12px]">
+                                {loja.horario}
+                              </p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </details>
+                  </div>
+                )
+                : (
+                  <>
+                    <p class="font-bold text-[16px] text-white mb-[30px] mt-[50px]">
+                      {lojas.title}
+                    </p>
+                    <div class="grid grid-cols-1 lg:grid-cols-5 gap-x-[20px]">
+                      {lojas.lojas.map((loja, idx) => (
+                        <div key={idx} class="flex flex-col gap-y-[10px] mb-6">
+                          <p class="text-white text-[16px]">{loja.title}</p>
+                          {loja.tourUrl
+                            ? (
+                              <a
+                                href={loja.tourUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-white text-[14px] font-bold underline hover:text-gray-300 transition-colors"
+                              >
+                                {loja.tuor}
+                              </a>
+                            )
+                            : (
+                              <p class="text-white text-[14px] font-bold underline">
+                                {loja.tuor}
+                              </p>
+                            )}
+                          <p class="text-white text-[14px] min-h-[64px]">
+                            {loja.end}
+                          </p>
+                          <div class="flex flex-row flex-wrap">
+                            <p class="text-white text-[14px] font-bold">
+                              TELEFONE:
+                            </p>
+                            <p class="text-white text-[14px] ml-1">
+                              {loja.tel}
+                            </p>
+                          </div>
+                          <div>
+                            <p class="text-white text-[14px] font-bold underline">
+                              HORÁRIO DE ATENDIMENTO
+                            </p>
+                            <p class="text-white text-[14px]">{loja.horario}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </>
+                )}
+            </div>
+
+            {!isMobile && (
+              <hr class="w-full text-base-400 mt-[50px] bg-[#A3A3A3] h-[2px]" />
             )}
 
-            <div class="flex flex-col gap-6 items-center justify-between mt-[30px] lg:mt-16">
+            <div class="flex flex-col lg:flex-row items-center justify-between mt-[30px] lg:mt-4">
+              <div class="flex flex-nowrap items-center justify-between sm:justify-center gap-4">
+                <span class="text-xs font-normal text-center lg:text-start text-base-400 text-white">
+                  {trademark}
+                </span>
+              </div>
+
               <div class="flex flex-row items-start gap-4 mt-4 lg:mt-0">
                 <div class="flex flex-col items-center justify-center gap-4">
-                  <span class="text-[10px] font-normal text-white">
-                    Powered by
-                  </span>
+                  <span class="text-sm font-normal text-white">Powered by</span>
                   <svg
                     width="69"
                     height="25"
@@ -636,7 +426,7 @@ function Footer({
                   </svg>
                 </div>
                 <div class="flex flex-col items-center justify-center gap-4">
-                  <span class="text-[10px] font-normal text-white">
+                  <span class="text-sm font-normal text-base-400 text-white">
                     Developed by
                   </span>
                   <a href="https://agenciaalmah.com.br/">
@@ -674,11 +464,6 @@ function Footer({
                   </a>
                 </div>
               </div>
-              <div class="pb-5 lg:pb-0flex flex-nowrap items-center justify-between sm:justify-center gap-4">
-                <span class="text-xs font-normal text-center lg:text-start text-base-400 text-white">
-                  {trademark}
-                </span>
-              </div>
             </div>
           </div>
         </div>
@@ -703,7 +488,7 @@ const SectionTitle = ({
   </div>
 );
 
-// Componente Auxiliar para Itens de Acordeão (usado apenas para mobile)
+// Componente Auxiliar para Itens de Acordeão (usado apenas para links)
 const AccordionItem = ({
   title,
   children,
@@ -713,7 +498,7 @@ const AccordionItem = ({
   children: preact.ComponentChildren;
   class?: string;
 }) => (
-  <details class={`flex flex-col gap-[12px] ${className}`}>
+  <details open class={`flex flex-col gap-[12px] ${className}`}>
     <summary class="font-normal text-[16px] text-white cursor-pointer flex justify-between items-center min-h-[48px] list-none">
       <span>{title}</span>
       <svg
