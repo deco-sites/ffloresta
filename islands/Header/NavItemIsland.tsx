@@ -34,10 +34,11 @@ const scrollbarStyles = `
 
 export default function NavItemIsland({ navItems }: Props) {
   const [hoveredItem, setHoveredItem] = useState<SiteNavigationElement | null>(
-    null
+    null,
   );
-  const [hoveredSubItem, setHoveredSubItem] =
-    useState<SiteNavigationElement | null>(null);
+  const [hoveredSubItem, setHoveredSubItem] = useState<
+    SiteNavigationElement | null
+  >(null);
   const [menuPosition, setMenuPosition] = useState({ left: 0, adjustX: 0 });
   const containerRef = useRef<HTMLDivElement>(null);
   const submenuRef = useRef<HTMLDivElement>(null);
