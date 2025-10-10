@@ -1,0 +1,110 @@
+{
+  "name": "Nossas Lojas",
+  "path": "/nossas-lojas",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Header With Menus"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Images/Carousel.tsx",
+        "slides": [
+          {
+            "type": "image",
+            "data": {
+              "desktop": "https://assets.decocache.com/ffloresta/3149daf9-a7ca-48cb-80e4-0eb33171a980/companypageconfiguration_960f5ba2-d244-45bd-8091-d32f4f10ffd0-1.png",
+              "mobile": "https://assets.decocache.com/ffloresta/fa2bcafb-9903-4037-9573-df8811a4f0e1/companypageconfiguration_960f5ba2-d244-45bd-8091-d32f4f10ffd0-1-(1).png",
+              "alt": "Nossas Lojas"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/OurStores.tsx",
+        "ourStores": {
+          "title": "Nossas Lojas",
+          "description": "A floresta é o ponto de encontro dos profissionais da marcenaria, da arquitetura, da decoração junto ao consumidor final.  ",
+          "stores": [
+            {
+              "links": {
+                "whatsapp": "/",
+                "maps": "/",
+                "coordinates": "/"
+              },
+              "name": "Loja Pinheiros",
+              "cover": "https://assets.decocache.com/ffloresta/fa3a3b85-d777-4a1a-b659-e86088c076e4/image172.png",
+              "storeName": "Ferragens Floresta Pinheiros",
+              "workingHours": "De Segunda a Sexta das 8h às 17h Sábado das 9h às 13h",
+              "address": "R. Pais Leme, 238 - Pinheiros, São Paulo - SP, 05424-010"
+            },
+            {
+              "links": {
+                "whatsapp": "/",
+                "maps": "/",
+                "coordinates": "/"
+              },
+              "name": "Loja Campinas",
+              "cover": "https://assets.decocache.com/ffloresta/c57c02e7-2b1d-46d8-9a58-7d609a91e22b/image172-(1).png",
+              "storeName": "Ferragens Floresta Campinas",
+              "workingHours": "De Segunda a Sexta das 8h às 17h Sábado das 9h às 13h",
+              "address": "R. São Luís do Paraitinga, 53 - Jardim do Trevo, Campinas - SP, 13030-105"
+            },
+            {
+              "links": {
+                "whatsapp": "/",
+                "maps": "/",
+                "coordinates": "/"
+              },
+              "name": "Loja Santo André",
+              "cover": "https://assets.decocache.com/ffloresta/5bf54c13-3886-4ded-b98a-bc116fbce47f/image172-(2).png",
+              "storeName": "Ferragens Floresta Santo André",
+              "workingHours": "De Segunda a Sexta das 8h às 17h Sábado das 9h às 13h",
+              "address": "Av. Artur de Queirós, 592 - Casa Branca, Santo André - SP, 09015-510"
+            },
+            {
+              "links": {
+                "whatsapp": "/",
+                "maps": "/",
+                "coordinates": "/"
+              },
+              "name": "Loja Sorocaba",
+              "cover": "https://assets.decocache.com/ffloresta/306821a1-4751-41c4-9e74-5da275d3447e/SOROCABA_1.jpg",
+              "storeName": "Ferragens Floresta Sorocaba",
+              "workingHours": "De Segunda a Sexta das 8h às 17h Sábado das 9h às 13h",
+              "address": "Rua Terêncio Costa Dias, 393 - Jd Bertanha - Sorocaba, 18052-200"
+            },
+            {
+              "links": {
+                "whatsapp": "/",
+                "maps": "/",
+                "coordinates": "/"
+              },
+              "name": "Loja Brás",
+              "cover": "https://assets.decocache.com/ffloresta/25e4213e-8d1b-4f18-9faf-26dcae34bfd5/BRAS.jpg",
+              "storeName": "Ferragens Floresta Brás",
+              "workingHours": "De Segunda a Sexta das 8h às 17h Sábado das 9h às 13h",
+              "address": "Rua do Gasômetro, 281 - Brás, São Paulo - SP, 03004-001"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Footer"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}
