@@ -85,10 +85,10 @@ const OurStores = ({ ourStores }: Props) => {
                 </p>
                 <p class="text-[16px] text-[#565656]">{store.address}</p>
               </div>
-              <div class="w-fit flex flex-col items-center gap-3 lg:pl-9 border-t-[2px] lg:border-t-0 lg:border-l-[2px] border-[#3A4332] py-6">
+              <div class="w-full lg:w-fit flex flex-col items-center gap-3 lg:pl-9 border-t-[2px] lg:border-t-0 lg:border-l-[2px] border-[#3A4332] py-6">
                 <a
                   href={store.links.whatsapp}
-                  class="min-w-[190px] max-w-[190px] bg-[#3A4332] p-3 flex items-center justify-center gap-5 text-[14px] text-white w-full"
+                  class="min-w-[190px] lg:max-w-[190px] bg-[#3A4332] p-3 flex items-center justify-center gap-5 text-[14px] text-white w-full"
                 >
                   <svg
                     width="18"
@@ -122,7 +122,7 @@ const OurStores = ({ ourStores }: Props) => {
                 </a>
                 <a
                   href={store.links.maps}
-                  class="min-w-[190px] max-w-[190px] bg-[#3A4332] p-3 flex items-center justify-center gap-5 text-[14px] text-white w-full"
+                  class="min-w-[190px] lg:max-w-[190px] bg-[#3A4332] p-3 flex items-center justify-center gap-5 text-[14px] text-white w-full"
                 >
                   <svg
                     width="16"
@@ -142,7 +142,7 @@ const OurStores = ({ ourStores }: Props) => {
                 </a>
                 <a
                   href={store.links.coordinates}
-                  class="min-w-[190px] max-w-[190px] bg-[#3A4332] p-3 flex items-center justify-center gap-5 text-[14px] text-white w-full"
+                  class="min-w-[190px] lg:max-w-[190px] bg-[#3A4332] p-3 flex items-center justify-center gap-5 text-[14px] text-white w-full"
                 >
                   <svg
                     width="29"
