@@ -20,6 +20,14 @@
               "mobile": "https://assets.decocache.com/ffloresta/fa2bcafb-9903-4037-9573-df8811a4f0e1/companypageconfiguration_960f5ba2-d244-45bd-8091-d32f4f10ffd0-1-(1).png",
               "alt": "Nossas Lojas"
             }
+          },
+          {
+            "type": "video",
+            "data": {
+              "action": {},
+              "desktop": "https://assets.decocache.com/ffloresta/2d4e7dee-7952-4184-97a0-549ccce23452/1002(1).mp4",
+              "mobile": "https://assets.decocache.com/ffloresta/6e873779-82be-4d9d-9d6d-c9a6b672f271/video2.mp4"
+            }
           }
         ]
       }
