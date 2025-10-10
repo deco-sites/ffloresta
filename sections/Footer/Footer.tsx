@@ -379,9 +379,9 @@ function Footer({
                 </div>
               </div>
             ) : (
-              /* Mobile Layout - Dropdowns */
+              /* Mobile Layout - Todos os itens em Accordions */
               <div class="flex flex-col gap-4 pt-6">
-                {/* Dropdown Atendimento */}
+                {/* Logo no Mobile */}
                 <div class="w-full">
                   {logo && (
                     <Image
@@ -393,6 +393,8 @@ function Footer({
                     />
                   )}
                 </div>
+
+                {/* Dropdown Atendimento */}
                 <AccordionItem title="Atendimento">
                   <div class="flex flex-col gap-3 mt-3">
                     <div>
@@ -522,95 +524,87 @@ function Footer({
                   </div>
                 </AccordionItem>
 
-                {/* Seções que não são dropdowns no mobile */}
-                <div class="flex flex-col gap-6">
-                  {/* Redes Sociais */}
-                  <div class="flex flex-col gap-4">
-                    <SectionTitle title="Redes Sociais" />
-                    <div class="flex flex-row lg:grid lg:grid-cols-3 gap-3">
-                      {social.map(({ itens }) =>
-                        itens.map((item, index) => (
-                          <a
-                            key={index}
-                            href={item.href}
-                            class="flex items-center justify-center"
-                          >
+                {/* Dropdown Redes Sociais */}
+                <AccordionItem title="Redes Sociais">
+                  <div class="flex flex-row flex-wrap gap-3 mt-3">
+                    {social.map(({ itens }) =>
+                      itens.map((item, index) => (
+                        <a
+                          key={index}
+                          href={item.href}
+                          class="flex items-center justify-center"
+                        >
+                          <Image
+                            src={item.image}
+                            alt={item.alt || "Rede Social"}
+                            loading="lazy"
+                            width={40}
+                            height={40}
+                            class="max-w-[40px] max-h-[40px]"
+                          />
+                        </a>
+                      ))
+                    )}
+                  </div>
+                </AccordionItem>
+
+                {/* Dropdown Formas de Pagamento */}
+                <AccordionItem title="Formas de Pagamento">
+                  <div class="flex flex-wrap gap-2 mt-3">
+                    {paymentMethods.map(({ payments }) =>
+                      payments.map((payment, index) => (
+                        <a key={index} href={payment.href} class="mb-2">
+                          <Image
+                            src={payment.image}
+                            alt={payment.alt || "Forma de Pagamento"}
+                            loading="lazy"
+                            width={50}
+                            height={30}
+                          />
+                        </a>
+                      ))
+                    )}
+                  </div>
+                </AccordionItem>
+
+                {/* Dropdown Loja Segura */}
+                {securitySeals && (
+                  <AccordionItem title={securitySeals.title}>
+                    {/* Selos de Segurança - Lista de Imagens */}
+                    {securitySeals.seals && securitySeals.seals.length > 0 && (
+                      <div class="flex flex-wrap gap-2 mt-3">
+                        {securitySeals.seals.map((seal, index) => (
+                          <a key={index} href={seal.href} class="mb-2">
                             <Image
-                              src={item.image}
-                              alt={item.alt || "Rede Social"}
+                              src={seal.image}
+                              alt={seal.alt || "Selo de Segurança"}
                               loading="lazy"
-                              width={40}
-                              height={40}
-                              class="max-w-[40px] max-h-[40px]"
                             />
                           </a>
-                        ))
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Formas de Pagamento */}
-                  <div>
-                    <SectionTitle title="Formas de Pagamento" />
-                    <div class="flex flex-wrap gap-2 mt-3">
-                      {paymentMethods.map(({ payments }) =>
-                        payments.map((payment, index) => (
-                          <a key={index} href={payment.href} class="mb-2">
-                            <Image
-                              src={payment.image}
-                              alt={payment.alt || "Forma de Pagamento"}
-                              loading="lazy"
-                              width={50}
-                              height={30}
-                            />
-                          </a>
-                        ))
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Loja Segura */}
-                  {securitySeals && (
-                    <div>
-                      <SectionTitle title={securitySeals.title} />
-
-                      {/* Selos de Segurança - Lista de Imagens */}
-                      {securitySeals.seals &&
-                        securitySeals.seals.length > 0 && (
-                          <div class="flex flex-wrap gap-2 mt-3">
-                            {securitySeals.seals.map((seal, index) => (
-                              <a key={index} href={seal.href} class="mb-2">
-                                <Image
-                                  src={seal.image}
-                                  alt={seal.alt || "Selo de Segurança"}
-                                  loading="lazy"
-                                />
-                              </a>
-                            ))}
-                          </div>
-                        )}
-
-                      {/* TrustVox */}
-                      <div
-                        class={`mt-3 flex ${
-                          securitySeals.trustvoxAlignment === "center"
-                            ? "justify-center"
-                            : securitySeals.trustvoxAlignment === "right"
-                            ? "justify-end"
-                            : "justify-start"
-                        }`}
-                      >
-                        {securitySeals.showTrustvox && (
-                          <div
-                            data-trustvox-certificate-fixed="data-trustvox-certificate-fixed"
-                            class="trustvox-seal"
-                            style="transform: scale(1.2); transform-origin: center; margin: 5px;"
-                          ></div>
-                        )}
+                        ))}
                       </div>
+                    )}
+
+                    {/* TrustVox */}
+                    <div
+                      class={`mt-3 flex ${
+                        securitySeals.trustvoxAlignment === "center"
+                          ? "justify-center"
+                          : securitySeals.trustvoxAlignment === "right"
+                          ? "justify-end"
+                          : "justify-start"
+                      }`}
+                    >
+                      {securitySeals.showTrustvox && (
+                        <div
+                          data-trustvox-certificate-fixed="data-trustvox-certificate-fixed"
+                          class="trustvox-seal"
+                          style="transform: scale(1.2); transform-origin: center; margin: 5px;"
+                        ></div>
+                      )}
                     </div>
-                  )}
-                </div>
+                  </AccordionItem>
+                )}
               </div>
             )}
 
