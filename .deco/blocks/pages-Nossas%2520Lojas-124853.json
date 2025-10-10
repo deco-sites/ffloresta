@@ -46,15 +46,15 @@
             },
             {
               "links": {
-                "whatsapp": "https://wa.me/551130936122",
+                "whatsapp": "https://wa.me/551120390333",
                 "maps": "/",
-                "coordinates": "https://www.google.com/local/place/fid/0x94c8c90b2f90f879:0x88edb9d0eaa0ef2e/photosphere?iu=https://lh3.googleusercontent.com/gps-cs-s/AC9h4np1vHEAdG-t3x-ARO2Sa-IpviFhB16IjCf6mtoL1eu9odncdyct0T-m8OkEJSO6j22cUn4KjwVmtxzjVzuuUGFod2kGpQ7p0hMwwurNUe7G9mZDFmE_47qOskLOeyh5kPpbDeStoQ%3Dw160-h106-k-no-pi-20-ya281.60345-ro0-fo100&ik=CAoSF0NJSE0wb2dLRUlDQWdJRFB2dHI4b1FF"
+                "coordinates": "https://www.google.com/local/place/fid/0x94ce597c937206c9:0x372d38cf0ebd737e/photosphere?iu=https://lh3.googleusercontent.com/gps-cs-s/AC9h4npZEU7zsE0vooTzdec1Rukh8oW4fz7nuwh1NfsnLSZcAcSEjCZar6HaIEPLJUIqgoccI1OGIh2uXFeFRmpR4cE6vV19M7q3NtDaKWvp58r5XqD82YHcPY3-o1rx3QRNV4FrtHbT%3Dw160-h106-k-no-pi-0-ya307.14-ro-0-fo100&ik=CAoSFkNJSE0wb2dLRUlDQWdJQ2FfZG5OTXc%3D"
               },
-              "name": "Loja Campinas",
-              "cover": "https://assets.decocache.com/ffloresta/c57c02e7-2b1d-46d8-9a58-7d609a91e22b/image172-(1).png",
-              "storeName": "Ferragens Floresta Campinas",
+              "name": "Loja Brás",
+              "cover": "https://assets.decocache.com/ffloresta/25e4213e-8d1b-4f18-9faf-26dcae34bfd5/BRAS.jpg",
+              "storeName": "Ferragens Floresta Brás",
               "workingHours": "De Segunda a Sexta das 8h às 17h Sábado das 9h às 13h",
-              "address": "R. São Luís do Paraitinga, 53 - Jardim do Trevo, Campinas - SP, 13030-105"
+              "address": "Rua do Gasômetro, 281 - Brás, São Paulo - SP, 03004-001"
             },
             {
               "links": {
@@ -70,6 +70,18 @@
             },
             {
               "links": {
+                "whatsapp": "https://wa.me/551130936122",
+                "maps": "/",
+                "coordinates": "https://www.google.com/local/place/fid/0x94c8c90b2f90f879:0x88edb9d0eaa0ef2e/photosphere?iu=https://lh3.googleusercontent.com/gps-cs-s/AC9h4np1vHEAdG-t3x-ARO2Sa-IpviFhB16IjCf6mtoL1eu9odncdyct0T-m8OkEJSO6j22cUn4KjwVmtxzjVzuuUGFod2kGpQ7p0hMwwurNUe7G9mZDFmE_47qOskLOeyh5kPpbDeStoQ%3Dw160-h106-k-no-pi-20-ya281.60345-ro0-fo100&ik=CAoSF0NJSE0wb2dLRUlDQWdJRFB2dHI4b1FF"
+              },
+              "name": "Loja Campinas",
+              "cover": "https://assets.decocache.com/ffloresta/c57c02e7-2b1d-46d8-9a58-7d609a91e22b/image172-(1).png",
+              "storeName": "Ferragens Floresta Campinas",
+              "workingHours": "De Segunda a Sexta das 8h às 17h Sábado das 9h às 13h",
+              "address": "R. São Luís do Paraitinga, 53 - Jardim do Trevo, Campinas - SP, 13030-105"
+            },
+            {
+              "links": {
                 "whatsapp": "https://wa.me/551531993878",
                 "maps": "/",
                 "coordinates": "https://www.google.com/local/place/fid/0x94c58b0063ec5655:0x95f2ed8af9be418e/photosphere?iu=https://lh3.googleusercontent.com/gps-cs-s/AC9h4npzA8Lwd-PmMvX2bixft8UkfWCJ5-s2nfOEirdaJecG8GJDmtjuEkA4hj11J6S1AMUHwGDwyX6SMqwD31pixGo5_6skX4A9UDSo24ea7vXVxQbHFnr5bBjRrmPzGPYl3Fza2jK2kA%3Dw160-h106-k-no-pi-0-ya265.19528-ro0-fo100&ik=CAoSF0NJSE0wb2dLRUlDQWdJQ1BwSmVmMFFF"
@@ -79,18 +91,6 @@
               "storeName": "Ferragens Floresta Sorocaba",
               "workingHours": "De Segunda a Sexta das 8h às 17h Sábado das 9h às 13h",
               "address": "Rua Terêncio Costa Dias, 393 - Jd Bertanha - Sorocaba, 18052-200"
-            },
-            {
-              "links": {
-                "whatsapp": "https://wa.me/551120390333",
-                "maps": "/",
-                "coordinates": "https://www.google.com/local/place/fid/0x94ce597c937206c9:0x372d38cf0ebd737e/photosphere?iu=https://lh3.googleusercontent.com/gps-cs-s/AC9h4npZEU7zsE0vooTzdec1Rukh8oW4fz7nuwh1NfsnLSZcAcSEjCZar6HaIEPLJUIqgoccI1OGIh2uXFeFRmpR4cE6vV19M7q3NtDaKWvp58r5XqD82YHcPY3-o1rx3QRNV4FrtHbT%3Dw160-h106-k-no-pi-0-ya307.14-ro-0-fo100&ik=CAoSFkNJSE0wb2dLRUlDQWdJQ2FfZG5OTXc%3D"
-              },
-              "name": "Loja Brás",
-              "cover": "https://assets.decocache.com/ffloresta/25e4213e-8d1b-4f18-9faf-26dcae34bfd5/BRAS.jpg",
-              "storeName": "Ferragens Floresta Brás",
-              "workingHours": "De Segunda a Sexta das 8h às 17h Sábado das 9h às 13h",
-              "address": "Rua do Gasômetro, 281 - Brás, São Paulo - SP, 03004-001"
             }
           ]
         }
