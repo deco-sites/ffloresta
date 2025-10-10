@@ -178,15 +178,15 @@
   "institutionalLinks": [
     {
       "title": "Sobre Nós",
-      "href": "/"
+      "href": "/nossa-historia"
     },
     {
       "title": "Nossas Lojas",
-      "href": "/"
+      "href": "/nossas-lojas"
     },
     {
       "title": "Missão, Visão e Valores",
-      "href": "/"
+      "href": "/nossa-missao"
     },
     {
       "title": "Trabalhe Conosco",
@@ -196,7 +196,7 @@
   "policyLinks": [
     {
       "title": "Política de Privacidade",
-      "href": "/"
+      "href": "/politica-de-privacidade"
     },
     {
       "title": "Política de Cookies",
@@ -204,11 +204,11 @@
     },
     {
       "title": "Política de Trocas  e Devolução",
-      "href": "/"
+      "href": "/garantia-troca-e-devolucao"
     },
     {
       "title": "Política de Entrega",
-      "href": "/"
+      "href": "/politica-de-entrega"
     }
   ]
 }
