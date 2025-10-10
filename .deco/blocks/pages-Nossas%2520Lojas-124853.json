@@ -34,9 +34,9 @@
           "stores": [
             {
               "links": {
-                "whatsapp": "/",
+                "whatsapp": "https://wa.me/551130936122",
                 "maps": "/",
-                "coordinates": "/"
+                "coordinates": "https://www.google.com/maps/place/Ferragens+Floresta+-+Pinheiros/@-23.567464,-46.6986848,3a,75y,220.93h,76.89t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgIC38ZaCRA!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAB8u6HbUZgnYuZmfls-M7GJUHt7GeBtqIPBJM_BMxcjmlu4RtrcpxtpInffFYoRJbb9pUo0g6qYQkFTQujBBDF-8JqQHy9Hwyl9Dcwr068wJ1zuQwtKLAUVY67hP_mL-lJfs4eSV-w75%3Dw900-h600-k-no-pi13.105069669821305-ya211.58394992138517-ro0-fo100!7i7776!8i3888!4m17!1m7!3m6!1s0x94ce57a631100f7f:0x5a08fb8ab6924f22!2sFerragens+Floresta+-+Pinheiros!8m2!3d-23.5675573!4d-46.6986747!16s%2Fg%2F1tj470hh!3m8!1s0x94ce57a631100f7f:0x5a08fb8ab6924f22!8m2!3d-23.5675573!4d-46.6986747!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F1tj470hh?entry=ttu&g_ep=EgoyMDI1MDkxNC4wIKXMDSoASAFQAw%3D%3D"
               },
               "name": "Loja Pinheiros",
               "cover": "https://assets.decocache.com/ffloresta/fa3a3b85-d777-4a1a-b659-e86088c076e4/image172.png",
@@ -46,9 +46,9 @@
             },
             {
               "links": {
-                "whatsapp": "/",
+                "whatsapp": "https://wa.me/551130936122",
                 "maps": "/",
-                "coordinates": "/"
+                "coordinates": "https://www.google.com/local/place/fid/0x94c8c90b2f90f879:0x88edb9d0eaa0ef2e/photosphere?iu=https://lh3.googleusercontent.com/gps-cs-s/AC9h4np1vHEAdG-t3x-ARO2Sa-IpviFhB16IjCf6mtoL1eu9odncdyct0T-m8OkEJSO6j22cUn4KjwVmtxzjVzuuUGFod2kGpQ7p0hMwwurNUe7G9mZDFmE_47qOskLOeyh5kPpbDeStoQ%3Dw160-h106-k-no-pi-20-ya281.60345-ro0-fo100&ik=CAoSF0NJSE0wb2dLRUlDQWdJRFB2dHI4b1FF"
               },
               "name": "Loja Campinas",
               "cover": "https://assets.decocache.com/ffloresta/c57c02e7-2b1d-46d8-9a58-7d609a91e22b/image172-(1).png",
@@ -58,7 +58,7 @@
             },
             {
               "links": {
-                "whatsapp": "/",
+                "whatsapp": "https://wa.me/551155559940",
                 "maps": "/",
                 "coordinates": "/"
               },
@@ -70,9 +70,9 @@
             },
             {
               "links": {
-                "whatsapp": "/",
+                "whatsapp": "https://wa.me/551531993878",
                 "maps": "/",
-                "coordinates": "/"
+                "coordinates": "https://www.google.com/local/place/fid/0x94c58b0063ec5655:0x95f2ed8af9be418e/photosphere?iu=https://lh3.googleusercontent.com/gps-cs-s/AC9h4npzA8Lwd-PmMvX2bixft8UkfWCJ5-s2nfOEirdaJecG8GJDmtjuEkA4hj11J6S1AMUHwGDwyX6SMqwD31pixGo5_6skX4A9UDSo24ea7vXVxQbHFnr5bBjRrmPzGPYl3Fza2jK2kA%3Dw160-h106-k-no-pi-0-ya265.19528-ro0-fo100&ik=CAoSF0NJSE0wb2dLRUlDQWdJQ1BwSmVmMFFF"
               },
               "name": "Loja Sorocaba",
               "cover": "https://assets.decocache.com/ffloresta/306821a1-4751-41c4-9e74-5da275d3447e/SOROCABA_1.jpg",
@@ -82,9 +82,9 @@
             },
             {
               "links": {
-                "whatsapp": "/",
+                "whatsapp": "https://wa.me/551120390333",
                 "maps": "/",
-                "coordinates": "/"
+                "coordinates": "https://www.google.com/local/place/fid/0x94ce597c937206c9:0x372d38cf0ebd737e/photosphere?iu=https://lh3.googleusercontent.com/gps-cs-s/AC9h4npZEU7zsE0vooTzdec1Rukh8oW4fz7nuwh1NfsnLSZcAcSEjCZar6HaIEPLJUIqgoccI1OGIh2uXFeFRmpR4cE6vV19M7q3NtDaKWvp58r5XqD82YHcPY3-o1rx3QRNV4FrtHbT%3Dw160-h106-k-no-pi-0-ya307.14-ro-0-fo100&ik=CAoSFkNJSE0wb2dLRUlDQWdJQ2FfZG5OTXc%3D"
               },
               "name": "Loja Brás",
               "cover": "https://assets.decocache.com/ffloresta/25e4213e-8d1b-4f18-9faf-26dcae34bfd5/BRAS.jpg",
