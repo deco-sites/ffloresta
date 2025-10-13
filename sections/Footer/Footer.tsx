@@ -264,7 +264,7 @@ function Footer({
                         </svg>
 
                         <a
-                          href="/minha-conta"
+                          href="/account"
                           class="text-[#DAEFAE] italic text-[14px] font-bold hover:underline"
                         >
                           Minha conta

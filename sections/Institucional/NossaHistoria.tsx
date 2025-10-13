@@ -8,40 +8,54 @@ export interface Props {
   description2?: HTMLWidget;
 
   images: {
-    mobile: ImageWidget;
-    desktop: ImageWidget;
+    mobile?: ImageWidget;
+    desktop?: ImageWidget;
   };
 }
 
 function Institucional({ title, description, description2, images }: Props) {
-  return (
-    <Section.Container class=" bg-[#FDFFF5]">
-      <div class="flex flex-col-reverse md:flex-row items-center gap-8 bg-[#FDFFF5] lg:ml-[3em] lg:mr-[3em]">
-        {/* Imagem */}
-        <div class="w-full lg:w-1/2">
-          <Picture>
-            <Source
-              media="(max-width: 640px)"
-              src={images.mobile}
-              width={328}
-              height={203}
-            />
-            <Source
-              media="(min-width: 640px)"
-              src={images.desktop}
-              width={644}
-              height={400}
-            />
-            <img
-              src={images.desktop}
-              alt={title || "Institucional"}
-              class="w-full object-cover rounded-md shadow-md"
-              loading="lazy"
-            />
-          </Picture>
-        </div>
+  // Se não há nenhum conteúdo, não renderiza nada
+  if (!title && !description && !description2 && !images) {
+    return null;
+  }
 
-        {/* Texto */}
+  return (
+    <Section.Container class="bg-[#FDFFF5]">
+      <div class="flex flex-col-reverse md:flex-row items-center gap-8 bg-[#FDFFF5] lg:ml-[3em] lg:mr-[3em]">
+        {/* Imagem - só renderiza se existir */}
+        {images.mobile ||
+          (images.desktop && (
+            <div class="w-full lg:w-1/2">
+              <Picture>
+                {images.mobile && (
+                  <Source
+                    media="(max-width: 640px)"
+                    src={images.mobile}
+                    width={328}
+                    height={203}
+                  />
+                )}
+                {images.desktop && (
+                  <Source
+                    media="(min-width: 640px)"
+                    src={images.desktop}
+                    width={1320}
+                    height={480}
+                  />
+                )}
+                {images.desktop && (
+                  <img
+                    src={images.desktop}
+                    alt={title || "Institucional"}
+                    class="w-full object-cover rounded-md shadow-md"
+                    loading="lazy"
+                  />
+                )}
+              </Picture>
+            </div>
+          ))}
+
+        {/* Texto - só renderiza se existir algum conteúdo de texto */}
         {(title || description || description2) && (
           <div class="w-full lg:w-1/2 text-left">
             {title && (
