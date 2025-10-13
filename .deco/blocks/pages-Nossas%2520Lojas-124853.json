@@ -35,7 +35,7 @@
             {
               "links": {
                 "whatsapp": "https://wa.me/551130936122",
-                "maps": "/",
+                "maps": "https://www.google.com/maps/place/Ferragens+Floresta+-+Pinheiros/@-23.5675524,-46.7012496,17z/data=!3m1!4b1!4m16!1m9!4m8!1m0!1m6!1m2!1s0x94ce57a631100f7f:0x5a08fb8ab6924f22!2sR.+Pais+Leme,+238+%2F+244+-+Pinheiros,+S%C3%A3o+Paulo+-+SP,+05424-010!2m2!1d-46.6986747!2d-23.5675573!3m5!1s0x94ce57a631100f7f:0x5a08fb8ab6924f22!8m2!3d-23.5675573!4d-46.6986747!16s%2Fg%2F1tj470hh?entry=ttu&g_ep=EgoyMDI1MTAwOC4wIKXMDSoASAFQAw%3D%3D",
                 "coordinates": "https://www.google.com/maps/place/Ferragens+Floresta+-+Pinheiros/@-23.567464,-46.6986848,3a,75y,220.93h,76.89t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgIC38ZaCRA!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAB8u6HbUZgnYuZmfls-M7GJUHt7GeBtqIPBJM_BMxcjmlu4RtrcpxtpInffFYoRJbb9pUo0g6qYQkFTQujBBDF-8JqQHy9Hwyl9Dcwr068wJ1zuQwtKLAUVY67hP_mL-lJfs4eSV-w75%3Dw900-h600-k-no-pi13.105069669821305-ya211.58394992138517-ro0-fo100!7i7776!8i3888!4m17!1m7!3m6!1s0x94ce57a631100f7f:0x5a08fb8ab6924f22!2sFerragens+Floresta+-+Pinheiros!8m2!3d-23.5675573!4d-46.6986747!16s%2Fg%2F1tj470hh!3m8!1s0x94ce57a631100f7f:0x5a08fb8ab6924f22!8m2!3d-23.5675573!4d-46.6986747!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F1tj470hh?entry=ttu&g_ep=EgoyMDI1MDkxNC4wIKXMDSoASAFQAw%3D%3D"
               },
               "name": "Loja Pinheiros",
@@ -47,8 +47,8 @@
             {
               "links": {
                 "whatsapp": "https://wa.me/551120390333",
-                "maps": "/",
-                "coordinates": "https://www.google.com/local/place/fid/0x94ce597c937206c9:0x372d38cf0ebd737e/photosphere?iu=https://lh3.googleusercontent.com/gps-cs-s/AC9h4npZEU7zsE0vooTzdec1Rukh8oW4fz7nuwh1NfsnLSZcAcSEjCZar6HaIEPLJUIqgoccI1OGIh2uXFeFRmpR4cE6vV19M7q3NtDaKWvp58r5XqD82YHcPY3-o1rx3QRNV4FrtHbT%3Dw160-h106-k-no-pi-0-ya307.14-ro-0-fo100&ik=CAoSFkNJSE0wb2dLRUlDQWdJQ2FfZG5OTXc%3D"
+                "coordinates": "https://www.google.com/local/place/fid/0x94ce597c937206c9:0x372d38cf0ebd737e/photosphere?iu=https://lh3.googleusercontent.com/gps-cs-s/AC9h4npZEU7zsE0vooTzdec1Rukh8oW4fz7nuwh1NfsnLSZcAcSEjCZar6HaIEPLJUIqgoccI1OGIh2uXFeFRmpR4cE6vV19M7q3NtDaKWvp58r5XqD82YHcPY3-o1rx3QRNV4FrtHbT%3Dw160-h106-k-no-pi-0-ya307.14-ro-0-fo100&ik=CAoSFkNJSE0wb2dLRUlDQWdJQ2FfZG5OTXc%3D",
+                "maps": "/"
               },
               "name": "Loja Brás",
               "cover": "https://assets.decocache.com/ffloresta/25e4213e-8d1b-4f18-9faf-26dcae34bfd5/BRAS.jpg",
@@ -59,7 +59,7 @@
             {
               "links": {
                 "whatsapp": "https://wa.me/551155559940",
-                "maps": "/",
+                "maps": "https://www.google.com/maps/place/Ferragens+Floresta+-+Santo+Andr%C3%A9/@-23.6618357,-46.522931,17z/data=!3m1!4b1!4m16!1m9!4m8!1m0!1m6!1m2!1s0x94ce4365f8488e43:0x9824806ca0763112!2sAv.+Artur+de+Queir%C3%B3s,+592+-+Casa+Branca,+Santo+Andr%C3%A9+-+SP,+09015-510!2m2!1d-46.5203561!2d-23.6618406!3m5!1s0x94ce4365f8488e43:0x9824806ca0763112!8m2!3d-23.6618406!4d-46.5203561!16s%2Fg%2F11q2mdw6mk?entry=ttu&g_ep=EgoyMDI1MTAwOC4wIKXMDSoASAFQAw%3D%3D",
                 "coordinates": "/"
               },
               "name": "Loja Santo André",
