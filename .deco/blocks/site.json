@@ -60,7 +60,9 @@
     },
     {
       "__resolveType": "website/loaders/redirectsFromCsv.ts",
-      "redirects": []
+      "redirects": [],
+      "from": "/redirect.csv",
+      "forcePermanentRedirects": true
     }
   ],
   "caching": {
