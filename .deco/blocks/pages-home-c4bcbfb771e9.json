@@ -140,14 +140,14 @@
       },
       "banner": {
         "mobile": {
-          "src": "https://assets.decocache.com/ffloresta/b5a48df9-b389-4795-892c-e2cfdb65d24a/2-(3).png",
+          "src": "https://assets.decocache.com/ffloresta/2ee29ecc-d331-489c-a1de-fb9c95ebaa79/4.png",
           "alt": "Banner de Topo Shelf"
         },
         "desktop": {
-          "src": "https://assets.decocache.com/ffloresta/3f148746-bccd-45ab-a349-7dfed737453f/1-(3).png",
+          "src": "https://assets.decocache.com/ffloresta/cddaec9e-a6f9-4d12-80df-b1e0819abd32/3-(2).png",
           "alt": "Banner de Topo Shelf"
         },
-        "href": "/"
+        "href": "/182?map=productClusterIds&page=1"
       },
       "orientation": "vertical",
       "icon": "https://assets.decocache.com/ffloresta/8e934bf1-704a-43a4-9ec5-abe3998e9fc0/Logo-header.svg"
