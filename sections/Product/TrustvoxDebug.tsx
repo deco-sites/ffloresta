@@ -7,72 +7,38 @@ export interface Props {
 
 // Script de debug para verificar se a Trustvox está funcionando
 const debugTrustvoxScript = (storeId: string) => {
-  console.log("=== TRUSTVOX DEBUG INICIADO ===");
-
   // Verifica se o script global já foi carregado
   setTimeout(() => {
-    console.log("1. Verificando variáveis globais...");
-    console.log("window._trustvox_shelf_rate:", window._trustvox_shelf_rate);
-    console.log("window._trustvox:", window._trustvox);
-
     // Verifica se há scripts da Trustvox carregados
     const trustvoxScripts = document.querySelectorAll(
-      'script[src*="trustvox"], script[src*="rate.trustvox"]',
+      'script[src*="trustvox"], script[src*="rate.trustvox"]'
     );
-    console.log("2. Scripts Trustvox encontrados:", trustvoxScripts.length);
-    trustvoxScripts.forEach((script, index) => {
-      console.log(`   Script ${index + 1}:`, script.src);
-    });
+    trustvoxScripts.forEach((script, index) => {});
 
     // Verifica elementos com data-trustvox-product-code
     const trustvoxElements = document.querySelectorAll(
-      "[data-trustvox-product-code]",
+      "[data-trustvox-product-code]"
     );
-    console.log(
-      "3. Elementos com data-trustvox-product-code:",
-      trustvoxElements.length,
-    );
-    trustvoxElements.forEach((el, index) => {
-      console.log(`   Elemento ${index + 1}:`, {
-        productCode: el.getAttribute("data-trustvox-product-code"),
-        innerHTML: el.innerHTML,
-        element: el,
-      });
-    });
 
     // Tenta forçar o carregamento se necessário
     if (!window._trustvox_shelf_rate) {
-      console.log("4. Forçando configuração da Trustvox...");
       window._trustvox_shelf_rate = [];
       window._trustvox_shelf_rate.push(["_storeId", storeId]);
 
       // Carrega o script se não estiver presente
       if (trustvoxScripts.length === 0) {
-        console.log("5. Carregando script da Trustvox...");
         const script = document.createElement("script");
         script.type = "text/javascript";
         script.async = true;
         script.src = "//rate.trustvox.com.br/widget.js";
         script.onload = () => {
-          console.log("✅ Script Trustvox carregado com sucesso!");
-
           // Verifica novamente após 3 segundos
           setTimeout(() => {
             const elementsAfter = document.querySelectorAll(
-              "[data-trustvox-product-code]",
+              "[data-trustvox-product-code]"
             );
-            console.log(
-              "6. Elementos após carregamento:",
-              elementsAfter.length,
-            );
-            elementsAfter.forEach((el, index) => {
-              console.log(`   Elemento ${index + 1} após carregamento:`, {
-                productCode: el.getAttribute("data-trustvox-product-code"),
-                innerHTML: el.innerHTML,
-                hasStars: el.innerHTML.includes("star") ||
-                  el.innerHTML.includes("rating"),
-              });
-            });
+
+            elementsAfter.forEach((el, index) => {});
           }, 3000);
         };
         script.onerror = () => {
@@ -81,19 +47,11 @@ const debugTrustvoxScript = (storeId: string) => {
         document.head.appendChild(script);
       }
     } else {
-      console.log(
-        "4. Configuração Trustvox já existe:",
-        window._trustvox_shelf_rate,
-      );
     }
-
-    console.log("=== TRUSTVOX DEBUG FINALIZADO ===");
   }, 1000);
 };
 
-export default function TrustvoxDebug({
-  storeId = "125156",
-}: Props) {
+export default function TrustvoxDebug({ storeId = "125156" }: Props) {
   return (
     <div class="w-full py-8 bg-red-50 border border-red-200">
       <div class="container">

@@ -17,7 +17,7 @@ const trustvoxProductScript = (
   storeId: string,
   productId: string,
   productName: string,
-  productPhotos: string[],
+  productPhotos: string[]
 ) => {
   // Aguarda um pouco para garantir que a página carregou
   setTimeout(() => {
@@ -32,7 +32,7 @@ const trustvoxProductScript = (
 
     // Remove scripts anteriores
     const existingScripts = document.querySelectorAll(
-      'script[src*="sincero.js"]',
+      'script[src*="sincero.js"]'
     );
     existingScripts.forEach((script) => script.remove());
 
@@ -48,18 +48,8 @@ const trustvoxProductScript = (
     script.async = true;
     script.type = "text/javascript";
     script.src = "//static.trustvox.com.br/sincero/sincero.js";
-    script.onload = () => {
-      console.log("Script Trustvox carregado para produto:", productId);
-    };
-    document.head.appendChild(script);
 
-    // Debug
-    console.log("Trustvox configurado:", {
-      storeId,
-      productId,
-      productName,
-      productPhotos: productPhotos.length,
-    });
+    document.head.appendChild(script);
   }, 100);
 };
 
@@ -76,25 +66,14 @@ export default function TrustvoxWidget({
 
   // Dados do produto para a Trustvox - Usa inProductGroupWithID (ID do produto na VTEX)
   const product = page?.product;
-  const refId = product?.additionalProperty?.find((prop) =>
-    prop.name === "RefId"
+  const refId = product?.additionalProperty?.find(
+    (prop) => prop.name === "RefId"
   )?.value;
   const vtexProductId = product?.inProductGroupWithID; // ID do produto na VTEX
-  const productId = vtexProductId || refId || product?.sku ||
-    product?.productID || "";
+  const productId =
+    vtexProductId || refId || product?.sku || product?.productID || "";
   const productName = product?.name || "";
   const productPhotos = product?.image?.map((img) => img.url) || [];
-
-  // Debug no servidor
-  console.log("TrustvoxWidget - Dados do produto:", {
-    refId,
-    vtexProductId,
-    sku: product?.sku,
-    productID: product?.productID,
-    finalProductId: productId,
-    productName,
-    photosCount: productPhotos.length,
-  });
 
   return (
     <div class="w-full py-8">
@@ -124,7 +103,7 @@ export default function TrustvoxWidget({
               storeId,
               productId,
               productName,
-              productPhotos,
+              productPhotos
             ),
           }}
         />

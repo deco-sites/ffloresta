@@ -49,7 +49,6 @@ async function generateIconsFile() {
 
     await Deno.writeTextFile(outputFilePath, existingContent, { create: true });
   } else {
-    console.log("No new icons to add.");
   }
 }
 

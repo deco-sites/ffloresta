@@ -22,7 +22,7 @@ const trustvoxScript = (
   storeId: string,
   productId: string,
   productName: string,
-  productPhotos: string[],
+  productPhotos: string[]
 ) => {
   // Aguarda um pouco para garantir que a página carregou
   setTimeout(() => {
@@ -40,10 +40,9 @@ const trustvoxScript = (
     // Só adiciona o productId se ele existir e for válido
     if (productId && productId.trim() !== "") {
       window._trustvox.push(["_productId", productId]);
-      console.log("Trustvox: Configurando para produto específico:", productId);
     } else {
       console.warn(
-        "Trustvox: Nenhum ID de produto válido encontrado, mostrando avaliações da loja",
+        "Trustvox: Nenhum ID de produto válido encontrado, mostrando avaliações da loja"
       );
     }
 
@@ -57,7 +56,7 @@ const trustvoxScript = (
 
     // Remove scripts anteriores
     const existingScripts = document.querySelectorAll(
-      'script[src*="sincero.js"]',
+      'script[src*="sincero.js"]'
     );
     existingScripts.forEach((script) => script.remove());
 
@@ -73,22 +72,9 @@ const trustvoxScript = (
     script.async = true;
     script.type = "text/javascript";
     script.src = "//static.trustvox.com.br/sincero/sincero.js";
-    script.onload = () => {
-      console.log(
-        "Script Trustvox carregado. Configuração final:",
-        window._trustvox,
-      );
-    };
     document.head.appendChild(script);
 
     // Debug detalhado
-    console.log("Trustvox configurado:", {
-      storeId,
-      productId,
-      productName,
-      photosCount: productPhotos.length,
-      trustvoxArray: window._trustvox,
-    });
   }, 200); // Aumentei o delay para 200ms
 };
 
@@ -104,28 +90,23 @@ export default function TrustvoxReviews({
   const finalProduct = product || page?.product;
 
   // Determina o ID do produto - Usa inProductGroupWithID (ID do produto na VTEX) para Trustvox
-  const refId = finalProduct?.additionalProperty?.find((prop) =>
-    prop.name === "RefId"
+  const refId = finalProduct?.additionalProperty?.find(
+    (prop) => prop.name === "RefId"
   )?.value;
   const vtexProductId = finalProduct?.inProductGroupWithID; // ID do produto na VTEX
-  const finalProductId = productId || vtexProductId || refId ||
-    finalProduct?.sku || finalProduct?.productID || "";
-
-  console.log("TrustvoxReviews - IDs disponíveis:", {
-    productId,
-    refId,
-    vtexProductId,
-    sku: finalProduct?.sku,
-    productID: finalProduct?.productID,
-    finalProductId,
-    productName: finalProduct?.name,
-  });
+  const finalProductId =
+    productId ||
+    vtexProductId ||
+    refId ||
+    finalProduct?.sku ||
+    finalProduct?.productID ||
+    "";
 
   // Validação adicional do ID do produto
   if (finalProductId && finalProductId.length < 3) {
     console.warn(
       "TrustvoxReviews - ID do produto muito curto:",
-      finalProductId,
+      finalProductId
     );
   }
 
@@ -150,8 +131,7 @@ export default function TrustvoxReviews({
         {/* Placeholder enquanto carrega */}
         <div class="flex items-center justify-center h-32 text-gray-500">
           <div class="text-center">
-            <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900 mx-auto mb-2">
-            </div>
+            <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900 mx-auto mb-2"></div>
             <p>Carregando avaliações...</p>
           </div>
         </div>
@@ -166,7 +146,7 @@ export default function TrustvoxReviews({
             storeId,
             finalProductId,
             productName,
-            productPhotos,
+            productPhotos
           ),
         }}
       />
