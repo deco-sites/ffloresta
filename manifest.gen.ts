@@ -10,12 +10,14 @@ import * as $$$$$$$$$$$1 from "./apps/deco/htmx.ts";
 import * as $$$$$$$$$$$2 from "./apps/deco/vtex.ts";
 import * as $$$$$$$$$$$3 from "./apps/site.ts";
 import * as $$$2 from "./loaders/availableIcons.ts";
-import * as $$$3 from "./loaders/icons.ts";
-import * as $$$4 from "./loaders/minicart.ts";
+import * as $$$3 from "./loaders/canonical-advanced.ts";
+import * as $$$4 from "./loaders/icons.ts";
+import * as $$$5 from "./loaders/minicart.ts";
+import * as $$$6 from "./loaders/product-canonical-advanced.ts";
 import * as $$$0 from "./loaders/SearchInline.tsx";
 import * as $$$1 from "./loaders/TTeste.tsx";
-import * as $$$5 from "./loaders/user.ts";
-import * as $$$6 from "./loaders/wishlist.ts";
+import * as $$$7 from "./loaders/user.ts";
+import * as $$$8 from "./loaders/wishlist.ts";
 import * as $$$$$$0 from "./sections/Animation/Animation.tsx";
 import * as $$$$$$1 from "./sections/Brand/BrandGrid.tsx";
 import * as $$$$$$2 from "./sections/Category/CategoryBanner.tsx";
@@ -65,20 +67,23 @@ import * as $$$$$$45 from "./sections/Product/TrustvoxTest.tsx";
 import * as $$$$$$46 from "./sections/Product/TrustvoxWidget.tsx";
 import * as $$$$$$47 from "./sections/Product/Wishlist.tsx";
 import * as $$$$$$48 from "./sections/SelosSeguranca.tsx";
-import * as $$$$$$49 from "./sections/Session.tsx";
-import * as $$$$$$50 from "./sections/Social/InstagramPosts.tsx";
-import * as $$$$$$51 from "./sections/Social/WhatsApp.tsx";
-import * as $$$$$$52 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$49 from "./sections/Seo/AdvancedCanonical.tsx";
+import * as $$$$$$50 from "./sections/Session.tsx";
+import * as $$$$$$51 from "./sections/Social/InstagramPosts.tsx";
+import * as $$$$$$52 from "./sections/Social/WhatsApp.tsx";
+import * as $$$$$$53 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
   "loaders": {
     "site/loaders/availableIcons.ts": $$$2,
-    "site/loaders/icons.ts": $$$3,
-    "site/loaders/minicart.ts": $$$4,
+    "site/loaders/canonical-advanced.ts": $$$3,
+    "site/loaders/icons.ts": $$$4,
+    "site/loaders/minicart.ts": $$$5,
+    "site/loaders/product-canonical-advanced.ts": $$$6,
     "site/loaders/SearchInline.tsx": $$$0,
     "site/loaders/TTeste.tsx": $$$1,
-    "site/loaders/user.ts": $$$5,
-    "site/loaders/wishlist.ts": $$$6,
+    "site/loaders/user.ts": $$$7,
+    "site/loaders/wishlist.ts": $$$8,
   },
   "sections": {
     "site/sections/Animation/Animation.tsx": $$$$$$0,
@@ -130,10 +135,11 @@ const manifest = {
     "site/sections/Product/TrustvoxWidget.tsx": $$$$$$46,
     "site/sections/Product/Wishlist.tsx": $$$$$$47,
     "site/sections/SelosSeguranca.tsx": $$$$$$48,
-    "site/sections/Session.tsx": $$$$$$49,
-    "site/sections/Social/InstagramPosts.tsx": $$$$$$50,
-    "site/sections/Social/WhatsApp.tsx": $$$$$$51,
-    "site/sections/Theme/Theme.tsx": $$$$$$52,
+    "site/sections/Seo/AdvancedCanonical.tsx": $$$$$$49,
+    "site/sections/Session.tsx": $$$$$$50,
+    "site/sections/Social/InstagramPosts.tsx": $$$$$$51,
+    "site/sections/Social/WhatsApp.tsx": $$$$$$52,
+    "site/sections/Theme/Theme.tsx": $$$$$$53,
   },
   "actions": {
     "site/actions/minicart/submit.ts": $$$$$$$$$0,

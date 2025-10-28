@@ -36,7 +36,7 @@ export interface Props {
     altText: string;
   };
   seoText?: SeoText;
-  title?: string; // Nova prop para o título
+  title?: string;
 }
 
 function NotFound() {
@@ -53,21 +53,21 @@ function NotFound() {
             </h2>
             <ul className="mb-5">
               <li className="text-[13px] leading-[13px]">
-                <span className="text-lg inline-block mr-1">•</span>{" "}
-                Verifique se não há erro de digitação.
+                <span className="text-lg inline-block mr-1">•</span> Verifique
+                se não há erro de digitação.
               </li>
               <li className="text-[13px] leading-[13px]">
-                <span className="text-lg inline-block mr-1">•</span>{" "}
-                Tente utilizar uma única palavra.
+                <span className="text-lg inline-block mr-1">•</span> Tente
+                utilizar uma única palavra.
               </li>
               <li className="text-[13px] leading-[13px]">
-                <span className="text-lg inline-block mr-1">•</span>{" "}
-                Tente buscar por termos menos específicos e posteriormente use
-                os filtros da busca.
+                <span className="text-lg inline-block mr-1">•</span> Tente
+                buscar por termos menos específicos e posteriormente use os
+                filtros da busca.
               </li>
               <li className="text-[13px] leading-[13px]">
-                <span className="text-lg inline-block mr-1">•</span>{" "}
-                Procure utilizar sinônimos ao termo desejado.
+                <span className="text-lg inline-block mr-1">•</span> Procure
+                utilizar sinônimos ao termo desejado.
               </li>
             </ul>
           </div>
@@ -87,12 +87,22 @@ const useUrlRebased = (overrides: string | undefined, base: string) => {
     // Primeiro, preservar todos os parâmetros da URL base (filtros atuais)
     const baseUrl = new URL(base);
     for (const [key, value] of baseUrl.searchParams.entries()) {
-      final.searchParams.set(key, value);
+      // Não preservar o parâmetro page da URL base se estivermos mudando de página
+      if (key !== "page" || !temp.searchParams.has("page")) {
+        final.searchParams.set(key, value);
+      }
     }
 
     // Depois, aplicar os overrides (principalmente a página)
     for (const [key, value] of temp.searchParams.entries()) {
-      final.searchParams.set(key, value);
+      // SEMPRE remover o parâmetro page se for 1
+      if (key === "page" && value === "1") {
+        final.searchParams.delete("page");
+      } else if (key === "page") {
+        final.searchParams.set(key, value);
+      } else {
+        final.searchParams.set(key, value);
+      }
     }
 
     url = final.href;
@@ -124,7 +134,7 @@ function PageResult(props: SectionProps<typeof loader>) {
       <div
         class={clx(
           "pb-2 sm:pb-10",
-          (!prevPageUrl || partial === "hideLess") && "hidden",
+          (!prevPageUrl || partial === "hideLess") && "hidden"
         )}
       >
         <a
@@ -162,7 +172,7 @@ function PageResult(props: SectionProps<typeof loader>) {
           "grid items-center",
           "grid-cols-2 gap-4", // Base
           "xl:grid-cols-4", // ≥1240px
-          "w-full",
+          "w-full"
         )}
       >
         {products?.map((product, index) => (
@@ -177,67 +187,65 @@ function PageResult(props: SectionProps<typeof loader>) {
       </div>
 
       <div class={clx("pt-5 sm:pt-10 w-full")}>
-        {infinite
-          ? (
-            <div class="flex justify-center [&_section]:contents">
-              <a
-                rel="next"
-                class={clx(
-                  "cursor-pointer",
-                  (!nextPageUrl || partial === "hideMore") && "hidden",
-                )}
-                hx-swap="outerHTML show:parent:top"
-                hx-get={partialNext}
-              >
-                <span class="inline [.htmx-request_&]:hidden">
-                  {" "}
-                  <div class="p-2 rounded-full bg-[rgba(21,31,22,0.6)] backdrop-blur-[12px] transition-all duration-300 hover:bg-[rgba(21,31,22,0.8)]">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6 9L12 15L18 9"
-                        stroke="white"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </div>
-                </span>
-                <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
-              </a>
-            </div>
-          )
-          : (
-            <div class={clx("join", infinite && "hidden")}>
-              <a
-                rel="prev"
-                aria-label="previous page link"
-                href={prevPageUrl ?? "#"}
-                disabled={!prevPageUrl}
-                class="btn btn-ghost join-item"
-              >
-                <Icon id="chevron-right" class="rotate-180" />
-              </a>
-              <span class="btn btn-ghost join-item">
-                Page {zeroIndexedOffsetPage + 1}
+        {infinite ? (
+          <div class="flex justify-center [&_section]:contents">
+            <a
+              rel="next"
+              class={clx(
+                "cursor-pointer",
+                (!nextPageUrl || partial === "hideMore") && "hidden"
+              )}
+              hx-swap="outerHTML show:parent:top"
+              hx-get={partialNext}
+            >
+              <span class="inline [.htmx-request_&]:hidden">
+                {" "}
+                <div class="p-2 rounded-full bg-[rgba(21,31,22,0.6)] backdrop-blur-[12px] transition-all duration-300 hover:bg-[rgba(21,31,22,0.8)]">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 9L12 15L18 9"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
               </span>
-              <a
-                rel="next"
-                aria-label="next page link"
-                href={nextPageUrl ?? "#"}
-                disabled={!nextPageUrl}
-                class="btn btn-ghost join-item"
-              >
-                <Icon id="chevron-right" />
-              </a>
-            </div>
-          )}
+              <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
+            </a>
+          </div>
+        ) : (
+          <div class={clx("join", infinite && "hidden")}>
+            <a
+              rel="prev"
+              aria-label="previous page link"
+              href={prevPageUrl ?? "#"}
+              disabled={!prevPageUrl}
+              class="btn btn-ghost join-item"
+            >
+              <Icon id="chevron-right" class="rotate-180" />
+            </a>
+            <span class="btn btn-ghost join-item">
+              Page {zeroIndexedOffsetPage + 1}
+            </span>
+            <a
+              rel="next"
+              aria-label="next page link"
+              href={nextPageUrl ?? "#"}
+              disabled={!nextPageUrl}
+              class="btn btn-ghost join-item"
+            >
+              <Icon id="chevron-right" />
+            </a>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -255,13 +263,22 @@ const setPageQuerystring = (page: string, id: string) => {
 
     for (const entry of entries) {
       if (entry.isIntersecting) {
-        // Preservar todos os parâmetros existentes ao atualizar a página
-        url.searchParams.set("page", page);
+        // Só adicionar page se for diferente de 1
+        if (page !== "1") {
+          url.searchParams.set("page", page);
+        } else {
+          url.searchParams.delete("page");
+        }
       } else if (
         typeof history.state?.prevPage === "string" &&
         history.state?.prevPage !== page
       ) {
-        url.searchParams.set("page", history.state.prevPage);
+        // Só adicionar page se for diferente de 1
+        if (history.state.prevPage !== "1") {
+          url.searchParams.set("page", history.state.prevPage);
+        } else {
+          url.searchParams.delete("page");
+        }
       }
     }
 
@@ -269,7 +286,7 @@ const setPageQuerystring = (page: string, id: string) => {
     history.replaceState(
       { prevPage, filters: url.searchParams.toString() },
       "",
-      url.href,
+      url.href
     );
   }).observe(element);
 };
@@ -290,11 +307,12 @@ function Result(props: SectionProps<typeof loader>) {
 
   const fallbackSeoText: SeoText = {
     title: typeof document !== "undefined" ? document.title : undefined,
-    description: typeof document !== "undefined"
-      ? document
-        .querySelector("meta[name='description']")
-        ?.getAttribute("content") ?? undefined
-      : undefined,
+    description:
+      typeof document !== "undefined"
+        ? document
+            .querySelector("meta[name='description']")
+            ?.getAttribute("content") ?? undefined
+        : undefined,
   };
 
   const seoText = props.seoText ?? fallbackSeoText;
@@ -331,15 +349,19 @@ function Result(props: SectionProps<typeof loader>) {
   return (
     <>
       <div id={container} {...viewItemListEvent} class="w-full">
-        {partial ? <PageResult {...props} /> : (
+        {partial ? (
+          <PageResult {...props} />
+        ) : (
           <>
             {/* Banner full width - fora do container */}
             {bannerImage && (
               <div class="w-full">
                 <img
-                  src={device === "mobile"
-                    ? bannerImage.mobile || bannerImage.desktop
-                    : bannerImage.desktop || bannerImage.mobile}
+                  src={
+                    device === "mobile"
+                      ? bannerImage.mobile || bannerImage.desktop
+                      : bannerImage.desktop || bannerImage.mobile
+                  }
                   alt={bannerImage.altText}
                   class="w-full"
                 />
@@ -477,7 +499,7 @@ function Result(props: SectionProps<typeof loader>) {
           __html: useScript(
             setPageQuerystring,
             `${pageInfo.currentPage}`,
-            container,
+            container
           ),
         }}
       />
@@ -550,7 +572,7 @@ export const loader = (props: Props, req: Request) => {
     url: req.url,
     bannerImage: props.bannerImage,
     seoText: props.seoText,
-    title: props.title, // Passa a prop title
+    title: props.title,
   };
 };
 
