@@ -22,12 +22,9 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Institucional/NossaHistoria.tsx",
-        "images": {
-          "mobile": "https://assets.decocache.com/ffloresta/65793bb0-d150-4261-91ad-61d1ebf6d4ba/maxresdefault-(1)-1.png",
-          "desktop": "https://assets.decocache.com/ffloresta/65793bb0-d150-4261-91ad-61d1ebf6d4ba/maxresdefault-(1)-1.png"
-        },
+        "images": {},
         "title": "Nossa Missão",
-        "description": "<p>Proporcionar aos nossos clientes uma experiência de relacionamento única, oferecendo um atendimento</p><p>com conhecimento técnico, logística eficiente, curadoria rigorosa na seleção de produtos e o uso de tecnologia</p><p>de ponta em todos os nossos canais de vendas.</p>",
+        "description": "<p><strong><span style=\"font-size: 14pt\">Visão, Missão e Valores</span></strong></p><p style=\"text-align: justify\"><strong>Visão</strong></p><p style=\"text-align: justify\">Ser reconhecida nacionalmente como a referência em soluções especializadas em ferragens, ferramentas e acessórios, destacando-se por qualidade, inovação e excelência no relacionamento com clientes e profissionais.</p><p style=\"text-align: justify\"><strong>Missão</strong></p><p style=\"text-align: justify\">Oferecer produtos de alta qualidade e soluções completas para o setor, com atendimento personalizado, curadoria especializada e ambientes acolhedores que proporcionem inspiração aos nossos clientes.</p><p style=\"text-align: justify\"><strong>Valores</strong></p><ul><li><p><strong>Confiança:</strong> Cultivamos relações transparentes e duradouras com nossos clientes, colaboradores e fornecedores.</p></li><li><p><strong>Excelência:</strong> Buscamos continuamente a melhoria de nossos processos e a máxima qualidade em todos os produtos oferecidos.</p></li><li><p><strong>Inovação:</strong> Estamos atentos às tendências de mercado para oferecer soluções práticas e criativas.</p></li><li><p><strong>Comprometimento:</strong> Atuamos com responsabilidade, ética e dedicação para satisfazer plenamente as necessidades dos nossos clientes.</p></li></ul><p><strong><span style=\"font-size: 12pt\">Tradição:</span></strong><span style=\"font-size: 12pt\"> Valorizamos nossa história e mantemos vivas as práticas que nos consolidaram no mercado.</span></p>",
         "description2": "<p></p>"
       }
     },

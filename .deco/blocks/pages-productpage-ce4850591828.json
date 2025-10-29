@@ -150,10 +150,12 @@
             "productBanners": [
               {
                 "image": "https://assets.decocache.com/ffloresta/6b52f0a0-5093-4ffb-a88c-2d757bbf9cc1/teste-promo.jpg",
-                "countdownDate": "2025-10-27T23:59:59.000Z",
+                "countdownDate": "2025-10-30T23:59:59.000Z",
                 "displaySettings": {
                   "collectionIds": "182"
-                }
+                },
+                "title": "Teste",
+                "promoName": "Teste"
               }
             ]
           },
