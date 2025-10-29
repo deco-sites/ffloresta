@@ -9,10 +9,10 @@ import ProductSliderForBGShelf from "../../components/product/ProductSliderForBG
 
 export interface BackgroundProps {
   desktop: {
-    src: ImageWidget;
+    src?: ImageWidget;
   };
   mobile: {
-    src: ImageWidget;
+    src?: ImageWidget;
   };
 }
 
@@ -55,6 +55,8 @@ export default function ProductShelfWithBackground({
     },
   });
 
+  const hasBg = background?.desktop.src && background.mobile.src;
+
   return (
     <Section.Container {...viewItemListEvent} class="container">
       {/* Header Section - Sem background */}
@@ -63,7 +65,7 @@ export default function ProductShelfWithBackground({
       {/* Shelf Section - Com background */}
       <div class="relative w-full py-12">
         {/* Background Image - Apenas na shelf */}
-        {background && (
+        {hasBg && (
           <div class="absolute inset-0 z-0">
             <picture>
               <source
@@ -88,6 +90,7 @@ export default function ProductShelfWithBackground({
           <ProductSliderForBGShelf
             products={products}
             itemListName={title}
+            hasBg={hasBg}
             class="bg-transparent p-0"
           />
         </div>

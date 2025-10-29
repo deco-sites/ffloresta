@@ -9,7 +9,7 @@ export interface Props {
 }
 
 interface Benefit {
-  benefitImgSrc: Image;
+  benefitImgSrc?: Image;
   benefitImgAltText: string;
   benefitText: HTML;
   benefitLink?: string;
@@ -27,13 +27,15 @@ const BenefitItem = ({ benefit }: BenefitItemProps) => {
       href={benefit.benefitLink}
     >
       <div className="group flex items-center gap-3 transition duration-200 ease-in-out text-[#273D28] w-fit lg:w-full h-full rounded p-0">
-        <div className="flex-shrink-0">
-          <img
-            src={benefit.benefitImgSrc}
-            alt={benefit.benefitImgAltText}
-            className="w-12 h-12 object-contain"
-          />
-        </div>
+        {benefit.benefitImgSrc && (
+          <div className="flex-shrink-0">
+            <img
+              src={benefit.benefitImgSrc}
+              alt={benefit.benefitImgAltText}
+              className="w-12 h-12 object-contain"
+            />
+          </div>
+        )}
         <div
           className="flex-1 min-w-0 text-[#273D28] text-[12px]"
           dangerouslySetInnerHTML={{ __html: benefit.benefitText }}

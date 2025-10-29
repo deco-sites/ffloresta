@@ -15,49 +15,61 @@ export interface Props {
 
 function Institucional({ title, description, description2, images }: Props) {
   // Se não há nenhum conteúdo, não renderiza nada
-  if (!title && !description && !description2 && !images) {
+  if (
+    !title &&
+    !description &&
+    !description2 &&
+    !images.mobile &&
+    !images.desktop
+  ) {
     return null;
   }
 
+  const hasImage = images.mobile || images.desktop;
+  const hasText = title || description || description2;
+
   return (
     <Section.Container class="bg-[#FDFFF5]">
-      <div class="flex flex-col-reverse md:flex-row items-center gap-8 bg-[#FDFFF5] lg:ml-[3em] lg:mr-[3em]">
+      <div
+        class={`flex ${
+          hasImage ? "flex-col-reverse md:flex-row" : "flex-col"
+        } items-center gap-8 bg-[#FDFFF5] lg:mx-[3em]`}
+      >
         {/* Imagem - só renderiza se existir */}
-        {images.mobile ||
-          (images.desktop && (
-            <div class="w-full lg:w-1/2">
-              <Picture>
-                {images.mobile && (
-                  <Source
-                    media="(max-width: 640px)"
-                    src={images.mobile}
-                    width={328}
-                    height={203}
-                  />
-                )}
-                {images.desktop && (
-                  <Source
-                    media="(min-width: 640px)"
-                    src={images.desktop}
-                    width={1320}
-                    height={480}
-                  />
-                )}
-                {images.desktop && (
-                  <img
-                    src={images.desktop}
-                    alt={title || "Institucional"}
-                    class="w-full object-cover rounded-md shadow-md"
-                    loading="lazy"
-                  />
-                )}
-              </Picture>
-            </div>
-          ))}
+        {hasImage && (
+          <div class={`w-full ${hasText ? "lg:w-1/2" : "lg:w-full"}`}>
+            <Picture>
+              {images.mobile && (
+                <Source
+                  media="(max-width: 640px)"
+                  src={images.mobile}
+                  width={328}
+                  height={203}
+                />
+              )}
+              {images.desktop && (
+                <Source
+                  media="(min-width: 640px)"
+                  src={images.desktop}
+                  width={1320}
+                  height={480}
+                />
+              )}
+              <img
+                src={images.desktop || images.mobile}
+                alt={title || "Institucional"}
+                class="w-full object-cover rounded-md shadow-md"
+                loading="lazy"
+              />
+            </Picture>
+          </div>
+        )}
 
         {/* Texto - só renderiza se existir algum conteúdo de texto */}
-        {(title || description || description2) && (
-          <div class="w-full lg:w-1/2 text-left">
+        {hasText && (
+          <div
+            class={`w-full ${hasImage ? "lg:w-1/2" : "lg:w-full"} text-left`}
+          >
             {title && (
               <h2
                 class="font-bold mb-4"

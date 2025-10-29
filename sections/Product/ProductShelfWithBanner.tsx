@@ -8,13 +8,13 @@ import { type LoadingFallbackProps } from "@deco/deco";
 import { ImageWidget } from "apps/admin/widgets.ts";
 
 export interface BannerProps {
-  desktop?: {
-    src: ImageWidget;
+  desktop: {
+    src?: ImageWidget;
     alt: string;
   };
 
-  mobile?: {
-    src: ImageWidget;
+  mobile: {
+    src?: ImageWidget;
     alt: string;
   };
   href?: string;
@@ -65,6 +65,8 @@ export default function ProductShelfWithBanner({
     },
   });
 
+  const hasBg = banner?.desktop.src && banner.mobile.src;
+
   return (
     <Section.Container {...viewItemListEvent} class="container">
       <div
@@ -73,7 +75,7 @@ export default function ProductShelfWithBanner({
         } w-full  mx-auto lg:mx-0 xl:max-w-none`}
       >
         {/* Banner Section */}
-        {banner && (
+        {hasBg && (
           <div class={orientation === "vertical" ? "w-full" : "flex-1"}>
             <a href={banner.href} class="block">
               <picture>

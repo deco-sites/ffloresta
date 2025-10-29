@@ -6,9 +6,10 @@ import { useId } from "../../sdk/useId.ts";
 interface Props {
   products: Product[];
   itemListName?: string;
+  hasBg: boolean;
 }
 
-function ProductSliderForBGShelf({ products, itemListName }: Props) {
+function ProductSliderForBGShelf({ products, itemListName, hasBg }: Props) {
   const id = useId();
 
   return (
@@ -35,16 +36,18 @@ function ProductSliderForBGShelf({ products, itemListName }: Props) {
           ))}
         </ProductCarouselSlider>
 
-        {/* Dots no mobile */}
         <div class="flex justify-center items-center gap-2 mt-4 lg:hidden">
           {products.map((_, index) => (
             <ProductCarouselSlider.Dot
               index={index}
-              class="w-2 h-2 lg:w-3 lg:h-3 bg-transparent border border-[#ffffff] data-[active]:bg-[#ffffff] transition-colors"
+              class={`w-2 h-2 lg:w-3 lg:h-3 bg-transparent border transition-colors ${
+                hasBg
+                  ? "border-white data-[active]:bg-white"
+                  : "border-[#1F251C] data-[active]:bg-[#1F251C]"
+              }`}
             />
           ))}
         </div>
-
         {/* Botões */}
         <ProductCarouselSlider.PrevButton
           class="hidden lg:flex absolute -left-2 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md p-2 rounded-full w-8 h-8 items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
@@ -65,7 +68,6 @@ function ProductSliderForBGShelf({ products, itemListName }: Props) {
             />
           </svg>
         </ProductCarouselSlider.PrevButton>
-
         <ProductCarouselSlider.NextButton
           class="hidden lg:flex absolute -right-2 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md p-2 rounded-full w-8 h-8 items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
           aria-label="Próximos produtos"
