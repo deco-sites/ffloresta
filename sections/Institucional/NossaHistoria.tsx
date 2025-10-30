@@ -6,7 +6,6 @@ export interface Props {
   title?: string;
   description?: HTMLWidget;
   description2?: HTMLWidget;
-
   images: {
     mobile?: ImageWidget;
     desktop?: ImageWidget;
@@ -27,6 +26,8 @@ function Institucional({ title, description, description2, images }: Props) {
 
   const hasImage = images.mobile || images.desktop;
   const hasText = title || description || description2;
+
+  console.log(description, "description");
 
   return (
     <Section.Container class="bg-[#FDFFF5]">
@@ -84,29 +85,98 @@ function Institucional({ title, description, description2, images }: Props) {
             )}
             {description && (
               <div
-                class="leading-relaxed mb-4"
-                style={{
-                  color: "var(--Cores-de-Texto-Preta, #353535)",
-                  fontFamily: '"Lato"',
-                  fontSize: "16px",
-                }}
+                class="leading-relaxed mb-4 institutional-content"
                 dangerouslySetInnerHTML={{ __html: description }}
               />
             )}
             {description2 && (
               <div
-                class="leading-relaxed mb-4"
-                style={{
-                  color: "var(--Cores-de-Texto-Preta, #353535)",
-                  fontFamily: '"Lato"',
-                  fontSize: "16px",
-                }}
+                class="leading-relaxed mb-4 institutional-content"
                 dangerouslySetInnerHTML={{ __html: description2 }}
               />
             )}
           </div>
         )}
       </div>
+
+      {/* Adiciona CSS específico para o conteúdo institucional */}
+      {/* Adiciona CSS específico para o conteúdo institucional */}
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+      .institutional-content {
+        font-family: "Lato";
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      /* Parágrafos normais */
+      .institutional-content p {
+      }
+
+      /* Parágrafos VAZIOS criam quebra de linha */
+      .institutional-content p:empty {
+        display: block;
+        min-height: 1em; /* Define a altura da quebra de linha */
+        margin: 0;
+      }
+
+      /* Negrito */
+      .institutional-content strong,
+      .institutional-content b {
+        font-weight: 700;
+        color: #353535;
+      }
+
+      /* Itálico */
+      .institutional-content em,
+      .institutional-content i {
+        font-style: italic;
+      }
+
+      /* Listas não ordenadas (bullet points) */
+      .institutional-content ul {
+        list-style-type: disc;
+        margin-left: 1.5em;
+        padding-left: 0.5em;
+      }
+
+      /* Listas ordenadas (numeradas) */
+      .institutional-content ol {
+        list-style-type: decimal;
+        margin-left: 1.5em;
+        padding-left: 0.5em;
+      }
+
+      /* Itens de lista */
+      .institutional-content li {
+        line-height: 1.6;
+      }
+
+      /* Links */
+      .institutional-content a {
+        color: #0066cc;
+        text-decoration: underline;
+      }
+
+      .institutional-content a:hover {
+        color: #004499;
+      }
+
+      /* Títulos */
+      .institutional-content h1,
+      .institutional-content h2,
+      .institutional-content h3 {
+        font-weight: 700;
+        margin-top: 1em;
+      }
+
+      .institutional-content h1 { font-size: 2em; }
+      .institutional-content h2 { font-size: 1.5em; }
+      .institutional-content h3 { font-size: 1.25em; }
+    `,
+        }}
+      />
     </Section.Container>
   );
 }
