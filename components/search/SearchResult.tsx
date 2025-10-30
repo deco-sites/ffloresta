@@ -25,18 +25,78 @@ export interface SeoText {
   description?: HTML;
 }
 
+export interface Banner {
+  /** @title Imagem para Desktop */
+  desktop: ImageWidget;
+  /** @title Imagem para Mobile */
+  mobile: ImageWidget;
+  /** @title Texto Alternativo */
+  alt: string;
+  /** @title Ação do Banner */
+  action?: {
+    /** @title Link */
+    href?: string;
+    /** @title Título */
+    title?: string;
+    /** @title Subtítulo */
+    subTitle?: string;
+    /** @title Texto do Botão */
+    label?: string;
+  };
+}
+
+export interface VideoBanner {
+  /** @title Vídeo para Desktop */
+  desktop: string;
+  /** @title Vídeo para Mobile */
+  mobile: string;
+  /** @title Texto Alternativo */
+  alt: string;
+  /** @title Imagem de Poster (opcional) */
+  poster?: ImageWidget;
+  /** @title Reproduzir Automaticamente */
+  autoplay?: boolean;
+  /** @title Loop */
+  loop?: boolean;
+  /** @title Sem Áudio */
+  muted?: boolean;
+  /** @title Ação do Vídeo */
+  action?: {
+    /** @title Link */
+    href?: string;
+    /** @title Título */
+    title?: string;
+    /** @title Subtítulo */
+    subTitle?: string;
+    /** @title Texto do Botão */
+    label?: string;
+  };
+}
+
+/** @title Banner */
+export type BannerItem =
+  | {
+      /** @title Imagem */
+      "@type": "image";
+      /** @title Dados da Imagem */
+      data: Banner;
+    }
+  | {
+      /** @title Vídeo */
+      "@type": "video";
+      /** @title Dados do Vídeo */
+      data: VideoBanner;
+    };
+
 export interface Props {
   page: ProductListingPage | null;
   layout?: Layout;
   startingPage?: 0 | 1;
   partial?: "hideMore" | "hideLess";
-  bannerImage?: {
-    mobile?: ImageWidget;
-    desktop?: ImageWidget;
-    altText: string;
-  };
+  /** @title Banner */
+  banner?: BannerItem;
   seoText?: SeoText;
-  title?: string; // Nova prop para o título
+  title?: string;
 }
 
 function NotFound() {
@@ -53,21 +113,21 @@ function NotFound() {
             </h2>
             <ul className="mb-5">
               <li className="text-[13px] leading-[13px]">
-                <span className="text-lg inline-block mr-1">•</span>{" "}
-                Verifique se não há erro de digitação.
+                <span className="text-lg inline-block mr-1">•</span> Verifique
+                se não há erro de digitação.
               </li>
               <li className="text-[13px] leading-[13px]">
-                <span className="text-lg inline-block mr-1">•</span>{" "}
-                Tente utilizar uma única palavra.
+                <span className="text-lg inline-block mr-1">•</span> Tente
+                utilizar uma única palavra.
               </li>
               <li className="text-[13px] leading-[13px]">
-                <span className="text-lg inline-block mr-1">•</span>{" "}
-                Tente buscar por termos menos específicos e posteriormente use
-                os filtros da busca.
+                <span className="text-lg inline-block mr-1">•</span> Tente
+                buscar por termos menos específicos e posteriormente use os
+                filtros da busca.
               </li>
               <li className="text-[13px] leading-[13px]">
-                <span className="text-lg inline-block mr-1">•</span>{" "}
-                Procure utilizar sinônimos ao termo desejado.
+                <span className="text-lg inline-block mr-1">•</span> Procure
+                utilizar sinônimos ao termo desejado.
               </li>
             </ul>
           </div>
@@ -124,7 +184,7 @@ function PageResult(props: SectionProps<typeof loader>) {
       <div
         class={clx(
           "pb-2 sm:pb-10",
-          (!prevPageUrl || partial === "hideLess") && "hidden",
+          (!prevPageUrl || partial === "hideLess") && "hidden"
         )}
       >
         <a
@@ -162,7 +222,7 @@ function PageResult(props: SectionProps<typeof loader>) {
           "grid items-center",
           "grid-cols-2 gap-4", // Base
           "xl:grid-cols-4", // ≥1240px
-          "w-full",
+          "w-full"
         )}
       >
         {products?.map((product, index) => (
@@ -177,67 +237,65 @@ function PageResult(props: SectionProps<typeof loader>) {
       </div>
 
       <div class={clx("pt-5 sm:pt-10 w-full")}>
-        {infinite
-          ? (
-            <div class="flex justify-center [&_section]:contents">
-              <a
-                rel="next"
-                class={clx(
-                  "cursor-pointer",
-                  (!nextPageUrl || partial === "hideMore") && "hidden",
-                )}
-                hx-swap="outerHTML show:parent:top"
-                hx-get={partialNext}
-              >
-                <span class="inline [.htmx-request_&]:hidden">
-                  {" "}
-                  <div class="p-2 rounded-full bg-[rgba(21,31,22,0.6)] backdrop-blur-[12px] transition-all duration-300 hover:bg-[rgba(21,31,22,0.8)]">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6 9L12 15L18 9"
-                        stroke="white"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </div>
-                </span>
-                <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
-              </a>
-            </div>
-          )
-          : (
-            <div class={clx("join", infinite && "hidden")}>
-              <a
-                rel="prev"
-                aria-label="previous page link"
-                href={prevPageUrl ?? "#"}
-                disabled={!prevPageUrl}
-                class="btn btn-ghost join-item"
-              >
-                <Icon id="chevron-right" class="rotate-180" />
-              </a>
-              <span class="btn btn-ghost join-item">
-                Page {zeroIndexedOffsetPage + 1}
+        {infinite ? (
+          <div class="flex justify-center [&_section]:contents">
+            <a
+              rel="next"
+              class={clx(
+                "cursor-pointer",
+                (!nextPageUrl || partial === "hideMore") && "hidden"
+              )}
+              hx-swap="outerHTML show:parent:top"
+              hx-get={partialNext}
+            >
+              <span class="inline [.htmx-request_&]:hidden">
+                {" "}
+                <div class="p-2 rounded-full bg-[rgba(21,31,22,0.6)] backdrop-blur-[12px] transition-all duration-300 hover:bg-[rgba(21,31,22,0.8)]">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 9L12 15L18 9"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
               </span>
-              <a
-                rel="next"
-                aria-label="next page link"
-                href={nextPageUrl ?? "#"}
-                disabled={!nextPageUrl}
-                class="btn btn-ghost join-item"
-              >
-                <Icon id="chevron-right" />
-              </a>
-            </div>
-          )}
+              <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
+            </a>
+          </div>
+        ) : (
+          <div class={clx("join", infinite && "hidden")}>
+            <a
+              rel="prev"
+              aria-label="previous page link"
+              href={prevPageUrl ?? "#"}
+              disabled={!prevPageUrl}
+              class="btn btn-ghost join-item"
+            >
+              <Icon id="chevron-right" class="rotate-180" />
+            </a>
+            <span class="btn btn-ghost join-item">
+              Page {zeroIndexedOffsetPage + 1}
+            </span>
+            <a
+              rel="next"
+              aria-label="next page link"
+              href={nextPageUrl ?? "#"}
+              disabled={!nextPageUrl}
+              class="btn btn-ghost join-item"
+            >
+              <Icon id="chevron-right" />
+            </a>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -269,7 +327,7 @@ const setPageQuerystring = (page: string, id: string) => {
     history.replaceState(
       { prevPage, filters: url.searchParams.toString() },
       "",
-      url.href,
+      url.href
     );
   }).observe(element);
 };
@@ -278,7 +336,7 @@ function Result(props: SectionProps<typeof loader>) {
   const container = useId();
   const controls = useId();
   const device = useDevice();
-  const { startingPage = 0, url, partial, bannerImage, title } = props;
+  const { startingPage = 0, url, partial, banner, title } = props;
   const page = props.page!;
   const { products, filters, breadcrumb, pageInfo, sortOptions } = page;
   const perPage = pageInfo?.recordPerPage || products.length;
@@ -290,11 +348,12 @@ function Result(props: SectionProps<typeof loader>) {
 
   const fallbackSeoText: SeoText = {
     title: typeof document !== "undefined" ? document.title : undefined,
-    description: typeof document !== "undefined"
-      ? document
-        .querySelector("meta[name='description']")
-        ?.getAttribute("content") ?? undefined
-      : undefined,
+    description:
+      typeof document !== "undefined"
+        ? document
+            .querySelector("meta[name='description']")
+            ?.getAttribute("content") ?? undefined
+        : undefined,
   };
 
   const seoText = props.seoText ?? fallbackSeoText;
@@ -318,6 +377,54 @@ function Result(props: SectionProps<typeof loader>) {
     },
   });
 
+  const renderBanner = () => {
+    if (!banner || !banner.data) return null;
+
+    const { data } = banner;
+    const href = data.action?.href;
+
+    const content =
+      banner["@type"] === "image" ? (
+        <picture>
+          <source media="(max-width: 767px)" srcSet={data.mobile} />
+          <source media="(min-width: 768px)" srcSet={data.desktop} />
+          <img
+            src={data.desktop}
+            alt={data.alt}
+            class="w-full h-auto object-cover"
+          />
+        </picture>
+      ) : (
+        <video
+          class="w-full h-auto object-cover"
+          alt={data.alt}
+          autoPlay={data.autoplay}
+          loop={data.loop}
+          muted={data.muted}
+          poster={data.poster}
+          playsInline
+        >
+          <source src={data.desktop} media="(min-width: 768px)" />
+          <source src={data.mobile} media="(max-width: 767px)" />
+          Seu navegador não suporta o elemento de vídeo.
+        </video>
+      );
+
+    return (
+      <div class="w-full">
+        {href ? (
+          <a href={href} class="block">
+            {content}
+          </a>
+        ) : (
+          content
+        )}
+      </div>
+    );
+  };
+
+  const hasBanner = banner && banner.data;
+
   const results = (
     <span class="text-md text-[#1F251C] uppercase font-normal">
       {page.pageInfo.records} produtos encontrados
@@ -331,20 +438,12 @@ function Result(props: SectionProps<typeof loader>) {
   return (
     <>
       <div id={container} {...viewItemListEvent} class="w-full">
-        {partial ? <PageResult {...props} /> : (
+        {partial ? (
+          <PageResult {...props} />
+        ) : (
           <>
             {/* Banner full width - fora do container */}
-            {bannerImage && (
-              <div class="w-full">
-                <img
-                  src={device === "mobile"
-                    ? bannerImage.mobile || bannerImage.desktop
-                    : bannerImage.desktop || bannerImage.mobile}
-                  alt={bannerImage.altText}
-                  class="w-full"
-                />
-              </div>
-            )}
+            {hasBanner && renderBanner()}
 
             {/* Restante do conteúdo dentro do container */}
             <div class="container flex flex-col gap-4 sm:gap-5 w-full py-4 sm:py-5 px-5 lg:px-[4rem]">
@@ -477,7 +576,7 @@ function Result(props: SectionProps<typeof loader>) {
           __html: useScript(
             setPageQuerystring,
             `${pageInfo.currentPage}`,
-            container,
+            container
           ),
         }}
       />
@@ -548,9 +647,9 @@ export const loader = (props: Props, req: Request) => {
   return {
     ...props,
     url: req.url,
-    bannerImage: props.bannerImage,
+    banner: props.banner,
     seoText: props.seoText,
-    title: props.title, // Passa a prop title
+    title: props.title,
   };
 };
 
