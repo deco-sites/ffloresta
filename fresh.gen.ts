@@ -19,6 +19,7 @@ import * as $ProductPagePromoBannerIsland from "./islands/ProductPagePromoBanner
 import * as $Search_PaginationButtons from "./islands/Search/PaginationButtons.tsx";
 import * as $ShippingForm from "./islands/ShippingForm.tsx";
 import * as $Slider from "./islands/Slider.tsx";
+import * as $Sliders_AlertsSlider from "./islands/Sliders/AlertsSlider.tsx";
 import * as $Sliders_BenefitsSlider from "./islands/Sliders/BenefitsSlider.tsx";
 import * as $Sliders_CarouselSlider from "./islands/Sliders/CarouselSlider.tsx";
 import * as $Sliders_ProductCarouselSlider from "./islands/Sliders/ProductCarouselSlider.tsx";
@@ -46,6 +47,7 @@ const manifest = {
     "./islands/Search/PaginationButtons.tsx": $Search_PaginationButtons,
     "./islands/ShippingForm.tsx": $ShippingForm,
     "./islands/Slider.tsx": $Slider,
+    "./islands/Sliders/AlertsSlider.tsx": $Sliders_AlertsSlider,
     "./islands/Sliders/BenefitsSlider.tsx": $Sliders_BenefitsSlider,
     "./islands/Sliders/CarouselSlider.tsx": $Sliders_CarouselSlider,
     "./islands/Sliders/ProductCarouselSlider.tsx":
