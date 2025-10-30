@@ -49,7 +49,8 @@
             "mobile": "https://assets.decocache.com/ffloresta/2d55a887-0cad-4e86-886e-30e132b5d705/Jador-2.jpg",
             "action": {
               "href": "https://www.ferragensfloresta.com.br/puxadores/jador?initialMap=c&initialQuery=puxadores&map=category-1%2Cbrand&page=1"
-            }
+            },
+            "alt": "Banner"
           }
         },
         {
@@ -61,7 +62,8 @@
               "href": "/ferragens-de-projetos/rometal/coplanar?page=1"
             },
             "autoplay": true,
-            "loop": true
+            "loop": true,
+            "alt": "banner"
           }
         },
         {
@@ -147,7 +149,16 @@
           "src": "https://assets.decocache.com/ffloresta/cddaec9e-a6f9-4d12-80df-b1e0819abd32/3-(2).png",
           "alt": "Banner de Topo Shelf"
         },
-        "href": "/182?map=productClusterIds&page=1"
+        "href": "/182?map=productClusterIds&page=1",
+        "@type": "image",
+        "data": {
+          "alt": "alt",
+          "desktop": "https://assets.decocache.com/ffloresta/cddaec9e-a6f9-4d12-80df-b1e0819abd32/3-(2).png",
+          "mobile": "https://assets.decocache.com/ffloresta/2ee29ecc-d331-489c-a1de-fb9c95ebaa79/4.png",
+          "autoplay": true,
+          "loop": true,
+          "muted": true
+        }
       },
       "orientation": "vertical",
       "icon": "https://assets.decocache.com/ffloresta/8e934bf1-704a-43a4-9ec5-abe3998e9fc0/Logo-header.svg"
