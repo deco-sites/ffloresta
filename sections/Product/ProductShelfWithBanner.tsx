@@ -9,9 +9,9 @@ import { ImageWidget, VideoWidget } from "apps/admin/widgets.ts";
 
 export interface Banner {
   /** @title Imagem para Desktop */
-  desktop: ImageWidget;
+  desktop?: ImageWidget;
   /** @title Imagem para Mobile */
-  mobile: ImageWidget;
+  mobile?: ImageWidget;
   /** @title Texto Alternativo */
   alt: string;
   /** @title Ação do Banner */
@@ -29,9 +29,9 @@ export interface Banner {
 
 export interface VideoBanner {
   /** @title Vídeo para Desktop */
-  desktop: VideoWidget;
+  desktop?: VideoWidget;
   /** @title Vídeo para Mobile */
-  mobile: VideoWidget;
+  mobile?: VideoWidget;
   /** @title Texto Alternativo */
   alt: string;
   /** @title Imagem de Poster (opcional) */
@@ -128,29 +128,37 @@ export default function ProductShelfWithBanner({
     const href = banner.data.action?.href;
     const content =
       banner["@type"] === "image" ? (
-        <picture>
-          <source media="(max-width: 767px)" srcSet={banner.data.mobile} />
-          <source media="(min-width: 768px)" srcSet={banner.data.desktop} />
-          <img
-            src={banner.data.desktop}
-            alt={banner.data.alt}
-            class="w-full h-auto object-cover"
-          />
-        </picture>
+        <>
+          {banner.data.desktop && banner.data.mobile && (
+            <picture>
+              <source media="(max-width: 767px)" srcSet={banner.data.mobile} />
+              <source media="(min-width: 768px)" srcSet={banner.data.desktop} />
+              <img
+                src={banner.data.desktop}
+                alt={banner.data.alt}
+                class="w-full h-auto object-cover"
+              />
+            </picture>
+          )}
+        </>
       ) : (
-        <video
-          class="w-full h-auto object-cover"
-          alt={banner.data.alt}
-          autoPlay={banner.data.autoplay}
-          loop={banner.data.loop}
-          muted={banner.data.muted}
-          poster={banner.data.poster}
-          playsInline
-        >
-          <source src={banner.data.desktop} media="(min-width: 768px)" />
-          <source src={banner.data.mobile} media="(max-width: 767px)" />
-          Seu navegador não suporta o elemento de vídeo.
-        </video>
+        <>
+          {banner.data.desktop && banner.data.mobile && (
+            <video
+              class="w-full h-auto object-cover"
+              alt={banner.data.alt}
+              autoPlay={banner.data.autoplay}
+              loop={banner.data.loop}
+              muted={banner.data.muted}
+              poster={banner.data.poster}
+              playsInline
+            >
+              <source src={banner.data.desktop} media="(min-width: 768px)" />
+              <source src={banner.data.mobile} media="(max-width: 767px)" />
+              Seu navegador não suporta o elemento de vídeo.
+            </video>
+          )}
+        </>
       );
 
     return (
