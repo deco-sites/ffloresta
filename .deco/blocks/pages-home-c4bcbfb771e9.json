@@ -157,7 +157,10 @@
           "mobile": "https://assets.decocache.com/ffloresta/2ee29ecc-d331-489c-a1de-fb9c95ebaa79/4.png",
           "autoplay": true,
           "loop": true,
-          "muted": true
+          "muted": true,
+          "action": {
+            "href": "/182?map=productClusterIds&page=1"
+          }
         }
       },
       "orientation": "vertical",
