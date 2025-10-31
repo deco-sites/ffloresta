@@ -116,37 +116,35 @@ export default function ProductShelf({
     const content =
       headerBanner["@type"] === "image" ? (
         <>
-          {data.desktop &&
-            data.mobile(
-              <picture>
-                <source media="(max-width: 767px)" srcSet={data.mobile} />
-                <source media="(min-width: 768px)" srcSet={data.desktop} />
-                <img
-                  src={data.desktop}
-                  alt={data.alt}
-                  class="w-full h-auto object-cover max-h-16"
-                />
-              </picture>
-            )}
+          {data.desktop && data.mobile && (
+            <picture>
+              <source media="(max-width: 767px)" srcSet={data.mobile} />
+              <source media="(min-width: 768px)" srcSet={data.desktop} />
+              <img
+                src={data.desktop}
+                alt={data.alt}
+                class="w-full h-auto object-cover max-h-16"
+              />
+            </picture>
+          )}
         </>
       ) : (
         <>
-          {data.desktop &&
-            data.mobile(
-              <video
-                class="w-full h-auto object-cover max-h-16"
-                alt={data.alt}
-                autoPlay={data.autoplay}
-                loop={data.loop}
-                muted={data.muted}
-                poster={data.poster}
-                playsInline
-              >
-                <source src={data.desktop} media="(min-width: 768px)" />
-                <source src={data.mobile} media="(max-width: 767px)" />
-                Seu navegador não suporta o elemento de vídeo.
-              </video>
-            )}
+          {data.desktop && data.mobile && (
+            <video
+              class="w-full h-auto object-cover max-h-16"
+              alt={data.alt}
+              autoPlay={data.autoplay}
+              loop={data.loop}
+              muted={data.muted}
+              poster={data.poster}
+              playsInline
+            >
+              <source src={data.desktop} media="(min-width: 768px)" />
+              <source src={data.mobile} media="(max-width: 767px)" />
+              Seu navegador não suporta o elemento de vídeo.
+            </video>
+          )}
         </>
       );
 
