@@ -73,11 +73,14 @@
           }
         },
         {
-          "type": "image",
+          "type": "video",
           "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/f4e20fd3-0a9d-45a2-bffe-74c700db17ff/frete-gratis-1-a-(1).jpg",
-            "mobile": "https://assets.decocache.com/ffloresta/2ac187d1-ff29-4d9a-b820-7ac4fe37dbde/frete-gratis-2-(1).jpg",
-            "alt": "frete gratis"
+            "desktop": "https://assets.decocache.com/ffloresta/74b81cf5-236b-4ec0-8e05-9c5bde748dd5/1031.mp4",
+            "mobile": "https://assets.decocache.com/ffloresta/bbfc27db-3530-4e9a-a435-1c7ef731d71d/video-mobile-ace-2.mp4",
+            "alt": "15% de desconto em ferramentas",
+            "action": {
+              "href": "/ferramentas/acessorios?page=1"
+            }
           }
         }
       ],
