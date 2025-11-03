@@ -1,7 +1,70 @@
 import { useId } from "../sdk/useId.ts";
-import { ImageWidget as Image } from "apps/admin/widgets.ts";
+import { ImageWidget as Image, VideoWidget } from "apps/admin/widgets.ts";
 import { useEffect, useRef, useState } from "preact/hooks";
 import { clx } from "../sdk/clx.ts";
+
+export interface Banner {
+  /** @title Imagem para Desktop */
+  desktop: Image;
+  /** @title Imagem para Mobile */
+  mobile: Image;
+  /** @title Texto Alternativo */
+  alt: string;
+  /** @title Ação do Banner */
+  action?: {
+    /** @title Link */
+    href?: string;
+    /** @title Título */
+    title?: string;
+    /** @title Subtítulo */
+    subTitle?: string;
+    /** @title Texto do Botão */
+    label?: string;
+  };
+}
+
+export interface VideoBanner {
+  /** @title Vídeo para Desktop */
+  desktop: VideoWidget;
+  /** @title Vídeo para Mobile */
+  mobile: VideoWidget;
+  /** @title Texto Alternativo */
+  alt: string;
+  /** @title Imagem de Poster (opcional) */
+  poster?: Image;
+  /** @title Reproduzir Automaticamente */
+  autoplay?: boolean;
+  /** @title Loop */
+  loop?: boolean;
+  /** @title Sem Áudio */
+  muted?: boolean;
+  /** @title Ação do Vídeo */
+  action?: {
+    /** @title Link */
+    href?: string;
+    /** @title Título */
+    title?: string;
+    /** @title Subtítulo */
+    subTitle?: string;
+    /** @title Texto do Botão */
+    label?: string;
+  };
+}
+
+/** @title Item do Mosaico */
+export type MosaicItem =
+  | {
+      /** @title Imagem */
+      "@type": "image";
+      /** @title Dados da Imagem */
+      data: Banner;
+    }
+  | {
+      /** @title Vídeo */
+      "@type": "video";
+      /** @title Dados do Vídeo */
+      data: VideoBanner;
+    };
 
 export interface Props {
   settings?: {
@@ -10,39 +73,72 @@ export interface Props {
     autoplay?: boolean;
     autoplayInterval?: number;
   };
-  images: Array<{
-    desktop: Image;
-    mobile: Image;
-    alt: string;
-    href?: string;
-  }>;
+  /** @title Itens do Mosaico */
+  items: MosaicItem[];
 }
 
-function MosaicImage({
-  image,
+function MosaicItemRenderer({
+  item,
   lcp,
 }: {
-  image: Props["images"][number];
+  item: MosaicItem;
   lcp?: boolean;
 }) {
-  const { desktop, mobile, alt, href } = image;
+  const { data } = item;
+  const href = data.action?.href;
 
-  const content = (
-    <>
-      <img
-        src={mobile}
-        alt={alt}
-        class="object-cover w-full h-full md:hidden"
-        loading={lcp ? "eager" : "lazy"}
-      />
-      <img
-        src={desktop}
-        alt={alt}
-        class="object-cover w-full h-full hidden md:block"
-        loading={lcp ? "eager" : "lazy"}
-      />
-    </>
-  );
+  const content =
+    item["@type"] === "image" ? (
+      <>
+        {data.desktop && data.mobile && (
+          <>
+            <img
+              src={data.mobile}
+              alt={data.alt}
+              class="object-cover w-full h-full md:hidden"
+              loading={lcp ? "eager" : "lazy"}
+            />
+            <img
+              src={data.desktop}
+              alt={data.alt}
+              class="object-cover w-full h-full hidden md:block"
+              loading={lcp ? "eager" : "lazy"}
+            />
+          </>
+        )}
+      </>
+    ) : (
+      <>
+        {data.desktop && data.mobile && (
+          <>
+            <video
+              class="object-cover w-full h-full md:hidden"
+              alt={data.alt}
+              autoPlay={data.autoplay}
+              loop={data.loop}
+              muted={data.muted}
+              poster={data.poster}
+              playsInline
+              preload={lcp ? "auto" : "metadata"}
+            >
+              <source src={data.mobile} />
+            </video>
+            <video
+              class="object-cover w-full h-full hidden md:block"
+              alt={data.alt}
+              autoPlay={data.autoplay}
+              loop={data.loop}
+              muted={data.muted}
+              poster={data.poster}
+              playsInline
+              preload={lcp ? "auto" : "metadata"}
+            >
+              <source src={data.desktop} />
+            </video>
+          </>
+        )}
+      </>
+    );
 
   if (href) {
     return (
@@ -55,7 +151,7 @@ function MosaicImage({
   return <div class="block h-full w-full">{content}</div>;
 }
 
-export default function BannerMosaicIsland({ images, settings = {} }: Props) {
+export default function BannerMosaicIsland({ items, settings = {} }: Props) {
   const {
     itemsToShow = 4,
     gap = 3,
@@ -76,7 +172,7 @@ export default function BannerMosaicIsland({ images, settings = {} }: Props) {
 
   // Função para ir para um slide específico com transição suave
   const goToSlide = (index: number) => {
-    if (isTransitioning || !sliderRef.current || images.length <= 1) return;
+    if (isTransitioning || !sliderRef.current || items.length <= 1) return;
 
     setIsTransitioning(true);
     setActiveDot(index);
@@ -109,19 +205,19 @@ export default function BannerMosaicIsland({ images, settings = {} }: Props) {
     if (
       newActiveDot !== activeDot &&
       newActiveDot >= 0 &&
-      newActiveDot < images.length
+      newActiveDot < items.length
     ) {
       setActiveDot(newActiveDot);
     }
   };
 
   const goToNextSlide = () => {
-    const nextSlide = (activeDot + 1) % images.length;
+    const nextSlide = (activeDot + 1) % items.length;
     goToSlide(nextSlide);
   };
 
   const startAutoplay = () => {
-    if (!autoplay || images.length <= 1 || isDragging.current) return;
+    if (!autoplay || items.length <= 1 || isDragging.current) return;
     stopAutoplay();
     autoplayTimer.current = setInterval(goToNextSlide, autoplayInterval);
   };
@@ -246,18 +342,18 @@ export default function BannerMosaicIsland({ images, settings = {} }: Props) {
       // Parar autoplay
       stopAutoplay();
     };
-  }, [images.length, autoplay, autoplayInterval, activeDot, isTransitioning]);
+  }, [items.length, autoplay, autoplayInterval, activeDot, isTransitioning]);
 
   const desktopView = (
     <div
       class={clx(
         "hidden md:flex flex-wrap items-stretch justify-center",
-        `gap-${gap}`,
+        `gap-${gap}`
       )}
     >
-      {images?.slice(0, itemsToShow).map((image, index) => (
+      {items?.slice(0, itemsToShow).map((item, index) => (
         <div class={`flex-1 min-w-[calc(${100 / itemsToShow}% - ${gap}px)]`}>
-          <MosaicImage image={image} lcp={index < 2} />
+          <MosaicItemRenderer item={item} lcp={index < 2} />
         </div>
       ))}
     </div>
@@ -275,20 +371,20 @@ export default function BannerMosaicIsland({ images, settings = {} }: Props) {
           WebkitOverflowScrolling: "touch",
         }}
       >
-        {images?.map((image, index) => (
+        {items?.map((item, index) => (
           <div
             key={index}
             class="flex-shrink-0 snap-start w-full"
             style={{ flex: "0 0 100%" }}
           >
-            <MosaicImage image={image} lcp={index < 2} />
+            <MosaicItemRenderer item={item} lcp={index < 2} />
           </div>
         ))}
       </div>
 
-      {images.length > 1 && (
+      {items.length > 1 && (
         <div class="flex justify-center gap-2 mt-4">
-          {images.map((_, index) => (
+          {items.map((_, index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
@@ -301,7 +397,7 @@ export default function BannerMosaicIsland({ images, settings = {} }: Props) {
                   "w-2 h-2 lg:w-3 lg:h-3 transition-all duration-300",
                   activeDot === index
                     ? "bg-[#2D2D2D]"
-                    : "bg-transparent border border-[#2D2D2D]",
+                    : "bg-transparent border border-[#2D2D2D]"
                 )}
               />
             </button>

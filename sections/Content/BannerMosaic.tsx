@@ -3,8 +3,72 @@ import BannerMosaicIsland, {
 } from "../../islands/BannerMosaicIsland.tsx";
 import Section from "../../components/ui/Section.tsx";
 import { SpacingProps, spacingToStyle } from "../../utils/spacing.ts";
+import { ImageWidget, VideoWidget } from "apps/admin/widgets.ts";
 
-export interface Props extends BannerMosaicProps {
+export interface Banner {
+  /** @title Imagem para Desktop */
+  desktop?: ImageWidget;
+  /** @title Imagem para Mobile */
+  mobile?: ImageWidget;
+  /** @title Texto Alternativo */
+  alt: string;
+  /** @title Ação do Banner */
+  action?: {
+    /** @title Link */
+    href?: string;
+    /** @title Título */
+    title?: string;
+    /** @title Subtítulo */
+    subTitle?: string;
+    /** @title Texto do Botão */
+    label?: string;
+  };
+}
+
+export interface VideoBanner {
+  /** @title Vídeo para Desktop */
+  desktop?: VideoWidget;
+  /** @title Vídeo para Mobile */
+  mobile?: VideoWidget;
+  /** @title Texto Alternativo */
+  alt: string;
+  /** @title Imagem de Poster (opcional) */
+  poster?: ImageWidget;
+  /** @title Reproduzir Automaticamente */
+  autoplay?: boolean;
+  /** @title Loop */
+  loop?: boolean;
+  /** @title Sem Áudio */
+  muted?: boolean;
+  /** @title Ação do Vídeo */
+  action?: {
+    /** @title Link */
+    href?: string;
+    /** @title Título */
+    title?: string;
+    /** @title Subtítulo */
+    subTitle?: string;
+    /** @title Texto do Botão */
+    label?: string;
+  };
+}
+
+/** @title Item do Mosaico */
+export type MosaicItem =
+  | {
+      /** @title Imagem */
+      "@type": "image";
+      /** @title Dados da Imagem */
+      data: Banner;
+    }
+  | {
+      /** @title Vídeo */
+      "@type": "video";
+      /** @title Dados do Vídeo */
+      data: VideoBanner;
+    };
+
+export interface Props {
   /**
    * @title Título da Seção
    * @description Título opcional para a seção do mosaico
@@ -62,10 +126,16 @@ export interface Props extends BannerMosaicProps {
       size?: string;
     };
   };
+
+  /** @title Itens do Mosaico */
+  items?: MosaicItem[];
+
+  /** @title Configurações do Mosaico */
+  settings?: BannerMosaicProps["settings"];
 }
 
 export default function BannerMosaicSection(props: Props) {
-  const { title, description, background, spacing, ...bannerProps } = props;
+  const { title, description, background, spacing, items, settings } = props;
 
   const sectionStyle = {
     ...spacingToStyle(spacing),
@@ -87,7 +157,7 @@ export default function BannerMosaicSection(props: Props) {
             {description && <p class="text-lg">{description}</p>}
           </div>
         )}
-        <BannerMosaicIsland {...bannerProps} />
+        <BannerMosaicIsland items={items || []} settings={settings} />
       </div>
     </div>
   );

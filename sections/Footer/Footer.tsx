@@ -68,6 +68,7 @@ interface Props {
   institutionalLinks?: Item[];
   policyLinks?: Item[];
   social?: Social[];
+  accountLink?: string;
   paymentMethods?: PaymentMethods[];
   securitySeals?: SecuritySeals;
 }
@@ -102,6 +103,7 @@ function Footer({
     showTrustvox: false,
     trustvoxAlignment: "left",
   },
+  accountLink = "/account",
 }: Props) {
   const device = useDevice();
   const isMobile = device === "mobile";
@@ -264,7 +266,7 @@ function Footer({
                         </svg>
 
                         <a
-                          href="/account"
+                          href={accountLink}
                           class="text-[#DAEFAE] italic text-[14px] font-bold hover:underline"
                         >
                           Minha conta

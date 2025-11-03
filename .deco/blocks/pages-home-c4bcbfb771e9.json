@@ -49,53 +49,51 @@
         {
           "type": "image",
           "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/cbbbfe83-2d69-41eb-a816-165bf6c230ac/Jador-1.jpg",
-            "mobile": "https://assets.decocache.com/ffloresta/2d55a887-0cad-4e86-886e-30e132b5d705/Jador-2.jpg",
-            "action": {
-              "href": "https://www.ferragensfloresta.com.br/puxadores/jador?initialMap=c&initialQuery=puxadores&map=category-1%2Cbrand&page=1"
-            }
+            "desktop": "https://assets.decocache.com/ffloresta/129d3f80-3611-4ddb-9dc3-b241bef1951a/black-floresta.jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/178a86c5-a321-41d2-877f-114ea8bc2411/black-floresta-2.jpg",
+            "alt": "Black Floresta"
+          }
+        },
+        {
+          "type": "image",
+          "data": {
+            "desktop": "https://assets.decocache.com/ffloresta/376fb5fb-05ab-4891-ac1f-743109235bda/desk.jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/0a378893-b326-449f-9c35-82d6da712a18/mobile.jpg",
+            "action": {},
+            "alt": "Banner."
           }
         },
         {
           "type": "video",
           "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/d0976081-30a1-4066-87f8-2917736dab82/coplanar-1.mp4",
-            "mobile": "https://assets.decocache.com/ffloresta/8033580b-da0e-4f11-9e9b-e1ccbd8e8771/coplanar-2.mp4",
+            "desktop": "https://assets.decocache.com/ffloresta/5dcd6eb9-0536-4f5e-8574-7653519dfb31/video-fechadura-1.mp4",
+            "mobile": "https://assets.decocache.com/ffloresta/88d60cbb-f270-40e3-ada1-10ac4fffff21/video-mobile-2.mp4",
             "action": {
-              "href": "/ferragens-de-projetos/rometal/coplanar?page=1"
+              "href": "fechaduras?page=1"
             },
             "autoplay": true,
-            "loop": true
+            "loop": true,
+            "alt": "banner"
           }
         },
         {
-          "type": "image",
+          "type": "video",
           "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/989f7490-a76f-4c39-af64-4d23779712a0/banner-1.jpg",
-            "mobile": "https://assets.decocache.com/ffloresta/daecf455-2f7c-47f0-9b30-6b258adb71a4/banner-1-mob.jpg",
-            "alt": "Ganhe um kit de pontas e brocas",
+            "desktop": "https://assets.decocache.com/ffloresta/00e802d6-b81c-4d00-af16-b57c98888214/1029(1).mp4",
+            "mobile": "https://assets.decocache.com/ffloresta/64e04543-f667-4066-a37d-a62f96920820/video-mobile-frete-2.mp4",
+            "action": {},
+            "alt": "floresta"
+          }
+        },
+        {
+          "type": "video",
+          "data": {
+            "desktop": "https://assets.decocache.com/ffloresta/74b81cf5-236b-4ec0-8e05-9c5bde748dd5/1031.mp4",
+            "mobile": "https://assets.decocache.com/ffloresta/bbfc27db-3530-4e9a-a435-1c7ef731d71d/video-mobile-ace-2.mp4",
+            "alt": "15% de desconto em ferramentas",
             "action": {
-              "href": "/mes-bosch?page=1"
+              "href": "/ferramentas/acessorios?page=1"
             }
-          }
-        },
-        {
-          "type": "image",
-          "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/44d2e8a6-a8af-4017-8bda-bfb8c06fbb04/dobradica1a.jpg",
-            "mobile": "https://assets.decocache.com/ffloresta/241005ee-a6b0-4f5a-848a-7e986ebeb4b6/dobradica1B.jpg",
-            "alt": "Ganhe um kit de pontas e brocas",
-            "action": {
-              "href": "/ferragens/dobradicas?page=1"
-            }
-          }
-        },
-        {
-          "type": "image",
-          "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/f4e20fd3-0a9d-45a2-bffe-74c700db17ff/frete-gratis-1-a-(1).jpg",
-            "mobile": "https://assets.decocache.com/ffloresta/2ac187d1-ff29-4d9a-b820-7ac4fe37dbde/frete-gratis-2-(1).jpg",
-            "alt": "frete gratis"
           }
         }
       ],
@@ -151,7 +149,19 @@
           "src": "https://assets.decocache.com/ffloresta/cddaec9e-a6f9-4d12-80df-b1e0819abd32/3-(2).png",
           "alt": "Banner de Topo Shelf"
         },
-        "href": "/182?map=productClusterIds&page=1"
+        "href": "/182?map=productClusterIds&page=1",
+        "@type": "image",
+        "data": {
+          "alt": "alt",
+          "desktop": "https://assets.decocache.com/ffloresta/cddaec9e-a6f9-4d12-80df-b1e0819abd32/3-(2).png",
+          "mobile": "https://assets.decocache.com/ffloresta/2ee29ecc-d331-489c-a1de-fb9c95ebaa79/4.png",
+          "autoplay": true,
+          "loop": true,
+          "muted": true,
+          "action": {
+            "href": "/182?map=productClusterIds&page=1"
+          }
+        }
       },
       "orientation": "vertical",
       "icon": "https://assets.decocache.com/ffloresta/8e934bf1-704a-43a4-9ec5-abe3998e9fc0/Logo-header.svg"
@@ -247,7 +257,7 @@
     },
     {
       "__resolveType": "site/sections/Product/ProductShelf.tsx",
-      "title": "FERRAMENTAS",
+      "title": "Acessórios de Ferramentas",
       "headerIcon": "https://assets.decocache.com/ffloresta/28daeeed-da2e-4353-9b47-094d244c40dd/home-second-shelf-title-icon.svg",
       "products": {
         "__resolveType": "vtex/loaders/intelligentSearch/productSearchValidator.ts",
@@ -285,7 +295,36 @@
       "enableSlider": false,
       "settings": {
         "gap": 3
-      }
+      },
+      "items": [
+        {
+          "@type": "image",
+          "data": {
+            "desktop": "https://assets.decocache.com/ffloresta/d25c49b4-cbc9-4538-987c-9bbeeeb4963c/1.png",
+            "mobile": "https://assets.decocache.com/ffloresta/d25c49b4-cbc9-4538-987c-9bbeeeb4963c/1.png",
+            "alt": "alt",
+            "autoplay": true,
+            "loop": true,
+            "muted": true
+          }
+        },
+        {
+          "@type": "image",
+          "data": {
+            "desktop": "https://assets.decocache.com/ffloresta/db849ace-31d5-4327-80e4-85f602e03cf3/2.png",
+            "mobile": "https://assets.decocache.com/ffloresta/db849ace-31d5-4327-80e4-85f602e03cf3/2.png",
+            "alt": "alt"
+          }
+        },
+        {
+          "@type": "image",
+          "data": {
+            "desktop": "https://assets.decocache.com/ffloresta/428ded2a-c47f-4b1e-a7e3-23624799163c/3.png",
+            "mobile": "https://assets.decocache.com/ffloresta/428ded2a-c47f-4b1e-a7e3-23624799163c/3.png",
+            "alt": "alt"
+          }
+        }
+      ]
     },
     {
       "__resolveType": "site/sections/Brand/BrandGrid.tsx",
@@ -345,7 +384,7 @@
     },
     {
       "__resolveType": "site/sections/Product/ProductShelf.tsx",
-      "title": "PUXADORES",
+      "title": "Puxadores",
       "headerIcon": "https://assets.decocache.com/ffloresta/28daeeed-da2e-4353-9b47-094d244c40dd/home-second-shelf-title-icon.svg",
       "products": {
         "__resolveType": "vtex/loaders/intelligentSearch/productSearchValidator.ts",
@@ -357,11 +396,104 @@
       },
       "icon": "https://assets.decocache.com/ffloresta/1e5baa2f-3844-4f09-a3f0-28039a7432ad/Prancheta-2.png",
       "banner": "https://assets.decocache.com/ffloresta/783c3412-c1c4-4632-af24-1e5036f8c340/Mask-group.png",
-      "headerBanner": "https://assets.decocache.com/ffloresta/06dc5226-49ff-4c0a-96d4-27cf51b7e84c/1-(2).jpg"
+      "headerBanner": {
+        "0": "h",
+        "1": "t",
+        "2": "t",
+        "3": "p",
+        "4": "s",
+        "5": ":",
+        "6": "/",
+        "7": "/",
+        "8": "a",
+        "9": "s",
+        "10": "s",
+        "11": "e",
+        "12": "t",
+        "13": "s",
+        "14": ".",
+        "15": "d",
+        "16": "e",
+        "17": "c",
+        "18": "o",
+        "19": "c",
+        "20": "a",
+        "21": "c",
+        "22": "h",
+        "23": "e",
+        "24": ".",
+        "25": "c",
+        "26": "o",
+        "27": "m",
+        "28": "/",
+        "29": "f",
+        "30": "f",
+        "31": "l",
+        "32": "o",
+        "33": "r",
+        "34": "e",
+        "35": "s",
+        "36": "t",
+        "37": "a",
+        "38": "/",
+        "39": "0",
+        "40": "6",
+        "41": "d",
+        "42": "c",
+        "43": "5",
+        "44": "2",
+        "45": "2",
+        "46": "6",
+        "47": "-",
+        "48": "4",
+        "49": "9",
+        "50": "f",
+        "51": "f",
+        "52": "-",
+        "53": "4",
+        "54": "c",
+        "55": "0",
+        "56": "a",
+        "57": "-",
+        "58": "9",
+        "59": "6",
+        "60": "d",
+        "61": "4",
+        "62": "-",
+        "63": "2",
+        "64": "7",
+        "65": "c",
+        "66": "f",
+        "67": "5",
+        "68": "1",
+        "69": "b",
+        "70": "7",
+        "71": "e",
+        "72": "8",
+        "73": "4",
+        "74": "c",
+        "75": "/",
+        "76": "1",
+        "77": "-",
+        "78": "(",
+        "79": "2",
+        "80": ")",
+        "81": ".",
+        "82": "j",
+        "83": "p",
+        "84": "g",
+        "@type": "image",
+        "data": {
+          "alt": "teste",
+          "action": {},
+          "desktop": "https://assets.decocache.com/ffloresta/b63d5845-d83d-4b8b-a833-876d5e6e6e97/1-(1).jpg",
+          "mobile": "https://assets.decocache.com/ffloresta/b63d5845-d83d-4b8b-a833-876d5e6e6e97/1-(1).jpg"
+        }
+      }
     },
     {
       "__resolveType": "site/sections/Product/ProductShelf.tsx",
-      "title": "FECHADURAS",
+      "title": "Fechaduras",
       "headerIcon": "https://assets.decocache.com/ffloresta/28daeeed-da2e-4353-9b47-094d244c40dd/home-second-shelf-title-icon.svg",
       "products": {
         "__resolveType": "vtex/loaders/intelligentSearch/productSearchValidator.ts",
@@ -373,7 +505,99 @@
       },
       "icon": "https://assets.decocache.com/ffloresta/d26b1d31-88e1-41c0-ae15-82e146758d3f/Prancheta-1-3.svg",
       "banner": "https://assets.decocache.com/ffloresta/783c3412-c1c4-4632-af24-1e5036f8c340/Mask-group.png",
-      "headerBanner": "https://assets.decocache.com/ffloresta/4972438c-ab3a-464f-9cb6-7a4fd49c71fe/2-(1).jpg"
+      "headerBanner": {
+        "0": "h",
+        "1": "t",
+        "2": "t",
+        "3": "p",
+        "4": "s",
+        "5": ":",
+        "6": "/",
+        "7": "/",
+        "8": "a",
+        "9": "s",
+        "10": "s",
+        "11": "e",
+        "12": "t",
+        "13": "s",
+        "14": ".",
+        "15": "d",
+        "16": "e",
+        "17": "c",
+        "18": "o",
+        "19": "c",
+        "20": "a",
+        "21": "c",
+        "22": "h",
+        "23": "e",
+        "24": ".",
+        "25": "c",
+        "26": "o",
+        "27": "m",
+        "28": "/",
+        "29": "f",
+        "30": "f",
+        "31": "l",
+        "32": "o",
+        "33": "r",
+        "34": "e",
+        "35": "s",
+        "36": "t",
+        "37": "a",
+        "38": "/",
+        "39": "4",
+        "40": "9",
+        "41": "7",
+        "42": "2",
+        "43": "4",
+        "44": "3",
+        "45": "8",
+        "46": "c",
+        "47": "-",
+        "48": "a",
+        "49": "b",
+        "50": "3",
+        "51": "a",
+        "52": "-",
+        "53": "4",
+        "54": "6",
+        "55": "4",
+        "56": "f",
+        "57": "-",
+        "58": "9",
+        "59": "c",
+        "60": "b",
+        "61": "6",
+        "62": "-",
+        "63": "7",
+        "64": "a",
+        "65": "4",
+        "66": "f",
+        "67": "d",
+        "68": "4",
+        "69": "9",
+        "70": "c",
+        "71": "7",
+        "72": "1",
+        "73": "f",
+        "74": "e",
+        "75": "/",
+        "76": "2",
+        "77": "-",
+        "78": "(",
+        "79": "1",
+        "80": ")",
+        "81": ".",
+        "82": "j",
+        "83": "p",
+        "84": "g",
+        "@type": "image",
+        "data": {
+          "alt": "teste",
+          "desktop": "https://assets.decocache.com/ffloresta/fbf8a9f1-c375-4093-84f2-c40ebe61650a/2.jpg",
+          "mobile": "https://assets.decocache.com/ffloresta/4972438c-ab3a-464f-9cb6-7a4fd49c71fe/2-(1).jpg"
+        }
+      }
     },
     {
       "__resolveType": "site/sections/Content/BannerMosaic.tsx",

@@ -9,7 +9,7 @@ interface Props {
 
 function FreeShippingProgressBar({ total, currency, locale }: Props) {
   const id = useId();
-  const target = 590;
+  const target = 399;
   const remaining = target - total;
   const percent = Math.floor((total / target) * 100);
 
@@ -32,18 +32,16 @@ function FreeShippingProgressBar({ total, currency, locale }: Props) {
           />
         </svg>
 
-        {remaining > 0
-          ? (
-            <label for={id} class="text-[#325710]">
-              Faltam apenas {formatPrice(remaining, currency, locale)}{" "}
-              para o frete grátis!
-            </label>
-          )
-          : (
-            <label class="text-[#325710]" for={id}>
-              Você ganhou frete grátis!
-            </label>
-          )}
+        {remaining > 0 ? (
+          <label for={id} class="text-[#325710]">
+            Faltam apenas {formatPrice(remaining, currency, locale)} para o
+            frete grátis!
+          </label>
+        ) : (
+          <label class="text-[#325710]" for={id}>
+            Você ganhou frete grátis!
+          </label>
+        )}
       </div>
       <progress
         id={id}
@@ -51,6 +49,9 @@ function FreeShippingProgressBar({ total, currency, locale }: Props) {
         value={percent}
         max={100}
       />
+      <p class="text-sm text-[#325710] text-center">
+        *Promoção válida apenas para entregas via Correios.
+      </p>
     </div>
   );
 }

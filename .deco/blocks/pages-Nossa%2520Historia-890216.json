@@ -19,17 +19,11 @@
       }
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Institucional/NossaHistoria.tsx",
-        "images": {
-          "mobile": "https://assets.decocache.com/ffloresta/65793bb0-d150-4261-91ad-61d1ebf6d4ba/maxresdefault-(1)-1.png",
-          "desktop": "https://assets.decocache.com/ffloresta/65793bb0-d150-4261-91ad-61d1ebf6d4ba/maxresdefault-(1)-1.png"
-        },
-        "title": "Nossa Historia",
-        "description": "<p>A Ferragens Floresta foi inaugurada no ano de 1979, na rua do gasômetro , Brás pelos imigrantes libaneses Kamel El Jamal e Youssef Kayed El Jamal, irmãos e empreendedores. Hoje a Floresta é administrada pela 2ª geração, e consolidou-se no mercado como empresa referencia no seu segmento, ganhando por 10 anos consecutivos o prêmio Top of MIND como a marca mais lembrada pelos profissionais da área.  </p><p></p>",
-        "description2": "<p>A floresta é o ponto de encontro dos profissionais da marcenaria, da arquitetura, da decoração junto ao consumidor final. </p>"
-      }
+      "__resolveType": "site/sections/Institucional/NossaHistoria.tsx",
+      "images": {},
+      "title": "Quem somos",
+      "description": "<p style=\"text-align: justify\">Fundada em 1979 pelos irmãos e imigrantes libaneses Kamel El Jamal e Youssef Kayed El Jamal, a Ferragens Floresta iniciou sua história na tradicional Rua do Gasômetro, no bairro do Brás, em São Paulo. Com espírito empreendedor e compromisso com a qualidade, rapidamente se consolidou como referência no mercado de ferragens e ferramentas.</p><p style=\"text-align: justify\">Atualmente administrada pela segunda geração da família, a Ferragens Floresta conta com cinco lojas físicas estrategicamente localizadas nas cidades de São Paulo (Pinheiros e Brás), Santo André, Campinas e Sorocaba. Reconhecida por seu atendimento personalizado, rigoroso padrão de qualidade e curadoria especializada, a empresa é vencedora há 14 anos consecutivos do prêmio Top of Mind, pela revista Casa e Mercado, destacando-se como a marca mais lembrada pelos profissionais do setor.</p><p style=\"text-align: justify\">Cada unidade oferece espaços cuidadosamente projetados para profissionais de marcenaria, arquitetura e design de interiores, proporcionando soluções completas, inovadoras e práticas. Nossos ambientes acolhedores permitem que os clientes encontrem segurança, inspiração e excelência para concretizar os projetos dos seus sonhos.</p><p></p>",
+      "description2": "<p></p>"
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",

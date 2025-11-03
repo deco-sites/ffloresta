@@ -57,7 +57,7 @@ const onLoad = (formID: string) => {
           ?.querySelectorAll("input")
           .forEach((node) => (node.disabled = true));
       });
-    },
+    }
   );
 };
 const sendBeginCheckoutEvent = () => {
@@ -136,7 +136,7 @@ export default function Cart({
           type="hidden"
           name="storefront-cart"
           value={encodeURIComponent(
-            JSON.stringify({ coupon, currency, value: total, items }),
+            JSON.stringify({ coupon, currency, value: total, items })
           )}
         />
 
@@ -150,111 +150,105 @@ export default function Cart({
         <div
           class={clx(
             "flex flex-col flex-grow justify-center items-center overflow-hidden w-full",
-            "[.htmx-request_&]:pointer-events-none [.htmx-request_&]:opacity-60 [.htmx-request_&]:cursor-wait transition-opacity duration-300",
+            "[.htmx-request_&]:pointer-events-none [.htmx-request_&]:opacity-60 [.htmx-request_&]:cursor-wait transition-opacity duration-300"
           )}
         >
-          {count === 0
-            ? (
-              <div class="flex flex-col gap-6 items-center justify-center h-full">
-                <span class="font-normal text-[16px] text-[#1F251C]">
-                  Seu carrinho está vazio
-                </span>
-                <label
-                  for={MINICART_DRAWER_ID}
-                  class="btn no-animation bg-[#3A4332] text-white hover:bg-[#3A4332] hover:text-white border-none font-normal text-[16px] px-6 py-3"
-                >
-                  Ver produtos
-                </label>
-              </div>
-            )
-            : (
-              <>
-                {/* Cart Items */}
-                <ul
-                  role="list"
-                  class="mt-6 px-4 flex-grow overflow-y-auto flex flex-col gap-8 w-full"
-                >
-                  {items.map((item, index) => (
-                    <li>
-                      <CartItem
-                        item={item}
-                        index={index}
-                        locale={locale}
-                        currency={currency}
-                      />
-                    </li>
-                  ))}
-                </ul>
+          {count === 0 ? (
+            <div class="flex flex-col gap-6 items-center justify-center h-full">
+              <span class="font-normal text-[16px] text-[#1F251C]">
+                Seu carrinho está vazio
+              </span>
+              <label
+                for={MINICART_DRAWER_ID}
+                class="btn no-animation bg-[#3A4332] text-white hover:bg-[#3A4332] hover:text-white border-none font-normal text-[16px] px-6 py-3"
+              >
+                Ver produtos
+              </label>
+            </div>
+          ) : (
+            <>
+              {/* Cart Items */}
+              <ul
+                role="list"
+                class="mt-6 px-4 flex-grow overflow-y-auto flex flex-col gap-8 w-full"
+              >
+                {items.map((item, index) => (
+                  <li>
+                    <CartItem
+                      item={item}
+                      index={index}
+                      locale={locale}
+                      currency={currency}
+                    />
+                  </li>
+                ))}
+              </ul>
 
-                {/* Free Shipping Bar */}
-                <div class="px-4 py-6 w-full">
-                  <FreeShippingProgressBar
-                    total={total}
-                    locale={locale}
-                    currency={currency}
-                    target={freeShippingTarget}
-                  />
+              {/* Free Shipping Bar */}
+              <div class="px-4 py-6 w-full">
+                <FreeShippingProgressBar
+                  total={total}
+                  locale={locale}
+                  currency={currency}
+                  target={freeShippingTarget}
+                />
+              </div>
+
+              {/* Cart Footer */}
+              <footer class="w-full bg-white">
+                {/* Subtotal */}
+                <div class="border-t border-[#E5E5E5] py-4 flex flex-col gap-2">
+                  {discounts > 0 && (
+                    <div class="flex justify-between items-center px-4">
+                      <span class=" text-[16px] text-[#1F251C]">Descontos</span>
+                      <span class=" text-[16px] text-[#1F251C]">
+                        {formatPrice(discounts, currency, locale)}
+                      </span>
+                    </div>
+                  )}
+                  <div class="w-full flex justify-between px-4">
+                    <span class=" text-[16px] text-[#1F251C]">Subtotal</span>
+                    <output
+                      form={MINICART_FORM_ID}
+                      class=" text-[16px] text-[#1F251C]"
+                    >
+                      {formatPrice(subtotal, currency, locale)}
+                    </output>
+                  </div>
+                  {enableCoupon && <Coupon coupon={coupon} />}
                 </div>
 
-                {/* Cart Footer */}
-                <footer class="w-full bg-white">
-                  {/* Subtotal */}
-                  <div class="border-t border-[#E5E5E5] py-4 flex flex-col gap-2">
-                    {discounts > 0 && (
-                      <div class="flex justify-between items-center px-4">
-                        <span class=" text-[16px] text-[#1F251C]">
-                          Descontos
-                        </span>
-                        <span class=" text-[16px] text-[#1F251C]">
-                          {formatPrice(discounts, currency, locale)}
-                        </span>
-                      </div>
-                    )}
-                    <div class="w-full flex justify-between px-4">
-                      <span class=" text-[16px] text-[#1F251C]">Subtotal</span>
-                      <output
-                        form={MINICART_FORM_ID}
-                        class=" text-[16px] text-[#1F251C]"
-                      >
-                        {formatPrice(subtotal, currency, locale)}
-                      </output>
-                    </div>
-                    {enableCoupon && <Coupon coupon={coupon} />}
-                  </div>
-
-                  {/* Total */}
-                  <div class="border-t border-[#E5E5E5] pt-4 pb-6 flex flex-col justify-end items-end gap-2 px-4">
-                    <div class="flex justify-between items-center w-full">
-                      <span class=" text-[16px] leading-[170%] tracking-[3%]">
-                        Total
-                      </span>
-                      <output
-                        form={MINICART_FORM_ID}
-                        class=" font-bold text-[16px] leading-[170%] tracking-[3%] text-[#1F251C]"
-                      >
-                        {formatPrice(total, currency, locale)}
-                      </output>
-                    </div>
-                    <span class="text-[16px] text-[#6B7280]">
-                      Frete e taxas serão calculados na próxima etapa.
+                {/* Total */}
+                <div class="border-t border-[#E5E5E5] pt-4 pb-6 flex flex-col justify-end items-end gap-2 px-4">
+                  <div class="flex justify-between items-center w-full">
+                    <span class=" text-[16px] leading-[170%] tracking-[3%]">
+                      Total
                     </span>
-                  </div>
-
-                  <div class="p-4">
-                    <a
-                      class="btn w-full no-animation bg-[#05C100] text-white hover:bg-[#3A4332] hover:text-white border-none text-[16px] h-[50px] font-bold rounded-none"
-                      href={checkoutHref}
-                      hx-on:click={useScript(sendBeginCheckoutEvent)}
+                    <output
+                      form={MINICART_FORM_ID}
+                      class=" font-bold text-[16px] leading-[170%] tracking-[3%] text-[#1F251C]"
                     >
-                      <span class="[.htmx-request_&]:hidden">
-                        COMPRAR AGORA
-                      </span>
-                      <span class="[.htmx-request_&]:inline hidden loading loading-spinner" />
-                    </a>
+                      {formatPrice(total, currency, locale)}
+                    </output>
                   </div>
-                </footer>
-              </>
-            )}
+                  <span class="text-[16px] text-[#6B7280] w-full text-left">
+                    Frete e taxas serão calculados na próxima etapa.
+                  </span>
+                </div>
+
+                <div class="p-4">
+                  <a
+                    class="btn w-full no-animation bg-[#05C100] text-white hover:bg-[#3A4332] hover:text-white border-none text-[16px] h-[50px] font-bold rounded-none"
+                    href={checkoutHref}
+                    hx-on:click={useScript(sendBeginCheckoutEvent)}
+                  >
+                    <span class="[.htmx-request_&]:hidden">COMPRAR AGORA</span>
+                    <span class="[.htmx-request_&]:inline hidden loading loading-spinner" />
+                  </a>
+                </div>
+              </footer>
+            </>
+          )}
         </div>
       </form>
       <script
