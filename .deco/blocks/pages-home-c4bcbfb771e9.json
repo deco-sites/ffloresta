@@ -479,7 +479,8 @@
         "@type": "image",
         "data": {
           "alt": "teste",
-          "action": {}
+          "action": {},
+          "desktop": "https://assets.decocache.com/ffloresta/b63d5845-d83d-4b8b-a833-876d5e6e6e97/1-(1).jpg"
         }
       }
     },
@@ -585,9 +586,8 @@
         "84": "g",
         "@type": "image",
         "data": {
-          "desktop": "https://assets.decocache.com/ffloresta/06dc5226-49ff-4c0a-96d4-27cf51b7e84c/1-(2).jpg",
-          "mobile": "https://assets.decocache.com/ffloresta/06dc5226-49ff-4c0a-96d4-27cf51b7e84c/1-(2).jpg",
-          "alt": "teste"
+          "alt": "teste",
+          "desktop": "https://assets.decocache.com/ffloresta/783c3412-c1c4-4632-af24-1e5036f8c340/Mask-group.png"
         }
       }
     },
