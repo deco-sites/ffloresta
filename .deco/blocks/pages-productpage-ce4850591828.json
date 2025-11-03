@@ -213,6 +213,10 @@
       "section": {
         "__resolveType": "Footer"
       }
+    },
+    {
+      "__resolveType": "site/sections/Seo/AdvancedCanonical.tsx",
+      "pageType": "product"
     }
   ],
   "__resolveType": "website/pages/Page.tsx"

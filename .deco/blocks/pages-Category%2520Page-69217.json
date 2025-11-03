@@ -3,6 +3,13 @@
   "path": "/*",
   "sections": [
     {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Seo/AdvancedCanonical.tsx",
+        "pageType": "category"
+      }
+    },
+    {
       "__resolveType": "Header With Menus"
     },
     {

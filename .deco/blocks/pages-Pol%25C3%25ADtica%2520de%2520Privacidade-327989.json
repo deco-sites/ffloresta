@@ -36,6 +36,10 @@
       "section": {
         "__resolveType": "Footer"
       }
+    },
+    {
+      "__resolveType": "site/sections/Seo/AdvancedCanonical.tsx",
+      "pageType": "static"
     }
   ],
   "seo": {

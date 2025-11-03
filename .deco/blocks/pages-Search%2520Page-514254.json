@@ -30,6 +30,10 @@
     },
     {
       "__resolveType": "Footer"
+    },
+    {
+      "__resolveType": "site/sections/Seo/AdvancedCanonical.tsx",
+      "pageType": "search"
     }
   ],
   "seo": {
