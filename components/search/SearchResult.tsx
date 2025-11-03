@@ -36,7 +36,7 @@ export interface Props {
     altText: string;
   };
   seoText?: SeoText;
-  title?: string; // Nova prop para o título
+  title?: string;
 }
 
 function NotFound() {
@@ -87,12 +87,22 @@ const useUrlRebased = (overrides: string | undefined, base: string) => {
     // Primeiro, preservar todos os parâmetros da URL base (filtros atuais)
     const baseUrl = new URL(base);
     for (const [key, value] of baseUrl.searchParams.entries()) {
-      final.searchParams.set(key, value);
+      // Não preservar o parâmetro page da URL base se estivermos mudando de página
+      if (key !== "page" || !temp.searchParams.has("page")) {
+        final.searchParams.set(key, value);
+      }
     }
 
     // Depois, aplicar os overrides (principalmente a página)
     for (const [key, value] of temp.searchParams.entries()) {
-      final.searchParams.set(key, value);
+      // SEMPRE remover o parâmetro page se for 1
+      if (key === "page" && value === "1") {
+        final.searchParams.delete("page");
+      } else if (key === "page") {
+        final.searchParams.set(key, value);
+      } else {
+        final.searchParams.set(key, value);
+      }
     }
 
     url = final.href;
@@ -255,13 +265,22 @@ const setPageQuerystring = (page: string, id: string) => {
 
     for (const entry of entries) {
       if (entry.isIntersecting) {
-        // Preservar todos os parâmetros existentes ao atualizar a página
-        url.searchParams.set("page", page);
+        // Só adicionar page se for diferente de 1
+        if (page !== "1") {
+          url.searchParams.set("page", page);
+        } else {
+          url.searchParams.delete("page");
+        }
       } else if (
         typeof history.state?.prevPage === "string" &&
         history.state?.prevPage !== page
       ) {
-        url.searchParams.set("page", history.state.prevPage);
+        // Só adicionar page se for diferente de 1
+        if (history.state.prevPage !== "1") {
+          url.searchParams.set("page", history.state.prevPage);
+        } else {
+          url.searchParams.delete("page");
+        }
       }
     }
 
@@ -550,7 +569,7 @@ export const loader = (props: Props, req: Request) => {
     url: req.url,
     bannerImage: props.bannerImage,
     seoText: props.seoText,
-    title: props.title, // Passa a prop title
+    title: props.title,
   };
 };
 

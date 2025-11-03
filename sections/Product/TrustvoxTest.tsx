@@ -11,8 +11,6 @@ export interface Props {
 const forceLoadTrustvoxScript = (storeId: string) => {
   // Aguarda um pouco para garantir que a página carregou
   setTimeout(() => {
-    console.log("Forçando carregamento do script Trustvox...");
-
     // Configura o Store ID
     window._trustvox_shelf_rate = window._trustvox_shelf_rate || [];
     window._trustvox_shelf_rate.push(["_storeId", storeId]);
@@ -29,30 +27,19 @@ const forceLoadTrustvoxScript = (storeId: string) => {
     script.type = "text/javascript";
     script.src = "//rate.trustvox.com.br/widget.js";
     script.onload = () => {
-      console.log("Script Trustvox carregado com sucesso!");
-
       // Força a verificação de elementos após 2 segundos
       setTimeout(() => {
         const elements = document.querySelectorAll(
           "[data-trustvox-product-code]",
         );
-        console.log(
-          `Encontrados ${elements.length} elementos com data-trustvox-product-code`,
-        );
-        elements.forEach((el, index) => {
-          console.log(
-            `Elemento ${index + 1}:`,
-            el.getAttribute("data-trustvox-product-code"),
-          );
-        });
+
+        elements.forEach((el, index) => {});
       }, 2000);
     };
     script.onerror = () => {
       console.error("Erro ao carregar script Trustvox");
     };
     document.head.appendChild(script);
-
-    console.log("Script Trustvox adicionado ao head");
   }, 500);
 };
 

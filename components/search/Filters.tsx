@@ -65,8 +65,8 @@ function convertToVtexPath(url: string, base: string): string {
       targetUrl.searchParams.set("map", map.join(","));
     }
 
-    // Sempre resetar para página 1 quando filtros mudarem
-    targetUrl.searchParams.set("page", "1");
+    // REMOVIDO: Não adicionar page=1 automaticamente
+    // targetUrl.searchParams.set("page", "1");
 
     return targetUrl.pathname + "?" + targetUrl.searchParams.toString();
   } catch (e) {

@@ -3,6 +3,10 @@
   "path": "/s",
   "sections": [
     {
+      "__resolveType": "site/sections/Seo/AdvancedCanonical.tsx",
+      "pageType": "search"
+    },
+    {
       "__resolveType": "Header With Menus"
     },
     {

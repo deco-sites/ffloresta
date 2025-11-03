@@ -3,6 +3,10 @@
   "path": "/men",
   "sections": [
     {
+      "__resolveType": "site/sections/Seo/AdvancedCanonical.tsx",
+      "pageType": "static"
+    },
+    {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "commerce/sections/Seo/SeoPLPV2.tsx",

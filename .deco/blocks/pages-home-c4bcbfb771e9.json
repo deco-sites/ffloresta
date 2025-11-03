@@ -2,6 +2,10 @@
   "name": "Home Page",
   "sections": [
     {
+      "__resolveType": "site/sections/Seo/AdvancedCanonical.tsx",
+      "pageType": "home"
+    },
+    {
       "__resolveType": "Header With Menus"
     },
     {
@@ -185,6 +189,7 @@
     {
       "__resolveType": "site/sections/Brand/BrandGrid.tsx",
       "title": "CATEGORIAS",
+      "icon": "https://assets.decocache.com/ffloresta/25532a3b-7eb8-4e13-9da7-e0e7f978d512/Group-13.svg",
       "items": [
         {
           "href": "/",
@@ -217,7 +222,6 @@
           "label": "Marceneiro"
         }
       ],
-      "icon": "https://assets.decocache.com/ffloresta/25532a3b-7eb8-4e13-9da7-e0e7f978d512/Group-13.svg",
       "brands": [
         {
           "image": "https://assets.decocache.com/ffloresta/97485b43-9c33-4512-a754-a2c8ce71bcd7/Prancheta-15.png",
