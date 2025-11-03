@@ -1,5 +1,3 @@
-// sections/AdvancedCanonical.tsx
-
 import { Head } from "$fresh/runtime.ts";
 
 export interface Props {
@@ -36,15 +34,8 @@ export function loader(props: Props, req: Request) {
       break;
 
     case "product":
-      // Mantém apenas o skuId se existir, remove outros parâmetros
-      const productParams = new URLSearchParams();
-      const skuId = url.searchParams.get("skuId");
-      if (skuId) {
-        productParams.set("skuId", skuId);
-      }
-      canonicalUrl = `${canonicalBase}${url.pathname}${
-        productParams.toString() ? `?${productParams.toString()}` : ""
-      }`;
+      // Remove todos os parâmetros da PDP (inclusive skuId)
+      canonicalUrl = `${canonicalBase}${url.pathname}`;
       break;
 
     case "static":
@@ -83,7 +74,7 @@ function AdvancedCanonical({
 }: ReturnType<typeof loader>) {
   if (!canonicalUrl) {
     console.warn(
-      `AdvancedCanonical: URL canônica não definida para o tipo ${pageType}`,
+      `AdvancedCanonical: URL canônica não definida para o tipo ${pageType}`
     );
     return null;
   }
