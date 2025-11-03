@@ -65,14 +65,12 @@
           }
         },
         {
-          "type": "image",
+          "type": "video",
           "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/44d2e8a6-a8af-4017-8bda-bfb8c06fbb04/dobradica1a.jpg",
-            "mobile": "https://assets.decocache.com/ffloresta/241005ee-a6b0-4f5a-848a-7e986ebeb4b6/dobradica1B.jpg",
+            "desktop": "https://assets.decocache.com/ffloresta/00e802d6-b81c-4d00-af16-b57c98888214/1029(1).mp4",
+            "mobile": "https://assets.decocache.com/ffloresta/64e04543-f667-4066-a37d-a62f96920820/video-mobile-frete-2.mp4",
             "alt": "Ganhe um kit de pontas e brocas",
-            "action": {
-              "href": "/ferragens/dobradicas?page=1"
-            }
+            "action": {}
           }
         },
         {
