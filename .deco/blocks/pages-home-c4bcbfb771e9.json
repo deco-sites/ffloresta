@@ -241,7 +241,7 @@
     },
     {
       "__resolveType": "site/sections/Product/ProductShelf.tsx",
-      "title": "FERRAMENTAS",
+      "title": "Acessórios de Ferramentas",
       "headerIcon": "https://assets.decocache.com/ffloresta/28daeeed-da2e-4353-9b47-094d244c40dd/home-second-shelf-title-icon.svg",
       "products": {
         "__resolveType": "vtex/loaders/intelligentSearch/productSearchValidator.ts",
@@ -368,7 +368,7 @@
     },
     {
       "__resolveType": "site/sections/Product/ProductShelf.tsx",
-      "title": "PUXADORES",
+      "title": "Puxadores",
       "headerIcon": "https://assets.decocache.com/ffloresta/28daeeed-da2e-4353-9b47-094d244c40dd/home-second-shelf-title-icon.svg",
       "products": {
         "__resolveType": "vtex/loaders/intelligentSearch/productSearchValidator.ts",
@@ -475,7 +475,7 @@
     },
     {
       "__resolveType": "site/sections/Product/ProductShelf.tsx",
-      "title": "FECHADURAS",
+      "title": "Fechaduras",
       "headerIcon": "https://assets.decocache.com/ffloresta/28daeeed-da2e-4353-9b47-094d244c40dd/home-second-shelf-title-icon.svg",
       "products": {
         "__resolveType": "vtex/loaders/intelligentSearch/productSearchValidator.ts",
