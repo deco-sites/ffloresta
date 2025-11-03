@@ -47,9 +47,7 @@
           "data": {
             "desktop": "https://assets.decocache.com/ffloresta/376fb5fb-05ab-4891-ac1f-743109235bda/desk.jpg",
             "mobile": "https://assets.decocache.com/ffloresta/0a378893-b326-449f-9c35-82d6da712a18/mobile.jpg",
-            "action": {
-              "href": "https://www.ferragensfloresta.com.br/puxadores/jador?initialMap=c&initialQuery=puxadores&map=category-1%2Cbrand&page=1"
-            },
+            "action": {},
             "alt": "Banner"
           }
         },
