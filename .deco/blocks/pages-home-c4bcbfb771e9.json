@@ -469,14 +469,10 @@
         "82": "j",
         "83": "p",
         "84": "g",
-        "@type": "video",
+        "@type": "image",
         "data": {
-          "desktop": "https://assets.decocache.com/ffloresta/6e873779-82be-4d9d-9d6d-c9a6b672f271/video2.mp4",
-          "mobile": "https://assets.decocache.com/ffloresta/6e873779-82be-4d9d-9d6d-c9a6b672f271/video2.mp4",
           "alt": "teste",
-          "autoplay": true,
-          "loop": true,
-          "muted": true
+          "action": {}
         }
       }
     },
