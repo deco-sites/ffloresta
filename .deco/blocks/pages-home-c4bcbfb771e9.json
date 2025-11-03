@@ -48,7 +48,7 @@
             "desktop": "https://assets.decocache.com/ffloresta/376fb5fb-05ab-4891-ac1f-743109235bda/desk.jpg",
             "mobile": "https://assets.decocache.com/ffloresta/0a378893-b326-449f-9c35-82d6da712a18/mobile.jpg",
             "action": {},
-            "alt": "Banner"
+            "alt": "Banner."
           }
         },
         {
@@ -81,12 +81,6 @@
             "desktop": "https://assets.decocache.com/ffloresta/f4e20fd3-0a9d-45a2-bffe-74c700db17ff/frete-gratis-1-a-(1).jpg",
             "mobile": "https://assets.decocache.com/ffloresta/2ac187d1-ff29-4d9a-b820-7ac4fe37dbde/frete-gratis-2-(1).jpg",
             "alt": "frete gratis"
-          }
-        },
-        {
-          "type": "video",
-          "data": {
-            "action": {}
           }
         }
       ],
