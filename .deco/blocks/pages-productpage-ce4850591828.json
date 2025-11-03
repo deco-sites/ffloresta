@@ -6,6 +6,10 @@
   },
   "sections": [
     {
+      "__resolveType": "site/sections/Seo/AdvancedCanonical.tsx",
+      "pageType": "product"
+    },
+    {
       "__resolveType": "Header With Menus"
     },
     {
@@ -167,8 +171,8 @@
     },
     {
       "__resolveType": "site/sections/Product/TrustvoxReviews.tsx",
-      "storeId": "125156",
       "title": "Avaliações do Produto",
+      "storeId": "125156",
       "page": {
         "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
         "slug": {
@@ -201,10 +205,6 @@
       "section": {
         "__resolveType": "Footer"
       }
-    },
-    {
-      "__resolveType": "site/sections/Seo/AdvancedCanonical.tsx",
-      "pageType": "product"
     }
   ],
   "__resolveType": "website/pages/Page.tsx"
