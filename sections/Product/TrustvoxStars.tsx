@@ -60,15 +60,15 @@ export default function TrustvoxStars({
 }: Props) {
   // Determina o ID do produto - PRIORIZA inProductGroupWithID conforme documentação atualizada
   const refId = product?.additionalProperty?.find(
-    (prop) => prop.name === "RefId"
+    (prop) => prop.name === "RefId",
   )?.value;
   const vtexProductId = product?.inProductGroupWithID; // ID do produto na VTEX
   const sku = product?.sku;
   const productIdFallback = product?.productID;
 
   // Ordem de prioridade igual ao TrustvoxClickableRating: productId > vtexProductId > refId > sku > productID
-  const finalProductId =
-    productId || vtexProductId || refId || sku || productIdFallback || "";
+  const finalProductId = productId || vtexProductId || refId || sku ||
+    productIdFallback || "";
 
   // Se não há ID do produto, não renderiza
   if (!finalProductId) {
@@ -84,7 +84,8 @@ export default function TrustvoxStars({
           data-trustvox-product-code-js={finalProductId}
           data-trustvox-should-skip-filter="true"
           data-trustvox-display-rate-schema="false"
-        ></div>
+        >
+        </div>
       </div>
 
       {/* Script da Trustvox */}

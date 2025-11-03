@@ -30,7 +30,7 @@ export interface Props {
 export default function canonicalUrl(
   props: Props,
   req: Request,
-  ctx: Context
+  ctx: Context,
 ): string {
   const {
     removeAllParams = false,

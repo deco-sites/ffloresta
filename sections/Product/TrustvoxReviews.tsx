@@ -22,7 +22,7 @@ const trustvoxScript = (
   storeId: string,
   productId: string,
   productName: string,
-  productPhotos: string[]
+  productPhotos: string[],
 ) => {
   // Aguarda um pouco para garantir que a página carregou
   setTimeout(() => {
@@ -42,7 +42,7 @@ const trustvoxScript = (
       window._trustvox.push(["_productId", productId]);
     } else {
       console.warn(
-        "Trustvox: Nenhum ID de produto válido encontrado, mostrando avaliações da loja"
+        "Trustvox: Nenhum ID de produto válido encontrado, mostrando avaliações da loja",
       );
     }
 
@@ -56,7 +56,7 @@ const trustvoxScript = (
 
     // Remove scripts anteriores
     const existingScripts = document.querySelectorAll(
-      'script[src*="sincero.js"]'
+      'script[src*="sincero.js"]',
     );
     existingScripts.forEach((script) => script.remove());
 
@@ -91,11 +91,10 @@ export default function TrustvoxReviews({
 
   // Determina o ID do produto - Usa inProductGroupWithID (ID do produto na VTEX) para Trustvox
   const refId = finalProduct?.additionalProperty?.find(
-    (prop) => prop.name === "RefId"
+    (prop) => prop.name === "RefId",
   )?.value;
   const vtexProductId = finalProduct?.inProductGroupWithID; // ID do produto na VTEX
-  const finalProductId =
-    productId ||
+  const finalProductId = productId ||
     vtexProductId ||
     refId ||
     finalProduct?.sku ||
@@ -106,7 +105,7 @@ export default function TrustvoxReviews({
   if (finalProductId && finalProductId.length < 3) {
     console.warn(
       "TrustvoxReviews - ID do produto muito curto:",
-      finalProductId
+      finalProductId,
     );
   }
 
@@ -131,7 +130,8 @@ export default function TrustvoxReviews({
         {/* Placeholder enquanto carrega */}
         <div class="flex items-center justify-center h-32 text-gray-500">
           <div class="text-center">
-            <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900 mx-auto mb-2"></div>
+            <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900 mx-auto mb-2">
+            </div>
             <p>Carregando avaliações...</p>
           </div>
         </div>
@@ -146,7 +146,7 @@ export default function TrustvoxReviews({
             storeId,
             finalProductId,
             productName,
-            productPhotos
+            productPhotos,
           ),
         }}
       />

@@ -17,7 +17,7 @@ const trustvoxProductScript = (
   storeId: string,
   productId: string,
   productName: string,
-  productPhotos: string[]
+  productPhotos: string[],
 ) => {
   // Aguarda um pouco para garantir que a página carregou
   setTimeout(() => {
@@ -32,7 +32,7 @@ const trustvoxProductScript = (
 
     // Remove scripts anteriores
     const existingScripts = document.querySelectorAll(
-      'script[src*="sincero.js"]'
+      'script[src*="sincero.js"]',
     );
     existingScripts.forEach((script) => script.remove());
 
@@ -67,11 +67,11 @@ export default function TrustvoxWidget({
   // Dados do produto para a Trustvox - Usa inProductGroupWithID (ID do produto na VTEX)
   const product = page?.product;
   const refId = product?.additionalProperty?.find(
-    (prop) => prop.name === "RefId"
+    (prop) => prop.name === "RefId",
   )?.value;
   const vtexProductId = product?.inProductGroupWithID; // ID do produto na VTEX
-  const productId =
-    vtexProductId || refId || product?.sku || product?.productID || "";
+  const productId = vtexProductId || refId || product?.sku ||
+    product?.productID || "";
   const productName = product?.name || "";
   const productPhotos = product?.image?.map((img) => img.url) || [];
 
@@ -103,7 +103,7 @@ export default function TrustvoxWidget({
               storeId,
               productId,
               productName,
-              productPhotos
+              productPhotos,
             ),
           }}
         />

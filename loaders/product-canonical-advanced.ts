@@ -7,7 +7,7 @@ import { Context } from "deco/deco.ts";
 export default function productCanonical(
   _props: unknown,
   req: Request,
-  _ctx: Context
+  _ctx: Context,
 ): string {
   const url = new URL(req.url);
   const host = req.headers.get("host") || "www.ffloresta.com.br";

@@ -17,7 +17,7 @@ const forceLoadTrustvoxScript = (storeId: string) => {
 
     // Remove scripts anteriores
     const existingScripts = document.querySelectorAll(
-      'script[src*="widget.js"]'
+      'script[src*="widget.js"]',
     );
     existingScripts.forEach((script) => script.remove());
 
@@ -30,7 +30,7 @@ const forceLoadTrustvoxScript = (storeId: string) => {
       // Força a verificação de elementos após 2 segundos
       setTimeout(() => {
         const elements = document.querySelectorAll(
-          "[data-trustvox-product-code]"
+          "[data-trustvox-product-code]",
         );
 
         elements.forEach((el, index) => {});

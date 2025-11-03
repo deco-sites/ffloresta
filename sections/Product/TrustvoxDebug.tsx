@@ -11,13 +11,13 @@ const debugTrustvoxScript = (storeId: string) => {
   setTimeout(() => {
     // Verifica se há scripts da Trustvox carregados
     const trustvoxScripts = document.querySelectorAll(
-      'script[src*="trustvox"], script[src*="rate.trustvox"]'
+      'script[src*="trustvox"], script[src*="rate.trustvox"]',
     );
     trustvoxScripts.forEach((script, index) => {});
 
     // Verifica elementos com data-trustvox-product-code
     const trustvoxElements = document.querySelectorAll(
-      "[data-trustvox-product-code]"
+      "[data-trustvox-product-code]",
     );
 
     // Tenta forçar o carregamento se necessário
@@ -35,7 +35,7 @@ const debugTrustvoxScript = (storeId: string) => {
           // Verifica novamente após 3 segundos
           setTimeout(() => {
             const elementsAfter = document.querySelectorAll(
-              "[data-trustvox-product-code]"
+              "[data-trustvox-product-code]",
             );
 
             elementsAfter.forEach((el, index) => {});
