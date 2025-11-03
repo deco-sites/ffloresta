@@ -57,7 +57,7 @@
             "desktop": "https://assets.decocache.com/ffloresta/5dcd6eb9-0536-4f5e-8574-7653519dfb31/video-fechadura-1.mp4",
             "mobile": "https://assets.decocache.com/ffloresta/88d60cbb-f270-40e3-ada1-10ac4fffff21/video-mobile-2.mp4",
             "action": {
-              "href": "/ferragens-de-projetos/rometal/coplanar?page=1"
+              "href": "fechaduras?page=1"
             },
             "autoplay": true,
             "loop": true,
@@ -81,6 +81,12 @@
             "desktop": "https://assets.decocache.com/ffloresta/f4e20fd3-0a9d-45a2-bffe-74c700db17ff/frete-gratis-1-a-(1).jpg",
             "mobile": "https://assets.decocache.com/ffloresta/2ac187d1-ff29-4d9a-b820-7ac4fe37dbde/frete-gratis-2-(1).jpg",
             "alt": "frete gratis"
+          }
+        },
+        {
+          "type": "video",
+          "data": {
+            "action": {}
           }
         }
       ],
