@@ -489,7 +489,8 @@
           "desktop": "https://assets.decocache.com/ffloresta/b63d5845-d83d-4b8b-a833-876d5e6e6e97/1-(1).jpg",
           "mobile": "https://assets.decocache.com/ffloresta/b63d5845-d83d-4b8b-a833-876d5e6e6e97/1-(1).jpg"
         }
-      }
+      },
+      "page": null
     },
     {
       "__resolveType": "site/sections/Product/ProductShelf.tsx",
