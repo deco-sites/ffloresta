@@ -10,11 +10,13 @@ export default function ProductImagesGallery(props: Props) {
   const currentIndex = useSignal(0);
   const thumbStartIndex = useSignal(0);
   const thumbsPerView = 6;
+  const isZoomed = useSignal(false);
+  const zoomPosition = useSignal({ x: 50, y: 50 });
 
   if (!props.page) return null;
 
-  const images = props.page.product.image ||
-    props.page.product.isVariantOf?.image || [];
+  const images =
+    props.page.product.image || props.page.product.isVariantOf?.image || [];
   const thumbs = images.map((img) => ({
     url: img.url!,
     alt: img.alternateName,
@@ -25,19 +27,21 @@ export default function ProductImagesGallery(props: Props) {
   const visibleThumbs = useComputed(() => {
     return showThumbSlider
       ? thumbs.slice(
-        thumbStartIndex.value,
-        thumbStartIndex.value + thumbsPerView,
-      )
+          thumbStartIndex.value,
+          thumbStartIndex.value + thumbsPerView
+        )
       : thumbs;
   });
 
   const next = () => {
     currentIndex.value = (currentIndex.value + 1) % thumbs.length;
+    isZoomed.value = false;
   };
 
   const prev = () => {
-    currentIndex.value = (currentIndex.value - 1 + thumbs.length) %
-      thumbs.length;
+    currentIndex.value =
+      (currentIndex.value - 1 + thumbs.length) % thumbs.length;
+    isZoomed.value = false;
   };
 
   const nextThumbs = () => {
@@ -52,9 +56,47 @@ export default function ProductImagesGallery(props: Props) {
     }
   };
 
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!isZoomed.value) return;
+
+    const container = e.currentTarget;
+    const rect = container.getBoundingClientRect();
+
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+    zoomPosition.value = {
+      x: Math.max(0, Math.min(100, x)),
+      y: Math.max(0, Math.min(100, y)),
+    };
+  };
+
+  const handleMouseEnter = () => {
+    isZoomed.value = true;
+  };
+
+  const handleMouseLeave = () => {
+    isZoomed.value = false;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (!isZoomed.value) return;
+
+    const container = e.currentTarget;
+    const rect = container.getBoundingClientRect();
+    const touch = e.touches[0];
+
+    const x = ((touch.clientX - rect.left) / rect.width) * 100;
+    const y = ((touch.clientY - rect.top) / rect.height) * 100;
+
+    zoomPosition.value = {
+      x: Math.max(0, Math.min(100, x)),
+      y: Math.max(0, Math.min(100, y)),
+    };
+  };
+
   return (
     <div class="flex flex-col lg:flex-row gap-4">
-      {/* Thumbnails Vertical (Desktop) com Slider */}
       <div class="hidden lg:flex flex-col items-center gap-2">
         {showThumbSlider && (
           <button
@@ -98,15 +140,16 @@ export default function ProductImagesGallery(props: Props) {
                 key={originalIndex}
                 onClick={() => {
                   currentIndex.value = originalIndex;
+                  isZoomed.value = false;
                 }}
                 class={`w-20 h-20 border-2 transition-colors ${
                   originalIndex === currentIndex.value
                     ? "border-gray-300"
                     : "border-transparent"
                 } hover:border-gray-200 bg-white p-1`}
-                aria-label={`Visualizar imagem ${
-                  originalIndex + 1
-                } de ${thumbs.length}`}
+                aria-label={`Visualizar imagem ${originalIndex + 1} de ${
+                  thumbs.length
+                }`}
               >
                 <Image
                   src={thumb.url}
@@ -147,18 +190,43 @@ export default function ProductImagesGallery(props: Props) {
         )}
       </div>
 
-      {/* Imagem Principal */}
-      <div class="relative flex-1">
-        <Image
-          src={thumbs[currentIndex.value]?.url}
-          alt={thumbs[currentIndex.value]?.alt || "Imagem do produto"}
-          width={600}
-          height={600}
-          class="w-full max-h-[550px] object-contain transition-opacity duration-300 aspect-square bg-gray-50 rounded-lg"
-          loading={currentIndex.value === 0 ? "eager" : "lazy"}
-        />
+      <div class="relative flex-1 flex justify-center items-center">
+        <div
+          class={`relative overflow-hidden rounded-lg ${
+            isZoomed.value ? "cursor-zoom-out" : "cursor-zoom-in"
+          }`}
+          style={{
+            aspectRatio: "1/1",
+            maxHeight: "550px",
+          }}
+          onMouseMove={handleMouseMove}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          onTouchMove={handleTouchMove}
+          onTouchStart={() => (isZoomed.value = true)}
+          onTouchEnd={() => (isZoomed.value = false)}
+          onClick={() => (isZoomed.value = !isZoomed.value)}
+        >
+          <Image
+            src={thumbs[currentIndex.value]?.url}
+            alt={thumbs[currentIndex.value]?.alt || "Imagem do produto"}
+            width={600}
+            height={600}
+            class={`w-full h-full object-contain transition-all duration-200 ${
+              isZoomed.value ? "scale-150" : "scale-100"
+            }`}
+            style={
+              isZoomed.value
+                ? {
+                    transformOrigin: `${zoomPosition.value.x}% ${zoomPosition.value.y}%`,
+                    transform: `scale(1.5)`,
+                  }
+                : {}
+            }
+            loading={currentIndex.value === 0 ? "eager" : "lazy"}
+          />
+        </div>
 
-        {/* Setas de Navegação (Desktop) */}
         {thumbs.length > 1 && (
           <>
             <div class="hidden lg:flex absolute inset-0 justify-between items-center px-4 pointer-events-none">
@@ -204,7 +272,6 @@ export default function ProductImagesGallery(props: Props) {
               </button>
             </div>
 
-            {/* Navegação Mobile */}
             <div class="lg:hidden flex items-center justify-center gap-4 mt-4">
               <button
                 onClick={prev}
@@ -231,6 +298,7 @@ export default function ProductImagesGallery(props: Props) {
                     key={index}
                     onClick={() => {
                       currentIndex.value = index;
+                      isZoomed.value = false;
                     }}
                     class={`w-[84px] h-[70px] border rounded transition-colors flex-shrink-0 ${
                       index === currentIndex.value
