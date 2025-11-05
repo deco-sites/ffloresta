@@ -624,7 +624,33 @@
       "settings": {
         "gap": 4
       },
-      "spacing": {}
+      "spacing": {},
+      "items": [
+        {
+          "@type": "image",
+          "data": {
+            "desktop": "https://assets.decocache.com/ffloresta/d25ea01d-3ebd-45e2-be73-588bac471ecd/2-a-(1).jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/d25ea01d-3ebd-45e2-be73-588bac471ecd/2-a-(1).jpg",
+            "alt": "Sem juros"
+          }
+        },
+        {
+          "@type": "image",
+          "data": {
+            "desktop": "https://assets.decocache.com/ffloresta/b8443d21-1b94-4926-a73e-2832f5933213/3-a-(1).jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/b8443d21-1b94-4926-a73e-2832f5933213/3-a-(1).jpg",
+            "alt": "Whatsapp"
+          }
+        },
+        {
+          "@type": "image",
+          "data": {
+            "desktop": "https://assets.decocache.com/ffloresta/6b641410-7848-4aa3-8a3e-a33a0eeee7f8/1-a-(2).jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/6b641410-7848-4aa3-8a3e-a33a0eeee7f8/1-a-(2).jpg",
+            "alt": "Cashback"
+          }
+        }
+      ]
     },
     {
       "__resolveType": "site/sections/Content/VideoWithBackground.tsx",
