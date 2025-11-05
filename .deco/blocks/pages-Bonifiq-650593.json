@@ -1,6 +1,6 @@
 {
-  "name": "Bonifiq",
-  "path": "/bonifiq",
+  "name": "Cashback Floresta",
+  "path": "/cashback-floresta",
   "sections": [
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
