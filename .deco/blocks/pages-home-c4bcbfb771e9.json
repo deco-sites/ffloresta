@@ -153,14 +153,12 @@
         "@type": "image",
         "data": {
           "alt": "alt",
-          "desktop": "https://assets.decocache.com/ffloresta/cddaec9e-a6f9-4d12-80df-b1e0819abd32/3-(2).png",
-          "mobile": "https://assets.decocache.com/ffloresta/2ee29ecc-d331-489c-a1de-fb9c95ebaa79/4.png",
+          "desktop": "https://assets.decocache.com/ffloresta/6cae82a6-ecc4-4eb8-98c7-4663acb13847/1-(1).png",
+          "mobile": "https://assets.decocache.com/ffloresta/eed98c74-1208-4461-86ab-8b7e764e1488/2-(1).png",
           "autoplay": true,
           "loop": true,
           "muted": true,
-          "action": {
-            "href": "/182?map=productClusterIds&page=1"
-          }
+          "action": {}
         }
       },
       "orientation": "vertical",
