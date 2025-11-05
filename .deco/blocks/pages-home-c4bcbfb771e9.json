@@ -484,8 +484,8 @@
         "data": {
           "alt": "teste",
           "action": {},
-          "desktop": "https://assets.decocache.com/ffloresta/b63d5845-d83d-4b8b-a833-876d5e6e6e97/1-(1).jpg",
-          "mobile": "https://assets.decocache.com/ffloresta/b63d5845-d83d-4b8b-a833-876d5e6e6e97/1-(1).jpg"
+          "mobile": "https://assets.decocache.com/ffloresta/a5ade45b-b17c-4cbf-8bac-0077ff0c65ce/1.jpg",
+          "desktop": "https://assets.decocache.com/ffloresta/a5ade45b-b17c-4cbf-8bac-0077ff0c65ce/1.jpg"
         }
       },
       "page": null
@@ -593,8 +593,8 @@
         "@type": "image",
         "data": {
           "alt": "teste",
-          "desktop": "https://assets.decocache.com/ffloresta/fbf8a9f1-c375-4093-84f2-c40ebe61650a/2.jpg",
-          "mobile": "https://assets.decocache.com/ffloresta/4972438c-ab3a-464f-9cb6-7a4fd49c71fe/2-(1).jpg"
+          "desktop": "https://assets.decocache.com/ffloresta/a9768810-1555-4817-a4ea-cc6cb17633f6/2-(1).jpg",
+          "mobile": "https://assets.decocache.com/ffloresta/a9768810-1555-4817-a4ea-cc6cb17633f6/2-(1).jpg"
         }
       }
     },
