@@ -1,0 +1,32 @@
+{
+  "name": "Bonifiq",
+  "path": "/bonifiq",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Seo/AdvancedCanonical.tsx",
+        "pageType": "static"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Header With Menus"
+      }
+    },
+    {
+      "__resolveType": "site/sections/Miscellaneous/Bonifiq.tsx"
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Footer"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}
