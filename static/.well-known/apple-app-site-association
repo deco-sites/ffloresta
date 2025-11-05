@@ -1,0 +1,25 @@
+{
+    "activitycontinuation": {
+        "apps": [
+            "2A22VDZU6W.com.kobe.ferragensflorestas"
+        ]
+    },
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "2A22VDZU6W.com.kobe.ferragensfloresta",
+                "paths": [
+                    "*/p",
+                    "/*",
+                    "/",
+		            "/search",
+                    "*/cart",
+                    "/wishlist",
+                    "/login",
+		            "/category"
+                ]
+            }
+        ]
+    }
+}
