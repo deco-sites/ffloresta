@@ -1,56 +1,50 @@
-// utils.ts
 import type { Product } from "apps/commerce/types.ts";
 import { formatPrice } from "../../../sdk/format.ts";
+import type { Flag } from "../../../loaders/globalFlagsConfig.ts";
 
-export const getClusterFlags = (product: Product) => {
-  const flags = [];
-  const clusters =
-    product.additionalProperty?.filter((prop) => prop.name === "cluster") || [];
+export interface ProductFlag {
+  type: "text" | "image";
+  text: string;
+  backgroundColor?: string;
+  textColor?: string;
+  image?: string;
+}
 
-  for (const cluster of clusters) {
-    switch (cluster.value) {
-      case "Ofertas":
-        flags.push({
-          text: "Oferta relâmpago",
-          color: "#18454E",
-        });
-        break;
-      case "Novidades":
-        flags.push({
-          text: "Novidade",
-          color: "#02A3AE",
-        });
-        break;
-      case "Lançamentos":
-        flags.push({
-          text: "Lançamento",
-          color: "#010101",
-        });
-        break;
-      case "Encomendas":
-        flags.push({
-          text: "Encomenda",
-          color: "#4C1717",
-        });
-        break;
+// Função principal para obter flags configuráveis
+export const getConfigurableFlags = (
+  product: Product,
+  flagsConfig: Flag[]
+): ProductFlag[] => {
+  if (!flagsConfig.length) return [];
+
+  const productCollectionIds =
+    product.additionalProperty
+      ?.filter((prop) => prop.name === "category" || prop.name === "collection")
+      .map((prop) => prop.value)
+      .filter((id): id is string => !!id) || [];
+
+  const matchingFlags = flagsConfig.filter((flag) =>
+    flag.collectionIds.some((collectionId) =>
+      productCollectionIds.includes(collectionId)
+    )
+  );
+
+  return matchingFlags.map((flag) => {
+    if (flag.type === "text") {
+      return {
+        type: "text" as const,
+        text: flag.text,
+        backgroundColor: flag.backgroundColor,
+        textColor: flag.textColor,
+      };
+    } else {
+      return {
+        type: "image" as const,
+        text: flag.altText,
+        image: flag.image,
+      };
     }
-  }
-
-  const releaseDate = product.releaseDate
-    ? new Date(product.releaseDate)
-    : null;
-  const now = new Date();
-  const isNew = releaseDate &&
-    now.getTime() - releaseDate.getTime() < 30 * 24 * 60 * 60 * 1000;
-
-  if (isNew && !flags.some((f) => f.text === "Novidade")) {
-    flags.push({
-      text: "Novidade",
-      color: "#02A3AE",
-    });
-  }
-
-  return flags;
+  });
 };
 
 export const calculatePercent = (listPrice?: number, price?: number) => {

@@ -3,10 +3,16 @@ import ProductCarouselSlider from "../../islands/Sliders/ProductCarouselSlider.t
 import ProductCard from "./ProductCard/ProductCard.tsx";
 import { useId } from "../../sdk/useId.ts";
 import { useScript } from "@deco/deco/hooks";
+import type { Flag } from "../../loaders/globalFlagsConfig.ts";
 
 interface Props {
   products: Product[];
   itemListName?: string;
+  /**
+   * @title Configuração de Flags
+   * @description Flags repassadas da section
+   */
+  flagsConfig?: Flag[];
 }
 
 // Script para forçar inicialização das estrelas Trustvox nos produtos do slider
@@ -32,7 +38,7 @@ const initTrustvoxStars = () => {
   }, 10000);
 };
 
-function ProductSlider({ products, itemListName }: Props) {
+function ProductSlider({ products, itemListName, flagsConfig = [] }: Props) {
   const id = useId();
 
   return (
@@ -49,10 +55,12 @@ function ProductSlider({ products, itemListName }: Props) {
               index={index}
               class="snap-start flex-shrink-0 min-h-[500px] max-[450px]:min-h-[450px] max-[768px]:w-[calc(50%-(12px/2))] max-[1024px]:w-[calc(33.3%-(24px/3))] max-[1240px]:w-[calc(25%-(72px/4))] w-[calc(20%-(96px/5))]"
             >
+              {/* Passe flagsConfig para o ProductCard */}
               <ProductCard
                 index={index}
                 product={product}
                 itemListName={itemListName}
+                flagsConfig={flagsConfig}
               />
             </ProductCarouselSlider.Item>
           ))}

@@ -4164,9 +4164,6 @@ details.collapse summary::-webkit-details-marker {
 .min-h-\[157px\] {
   min-height: 157px;
 }
-.min-h-\[15px\] {
-  min-height: 15px;
-}
 .min-h-\[200px\] {
   min-height: 200px;
 }
@@ -5028,10 +5025,6 @@ details.collapse summary::-webkit-details-marker {
 .bg-\[\#05C100\] {
   --tw-bg-opacity: 1;
   background-color: rgb(5 193 0 / var(--tw-bg-opacity));
-}
-.bg-\[\#087D38\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(8 125 56 / var(--tw-bg-opacity));
 }
 .bg-\[\#0D1717\] {
   --tw-bg-opacity: 1;

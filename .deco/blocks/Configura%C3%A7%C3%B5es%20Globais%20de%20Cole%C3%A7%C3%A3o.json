@@ -1,0 +1,18 @@
+{
+  "__resolveType": "site/loaders/globalFlagsConfig.ts",
+  "flags": [
+    {
+      "type": "text",
+      "collectionIds": [
+        "182"
+      ],
+      "text": "Novidades",
+      "textColor": "#ffffff",
+      "backgroundColor": "#000000"
+    },
+    {
+      "type": "image",
+      "collectionIds": []
+    }
+  ]
+}
