@@ -56,17 +56,17 @@ export interface VideoBanner {
 /** @title Item do Mosaico */
 export type MosaicItem =
   | {
-      /** @title Imagem */
-      "@type": "image";
-      /** @title Dados da Imagem */
-      data: Banner;
-    }
+    /** @title Imagem */
+    "@type": "image";
+    /** @title Dados da Imagem */
+    data: Banner;
+  }
   | {
-      /** @title Vídeo */
-      "@type": "video";
-      /** @title Dados do Vídeo */
-      data: VideoBanner;
-    };
+    /** @title Vídeo */
+    "@type": "video";
+    /** @title Dados do Vídeo */
+    data: VideoBanner;
+  };
 
 export interface Props {
   /**

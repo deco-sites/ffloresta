@@ -74,7 +74,7 @@ function AdvancedCanonical({
 }: ReturnType<typeof loader>) {
   if (!canonicalUrl) {
     console.warn(
-      `AdvancedCanonical: URL canônica não definida para o tipo ${pageType}`
+      `AdvancedCanonical: URL canônica não definida para o tipo ${pageType}`,
     );
     return null;
   }

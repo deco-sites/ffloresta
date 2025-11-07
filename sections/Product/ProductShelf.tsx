@@ -58,17 +58,17 @@ export interface VideoBanner {
 /** @title Banner do Header */
 export type HeaderBannerItem =
   | {
-      /** @title Imagem */
-      "@type": "image";
-      /** @title Dados da Imagem */
-      data: Banner;
-    }
+    /** @title Imagem */
+    "@type": "image";
+    /** @title Dados da Imagem */
+    data: Banner;
+  }
   | {
-      /** @title Vídeo */
-      "@type": "video";
-      /** @title Dados do Vídeo */
-      data: VideoBanner;
-    };
+    /** @title Vídeo */
+    "@type": "video";
+    /** @title Dados do Vídeo */
+    data: VideoBanner;
+  };
 
 export interface Props {
   products: Product[] | null;
@@ -113,8 +113,8 @@ export default function ProductShelf({
     const { data } = headerBanner;
     const href = data.action?.href;
 
-    const content =
-      headerBanner["@type"] === "image" ? (
+    const content = headerBanner["@type"] === "image"
+      ? (
         <>
           {data.desktop && data.mobile && (
             <picture>
@@ -128,7 +128,8 @@ export default function ProductShelf({
             </picture>
           )}
         </>
-      ) : (
+      )
+      : (
         <>
           {data.desktop && data.mobile && (
             <video
@@ -150,13 +151,13 @@ export default function ProductShelf({
 
     return (
       <div class="flex-1 min-w-0">
-        {href ? (
-          <a href={href} class="block">
-            {content}
-          </a>
-        ) : (
-          content
-        )}
+        {href
+          ? (
+            <a href={href} class="block">
+              {content}
+            </a>
+          )
+          : content}
       </div>
     );
   };

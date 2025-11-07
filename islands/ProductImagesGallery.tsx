@@ -15,8 +15,8 @@ export default function ProductImagesGallery(props: Props) {
 
   if (!props.page) return null;
 
-  const images =
-    props.page.product.image || props.page.product.isVariantOf?.image || [];
+  const images = props.page.product.image ||
+    props.page.product.isVariantOf?.image || [];
   const thumbs = images.map((img) => ({
     url: img.url!,
     alt: img.alternateName,
@@ -27,9 +27,9 @@ export default function ProductImagesGallery(props: Props) {
   const visibleThumbs = useComputed(() => {
     return showThumbSlider
       ? thumbs.slice(
-          thumbStartIndex.value,
-          thumbStartIndex.value + thumbsPerView
-        )
+        thumbStartIndex.value,
+        thumbStartIndex.value + thumbsPerView,
+      )
       : thumbs;
   });
 
@@ -39,8 +39,8 @@ export default function ProductImagesGallery(props: Props) {
   };
 
   const prev = () => {
-    currentIndex.value =
-      (currentIndex.value - 1 + thumbs.length) % thumbs.length;
+    currentIndex.value = (currentIndex.value - 1 + thumbs.length) %
+      thumbs.length;
     isZoomed.value = false;
   };
 
@@ -147,9 +147,9 @@ export default function ProductImagesGallery(props: Props) {
                     ? "border-gray-300"
                     : "border-transparent"
                 } hover:border-gray-200 bg-white p-1`}
-                aria-label={`Visualizar imagem ${originalIndex + 1} de ${
-                  thumbs.length
-                }`}
+                aria-label={`Visualizar imagem ${
+                  originalIndex + 1
+                } de ${thumbs.length}`}
               >
                 <Image
                   src={thumb.url}
@@ -215,14 +215,13 @@ export default function ProductImagesGallery(props: Props) {
             class={`w-full h-full object-contain transition-all duration-200 ${
               isZoomed.value ? "scale-150" : "scale-100"
             }`}
-            style={
-              isZoomed.value
-                ? {
-                    transformOrigin: `${zoomPosition.value.x}% ${zoomPosition.value.y}%`,
-                    transform: `scale(1.5)`,
-                  }
-                : {}
-            }
+            style={isZoomed.value
+              ? {
+                transformOrigin:
+                  `${zoomPosition.value.x}% ${zoomPosition.value.y}%`,
+                transform: `scale(1.5)`,
+              }
+              : {}}
             loading={currentIndex.value === 0 ? "eager" : "lazy"}
           />
         </div>

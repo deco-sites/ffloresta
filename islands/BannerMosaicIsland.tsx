@@ -54,17 +54,17 @@ export interface VideoBanner {
 /** @title Item do Mosaico */
 export type MosaicItem =
   | {
-      /** @title Imagem */
-      "@type": "image";
-      /** @title Dados da Imagem */
-      data: Banner;
-    }
+    /** @title Imagem */
+    "@type": "image";
+    /** @title Dados da Imagem */
+    data: Banner;
+  }
   | {
-      /** @title Vídeo */
-      "@type": "video";
-      /** @title Dados do Vídeo */
-      data: VideoBanner;
-    };
+    /** @title Vídeo */
+    "@type": "video";
+    /** @title Dados do Vídeo */
+    data: VideoBanner;
+  };
 
 export interface Props {
   settings?: {
@@ -87,8 +87,8 @@ function MosaicItemRenderer({
   const { data } = item;
   const href = data.action?.href;
 
-  const content =
-    item["@type"] === "image" ? (
+  const content = item["@type"] === "image"
+    ? (
       <>
         {data.desktop && data.mobile && (
           <>
@@ -107,7 +107,8 @@ function MosaicItemRenderer({
           </>
         )}
       </>
-    ) : (
+    )
+    : (
       <>
         {data.desktop && data.mobile && (
           <>
@@ -348,7 +349,7 @@ export default function BannerMosaicIsland({ items, settings = {} }: Props) {
     <div
       class={clx(
         "hidden md:flex flex-wrap items-stretch justify-center",
-        `gap-${gap}`
+        `gap-${gap}`,
       )}
     >
       {items?.slice(0, itemsToShow).map((item, index) => (
@@ -397,7 +398,7 @@ export default function BannerMosaicIsland({ items, settings = {} }: Props) {
                   "w-2 h-2 lg:w-3 lg:h-3 transition-all duration-300",
                   activeDot === index
                     ? "bg-[#2D2D2D]"
-                    : "bg-transparent border border-[#2D2D2D]"
+                    : "bg-transparent border border-[#2D2D2D]",
                 )}
               />
             </button>
