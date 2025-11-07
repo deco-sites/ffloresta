@@ -639,7 +639,10 @@
           "data": {
             "desktop": "https://assets.decocache.com/ffloresta/b8443d21-1b94-4926-a73e-2832f5933213/3-a-(1).jpg",
             "mobile": "https://assets.decocache.com/ffloresta/b8443d21-1b94-4926-a73e-2832f5933213/3-a-(1).jpg",
-            "alt": "Whatsapp"
+            "alt": "Whatsapp",
+            "action": {
+              "href": "https://api.whatsapp.com/send?phone=551130936121&text=Ol%C3%A1,%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es"
+            }
           }
         },
         {
