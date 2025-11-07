@@ -2300,14 +2300,6 @@
               "altText": "Ambientes",
               "mobile": "https://assets.decocache.com/ffloresta/a5be6a21-4dac-43bb-a18a-ad230011c494/Prancheta-1_3.png",
               "desktop": "https://assets.decocache.com/ffloresta/8a582a57-fb0c-4397-bfb1-8548a07992b3/Prancheta-1_3_upscayl_4x_upscayl-standard-4x.png"
-            },
-            "banner": {
-              "@type": "image",
-              "data": {
-                "desktop": "https://assets.decocache.com/ffloresta/2aeacbc0-a175-45a6-b79a-8f56b499543c/ambientes-desktop.png",
-                "alt": "ambientes",
-                "mobile": "https://assets.decocache.com/ffloresta/cc0e92ed-e675-4009-ad2f-fc7f7b5f92b1/Prancheta-1_32x.png"
-              }
             }
           },
           "rule": {
@@ -2449,14 +2441,6 @@
               "altText": "Ferramentas",
               "mobile": "https://assets.decocache.com/ffloresta/5783cb8b-d679-456e-a6f6-0aedca0e3b51/Prancheta-1_5.png",
               "desktop": "https://assets.decocache.com/ffloresta/a87339b0-9494-4ec1-b0bd-2745ad0198aa/Prancheta-1_5_upscayl_4x_upscayl-standard-4x.png"
-            },
-            "banner": {
-              "@type": "image",
-              "data": {
-                "alt": "Ferramentas",
-                "desktop": "https://assets.decocache.com/ffloresta/d5447819-953a-4bb6-8ea5-36941907add8/ferramentas-desktop.png",
-                "mobile": "https://assets.decocache.com/ffloresta/d7fb17bb-0a3f-41b8-8782-96c168f1ea1d/Prancheta-1_52x.png"
-              }
             }
           },
           "rule": {
@@ -2598,14 +2582,6 @@
               "altText": "Ferragens de projetos",
               "mobile": "https://assets.decocache.com/ffloresta/b18e47c0-5c2e-4adb-9ec3-f7b9c9d1f302/Prancheta-1_4.png",
               "desktop": "https://assets.decocache.com/ffloresta/f293f76c-baf2-4acd-b09f-e7fdc0c3878e/Prancheta-1_4_upscayl_4x_upscayl-standard-4x.png"
-            },
-            "banner": {
-              "@type": "image",
-              "data": {
-                "desktop": "https://assets.decocache.com/ffloresta/f8825727-a64b-4bbc-8632-87707a8d5ec8/Ferragens-e-projeto-desktop.png",
-                "alt": "Ferragens de projetos",
-                "mobile": "https://assets.decocache.com/ffloresta/bdd17e8b-ea21-45b8-b888-43489a688ec4/Prancheta-1_42x.png"
-              }
             }
           },
           "rule": {
@@ -2747,14 +2723,6 @@
               "altText": "Ferragens",
               "mobile": "https://assets.decocache.com/ffloresta/44d2b6db-4203-4956-893c-409df5151177/Prancheta-1_1-(2).png",
               "desktop": "https://assets.decocache.com/ffloresta/c40ec064-5a59-4372-a4cb-8afa869b7ecc/Prancheta-1_1-(3).png"
-            },
-            "banner": {
-              "@type": "image",
-              "data": {
-                "desktop": "https://assets.decocache.com/ffloresta/f2f266de-ca9c-433e-8372-74588bc1f1e3/desktop-ferragens.png",
-                "mobile": "https://assets.decocache.com/ffloresta/97ebfe1a-201a-451b-bb33-430eeb2f9cf0/ferramentas-mobile.png",
-                "alt": "Ferragens"
-              }
             }
           },
           "rule": {
@@ -2898,14 +2866,6 @@
               "altText": "Fechaduras",
               "mobile": "https://assets.decocache.com/ffloresta/8f0b81cc-69ca-465b-b58c-bee7dfd261bd/Prancheta-1_2.png",
               "desktop": "https://assets.decocache.com/ffloresta/b19fe399-33fd-4b6f-80b5-f79282f52c60/2.jpg"
-            },
-            "banner": {
-              "@type": "image",
-              "data": {
-                "desktop": "https://assets.decocache.com/ffloresta/121e2e6b-02d7-4744-93c3-8f5b945116ce/fechaduras-desktop.jpg",
-                "alt": "Fechaduras",
-                "mobile": "https://assets.decocache.com/ffloresta/fa3f2e7f-7c1a-40cd-bb86-80ca4dfa90f9/Prancheta-1_22x.png"
-              }
             }
           },
           "rule": {

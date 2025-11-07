@@ -1,132 +1,43 @@
-import type { ImageWidget, VideoWidget } from "apps/admin/widgets.ts";
+import type { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
 import Section from "../components/ui/Section.tsx";
 import { useId } from "../sdk/useId.ts";
 import { useEffect, useRef, useState } from "preact/hooks";
 import { clx } from "../sdk/clx.ts";
-import { useDevice } from "@deco/deco/hooks";
 
-export interface Banner {
-  desktop?: ImageWidget;
-  mobile?: ImageWidget;
-  alt: string;
-  action?: {
-    href?: string;
-    title?: string;
-    subTitle?: string;
-    label?: string;
-  };
+interface Item {
+  image: ImageWidget;
+  href: string;
+  label?: string;
 }
-
-export interface VideoBanner {
-  desktop?: VideoWidget;
-  mobile?: VideoWidget;
-  alt: string;
-  poster?: ImageWidget;
-  autoplay?: boolean;
-  loop?: boolean;
-  muted?: boolean;
-  action?: {
-    href?: string;
-    title?: string;
-    subTitle?: string;
-    label?: string;
-  };
-}
-
-export type BrandItem =
-  | {
-      "@type": "image";
-      data: Banner;
-      href: string;
-      label?: string;
-    }
-  | {
-      "@type": "video";
-      data: VideoBanner;
-      href: string;
-      label?: string;
-    };
 
 interface Props {
-  items: BrandItem[];
+  items: Item[];
   title?: string;
   cta?: string;
   icon?: ImageWidget;
 }
 
-// Componente para renderizar a mídia (imagem ou vídeo)
-function MediaRenderer({ item }: { item: BrandItem }) {
-  const device = useDevice();
-
-  if (item["@type"] === "image") {
-    const { data } = item;
-    const imageSrc =
-      device === "mobile"
-        ? data.mobile || data.desktop
-        : data.desktop || data.mobile;
-
-    if (!imageSrc) return null;
-
-    return (
-      <Image
-        src={imageSrc}
-        alt={data.alt}
-        loading="lazy"
-        class="w-full h-full object-contain"
-      />
-    );
-  }
-
-  if (item["@type"] === "video") {
-    const { data } = item;
-    const videoSrc =
-      device === "mobile"
-        ? data.mobile || data.desktop
-        : data.desktop || data.mobile;
-
-    if (!videoSrc) return null;
-
-    return (
-      <video
-        width="100%"
-        height="100%"
-        autoPlay={data.autoplay}
-        loop={data.loop}
-        muted={data.muted}
-        poster={data.poster}
-        class="w-full h-full object-contain"
-        playsInline
-      >
-        <source src={videoSrc} type="video/mp4" />
-        Seu navegador não suporta o elemento de vídeo.
-      </video>
-    );
-  }
-
-  return null;
-}
-
-function Card(item: BrandItem) {
-  const content = (
-    <div class="flex flex-col items-center justify-center gap-4 w-full h-full">
+function Card({ image, href, label }: Item) {
+  return (
+    <a
+      href={href}
+      class="flex flex-col items-center justify-center gap-4 w-full h-full"
+    >
       <div class="rounded-full flex justify-center items-center w-full h-full">
-        <MediaRenderer item={item} />
+        <Image
+          src={image}
+          alt={label || "Brand"}
+          loading="lazy"
+          class="w-full h-full object-contain"
+        />
       </div>
-      {item.label && (
+      {label && (
         <span class="font-bold text-sm text-center text-[#3A4332]">
-          {item.label}
+          {label}
         </span>
       )}
-    </div>
-  );
-
-  return item.href ? (
-    <a href={item.href} class="block w-full h-full">
-      {content}
     </a>
-  ) : (
-    <div class="w-full h-full">{content}</div>
   );
 }
 
@@ -282,7 +193,7 @@ export default function BrandGridIsland({ title, cta, items, icon }: Props) {
                 "sm:w-[calc(33.3%-(40px/3))]",
                 "md:w-[calc(25%-(60px/4))]",
                 "lg:w-[calc(20%-(80px/5))]",
-                "2xl:w-[calc(16.6%-(100px/6))]"
+                "2xl:w-[calc(16.6%-(100px/6))]",
               )}
             >
               <Card {...item} />
@@ -304,7 +215,7 @@ export default function BrandGridIsland({ title, cta, items, icon }: Props) {
                   class={clx(
                     "w-2 h-2 lg:w-3 lg:h-3 transition-all duration-300",
                     "border border-[#273D28]",
-                    activeDot === index ? "bg-[#273D28]" : "bg-transparent"
+                    activeDot === index ? "bg-[#273D28]" : "bg-transparent",
                   )}
                 />
               </button>
