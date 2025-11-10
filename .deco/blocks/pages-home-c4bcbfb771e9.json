@@ -57,10 +57,12 @@
         {
           "type": "image",
           "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/376fb5fb-05ab-4891-ac1f-743109235bda/desk.jpg",
-            "mobile": "https://assets.decocache.com/ffloresta/0a378893-b326-449f-9c35-82d6da712a18/mobile.jpg",
-            "action": {},
-            "alt": "Banner."
+            "desktop": "https://assets.decocache.com/ffloresta/f6460c0c-d659-4451-9ca2-7c3b02fa9776/puxador-1.jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/b3b7437f-380c-425f-a22f-a28298f0e285/puxador-2.jpg",
+            "action": {
+              "href": "/puxadores/italy-line/rometal/gruppa/geris/jador/formi/pado/arouca/vedor?initialMap=c&initialQuery=puxadores&map=category-1%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand"
+            },
+            "alt": "7% de desconto em puxadores"
           }
         },
         {
