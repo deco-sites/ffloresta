@@ -66,16 +66,14 @@
           }
         },
         {
-          "type": "video",
+          "type": "image",
           "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/5dcd6eb9-0536-4f5e-8574-7653519dfb31/video-fechadura-1.mp4",
-            "mobile": "https://assets.decocache.com/ffloresta/88d60cbb-f270-40e3-ada1-10ac4fffff21/video-mobile-2.mp4",
             "action": {
-              "href": "fechaduras?page=1"
+              "href": "/fechaduras"
             },
-            "autoplay": true,
-            "loop": true,
-            "alt": "banner"
+            "alt": "banner",
+            "desktop": "https://assets.decocache.com/ffloresta/c2360ad2-25cc-422c-8657-679d5cbd3aa4/fechadura-desk.jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/8a5e8485-7c22-479e-a8ec-52c40d62b4cf/fechadura-mobile.jpg"
           }
         },
         {
