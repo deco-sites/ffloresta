@@ -111,7 +111,7 @@ const useUrlRebased = (overrides: string | undefined, base: string) => {
 };
 
 function PageResult(props: SectionProps<typeof loader>) {
-  const { layout, startingPage = 0, url, partial } = props;
+  const { layout, startingPage = 0, url, partial, flagsConfig = [] } = props;
   const page = props.page!;
   const { products, pageInfo } = page;
   const perPage = pageInfo?.recordPerPage || products.length;
@@ -182,6 +182,7 @@ function PageResult(props: SectionProps<typeof loader>) {
             preload={index === 0}
             index={offset + index}
             class="h-full w-[98%] shadow-[5.62px_5.62px_7.03px_0px_rgba(0,0,0,0.15)]"
+            flagsConfig={flagsConfig}
           />
         ))}
       </div>
@@ -297,7 +298,14 @@ function Result(props: SectionProps<typeof loader>) {
   const container = useId();
   const controls = useId();
   const device = useDevice();
-  const { startingPage = 0, url, partial, bannerImage, title } = props;
+  const {
+    startingPage = 0,
+    url,
+    partial,
+    bannerImage,
+    title,
+    flagsConfig = [],
+  } = props;
   const page = props.page!;
   const { products, filters, breadcrumb, pageInfo, sortOptions } = page;
   const perPage = pageInfo?.recordPerPage || products.length;
@@ -563,13 +571,18 @@ function SearchResult({ page, ...props }: SectionProps<typeof loader>) {
   return <Result {...props} page={page} />;
 }
 
-export const loader = (props: Props, req: Request) => {
+// Loader que combina as props existentes com as flags do loader global
+export const loader = async (props: Props, req: Request) => {
+  // Carrega as flags do loader global
+  const globalFlags = await globalFlagsConfig({}, req);
+
   return {
     ...props,
     url: req.url,
     bannerImage: props.bannerImage,
     seoText: props.seoText,
     title: props.title,
+    flagsConfig: globalFlags.flagsConfig || [],
   };
 };
 

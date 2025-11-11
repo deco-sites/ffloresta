@@ -57,7 +57,7 @@ export interface Props {
  * @title Loader de Flags de Coleção
  * @description Gerencia flags para produtos baseado em IDs de coleção - suporta texto com cores ou imagem
  */
-const FlagsConfigLoader = ({ flags = [] }: Props) => {
+const FlagsConfigLoader = ({ flags = [] }: Props): Flag[] => {
   return flags;
 };
 

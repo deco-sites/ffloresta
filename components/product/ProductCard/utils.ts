@@ -13,15 +13,14 @@ export interface ProductFlag {
 // Função principal para obter flags configuráveis
 export const getConfigurableFlags = (
   product: Product,
-  flagsConfig: Flag[]
+  flagsConfig: Flag[],
 ): ProductFlag[] => {
   if (!flagsConfig.length) return [];
 
-  const productCollectionIds =
-    product.additionalProperty
-      ?.filter((prop) => prop.name === "category" || prop.name === "collection")
-      .map((prop) => prop.value)
-      .filter((id): id is string => !!id) || [];
+  const productCollectionIds = product.additionalProperty
+    ?.filter((prop) => prop.name === "category" || prop.name === "collection")
+    .map((prop) => prop.value)
+    .filter((id): id is string => !!id) || [];
 
   const matchingFlags = flagsConfig.filter((flag) =>
     flag.collectionIds.some((collectionId) =>
