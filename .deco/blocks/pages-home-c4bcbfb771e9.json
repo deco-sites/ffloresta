@@ -95,6 +95,17 @@
             "desktop": "https://assets.decocache.com/ffloresta/ba719365-e939-42f3-a7aa-3ed726603dca/5-(1).jpg",
             "mobile": "https://assets.decocache.com/ffloresta/72547cdf-62bf-4a31-9cd0-d67d8bd269f1/5a.jpg"
           }
+        },
+        {
+          "type": "image",
+          "data": {
+            "desktop": "https://assets.decocache.com/ffloresta/397fc4e1-2ab1-43d0-b3a0-a2018582732a/dobradica-desk.jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/bbd3977e-c945-4817-b31b-9f0063a0ccf0/dobradica-MOBILE.jpg",
+            "alt": "Desconto Dobradiças",
+            "action": {
+              "href": "/ferragens/dobradicas"
+            }
+          }
         }
       ],
       "interval": 9000
