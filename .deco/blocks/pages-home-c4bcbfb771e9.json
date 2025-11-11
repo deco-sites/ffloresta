@@ -57,23 +57,23 @@
         {
           "type": "image",
           "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/376fb5fb-05ab-4891-ac1f-743109235bda/desk.jpg",
-            "mobile": "https://assets.decocache.com/ffloresta/0a378893-b326-449f-9c35-82d6da712a18/mobile.jpg",
-            "action": {},
-            "alt": "Banner."
+            "desktop": "https://assets.decocache.com/ffloresta/f6460c0c-d659-4451-9ca2-7c3b02fa9776/puxador-1.jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/b3b7437f-380c-425f-a22f-a28298f0e285/puxador-2.jpg",
+            "action": {
+              "href": "/puxadores/italy-line/rometal/gruppa/geris/jador/formi/pado/arouca/vedor?initialMap=c&initialQuery=puxadores&map=category-1%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand"
+            },
+            "alt": "7% de desconto em puxadores"
           }
         },
         {
-          "type": "video",
+          "type": "image",
           "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/5dcd6eb9-0536-4f5e-8574-7653519dfb31/video-fechadura-1.mp4",
-            "mobile": "https://assets.decocache.com/ffloresta/88d60cbb-f270-40e3-ada1-10ac4fffff21/video-mobile-2.mp4",
             "action": {
-              "href": "fechaduras?page=1"
+              "href": "/fechaduras"
             },
-            "autoplay": true,
-            "loop": true,
-            "alt": "banner"
+            "alt": "banner",
+            "desktop": "https://assets.decocache.com/ffloresta/c2360ad2-25cc-422c-8657-679d5cbd3aa4/fechadura-desk.jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/8a5e8485-7c22-479e-a8ec-52c40d62b4cf/fechadura-mobile.jpg"
           }
         },
         {
@@ -86,14 +86,14 @@
           }
         },
         {
-          "type": "video",
+          "type": "image",
           "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/74b81cf5-236b-4ec0-8e05-9c5bde748dd5/1031.mp4",
-            "mobile": "https://assets.decocache.com/ffloresta/bbfc27db-3530-4e9a-a435-1c7ef731d71d/video-mobile-ace-2.mp4",
-            "alt": "15% de desconto em ferramentas",
+            "alt": "10% de desconto em corrediças",
             "action": {
-              "href": "/ferramentas/acessorios?page=1"
-            }
+              "href": "/ferragens/corredicas"
+            },
+            "desktop": "https://assets.decocache.com/ffloresta/ba719365-e939-42f3-a7aa-3ed726603dca/5-(1).jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/72547cdf-62bf-4a31-9cd0-d67d8bd269f1/5a.jpg"
           }
         }
       ],
@@ -171,7 +171,7 @@
         "__resolveType": "vtex/loaders/intelligentSearch/productSearchValidator.ts",
         "props": {
           "sort": "price:desc",
-          "collection": "181",
+          "collection": "142",
           "count": 14
         }
       },
