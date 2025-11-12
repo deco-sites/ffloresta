@@ -14,6 +14,15 @@
         "183"
       ],
       "image": "https://assets.decocache.com/ffloresta/397fc4e1-2ab1-43d0-b3a0-a2018582732a/dobradica-desk.jpg"
+    },
+    {
+      "type": "text",
+      "collections": [
+        "182"
+      ],
+      "title": "Henrique Teste",
+      "textColor": "#000000",
+      "backgroundColor": "#ff0000"
     }
   ]
 }
