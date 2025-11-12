@@ -146,7 +146,10 @@
               "96": "g",
               "altText": "Martelete"
             },
-            "products": null
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -290,7 +293,10 @@
               "96": "g",
               "altText": "Amortecedores e Pulsadores"
             },
-            "products": null
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -435,7 +441,10 @@
               "altText": "Corrediças"
             },
             "products": null,
-            "title": "Corrediças"
+            "title": "Corrediças",
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -580,7 +589,10 @@
               "altText": "Dobradiças"
             },
             "products": null,
-            "title": "Dobradiças"
+            "title": "Dobradiças",
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -724,7 +736,10 @@
               "96": "g",
               "altText": "Corrediça Invisível"
             },
-            "products": null
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -868,7 +883,10 @@
               "96": "g",
               "altText": "Fitas de Led"
             },
-            "products": null
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -1018,7 +1036,10 @@
               "mobile": "https://assets.decocache.com/ffloresta/651d99c0-4903-4622-8eb3-2bf6d2648117/PROMO-BOSCH-2a.jpg",
               "desktop": "https://assets.decocache.com/ffloresta/5c7586ad-0f02-4756-a2ae-06afd76f12b4/PROMO-BOSCH-1.jpg"
             },
-            "products": null
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -1162,7 +1183,10 @@
               "96": "g",
               "altText": "Categoria"
             },
-            "products": null
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -1306,7 +1330,10 @@
               "96": "g",
               "altText": "Categoria"
             },
-            "products": null
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -1450,7 +1477,10 @@
               "96": "g",
               "altText": "Categoria"
             },
-            "products": null
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -1592,7 +1622,10 @@
               "96": "g",
               "altText": "Categoria"
             },
-            "products": null
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -1734,7 +1767,10 @@
               "96": "g",
               "altText": "Categoria"
             },
-            "products": null
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -1876,7 +1912,10 @@
               "96": "g",
               "altText": "Categoria"
             },
-            "products": null
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -2018,7 +2057,10 @@
               "96": "g",
               "altText": "Categoria"
             },
-            "products": null
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -2162,7 +2204,10 @@
               "96": "g",
               "altText": "Categoria"
             },
-            "products": null
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -2306,7 +2351,10 @@
               "96": "g",
               "altText": "Categoria"
             },
-            "products": null
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -2450,7 +2498,10 @@
               "96": "g",
               "altText": "Categoria"
             },
-            "products": null
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -2594,7 +2645,10 @@
               "96": "g",
               "altText": "Categoria"
             },
-            "products": null
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -2737,7 +2791,10 @@
               "96": "g",
               "altText": "Categoria"
             },
-            "products": null
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -2880,6 +2937,9 @@
               "altText": "Puxadores para Porta",
               "mobile": "https://assets.decocache.com/ffloresta/2144266d-e2a6-45c2-a59f-481c31f456ad/Prancheta-1-(2).png",
               "desktop": "https://assets.decocache.com/ffloresta/2e615fa9-dae3-4829-9cac-a157fa73c974/Prancheta-1_upscayl_4x_upscayl-standard-4x.png"
+            },
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
             }
           },
           "rule": {
@@ -3025,6 +3085,9 @@
               "altText": "Ferragens",
               "mobile": "https://assets.decocache.com/ffloresta/3f61641c-9f58-4518-84f9-ac4f0fed2597/Prancheta-1_1.png",
               "desktop": "https://assets.decocache.com/ffloresta/66bebcc3-80aa-4882-b171-43b29993f2fc/Prancheta-1_1_upscayl_4x_upscayl-standard-4x.png"
+            },
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
             }
           },
           "rule": {
@@ -3166,6 +3229,9 @@
               "altText": "Ambientes",
               "mobile": "https://assets.decocache.com/ffloresta/a5be6a21-4dac-43bb-a18a-ad230011c494/Prancheta-1_3.png",
               "desktop": "https://assets.decocache.com/ffloresta/8a582a57-fb0c-4397-bfb1-8548a07992b3/Prancheta-1_3_upscayl_4x_upscayl-standard-4x.png"
+            },
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
             }
           },
           "rule": {
@@ -3307,6 +3373,9 @@
               "altText": "Ferramentas",
               "mobile": "https://assets.decocache.com/ffloresta/5783cb8b-d679-456e-a6f6-0aedca0e3b51/Prancheta-1_5.png",
               "desktop": "https://assets.decocache.com/ffloresta/a87339b0-9494-4ec1-b0bd-2745ad0198aa/Prancheta-1_5_upscayl_4x_upscayl-standard-4x.png"
+            },
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
             }
           },
           "rule": {
@@ -3448,6 +3517,9 @@
               "altText": "Ferragens de projetos",
               "mobile": "https://assets.decocache.com/ffloresta/b18e47c0-5c2e-4adb-9ec3-f7b9c9d1f302/Prancheta-1_4.png",
               "desktop": "https://assets.decocache.com/ffloresta/f293f76c-baf2-4acd-b09f-e7fdc0c3878e/Prancheta-1_4_upscayl_4x_upscayl-standard-4x.png"
+            },
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
             }
           },
           "rule": {
@@ -3589,6 +3661,9 @@
               "altText": "Ferragens",
               "mobile": "https://assets.decocache.com/ffloresta/44d2b6db-4203-4956-893c-409df5151177/Prancheta-1_1-(2).png",
               "desktop": "https://assets.decocache.com/ffloresta/c40ec064-5a59-4372-a4cb-8afa869b7ecc/Prancheta-1_1-(3).png"
+            },
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
             }
           },
           "rule": {
@@ -3732,6 +3807,9 @@
               "altText": "Fechaduras",
               "mobile": "https://assets.decocache.com/ffloresta/8f0b81cc-69ca-465b-b58c-bee7dfd261bd/Prancheta-1_2.png",
               "desktop": "https://assets.decocache.com/ffloresta/b19fe399-33fd-4b6f-80b5-f79282f52c60/2.jpg"
+            },
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
             }
           },
           "rule": {
@@ -3874,7 +3952,10 @@
               "96": "g",
               "altText": "Categoria"
             },
-            "products": null
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
           },
           "rule": {
             "__resolveType": "website/matchers/always.ts"
