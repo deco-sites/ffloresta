@@ -26,25 +26,23 @@ function ProductFlags({ product, flagsConfig = [] }: Props) {
         <div
           key={index}
           class="flex items-center gap-1 h-[15px] px-2 w-max font-medium"
-          style={
-            flag.type === "text"
-              ? {
-                  backgroundColor: flag.backgroundColor,
-                  color: flag.textColor,
-                }
-              : undefined
-          }
+          style={flag.type === "text"
+            ? {
+              backgroundColor: flag.backgroundColor,
+              color: flag.textColor,
+            }
+            : undefined}
         >
-          {flag.type === "image" ? (
-            <img
-              src={flag.image}
-              alt={flag.text}
-              class="h-full w-auto object-contain"
-              loading="lazy"
-            />
-          ) : (
-            <span class="text-xs">{flag.text}</span>
-          )}
+          {flag.type === "image"
+            ? (
+              <img
+                src={flag.image}
+                alt={flag.text}
+                class="h-full w-auto object-contain"
+                loading="lazy"
+              />
+            )
+            : <span class="text-xs">{flag.text}</span>}
         </div>
       ))}
     </div>
