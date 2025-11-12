@@ -162,7 +162,10 @@
         }
       },
       "orientation": "vertical",
-      "icon": "https://assets.decocache.com/ffloresta/8e934bf1-704a-43a4-9ec5-abe3998e9fc0/Logo-header.svg"
+      "icon": "https://assets.decocache.com/ffloresta/8e934bf1-704a-43a4-9ec5-abe3998e9fc0/Logo-header.svg",
+      "flagsConfig": {
+        "__resolveType": "03"
+      }
     },
     {
       "__resolveType": "site/sections/Product/ProductShelfWithBackground.tsx",
@@ -182,6 +185,9 @@
         "mobile": {
           "src": "https://assets.decocache.com/ffloresta/69b40089-2979-4077-9522-0f87b68682ee/image-(1).png"
         }
+      },
+      "flagsConfig": {
+        "__resolveType": "03"
       }
     },
     {
@@ -267,7 +273,7 @@
       },
       "icon": "https://assets.decocache.com/ffloresta/411928eb-5e4b-4c3b-83d1-1c788f576a64/icon_prancheta.svg",
       "flagsConfig": {
-        "__resolveType": "02"
+        "__resolveType": "03"
       }
     },
     {
@@ -493,7 +499,7 @@
       },
       "page": null,
       "flagsConfig": {
-        "__resolveType": "02"
+        "__resolveType": "03"
       }
     },
     {
@@ -504,7 +510,7 @@
         "__resolveType": "vtex/loaders/intelligentSearch/productSearchValidator.ts",
         "props": {
           "sort": "price:desc",
-          "collection": "170",
+          "collection": "182",
           "count": 30
         }
       },
@@ -604,7 +610,7 @@
         }
       },
       "flagsConfig": {
-        "__resolveType": "02"
+        "__resolveType": "03"
       }
     },
     {
