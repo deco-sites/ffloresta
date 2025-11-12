@@ -6,7 +6,7 @@ import { useOffer } from "../../sdk/useOffer.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import { type LoadingFallbackProps } from "@deco/deco";
 import { ImageWidget, VideoWidget } from "apps/admin/widgets.ts";
-
+import type { Flag } from "../../loaders/flags-config.ts";
 export interface Banner {
   /** @title Imagem para Desktop */
   desktop?: ImageWidget;
@@ -58,17 +58,17 @@ export interface VideoBanner {
 /** @titleSlide Item */
 export type BannerItem =
   | {
-    /** @title Imagem */
-    "@type": "image";
-    /** @title Dados da Imagem */
-    data: Banner;
-  }
+      /** @title Imagem */
+      "@type": "image";
+      /** @title Dados da Imagem */
+      data: Banner;
+    }
   | {
-    /** @title Vídeo */
-    "@type": "video";
-    /** @title Dados do Vídeo */
-    data: VideoBanner;
-  };
+      /** @title Vídeo */
+      "@type": "video";
+      /** @title Dados do Vídeo */
+      data: VideoBanner;
+    };
 
 export interface Props {
   products: Product[] | null;
@@ -85,6 +85,7 @@ export interface Props {
   cta?: string;
   /** @title Ícone */
   icon?: ImageWidget;
+  flagsConfig?: Flag[];
 }
 
 export default function ProductShelfWithBanner({
@@ -94,6 +95,7 @@ export default function ProductShelfWithBanner({
   banner,
   orientation = "horizontal",
   icon,
+  flagsConfig = [],
 }: Props) {
   if (!products || products.length === 0) {
     return null;
@@ -116,7 +118,8 @@ export default function ProductShelfWithBanner({
     },
   });
 
-  const hasBg = banner &&
+  const hasBg =
+    banner &&
     (banner["@type"] === "image"
       ? banner.data.desktop && banner.data.mobile
       : banner.data.desktop && banner.data.mobile);
@@ -125,8 +128,8 @@ export default function ProductShelfWithBanner({
     if (!banner) return null;
 
     const href = banner.data.action?.href;
-    const content = banner["@type"] === "image"
-      ? (
+    const content =
+      banner["@type"] === "image" ? (
         <>
           {banner.data.desktop && banner.data.mobile && (
             <picture>
@@ -140,8 +143,7 @@ export default function ProductShelfWithBanner({
             </picture>
           )}
         </>
-      )
-      : (
+      ) : (
         <>
           {banner.data.desktop && banner.data.mobile && (
             <video
@@ -163,13 +165,13 @@ export default function ProductShelfWithBanner({
 
     return (
       <div class={orientation === "vertical" ? "w-full" : "flex-1"}>
-        {href
-          ? (
-            <a href={href} class="block">
-              {content}
-            </a>
-          )
-          : content}
+        {href ? (
+          <a href={href} class="block">
+            {content}
+          </a>
+        ) : (
+          content
+        )}
       </div>
     );
   };

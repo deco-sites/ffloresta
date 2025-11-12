@@ -265,7 +265,10 @@
           "count": 30
         }
       },
-      "icon": "https://assets.decocache.com/ffloresta/411928eb-5e4b-4c3b-83d1-1c788f576a64/icon_prancheta.svg"
+      "icon": "https://assets.decocache.com/ffloresta/411928eb-5e4b-4c3b-83d1-1c788f576a64/icon_prancheta.svg",
+      "flagsConfig": {
+        "__resolveType": "02"
+      }
     },
     {
       "__resolveType": "site/sections/Content/BannerMosaic.tsx",
@@ -488,7 +491,10 @@
           "desktop": "https://assets.decocache.com/ffloresta/a5ade45b-b17c-4cbf-8bac-0077ff0c65ce/1.jpg"
         }
       },
-      "page": null
+      "page": null,
+      "flagsConfig": {
+        "__resolveType": "02"
+      }
     },
     {
       "__resolveType": "site/sections/Product/ProductShelf.tsx",
@@ -596,6 +602,9 @@
           "desktop": "https://assets.decocache.com/ffloresta/a9768810-1555-4817-a4ea-cc6cb17633f6/2-(1).jpg",
           "mobile": "https://assets.decocache.com/ffloresta/a9768810-1555-4817-a4ea-cc6cb17633f6/2-(1).jpg"
         }
+      },
+      "flagsConfig": {
+        "__resolveType": "02"
       }
     },
     {
@@ -680,10 +689,7 @@
       "title": "O que nossos clientes dizem"
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "Footer"
-      }
+      "__resolveType": "Footer"
     }
   ],
   "__resolveType": "website/pages/Page.tsx",

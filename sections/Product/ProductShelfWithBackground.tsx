@@ -6,6 +6,7 @@ import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import { type LoadingFallbackProps } from "@deco/deco";
 import { ImageWidget } from "apps/admin/widgets.ts";
 import ProductSliderForBGShelf from "../../components/product/ProductSliderForBGShelf.tsx";
+import type { Flag } from "../../loaders/flags-config.ts";
 
 export interface BackgroundProps {
   desktop: {
@@ -25,6 +26,7 @@ export interface Props {
   /** @description See all link */
   cta?: string;
   icon?: ImageWidget;
+  flagsConfig?: Flag[];
 }
 
 export default function ProductShelfWithBackground({
@@ -33,6 +35,7 @@ export default function ProductShelfWithBackground({
   cta,
   background,
   icon,
+  flagsConfig = [],
 }: Props) {
   if (!products || products.length === 0) {
     return null;
