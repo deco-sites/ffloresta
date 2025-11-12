@@ -10,8 +10,6 @@ interface Props {
 function ProductFlags({ product, flagsConfig = [] }: Props) {
   const flags = getClusterFlags(product, flagsConfig);
 
-  console.log(flags, "flags");
-
   if (flags.length === 0) return null;
 
   return (
