@@ -27,7 +27,12 @@ function ProductFlags({ product, flagsConfig = [] }: Props) {
             {flag.text}
           </span>
         ) : flag.type === "image" && flag.image ? (
-          <img key={index} src={flag.image} alt="" class="object-contain" />
+          <img
+            key={index}
+            src={flag.image}
+            alt=""
+            class="max-h-[15px] object-contain"
+          />
         ) : null
       )}
     </div>
