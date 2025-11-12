@@ -1,5 +1,3 @@
-// loaders/flagsCollection.ts
-
 export interface TextFlag {
   /**
    * @title Tipo da Flag

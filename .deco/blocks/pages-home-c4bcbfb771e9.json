@@ -267,8 +267,7 @@
       },
       "icon": "https://assets.decocache.com/ffloresta/411928eb-5e4b-4c3b-83d1-1c788f576a64/icon_prancheta.svg",
       "flagsConfig": {
-        "__resolveType": "site/loaders/globalFlagsConfig.ts",
-        "flags": []
+        "__resolveType": "Configurações Globais de Coleção"
       }
     },
     {
@@ -392,7 +391,7 @@
         "__resolveType": "vtex/loaders/intelligentSearch/productSearchValidator.ts",
         "props": {
           "sort": "price:desc",
-          "collection": "164",
+          "collection": "182",
           "count": 30
         }
       },
@@ -492,7 +491,14 @@
           "desktop": "https://assets.decocache.com/ffloresta/a5ade45b-b17c-4cbf-8bac-0077ff0c65ce/1.jpg"
         }
       },
-      "page": null
+      "page": null,
+      "flagsConfig": [
+        {
+          "type": "text",
+          "backgroundColor": "#000000",
+          "textColor": "#000000"
+        }
+      ]
     },
     {
       "__resolveType": "site/sections/Product/ProductShelf.tsx",

@@ -10,5 +10,16 @@
       "backgroundColor": "#000000",
       "textColor": "#ffffff"
     }
+  ],
+  "configs": [
+    {
+      "type": "text",
+      "text": "Novidades",
+      "backgroundColor": "#000000",
+      "textColor": "#000000",
+      "collectionIds": [
+        "182"
+      ]
+    }
   ]
 }
