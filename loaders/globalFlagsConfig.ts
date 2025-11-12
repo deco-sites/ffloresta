@@ -26,6 +26,10 @@ export interface TextFlag {
 
 export interface ImageFlag {
   /**
+   * @title Tipo da Flag
+   */
+  type: "image";
+  /**
    * @title Texto Alternativo
    * @description Texto que aparece quando a imagem não carrega
    */
@@ -42,18 +46,22 @@ export interface ImageFlag {
   collectionIds: string[];
 }
 
+/**
+ * @title Configuração de Flag
+ */
 export type Flag = TextFlag | ImageFlag;
 
 export interface Props {
   /**
    * @title Flags de Coleção
+   * @description Configure as flags para diferentes coleções
    */
   flags?: Flag[];
 }
 
 /**
- * @title Loader de Flags de Coleção
- * @description Gerencia flags para produtos baseado em IDs de coleção - suporta texto com cores ou imagem
+ * @title Gerenciador de Flags
+ * @description Configura flags para produtos baseado em coleções
  */
 const FlagsConfigLoader = ({ flags = [] }: Props): Flag[] => {
   return flags;
