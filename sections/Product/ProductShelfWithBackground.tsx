@@ -94,6 +94,7 @@ export default function ProductShelfWithBackground({
             products={products}
             itemListName={title}
             hasBg={hasBg}
+            flagsConfig={flagsConfig}
             class="bg-transparent p-0"
           />
         </div>
