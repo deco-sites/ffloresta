@@ -1,53 +1,57 @@
-// utils.ts
 import type { Product } from "apps/commerce/types.ts";
 import { formatPrice } from "../../../sdk/format.ts";
+import type { Flag } from "../../../loaders/flags-config.ts";
 
-export const getClusterFlags = (product: Product) => {
-  const flags = [];
-  const clusters =
+export interface ProductFlag {
+  type: "text" | "image";
+  text?: string;
+  textColor?: string;
+  backgroundColor?: string;
+  image?: string;
+}
+
+export const getClusterFlags = (
+  product: Product,
+  flagsConfig: Flag[] = [],
+): ProductFlag[] => {
+  const flags: ProductFlag[] = [];
+
+  // Obter os clusters/coleções do produto a partir de additionalProperty
+  const productClusters =
     product.additionalProperty?.filter((prop) => prop.name === "cluster") || [];
 
-  for (const cluster of clusters) {
-    switch (cluster.value) {
-      case "Ofertas":
-        flags.push({
-          text: "Oferta relâmpago",
-          color: "#18454E",
-        });
-        break;
-      case "Novidades":
-        flags.push({
-          text: "Novidade",
-          color: "#02A3AE",
-        });
-        break;
-      case "Lançamentos":
-        flags.push({
-          text: "Lançamento",
-          color: "#010101",
-        });
-        break;
-      case "Encomendas":
-        flags.push({
-          text: "Encomenda",
-          color: "#4C1717",
-        });
-        break;
+  // Para cada cluster do produto, verificar se o propertyID está em alguma flagConfig
+  for (const cluster of productClusters) {
+    const clusterId = cluster.propertyID;
+
+    // Encontrar todas as flagsConfig que contêm este clusterId em suas collections
+    const matchingFlags = flagsConfig.filter((config) =>
+      config.collections.includes(clusterId)
+    );
+
+    for (const flagConfig of matchingFlags) {
+      // Evitar duplicatas
+      const alreadyExists = flags.some(
+        (flag) =>
+          flag.type === flagConfig.type && flag.text === flagConfig.title,
+      );
+
+      if (!alreadyExists) {
+        if (flagConfig.type === "text") {
+          flags.push({
+            type: "text",
+            text: flagConfig.title,
+            textColor: flagConfig.textColor,
+            backgroundColor: flagConfig.backgroundColor,
+          });
+        } else if (flagConfig.type === "image" && flagConfig.image) {
+          flags.push({
+            type: "image",
+            image: flagConfig.image,
+          });
+        }
+      }
     }
-  }
-
-  const releaseDate = product.releaseDate
-    ? new Date(product.releaseDate)
-    : null;
-  const now = new Date();
-  const isNew = releaseDate &&
-    now.getTime() - releaseDate.getTime() < 30 * 24 * 60 * 60 * 1000;
-
-  if (isNew && !flags.some((f) => f.text === "Novidade")) {
-    flags.push({
-      text: "Novidade",
-      color: "#02A3AE",
-    });
   }
 
   return flags;

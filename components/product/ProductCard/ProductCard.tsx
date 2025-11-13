@@ -6,12 +6,13 @@ import { useOffer } from "../../../sdk/useOffer.ts";
 import { useSendEvent } from "../../../sdk/useSendEvent.ts";
 import { useId } from "../../../sdk/useId.ts";
 import AddToCartButton from "../../../islands/AddToCartButton.tsx";
-// import ProductFlags from "./ProductCardFlags.tsx";
+import ProductFlags from "./ProductCardFlags.tsx";
 import ProductImage from "./ProductCardImage.tsx";
 import ProductInfo from "./ProductCardInfo.tsx";
 import ProductInstallments from "./ProductCardInstallments.tsx";
 import { calculatePercent } from "./utils.ts";
 import TrustvoxStars from "../../../sections/Product/TrustvoxStars.tsx";
+import type { Flag } from "../../../loaders/flags-config.ts";
 
 interface Props {
   product: Product;
@@ -19,6 +20,7 @@ interface Props {
   itemListName?: string;
   index?: number;
   class?: string;
+  flagsConfig?: Flag[];
 }
 
 function ProductCard({
@@ -27,6 +29,7 @@ function ProductCard({
   itemListName,
   index,
   class: _class,
+  flagsConfig = [],
 }: Props) {
   const id = useId();
   const { url, image: images, offers, isVariantOf } = product;
@@ -59,7 +62,7 @@ function ProductCard({
       )}
     >
       <figure class="relative">
-        {/* <ProductFlags product={product} /> */}
+        <ProductFlags product={product} flagsConfig={flagsConfig} />
 
         <ProductImage
           front={front}

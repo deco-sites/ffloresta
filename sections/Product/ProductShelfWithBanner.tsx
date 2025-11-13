@@ -6,7 +6,7 @@ import { useOffer } from "../../sdk/useOffer.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import { type LoadingFallbackProps } from "@deco/deco";
 import { ImageWidget, VideoWidget } from "apps/admin/widgets.ts";
-
+import type { Flag } from "../../loaders/flags-config.ts";
 export interface Banner {
   /** @title Imagem para Desktop */
   desktop?: ImageWidget;
@@ -85,6 +85,7 @@ export interface Props {
   cta?: string;
   /** @title Ícone */
   icon?: ImageWidget;
+  flagsConfig?: Flag[];
 }
 
 export default function ProductShelfWithBanner({
@@ -94,6 +95,7 @@ export default function ProductShelfWithBanner({
   banner,
   orientation = "horizontal",
   icon,
+  flagsConfig = [],
 }: Props) {
   if (!products || products.length === 0) {
     return null;
@@ -187,7 +189,11 @@ export default function ProductShelfWithBanner({
         {/* Shelf Section */}
         <div class={orientation === "vertical" ? "w-full" : "flex-1"}>
           <Section.Header title={title} cta={cta} icon={icon} />
-          <ProductSlider products={products} itemListName={title} />
+          <ProductSlider
+            products={products}
+            itemListName={title}
+            flagsConfig={flagsConfig}
+          />
         </div>
       </div>
     </Section.Container>
