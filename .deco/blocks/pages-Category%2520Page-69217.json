@@ -146,7 +146,8 @@
               "96": "g",
               "altText": "Martelete"
             },
-            "products": null
+            "products": null,
+            "title": "Marteletes | Ferragens Floresta"
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
