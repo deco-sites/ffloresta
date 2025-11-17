@@ -5,10 +5,9 @@ import type {
   ProductListingPage,
 } from "apps/commerce/types.ts";
 import { parseRange } from "apps/commerce/utils/filters.ts";
-import Avatar from "../../components/ui/Avatar.tsx";
-import { clx } from "../../sdk/clx.ts";
-import { formatPrice } from "../../sdk/format.ts";
-import { h } from "preact";
+import Avatar from "../../ui/Avatar.tsx";
+import { clx } from "../../../sdk/clx.ts";
+import { formatPrice } from "../../../sdk/format.ts";
 
 interface Props {
   filters: ProductListingPage["filters"];
@@ -98,7 +97,7 @@ function ValueItem({
           "checkbox rounded-none w-4 h-4 max-w-4 max-h-4 border relative transition-all duration-200 flex items-center justify-center",
           selected
             ? "bg-[#1F251C] border-[#1F251C]"
-            : "border-[#CCCCCC] bg-white",
+            : "border-[#CCCCCC] bg-white"
         )}
       >
         {selected && (
@@ -114,7 +113,7 @@ function ValueItem({
       <span
         class={clx(
           "text-md transition-colors duration-200",
-          selected ? "text-[#1F251C] font-medium" : "text-[#1F251C]",
+          selected ? "text-[#1F251C] font-medium" : "text-[#1F251C]"
         )}
       >
         {label}
@@ -159,11 +158,9 @@ function FilterValues({
                 <ValueItem
                   {...item}
                   baseUrl={baseUrl}
-                  label={`${formatPrice(range.from)} - ${
-                    formatPrice(
-                      range.to,
-                    )
-                  }`}
+                  label={`${formatPrice(range.from)} - ${formatPrice(
+                    range.to
+                  )}`}
                 />
               </li>
             )
@@ -182,7 +179,7 @@ function FilterValues({
 
 function Filters({ filters, url }: Props) {
   const filteredFilters = filters.filter(
-    (filter) => !(isToggle(filter) && filter.key === "price"),
+    (filter) => !(isToggle(filter) && filter.key === "price")
   );
 
   return (

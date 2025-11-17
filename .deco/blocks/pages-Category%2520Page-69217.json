@@ -3874,7 +3874,10 @@
               "96": "g",
               "altText": "Categoria"
             },
-            "products": null
+            "products": null,
+            "seoConfig": {
+              "additionalMetaTags": []
+            }
           },
           "rule": {
             "__resolveType": "website/matchers/always.ts"
