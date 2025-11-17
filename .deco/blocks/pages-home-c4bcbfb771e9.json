@@ -224,32 +224,68 @@
         {
           "image": "https://assets.decocache.com/ffloresta/97485b43-9c33-4512-a754-a2c8ce71bcd7/Prancheta-15.png",
           "href": "/ferragens/Dobradicas",
-          "label": "Dobradiças"
+          "label": "Dobradiças",
+          "@type": "image",
+          "data": {
+            "desktop": "https://assets.decocache.com/ffloresta/b52dd7c5-4f9d-47a3-9820-5da805bd5864/dobradicas.png",
+            "mobile": "https://assets.decocache.com/ffloresta/b52dd7c5-4f9d-47a3-9820-5da805bd5864/dobradicas.png",
+            "alt": "Dobradiças"
+          }
         },
         {
           "image": "https://assets.decocache.com/ffloresta/3b6fd720-e5e4-450d-966a-e18977924f95/Prancheta-14.png",
           "href": "/Ferramentas",
-          "label": "Ferramentas"
+          "label": "Ferramentas",
+          "data": {
+            "desktop": "https://assets.decocache.com/ffloresta/826e5071-4c19-4afc-9b69-eeeff625d446/ferramentas-1.png",
+            "mobile": "https://assets.decocache.com/ffloresta/dfcecd67-c86f-4bff-9849-7ca8c68e5a59/ferramentas-1.png",
+            "alt": "Ferramentas"
+          },
+          "@type": "image"
         },
         {
           "image": "https://assets.decocache.com/ffloresta/a8695712-7987-4e17-b11d-89b3fa663d49/Prancheta-16.png",
           "href": "/Fechaduras",
-          "label": "Fechaduras"
+          "label": "Fechaduras",
+          "data": {
+            "alt": "Fechaduras",
+            "desktop": "https://assets.decocache.com/ffloresta/dde18236-377e-45d5-8178-b00efaad8fba/fechaduras.png",
+            "mobile": "https://assets.decocache.com/ffloresta/4fbc98f8-6378-446f-abe0-246ec63eac20/fechaduras.png"
+          },
+          "@type": "image"
         },
         {
           "image": "https://assets.decocache.com/ffloresta/2ca9db1b-ddab-4861-89f0-0476ac6a3015/Prancheta-17.png",
           "href": "/ferragens/Articuladores/",
-          "label": "Articuladores "
+          "label": "Articuladores ",
+          "data": {
+            "alt": "Articuladores",
+            "desktop": "https://assets.decocache.com/ffloresta/bd6d53d5-2d46-4310-ba01-fe27d3d7084d/articuladores.png",
+            "mobile": "https://assets.decocache.com/ffloresta/0046ed7a-3cc2-4ac4-a5b9-d511b9065ede/articuladores.png"
+          },
+          "@type": "image"
         },
         {
           "image": "https://assets.decocache.com/ffloresta/33c3bbbb-0f53-4992-b75f-a100be8d7b16/Prancheta-13.png",
           "href": "/Puxadores",
-          "label": "Puxadores"
+          "label": "Puxadores",
+          "data": {
+            "alt": "Puxadores",
+            "desktop": "https://assets.decocache.com/ffloresta/a48b05c4-b378-4e51-ba70-127683e534aa/puxadores.png",
+            "mobile": "https://assets.decocache.com/ffloresta/a48b05c4-b378-4e51-ba70-127683e534aa/puxadores.png"
+          },
+          "@type": "image"
         },
         {
           "image": "https://assets.decocache.com/ffloresta/fc177728-502d-4bbd-8ae3-6152bccfdcca/Prancheta-18.png",
           "href": "/ambientes/banheiro/lixeiras",
-          "label": "Lixeiras"
+          "label": "Lixeiras",
+          "@type": "image",
+          "data": {
+            "alt": "Lixeiras",
+            "desktop": "https://assets.decocache.com/ffloresta/2b6338fc-5828-43d0-895a-91636acf188c/lixeira.png",
+            "mobile": "https://assets.decocache.com/ffloresta/2b6338fc-5828-43d0-895a-91636acf188c/lixeira.png"
+          }
         }
       ]
     },
@@ -356,27 +392,63 @@
       "brands": [
         {
           "image": "https://assets.decocache.com/ffloresta/822e0075-7f1c-49cc-bbda-b24d8bac3a82/Prancheta-1_1-(1).png",
-          "href": "/puxadores/zen-design?initialMap=c&initialQuery=puxadores&map=category-1%2Cbrand"
+          "href": "/puxadores/zen-design?initialMap=c&initialQuery=puxadores&map=category-1%2Cbrand",
+          "@type": "image",
+          "data": {
+            "desktop": "https://assets.decocache.com/ffloresta/7a6d6b4e-6312-440b-bbf0-417d7849e16b/zen.png",
+            "mobile": "https://assets.decocache.com/ffloresta/7a6d6b4e-6312-440b-bbf0-417d7849e16b/zen.png",
+            "alt": "Zen"
+          }
         },
         {
           "image": "https://assets.decocache.com/ffloresta/609edaf1-637e-43f7-ae7a-397bd55f9340/Prancheta-1_2-(1).png",
-          "href": "/ferragens?filter.category-1=ferragens&filter.brand=fgv-tn&page=1"
+          "href": "/ferragens?filter.category-1=ferragens&filter.brand=fgv-tn&page=1",
+          "data": {
+            "desktop": "https://assets.decocache.com/ffloresta/c62e2efa-6417-42d8-84da-f123843fef52/fgv.png",
+            "mobile": "https://assets.decocache.com/ffloresta/c62e2efa-6417-42d8-84da-f123843fef52/fgv.png",
+            "alt": "FGV"
+          },
+          "@type": "image"
         },
         {
           "image": "https://assets.decocache.com/ffloresta/0a172c06-5c06-414a-8b46-ae24492ae5ad/Prancheta-1_3-(1).png",
-          "href": "/ferragens?filter.category-1=ferragens&filter.brand=hafele&page=1"
+          "href": "/ferragens?filter.category-1=ferragens&filter.brand=hafele&page=1",
+          "@type": "image",
+          "data": {
+            "desktop": "https://assets.decocache.com/ffloresta/fe669eba-e175-4176-b67b-377cb6899a1c/hafele.png",
+            "mobile": "https://assets.decocache.com/ffloresta/fe669eba-e175-4176-b67b-377cb6899a1c/hafele.png",
+            "alt": "HAFELE"
+          }
         },
         {
           "image": "https://assets.decocache.com/ffloresta/aaf97827-3107-45f8-8203-29b301f7d065/Prancheta-1_4-(1).png",
-          "href": "/Bosch"
+          "href": "/Bosch",
+          "@type": "image",
+          "data": {
+            "desktop": "https://assets.decocache.com/ffloresta/d631d42f-035a-4c87-889b-840540caf7ac/bosh.png",
+            "mobile": "https://assets.decocache.com/ffloresta/d631d42f-035a-4c87-889b-840540caf7ac/bosh.png",
+            "alt": "BOSCH"
+          }
         },
         {
           "image": "https://assets.decocache.com/ffloresta/f42415cc-5634-4404-978c-2f29e3e8b452/Prancheta-1-(1).png",
-          "href": "/ferragens?filter.category-1=ferragens&filter.brand=rometal&page=1"
+          "href": "/ferragens?filter.category-1=ferragens&filter.brand=rometal&page=1",
+          "@type": "image",
+          "data": {
+            "desktop": "https://assets.decocache.com/ffloresta/fa26b16f-b596-41fa-b8f4-d5aaebe25c7b/rometal.png",
+            "mobile": "https://assets.decocache.com/ffloresta/fa26b16f-b596-41fa-b8f4-d5aaebe25c7b/rometal.png",
+            "alt": "Rometal"
+          }
         },
         {
           "image": "https://assets.decocache.com/ffloresta/e5ddf81d-b119-4966-b297-b449b247ff26/Prancheta-1_5-(3).png",
-          "href": "https://www.ferragensfloresta.com.br/blum?q=blum&map=ft&page=1"
+          "href": "https://www.ferragensfloresta.com.br/blum?q=blum&map=ft&page=1",
+          "@type": "image",
+          "data": {
+            "desktop": "https://assets.decocache.com/ffloresta/5bf82b6e-ba0c-4e35-8fb2-fb194e61afb4/blum.png",
+            "mobile": "https://assets.decocache.com/ffloresta/5bf82b6e-ba0c-4e35-8fb2-fb194e61afb4/blum.png",
+            "alt": "Blum"
+          }
         }
       ]
     },
