@@ -3732,6 +3732,11 @@
               "altText": "Fechaduras",
               "mobile": "https://assets.decocache.com/ffloresta/8f0b81cc-69ca-465b-b58c-bee7dfd261bd/Prancheta-1_2.png",
               "desktop": "https://assets.decocache.com/ffloresta/b19fe399-33fd-4b6f-80b5-f79282f52c60/2.jpg"
+            },
+            "seoConfig": {
+              "pageTitle": "Teste Henrique",
+              "metaTitle": "Teste Henrique Descrição",
+              "metaDescription": "Teste Henrique Descrição Meta"
             }
           },
           "rule": {
@@ -3876,7 +3881,8 @@
             },
             "products": null,
             "seoConfig": {
-              "additionalMetaTags": []
+              "additionalMetaTags": [],
+              "metaTitle": "TITULO PRA META TITLE"
             }
           },
           "rule": {
