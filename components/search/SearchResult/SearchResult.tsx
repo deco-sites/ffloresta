@@ -13,7 +13,6 @@ import FilterInteraction from "../../../islands/FilterInteraction.tsx";
 
 import NotFound from "./NotFound.tsx";
 import PageResult from "./PageResult.tsx";
-import SeoHandler from "./SeoHandler.tsx";
 import { setPageQuerystring } from "./hooks/usePageQueryString.ts";
 import type { Props, SectionProps } from "./types/search.types.ts";
 
@@ -32,6 +31,8 @@ function Result(props: SectionProps) {
   const displayTitle = seoConfig?.pageTitle || categoryTitle;
 
   const seoText = props.seoText;
+
+  console.log(seoConfig?.pageTitle, categoryTitle, displayTitle);
 
   const viewItemListEvent = useSendEvent({
     on: "view",
@@ -64,8 +65,6 @@ function Result(props: SectionProps) {
 
   return (
     <>
-      <SeoHandler seoConfig={seoConfig} displayTitle={displayTitle} />
-
       <div id={container} {...viewItemListEvent} class="w-full">
         {partial ? (
           <PageResult {...props} />
