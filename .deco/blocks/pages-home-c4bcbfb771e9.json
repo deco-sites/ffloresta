@@ -172,7 +172,10 @@
         }
       },
       "orientation": "vertical",
-      "icon": "https://assets.decocache.com/ffloresta/8e934bf1-704a-43a4-9ec5-abe3998e9fc0/Logo-header.svg"
+      "icon": "https://assets.decocache.com/ffloresta/8e934bf1-704a-43a4-9ec5-abe3998e9fc0/Logo-header.svg",
+      "flagsConfig": {
+        "__resolveType": "Configurações Globais de Flag"
+      }
     },
     {
       "__resolveType": "site/sections/Product/ProductShelfWithBackground.tsx",
@@ -192,6 +195,9 @@
         "mobile": {
           "src": "https://assets.decocache.com/ffloresta/69b40089-2979-4077-9522-0f87b68682ee/image-(1).png"
         }
+      },
+      "flagsConfig": {
+        "__resolveType": "Configurações Globais de Flag"
       }
     },
     {
@@ -275,7 +281,10 @@
           "count": 30
         }
       },
-      "icon": "https://assets.decocache.com/ffloresta/411928eb-5e4b-4c3b-83d1-1c788f576a64/icon_prancheta.svg"
+      "icon": "https://assets.decocache.com/ffloresta/411928eb-5e4b-4c3b-83d1-1c788f576a64/icon_prancheta.svg",
+      "flagsConfig": {
+        "__resolveType": "Configurações Globais de Flag"
+      }
     },
     {
       "__resolveType": "site/sections/Content/BannerMosaic.tsx",
@@ -498,7 +507,10 @@
           "desktop": "https://assets.decocache.com/ffloresta/a5ade45b-b17c-4cbf-8bac-0077ff0c65ce/1.jpg"
         }
       },
-      "page": null
+      "page": null,
+      "flagsConfig": {
+        "__resolveType": "Configurações Globais de Flag"
+      }
     },
     {
       "__resolveType": "site/sections/Product/ProductShelf.tsx",
@@ -606,6 +618,9 @@
           "desktop": "https://assets.decocache.com/ffloresta/a9768810-1555-4817-a4ea-cc6cb17633f6/2-(1).jpg",
           "mobile": "https://assets.decocache.com/ffloresta/a9768810-1555-4817-a4ea-cc6cb17633f6/2-(1).jpg"
         }
+      },
+      "flagsConfig": {
+        "__resolveType": "Configurações Globais de Flag"
       }
     },
     {
@@ -690,10 +705,7 @@
       "title": "O que nossos clientes dizem"
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "Footer"
-      }
+      "__resolveType": "Footer"
     }
   ],
   "__resolveType": "website/pages/Page.tsx",

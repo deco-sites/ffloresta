@@ -30,7 +30,10 @@
         "pagination": "show-more"
       },
       "startingPage": 1,
-      "seoText": {}
+      "seoText": {},
+      "flagsConfig": {
+        "__resolveType": "Configurações Globais de Flag"
+      }
     },
     {
       "__resolveType": "Footer"
