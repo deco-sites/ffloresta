@@ -3591,8 +3591,7 @@
               "desktop": "https://assets.decocache.com/ffloresta/c40ec064-5a59-4372-a4cb-8afa869b7ecc/Prancheta-1_1-(3).png"
             },
             "seoConfig": {
-              "metaTitle": "TESTE SEO HANDLE",
-              "pageTitle": "Teste do H1"
+              "metaTitle": "TITULO PRA META TITLE"
             }
           },
           "rule": {
@@ -3736,6 +3735,11 @@
               "altText": "Fechaduras",
               "mobile": "https://assets.decocache.com/ffloresta/8f0b81cc-69ca-465b-b58c-bee7dfd261bd/Prancheta-1_2.png",
               "desktop": "https://assets.decocache.com/ffloresta/b19fe399-33fd-4b6f-80b5-f79282f52c60/2.jpg"
+            },
+            "seoConfig": {
+              "pageTitle": "Teste Henrique",
+              "metaTitle": "Teste Henrique Descrição",
+              "metaDescription": "Teste Henrique Descrição Meta"
             }
           },
           "rule": {
