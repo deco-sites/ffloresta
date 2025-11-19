@@ -45,12 +45,6 @@ export interface Props {
   contentType?: "website" | "article" | "product";
 
   /**
-   * @title URL Canônica
-   * @description URL canônica da página (opcional)
-   */
-  canonicalUrl?: string;
-
-  /**
    * @title Idioma do Conteúdo
    * @description Idioma principal da página
    * @default pt-BR
@@ -65,7 +59,6 @@ export function loader(props: Props, req: Request) {
     description,
     metaTags = [],
     contentType = "website",
-    canonicalUrl,
     language = "pt-BR",
   } = props;
 
@@ -123,14 +116,10 @@ export function loader(props: Props, req: Request) {
     }
   });
 
-  // Determinar URL canônica
-  const finalCanonicalUrl = canonicalUrl || url.href;
-
   return {
     title: title || "",
     description: description || "",
     metaTags: allMetaTags,
-    canonicalUrl: finalCanonicalUrl,
     language,
     hasSeoData: !!(title || description || metaTags.length > 0),
   };
@@ -140,11 +129,10 @@ function AdvancedSEO({
   title,
   description,
   metaTags = [],
-  canonicalUrl,
   language = "pt-BR",
 }: ReturnType<typeof loader>) {
   // Se não houver dados de SEO, não renderiza nada
-  if (!title && !description && metaTags.length === 0 && !canonicalUrl) {
+  if (!title && !description && metaTags.length === 0) {
     return null;
   }
 
@@ -158,9 +146,6 @@ function AdvancedSEO({
 
       {/* Language */}
       <meta http-equiv="content-language" content={language} />
-
-      {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
 
       {/* Meta Tags Dinâmicas */}
       {metaTags.map((tag, index) => {
