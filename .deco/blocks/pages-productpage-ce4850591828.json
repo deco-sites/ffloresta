@@ -161,7 +161,10 @@
                 "title": "teste",
                 "promoName": "teste"
               }
-            ]
+            ],
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
           },
           "rule": {
             "__resolveType": "website/matchers/always.ts"
