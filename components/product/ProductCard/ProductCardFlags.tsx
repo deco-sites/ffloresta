@@ -31,7 +31,7 @@ function ProductFlags({ product, flagsConfig = [] }: Props) {
             key={index}
             src={flag.image}
             alt=""
-            class="max-h-[15px] object-contain"
+            class="max-h-[30px] object-contain"
           />
         ) : null
       )}

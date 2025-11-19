@@ -57,10 +57,10 @@
         {
           "type": "image",
           "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/f6460c0c-d659-4451-9ca2-7c3b02fa9776/puxador-1.jpg",
-            "mobile": "https://assets.decocache.com/ffloresta/b3b7437f-380c-425f-a22f-a28298f0e285/puxador-2.jpg",
+            "desktop": "https://assets.decocache.com/ffloresta/397fc4e1-2ab1-43d0-b3a0-a2018582732a/dobradica-desk.jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/bbd3977e-c945-4817-b31b-9f0063a0ccf0/dobradica-MOBILE.jpg",
             "action": {
-              "href": "/puxadores/italy-line/rometal/gruppa/geris/jador/formi/pado/arouca/vedor?initialMap=c&initialQuery=puxadores&map=category-1%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand"
+              "href": "/ferragens/dobradicas"
             },
             "alt": "7% de desconto em puxadores"
           }
@@ -69,11 +69,11 @@
           "type": "image",
           "data": {
             "action": {
-              "href": "/fechaduras"
+              "href": "/184/hafele/brinox/masutti/vonder/tramontina/jomer/schmitt/fgv-tn?initialMap=c&initialQuery=184&map=productClusterIds%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand"
             },
             "alt": "banner",
-            "desktop": "https://assets.decocache.com/ffloresta/c2360ad2-25cc-422c-8657-679d5cbd3aa4/fechadura-desk.jpg",
-            "mobile": "https://assets.decocache.com/ffloresta/8a5e8485-7c22-479e-a8ec-52c40d62b4cf/fechadura-mobile.jpg"
+            "desktop": "https://assets.decocache.com/ffloresta/cf51235f-c96b-44f7-88ba-eddeffb8fc20/LIXEIRA-desktop.jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/fa989879-8fda-4011-913b-c8bdbf14b9ad/banner-mobile.jpg"
           }
         },
         {
@@ -94,6 +94,16 @@
             },
             "desktop": "https://assets.decocache.com/ffloresta/ba719365-e939-42f3-a7aa-3ed726603dca/5-(1).jpg",
             "mobile": "https://assets.decocache.com/ffloresta/72547cdf-62bf-4a31-9cd0-d67d8bd269f1/5a.jpg"
+          }
+        },
+        {
+          "type": "image",
+          "data": {
+            "desktop": "https://assets.decocache.com/ffloresta/818abb70-13e8-40a9-83f5-2f4411f359bd/toalheiro-desk.jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/90db4535-fe15-4d73-b4cc-49c4d13ed9a1/toalheiro-mobile.jpg",
+            "action": {
+              "href": "/ambientes/banheiro/toalheiros-eletricos"
+            }
           }
         }
       ],

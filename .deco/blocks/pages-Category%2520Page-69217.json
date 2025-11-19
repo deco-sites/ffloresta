@@ -149,7 +149,8 @@
             "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
-            }
+            },
+            "title": "Marteletes | Ferragens Floresta"
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",

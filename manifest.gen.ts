@@ -10,13 +10,14 @@ import * as $$$$$$$$$$$1 from "./apps/deco/htmx.ts";
 import * as $$$$$$$$$$$2 from "./apps/deco/vtex.ts";
 import * as $$$$$$$$$$$3 from "./apps/site.ts";
 import * as $$$1 from "./loaders/availableIcons.ts";
-import * as $$$2 from "./loaders/flags-config.ts";
-import * as $$$3 from "./loaders/icons.ts";
-import * as $$$4 from "./loaders/minicart.ts";
-import * as $$$5 from "./loaders/product-canonical-advanced.ts";
+import * as $$$2 from "./loaders/canonical-advanced.ts";
+import * as $$$3 from "./loaders/flags-config.ts";
+import * as $$$4 from "./loaders/icons.ts";
+import * as $$$5 from "./loaders/minicart.ts";
+import * as $$$6 from "./loaders/product-canonical-advanced.ts";
 import * as $$$0 from "./loaders/SearchInline.tsx";
-import * as $$$6 from "./loaders/user.ts";
-import * as $$$7 from "./loaders/wishlist.ts";
+import * as $$$7 from "./loaders/user.ts";
+import * as $$$8 from "./loaders/wishlist.ts";
 import * as $$$$$$0 from "./sections/Animation/Animation.tsx";
 import * as $$$$$$1 from "./sections/Brand/BrandGrid.tsx";
 import * as $$$$$$2 from "./sections/Category/CategoryBanner.tsx";
@@ -76,13 +77,14 @@ import * as $$$$$$54 from "./sections/Theme/Theme.tsx";
 const manifest = {
   "loaders": {
     "site/loaders/availableIcons.ts": $$$1,
-    "site/loaders/flags-config.ts": $$$2,
-    "site/loaders/icons.ts": $$$3,
-    "site/loaders/minicart.ts": $$$4,
-    "site/loaders/product-canonical-advanced.ts": $$$5,
+    "site/loaders/canonical-advanced.ts": $$$2,
+    "site/loaders/flags-config.ts": $$$3,
+    "site/loaders/icons.ts": $$$4,
+    "site/loaders/minicart.ts": $$$5,
+    "site/loaders/product-canonical-advanced.ts": $$$6,
     "site/loaders/SearchInline.tsx": $$$0,
-    "site/loaders/user.ts": $$$6,
-    "site/loaders/wishlist.ts": $$$7,
+    "site/loaders/user.ts": $$$7,
+    "site/loaders/wishlist.ts": $$$8,
   },
   "sections": {
     "site/sections/Animation/Animation.tsx": $$$$$$0,
