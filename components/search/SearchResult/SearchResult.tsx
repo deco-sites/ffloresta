@@ -15,12 +15,56 @@ import NotFound from "./NotFound.tsx";
 import PageResult from "./PageResult.tsx";
 import { setPageQuerystring } from "./hooks/usePageQueryString.ts";
 import type { Props, SectionProps } from "./types/search.types.ts";
+import { ImageWidget, VideoWidget } from "apps/admin/widgets.ts";
+
+/** @title Banner de Imagem */
+export interface BannerImage {
+  /** @title Imagem para Desktop */
+  desktop?: ImageWidget;
+  /** @title Imagem para Mobile */
+  mobile?: ImageWidget;
+  /** @title Texto Alternativo */
+  alt: string;
+}
+
+/** @title Banner de Vídeo */
+export interface BannerVideo {
+  /** @title Vídeo para Desktop */
+  desktop?: VideoWidget;
+  /** @title Vídeo para Mobile */
+  mobile?: VideoWidget;
+  /** @title Texto Alternativo */
+  alt: string;
+  /** @title Imagem de Poster (opcional) */
+  poster?: ImageWidget;
+  /** @title Reproduzir Automaticamente */
+  autoplay?: boolean;
+  /** @title Loop */
+  loop?: boolean;
+  /** @title Sem Áudio */
+  muted?: boolean;
+}
+
+/** @title Banner da Página de Search */
+export type SearchBanner =
+  | {
+      /** @title Tipo */
+      "@type": "image";
+      /** @title Dados da Imagem */
+      data: BannerImage;
+    }
+  | {
+      /** @title Tipo */
+      "@type": "video";
+      /** @title Dados do Vídeo */
+      data: BannerVideo;
+    };
 
 function Result(props: SectionProps) {
   const container = useId();
   const controls = useId();
   const device = useDevice();
-  const { startingPage = 0, url, partial, bannerImage, seoConfig } = props;
+  const { startingPage = 0, url, partial, banner, seoConfig } = props;
   const page = props.page!;
   const { products, filters, breadcrumb, pageInfo, sortOptions } = page;
   const perPage = pageInfo?.recordPerPage || products.length;
@@ -53,6 +97,49 @@ function Result(props: SectionProps) {
     },
   });
 
+  const renderBanner = () => {
+    if (!banner) return null;
+
+    if (banner["@type"] === "image") {
+      const imageData = banner.data;
+      return (
+        <div class="w-full">
+          <img
+            src={
+              device === "mobile"
+                ? imageData.mobile || imageData.desktop
+                : imageData.desktop || imageData.mobile
+            }
+            alt={imageData.alt}
+            class="w-full"
+          />
+        </div>
+      );
+    } else if (banner["@type"] === "video") {
+      const videoData = banner.data;
+      return (
+        <div class="w-full">
+          <video
+            src={
+              device === "mobile"
+                ? videoData.mobile || videoData.desktop
+                : videoData.desktop || videoData.mobile
+            }
+            alt={videoData.alt}
+            poster={videoData.poster}
+            autoplay={videoData.autoplay}
+            loop={videoData.loop}
+            muted={videoData.muted}
+            class="w-full"
+            playsInline
+          />
+        </div>
+      );
+    }
+
+    return null;
+  };
+
   const results = (
     <span class="text-md text-[#1F251C] uppercase font-normal">
       {page.pageInfo.records} produtos encontrados
@@ -71,19 +158,7 @@ function Result(props: SectionProps) {
         ) : (
           <>
             {/* Banner full width - fora do container */}
-            {bannerImage && (
-              <div class="w-full">
-                <img
-                  src={
-                    device === "mobile"
-                      ? bannerImage.mobile || bannerImage.desktop
-                      : bannerImage.desktop || bannerImage.mobile
-                  }
-                  alt={bannerImage.altText}
-                  class="w-full"
-                />
-              </div>
-            )}
+            {renderBanner()}
 
             {/* Restante do conteúdo dentro do container */}
             <div class="container flex flex-col gap-4 sm:gap-5 w-full py-4 sm:py-5 px-5 lg:px-[4rem]">
@@ -287,7 +362,7 @@ export const loader = (props: Props, req: Request) => {
   return {
     ...props,
     url: req.url,
-    bannerImage: props.bannerImage,
+    banner: props.banner,
     seoText: props.seoText,
     seoConfig: props.seoConfig,
   };
