@@ -133,7 +133,7 @@ export default function ProductDetails({
         )}
       >
         <div class="w-full flex flex-col">
-          <ProductImagesGallery page={page} flagsConfig={page.flagsConfig} />
+          <ProductImagesGallery page={page} flagsConfig={flagsConfig} />
         </div>
         <div class="h-fit px-5 pb-4 pt-6 shadow-[2px_4px_12px_rgba(0,0,0,0.145)] mb-10 lg:mb-0 bg-[#fdfff5]">
           {bannersToDisplay.length > 0 && (
