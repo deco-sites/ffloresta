@@ -1,12 +1,4 @@
 {
   "__resolveType": "site/loaders/flags-config.ts",
-  "items": [
-    {
-      "type": "image",
-      "collections": [
-        "183"
-      ],
-      "image": "https://assets.decocache.com/ffloresta/edb77919-cf20-4169-b9c7-0c43a4ab099b/Ativo-2.png"
-    }
-  ]
+  "items": []
 }
