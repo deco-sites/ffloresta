@@ -8,6 +8,7 @@ export interface ProductPagePromoBannerProps {
   title: string;
   promoName: string;
 }
+
 export default function ProductPagePromoBannerIsland({
   image,
   countdownDate,
@@ -17,7 +18,10 @@ export default function ProductPagePromoBannerIsland({
   const [timeLeft, setTimeLeft] = useState(getRemaining());
 
   function getRemaining() {
-    const diff = new Date(countdownDate).getTime() - Date.now();
+    const targetDate = new Date(countdownDate);
+    const now = new Date();
+
+    const diff = targetDate.getTime() - now.getTime();
     return diff > 0 ? diff : 0;
   }
 
@@ -25,6 +29,10 @@ export default function ProductPagePromoBannerIsland({
     const interval = setInterval(() => {
       const remaining = getRemaining();
       setTimeLeft(remaining);
+
+      if (remaining <= 0) {
+        clearInterval(interval);
+      }
     }, 1000);
 
     return () => clearInterval(interval);
@@ -44,31 +52,27 @@ export default function ProductPagePromoBannerIsland({
           loading="eager"
         />
 
-        <div class="absolute inset-0 flex justify-between items-start p-3 bg-black/40">
-          <h2 class="text-lg md:text-sm">{title}</h2>
+        <div class="absolute inset-0 flex justify-between items-center p-3 bg-black/40">
+          <h2 class="text-sm md:text-base font-medium flex-1 text-left">
+            {title}
+          </h2>
 
-          <div class="flex flex-col items-center justify-end text-lg md:text-xl">
-            <p class="text-left text-[12px] leading-none uppercase tracking-wide text-white">
+          <div class="flex flex-col items-end">
+            <p class="text-xs uppercase tracking-wide text-white mb-1">
               Termina em:
             </p>
-            <div class="leading-none flex items-center gap-1">
-              <span class="text-[12px]">{days}D</span>
-              <div class="flex items-center leading-none">
-                <span class="text-[12px] leading-none">
-                  {String(hours).padStart(2, "0")}:
-                </span>
-                <span class="text-[12px] leading-none">
-                  {String(minutes).padStart(2, "0")}:
-                </span>
-                <span class="text-[12px] leading-none">
-                  {String(seconds).padStart(2, "0")}
-                </span>
-              </div>
+            <div class="flex items-center gap-1 text-sm font-mono">
+              {days > 0 && <span class="text-xs">{days}D</span>}
+              <span class="text-xs">
+                {String(hours).padStart(2, "0")}:
+                {String(minutes).padStart(2, "0")}:
+                {String(seconds).padStart(2, "0")}
+              </span>
             </div>
           </div>
         </div>
       </div>
-      <div class="bg-[#97a37f]  flex items-center justify-start gap-2 p-2">
+      <div class="bg-[#97a37f] flex items-center justify-start gap-2 p-2">
         <strong class="text-base text-[#3A4332]">{promoName}</strong>
       </div>
     </div>
