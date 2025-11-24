@@ -57,43 +57,53 @@
         {
           "type": "image",
           "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/397fc4e1-2ab1-43d0-b3a0-a2018582732a/dobradica-desk.jpg",
-            "mobile": "https://assets.decocache.com/ffloresta/bbd3977e-c945-4817-b31b-9f0063a0ccf0/dobradica-MOBILE.jpg",
+            "desktop": "https://assets.decocache.com/ffloresta/847a9775-24fb-4909-af55-6d8d92122a1b/zen-desktop.jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/a83fb366-b3c3-4f8e-b083-24716951e255/zen-mobile.jpg",
             "action": {
-              "href": "/ferragens/dobradicas"
-            },
-            "alt": "7% de desconto em puxadores"
+              "href": "/zen-design?initialMap=c&initialQuery=zen-design&map=brand"
+            }
           }
         },
         {
           "type": "image",
           "data": {
             "action": {
+              "href": "/ferragens/dobradicas"
+            },
+            "alt": "7% de desconto em puxadores",
+            "desktop": "https://assets.decocache.com/ffloresta/397fc4e1-2ab1-43d0-b3a0-a2018582732a/dobradica-desk.jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/bbd3977e-c945-4817-b31b-9f0063a0ccf0/dobradica-MOBILE.jpg"
+          }
+        },
+        {
+          "type": "image",
+          "data": {
+            "desktop": "https://assets.decocache.com/ffloresta/cf51235f-c96b-44f7-88ba-eddeffb8fc20/LIXEIRA-desktop.jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/fa989879-8fda-4011-913b-c8bdbf14b9ad/banner-mobile.jpg",
+            "action": {
               "href": "/184/hafele/brinox/masutti/vonder/tramontina/jomer/schmitt/fgv-tn?initialMap=c&initialQuery=184&map=productClusterIds%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand"
             },
-            "alt": "banner",
-            "desktop": "https://assets.decocache.com/ffloresta/cf51235f-c96b-44f7-88ba-eddeffb8fc20/LIXEIRA-desktop.jpg",
-            "mobile": "https://assets.decocache.com/ffloresta/fa989879-8fda-4011-913b-c8bdbf14b9ad/banner-mobile.jpg"
+            "alt": "banner"
           }
         },
         {
           "type": "video",
           "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/00e802d6-b81c-4d00-af16-b57c98888214/1029(1).mp4",
-            "mobile": "https://assets.decocache.com/ffloresta/64e04543-f667-4066-a37d-a62f96920820/video-mobile-frete-2.mp4",
+            "alt": "floresta",
             "action": {},
-            "alt": "floresta"
+            "desktop": "https://assets.decocache.com/ffloresta/00e802d6-b81c-4d00-af16-b57c98888214/1029(1).mp4",
+            "mobile": "https://assets.decocache.com/ffloresta/64e04543-f667-4066-a37d-a62f96920820/video-mobile-frete-2.mp4"
           }
         },
         {
           "type": "image",
           "data": {
-            "alt": "10% de desconto em corrediças",
+            "desktop": "https://assets.decocache.com/ffloresta/ba719365-e939-42f3-a7aa-3ed726603dca/5-(1).jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/72547cdf-62bf-4a31-9cd0-d67d8bd269f1/5a.jpg",
             "action": {
               "href": "/ferragens/corredicas"
             },
-            "desktop": "https://assets.decocache.com/ffloresta/ba719365-e939-42f3-a7aa-3ed726603dca/5-(1).jpg",
-            "mobile": "https://assets.decocache.com/ffloresta/72547cdf-62bf-4a31-9cd0-d67d8bd269f1/5a.jpg"
+            "alt": "10% de desconto em corrediças"
           }
         },
         {
