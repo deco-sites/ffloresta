@@ -106,6 +106,8 @@ export default function ProductDetails({
     );
   }
 
+  console.log(flagsConfig, "flagsConfig pd");
+
   const bannersToDisplay = getBannersToDisplay(page, productBanners);
 
   const breadcrumbItems = [...page.breadcrumbList.itemListElement];
@@ -120,7 +122,7 @@ export default function ProductDetails({
       </div>
 
       {page.breadcrumbList.itemListElement && (
-        <div class="container mt-6 lg:mt-20">
+        <div class="container my-6 lg:mt-20">
           <Breadcrumb itemListElement={breadcrumbItems} />
         </div>
       )}

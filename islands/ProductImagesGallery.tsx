@@ -100,6 +100,7 @@ export default function ProductImagesGallery(props: Props) {
 
   return (
     <div class="flex flex-col lg:flex-row gap-4">
+      {/* Thumbnails para desktop */}
       <div class="hidden lg:flex flex-col items-center gap-2">
         {showThumbSlider && (
           <button
@@ -193,53 +194,56 @@ export default function ProductImagesGallery(props: Props) {
         )}
       </div>
 
-      <div class="relative flex-1 flex justify-center items-center">
-        <div
-          class={`relative overflow-hidden rounded-lg ${
-            isZoomed.value ? "cursor-zoom-out" : "cursor-zoom-in"
-          }`}
-          style={{
-            aspectRatio: "1/1",
-            maxHeight: "550px",
-          }}
-          onMouseMove={handleMouseMove}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          onTouchMove={handleTouchMove}
-          onTouchStart={() => (isZoomed.value = true)}
-          onTouchEnd={() => (isZoomed.value = false)}
-          onClick={() => (isZoomed.value = !isZoomed.value)}
-        >
-          {/* Adicione o ProductFlags aqui */}
-          <div class="absolute top-0 right-0 z-10">
-            <ProductFlags
-              product={props.page.product}
-              flagsConfig={props.flagsConfig}
+      {/* Área principal da imagem */}
+      <div class="flex-1">
+        {/* Container da imagem principal */}
+        <div class="relative flex justify-center items-center mb-4">
+          <div
+            class={`relative overflow-hidden rounded-lg ${
+              isZoomed.value ? "cursor-zoom-out" : "cursor-zoom-in"
+            }`}
+            style={{
+              aspectRatio: "1/1",
+              maxHeight: "550px",
+              width: "100%",
+            }}
+            onMouseMove={handleMouseMove}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            onTouchMove={handleTouchMove}
+            onTouchStart={() => (isZoomed.value = true)}
+            onTouchEnd={() => (isZoomed.value = false)}
+            onClick={() => (isZoomed.value = !isZoomed.value)}
+          >
+            <div class="absolute top-0 right-0 z-10">
+              <ProductFlags
+                product={props.page.product}
+                flagsConfig={props.flagsConfig}
+              />
+            </div>
+
+            <Image
+              src={thumbs[currentIndex.value]?.url}
+              alt={thumbs[currentIndex.value]?.alt || "Imagem do produto"}
+              width={600}
+              height={600}
+              class={`w-full h-full object-contain transition-all duration-200 ${
+                isZoomed.value ? "scale-150" : "scale-100"
+              }`}
+              style={
+                isZoomed.value
+                  ? {
+                      transformOrigin: `${zoomPosition.value.x}% ${zoomPosition.value.y}%`,
+                      transform: `scale(1.5)`,
+                    }
+                  : {}
+              }
+              loading={currentIndex.value === 0 ? "eager" : "lazy"}
             />
           </div>
 
-          <Image
-            src={thumbs[currentIndex.value]?.url}
-            alt={thumbs[currentIndex.value]?.alt || "Imagem do produto"}
-            width={600}
-            height={600}
-            class={`w-full h-full object-contain transition-all duration-200 ${
-              isZoomed.value ? "scale-150" : "scale-100"
-            }`}
-            style={
-              isZoomed.value
-                ? {
-                    transformOrigin: `${zoomPosition.value.x}% ${zoomPosition.value.y}%`,
-                    transform: `scale(1.5)`,
-                  }
-                : {}
-            }
-            loading={currentIndex.value === 0 ? "eager" : "lazy"}
-          />
-        </div>
-
-        {thumbs.length > 1 && (
-          <>
+          {/* Botões de navegação para desktop */}
+          {thumbs.length > 1 && (
             <div class="hidden lg:flex absolute inset-0 justify-between items-center px-4 pointer-events-none">
               <button
                 onClick={(e) => {
@@ -282,17 +286,23 @@ export default function ProductImagesGallery(props: Props) {
                 </svg>
               </button>
             </div>
+          )}
+        </div>
 
-            <div class="lg:hidden flex items-center justify-center gap-4 mt-4">
+        {/* Controles para mobile */}
+        {thumbs.length > 1 && (
+          <div class="lg:hidden">
+            {/* Navegação por miniaturas */}
+            <div class="flex items-center justify-center gap-2 mb-4">
               <button
                 onClick={prev}
                 disabled={thumbs.length <= 1}
-                class="p-2 disabled:opacity-30 bg-white rounded-full shadow-sm"
+                class="p-2 disabled:opacity-30 bg-white rounded-full shadow-sm flex-shrink-0"
                 aria-label="Imagem anterior"
               >
                 <svg
-                  width="24"
-                  height="24"
+                  width="20"
+                  height="20"
                   viewBox="0 0 24 24"
                   class="text-gray-700"
                 >
@@ -303,42 +313,44 @@ export default function ProductImagesGallery(props: Props) {
                 </svg>
               </button>
 
-              <div class="flex gap-2 overflow-x-auto py-2 px-1">
-                {thumbs.map((thumb, index) => (
-                  <button
-                    key={index}
-                    onClick={() => {
-                      currentIndex.value = index;
-                      isZoomed.value = false;
-                    }}
-                    class={`w-[84px] h-[70px] border rounded transition-colors flex-shrink-0 ${
-                      index === currentIndex.value
-                        ? "border-blue-600"
-                        : "border-transparent"
-                    } bg-white p-1`}
-                    aria-label={`Ir para imagem ${index + 1}`}
-                  >
-                    <Image
-                      src={thumb.url}
-                      alt={thumb.alt}
-                      width={84}
-                      height={70}
-                      class="object-contain w-full h-full rounded"
-                      loading="lazy"
-                    />
-                  </button>
-                ))}
+              <div class="flex-1 overflow-x-auto">
+                <div class="flex gap-2 py-2 px-1 justify-center min-w-min">
+                  {thumbs.map((thumb, index) => (
+                    <button
+                      key={index}
+                      onClick={() => {
+                        currentIndex.value = index;
+                        isZoomed.value = false;
+                      }}
+                      class={`w-16 h-14 border-2 rounded transition-colors flex-shrink-0 ${
+                        index === currentIndex.value
+                          ? "border-blue-600"
+                          : "border-transparent"
+                      } bg-white p-1`}
+                      aria-label={`Ir para imagem ${index + 1}`}
+                    >
+                      <Image
+                        src={thumb.url}
+                        alt={thumb.alt}
+                        width={64}
+                        height={56}
+                        class="object-contain w-full h-full rounded"
+                        loading="lazy"
+                      />
+                    </button>
+                  ))}
+                </div>
               </div>
 
               <button
                 onClick={next}
                 disabled={thumbs.length <= 1}
-                class="p-2 disabled:opacity-30 bg-white rounded-full shadow-sm"
+                class="p-2 disabled:opacity-30 bg-white rounded-full shadow-sm flex-shrink-0"
                 aria-label="Próxima imagem"
               >
                 <svg
-                  width="24"
-                  height="24"
+                  width="20"
+                  height="20"
                   viewBox="0 0 24 24"
                   class="text-gray-700"
                 >
@@ -349,7 +361,7 @@ export default function ProductImagesGallery(props: Props) {
                 </svg>
               </button>
             </div>
-          </>
+          </div>
         )}
       </div>
     </div>
