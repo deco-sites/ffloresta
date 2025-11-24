@@ -49,19 +49,19 @@
         {
           "type": "image",
           "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/129d3f80-3611-4ddb-9dc3-b241bef1951a/black-floresta.jpg",
-            "mobile": "https://assets.decocache.com/ffloresta/178a86c5-a321-41d2-877f-114ea8bc2411/black-floresta-2.jpg",
-            "alt": "Black Floresta"
-          }
-        },
-        {
-          "type": "image",
-          "data": {
             "desktop": "https://assets.decocache.com/ffloresta/847a9775-24fb-4909-af55-6d8d92122a1b/zen-desktop.jpg",
             "mobile": "https://assets.decocache.com/ffloresta/a83fb366-b3c3-4f8e-b083-24716951e255/zen-mobile.jpg",
             "action": {
               "href": "/zen-design?initialMap=c&initialQuery=zen-design&map=brand"
             }
+          }
+        },
+        {
+          "type": "image",
+          "data": {
+            "desktop": "https://assets.decocache.com/ffloresta/129d3f80-3611-4ddb-9dc3-b241bef1951a/black-floresta.jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/178a86c5-a321-41d2-877f-114ea8bc2411/black-floresta-2.jpg",
+            "alt": "Black Floresta"
           }
         },
         {
