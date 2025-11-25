@@ -3166,6 +3166,14 @@
               "altText": "Ambientes",
               "mobile": "https://assets.decocache.com/ffloresta/a5be6a21-4dac-43bb-a18a-ad230011c494/Prancheta-1_3.png",
               "desktop": "https://assets.decocache.com/ffloresta/8a582a57-fb0c-4397-bfb1-8548a07992b3/Prancheta-1_3_upscayl_4x_upscayl-standard-4x.png"
+            },
+            "banner": {
+              "@type": "image",
+              "data": {
+                "desktop": "https://assets.decocache.com/ffloresta/8a582a57-fb0c-4397-bfb1-8548a07992b3/Prancheta-1_3_upscayl_4x_upscayl-standard-4x.png",
+                "mobile": "https://assets.decocache.com/ffloresta/cc0e92ed-e675-4009-ad2f-fc7f7b5f92b1/Prancheta-1_32x.png",
+                "alt": "ambientes"
+              }
             }
           },
           "rule": {
@@ -3307,6 +3315,14 @@
               "altText": "Ferramentas",
               "mobile": "https://assets.decocache.com/ffloresta/5783cb8b-d679-456e-a6f6-0aedca0e3b51/Prancheta-1_5.png",
               "desktop": "https://assets.decocache.com/ffloresta/a87339b0-9494-4ec1-b0bd-2745ad0198aa/Prancheta-1_5_upscayl_4x_upscayl-standard-4x.png"
+            },
+            "banner": {
+              "@type": "image",
+              "data": {
+                "alt": "ferramentas",
+                "desktop": "https://assets.decocache.com/ffloresta/d5c65356-ef00-4507-ba2d-923b296dfbff/Prancheta-1_5_upscayl_4x_upscayl-standard-4x.png",
+                "mobile": "https://assets.decocache.com/ffloresta/5783cb8b-d679-456e-a6f6-0aedca0e3b51/Prancheta-1_5.png"
+              }
             }
           },
           "rule": {
@@ -3448,6 +3464,14 @@
               "altText": "Ferragens de projetos",
               "mobile": "https://assets.decocache.com/ffloresta/b18e47c0-5c2e-4adb-9ec3-f7b9c9d1f302/Prancheta-1_4.png",
               "desktop": "https://assets.decocache.com/ffloresta/f293f76c-baf2-4acd-b09f-e7fdc0c3878e/Prancheta-1_4_upscayl_4x_upscayl-standard-4x.png"
+            },
+            "banner": {
+              "@type": "image",
+              "data": {
+                "desktop": "https://assets.decocache.com/ffloresta/6cfd9778-bca8-416e-945f-0faf207782a6/Prancheta-1_4_upscayl_4x_upscayl-standard-4x.png",
+                "mobile": "https://assets.decocache.com/ffloresta/bdd17e8b-ea21-45b8-b888-43489a688ec4/Prancheta-1_42x.png",
+                "alt": "ferragens de projetos"
+              }
             }
           },
           "rule": {
@@ -3592,6 +3616,14 @@
             },
             "seoConfig": {
               "metaTitle": "TITULO PRA META TITLE"
+            },
+            "banner": {
+              "@type": "image",
+              "data": {
+                "desktop": "https://assets.decocache.com/ffloresta/2edabda1-eccb-4912-b530-e573aa48592f/Prancheta-1_1_upscayl_4x_upscayl-standard-4x.png",
+                "mobile": "https://assets.decocache.com/ffloresta/b6648a61-5db3-4f5d-a156-d4a435225264/Prancheta-1_1.png",
+                "alt": "ferragens"
+              }
             }
           },
           "rule": {
@@ -3740,6 +3772,14 @@
               "pageTitle": "Teste Henrique",
               "metaTitle": "Teste Henrique Descrição",
               "metaDescription": "Teste Henrique Descrição Meta"
+            },
+            "banner": {
+              "@type": "image",
+              "data": {
+                "desktop": "https://assets.decocache.com/ffloresta/297c0123-e350-4c3a-84e8-f2132e6cf5f2/2.jpg",
+                "mobile": "https://assets.decocache.com/ffloresta/fa3f2e7f-7c1a-40cd-bb86-80ca4dfa90f9/Prancheta-1_22x.png",
+                "alt": "Fechaduras"
+              }
             }
           },
           "rule": {
