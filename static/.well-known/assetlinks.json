@@ -1,9 +1,26 @@
-[{
-    "relation": ["delegate_permission/common.handle_all_urls"],
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
     "target": {
       "namespace": "android",
       "package_name": "com.kobe.ferragensfloresta",
-      "sha256_cert_fingerprints":
-      ["3A:4F:63:2E:2D:CD:C3:95:FE:6D:9D:C6:E7:03:24:9F:0B:E0:7B:18:FB:23:02:4D:37:34:F5:7A:53:69:8E:74"]
+      "sha256_cert_fingerprints": [
+        "3A:4F:63:2E:2D:CD:C3:95:FE:6D:9D:C6:E7:03:24:9F:0B:E0:7B:18:FB:23:02:4D:37:34:F5:7A:53:69:8E:74"
+      ]
     }
-  }]
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.kobe.ferragensfloresta",
+      "sha256_cert_fingerprints": [
+        "3A:4F:63:2E:2D:CD:C3:95:FE:6D:9D:C6:E7:03:24:9F:0B:E0:7B:18:FB:23:02:4D:37:34:F5:7A:53:69:8E:74"
+      ]
+    }
+  }
+]

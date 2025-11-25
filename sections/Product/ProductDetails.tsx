@@ -9,6 +9,7 @@ import { HTMLWidget as HTML } from "apps/admin/widgets.ts";
 import Breadcrumb from "../../components/ui/Breadcrumb.tsx";
 import ProductBenefits from "../../components/product/ProductBenefits.tsx";
 import Section from "../../components/ui/Section.tsx";
+import type { Flag } from "../../loaders/flags-config.ts";
 
 interface Benefit {
   benefitImgSrc: Image;
@@ -40,22 +41,23 @@ export interface Props {
   benefits?: Benefit[];
   /** @title Store ID da Trustvox */
   storeId?: string;
+  flagsConfig?: Flag[];
 }
 
 function checkProductInCollections(
   page: ProductDetailsPage,
-  collectionIds: string,
+  collectionIds: string
 ): boolean {
   if (!page?.product) return false;
 
-  const productCollections = page.product.additionalProperty ||
-    page.product.isRelatedTo || [];
+  const productCollections =
+    page.product.additionalProperty || page.product.isRelatedTo || [];
 
   const targetCollectionIds = collectionIds.split(",").map((id) => id.trim());
 
   return productCollections.some((collection: any) => {
-    const collectionId = collection.propertyID || collection.value ||
-      collection.productGroupID;
+    const collectionId =
+      collection.propertyID || collection.value || collection.productGroupID;
 
     return (
       collectionId && targetCollectionIds.includes(collectionId.toString())
@@ -65,7 +67,7 @@ function checkProductInCollections(
 
 function getBannersToDisplay(
   page: ProductDetailsPage,
-  productBanners?: ProductBanner[],
+  productBanners?: ProductBanner[]
 ): ProductBanner[] {
   if (!productBanners || productBanners.length === 0) return [];
 
@@ -89,6 +91,7 @@ export default function ProductDetails({
   productBanners,
   benefits,
   storeId = "125156",
+  flagsConfig,
 }: Props) {
   if (!page) {
     return (
@@ -102,6 +105,8 @@ export default function ProductDetails({
       </div>
     );
   }
+
+  console.log(flagsConfig, "flagsConfig pd");
 
   const bannersToDisplay = getBannersToDisplay(page, productBanners);
 
@@ -117,7 +122,7 @@ export default function ProductDetails({
       </div>
 
       {page.breadcrumbList.itemListElement && (
-        <div class="container mt-6 lg:mt-20">
+        <div class="container my-6 lg:mt-20">
           <Breadcrumb itemListElement={breadcrumbItems} />
         </div>
       )}
@@ -126,11 +131,11 @@ export default function ProductDetails({
         class={clx(
           "container grid md:mt-8",
           "grid-cols-1 gap-9 py-0",
-          "lg:grid-cols-[1fr_380px] lg:gap-11",
+          "lg:grid-cols-[1fr_380px] lg:gap-11"
         )}
       >
         <div class="w-full flex flex-col">
-          <ProductImagesGallery page={page} />
+          <ProductImagesGallery page={page} flagsConfig={flagsConfig} />
         </div>
         <div class="h-fit px-5 pb-4 pt-6 shadow-[2px_4px_12px_rgba(0,0,0,0.145)] mb-10 lg:mb-0 bg-[#fdfff5]">
           {bannersToDisplay.length > 0 && (

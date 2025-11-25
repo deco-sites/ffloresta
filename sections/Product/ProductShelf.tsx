@@ -6,6 +6,7 @@ import { useOffer } from "../../sdk/useOffer.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import { type LoadingFallbackProps } from "@deco/deco";
 import { ImageWidget, VideoWidget } from "apps/admin/widgets.ts";
+import type { Flag } from "../../loaders/flags-config.ts";
 
 export interface Banner {
   /** @title Imagem para Desktop */
@@ -77,6 +78,8 @@ export interface Props {
   icon?: ImageWidget;
   /** @title Banner do Header */
   headerBanner?: HeaderBannerItem;
+  /** @title Configurações de Flags */
+  flagsConfig?: Flag[];
 }
 
 export default function ProductShelf({
@@ -85,6 +88,7 @@ export default function ProductShelf({
   cta,
   icon,
   headerBanner,
+  flagsConfig = [],
 }: Props) {
   if (!products || products.length === 0) {
     return null;
@@ -169,17 +173,18 @@ export default function ProductShelf({
       <div class="w-full mx-auto lg:mx-0 xl:max-w-none mt-8">
         <div class="px-4 lg:px-0">
           <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-6">
-            {/* Título e CTA - ocupa o espaço necessário */}
             <div class="flex-1 min-w-0">
               <Section.Header title={title} cta={cta} icon={icon} />
             </div>
-
-            {/* Banner - ocupa o espaço restante */}
             {hasHeaderBanner && renderHeaderBanner()}
           </div>
         </div>
         <div class="mt-14">
-          <ProductSlider products={products} itemListName={title} />
+          <ProductSlider
+            products={products}
+            itemListName={title}
+            flagsConfig={flagsConfig}
+          />
         </div>
       </div>
     </Section.Container>
@@ -199,12 +204,9 @@ export const LoadingFallback = ({
       <div class="w-full mx-auto lg:mx-0 xl:max-w-none mt-8">
         <div class="px-4 lg:px-0">
           <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-6">
-            {/* Título e CTA - ocupa o espaço necessário */}
             <div class="flex-1 min-w-0">
               <Section.Header title={title} cta={cta} icon={icon} />
             </div>
-
-            {/* Banner - ocupa o espaço restante */}
             {hasHeaderBanner && (
               <div class="flex-1 min-w-0">
                 <div class="w-full h-16 bg-gray-200 animate-pulse" />

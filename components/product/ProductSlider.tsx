@@ -3,22 +3,21 @@ import ProductCarouselSlider from "../../islands/Sliders/ProductCarouselSlider.t
 import ProductCard from "./ProductCard/ProductCard.tsx";
 import { useId } from "../../sdk/useId.ts";
 import { useScript } from "@deco/deco/hooks";
+import type { Flag } from "../../loaders/flags-config.ts";
 
 interface Props {
   products: Product[];
   itemListName?: string;
+  flagsConfig?: Flag[];
 }
 
-// Script para forçar inicialização das estrelas Trustvox nos produtos do slider
 const initTrustvoxStars = () => {
-  // Aguarda um pouco para garantir que os elementos estão no DOM
   setTimeout(() => {
     if (window.Trustvox && window.Trustvox.shelf) {
       window.Trustvox.shelf.init();
     }
   }, 500);
 
-  // Também tenta inicializar quando o script carregar
   const checkTrustvox = setInterval(() => {
     if (window.Trustvox && window.Trustvox.shelf) {
       window.Trustvox.shelf.init();
@@ -32,7 +31,7 @@ const initTrustvoxStars = () => {
   }, 10000);
 };
 
-function ProductSlider({ products, itemListName }: Props) {
+function ProductSlider({ products, itemListName, flagsConfig = [] }: Props) {
   const id = useId();
 
   return (
@@ -53,6 +52,7 @@ function ProductSlider({ products, itemListName }: Props) {
                 index={index}
                 product={product}
                 itemListName={itemListName}
+                flagsConfig={flagsConfig}
               />
             </ProductCarouselSlider.Item>
           ))}

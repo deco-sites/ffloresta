@@ -49,6 +49,16 @@
         {
           "type": "image",
           "data": {
+            "desktop": "https://assets.decocache.com/ffloresta/847a9775-24fb-4909-af55-6d8d92122a1b/zen-desktop.jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/a83fb366-b3c3-4f8e-b083-24716951e255/zen-mobile.jpg",
+            "action": {
+              "href": "/zen-design?initialMap=c&initialQuery=zen-design&map=brand"
+            }
+          }
+        },
+        {
+          "type": "image",
+          "data": {
             "desktop": "https://assets.decocache.com/ffloresta/129d3f80-3611-4ddb-9dc3-b241bef1951a/black-floresta.jpg",
             "mobile": "https://assets.decocache.com/ffloresta/178a86c5-a321-41d2-877f-114ea8bc2411/black-floresta-2.jpg",
             "alt": "Black Floresta"
@@ -57,43 +67,53 @@
         {
           "type": "image",
           "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/f6460c0c-d659-4451-9ca2-7c3b02fa9776/puxador-1.jpg",
-            "mobile": "https://assets.decocache.com/ffloresta/b3b7437f-380c-425f-a22f-a28298f0e285/puxador-2.jpg",
             "action": {
-              "href": "/puxadores/italy-line/rometal/gruppa/geris/jador/formi/pado/arouca/vedor?initialMap=c&initialQuery=puxadores&map=category-1%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand"
+              "href": "/ferragens/dobradicas"
             },
-            "alt": "7% de desconto em puxadores"
+            "alt": "7% de desconto em puxadores",
+            "desktop": "https://assets.decocache.com/ffloresta/397fc4e1-2ab1-43d0-b3a0-a2018582732a/dobradica-desk.jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/bbd3977e-c945-4817-b31b-9f0063a0ccf0/dobradica-MOBILE.jpg"
           }
         },
         {
           "type": "image",
           "data": {
+            "desktop": "https://assets.decocache.com/ffloresta/cf51235f-c96b-44f7-88ba-eddeffb8fc20/LIXEIRA-desktop.jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/fa989879-8fda-4011-913b-c8bdbf14b9ad/banner-mobile.jpg",
             "action": {
-              "href": "/fechaduras"
+              "href": "/184/hafele/brinox/masutti/vonder/tramontina/jomer/schmitt/fgv-tn?initialMap=c&initialQuery=184&map=productClusterIds%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand"
             },
-            "alt": "banner",
-            "desktop": "https://assets.decocache.com/ffloresta/c2360ad2-25cc-422c-8657-679d5cbd3aa4/fechadura-desk.jpg",
-            "mobile": "https://assets.decocache.com/ffloresta/8a5e8485-7c22-479e-a8ec-52c40d62b4cf/fechadura-mobile.jpg"
+            "alt": "banner"
           }
         },
         {
           "type": "video",
           "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/00e802d6-b81c-4d00-af16-b57c98888214/1029(1).mp4",
-            "mobile": "https://assets.decocache.com/ffloresta/64e04543-f667-4066-a37d-a62f96920820/video-mobile-frete-2.mp4",
+            "alt": "floresta",
             "action": {},
-            "alt": "floresta"
+            "desktop": "https://assets.decocache.com/ffloresta/00e802d6-b81c-4d00-af16-b57c98888214/1029(1).mp4",
+            "mobile": "https://assets.decocache.com/ffloresta/64e04543-f667-4066-a37d-a62f96920820/video-mobile-frete-2.mp4"
           }
         },
         {
           "type": "image",
           "data": {
-            "alt": "10% de desconto em corrediças",
+            "desktop": "https://assets.decocache.com/ffloresta/ba719365-e939-42f3-a7aa-3ed726603dca/5-(1).jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/72547cdf-62bf-4a31-9cd0-d67d8bd269f1/5a.jpg",
             "action": {
               "href": "/ferragens/corredicas"
             },
-            "desktop": "https://assets.decocache.com/ffloresta/ba719365-e939-42f3-a7aa-3ed726603dca/5-(1).jpg",
-            "mobile": "https://assets.decocache.com/ffloresta/72547cdf-62bf-4a31-9cd0-d67d8bd269f1/5a.jpg"
+            "alt": "10% de desconto em corrediças"
+          }
+        },
+        {
+          "type": "image",
+          "data": {
+            "desktop": "https://assets.decocache.com/ffloresta/818abb70-13e8-40a9-83f5-2f4411f359bd/toalheiro-desk.jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/90db4535-fe15-4d73-b4cc-49c4d13ed9a1/toalheiro-mobile.jpg",
+            "action": {
+              "href": "/ambientes/banheiro/toalheiros-eletricos"
+            }
           }
         }
       ],
@@ -162,7 +182,10 @@
         }
       },
       "orientation": "vertical",
-      "icon": "https://assets.decocache.com/ffloresta/8e934bf1-704a-43a4-9ec5-abe3998e9fc0/Logo-header.svg"
+      "icon": "https://assets.decocache.com/ffloresta/8e934bf1-704a-43a4-9ec5-abe3998e9fc0/Logo-header.svg",
+      "flagsConfig": {
+        "__resolveType": "Configurações Globais de Flag"
+      }
     },
     {
       "__resolveType": "site/sections/Product/ProductShelfWithBackground.tsx",
@@ -182,6 +205,9 @@
         "mobile": {
           "src": "https://assets.decocache.com/ffloresta/69b40089-2979-4077-9522-0f87b68682ee/image-(1).png"
         }
+      },
+      "flagsConfig": {
+        "__resolveType": "Configurações Globais de Flag"
       }
     },
     {
@@ -301,7 +327,10 @@
           "count": 30
         }
       },
-      "icon": "https://assets.decocache.com/ffloresta/411928eb-5e4b-4c3b-83d1-1c788f576a64/icon_prancheta.svg"
+      "icon": "https://assets.decocache.com/ffloresta/411928eb-5e4b-4c3b-83d1-1c788f576a64/icon_prancheta.svg",
+      "flagsConfig": {
+        "__resolveType": "Configurações Globais de Flag"
+      }
     },
     {
       "__resolveType": "site/sections/Content/BannerMosaic.tsx",
@@ -560,7 +589,10 @@
           "desktop": "https://assets.decocache.com/ffloresta/a5ade45b-b17c-4cbf-8bac-0077ff0c65ce/1.jpg"
         }
       },
-      "page": null
+      "page": null,
+      "flagsConfig": {
+        "__resolveType": "Configurações Globais de Flag"
+      }
     },
     {
       "__resolveType": "site/sections/Product/ProductShelf.tsx",
@@ -668,6 +700,9 @@
           "desktop": "https://assets.decocache.com/ffloresta/a9768810-1555-4817-a4ea-cc6cb17633f6/2-(1).jpg",
           "mobile": "https://assets.decocache.com/ffloresta/a9768810-1555-4817-a4ea-cc6cb17633f6/2-(1).jpg"
         }
+      },
+      "flagsConfig": {
+        "__resolveType": "Configurações Globais de Flag"
       }
     },
     {
@@ -752,10 +787,7 @@
       "title": "O que nossos clientes dizem"
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "Footer"
-      }
+      "__resolveType": "Footer"
     }
   ],
   "__resolveType": "website/pages/Page.tsx",

@@ -7,9 +7,15 @@ interface Props {
   products: Product[];
   itemListName?: string;
   hasBg: boolean;
+  flagsConfig?: Flag[];
 }
 
-function ProductSliderForBGShelf({ products, itemListName, hasBg }: Props) {
+function ProductSliderForBGShelf({
+  products,
+  itemListName,
+  hasBg,
+  flagsConfig = [],
+}: Props) {
   const id = useId();
 
   return (
@@ -31,6 +37,7 @@ function ProductSliderForBGShelf({ products, itemListName, hasBg }: Props) {
                 product={product}
                 itemListName={itemListName}
                 class="shadow-[5px_5px_7px_0px_rgba(0,0,0,0.15)] w-[98%] h-[98%]"
+                flagsConfig={flagsConfig}
               />
             </ProductCarouselSlider.Item>
           ))}
