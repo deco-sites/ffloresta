@@ -9,7 +9,7 @@ import { useOffer } from "../../sdk/useOffer.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import Breadcrumb from "../ui/Breadcrumb.tsx";
 import Drawer from "../ui/Drawer.tsx";
-import Sort from "./Sort.tsx";
+import Sort from "./SearchResult/Sort.tsx";
 import { useDevice, useScript, useSection } from "@deco/deco/hooks";
 import { type SectionProps } from "@deco/deco";
 import type { ImageWidget } from "apps/admin/widgets.ts";
