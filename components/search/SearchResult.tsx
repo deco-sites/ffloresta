@@ -1,7 +1,7 @@
 import type { ProductListingPage } from "apps/commerce/types.ts";
 import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
 import ProductCard from "../product/ProductCard/ProductCard.tsx";
-import Filters from "../../components/search/Filters.tsx";
+import Filters from "../search/SearchResult/Filters.tsx";
 import Icon from "../../components/ui/Icon.tsx";
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
