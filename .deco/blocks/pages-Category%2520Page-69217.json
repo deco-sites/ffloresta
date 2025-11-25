@@ -21,7 +21,8 @@
               "advancedConfigs": {
                 "includeOriginalAttributes": []
               },
-              "pageOffset": 1
+              "pageOffset": 1,
+              "hideUnavailableItems": true
             },
             "layout": {
               "columns": {
@@ -169,7 +170,8 @@
               "advancedConfigs": {
                 "includeOriginalAttributes": []
               },
-              "pageOffset": 1
+              "pageOffset": 1,
+              "hideUnavailableItems": true
             },
             "layout": {
               "columns": {
@@ -316,7 +318,8 @@
               "advancedConfigs": {
                 "includeOriginalAttributes": []
               },
-              "pageOffset": 1
+              "pageOffset": 1,
+              "hideUnavailableItems": true
             },
             "layout": {
               "columns": {
@@ -464,7 +467,8 @@
               "advancedConfigs": {
                 "includeOriginalAttributes": []
               },
-              "pageOffset": 1
+              "pageOffset": 1,
+              "hideUnavailableItems": true
             },
             "layout": {
               "columns": {
@@ -612,7 +616,8 @@
               "advancedConfigs": {
                 "includeOriginalAttributes": []
               },
-              "pageOffset": 1
+              "pageOffset": 1,
+              "hideUnavailableItems": true
             },
             "layout": {
               "columns": {
@@ -759,7 +764,8 @@
               "advancedConfigs": {
                 "includeOriginalAttributes": []
               },
-              "pageOffset": 1
+              "pageOffset": 1,
+              "hideUnavailableItems": true
             },
             "layout": {
               "columns": {
@@ -912,7 +918,8 @@
                   "key": "productClusterIds",
                   "value": "180"
                 }
-              ]
+              ],
+              "hideUnavailableItems": true
             },
             "layout": {
               "columns": {
@@ -1059,7 +1066,8 @@
               "advancedConfigs": {
                 "includeOriginalAttributes": []
               },
-              "pageOffset": 1
+              "pageOffset": 1,
+              "hideUnavailableItems": true
             },
             "layout": {
               "columns": {
@@ -1206,7 +1214,8 @@
               "advancedConfigs": {
                 "includeOriginalAttributes": []
               },
-              "pageOffset": 1
+              "pageOffset": 1,
+              "hideUnavailableItems": true
             },
             "layout": {
               "columns": {
@@ -1353,7 +1362,8 @@
               "advancedConfigs": {
                 "includeOriginalAttributes": []
               },
-              "pageOffset": 1
+              "pageOffset": 1,
+              "hideUnavailableItems": true
             },
             "layout": {
               "columns": {
@@ -1500,7 +1510,8 @@
               "advancedConfigs": {
                 "includeOriginalAttributes": []
               },
-              "pageOffset": 1
+              "pageOffset": 1,
+              "hideUnavailableItems": true
             },
             "layout": {
               "columns": {
@@ -1645,7 +1656,8 @@
               "advancedConfigs": {
                 "includeOriginalAttributes": []
               },
-              "pageOffset": 1
+              "pageOffset": 1,
+              "hideUnavailableItems": true
             },
             "layout": {
               "columns": {
@@ -1790,7 +1802,8 @@
               "advancedConfigs": {
                 "includeOriginalAttributes": []
               },
-              "pageOffset": 1
+              "pageOffset": 1,
+              "hideUnavailableItems": true
             },
             "layout": {
               "columns": {
@@ -1935,7 +1948,8 @@
               "advancedConfigs": {
                 "includeOriginalAttributes": []
               },
-              "pageOffset": 1
+              "pageOffset": 1,
+              "hideUnavailableItems": true
             },
             "layout": {
               "columns": {
@@ -2080,7 +2094,8 @@
               "advancedConfigs": {
                 "includeOriginalAttributes": []
               },
-              "pageOffset": 1
+              "pageOffset": 1,
+              "hideUnavailableItems": true
             },
             "layout": {
               "columns": {
@@ -2227,7 +2242,8 @@
               "advancedConfigs": {
                 "includeOriginalAttributes": []
               },
-              "pageOffset": 1
+              "pageOffset": 1,
+              "hideUnavailableItems": true
             },
             "layout": {
               "columns": {
@@ -2374,7 +2390,8 @@
               "advancedConfigs": {
                 "includeOriginalAttributes": []
               },
-              "pageOffset": 1
+              "pageOffset": 1,
+              "hideUnavailableItems": true
             },
             "layout": {
               "columns": {
@@ -2521,7 +2538,8 @@
               "advancedConfigs": {
                 "includeOriginalAttributes": []
               },
-              "pageOffset": 1
+              "pageOffset": 1,
+              "hideUnavailableItems": true
             },
             "layout": {
               "columns": {
@@ -2668,7 +2686,8 @@
               "advancedConfigs": {
                 "includeOriginalAttributes": []
               },
-              "pageOffset": 1
+              "pageOffset": 1,
+              "hideUnavailableItems": true
             },
             "layout": {
               "columns": {
@@ -2814,7 +2833,8 @@
               "advancedConfigs": {
                 "includeOriginalAttributes": []
               },
-              "pageOffset": 1
+              "pageOffset": 1,
+              "hideUnavailableItems": true
             },
             "layout": {
               "columns": {
@@ -2960,7 +2980,8 @@
               "advancedConfigs": {
                 "includeOriginalAttributes": []
               },
-              "pageOffset": 1
+              "pageOffset": 1,
+              "hideUnavailableItems": true
             },
             "layout": {
               "columns": {
@@ -3108,7 +3129,8 @@
               "advancedConfigs": {
                 "includeOriginalAttributes": []
               },
-              "pageOffset": 1
+              "pageOffset": 1,
+              "hideUnavailableItems": true
             },
             "layout": {
               "columns": {
@@ -3252,7 +3274,8 @@
               "advancedConfigs": {
                 "includeOriginalAttributes": []
               },
-              "pageOffset": 1
+              "pageOffset": 1,
+              "hideUnavailableItems": true
             },
             "layout": {
               "columns": {
@@ -3396,7 +3419,8 @@
               "advancedConfigs": {
                 "includeOriginalAttributes": []
               },
-              "pageOffset": 1
+              "pageOffset": 1,
+              "hideUnavailableItems": true
             },
             "layout": {
               "columns": {
@@ -3540,7 +3564,8 @@
               "advancedConfigs": {
                 "includeOriginalAttributes": []
               },
-              "pageOffset": 1
+              "pageOffset": 1,
+              "hideUnavailableItems": true
             },
             "layout": {
               "columns": {
@@ -3684,7 +3709,8 @@
               "advancedConfigs": {
                 "includeOriginalAttributes": []
               },
-              "pageOffset": 1
+              "pageOffset": 1,
+              "hideUnavailableItems": true
             },
             "layout": {
               "columns": {
@@ -3830,7 +3856,8 @@
               "advancedConfigs": {
                 "includeOriginalAttributes": []
               },
-              "pageOffset": 1
+              "pageOffset": 1,
+              "hideUnavailableItems": true
             },
             "layout": {
               "columns": {
