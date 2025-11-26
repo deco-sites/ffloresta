@@ -2961,6 +2961,9 @@
             },
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
+            },
+            "banner": {
+              "@type": "image"
             }
           },
           "rule": {
