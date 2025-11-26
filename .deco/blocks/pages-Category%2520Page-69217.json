@@ -2993,155 +2993,6 @@
             },
             "startingPage": 1,
             "seoText": {
-              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
-              "title": "Ferragens",
-              "description": "<p></p>"
-            },
-            "topBanner": {
-              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
-              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
-            },
-            "categoryBanner": {
-              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
-              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
-            },
-            "filterBanner": {},
-            "bannerImage": {
-              "0": "h",
-              "1": "t",
-              "2": "t",
-              "3": "p",
-              "4": "s",
-              "5": ":",
-              "6": "/",
-              "7": "/",
-              "8": "a",
-              "9": "s",
-              "10": "s",
-              "11": "e",
-              "12": "t",
-              "13": "s",
-              "14": ".",
-              "15": "d",
-              "16": "e",
-              "17": "c",
-              "18": "o",
-              "19": "c",
-              "20": "a",
-              "21": "c",
-              "22": "h",
-              "23": "e",
-              "24": ".",
-              "25": "c",
-              "26": "o",
-              "27": "m",
-              "28": "/",
-              "29": "f",
-              "30": "f",
-              "31": "l",
-              "32": "o",
-              "33": "r",
-              "34": "e",
-              "35": "s",
-              "36": "t",
-              "37": "a",
-              "38": "/",
-              "39": "1",
-              "40": "2",
-              "41": "4",
-              "42": "9",
-              "43": "b",
-              "44": "f",
-              "45": "c",
-              "46": "6",
-              "47": "-",
-              "48": "d",
-              "49": "2",
-              "50": "8",
-              "51": "a",
-              "52": "-",
-              "53": "4",
-              "54": "b",
-              "55": "3",
-              "56": "d",
-              "57": "-",
-              "58": "8",
-              "59": "1",
-              "60": "f",
-              "61": "6",
-              "62": "-",
-              "63": "0",
-              "64": "e",
-              "65": "7",
-              "66": "b",
-              "67": "a",
-              "68": "f",
-              "69": "d",
-              "70": "9",
-              "71": "8",
-              "72": "c",
-              "73": "f",
-              "74": "6",
-              "75": "/",
-              "76": "P",
-              "77": "r",
-              "78": "a",
-              "79": "n",
-              "80": "c",
-              "81": "h",
-              "82": "e",
-              "83": "t",
-              "84": "a",
-              "85": "-",
-              "86": "1",
-              "87": "_",
-              "88": "3",
-              "89": "-",
-              "90": "(",
-              "91": "2",
-              "92": ")",
-              "93": ".",
-              "94": "p",
-              "95": "n",
-              "96": "g",
-              "altText": "Ferragens",
-              "mobile": "https://assets.decocache.com/ffloresta/3f61641c-9f58-4518-84f9-ac4f0fed2597/Prancheta-1_1.png",
-              "desktop": "https://assets.decocache.com/ffloresta/66bebcc3-80aa-4882-b171-43b29993f2fc/Prancheta-1_1_upscayl_4x_upscayl-standard-4x.png"
-            },
-            "flagsConfig": {
-              "__resolveType": "Configurações Globais de Flag"
-            }
-          },
-          "rule": {
-            "__resolveType": "website/matchers/pathname.ts",
-            "case": {
-              "type": "Equals",
-              "pathname": "/ferragens"
-            }
-          }
-        },
-        {
-          "value": {
-            "__resolveType": "site/sections/Product/SearchResult.tsx",
-            "page": {
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
-              "count": 16,
-              "advancedConfigs": {
-                "includeOriginalAttributes": []
-              },
-              "pageOffset": 1,
-              "hideUnavailableItems": true
-            },
-            "layout": {
-              "columns": {
-                "mobile": 2,
-                "desktop": 4
-              },
-              "variant": "aside",
-              "pagination": "show-more"
-            },
-            "startingPage": 1,
-            "seoText": {
               "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
             },
             "topBanner": {
@@ -3253,6 +3104,9 @@
               "mobile": "https://assets.decocache.com/ffloresta/a5be6a21-4dac-43bb-a18a-ad230011c494/Prancheta-1_3.png",
               "desktop": "https://assets.decocache.com/ffloresta/8a582a57-fb0c-4397-bfb1-8548a07992b3/Prancheta-1_3_upscayl_4x_upscayl-standard-4x.png"
             },
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            },
             "banner": {
               "@type": "image",
               "data": {
@@ -3260,9 +3114,6 @@
                 "mobile": "https://assets.decocache.com/ffloresta/cc0e92ed-e675-4009-ad2f-fc7f7b5f92b1/Prancheta-1_32x.png",
                 "alt": "ambientes"
               }
-            },
-            "flagsConfig": {
-              "__resolveType": "Configurações Globais de Flag"
             }
           },
           "rule": {
@@ -3409,9 +3260,9 @@
             "banner": {
               "@type": "image",
               "data": {
-                "alt": "ferramentas",
                 "desktop": "https://assets.decocache.com/ffloresta/d5c65356-ef00-4507-ba2d-923b296dfbff/Prancheta-1_5_upscayl_4x_upscayl-standard-4x.png",
-                "mobile": "https://assets.decocache.com/ffloresta/5783cb8b-d679-456e-a6f6-0aedca0e3b51/Prancheta-1_5.png"
+                "mobile": "https://assets.decocache.com/ffloresta/5783cb8b-d679-456e-a6f6-0aedca0e3b51/Prancheta-1_5.png",
+                "alt": "ferramentas"
               }
             },
             "flagsConfig": {
@@ -3562,9 +3413,9 @@
             "banner": {
               "@type": "image",
               "data": {
+                "alt": "ferragens de projetos",
                 "desktop": "https://assets.decocache.com/ffloresta/6cfd9778-bca8-416e-945f-0faf207782a6/Prancheta-1_4_upscayl_4x_upscayl-standard-4x.png",
-                "mobile": "https://assets.decocache.com/ffloresta/bdd17e8b-ea21-45b8-b888-43489a688ec4/Prancheta-1_42x.png",
-                "alt": "ferragens de projetos"
+                "mobile": "https://assets.decocache.com/ffloresta/bdd17e8b-ea21-45b8-b888-43489a688ec4/Prancheta-1_42x.png"
               }
             },
             "flagsConfig": {
@@ -3712,9 +3563,6 @@
               "mobile": "https://assets.decocache.com/ffloresta/44d2b6db-4203-4956-893c-409df5151177/Prancheta-1_1-(2).png",
               "desktop": "https://assets.decocache.com/ffloresta/c40ec064-5a59-4372-a4cb-8afa869b7ecc/Prancheta-1_1-(3).png"
             },
-            "seoConfig": {
-              "metaTitle": "TITULO PRA META TITLE"
-            },
             "banner": {
               "@type": "image",
               "data": {
@@ -3725,6 +3573,9 @@
             },
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
+            },
+            "seoConfig": {
+              "metaTitle": "TITULO PRA META TITLE"
             }
           },
           "rule": {
@@ -3872,6 +3723,14 @@
             },
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
+            },
+            "banner": {
+              "@type": "image",
+              "data": {
+                "desktop": "https://assets.decocache.com/ffloresta/297c0123-e350-4c3a-84e8-f2132e6cf5f2/2.jpg",
+                "mobile": "https://assets.decocache.com/ffloresta/9e1c05f1-cfa0-4fb9-abf6-a679d192b948/2-(1).jpg",
+                "alt": "Fechaduras"
+              }
             }
           },
           "rule": {
@@ -4015,10 +3874,10 @@
               "96": "g",
               "altText": "Categoria"
             },
-            "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
-            }
+            },
+            "products": null
           },
           "rule": {
             "__resolveType": "website/matchers/always.ts"
