@@ -69,10 +69,11 @@ import * as $$$$$$47 from "./sections/Product/TrustvoxWidget.tsx";
 import * as $$$$$$48 from "./sections/Product/Wishlist.tsx";
 import * as $$$$$$49 from "./sections/SelosSeguranca.tsx";
 import * as $$$$$$50 from "./sections/Seo/AdvancedCanonical.tsx";
-import * as $$$$$$51 from "./sections/Session.tsx";
-import * as $$$$$$52 from "./sections/Social/InstagramPosts.tsx";
-import * as $$$$$$53 from "./sections/Social/WhatsApp.tsx";
-import * as $$$$$$54 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$51 from "./sections/Seo/AdvancedSEOConfig.tsx";
+import * as $$$$$$52 from "./sections/Session.tsx";
+import * as $$$$$$53 from "./sections/Social/InstagramPosts.tsx";
+import * as $$$$$$54 from "./sections/Social/WhatsApp.tsx";
+import * as $$$$$$55 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
   "loaders": {
@@ -138,10 +139,11 @@ const manifest = {
     "site/sections/Product/Wishlist.tsx": $$$$$$48,
     "site/sections/SelosSeguranca.tsx": $$$$$$49,
     "site/sections/Seo/AdvancedCanonical.tsx": $$$$$$50,
-    "site/sections/Session.tsx": $$$$$$51,
-    "site/sections/Social/InstagramPosts.tsx": $$$$$$52,
-    "site/sections/Social/WhatsApp.tsx": $$$$$$53,
-    "site/sections/Theme/Theme.tsx": $$$$$$54,
+    "site/sections/Seo/AdvancedSEOConfig.tsx": $$$$$$51,
+    "site/sections/Session.tsx": $$$$$$52,
+    "site/sections/Social/InstagramPosts.tsx": $$$$$$53,
+    "site/sections/Social/WhatsApp.tsx": $$$$$$54,
+    "site/sections/Theme/Theme.tsx": $$$$$$55,
   },
   "actions": {
     "site/actions/minicart/submit.ts": $$$$$$$$$0,

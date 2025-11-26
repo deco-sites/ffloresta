@@ -1,29 +1,59 @@
 import type { ProductListingPage } from "apps/commerce/types.ts";
 import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
-import ProductCard from "../product/ProductCard/ProductCard.tsx";
-import Filters from "../../components/search/Filters.tsx";
-import Icon from "../../components/ui/Icon.tsx";
-import { clx } from "../../sdk/clx.ts";
-import { useId } from "../../sdk/useId.ts";
-import { useOffer } from "../../sdk/useOffer.ts";
-import { useSendEvent } from "../../sdk/useSendEvent.ts";
-import Breadcrumb from "../ui/Breadcrumb.tsx";
-import Drawer from "../ui/Drawer.tsx";
+import ProductCard from "../../product/ProductCard/ProductCard.tsx";
+import Filters from "../../search/SearchResult/Filters.tsx";
+import Icon from "../../../components/ui/Icon.tsx";
+import { clx } from "../../../sdk/clx.ts";
+import { useId } from "../../../sdk/useId.ts";
+import { useOffer } from "../../../sdk/useOffer.ts";
+import { useSendEvent } from "../../../sdk/useSendEvent.ts";
+import Breadcrumb from "../../ui/Breadcrumb.tsx";
+import Drawer from "../../ui/Drawer.tsx";
 import Sort from "./Sort.tsx";
 import { useDevice, useScript, useSection } from "@deco/deco/hooks";
 import { type SectionProps } from "@deco/deco";
-import type { ImageWidget } from "apps/admin/widgets.ts";
+import type { ImageWidget, VideoWidget } from "apps/admin/widgets.ts";
 import { HTMLWidget as HTML } from "apps/admin/widgets.ts";
-import FilterInteraction from "../../islands/FilterInteraction.tsx";
-import type { Flag } from "../../loaders/flags-config.ts";
+import FilterInteraction from "../../../islands/FilterInteraction.tsx";
+import type { Flag } from "../../../loaders/flags-config.ts";
 
 export interface Layout {
   pagination?: "show-more" | "pagination";
 }
 
+export interface BannerImage {
+  desktop?: ImageWidget;
+  mobile?: ImageWidget;
+  alt: string;
+}
+
+export interface BannerVideo {
+  desktop?: VideoWidget;
+  mobile?: VideoWidget;
+  alt: string;
+  poster?: ImageWidget;
+  autoplay?: boolean;
+  loop?: boolean;
+  muted?: boolean;
+}
+
+export type SearchBanner =
+  | {
+      "@type": "image";
+      data: BannerImage;
+    }
+  | {
+      "@type": "video";
+      data: BannerVideo;
+    };
+
 export interface SeoText {
   title?: string;
   description?: HTML;
+}
+
+export interface SeoConfig {
+  pageTitle?: string;
 }
 
 export interface Props {
@@ -31,13 +61,9 @@ export interface Props {
   layout?: Layout;
   startingPage?: 0 | 1;
   partial?: "hideMore" | "hideLess";
-  bannerImage?: {
-    mobile?: ImageWidget;
-    desktop?: ImageWidget;
-    altText: string;
-  };
+  banner?: SearchBanner;
   seoText?: SeoText;
-  title?: string;
+  seoConfig?: SeoConfig;
   flagsConfig?: Flag[];
 }
 
@@ -77,6 +103,57 @@ function NotFound() {
       </div>
     </>
   );
+}
+
+// Componente para renderizar o banner (imagem ou vídeo)
+function BannerRenderer({ banner }: { banner: SearchBanner }) {
+  const device = useDevice();
+
+  if (banner["@type"] === "image") {
+    const { data } = banner;
+    const imageSrc =
+      device === "mobile"
+        ? data.mobile || data.desktop
+        : data.desktop || data.mobile;
+
+    if (!imageSrc) {
+      return null;
+    }
+
+    return (
+      <div class="w-full">
+        <img src={imageSrc} alt={data.alt} class="w-full object-cover" />
+      </div>
+    );
+  }
+
+  if (banner["@type"] === "video") {
+    const { data } = banner;
+    const videoSrc =
+      device === "mobile"
+        ? data.mobile || data.desktop
+        : data.desktop || data.mobile;
+
+    if (!videoSrc) {
+      return null;
+    }
+
+    return (
+      <div class="w-full">
+        <video
+          src={videoSrc}
+          poster={data.poster}
+          autoplay={data.autoplay}
+          loop={data.loop}
+          muted={data.muted}
+          class="w-full object-cover"
+          playsInline
+        />
+      </div>
+    );
+  }
+
+  return null;
 }
 
 const useUrlRebased = (overrides: string | undefined, base: string) => {
@@ -298,15 +375,15 @@ function Result(props: SectionProps<typeof loader>) {
   const container = useId();
   const controls = useId();
   const device = useDevice();
-  const { startingPage = 0, url, partial, bannerImage, title } = props;
+  const { startingPage = 0, url, partial, banner, seoConfig } = props;
   const page = props.page!;
   const { products, filters, breadcrumb, pageInfo, sortOptions } = page;
   const perPage = pageInfo?.recordPerPage || products.length;
   const zeroIndexedOffsetPage = pageInfo.currentPage - startingPage;
   const offset = zeroIndexedOffsetPage * perPage;
 
-  // Lógica para determinar o título
-  const categoryTitle = title || breadcrumb.itemListElement?.at(-1)?.name;
+  const categoryTitle =
+    seoConfig?.pageTitle || breadcrumb.itemListElement?.at(-1)?.name;
 
   const fallbackSeoText: SeoText = {
     title: typeof document !== "undefined" ? document.title : undefined,
@@ -357,19 +434,7 @@ function Result(props: SectionProps<typeof loader>) {
         ) : (
           <>
             {/* Banner full width - fora do container */}
-            {bannerImage && (
-              <div class="w-full">
-                <img
-                  src={
-                    device === "mobile"
-                      ? bannerImage.mobile || bannerImage.desktop
-                      : bannerImage.desktop || bannerImage.mobile
-                  }
-                  alt={bannerImage.altText}
-                  class="w-full"
-                />
-              </div>
-            )}
+            {banner && <BannerRenderer banner={banner} />}
 
             {/* Restante do conteúdo dentro do container */}
             <div class="container flex flex-col gap-4 sm:gap-5 w-full py-4 sm:py-5 px-5 lg:px-[4rem]">
@@ -573,9 +638,9 @@ export const loader = (props: Props, req: Request) => {
   return {
     ...props,
     url: req.url,
-    bannerImage: props.bannerImage,
+    banner: props.banner,
     seoText: props.seoText,
-    title: props.title,
+    seoConfig: props.seoConfig,
     flagsConfig: props.flagsConfig,
   };
 };
