@@ -1,66 +1,377 @@
+import type { ProductListingPage } from "apps/commerce/types.ts";
+import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
+import ProductCard from "../../product/ProductCard/ProductCard.tsx";
+import Filters from "../../search/SearchResult/Filters.tsx";
+import Icon from "../../../components/ui/Icon.tsx";
+import { clx } from "../../../sdk/clx.ts";
 import { useId } from "../../../sdk/useId.ts";
 import { useOffer } from "../../../sdk/useOffer.ts";
 import { useSendEvent } from "../../../sdk/useSendEvent.ts";
-import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
-import { useDevice, useScript } from "@deco/deco/hooks";
-
-import Filters from "../SearchResult/Filters.tsx";
 import Breadcrumb from "../../ui/Breadcrumb.tsx";
 import Drawer from "../../ui/Drawer.tsx";
 import Sort from "./Sort.tsx";
-import Icon from "../../../components/ui/Icon.tsx";
+import { useDevice, useScript, useSection } from "@deco/deco/hooks";
+import { type SectionProps } from "@deco/deco";
+import type { ImageWidget, VideoWidget } from "apps/admin/widgets.ts";
+import { HTMLWidget as HTML } from "apps/admin/widgets.ts";
 import FilterInteraction from "../../../islands/FilterInteraction.tsx";
+import type { Flag } from "../../../loaders/flags-config.ts";
 
-import NotFound from "./NotFound.tsx";
-import PageResult from "./PageResult.tsx";
-import { setPageQuerystring } from "./hooks/usePageQueryString.ts";
-import type { Props, SectionProps } from "./types/search.types.ts";
-import { ImageWidget, VideoWidget } from "apps/admin/widgets.ts";
+export interface Layout {
+  pagination?: "show-more" | "pagination";
+}
 
-/** @title Banner de Imagem */
 export interface BannerImage {
-  /** @title Imagem para Desktop */
   desktop?: ImageWidget;
-  /** @title Imagem para Mobile */
   mobile?: ImageWidget;
-  /** @title Texto Alternativo */
   alt: string;
 }
 
-/** @title Banner de Vídeo */
 export interface BannerVideo {
-  /** @title Vídeo para Desktop */
   desktop?: VideoWidget;
-  /** @title Vídeo para Mobile */
   mobile?: VideoWidget;
-  /** @title Texto Alternativo */
   alt: string;
-  /** @title Imagem de Poster (opcional) */
   poster?: ImageWidget;
-  /** @title Reproduzir Automaticamente */
   autoplay?: boolean;
-  /** @title Loop */
   loop?: boolean;
-  /** @title Sem Áudio */
   muted?: boolean;
 }
 
-/** @title Banner da Página de Search */
 export type SearchBanner =
   | {
-      /** @title Tipo */
       "@type": "image";
-      /** @title Dados da Imagem */
       data: BannerImage;
     }
   | {
-      /** @title Tipo */
       "@type": "video";
-      /** @title Dados do Vídeo */
       data: BannerVideo;
     };
 
-function Result(props: SectionProps) {
+export interface SeoText {
+  title?: string;
+  description?: HTML;
+}
+
+export interface SeoConfig {
+  pageTitle?: string;
+}
+
+export interface Props {
+  page: ProductListingPage | null;
+  layout?: Layout;
+  startingPage?: 0 | 1;
+  partial?: "hideMore" | "hideLess";
+  banner?: SearchBanner;
+  seoText?: SeoText;
+  seoConfig?: SeoConfig;
+  flagsConfig?: Flag[];
+}
+
+function NotFound() {
+  return (
+    <>
+      <div className="container w-full flex justify-center items-center py-2 mt-20">
+        <div className="mb-8">
+          <div className="max-w-container w-full mx-auto px-4 flex flex-col items-center justify-center text-center py-12">
+            <h1 className="text-[25px] leading-[25px] font-bold mb-6 uppercase">
+              Oops! <br /> O item que você buscou não foi encontrado!
+            </h1>
+            <h2 className="uppercase mb-3">
+              Mas não se preocupe, tente novamente utilizando nossas dicas:
+            </h2>
+            <ul className="mb-5">
+              <li className="text-[13px] leading-[13px]">
+                <span className="text-lg inline-block mr-1">•</span> Verifique
+                se não há erro de digitação.
+              </li>
+              <li className="text-[13px] leading-[13px]">
+                <span className="text-lg inline-block mr-1">•</span> Tente
+                utilizar uma única palavra.
+              </li>
+              <li className="text-[13px] leading-[13px]">
+                <span className="text-lg inline-block mr-1">•</span> Tente
+                buscar por termos menos específicos e posteriormente use os
+                filtros da busca.
+              </li>
+              <li className="text-[13px] leading-[13px]">
+                <span className="text-lg inline-block mr-1">•</span> Procure
+                utilizar sinônimos ao termo desejado.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+// Componente para renderizar o banner (imagem ou vídeo)
+function BannerRenderer({ banner }: { banner: SearchBanner }) {
+  const device = useDevice();
+
+  if (banner["@type"] === "image") {
+    const { data } = banner;
+    const imageSrc =
+      device === "mobile"
+        ? data.mobile || data.desktop
+        : data.desktop || data.mobile;
+
+    if (!imageSrc) {
+      return null;
+    }
+
+    return (
+      <div class="w-full">
+        <img src={imageSrc} alt={data.alt} class="w-full object-cover" />
+      </div>
+    );
+  }
+
+  if (banner["@type"] === "video") {
+    const { data } = banner;
+    const videoSrc =
+      device === "mobile"
+        ? data.mobile || data.desktop
+        : data.desktop || data.mobile;
+
+    if (!videoSrc) {
+      return null;
+    }
+
+    return (
+      <div class="w-full">
+        <video
+          src={videoSrc}
+          poster={data.poster}
+          autoplay={data.autoplay}
+          loop={data.loop}
+          muted={data.muted}
+          class="w-full object-cover"
+          playsInline
+        />
+      </div>
+    );
+  }
+
+  return null;
+}
+
+const useUrlRebased = (overrides: string | undefined, base: string) => {
+  let url: string | undefined = undefined;
+  if (overrides) {
+    const temp = new URL(overrides, base);
+    const final = new URL(base);
+    final.pathname = temp.pathname;
+
+    // Primeiro, preservar todos os parâmetros da URL base (filtros atuais)
+    const baseUrl = new URL(base);
+    for (const [key, value] of baseUrl.searchParams.entries()) {
+      // Não preservar o parâmetro page da URL base se estivermos mudando de página
+      if (key !== "page" || !temp.searchParams.has("page")) {
+        final.searchParams.set(key, value);
+      }
+    }
+
+    // Depois, aplicar os overrides (principalmente a página)
+    for (const [key, value] of temp.searchParams.entries()) {
+      // SEMPRE remover o parâmetro page se for 1
+      if (key === "page" && value === "1") {
+        final.searchParams.delete("page");
+      } else if (key === "page") {
+        final.searchParams.set(key, value);
+      } else {
+        final.searchParams.set(key, value);
+      }
+    }
+
+    url = final.href;
+  }
+  return url;
+};
+
+function PageResult(props: SectionProps<typeof loader>) {
+  const { layout, startingPage = 0, url, partial } = props;
+  const page = props.page!;
+  const { products, pageInfo } = page;
+  const perPage = pageInfo?.recordPerPage || products.length;
+  const zeroIndexedOffsetPage = pageInfo.currentPage - startingPage;
+  const offset = zeroIndexedOffsetPage * perPage;
+  const nextPageUrl = useUrlRebased(pageInfo.nextPage, url);
+  const prevPageUrl = useUrlRebased(pageInfo.previousPage, url);
+  const partialPrev = useSection({
+    href: prevPageUrl,
+    props: { partial: "hideMore" },
+  });
+  const partialNext = useSection({
+    href: nextPageUrl,
+    props: { partial: "hideLess" },
+  });
+  const infinite = layout?.pagination !== "pagination";
+
+  return (
+    <div class="grid grid-flow-row grid-cols-1 place-items-center">
+      <div
+        class={clx(
+          "pb-2 sm:pb-10",
+          (!prevPageUrl || partial === "hideLess") && "hidden"
+        )}
+      >
+        <a
+          rel="prev"
+          class="cursor-pointer"
+          hx-swap="outerHTML show:parent:top"
+          hx-get={partialPrev}
+        >
+          <span class="inline [.htmx-request_&]:hidden">
+            <div class="p-2 rounded-full bg-[rgba(21,31,22,0.6)] backdrop-blur-[12px] transition-all duration-300 hover:bg-[rgba(21,31,22,0.8)]">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18 15L12 9L6 15"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </span>
+          <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
+        </a>
+      </div>
+
+      <div
+        data-product-list
+        class={clx(
+          "grid items-center",
+          "grid-cols-2 gap-4", // Base
+          "xl:grid-cols-4", // ≥1240px
+          "w-full"
+        )}
+      >
+        {products?.map((product, index) => (
+          <ProductCard
+            key={`product-card-${product.productID}`}
+            product={product}
+            preload={index === 0}
+            index={offset + index}
+            class="h-full w-[98%] shadow-[5.62px_5.62px_7.03px_0px_rgba(0,0,0,0.15)]"
+            flagsConfig={props.flagsConfig}
+          />
+        ))}
+      </div>
+
+      <div class={clx("pt-5 sm:pt-10 w-full")}>
+        {infinite ? (
+          <div class="flex justify-center [&_section]:contents">
+            <a
+              rel="next"
+              class={clx(
+                "cursor-pointer",
+                (!nextPageUrl || partial === "hideMore") && "hidden"
+              )}
+              hx-swap="outerHTML show:parent:top"
+              hx-get={partialNext}
+            >
+              <span class="inline [.htmx-request_&]:hidden">
+                {" "}
+                <div class="p-2 rounded-full bg-[rgba(21,31,22,0.6)] backdrop-blur-[12px] transition-all duration-300 hover:bg-[rgba(21,31,22,0.8)]">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 9L12 15L18 9"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </span>
+              <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
+            </a>
+          </div>
+        ) : (
+          <div class={clx("join", infinite && "hidden")}>
+            <a
+              rel="prev"
+              aria-label="previous page link"
+              href={prevPageUrl ?? "#"}
+              disabled={!prevPageUrl}
+              class="btn btn-ghost join-item"
+            >
+              <Icon id="chevron-right" class="rotate-180" />
+            </a>
+            <span class="btn btn-ghost join-item">
+              Page {zeroIndexedOffsetPage + 1}
+            </span>
+            <a
+              rel="next"
+              aria-label="next page link"
+              href={nextPageUrl ?? "#"}
+              disabled={!nextPageUrl}
+              class="btn btn-ghost join-item"
+            >
+              <Icon id="chevron-right" />
+            </a>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+const setPageQuerystring = (page: string, id: string) => {
+  const element = document
+    .getElementById(id)
+    ?.querySelector("[data-product-list]");
+  if (!element) return;
+
+  new IntersectionObserver((entries) => {
+    const url = new URL(location.href);
+    const prevPage = url.searchParams.get("page");
+
+    for (const entry of entries) {
+      if (entry.isIntersecting) {
+        // Só adicionar page se for diferente de 1
+        if (page !== "1") {
+          url.searchParams.set("page", page);
+        } else {
+          url.searchParams.delete("page");
+        }
+      } else if (
+        typeof history.state?.prevPage === "string" &&
+        history.state?.prevPage !== page
+      ) {
+        // Só adicionar page se for diferente de 1
+        if (history.state.prevPage !== "1") {
+          url.searchParams.set("page", history.state.prevPage);
+        } else {
+          url.searchParams.delete("page");
+        }
+      }
+    }
+
+    // Garantir que todos os filtros sejam preservados no histórico
+    history.replaceState(
+      { prevPage, filters: url.searchParams.toString() },
+      "",
+      url.href
+    );
+  }).observe(element);
+};
+
+function Result(props: SectionProps<typeof loader>) {
   const container = useId();
   const controls = useId();
   const device = useDevice();
@@ -71,12 +382,20 @@ function Result(props: SectionProps) {
   const zeroIndexedOffsetPage = pageInfo.currentPage - startingPage;
   const offset = zeroIndexedOffsetPage * perPage;
 
-  const categoryTitle = breadcrumb.itemListElement?.at(-1)?.name;
-  const displayTitle = seoConfig?.pageTitle || categoryTitle;
+  const categoryTitle =
+    seoConfig?.pageTitle || breadcrumb.itemListElement?.at(-1)?.name;
 
-  const seoText = props.seoText;
+  const fallbackSeoText: SeoText = {
+    title: typeof document !== "undefined" ? document.title : undefined,
+    description:
+      typeof document !== "undefined"
+        ? document
+            .querySelector("meta[name='description']")
+            ?.getAttribute("content") ?? undefined
+        : undefined,
+  };
 
-  console.log(seoConfig?.pageTitle, categoryTitle, displayTitle);
+  const seoText = props.seoText ?? fallbackSeoText;
 
   const viewItemListEvent = useSendEvent({
     on: "view",
@@ -97,49 +416,6 @@ function Result(props: SectionProps) {
     },
   });
 
-  const renderBanner = () => {
-    if (!banner) return null;
-
-    if (banner["@type"] === "image") {
-      const imageData = banner.data;
-      return (
-        <div class="w-full">
-          <img
-            src={
-              device === "mobile"
-                ? imageData.mobile || imageData.desktop
-                : imageData.desktop || imageData.mobile
-            }
-            alt={imageData.alt}
-            class="w-full"
-          />
-        </div>
-      );
-    } else if (banner["@type"] === "video") {
-      const videoData = banner.data;
-      return (
-        <div class="w-full">
-          <video
-            src={
-              device === "mobile"
-                ? videoData.mobile || videoData.desktop
-                : videoData.desktop || videoData.mobile
-            }
-            alt={videoData.alt}
-            poster={videoData.poster}
-            autoplay={videoData.autoplay}
-            loop={videoData.loop}
-            muted={videoData.muted}
-            class="w-full"
-            playsInline
-          />
-        </div>
-      );
-    }
-
-    return null;
-  };
-
   const results = (
     <span class="text-md text-[#1F251C] uppercase font-normal">
       {page.pageInfo.records} produtos encontrados
@@ -158,16 +434,16 @@ function Result(props: SectionProps) {
         ) : (
           <>
             {/* Banner full width - fora do container */}
-            {renderBanner()}
+            {banner && <BannerRenderer banner={banner} />}
 
             {/* Restante do conteúdo dentro do container */}
             <div class="container flex flex-col gap-4 sm:gap-5 w-full py-4 sm:py-5 px-5 lg:px-[4rem]">
               <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
 
-              {/* H1 */}
-              {displayTitle && (
+              {/* Adicionando o H1 aqui */}
+              {categoryTitle && (
                 <h1 class="text-2xl font-bold text-[#1F251C]">
-                  {displayTitle}
+                  {categoryTitle}
                 </h1>
               )}
 
@@ -351,7 +627,7 @@ function Result(props: SectionProps) {
   );
 }
 
-function SearchResult({ page, ...props }: SectionProps) {
+function SearchResult({ page, ...props }: SectionProps<typeof loader>) {
   if (!page || page.products.length === 0) {
     return <NotFound />;
   }
@@ -365,6 +641,7 @@ export const loader = (props: Props, req: Request) => {
     banner: props.banner,
     seoText: props.seoText,
     seoConfig: props.seoConfig,
+    flagsConfig: props.flagsConfig,
   };
 };
 

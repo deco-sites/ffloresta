@@ -106,8 +106,6 @@ export default function ProductDetails({
     );
   }
 
-  console.log(flagsConfig, "flagsConfig pd");
-
   const bannersToDisplay = getBannersToDisplay(page, productBanners);
 
   const breadcrumbItems = [...page.breadcrumbList.itemListElement];
