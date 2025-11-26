@@ -4,7 +4,6 @@ import Section from "../components/ui/Section.tsx";
 import { useId } from "../sdk/useId.ts";
 import { useEffect, useRef, useState } from "preact/hooks";
 import { clx } from "../sdk/clx.ts";
-import { useDevice } from "@deco/deco/hooks";
 
 export interface Banner {
   desktop?: ImageWidget;
@@ -57,50 +56,104 @@ interface Props {
 
 // Componente para renderizar a mídia (imagem ou vídeo)
 function MediaRenderer({ item }: { item: BrandItem }) {
-  const device = useDevice();
-
   if (item["@type"] === "image") {
     const { data } = item;
-    const imageSrc =
-      device === "mobile"
-        ? data.mobile || data.desktop
-        : data.desktop || data.mobile;
-
-    if (!imageSrc) return null;
 
     return (
-      <Image
-        src={imageSrc}
-        alt={data.alt}
-        loading="lazy"
-        class="w-full h-full object-contain"
-      />
+      <picture>
+        {/* Imagem para mobile */}
+        {data.mobile && (
+          <source media="(max-width: 767px)" srcset={data.mobile} />
+        )}
+        {/* Imagem para desktop */}
+        {data.desktop && (
+          <source media="(min-width: 768px)" srcset={data.desktop} />
+        )}
+        {/* Imagem fallback */}
+        <Image
+          src={data.desktop || data.mobile || ""}
+          alt={data.alt}
+          width={200}
+          height={200}
+          loading="lazy"
+          class="w-full h-full object-contain"
+        />
+      </picture>
     );
   }
 
   if (item["@type"] === "video") {
     const { data } = item;
-    const videoSrc =
-      device === "mobile"
-        ? data.mobile || data.desktop
-        : data.desktop || data.mobile;
-
-    if (!videoSrc) return null;
 
     return (
-      <video
-        width="100%"
-        height="100%"
-        autoPlay={data.autoplay}
-        loop={data.loop}
-        muted={data.muted}
-        poster={data.poster}
-        class="w-full h-full object-contain"
-        playsInline
-      >
-        <source src={videoSrc} type="video/mp4" />
-        Seu navegador não suporta o elemento de vídeo.
-      </video>
+      <div class="relative w-full h-full">
+        {/* Vídeo para desktop - visível apenas em desktop */}
+        {data.desktop && (
+          <video
+            width="100%"
+            height="100%"
+            autoPlay={data.autoplay}
+            loop={data.loop}
+            muted={data.muted}
+            poster={data.poster}
+            class="w-full h-full object-contain hidden md:block"
+            playsInline
+          >
+            <source src={data.desktop} type="video/mp4" />
+            Seu navegador não suporta o elemento de vídeo.
+          </video>
+        )}
+
+        {/* Vídeo para mobile - visível apenas em mobile */}
+        {data.mobile && (
+          <video
+            width="100%"
+            height="100%"
+            autoPlay={data.autoplay}
+            loop={data.loop}
+            muted={data.muted}
+            poster={data.poster}
+            class="w-full h-full object-contain block md:hidden"
+            playsInline
+          >
+            <source src={data.mobile} type="video/mp4" />
+            Seu navegador não suporta o elemento de vídeo.
+          </video>
+        )}
+
+        {/* Fallback - usar desktop se mobile não existir ou vice-versa */}
+        {!data.desktop && data.mobile && (
+          <video
+            width="100%"
+            height="100%"
+            autoPlay={data.autoplay}
+            loop={data.loop}
+            muted={data.muted}
+            poster={data.poster}
+            class="w-full h-full object-contain"
+            playsInline
+          >
+            <source src={data.mobile} type="video/mp4" />
+            Seu navegador não suporta o elemento de vídeo.
+          </video>
+        )}
+
+        {!data.mobile && data.desktop && (
+          <video
+            width="100%"
+            height="100%"
+            autoPlay={data.autoplay}
+            loop={data.loop}
+            muted={data.muted}
+            poster={data.poster}
+            class="w-full h-full object-contain"
+            playsInline
+          >
+            <source src={data.desktop} type="video/mp4" />
+            Seu navegador não suporta o elemento de vídeo.
+          </video>
+        )}
+      </div>
     );
   }
 
@@ -250,7 +303,7 @@ export default function BrandGridIsland({ title, cta, items, icon }: Props) {
         clearTimeout(scrollTimeout);
       }
     };
-  }, [dotsCount, activeDot]); // Adicionar dependências
+  }, [dotsCount, activeDot]);
 
   // Recalcular dotsCount quando itemsPerPage mudar
   useEffect(() => {
