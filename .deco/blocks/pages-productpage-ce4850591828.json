@@ -157,7 +157,7 @@
                 "countdownDate": "2025-11-30T23:59:00-03:00",
                 "displaySettings": {
                   "collectionIds": "182",
-                  "showForAllProducts": true
+                  "showForAllProducts": false
                 },
                 "title": "teste",
                 "promoName": "teste"
