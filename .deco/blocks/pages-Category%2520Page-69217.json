@@ -164,7 +164,8 @@
             "__resolveType": "website/matchers/pathname.ts",
             "case": {
               "type": "Includes",
-              "negate": false
+              "negate": false,
+              "pathname": "/zen-design"
             }
           }
         },
