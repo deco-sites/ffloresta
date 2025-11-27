@@ -206,7 +206,8 @@
         },
         "mobile": {
           "src": "https://assets.decocache.com/ffloresta/69b40089-2979-4077-9522-0f87b68682ee/image-(1).png"
-        }
+        },
+        "@type": "image"
       },
       "flagsConfig": {
         "__resolveType": "Configurações Globais de Flag"
