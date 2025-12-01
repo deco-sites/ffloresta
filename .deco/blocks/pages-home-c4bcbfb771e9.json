@@ -126,7 +126,7 @@
         "__resolveType": "vtex/loaders/intelligentSearch/productSearchValidator.ts",
         "props": {
           "sort": "price:desc",
-          "collection": "183",
+          "collection": "170",
           "count": 20,
           "hideUnavailableItems": false
         }
