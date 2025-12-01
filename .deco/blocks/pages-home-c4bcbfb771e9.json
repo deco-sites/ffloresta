@@ -49,30 +49,11 @@
         {
           "type": "image",
           "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/89017f01-8a68-4c67-9150-47aa1aae498e/dektop-acessorios.jpg",
-            "mobile": "https://assets.decocache.com/ffloresta/adac2852-b41a-409a-a8c9-ffb00dbe51fb/mobile-acessorios.jpg",
-            "action": {
-              "href": "/ferramentas/acessorios?initialMap=c&initialQuery=ferramentas&map=category-1%2Ccategory-2"
-            },
-            "alt": "Black Floresta"
-          }
-        },
-        {
-          "type": "image",
-          "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/92bd60ac-1a64-465c-a2a3-0e513c7c9a0c/frete-gratis-1-a-(1).jpg",
-            "mobile": "https://assets.decocache.com/ffloresta/ccac9c9d-44e2-4abf-ad6e-8746c74d3265/frete-gratis-2-(1).jpg",
-            "action": {}
-          }
-        },
-        {
-          "type": "image",
-          "data": {
+            "desktop": "https://assets.decocache.com/ffloresta/a3d62ec0-78bc-44e1-83bd-7bef4069d06c/dobradica1a.jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/2aa7bcb9-6398-48f2-95b2-b6a270919c41/dobradica1B.jpg",
             "action": {
               "href": "/ferragens/dobradicas"
             },
-            "desktop": "https://assets.decocache.com/ffloresta/a3d62ec0-78bc-44e1-83bd-7bef4069d06c/dobradica1a.jpg",
-            "mobile": "https://assets.decocache.com/ffloresta/2aa7bcb9-6398-48f2-95b2-b6a270919c41/dobradica1B.jpg",
             "alt": "Dobradiças"
           }
         },
@@ -88,34 +69,22 @@
           }
         },
         {
-          "type": "video",
+          "type": "image",
           "data": {
-            "alt": "floresta",
             "action": {},
-            "desktop": "https://assets.decocache.com/ffloresta/00e802d6-b81c-4d00-af16-b57c98888214/1029(1).mp4",
-            "mobile": "https://assets.decocache.com/ffloresta/64e04543-f667-4066-a37d-a62f96920820/video-mobile-frete-2.mp4"
+            "desktop": "https://assets.decocache.com/ffloresta/92bd60ac-1a64-465c-a2a3-0e513c7c9a0c/frete-gratis-1-a-(1).jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/ccac9c9d-44e2-4abf-ad6e-8746c74d3265/frete-gratis-2-(1).jpg"
           }
         },
         {
           "type": "image",
           "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/ba719365-e939-42f3-a7aa-3ed726603dca/5-(1).jpg",
-            "mobile": "https://assets.decocache.com/ffloresta/72547cdf-62bf-4a31-9cd0-d67d8bd269f1/5a.jpg",
+            "desktop": "https://assets.decocache.com/ffloresta/89017f01-8a68-4c67-9150-47aa1aae498e/dektop-acessorios.jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/adac2852-b41a-409a-a8c9-ffb00dbe51fb/mobile-acessorios.jpg",
             "action": {
-              "href": "/ferragens/corredicas"
+              "href": "/ferramentas/acessorios?initialMap=c&initialQuery=ferramentas&map=category-1%2Ccategory-2"
             },
-            "alt": "10% de desconto em corrediças"
-          }
-        },
-        {
-          "type": "image",
-          "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/818abb70-13e8-40a9-83f5-2f4411f359bd/toalheiro-desk.jpg",
-            "mobile": "https://assets.decocache.com/ffloresta/90db4535-fe15-4d73-b4cc-49c4d13ed9a1/toalheiro-mobile.jpg",
-            "action": {
-              "href": "/ambientes/banheiro/toalheiros-eletricos"
-            },
-            "alt": "7% de desconto em toalheiro térmico"
+            "alt": "Black Floresta"
           }
         }
       ],
