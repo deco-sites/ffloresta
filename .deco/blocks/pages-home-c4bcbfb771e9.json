@@ -59,7 +59,10 @@
           "data": {
             "desktop": "https://assets.decocache.com/ffloresta/89017f01-8a68-4c67-9150-47aa1aae498e/dektop-acessorios.jpg",
             "mobile": "https://assets.decocache.com/ffloresta/adac2852-b41a-409a-a8c9-ffb00dbe51fb/mobile-acessorios.jpg",
-            "alt": "Black Floresta"
+            "alt": "Black Floresta",
+            "action": {
+              "href": "/ferramentas/acessorios?initialMap=c&initialQuery=ferramentas&map=category-1%2Ccategory-2"
+            }
           }
         },
         {
