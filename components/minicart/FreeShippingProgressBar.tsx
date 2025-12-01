@@ -9,7 +9,7 @@ interface Props {
 
 function FreeShippingProgressBar({ total, currency, locale }: Props) {
   const id = useId();
-  const target = 399;
+  const target = 590;
   const remaining = target - total;
   const percent = Math.floor((total / target) * 100);
 
