@@ -49,19 +49,16 @@
         {
           "type": "image",
           "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/847a9775-24fb-4909-af55-6d8d92122a1b/zen-desktop.jpg",
-            "mobile": "https://assets.decocache.com/ffloresta/a83fb366-b3c3-4f8e-b083-24716951e255/zen-mobile.jpg",
-            "action": {
-              "href": "/zen-design?initialMap=c&initialQuery=zen-design&map=brand"
-            },
-            "alt": "20 % de desconto em puxadores "
+            "desktop": "https://assets.decocache.com/ffloresta/92bd60ac-1a64-465c-a2a3-0e513c7c9a0c/frete-gratis-1-a-(1).jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/ccac9c9d-44e2-4abf-ad6e-8746c74d3265/frete-gratis-2-(1).jpg",
+            "action": {}
           }
         },
         {
           "type": "image",
           "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/129d3f80-3611-4ddb-9dc3-b241bef1951a/black-floresta.jpg",
-            "mobile": "https://assets.decocache.com/ffloresta/178a86c5-a321-41d2-877f-114ea8bc2411/black-floresta-2.jpg",
+            "desktop": "https://assets.decocache.com/ffloresta/89017f01-8a68-4c67-9150-47aa1aae498e/dektop-acessorios.jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/adac2852-b41a-409a-a8c9-ffb00dbe51fb/mobile-acessorios.jpg",
             "alt": "Black Floresta"
           }
         },
