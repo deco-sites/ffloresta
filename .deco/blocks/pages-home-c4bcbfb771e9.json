@@ -49,20 +49,20 @@
         {
           "type": "image",
           "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/92bd60ac-1a64-465c-a2a3-0e513c7c9a0c/frete-gratis-1-a-(1).jpg",
-            "mobile": "https://assets.decocache.com/ffloresta/ccac9c9d-44e2-4abf-ad6e-8746c74d3265/frete-gratis-2-(1).jpg",
-            "action": {}
+            "desktop": "https://assets.decocache.com/ffloresta/89017f01-8a68-4c67-9150-47aa1aae498e/dektop-acessorios.jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/adac2852-b41a-409a-a8c9-ffb00dbe51fb/mobile-acessorios.jpg",
+            "action": {
+              "href": "/ferramentas/acessorios?initialMap=c&initialQuery=ferramentas&map=category-1%2Ccategory-2"
+            },
+            "alt": "Black Floresta"
           }
         },
         {
           "type": "image",
           "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/89017f01-8a68-4c67-9150-47aa1aae498e/dektop-acessorios.jpg",
-            "mobile": "https://assets.decocache.com/ffloresta/adac2852-b41a-409a-a8c9-ffb00dbe51fb/mobile-acessorios.jpg",
-            "alt": "Black Floresta",
-            "action": {
-              "href": "/ferramentas/acessorios?initialMap=c&initialQuery=ferramentas&map=category-1%2Ccategory-2"
-            }
+            "desktop": "https://assets.decocache.com/ffloresta/92bd60ac-1a64-465c-a2a3-0e513c7c9a0c/frete-gratis-1-a-(1).jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/ccac9c9d-44e2-4abf-ad6e-8746c74d3265/frete-gratis-2-(1).jpg",
+            "action": {}
           }
         },
         {
@@ -79,10 +79,10 @@
         {
           "type": "image",
           "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/cf51235f-c96b-44f7-88ba-eddeffb8fc20/LIXEIRA-desktop.jpg",
-            "mobile": "https://assets.decocache.com/ffloresta/fa989879-8fda-4011-913b-c8bdbf14b9ad/banner-mobile.jpg",
+            "desktop": "https://assets.decocache.com/ffloresta/382e359f-a687-4fee-a9fe-58510815ef70/7-a-(1).jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/ed59cf4b-6404-42c8-8ac5-1261408a094b/7-c.jpg",
             "action": {
-              "href": "/184/hafele/brinox/masutti/vonder/tramontina/jomer/schmitt/fgv-tn?initialMap=c&initialQuery=184&map=productClusterIds%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand%2Cbrand"
+              "href": "/ferramentas/vonder?initialMap=c&initialQuery=ferramentas&map=category-1%2Cbrand"
             },
             "alt": "banner"
           }
