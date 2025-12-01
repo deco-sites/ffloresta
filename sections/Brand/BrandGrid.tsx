@@ -52,25 +52,25 @@ export interface VideoBanner {
 /** @title Item da Marca */
 export type BrandItem =
   | {
-      /** @title Imagem */
-      "@type": "image";
-      /** @title Dados da Imagem */
-      data: Banner;
-      /** @title Link */
-      href: string;
-      /** @title Rótulo */
-      label?: string;
-    }
+    /** @title Imagem */
+    "@type": "image";
+    /** @title Dados da Imagem */
+    data: Banner;
+    /** @title Link */
+    href: string;
+    /** @title Rótulo */
+    label?: string;
+  }
   | {
-      /** @title Vídeo */
-      "@type": "video";
-      /** @title Dados do Vídeo */
-      data: VideoBanner;
-      /** @title Link */
-      href: string;
-      /** @title Rótulo */
-      label?: string;
-    };
+    /** @title Vídeo */
+    "@type": "video";
+    /** @title Dados do Vídeo */
+    data: VideoBanner;
+    /** @title Link */
+    href: string;
+    /** @title Rótulo */
+    label?: string;
+  };
 
 export interface Props {
   /** @title Marcas */

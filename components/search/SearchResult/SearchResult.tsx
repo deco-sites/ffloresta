@@ -39,13 +39,13 @@ export interface BannerVideo {
 
 export type SearchBanner =
   | {
-      "@type": "image";
-      data: BannerImage;
-    }
+    "@type": "image";
+    data: BannerImage;
+  }
   | {
-      "@type": "video";
-      data: BannerVideo;
-    };
+    "@type": "video";
+    data: BannerVideo;
+  };
 
 export interface SeoText {
   title?: string;
@@ -81,21 +81,21 @@ function NotFound() {
             </h2>
             <ul className="mb-5">
               <li className="text-[13px] leading-[13px]">
-                <span className="text-lg inline-block mr-1">•</span> Verifique
-                se não há erro de digitação.
+                <span className="text-lg inline-block mr-1">•</span>{" "}
+                Verifique se não há erro de digitação.
               </li>
               <li className="text-[13px] leading-[13px]">
-                <span className="text-lg inline-block mr-1">•</span> Tente
-                utilizar uma única palavra.
+                <span className="text-lg inline-block mr-1">•</span>{" "}
+                Tente utilizar uma única palavra.
               </li>
               <li className="text-[13px] leading-[13px]">
-                <span className="text-lg inline-block mr-1">•</span> Tente
-                buscar por termos menos específicos e posteriormente use os
-                filtros da busca.
+                <span className="text-lg inline-block mr-1">•</span>{" "}
+                Tente buscar por termos menos específicos e posteriormente use
+                os filtros da busca.
               </li>
               <li className="text-[13px] leading-[13px]">
-                <span className="text-lg inline-block mr-1">•</span> Procure
-                utilizar sinônimos ao termo desejado.
+                <span className="text-lg inline-block mr-1">•</span>{" "}
+                Procure utilizar sinônimos ao termo desejado.
               </li>
             </ul>
           </div>
@@ -111,10 +111,9 @@ function BannerRenderer({ banner }: { banner: SearchBanner }) {
 
   if (banner["@type"] === "image") {
     const { data } = banner;
-    const imageSrc =
-      device === "mobile"
-        ? data.mobile || data.desktop
-        : data.desktop || data.mobile;
+    const imageSrc = device === "mobile"
+      ? data.mobile || data.desktop
+      : data.desktop || data.mobile;
 
     if (!imageSrc) {
       return null;
@@ -129,10 +128,9 @@ function BannerRenderer({ banner }: { banner: SearchBanner }) {
 
   if (banner["@type"] === "video") {
     const { data } = banner;
-    const videoSrc =
-      device === "mobile"
-        ? data.mobile || data.desktop
-        : data.desktop || data.mobile;
+    const videoSrc = device === "mobile"
+      ? data.mobile || data.desktop
+      : data.desktop || data.mobile;
 
     if (!videoSrc) {
       return null;
@@ -213,7 +211,7 @@ function PageResult(props: SectionProps<typeof loader>) {
       <div
         class={clx(
           "pb-2 sm:pb-10",
-          (!prevPageUrl || partial === "hideLess") && "hidden"
+          (!prevPageUrl || partial === "hideLess") && "hidden",
         )}
       >
         <a
@@ -251,7 +249,7 @@ function PageResult(props: SectionProps<typeof loader>) {
           "grid items-center",
           "grid-cols-2 gap-4", // Base
           "xl:grid-cols-4", // ≥1240px
-          "w-full"
+          "w-full",
         )}
       >
         {products?.map((product, index) => (
@@ -267,65 +265,67 @@ function PageResult(props: SectionProps<typeof loader>) {
       </div>
 
       <div class={clx("pt-5 sm:pt-10 w-full")}>
-        {infinite ? (
-          <div class="flex justify-center [&_section]:contents">
-            <a
-              rel="next"
-              class={clx(
-                "cursor-pointer",
-                (!nextPageUrl || partial === "hideMore") && "hidden"
-              )}
-              hx-swap="outerHTML show:parent:top"
-              hx-get={partialNext}
-            >
-              <span class="inline [.htmx-request_&]:hidden">
-                {" "}
-                <div class="p-2 rounded-full bg-[rgba(21,31,22,0.6)] backdrop-blur-[12px] transition-all duration-300 hover:bg-[rgba(21,31,22,0.8)]">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6 9L12 15L18 9"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
+        {infinite
+          ? (
+            <div class="flex justify-center [&_section]:contents">
+              <a
+                rel="next"
+                class={clx(
+                  "cursor-pointer",
+                  (!nextPageUrl || partial === "hideMore") && "hidden",
+                )}
+                hx-swap="outerHTML show:parent:top"
+                hx-get={partialNext}
+              >
+                <span class="inline [.htmx-request_&]:hidden">
+                  {" "}
+                  <div class="p-2 rounded-full bg-[rgba(21,31,22,0.6)] backdrop-blur-[12px] transition-all duration-300 hover:bg-[rgba(21,31,22,0.8)]">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6 9L12 15L18 9"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </span>
+                <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
+              </a>
+            </div>
+          )
+          : (
+            <div class={clx("join", infinite && "hidden")}>
+              <a
+                rel="prev"
+                aria-label="previous page link"
+                href={prevPageUrl ?? "#"}
+                disabled={!prevPageUrl}
+                class="btn btn-ghost join-item"
+              >
+                <Icon id="chevron-right" class="rotate-180" />
+              </a>
+              <span class="btn btn-ghost join-item">
+                Page {zeroIndexedOffsetPage + 1}
               </span>
-              <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
-            </a>
-          </div>
-        ) : (
-          <div class={clx("join", infinite && "hidden")}>
-            <a
-              rel="prev"
-              aria-label="previous page link"
-              href={prevPageUrl ?? "#"}
-              disabled={!prevPageUrl}
-              class="btn btn-ghost join-item"
-            >
-              <Icon id="chevron-right" class="rotate-180" />
-            </a>
-            <span class="btn btn-ghost join-item">
-              Page {zeroIndexedOffsetPage + 1}
-            </span>
-            <a
-              rel="next"
-              aria-label="next page link"
-              href={nextPageUrl ?? "#"}
-              disabled={!nextPageUrl}
-              class="btn btn-ghost join-item"
-            >
-              <Icon id="chevron-right" />
-            </a>
-          </div>
-        )}
+              <a
+                rel="next"
+                aria-label="next page link"
+                href={nextPageUrl ?? "#"}
+                disabled={!nextPageUrl}
+                class="btn btn-ghost join-item"
+              >
+                <Icon id="chevron-right" />
+              </a>
+            </div>
+          )}
       </div>
     </div>
   );
@@ -366,7 +366,7 @@ const setPageQuerystring = (page: string, id: string) => {
     history.replaceState(
       { prevPage, filters: url.searchParams.toString() },
       "",
-      url.href
+      url.href,
     );
   }).observe(element);
 };
@@ -382,17 +382,16 @@ function Result(props: SectionProps<typeof loader>) {
   const zeroIndexedOffsetPage = pageInfo.currentPage - startingPage;
   const offset = zeroIndexedOffsetPage * perPage;
 
-  const categoryTitle =
-    seoConfig?.pageTitle || breadcrumb.itemListElement?.at(-1)?.name;
+  const categoryTitle = seoConfig?.pageTitle ||
+    breadcrumb.itemListElement?.at(-1)?.name;
 
   const fallbackSeoText: SeoText = {
     title: typeof document !== "undefined" ? document.title : undefined,
-    description:
-      typeof document !== "undefined"
-        ? document
-            .querySelector("meta[name='description']")
-            ?.getAttribute("content") ?? undefined
-        : undefined,
+    description: typeof document !== "undefined"
+      ? document
+        .querySelector("meta[name='description']")
+        ?.getAttribute("content") ?? undefined
+      : undefined,
   };
 
   const seoText = props.seoText ?? fallbackSeoText;
@@ -429,9 +428,7 @@ function Result(props: SectionProps<typeof loader>) {
   return (
     <>
       <div id={container} {...viewItemListEvent} class="w-full">
-        {partial ? (
-          <PageResult {...props} />
-        ) : (
+        {partial ? <PageResult {...props} /> : (
           <>
             {/* Banner full width - fora do container */}
             {banner && <BannerRenderer banner={banner} />}
@@ -567,7 +564,7 @@ function Result(props: SectionProps<typeof loader>) {
           __html: useScript(
             setPageQuerystring,
             `${pageInfo.currentPage}`,
-            container
+            container,
           ),
         }}
       />

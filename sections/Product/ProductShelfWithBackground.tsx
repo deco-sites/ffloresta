@@ -148,8 +148,7 @@ export default function ProductShelfWithBackground({
     },
   });
 
-  const hasBg =
-    background &&
+  const hasBg = background &&
     (background["@type"] === "image"
       ? background.desktop.src && background.mobile.src
       : background.desktop && background.mobile);

@@ -4,9 +4,13 @@ import { useScript } from "@deco/deco/hooks";
 import { Context } from "@deco/deco";
 
 const serviceWorkerScript = () =>
-  addEventListener("load", () =>
-    navigator && navigator.serviceWorker &&
-    navigator.serviceWorker.register("/sw.js"));
+  addEventListener(
+    "load",
+    () =>
+      navigator &&
+      navigator.serviceWorker &&
+      navigator.serviceWorker.register("/sw.js"),
+  );
 
 export default defineApp(async (_req, ctx) => {
   const revision = await Context.active().release?.revision();
@@ -52,6 +56,14 @@ export default defineApp(async (_req, ctx) => {
           type="text/javascript"
           async
           src="//rate.trustvox.com.br/widget.js"
+        >
+        </script>
+
+        <script
+          type="text/javascript"
+          id=""
+          async
+          src="https://cdn.widde.io/widde.1.1.0.js?v=1.0"
         >
         </script>
       </Head>

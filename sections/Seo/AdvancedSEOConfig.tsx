@@ -73,7 +73,7 @@ export function loader(props: Props, req: Request) {
     defaultMetaTags.push(
       { name: "title", content: title, type: "name" },
       { name: "og:title", content: title, type: "property" },
-      { name: "twitter:title", content: title, type: "name" }
+      { name: "twitter:title", content: title, type: "name" },
     );
   }
 
@@ -82,7 +82,7 @@ export function loader(props: Props, req: Request) {
     defaultMetaTags.push(
       { name: "description", content: description, type: "name" },
       { name: "og:description", content: description, type: "property" },
-      { name: "twitter:description", content: description, type: "name" }
+      { name: "twitter:description", content: description, type: "name" },
     );
   }
 
@@ -90,7 +90,7 @@ export function loader(props: Props, req: Request) {
   defaultMetaTags.push(
     { name: "og:type", content: contentType, type: "property" },
     { name: "og:locale", content: language, type: "property" },
-    { name: "og:url", content: url.href, type: "property" }
+    { name: "og:url", content: url.href, type: "property" },
   );
 
   // Twitter meta tags básicas

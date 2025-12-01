@@ -35,17 +35,17 @@ export interface VideoBanner {
 
 export type BrandItem =
   | {
-      "@type": "image";
-      data: Banner;
-      href: string;
-      label?: string;
-    }
+    "@type": "image";
+    data: Banner;
+    href: string;
+    label?: string;
+  }
   | {
-      "@type": "video";
-      data: VideoBanner;
-      href: string;
-      label?: string;
-    };
+    "@type": "video";
+    data: VideoBanner;
+    href: string;
+    label?: string;
+  };
 
 interface Props {
   items: BrandItem[];
@@ -174,13 +174,13 @@ function Card(item: BrandItem) {
     </div>
   );
 
-  return item.href ? (
-    <a href={item.href} class="block w-full h-full">
-      {content}
-    </a>
-  ) : (
-    <div class="w-full h-full">{content}</div>
-  );
+  return item.href
+    ? (
+      <a href={item.href} class="block w-full h-full">
+        {content}
+      </a>
+    )
+    : <div class="w-full h-full">{content}</div>;
 }
 
 export default function BrandGridIsland({ title, cta, items, icon }: Props) {
@@ -335,7 +335,7 @@ export default function BrandGridIsland({ title, cta, items, icon }: Props) {
                 "sm:w-[calc(33.3%-(40px/3))]",
                 "md:w-[calc(25%-(60px/4))]",
                 "lg:w-[calc(20%-(80px/5))]",
-                "2xl:w-[calc(16.6%-(100px/6))]"
+                "2xl:w-[calc(16.6%-(100px/6))]",
               )}
             >
               <Card {...item} />
@@ -357,7 +357,7 @@ export default function BrandGridIsland({ title, cta, items, icon }: Props) {
                   class={clx(
                     "w-2 h-2 lg:w-3 lg:h-3 transition-all duration-300",
                     "border border-[#273D28]",
-                    activeDot === index ? "bg-[#273D28]" : "bg-transparent"
+                    activeDot === index ? "bg-[#273D28]" : "bg-transparent",
                   )}
                 />
               </button>

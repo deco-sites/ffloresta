@@ -33,7 +33,7 @@ export const setPageQuerystring = (page: string, id: string) => {
     history.replaceState(
       { prevPage, filters: url.searchParams.toString() },
       "",
-      url.href
+      url.href,
     );
   }).observe(element);
 };

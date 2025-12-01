@@ -11,21 +11,21 @@ export default function NotFound() {
           </h2>
           <ul className="mb-5">
             <li className="text-[13px] leading-[13px]">
-              <span className="text-lg inline-block mr-1">•</span> Verifique se
-              não há erro de digitação.
+              <span className="text-lg inline-block mr-1">•</span>{" "}
+              Verifique se não há erro de digitação.
             </li>
             <li className="text-[13px] leading-[13px]">
-              <span className="text-lg inline-block mr-1">•</span> Tente
-              utilizar uma única palavra.
+              <span className="text-lg inline-block mr-1">•</span>{" "}
+              Tente utilizar uma única palavra.
             </li>
             <li className="text-[13px] leading-[13px]">
-              <span className="text-lg inline-block mr-1">•</span> Tente buscar
-              por termos menos específicos e posteriormente use os filtros da
-              busca.
+              <span className="text-lg inline-block mr-1">•</span>{" "}
+              Tente buscar por termos menos específicos e posteriormente use os
+              filtros da busca.
             </li>
             <li className="text-[13px] leading-[13px]">
-              <span className="text-lg inline-block mr-1">•</span> Procure
-              utilizar sinônimos ao termo desejado.
+              <span className="text-lg inline-block mr-1">•</span>{" "}
+              Procure utilizar sinônimos ao termo desejado.
             </li>
           </ul>
         </div>

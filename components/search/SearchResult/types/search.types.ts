@@ -1,7 +1,7 @@
 import type {
+  HTMLWidget as HTML,
   ImageWidget,
   VideoWidget,
-  HTMLWidget as HTML,
 } from "apps/admin/widgets.ts";
 import type { ProductListingPage } from "apps/commerce/types.ts";
 
@@ -36,17 +36,17 @@ export interface BannerVideo {
 /** @title Banner da Página */
 export type SearchBanner =
   | {
-      /** @title Tipo */
-      "@type": "image";
-      /** @title Dados da Imagem */
-      data: BannerImage;
-    }
+    /** @title Tipo */
+    "@type": "image";
+    /** @title Dados da Imagem */
+    data: BannerImage;
+  }
   | {
-      /** @title Tipo */
-      "@type": "video";
-      /** @title Dados do Vídeo */
-      data: BannerVideo;
-    };
+    /** @title Tipo */
+    "@type": "video";
+    /** @title Dados do Vídeo */
+    data: BannerVideo;
+  };
 
 export interface SeoText {
   title?: string;
