@@ -3788,7 +3788,8 @@
             },
             "startingPage": 1,
             "seoText": {
-              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
+              "title": "Ferramentas Profissionais"
             },
             "topBanner": {
               "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
@@ -3907,14 +3908,18 @@
               "data": {
                 "desktop": "https://assets.decocache.com/ffloresta/d5c65356-ef00-4507-ba2d-923b296dfbff/Prancheta-1_5_upscayl_4x_upscayl-standard-4x.png",
                 "mobile": "https://assets.decocache.com/ffloresta/5783cb8b-d679-456e-a6f6-0aedca0e3b51/Prancheta-1_5.png",
-                "alt": "ferramentas"
+                "alt": "Ferramentas Profissionais"
               }
+            },
+            "seoConfig": {
+              "pageTitle": "Ferramentas Profissionais"
             }
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
             "case": {
-              "type": "Includes",
+              "type": "Equals",
+              "negate": false,
               "pathname": "/ferramentas"
             }
           }
