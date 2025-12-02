@@ -459,6 +459,9 @@
             "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
+            },
+            "seoConfig": {
+              "pageTitle": "Amortecedores E Pulsadores"
             }
           },
           "rule": {
@@ -608,6 +611,9 @@
             "title": "Corrediças",
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
+            },
+            "seoConfig": {
+              "pageTitle": "Corrediças"
             }
           },
           "rule": {
