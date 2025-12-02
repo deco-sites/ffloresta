@@ -116,8 +116,9 @@ export default function ProductDetails({
     <div class="w-full flex flex-col bg-white">
       <ProductStructuredData
         page={page}
-        siteUrl="https://www.ferragensfloresta.com.br/" // Configure isso conforme sua loja
-        logoUrl="https://assets.decocache.com/ffloresta/aae798a2-c101-47eb-b414-8057f7cb6378/logo-branco.svg" // Configure isso conforme sua loja
+        siteUrl="https://www.ferragensfloresta.com.br/"
+        logoUrl="https://assets.decocache.com/ffloresta/aae798a2-c101-47eb-b414-8057f7cb6378/logo-branco.svg"
+        storeName={"Ferragens Floresta"}
       />
 
       <div class="block lg:hidden mt-6">
