@@ -3435,19 +3435,23 @@
             "banner": {
               "@type": "image",
               "data": {
-                "alt": "puxadore",
+                "alt": "puxadores",
                 "desktop": "https://assets.decocache.com/ffloresta/2e615fa9-dae3-4829-9cac-a157fa73c974/Prancheta-1_upscayl_4x_upscayl-standard-4x.png",
                 "mobile": "https://assets.decocache.com/ffloresta/00229217-6ea1-4dda-82ed-ec31e0c2de55/Prancheta-12x.png"
               }
             },
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
+            },
+            "seoConfig": {
+              "pageTitle": "Puxadores"
             }
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
             "case": {
-              "type": "Includes",
+              "type": "Equals",
+              "negate": false,
               "pathname": "/puxadores"
             }
           }
