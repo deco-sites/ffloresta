@@ -1703,7 +1703,8 @@
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
             "case": {
-              "type": "Includes",
+              "type": "Equals",
+              "negate": false,
               "pathname": "/ferragens/dobradicas"
             }
           }
