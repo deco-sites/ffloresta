@@ -473,7 +473,8 @@
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
             "case": {
-              "type": "Equals"
+              "type": "Equals",
+              "pathname": "/zen-design"
             }
           }
         },
