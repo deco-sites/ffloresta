@@ -1388,13 +1388,19 @@
             "title": "Corrediças",
             "seoConfig": {
               "pageTitle": "Corrediças"
+            },
+            "banner": {
+              "data": {
+                "alt": "Corrediças"
+              }
             }
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
             "case": {
               "type": "Equals",
-              "negate": false
+              "negate": false,
+              "pathname": "/ferragens/corredicas"
             }
           }
         },
