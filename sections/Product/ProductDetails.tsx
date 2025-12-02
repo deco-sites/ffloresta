@@ -10,6 +10,7 @@ import Breadcrumb from "../../components/ui/Breadcrumb.tsx";
 import ProductBenefits from "../../components/product/ProductBenefits.tsx";
 import Section from "../../components/ui/Section.tsx";
 import type { Flag } from "../../loaders/flags-config.ts";
+import ProductStructuredData from "../../components/product/ProductStructuredData.tsx";
 
 interface Benefit {
   benefitImgSrc: Image;
@@ -46,18 +47,18 @@ export interface Props {
 
 function checkProductInCollections(
   page: ProductDetailsPage,
-  collectionIds: string,
+  collectionIds: string
 ): boolean {
   if (!page?.product) return false;
 
-  const productCollections = page.product.additionalProperty ||
-    page.product.isRelatedTo || [];
+  const productCollections =
+    page.product.additionalProperty || page.product.isRelatedTo || [];
 
   const targetCollectionIds = collectionIds.split(",").map((id) => id.trim());
 
   return productCollections.some((collection: any) => {
-    const collectionId = collection.propertyID || collection.value ||
-      collection.productGroupID;
+    const collectionId =
+      collection.propertyID || collection.value || collection.productGroupID;
 
     return (
       collectionId && targetCollectionIds.includes(collectionId.toString())
@@ -67,7 +68,7 @@ function checkProductInCollections(
 
 function getBannersToDisplay(
   page: ProductDetailsPage,
-  productBanners?: ProductBanner[],
+  productBanners?: ProductBanner[]
 ): ProductBanner[] {
   if (!productBanners || productBanners.length === 0) return [];
 
@@ -113,6 +114,12 @@ export default function ProductDetails({
 
   return (
     <div class="w-full flex flex-col bg-white">
+      <ProductStructuredData
+        page={page}
+        siteUrl="https://www.ferragensfloresta.com.br/" // Configure isso conforme sua loja
+        logoUrl="https://assets.decocache.com/ffloresta/aae798a2-c101-47eb-b414-8057f7cb6378/logo-branco.svg" // Configure isso conforme sua loja
+      />
+
       <div class="block lg:hidden mt-6">
         {bannersToDisplay.map((banner, index) => (
           <ProductPagePromoBannerIsland key={index} {...banner} />
@@ -129,7 +136,7 @@ export default function ProductDetails({
         class={clx(
           "container grid md:mt-8",
           "grid-cols-1 gap-9 py-0",
-          "lg:grid-cols-[1fr_380px] lg:gap-11",
+          "lg:grid-cols-[1fr_380px] lg:gap-11"
         )}
       >
         <div class="w-full flex flex-col">
