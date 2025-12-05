@@ -302,7 +302,8 @@
       "icon": "https://assets.decocache.com/ffloresta/411928eb-5e4b-4c3b-83d1-1c788f576a64/icon_prancheta.svg",
       "flagsConfig": {
         "__resolveType": "Configurações Globais de Flag"
-      }
+      },
+      "page": null
     },
     {
       "__resolveType": "site/sections/Content/BannerMosaic.tsx",
