@@ -24392,12 +24392,43 @@
       "variants": [
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Fechaduras Resistentes | Ferragens Floresta",
+            "description": "Descubra fechaduras de alta resistência na Ferragens Floresta. Segurança e durabilidade em diversos modelos. Compre online agora!"
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
             "case": {
-              "type": "Equals"
+              "type": "Equals",
+              "pathname": "/fechaduras"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Puxadores em Promoção | Ferragens Floresta",
+            "description": "Compre puxadores para móveis modernos na Ferragens Floresta. Modelos variados com qualidade e preço especial. Confira online!"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/puxadores"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Ferragens | Ferragens Floresta",
+            "description": "Encontre ferragens de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens"
             }
           }
         },
