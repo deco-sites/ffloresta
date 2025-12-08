@@ -24393,6 +24393,76 @@
         {
           "value": {
             "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Amortecedores e Pulsadores | Ferragens Floresta",
+            "description": "Encontre amortecedores e pulsadores de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens/amortecedores-e-pulsadores"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Acessórios de Móveis | Ferragens Floresta",
+            "description": "Confira acessórios funcionais para móveis e projetos. Praticidade, qualidade e entrega rápida na Ferragens Floresta."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens/acessorios"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Ferramentas de Qualidade | Ferragens Floresta",
+            "description": "Encontre ferramentas profissionais para seu projeto. Produtos duráveis e de alto desempenho na Ferragens Floresta. Veja ofertas!"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Ferragens para Ambientes | Ferragens Floresta",
+            "description": "Escolha ferragens ideais para cada ambiente da sua casa ou projeto. Qualidade e variedade na Ferragens Floresta."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Ferragens De Projetos | Ferragens Floresta",
+            "description": "Encontre ferragens de projetos de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens-de-projetos"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
             "title": "Fechaduras Resistentes | Ferragens Floresta",
             "description": "Descubra fechaduras de alta resistência na Ferragens Floresta. Segurança e durabilidade em diversos modelos. Compre online agora!"
           },
