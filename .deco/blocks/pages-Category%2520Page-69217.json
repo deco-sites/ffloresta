@@ -30592,6 +30592,174 @@
       "variants": [
         {
           "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens/corredicas/invisivel"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens/corredicas/especiais"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens/corredicas/apoio"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens/corredicas/acessorios"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens/acessorios/veda-porta"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens/acessorios/rodizios"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens/acessorios/prendedores-de-porta"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens/acessorios/pes-para-moveis"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens/acessorios/passa-cabos"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens/acessorios/ganchos-de-rede"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens/acessorios/fechos"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens/acessorios/diversos"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens/acessorios/batedores-para-porta"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens/acessorios/algarismos"
+            }
+          }
+        },
+        {
+          "value": {
             "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
             "title": "Suportes | Ferragens Floresta",
             "description": "Encontre suportes de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
