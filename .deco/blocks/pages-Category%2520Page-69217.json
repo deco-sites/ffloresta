@@ -30592,7 +30592,9 @@
       "variants": [
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Suportes | Ferragens Floresta",
+            "description": "Encontre suportes de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -30604,7 +30606,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Sistemas De Gavetas | Ferragens Floresta",
+            "description": "Encontre sistemas de gavetas de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -30616,7 +30620,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Rodapés | Ferragens Floresta",
+            "description": "Encontre rodapés de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -30628,7 +30634,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Químicos | Ferragens Floresta",
+            "description": "Encontre químicos de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -30640,7 +30648,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Pistões | Ferragens Floresta",
+            "description": "Encontre pistões de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -30652,7 +30662,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Molas | Ferragens Floresta",
+            "description": "Encontre molas de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -30664,7 +30676,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Kits De Portas | Ferragens Floresta",
+            "description": "Encontre kits de portas de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -30676,7 +30690,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Fixação | Ferragens Floresta",
+            "description": "Encontre fixação de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -30688,7 +30704,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Estruturas Tubulares | Ferragens Floresta",
+            "description": "Encontre estruturas tubulares de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -30700,7 +30718,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Elétrica E Iluminação | Ferragens Floresta",
+            "description": "Encontre elétrica e iluminação de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -30712,7 +30732,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Dobradiças | Ferragens Floresta",
+            "description": "Encontre dobradiças de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -30724,7 +30746,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Desempenador De Porta | Ferragens Floresta",
+            "description": "Encontre desempenador de porta de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -30736,7 +30760,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Corredicas | Ferragens Floresta",
+            "description": "Encontre corredicas de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -30748,7 +30774,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Articuladores Modernos | Ferragens Floresta",
+            "description": "Descubra articuladores para móveis que oferecem praticidade e design. Confira na Ferragens Floresta!"
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
