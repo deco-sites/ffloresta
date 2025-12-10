@@ -34,8 +34,2345 @@
             },
             "startingPage": 1,
             "seoText": {
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+            },
+            "topBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "categoryBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "filterBanner": {},
+            "bannerImage": {
+              "0": "h",
+              "1": "t",
+              "2": "t",
+              "3": "p",
+              "4": "s",
+              "5": ":",
+              "6": "/",
+              "7": "/",
+              "8": "a",
+              "9": "s",
+              "10": "s",
+              "11": "e",
+              "12": "t",
+              "13": "s",
+              "14": ".",
+              "15": "d",
+              "16": "e",
+              "17": "c",
+              "18": "o",
+              "19": "c",
+              "20": "a",
+              "21": "c",
+              "22": "h",
+              "23": "e",
+              "24": ".",
+              "25": "c",
+              "26": "o",
+              "27": "m",
+              "28": "/",
+              "29": "f",
+              "30": "f",
+              "31": "l",
+              "32": "o",
+              "33": "r",
+              "34": "e",
+              "35": "s",
+              "36": "t",
+              "37": "a",
+              "38": "/",
+              "39": "1",
+              "40": "2",
+              "41": "4",
+              "42": "9",
+              "43": "b",
+              "44": "f",
+              "45": "c",
+              "46": "6",
+              "47": "-",
+              "48": "d",
+              "49": "2",
+              "50": "8",
+              "51": "a",
+              "52": "-",
+              "53": "4",
+              "54": "b",
+              "55": "3",
+              "56": "d",
+              "57": "-",
+              "58": "8",
+              "59": "1",
+              "60": "f",
+              "61": "6",
+              "62": "-",
+              "63": "0",
+              "64": "e",
+              "65": "7",
+              "66": "b",
+              "67": "a",
+              "68": "f",
+              "69": "d",
+              "70": "9",
+              "71": "8",
+              "72": "c",
+              "73": "f",
+              "74": "6",
+              "75": "/",
+              "76": "P",
+              "77": "r",
+              "78": "a",
+              "79": "n",
+              "80": "c",
+              "81": "h",
+              "82": "e",
+              "83": "t",
+              "84": "a",
+              "85": "-",
+              "86": "1",
+              "87": "_",
+              "88": "3",
+              "89": "-",
+              "90": "(",
+              "91": "2",
+              "92": ")",
+              "93": ".",
+              "94": "p",
+              "95": "n",
+              "96": "g",
+              "altText": "Categoria"
+            },
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/ferramentas-manuais/bancada-e-cavaletes"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Product/SearchResult.tsx",
+            "page": {
+              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "count": 16,
+              "advancedConfigs": {
+                "includeOriginalAttributes": []
+              },
+              "pageOffset": 1,
+              "hideUnavailableItems": true
+            },
+            "layout": {
+              "columns": {
+                "mobile": 2,
+                "desktop": 4
+              },
+              "variant": "aside",
+              "pagination": "show-more"
+            },
+            "startingPage": 1,
+            "seoText": {
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+            },
+            "topBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "categoryBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "filterBanner": {},
+            "bannerImage": {
+              "0": "h",
+              "1": "t",
+              "2": "t",
+              "3": "p",
+              "4": "s",
+              "5": ":",
+              "6": "/",
+              "7": "/",
+              "8": "a",
+              "9": "s",
+              "10": "s",
+              "11": "e",
+              "12": "t",
+              "13": "s",
+              "14": ".",
+              "15": "d",
+              "16": "e",
+              "17": "c",
+              "18": "o",
+              "19": "c",
+              "20": "a",
+              "21": "c",
+              "22": "h",
+              "23": "e",
+              "24": ".",
+              "25": "c",
+              "26": "o",
+              "27": "m",
+              "28": "/",
+              "29": "f",
+              "30": "f",
+              "31": "l",
+              "32": "o",
+              "33": "r",
+              "34": "e",
+              "35": "s",
+              "36": "t",
+              "37": "a",
+              "38": "/",
+              "39": "1",
+              "40": "2",
+              "41": "4",
+              "42": "9",
+              "43": "b",
+              "44": "f",
+              "45": "c",
+              "46": "6",
+              "47": "-",
+              "48": "d",
+              "49": "2",
+              "50": "8",
+              "51": "a",
+              "52": "-",
+              "53": "4",
+              "54": "b",
+              "55": "3",
+              "56": "d",
+              "57": "-",
+              "58": "8",
+              "59": "1",
+              "60": "f",
+              "61": "6",
+              "62": "-",
+              "63": "0",
+              "64": "e",
+              "65": "7",
+              "66": "b",
+              "67": "a",
+              "68": "f",
+              "69": "d",
+              "70": "9",
+              "71": "8",
+              "72": "c",
+              "73": "f",
+              "74": "6",
+              "75": "/",
+              "76": "P",
+              "77": "r",
+              "78": "a",
+              "79": "n",
+              "80": "c",
+              "81": "h",
+              "82": "e",
+              "83": "t",
+              "84": "a",
+              "85": "-",
+              "86": "1",
+              "87": "_",
+              "88": "3",
+              "89": "-",
+              "90": "(",
+              "91": "2",
+              "92": ")",
+              "93": ".",
+              "94": "p",
+              "95": "n",
+              "96": "g",
+              "altText": "Categoria"
+            },
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/ferramentas-manuais/arcos-para-serras"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Product/SearchResult.tsx",
+            "page": {
+              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "count": 16,
+              "advancedConfigs": {
+                "includeOriginalAttributes": []
+              },
+              "pageOffset": 1,
+              "hideUnavailableItems": true
+            },
+            "layout": {
+              "columns": {
+                "mobile": 2,
+                "desktop": 4
+              },
+              "variant": "aside",
+              "pagination": "show-more"
+            },
+            "startingPage": 1,
+            "seoText": {
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+            },
+            "topBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "categoryBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "filterBanner": {},
+            "bannerImage": {
+              "0": "h",
+              "1": "t",
+              "2": "t",
+              "3": "p",
+              "4": "s",
+              "5": ":",
+              "6": "/",
+              "7": "/",
+              "8": "a",
+              "9": "s",
+              "10": "s",
+              "11": "e",
+              "12": "t",
+              "13": "s",
+              "14": ".",
+              "15": "d",
+              "16": "e",
+              "17": "c",
+              "18": "o",
+              "19": "c",
+              "20": "a",
+              "21": "c",
+              "22": "h",
+              "23": "e",
+              "24": ".",
+              "25": "c",
+              "26": "o",
+              "27": "m",
+              "28": "/",
+              "29": "f",
+              "30": "f",
+              "31": "l",
+              "32": "o",
+              "33": "r",
+              "34": "e",
+              "35": "s",
+              "36": "t",
+              "37": "a",
+              "38": "/",
+              "39": "1",
+              "40": "2",
+              "41": "4",
+              "42": "9",
+              "43": "b",
+              "44": "f",
+              "45": "c",
+              "46": "6",
+              "47": "-",
+              "48": "d",
+              "49": "2",
+              "50": "8",
+              "51": "a",
+              "52": "-",
+              "53": "4",
+              "54": "b",
+              "55": "3",
+              "56": "d",
+              "57": "-",
+              "58": "8",
+              "59": "1",
+              "60": "f",
+              "61": "6",
+              "62": "-",
+              "63": "0",
+              "64": "e",
+              "65": "7",
+              "66": "b",
+              "67": "a",
+              "68": "f",
+              "69": "d",
+              "70": "9",
+              "71": "8",
+              "72": "c",
+              "73": "f",
+              "74": "6",
+              "75": "/",
+              "76": "P",
+              "77": "r",
+              "78": "a",
+              "79": "n",
+              "80": "c",
+              "81": "h",
+              "82": "e",
+              "83": "t",
+              "84": "a",
+              "85": "-",
+              "86": "1",
+              "87": "_",
+              "88": "3",
+              "89": "-",
+              "90": "(",
+              "91": "2",
+              "92": ")",
+              "93": ".",
+              "94": "p",
+              "95": "n",
+              "96": "g",
+              "altText": "Categoria"
+            },
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/ferramentas-manuais/alicates"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Product/SearchResult.tsx",
+            "page": {
+              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "count": 16,
+              "advancedConfigs": {
+                "includeOriginalAttributes": []
+              },
+              "pageOffset": 1,
+              "hideUnavailableItems": true
+            },
+            "layout": {
+              "columns": {
+                "mobile": 2,
+                "desktop": 4
+              },
+              "variant": "aside",
+              "pagination": "show-more"
+            },
+            "startingPage": 1,
+            "seoText": {
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+            },
+            "topBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "categoryBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "filterBanner": {},
+            "bannerImage": {
+              "0": "h",
+              "1": "t",
+              "2": "t",
+              "3": "p",
+              "4": "s",
+              "5": ":",
+              "6": "/",
+              "7": "/",
+              "8": "a",
+              "9": "s",
+              "10": "s",
+              "11": "e",
+              "12": "t",
+              "13": "s",
+              "14": ".",
+              "15": "d",
+              "16": "e",
+              "17": "c",
+              "18": "o",
+              "19": "c",
+              "20": "a",
+              "21": "c",
+              "22": "h",
+              "23": "e",
+              "24": ".",
+              "25": "c",
+              "26": "o",
+              "27": "m",
+              "28": "/",
+              "29": "f",
+              "30": "f",
+              "31": "l",
+              "32": "o",
+              "33": "r",
+              "34": "e",
+              "35": "s",
+              "36": "t",
+              "37": "a",
+              "38": "/",
+              "39": "1",
+              "40": "2",
+              "41": "4",
+              "42": "9",
+              "43": "b",
+              "44": "f",
+              "45": "c",
+              "46": "6",
+              "47": "-",
+              "48": "d",
+              "49": "2",
+              "50": "8",
+              "51": "a",
+              "52": "-",
+              "53": "4",
+              "54": "b",
+              "55": "3",
+              "56": "d",
+              "57": "-",
+              "58": "8",
+              "59": "1",
+              "60": "f",
+              "61": "6",
+              "62": "-",
+              "63": "0",
+              "64": "e",
+              "65": "7",
+              "66": "b",
+              "67": "a",
+              "68": "f",
+              "69": "d",
+              "70": "9",
+              "71": "8",
+              "72": "c",
+              "73": "f",
+              "74": "6",
+              "75": "/",
+              "76": "P",
+              "77": "r",
+              "78": "a",
+              "79": "n",
+              "80": "c",
+              "81": "h",
+              "82": "e",
+              "83": "t",
+              "84": "a",
+              "85": "-",
+              "86": "1",
+              "87": "_",
+              "88": "3",
+              "89": "-",
+              "90": "(",
+              "91": "2",
+              "92": ")",
+              "93": ".",
+              "94": "p",
+              "95": "n",
+              "96": "g",
+              "altText": "Categoria"
+            },
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/ferramentas-eletricas/tupias"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Product/SearchResult.tsx",
+            "page": {
+              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "count": 16,
+              "advancedConfigs": {
+                "includeOriginalAttributes": []
+              },
+              "pageOffset": 1,
+              "hideUnavailableItems": true
+            },
+            "layout": {
+              "columns": {
+                "mobile": 2,
+                "desktop": 4
+              },
+              "variant": "aside",
+              "pagination": "show-more"
+            },
+            "startingPage": 1,
+            "seoText": {
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+            },
+            "topBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "categoryBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "filterBanner": {},
+            "bannerImage": {
+              "0": "h",
+              "1": "t",
+              "2": "t",
+              "3": "p",
+              "4": "s",
+              "5": ":",
+              "6": "/",
+              "7": "/",
+              "8": "a",
+              "9": "s",
+              "10": "s",
+              "11": "e",
+              "12": "t",
+              "13": "s",
+              "14": ".",
+              "15": "d",
+              "16": "e",
+              "17": "c",
+              "18": "o",
+              "19": "c",
+              "20": "a",
+              "21": "c",
+              "22": "h",
+              "23": "e",
+              "24": ".",
+              "25": "c",
+              "26": "o",
+              "27": "m",
+              "28": "/",
+              "29": "f",
+              "30": "f",
+              "31": "l",
+              "32": "o",
+              "33": "r",
+              "34": "e",
+              "35": "s",
+              "36": "t",
+              "37": "a",
+              "38": "/",
+              "39": "1",
+              "40": "2",
+              "41": "4",
+              "42": "9",
+              "43": "b",
+              "44": "f",
+              "45": "c",
+              "46": "6",
+              "47": "-",
+              "48": "d",
+              "49": "2",
+              "50": "8",
+              "51": "a",
+              "52": "-",
+              "53": "4",
+              "54": "b",
+              "55": "3",
+              "56": "d",
+              "57": "-",
+              "58": "8",
+              "59": "1",
+              "60": "f",
+              "61": "6",
+              "62": "-",
+              "63": "0",
+              "64": "e",
+              "65": "7",
+              "66": "b",
+              "67": "a",
+              "68": "f",
+              "69": "d",
+              "70": "9",
+              "71": "8",
+              "72": "c",
+              "73": "f",
+              "74": "6",
+              "75": "/",
+              "76": "P",
+              "77": "r",
+              "78": "a",
+              "79": "n",
+              "80": "c",
+              "81": "h",
+              "82": "e",
+              "83": "t",
+              "84": "a",
+              "85": "-",
+              "86": "1",
+              "87": "_",
+              "88": "3",
+              "89": "-",
+              "90": "(",
+              "91": "2",
+              "92": ")",
+              "93": ".",
+              "94": "p",
+              "95": "n",
+              "96": "g",
+              "altText": "Categoria"
+            },
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/ferramentas-eletricas/serras"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Product/SearchResult.tsx",
+            "page": {
+              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "count": 16,
+              "advancedConfigs": {
+                "includeOriginalAttributes": []
+              },
+              "pageOffset": 1,
+              "hideUnavailableItems": true
+            },
+            "layout": {
+              "columns": {
+                "mobile": 2,
+                "desktop": 4
+              },
+              "variant": "aside",
+              "pagination": "show-more"
+            },
+            "startingPage": 1,
+            "seoText": {
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+            },
+            "topBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "categoryBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "filterBanner": {},
+            "bannerImage": {
+              "0": "h",
+              "1": "t",
+              "2": "t",
+              "3": "p",
+              "4": "s",
+              "5": ":",
+              "6": "/",
+              "7": "/",
+              "8": "a",
+              "9": "s",
+              "10": "s",
+              "11": "e",
+              "12": "t",
+              "13": "s",
+              "14": ".",
+              "15": "d",
+              "16": "e",
+              "17": "c",
+              "18": "o",
+              "19": "c",
+              "20": "a",
+              "21": "c",
+              "22": "h",
+              "23": "e",
+              "24": ".",
+              "25": "c",
+              "26": "o",
+              "27": "m",
+              "28": "/",
+              "29": "f",
+              "30": "f",
+              "31": "l",
+              "32": "o",
+              "33": "r",
+              "34": "e",
+              "35": "s",
+              "36": "t",
+              "37": "a",
+              "38": "/",
+              "39": "1",
+              "40": "2",
+              "41": "4",
+              "42": "9",
+              "43": "b",
+              "44": "f",
+              "45": "c",
+              "46": "6",
+              "47": "-",
+              "48": "d",
+              "49": "2",
+              "50": "8",
+              "51": "a",
+              "52": "-",
+              "53": "4",
+              "54": "b",
+              "55": "3",
+              "56": "d",
+              "57": "-",
+              "58": "8",
+              "59": "1",
+              "60": "f",
+              "61": "6",
+              "62": "-",
+              "63": "0",
+              "64": "e",
+              "65": "7",
+              "66": "b",
+              "67": "a",
+              "68": "f",
+              "69": "d",
+              "70": "9",
+              "71": "8",
+              "72": "c",
+              "73": "f",
+              "74": "6",
+              "75": "/",
+              "76": "P",
+              "77": "r",
+              "78": "a",
+              "79": "n",
+              "80": "c",
+              "81": "h",
+              "82": "e",
+              "83": "t",
+              "84": "a",
+              "85": "-",
+              "86": "1",
+              "87": "_",
+              "88": "3",
+              "89": "-",
+              "90": "(",
+              "91": "2",
+              "92": ")",
+              "93": ".",
+              "94": "p",
+              "95": "n",
+              "96": "g",
+              "altText": "Categoria"
+            },
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/ferramentas-eletricas/serra-tico-tico"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Product/SearchResult.tsx",
+            "page": {
+              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "count": 16,
+              "advancedConfigs": {
+                "includeOriginalAttributes": []
+              },
+              "pageOffset": 1,
+              "hideUnavailableItems": true
+            },
+            "layout": {
+              "columns": {
+                "mobile": 2,
+                "desktop": 4
+              },
+              "variant": "aside",
+              "pagination": "show-more"
+            },
+            "startingPage": 1,
+            "seoText": {
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+            },
+            "topBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "categoryBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "filterBanner": {},
+            "bannerImage": {
+              "0": "h",
+              "1": "t",
+              "2": "t",
+              "3": "p",
+              "4": "s",
+              "5": ":",
+              "6": "/",
+              "7": "/",
+              "8": "a",
+              "9": "s",
+              "10": "s",
+              "11": "e",
+              "12": "t",
+              "13": "s",
+              "14": ".",
+              "15": "d",
+              "16": "e",
+              "17": "c",
+              "18": "o",
+              "19": "c",
+              "20": "a",
+              "21": "c",
+              "22": "h",
+              "23": "e",
+              "24": ".",
+              "25": "c",
+              "26": "o",
+              "27": "m",
+              "28": "/",
+              "29": "f",
+              "30": "f",
+              "31": "l",
+              "32": "o",
+              "33": "r",
+              "34": "e",
+              "35": "s",
+              "36": "t",
+              "37": "a",
+              "38": "/",
+              "39": "1",
+              "40": "2",
+              "41": "4",
+              "42": "9",
+              "43": "b",
+              "44": "f",
+              "45": "c",
+              "46": "6",
+              "47": "-",
+              "48": "d",
+              "49": "2",
+              "50": "8",
+              "51": "a",
+              "52": "-",
+              "53": "4",
+              "54": "b",
+              "55": "3",
+              "56": "d",
+              "57": "-",
+              "58": "8",
+              "59": "1",
+              "60": "f",
+              "61": "6",
+              "62": "-",
+              "63": "0",
+              "64": "e",
+              "65": "7",
+              "66": "b",
+              "67": "a",
+              "68": "f",
+              "69": "d",
+              "70": "9",
+              "71": "8",
+              "72": "c",
+              "73": "f",
+              "74": "6",
+              "75": "/",
+              "76": "P",
+              "77": "r",
+              "78": "a",
+              "79": "n",
+              "80": "c",
+              "81": "h",
+              "82": "e",
+              "83": "t",
+              "84": "a",
+              "85": "-",
+              "86": "1",
+              "87": "_",
+              "88": "3",
+              "89": "-",
+              "90": "(",
+              "91": "2",
+              "92": ")",
+              "93": ".",
+              "94": "p",
+              "95": "n",
+              "96": "g",
+              "altText": "Categoria"
+            },
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/ferramentas-eletricas/retificadoras"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Product/SearchResult.tsx",
+            "page": {
+              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "count": 16,
+              "advancedConfigs": {
+                "includeOriginalAttributes": []
+              },
+              "pageOffset": 1,
+              "hideUnavailableItems": true
+            },
+            "layout": {
+              "columns": {
+                "mobile": 2,
+                "desktop": 4
+              },
+              "variant": "aside",
+              "pagination": "show-more"
+            },
+            "startingPage": 1,
+            "seoText": {
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+            },
+            "topBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "categoryBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "filterBanner": {},
+            "bannerImage": {
+              "0": "h",
+              "1": "t",
+              "2": "t",
+              "3": "p",
+              "4": "s",
+              "5": ":",
+              "6": "/",
+              "7": "/",
+              "8": "a",
+              "9": "s",
+              "10": "s",
+              "11": "e",
+              "12": "t",
+              "13": "s",
+              "14": ".",
+              "15": "d",
+              "16": "e",
+              "17": "c",
+              "18": "o",
+              "19": "c",
+              "20": "a",
+              "21": "c",
+              "22": "h",
+              "23": "e",
+              "24": ".",
+              "25": "c",
+              "26": "o",
+              "27": "m",
+              "28": "/",
+              "29": "f",
+              "30": "f",
+              "31": "l",
+              "32": "o",
+              "33": "r",
+              "34": "e",
+              "35": "s",
+              "36": "t",
+              "37": "a",
+              "38": "/",
+              "39": "1",
+              "40": "2",
+              "41": "4",
+              "42": "9",
+              "43": "b",
+              "44": "f",
+              "45": "c",
+              "46": "6",
+              "47": "-",
+              "48": "d",
+              "49": "2",
+              "50": "8",
+              "51": "a",
+              "52": "-",
+              "53": "4",
+              "54": "b",
+              "55": "3",
+              "56": "d",
+              "57": "-",
+              "58": "8",
+              "59": "1",
+              "60": "f",
+              "61": "6",
+              "62": "-",
+              "63": "0",
+              "64": "e",
+              "65": "7",
+              "66": "b",
+              "67": "a",
+              "68": "f",
+              "69": "d",
+              "70": "9",
+              "71": "8",
+              "72": "c",
+              "73": "f",
+              "74": "6",
+              "75": "/",
+              "76": "P",
+              "77": "r",
+              "78": "a",
+              "79": "n",
+              "80": "c",
+              "81": "h",
+              "82": "e",
+              "83": "t",
+              "84": "a",
+              "85": "-",
+              "86": "1",
+              "87": "_",
+              "88": "3",
+              "89": "-",
+              "90": "(",
+              "91": "2",
+              "92": ")",
+              "93": ".",
+              "94": "p",
+              "95": "n",
+              "96": "g",
+              "altText": "Categoria"
+            },
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/ferramentas-eletricas/plainas"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Product/SearchResult.tsx",
+            "page": {
+              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "count": 16,
+              "advancedConfigs": {
+                "includeOriginalAttributes": []
+              },
+              "pageOffset": 1,
+              "hideUnavailableItems": true
+            },
+            "layout": {
+              "columns": {
+                "mobile": 2,
+                "desktop": 4
+              },
+              "variant": "aside",
+              "pagination": "show-more"
+            },
+            "startingPage": 1,
+            "seoText": {
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+            },
+            "topBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "categoryBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "filterBanner": {},
+            "bannerImage": {
+              "0": "h",
+              "1": "t",
+              "2": "t",
+              "3": "p",
+              "4": "s",
+              "5": ":",
+              "6": "/",
+              "7": "/",
+              "8": "a",
+              "9": "s",
+              "10": "s",
+              "11": "e",
+              "12": "t",
+              "13": "s",
+              "14": ".",
+              "15": "d",
+              "16": "e",
+              "17": "c",
+              "18": "o",
+              "19": "c",
+              "20": "a",
+              "21": "c",
+              "22": "h",
+              "23": "e",
+              "24": ".",
+              "25": "c",
+              "26": "o",
+              "27": "m",
+              "28": "/",
+              "29": "f",
+              "30": "f",
+              "31": "l",
+              "32": "o",
+              "33": "r",
+              "34": "e",
+              "35": "s",
+              "36": "t",
+              "37": "a",
+              "38": "/",
+              "39": "1",
+              "40": "2",
+              "41": "4",
+              "42": "9",
+              "43": "b",
+              "44": "f",
+              "45": "c",
+              "46": "6",
+              "47": "-",
+              "48": "d",
+              "49": "2",
+              "50": "8",
+              "51": "a",
+              "52": "-",
+              "53": "4",
+              "54": "b",
+              "55": "3",
+              "56": "d",
+              "57": "-",
+              "58": "8",
+              "59": "1",
+              "60": "f",
+              "61": "6",
+              "62": "-",
+              "63": "0",
+              "64": "e",
+              "65": "7",
+              "66": "b",
+              "67": "a",
+              "68": "f",
+              "69": "d",
+              "70": "9",
+              "71": "8",
+              "72": "c",
+              "73": "f",
+              "74": "6",
+              "75": "/",
+              "76": "P",
+              "77": "r",
+              "78": "a",
+              "79": "n",
+              "80": "c",
+              "81": "h",
+              "82": "e",
+              "83": "t",
+              "84": "a",
+              "85": "-",
+              "86": "1",
+              "87": "_",
+              "88": "3",
+              "89": "-",
+              "90": "(",
+              "91": "2",
+              "92": ")",
+              "93": ".",
+              "94": "p",
+              "95": "n",
+              "96": "g",
+              "altText": "Categoria"
+            },
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/ferramentas-a-bateria/pistolas"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Product/SearchResult.tsx",
+            "page": {
+              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "count": 16,
+              "advancedConfigs": {
+                "includeOriginalAttributes": []
+              },
+              "pageOffset": 1,
+              "hideUnavailableItems": true,
+              "useCollectionName": false
+            },
+            "layout": {
+              "columns": {
+                "mobile": 2,
+                "desktop": 4
+              },
+              "variant": "aside",
+              "pagination": "show-more"
+            },
+            "startingPage": 1,
+            "seoText": {
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+            },
+            "topBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "categoryBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "filterBanner": {},
+            "bannerImage": {
+              "0": "h",
+              "1": "t",
+              "2": "t",
+              "3": "p",
+              "4": "s",
+              "5": ":",
+              "6": "/",
+              "7": "/",
+              "8": "a",
+              "9": "s",
+              "10": "s",
+              "11": "e",
+              "12": "t",
+              "13": "s",
+              "14": ".",
+              "15": "d",
+              "16": "e",
+              "17": "c",
+              "18": "o",
+              "19": "c",
+              "20": "a",
+              "21": "c",
+              "22": "h",
+              "23": "e",
+              "24": ".",
+              "25": "c",
+              "26": "o",
+              "27": "m",
+              "28": "/",
+              "29": "f",
+              "30": "f",
+              "31": "l",
+              "32": "o",
+              "33": "r",
+              "34": "e",
+              "35": "s",
+              "36": "t",
+              "37": "a",
+              "38": "/",
+              "39": "1",
+              "40": "2",
+              "41": "4",
+              "42": "9",
+              "43": "b",
+              "44": "f",
+              "45": "c",
+              "46": "6",
+              "47": "-",
+              "48": "d",
+              "49": "2",
+              "50": "8",
+              "51": "a",
+              "52": "-",
+              "53": "4",
+              "54": "b",
+              "55": "3",
+              "56": "d",
+              "57": "-",
+              "58": "8",
+              "59": "1",
+              "60": "f",
+              "61": "6",
+              "62": "-",
+              "63": "0",
+              "64": "e",
+              "65": "7",
+              "66": "b",
+              "67": "a",
+              "68": "f",
+              "69": "d",
+              "70": "9",
+              "71": "8",
+              "72": "c",
+              "73": "f",
+              "74": "6",
+              "75": "/",
+              "76": "P",
+              "77": "r",
+              "78": "a",
+              "79": "n",
+              "80": "c",
+              "81": "h",
+              "82": "e",
+              "83": "t",
+              "84": "a",
+              "85": "-",
+              "86": "1",
+              "87": "_",
+              "88": "3",
+              "89": "-",
+              "90": "(",
+              "91": "2",
+              "92": ")",
+              "93": ".",
+              "94": "p",
+              "95": "n",
+              "96": "g",
+              "altText": "Categoria"
+            },
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/ferramentas-a-bateria/multicortadoras"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Product/SearchResult.tsx",
+            "page": {
+              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "count": 16,
+              "advancedConfigs": {
+                "includeOriginalAttributes": []
+              },
+              "pageOffset": 1,
+              "hideUnavailableItems": true
+            },
+            "layout": {
+              "columns": {
+                "mobile": 2,
+                "desktop": 4
+              },
+              "variant": "aside",
+              "pagination": "show-more"
+            },
+            "startingPage": 1,
+            "seoText": {
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+            },
+            "topBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "categoryBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "filterBanner": {},
+            "bannerImage": {
+              "0": "h",
+              "1": "t",
+              "2": "t",
+              "3": "p",
+              "4": "s",
+              "5": ":",
+              "6": "/",
+              "7": "/",
+              "8": "a",
+              "9": "s",
+              "10": "s",
+              "11": "e",
+              "12": "t",
+              "13": "s",
+              "14": ".",
+              "15": "d",
+              "16": "e",
+              "17": "c",
+              "18": "o",
+              "19": "c",
+              "20": "a",
+              "21": "c",
+              "22": "h",
+              "23": "e",
+              "24": ".",
+              "25": "c",
+              "26": "o",
+              "27": "m",
+              "28": "/",
+              "29": "f",
+              "30": "f",
+              "31": "l",
+              "32": "o",
+              "33": "r",
+              "34": "e",
+              "35": "s",
+              "36": "t",
+              "37": "a",
+              "38": "/",
+              "39": "1",
+              "40": "2",
+              "41": "4",
+              "42": "9",
+              "43": "b",
+              "44": "f",
+              "45": "c",
+              "46": "6",
+              "47": "-",
+              "48": "d",
+              "49": "2",
+              "50": "8",
+              "51": "a",
+              "52": "-",
+              "53": "4",
+              "54": "b",
+              "55": "3",
+              "56": "d",
+              "57": "-",
+              "58": "8",
+              "59": "1",
+              "60": "f",
+              "61": "6",
+              "62": "-",
+              "63": "0",
+              "64": "e",
+              "65": "7",
+              "66": "b",
+              "67": "a",
+              "68": "f",
+              "69": "d",
+              "70": "9",
+              "71": "8",
+              "72": "c",
+              "73": "f",
+              "74": "6",
+              "75": "/",
+              "76": "P",
+              "77": "r",
+              "78": "a",
+              "79": "n",
+              "80": "c",
+              "81": "h",
+              "82": "e",
+              "83": "t",
+              "84": "a",
+              "85": "-",
+              "86": "1",
+              "87": "_",
+              "88": "3",
+              "89": "-",
+              "90": "(",
+              "91": "2",
+              "92": ")",
+              "93": ".",
+              "94": "p",
+              "95": "n",
+              "96": "g",
+              "altText": "Categoria"
+            },
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/ferramentas-a-bateria/micro-retifica"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Product/SearchResult.tsx",
+            "page": {
+              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "count": 16,
+              "advancedConfigs": {
+                "includeOriginalAttributes": []
+              },
+              "pageOffset": 1,
+              "hideUnavailableItems": true
+            },
+            "layout": {
+              "columns": {
+                "mobile": 2,
+                "desktop": 4
+              },
+              "variant": "aside",
+              "pagination": "show-more"
+            },
+            "startingPage": 1,
+            "seoText": {
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+            },
+            "topBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "categoryBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "filterBanner": {},
+            "bannerImage": {
+              "0": "h",
+              "1": "t",
+              "2": "t",
+              "3": "p",
+              "4": "s",
+              "5": ":",
+              "6": "/",
+              "7": "/",
+              "8": "a",
+              "9": "s",
+              "10": "s",
+              "11": "e",
+              "12": "t",
+              "13": "s",
+              "14": ".",
+              "15": "d",
+              "16": "e",
+              "17": "c",
+              "18": "o",
+              "19": "c",
+              "20": "a",
+              "21": "c",
+              "22": "h",
+              "23": "e",
+              "24": ".",
+              "25": "c",
+              "26": "o",
+              "27": "m",
+              "28": "/",
+              "29": "f",
+              "30": "f",
+              "31": "l",
+              "32": "o",
+              "33": "r",
+              "34": "e",
+              "35": "s",
+              "36": "t",
+              "37": "a",
+              "38": "/",
+              "39": "1",
+              "40": "2",
+              "41": "4",
+              "42": "9",
+              "43": "b",
+              "44": "f",
+              "45": "c",
+              "46": "6",
+              "47": "-",
+              "48": "d",
+              "49": "2",
+              "50": "8",
+              "51": "a",
+              "52": "-",
+              "53": "4",
+              "54": "b",
+              "55": "3",
+              "56": "d",
+              "57": "-",
+              "58": "8",
+              "59": "1",
+              "60": "f",
+              "61": "6",
+              "62": "-",
+              "63": "0",
+              "64": "e",
+              "65": "7",
+              "66": "b",
+              "67": "a",
+              "68": "f",
+              "69": "d",
+              "70": "9",
+              "71": "8",
+              "72": "c",
+              "73": "f",
+              "74": "6",
+              "75": "/",
+              "76": "P",
+              "77": "r",
+              "78": "a",
+              "79": "n",
+              "80": "c",
+              "81": "h",
+              "82": "e",
+              "83": "t",
+              "84": "a",
+              "85": "-",
+              "86": "1",
+              "87": "_",
+              "88": "3",
+              "89": "-",
+              "90": "(",
+              "91": "2",
+              "92": ")",
+              "93": ".",
+              "94": "p",
+              "95": "n",
+              "96": "g",
+              "altText": "Categoria"
+            },
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/ferramentas-a-bateria/instrumentos-de-medicao"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Product/SearchResult.tsx",
+            "page": {
+              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "count": 16,
+              "advancedConfigs": {
+                "includeOriginalAttributes": []
+              },
+              "pageOffset": 1,
+              "hideUnavailableItems": true
+            },
+            "layout": {
+              "columns": {
+                "mobile": 2,
+                "desktop": 4
+              },
+              "variant": "aside",
+              "pagination": "show-more"
+            },
+            "startingPage": 1,
+            "seoText": {
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+            },
+            "topBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "categoryBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "filterBanner": {},
+            "bannerImage": {
+              "0": "h",
+              "1": "t",
+              "2": "t",
+              "3": "p",
+              "4": "s",
+              "5": ":",
+              "6": "/",
+              "7": "/",
+              "8": "a",
+              "9": "s",
+              "10": "s",
+              "11": "e",
+              "12": "t",
+              "13": "s",
+              "14": ".",
+              "15": "d",
+              "16": "e",
+              "17": "c",
+              "18": "o",
+              "19": "c",
+              "20": "a",
+              "21": "c",
+              "22": "h",
+              "23": "e",
+              "24": ".",
+              "25": "c",
+              "26": "o",
+              "27": "m",
+              "28": "/",
+              "29": "f",
+              "30": "f",
+              "31": "l",
+              "32": "o",
+              "33": "r",
+              "34": "e",
+              "35": "s",
+              "36": "t",
+              "37": "a",
+              "38": "/",
+              "39": "1",
+              "40": "2",
+              "41": "4",
+              "42": "9",
+              "43": "b",
+              "44": "f",
+              "45": "c",
+              "46": "6",
+              "47": "-",
+              "48": "d",
+              "49": "2",
+              "50": "8",
+              "51": "a",
+              "52": "-",
+              "53": "4",
+              "54": "b",
+              "55": "3",
+              "56": "d",
+              "57": "-",
+              "58": "8",
+              "59": "1",
+              "60": "f",
+              "61": "6",
+              "62": "-",
+              "63": "0",
+              "64": "e",
+              "65": "7",
+              "66": "b",
+              "67": "a",
+              "68": "f",
+              "69": "d",
+              "70": "9",
+              "71": "8",
+              "72": "c",
+              "73": "f",
+              "74": "6",
+              "75": "/",
+              "76": "P",
+              "77": "r",
+              "78": "a",
+              "79": "n",
+              "80": "c",
+              "81": "h",
+              "82": "e",
+              "83": "t",
+              "84": "a",
+              "85": "-",
+              "86": "1",
+              "87": "_",
+              "88": "3",
+              "89": "-",
+              "90": "(",
+              "91": "2",
+              "92": ")",
+              "93": ".",
+              "94": "p",
+              "95": "n",
+              "96": "g",
+              "altText": "Categoria"
+            },
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/ferramentas-a-bateria/furadeiras-e-parafusadeiras"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Product/SearchResult.tsx",
+            "page": {
+              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "count": 16,
+              "advancedConfigs": {
+                "includeOriginalAttributes": []
+              },
+              "pageOffset": 1,
+              "hideUnavailableItems": true
+            },
+            "layout": {
+              "columns": {
+                "mobile": 2,
+                "desktop": 4
+              },
+              "variant": "aside",
+              "pagination": "show-more"
+            },
+            "startingPage": 1,
+            "seoText": {
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+            },
+            "topBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "categoryBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "filterBanner": {},
+            "bannerImage": {
+              "0": "h",
+              "1": "t",
+              "2": "t",
+              "3": "p",
+              "4": "s",
+              "5": ":",
+              "6": "/",
+              "7": "/",
+              "8": "a",
+              "9": "s",
+              "10": "s",
+              "11": "e",
+              "12": "t",
+              "13": "s",
+              "14": ".",
+              "15": "d",
+              "16": "e",
+              "17": "c",
+              "18": "o",
+              "19": "c",
+              "20": "a",
+              "21": "c",
+              "22": "h",
+              "23": "e",
+              "24": ".",
+              "25": "c",
+              "26": "o",
+              "27": "m",
+              "28": "/",
+              "29": "f",
+              "30": "f",
+              "31": "l",
+              "32": "o",
+              "33": "r",
+              "34": "e",
+              "35": "s",
+              "36": "t",
+              "37": "a",
+              "38": "/",
+              "39": "1",
+              "40": "2",
+              "41": "4",
+              "42": "9",
+              "43": "b",
+              "44": "f",
+              "45": "c",
+              "46": "6",
+              "47": "-",
+              "48": "d",
+              "49": "2",
+              "50": "8",
+              "51": "a",
+              "52": "-",
+              "53": "4",
+              "54": "b",
+              "55": "3",
+              "56": "d",
+              "57": "-",
+              "58": "8",
+              "59": "1",
+              "60": "f",
+              "61": "6",
+              "62": "-",
+              "63": "0",
+              "64": "e",
+              "65": "7",
+              "66": "b",
+              "67": "a",
+              "68": "f",
+              "69": "d",
+              "70": "9",
+              "71": "8",
+              "72": "c",
+              "73": "f",
+              "74": "6",
+              "75": "/",
+              "76": "P",
+              "77": "r",
+              "78": "a",
+              "79": "n",
+              "80": "c",
+              "81": "h",
+              "82": "e",
+              "83": "t",
+              "84": "a",
+              "85": "-",
+              "86": "1",
+              "87": "_",
+              "88": "3",
+              "89": "-",
+              "90": "(",
+              "91": "2",
+              "92": ")",
+              "93": ".",
+              "94": "p",
+              "95": "n",
+              "96": "g",
+              "altText": "Categoria"
+            },
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/ferramentas-a-bateria/esmerilhadeiras"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Product/SearchResult.tsx",
+            "page": {
+              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "count": 16,
+              "advancedConfigs": {
+                "includeOriginalAttributes": []
+              },
+              "pageOffset": 1,
+              "hideUnavailableItems": true
+            },
+            "layout": {
+              "columns": {
+                "mobile": 2,
+                "desktop": 4
+              },
+              "variant": "aside",
+              "pagination": "show-more"
+            },
+            "startingPage": 1,
+            "seoText": {
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+            },
+            "topBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "categoryBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "filterBanner": {},
+            "bannerImage": {
+              "0": "h",
+              "1": "t",
+              "2": "t",
+              "3": "p",
+              "4": "s",
+              "5": ":",
+              "6": "/",
+              "7": "/",
+              "8": "a",
+              "9": "s",
+              "10": "s",
+              "11": "e",
+              "12": "t",
+              "13": "s",
+              "14": ".",
+              "15": "d",
+              "16": "e",
+              "17": "c",
+              "18": "o",
+              "19": "c",
+              "20": "a",
+              "21": "c",
+              "22": "h",
+              "23": "e",
+              "24": ".",
+              "25": "c",
+              "26": "o",
+              "27": "m",
+              "28": "/",
+              "29": "f",
+              "30": "f",
+              "31": "l",
+              "32": "o",
+              "33": "r",
+              "34": "e",
+              "35": "s",
+              "36": "t",
+              "37": "a",
+              "38": "/",
+              "39": "1",
+              "40": "2",
+              "41": "4",
+              "42": "9",
+              "43": "b",
+              "44": "f",
+              "45": "c",
+              "46": "6",
+              "47": "-",
+              "48": "d",
+              "49": "2",
+              "50": "8",
+              "51": "a",
+              "52": "-",
+              "53": "4",
+              "54": "b",
+              "55": "3",
+              "56": "d",
+              "57": "-",
+              "58": "8",
+              "59": "1",
+              "60": "f",
+              "61": "6",
+              "62": "-",
+              "63": "0",
+              "64": "e",
+              "65": "7",
+              "66": "b",
+              "67": "a",
+              "68": "f",
+              "69": "d",
+              "70": "9",
+              "71": "8",
+              "72": "c",
+              "73": "f",
+              "74": "6",
+              "75": "/",
+              "76": "P",
+              "77": "r",
+              "78": "a",
+              "79": "n",
+              "80": "c",
+              "81": "h",
+              "82": "e",
+              "83": "t",
+              "84": "a",
+              "85": "-",
+              "86": "1",
+              "87": "_",
+              "88": "3",
+              "89": "-",
+              "90": "(",
+              "91": "2",
+              "92": ")",
+              "93": ".",
+              "94": "p",
+              "95": "n",
+              "96": "g",
+              "altText": "Categoria"
+            },
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/ferramentas-a-bateria/detector"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Product/SearchResult.tsx",
+            "page": {
+              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "count": 16,
+              "advancedConfigs": {
+                "includeOriginalAttributes": []
+              },
+              "pageOffset": 1,
+              "hideUnavailableItems": true
+            },
+            "layout": {
+              "columns": {
+                "mobile": 2,
+                "desktop": 4
+              },
+              "variant": "aside",
+              "pagination": "show-more"
+            },
+            "startingPage": 1,
+            "seoText": {
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+            },
+            "topBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "categoryBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "filterBanner": {},
+            "bannerImage": {
+              "0": "h",
+              "1": "t",
+              "2": "t",
+              "3": "p",
+              "4": "s",
+              "5": ":",
+              "6": "/",
+              "7": "/",
+              "8": "a",
+              "9": "s",
+              "10": "s",
+              "11": "e",
+              "12": "t",
+              "13": "s",
+              "14": ".",
+              "15": "d",
+              "16": "e",
+              "17": "c",
+              "18": "o",
+              "19": "c",
+              "20": "a",
+              "21": "c",
+              "22": "h",
+              "23": "e",
+              "24": ".",
+              "25": "c",
+              "26": "o",
+              "27": "m",
+              "28": "/",
+              "29": "f",
+              "30": "f",
+              "31": "l",
+              "32": "o",
+              "33": "r",
+              "34": "e",
+              "35": "s",
+              "36": "t",
+              "37": "a",
+              "38": "/",
+              "39": "1",
+              "40": "2",
+              "41": "4",
+              "42": "9",
+              "43": "b",
+              "44": "f",
+              "45": "c",
+              "46": "6",
+              "47": "-",
+              "48": "d",
+              "49": "2",
+              "50": "8",
+              "51": "a",
+              "52": "-",
+              "53": "4",
+              "54": "b",
+              "55": "3",
+              "56": "d",
+              "57": "-",
+              "58": "8",
+              "59": "1",
+              "60": "f",
+              "61": "6",
+              "62": "-",
+              "63": "0",
+              "64": "e",
+              "65": "7",
+              "66": "b",
+              "67": "a",
+              "68": "f",
+              "69": "d",
+              "70": "9",
+              "71": "8",
+              "72": "c",
+              "73": "f",
+              "74": "6",
+              "75": "/",
+              "76": "P",
+              "77": "r",
+              "78": "a",
+              "79": "n",
+              "80": "c",
+              "81": "h",
+              "82": "e",
+              "83": "t",
+              "84": "a",
+              "85": "-",
+              "86": "1",
+              "87": "_",
+              "88": "3",
+              "89": "-",
+              "90": "(",
+              "91": "2",
+              "92": ")",
+              "93": ".",
+              "94": "p",
+              "95": "n",
+              "96": "g",
+              "altText": "Categoria"
+            },
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/ferramentas-a-bateria/chave-de-impacto"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Product/SearchResult.tsx",
+            "page": {
+              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "count": 16,
+              "advancedConfigs": {
+                "includeOriginalAttributes": []
+              },
+              "pageOffset": 1,
+              "hideUnavailableItems": true
+            },
+            "layout": {
+              "columns": {
+                "mobile": 2,
+                "desktop": 4
+              },
+              "variant": "aside",
+              "pagination": "show-more"
+            },
+            "startingPage": 1,
+            "seoText": {
               "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
-              "title": "Mandril"
+              "title": "Maletas e Caixas"
             },
             "topBanner": {
               "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
@@ -150,6 +2487,1711 @@
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
             },
+            "banner": {
+              "data": {
+                "alt": "Maletas e Caixas"
+              }
+            },
+            "seoConfig": {
+              "pageTitle": "Maletas e Caixas"
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/armazenamento/maletas-e-caixas"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Product/SearchResult.tsx",
+            "page": {
+              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "count": 16,
+              "advancedConfigs": {
+                "includeOriginalAttributes": []
+              },
+              "pageOffset": 1,
+              "hideUnavailableItems": true
+            },
+            "layout": {
+              "columns": {
+                "mobile": 2,
+                "desktop": 4
+              },
+              "variant": "aside",
+              "pagination": "show-more"
+            },
+            "startingPage": 1,
+            "seoText": {
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
+              "title": "Bolsas e Mochilas"
+            },
+            "topBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "categoryBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "filterBanner": {},
+            "bannerImage": {
+              "0": "h",
+              "1": "t",
+              "2": "t",
+              "3": "p",
+              "4": "s",
+              "5": ":",
+              "6": "/",
+              "7": "/",
+              "8": "a",
+              "9": "s",
+              "10": "s",
+              "11": "e",
+              "12": "t",
+              "13": "s",
+              "14": ".",
+              "15": "d",
+              "16": "e",
+              "17": "c",
+              "18": "o",
+              "19": "c",
+              "20": "a",
+              "21": "c",
+              "22": "h",
+              "23": "e",
+              "24": ".",
+              "25": "c",
+              "26": "o",
+              "27": "m",
+              "28": "/",
+              "29": "f",
+              "30": "f",
+              "31": "l",
+              "32": "o",
+              "33": "r",
+              "34": "e",
+              "35": "s",
+              "36": "t",
+              "37": "a",
+              "38": "/",
+              "39": "1",
+              "40": "2",
+              "41": "4",
+              "42": "9",
+              "43": "b",
+              "44": "f",
+              "45": "c",
+              "46": "6",
+              "47": "-",
+              "48": "d",
+              "49": "2",
+              "50": "8",
+              "51": "a",
+              "52": "-",
+              "53": "4",
+              "54": "b",
+              "55": "3",
+              "56": "d",
+              "57": "-",
+              "58": "8",
+              "59": "1",
+              "60": "f",
+              "61": "6",
+              "62": "-",
+              "63": "0",
+              "64": "e",
+              "65": "7",
+              "66": "b",
+              "67": "a",
+              "68": "f",
+              "69": "d",
+              "70": "9",
+              "71": "8",
+              "72": "c",
+              "73": "f",
+              "74": "6",
+              "75": "/",
+              "76": "P",
+              "77": "r",
+              "78": "a",
+              "79": "n",
+              "80": "c",
+              "81": "h",
+              "82": "e",
+              "83": "t",
+              "84": "a",
+              "85": "-",
+              "86": "1",
+              "87": "_",
+              "88": "3",
+              "89": "-",
+              "90": "(",
+              "91": "2",
+              "92": ")",
+              "93": ".",
+              "94": "p",
+              "95": "n",
+              "96": "g",
+              "altText": "Categoria"
+            },
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            },
+            "banner": {
+              "data": {
+                "alt": "Bolsas e Mochilas"
+              }
+            },
+            "seoConfig": {
+              "pageTitle": "Bolsas e Mochilas"
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/armazenamento/bolsas-e-mochilas"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Product/SearchResult.tsx",
+            "page": {
+              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "count": 16,
+              "advancedConfigs": {
+                "includeOriginalAttributes": []
+              },
+              "pageOffset": 1,
+              "hideUnavailableItems": true
+            },
+            "layout": {
+              "columns": {
+                "mobile": 2,
+                "desktop": 4
+              },
+              "variant": "aside",
+              "pagination": "show-more"
+            },
+            "startingPage": 1,
+            "seoText": {
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
+              "title": "Vazadores"
+            },
+            "topBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "categoryBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "filterBanner": {},
+            "bannerImage": {
+              "0": "h",
+              "1": "t",
+              "2": "t",
+              "3": "p",
+              "4": "s",
+              "5": ":",
+              "6": "/",
+              "7": "/",
+              "8": "a",
+              "9": "s",
+              "10": "s",
+              "11": "e",
+              "12": "t",
+              "13": "s",
+              "14": ".",
+              "15": "d",
+              "16": "e",
+              "17": "c",
+              "18": "o",
+              "19": "c",
+              "20": "a",
+              "21": "c",
+              "22": "h",
+              "23": "e",
+              "24": ".",
+              "25": "c",
+              "26": "o",
+              "27": "m",
+              "28": "/",
+              "29": "f",
+              "30": "f",
+              "31": "l",
+              "32": "o",
+              "33": "r",
+              "34": "e",
+              "35": "s",
+              "36": "t",
+              "37": "a",
+              "38": "/",
+              "39": "1",
+              "40": "2",
+              "41": "4",
+              "42": "9",
+              "43": "b",
+              "44": "f",
+              "45": "c",
+              "46": "6",
+              "47": "-",
+              "48": "d",
+              "49": "2",
+              "50": "8",
+              "51": "a",
+              "52": "-",
+              "53": "4",
+              "54": "b",
+              "55": "3",
+              "56": "d",
+              "57": "-",
+              "58": "8",
+              "59": "1",
+              "60": "f",
+              "61": "6",
+              "62": "-",
+              "63": "0",
+              "64": "e",
+              "65": "7",
+              "66": "b",
+              "67": "a",
+              "68": "f",
+              "69": "d",
+              "70": "9",
+              "71": "8",
+              "72": "c",
+              "73": "f",
+              "74": "6",
+              "75": "/",
+              "76": "P",
+              "77": "r",
+              "78": "a",
+              "79": "n",
+              "80": "c",
+              "81": "h",
+              "82": "e",
+              "83": "t",
+              "84": "a",
+              "85": "-",
+              "86": "1",
+              "87": "_",
+              "88": "3",
+              "89": "-",
+              "90": "(",
+              "91": "2",
+              "92": ")",
+              "93": ".",
+              "94": "p",
+              "95": "n",
+              "96": "g",
+              "altText": "Categoria"
+            },
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            },
+            "banner": {
+              "data": {
+                "alt": "Vazadores"
+              }
+            },
+            "seoConfig": {
+              "pageTitle": "Vazadores"
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/acessorios/vazadores"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Product/SearchResult.tsx",
+            "page": {
+              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "count": 16,
+              "advancedConfigs": {
+                "includeOriginalAttributes": []
+              },
+              "pageOffset": 1,
+              "hideUnavailableItems": true
+            },
+            "layout": {
+              "columns": {
+                "mobile": 2,
+                "desktop": 4
+              },
+              "variant": "aside",
+              "pagination": "show-more"
+            },
+            "startingPage": 1,
+            "seoText": {
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
+              "title": "Talhadeiras e Ponteiros"
+            },
+            "topBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "categoryBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "filterBanner": {},
+            "bannerImage": {
+              "0": "h",
+              "1": "t",
+              "2": "t",
+              "3": "p",
+              "4": "s",
+              "5": ":",
+              "6": "/",
+              "7": "/",
+              "8": "a",
+              "9": "s",
+              "10": "s",
+              "11": "e",
+              "12": "t",
+              "13": "s",
+              "14": ".",
+              "15": "d",
+              "16": "e",
+              "17": "c",
+              "18": "o",
+              "19": "c",
+              "20": "a",
+              "21": "c",
+              "22": "h",
+              "23": "e",
+              "24": ".",
+              "25": "c",
+              "26": "o",
+              "27": "m",
+              "28": "/",
+              "29": "f",
+              "30": "f",
+              "31": "l",
+              "32": "o",
+              "33": "r",
+              "34": "e",
+              "35": "s",
+              "36": "t",
+              "37": "a",
+              "38": "/",
+              "39": "1",
+              "40": "2",
+              "41": "4",
+              "42": "9",
+              "43": "b",
+              "44": "f",
+              "45": "c",
+              "46": "6",
+              "47": "-",
+              "48": "d",
+              "49": "2",
+              "50": "8",
+              "51": "a",
+              "52": "-",
+              "53": "4",
+              "54": "b",
+              "55": "3",
+              "56": "d",
+              "57": "-",
+              "58": "8",
+              "59": "1",
+              "60": "f",
+              "61": "6",
+              "62": "-",
+              "63": "0",
+              "64": "e",
+              "65": "7",
+              "66": "b",
+              "67": "a",
+              "68": "f",
+              "69": "d",
+              "70": "9",
+              "71": "8",
+              "72": "c",
+              "73": "f",
+              "74": "6",
+              "75": "/",
+              "76": "P",
+              "77": "r",
+              "78": "a",
+              "79": "n",
+              "80": "c",
+              "81": "h",
+              "82": "e",
+              "83": "t",
+              "84": "a",
+              "85": "-",
+              "86": "1",
+              "87": "_",
+              "88": "3",
+              "89": "-",
+              "90": "(",
+              "91": "2",
+              "92": ")",
+              "93": ".",
+              "94": "p",
+              "95": "n",
+              "96": "g",
+              "altText": "Categoria"
+            },
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            },
+            "products": null,
+            "banner": {
+              "data": {
+                "alt": "Talhadeiras e Ponteiros"
+              }
+            },
+            "seoConfig": {
+              "pageTitle": "Talhadeiras e Ponteiros"
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/acessorios/talhadeiras-e-ponteiros"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Product/SearchResult.tsx",
+            "page": {
+              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "count": 16,
+              "advancedConfigs": {
+                "includeOriginalAttributes": []
+              },
+              "pageOffset": 1,
+              "hideUnavailableItems": true
+            },
+            "layout": {
+              "columns": {
+                "mobile": 2,
+                "desktop": 4
+              },
+              "variant": "aside",
+              "pagination": "show-more"
+            },
+            "startingPage": 1,
+            "seoText": {
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
+              "title": "Suportes"
+            },
+            "topBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "categoryBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "filterBanner": {},
+            "bannerImage": {
+              "0": "h",
+              "1": "t",
+              "2": "t",
+              "3": "p",
+              "4": "s",
+              "5": ":",
+              "6": "/",
+              "7": "/",
+              "8": "a",
+              "9": "s",
+              "10": "s",
+              "11": "e",
+              "12": "t",
+              "13": "s",
+              "14": ".",
+              "15": "d",
+              "16": "e",
+              "17": "c",
+              "18": "o",
+              "19": "c",
+              "20": "a",
+              "21": "c",
+              "22": "h",
+              "23": "e",
+              "24": ".",
+              "25": "c",
+              "26": "o",
+              "27": "m",
+              "28": "/",
+              "29": "f",
+              "30": "f",
+              "31": "l",
+              "32": "o",
+              "33": "r",
+              "34": "e",
+              "35": "s",
+              "36": "t",
+              "37": "a",
+              "38": "/",
+              "39": "1",
+              "40": "2",
+              "41": "4",
+              "42": "9",
+              "43": "b",
+              "44": "f",
+              "45": "c",
+              "46": "6",
+              "47": "-",
+              "48": "d",
+              "49": "2",
+              "50": "8",
+              "51": "a",
+              "52": "-",
+              "53": "4",
+              "54": "b",
+              "55": "3",
+              "56": "d",
+              "57": "-",
+              "58": "8",
+              "59": "1",
+              "60": "f",
+              "61": "6",
+              "62": "-",
+              "63": "0",
+              "64": "e",
+              "65": "7",
+              "66": "b",
+              "67": "a",
+              "68": "f",
+              "69": "d",
+              "70": "9",
+              "71": "8",
+              "72": "c",
+              "73": "f",
+              "74": "6",
+              "75": "/",
+              "76": "P",
+              "77": "r",
+              "78": "a",
+              "79": "n",
+              "80": "c",
+              "81": "h",
+              "82": "e",
+              "83": "t",
+              "84": "a",
+              "85": "-",
+              "86": "1",
+              "87": "_",
+              "88": "3",
+              "89": "-",
+              "90": "(",
+              "91": "2",
+              "92": ")",
+              "93": ".",
+              "94": "p",
+              "95": "n",
+              "96": "g",
+              "altText": "Categoria"
+            },
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            },
+            "products": null,
+            "banner": {
+              "data": {
+                "alt": "Suportes"
+              }
+            },
+            "seoConfig": {
+              "pageTitle": "Suportes"
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/acessorios/suportes"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Product/SearchResult.tsx",
+            "page": {
+              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "count": 16,
+              "advancedConfigs": {
+                "includeOriginalAttributes": []
+              },
+              "pageOffset": 1,
+              "hideUnavailableItems": true
+            },
+            "layout": {
+              "columns": {
+                "mobile": 2,
+                "desktop": 4
+              },
+              "variant": "aside",
+              "pagination": "show-more"
+            },
+            "startingPage": 1,
+            "seoText": {
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
+              "title": "Soquetes"
+            },
+            "topBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "categoryBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "filterBanner": {},
+            "bannerImage": {
+              "0": "h",
+              "1": "t",
+              "2": "t",
+              "3": "p",
+              "4": "s",
+              "5": ":",
+              "6": "/",
+              "7": "/",
+              "8": "a",
+              "9": "s",
+              "10": "s",
+              "11": "e",
+              "12": "t",
+              "13": "s",
+              "14": ".",
+              "15": "d",
+              "16": "e",
+              "17": "c",
+              "18": "o",
+              "19": "c",
+              "20": "a",
+              "21": "c",
+              "22": "h",
+              "23": "e",
+              "24": ".",
+              "25": "c",
+              "26": "o",
+              "27": "m",
+              "28": "/",
+              "29": "f",
+              "30": "f",
+              "31": "l",
+              "32": "o",
+              "33": "r",
+              "34": "e",
+              "35": "s",
+              "36": "t",
+              "37": "a",
+              "38": "/",
+              "39": "1",
+              "40": "2",
+              "41": "4",
+              "42": "9",
+              "43": "b",
+              "44": "f",
+              "45": "c",
+              "46": "6",
+              "47": "-",
+              "48": "d",
+              "49": "2",
+              "50": "8",
+              "51": "a",
+              "52": "-",
+              "53": "4",
+              "54": "b",
+              "55": "3",
+              "56": "d",
+              "57": "-",
+              "58": "8",
+              "59": "1",
+              "60": "f",
+              "61": "6",
+              "62": "-",
+              "63": "0",
+              "64": "e",
+              "65": "7",
+              "66": "b",
+              "67": "a",
+              "68": "f",
+              "69": "d",
+              "70": "9",
+              "71": "8",
+              "72": "c",
+              "73": "f",
+              "74": "6",
+              "75": "/",
+              "76": "P",
+              "77": "r",
+              "78": "a",
+              "79": "n",
+              "80": "c",
+              "81": "h",
+              "82": "e",
+              "83": "t",
+              "84": "a",
+              "85": "-",
+              "86": "1",
+              "87": "_",
+              "88": "3",
+              "89": "-",
+              "90": "(",
+              "91": "2",
+              "92": ")",
+              "93": ".",
+              "94": "p",
+              "95": "n",
+              "96": "g",
+              "altText": "Categoria"
+            },
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            },
+            "products": null,
+            "banner": {
+              "data": {
+                "alt": "Soquetes"
+              }
+            },
+            "seoConfig": {
+              "pageTitle": "Soquetes"
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/acessorios/soquetes"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Product/SearchResult.tsx",
+            "page": {
+              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "count": 16,
+              "advancedConfigs": {
+                "includeOriginalAttributes": []
+              },
+              "pageOffset": 1,
+              "hideUnavailableItems": true
+            },
+            "layout": {
+              "columns": {
+                "mobile": 2,
+                "desktop": 4
+              },
+              "variant": "aside",
+              "pagination": "show-more"
+            },
+            "startingPage": 1,
+            "seoText": {
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
+              "title": "Serras"
+            },
+            "topBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "categoryBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "filterBanner": {},
+            "bannerImage": {
+              "0": "h",
+              "1": "t",
+              "2": "t",
+              "3": "p",
+              "4": "s",
+              "5": ":",
+              "6": "/",
+              "7": "/",
+              "8": "a",
+              "9": "s",
+              "10": "s",
+              "11": "e",
+              "12": "t",
+              "13": "s",
+              "14": ".",
+              "15": "d",
+              "16": "e",
+              "17": "c",
+              "18": "o",
+              "19": "c",
+              "20": "a",
+              "21": "c",
+              "22": "h",
+              "23": "e",
+              "24": ".",
+              "25": "c",
+              "26": "o",
+              "27": "m",
+              "28": "/",
+              "29": "f",
+              "30": "f",
+              "31": "l",
+              "32": "o",
+              "33": "r",
+              "34": "e",
+              "35": "s",
+              "36": "t",
+              "37": "a",
+              "38": "/",
+              "39": "1",
+              "40": "2",
+              "41": "4",
+              "42": "9",
+              "43": "b",
+              "44": "f",
+              "45": "c",
+              "46": "6",
+              "47": "-",
+              "48": "d",
+              "49": "2",
+              "50": "8",
+              "51": "a",
+              "52": "-",
+              "53": "4",
+              "54": "b",
+              "55": "3",
+              "56": "d",
+              "57": "-",
+              "58": "8",
+              "59": "1",
+              "60": "f",
+              "61": "6",
+              "62": "-",
+              "63": "0",
+              "64": "e",
+              "65": "7",
+              "66": "b",
+              "67": "a",
+              "68": "f",
+              "69": "d",
+              "70": "9",
+              "71": "8",
+              "72": "c",
+              "73": "f",
+              "74": "6",
+              "75": "/",
+              "76": "P",
+              "77": "r",
+              "78": "a",
+              "79": "n",
+              "80": "c",
+              "81": "h",
+              "82": "e",
+              "83": "t",
+              "84": "a",
+              "85": "-",
+              "86": "1",
+              "87": "_",
+              "88": "3",
+              "89": "-",
+              "90": "(",
+              "91": "2",
+              "92": ")",
+              "93": ".",
+              "94": "p",
+              "95": "n",
+              "96": "g",
+              "altText": "Categoria"
+            },
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            },
+            "products": null,
+            "banner": {
+              "data": {
+                "alt": "Serras"
+              }
+            },
+            "seoConfig": {
+              "pageTitle": "Serras"
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/acessorios/serras"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Product/SearchResult.tsx",
+            "page": {
+              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "count": 16,
+              "advancedConfigs": {
+                "includeOriginalAttributes": []
+              },
+              "pageOffset": 1,
+              "hideUnavailableItems": true
+            },
+            "layout": {
+              "columns": {
+                "mobile": 2,
+                "desktop": 4
+              },
+              "variant": "aside",
+              "pagination": "show-more"
+            },
+            "startingPage": 1,
+            "seoText": {
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
+              "title": "Serra Copo"
+            },
+            "topBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "categoryBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "filterBanner": {},
+            "bannerImage": {
+              "0": "h",
+              "1": "t",
+              "2": "t",
+              "3": "p",
+              "4": "s",
+              "5": ":",
+              "6": "/",
+              "7": "/",
+              "8": "a",
+              "9": "s",
+              "10": "s",
+              "11": "e",
+              "12": "t",
+              "13": "s",
+              "14": ".",
+              "15": "d",
+              "16": "e",
+              "17": "c",
+              "18": "o",
+              "19": "c",
+              "20": "a",
+              "21": "c",
+              "22": "h",
+              "23": "e",
+              "24": ".",
+              "25": "c",
+              "26": "o",
+              "27": "m",
+              "28": "/",
+              "29": "f",
+              "30": "f",
+              "31": "l",
+              "32": "o",
+              "33": "r",
+              "34": "e",
+              "35": "s",
+              "36": "t",
+              "37": "a",
+              "38": "/",
+              "39": "1",
+              "40": "2",
+              "41": "4",
+              "42": "9",
+              "43": "b",
+              "44": "f",
+              "45": "c",
+              "46": "6",
+              "47": "-",
+              "48": "d",
+              "49": "2",
+              "50": "8",
+              "51": "a",
+              "52": "-",
+              "53": "4",
+              "54": "b",
+              "55": "3",
+              "56": "d",
+              "57": "-",
+              "58": "8",
+              "59": "1",
+              "60": "f",
+              "61": "6",
+              "62": "-",
+              "63": "0",
+              "64": "e",
+              "65": "7",
+              "66": "b",
+              "67": "a",
+              "68": "f",
+              "69": "d",
+              "70": "9",
+              "71": "8",
+              "72": "c",
+              "73": "f",
+              "74": "6",
+              "75": "/",
+              "76": "P",
+              "77": "r",
+              "78": "a",
+              "79": "n",
+              "80": "c",
+              "81": "h",
+              "82": "e",
+              "83": "t",
+              "84": "a",
+              "85": "-",
+              "86": "1",
+              "87": "_",
+              "88": "3",
+              "89": "-",
+              "90": "(",
+              "91": "2",
+              "92": ")",
+              "93": ".",
+              "94": "p",
+              "95": "n",
+              "96": "g",
+              "altText": "Categoria"
+            },
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            },
+            "products": null,
+            "banner": {
+              "data": {
+                "alt": "Serra Copo"
+              }
+            },
+            "seoConfig": {
+              "pageTitle": "Serra Copo"
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/acessorios/serra-copo"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Product/SearchResult.tsx",
+            "page": {
+              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "count": 16,
+              "advancedConfigs": {
+                "includeOriginalAttributes": []
+              },
+              "pageOffset": 1,
+              "hideUnavailableItems": true
+            },
+            "layout": {
+              "columns": {
+                "mobile": 2,
+                "desktop": 4
+              },
+              "variant": "aside",
+              "pagination": "show-more"
+            },
+            "startingPage": 1,
+            "seoText": {
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
+              "title": "Rolamentos"
+            },
+            "topBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "categoryBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "filterBanner": {},
+            "bannerImage": {
+              "0": "h",
+              "1": "t",
+              "2": "t",
+              "3": "p",
+              "4": "s",
+              "5": ":",
+              "6": "/",
+              "7": "/",
+              "8": "a",
+              "9": "s",
+              "10": "s",
+              "11": "e",
+              "12": "t",
+              "13": "s",
+              "14": ".",
+              "15": "d",
+              "16": "e",
+              "17": "c",
+              "18": "o",
+              "19": "c",
+              "20": "a",
+              "21": "c",
+              "22": "h",
+              "23": "e",
+              "24": ".",
+              "25": "c",
+              "26": "o",
+              "27": "m",
+              "28": "/",
+              "29": "f",
+              "30": "f",
+              "31": "l",
+              "32": "o",
+              "33": "r",
+              "34": "e",
+              "35": "s",
+              "36": "t",
+              "37": "a",
+              "38": "/",
+              "39": "1",
+              "40": "2",
+              "41": "4",
+              "42": "9",
+              "43": "b",
+              "44": "f",
+              "45": "c",
+              "46": "6",
+              "47": "-",
+              "48": "d",
+              "49": "2",
+              "50": "8",
+              "51": "a",
+              "52": "-",
+              "53": "4",
+              "54": "b",
+              "55": "3",
+              "56": "d",
+              "57": "-",
+              "58": "8",
+              "59": "1",
+              "60": "f",
+              "61": "6",
+              "62": "-",
+              "63": "0",
+              "64": "e",
+              "65": "7",
+              "66": "b",
+              "67": "a",
+              "68": "f",
+              "69": "d",
+              "70": "9",
+              "71": "8",
+              "72": "c",
+              "73": "f",
+              "74": "6",
+              "75": "/",
+              "76": "P",
+              "77": "r",
+              "78": "a",
+              "79": "n",
+              "80": "c",
+              "81": "h",
+              "82": "e",
+              "83": "t",
+              "84": "a",
+              "85": "-",
+              "86": "1",
+              "87": "_",
+              "88": "3",
+              "89": "-",
+              "90": "(",
+              "91": "2",
+              "92": ")",
+              "93": ".",
+              "94": "p",
+              "95": "n",
+              "96": "g",
+              "altText": "Categoria"
+            },
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            },
+            "products": null,
+            "banner": {
+              "data": {
+                "alt": "Rolamentos"
+              }
+            },
+            "seoConfig": {
+              "pageTitle": "Rolamentos"
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/acessorios/rolamentos"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Product/SearchResult.tsx",
+            "page": {
+              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "count": 16,
+              "advancedConfigs": {
+                "includeOriginalAttributes": []
+              },
+              "pageOffset": 1,
+              "hideUnavailableItems": true
+            },
+            "layout": {
+              "columns": {
+                "mobile": 2,
+                "desktop": 4
+              },
+              "variant": "aside",
+              "pagination": "show-more"
+            },
+            "startingPage": 1,
+            "seoText": {
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
+              "title": "Pinos e Grampos"
+            },
+            "topBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "categoryBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "filterBanner": {},
+            "bannerImage": {
+              "0": "h",
+              "1": "t",
+              "2": "t",
+              "3": "p",
+              "4": "s",
+              "5": ":",
+              "6": "/",
+              "7": "/",
+              "8": "a",
+              "9": "s",
+              "10": "s",
+              "11": "e",
+              "12": "t",
+              "13": "s",
+              "14": ".",
+              "15": "d",
+              "16": "e",
+              "17": "c",
+              "18": "o",
+              "19": "c",
+              "20": "a",
+              "21": "c",
+              "22": "h",
+              "23": "e",
+              "24": ".",
+              "25": "c",
+              "26": "o",
+              "27": "m",
+              "28": "/",
+              "29": "f",
+              "30": "f",
+              "31": "l",
+              "32": "o",
+              "33": "r",
+              "34": "e",
+              "35": "s",
+              "36": "t",
+              "37": "a",
+              "38": "/",
+              "39": "1",
+              "40": "2",
+              "41": "4",
+              "42": "9",
+              "43": "b",
+              "44": "f",
+              "45": "c",
+              "46": "6",
+              "47": "-",
+              "48": "d",
+              "49": "2",
+              "50": "8",
+              "51": "a",
+              "52": "-",
+              "53": "4",
+              "54": "b",
+              "55": "3",
+              "56": "d",
+              "57": "-",
+              "58": "8",
+              "59": "1",
+              "60": "f",
+              "61": "6",
+              "62": "-",
+              "63": "0",
+              "64": "e",
+              "65": "7",
+              "66": "b",
+              "67": "a",
+              "68": "f",
+              "69": "d",
+              "70": "9",
+              "71": "8",
+              "72": "c",
+              "73": "f",
+              "74": "6",
+              "75": "/",
+              "76": "P",
+              "77": "r",
+              "78": "a",
+              "79": "n",
+              "80": "c",
+              "81": "h",
+              "82": "e",
+              "83": "t",
+              "84": "a",
+              "85": "-",
+              "86": "1",
+              "87": "_",
+              "88": "3",
+              "89": "-",
+              "90": "(",
+              "91": "2",
+              "92": ")",
+              "93": ".",
+              "94": "p",
+              "95": "n",
+              "96": "g",
+              "altText": "Categoria"
+            },
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            },
+            "products": null,
+            "banner": {
+              "data": {
+                "alt": "Pinos e Grampos"
+              }
+            },
+            "seoConfig": {
+              "pageTitle": "Pinos e Grampos"
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/acessorios/pinos-e-grampos"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Product/SearchResult.tsx",
+            "page": {
+              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "count": 16,
+              "advancedConfigs": {
+                "includeOriginalAttributes": []
+              },
+              "pageOffset": 1,
+              "hideUnavailableItems": true
+            },
+            "layout": {
+              "columns": {
+                "mobile": 2,
+                "desktop": 4
+              },
+              "variant": "aside",
+              "pagination": "show-more"
+            },
+            "startingPage": 1,
+            "seoText": {
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
+              "title": "Marcadores"
+            },
+            "topBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "categoryBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "filterBanner": {},
+            "bannerImage": {
+              "0": "h",
+              "1": "t",
+              "2": "t",
+              "3": "p",
+              "4": "s",
+              "5": ":",
+              "6": "/",
+              "7": "/",
+              "8": "a",
+              "9": "s",
+              "10": "s",
+              "11": "e",
+              "12": "t",
+              "13": "s",
+              "14": ".",
+              "15": "d",
+              "16": "e",
+              "17": "c",
+              "18": "o",
+              "19": "c",
+              "20": "a",
+              "21": "c",
+              "22": "h",
+              "23": "e",
+              "24": ".",
+              "25": "c",
+              "26": "o",
+              "27": "m",
+              "28": "/",
+              "29": "f",
+              "30": "f",
+              "31": "l",
+              "32": "o",
+              "33": "r",
+              "34": "e",
+              "35": "s",
+              "36": "t",
+              "37": "a",
+              "38": "/",
+              "39": "1",
+              "40": "2",
+              "41": "4",
+              "42": "9",
+              "43": "b",
+              "44": "f",
+              "45": "c",
+              "46": "6",
+              "47": "-",
+              "48": "d",
+              "49": "2",
+              "50": "8",
+              "51": "a",
+              "52": "-",
+              "53": "4",
+              "54": "b",
+              "55": "3",
+              "56": "d",
+              "57": "-",
+              "58": "8",
+              "59": "1",
+              "60": "f",
+              "61": "6",
+              "62": "-",
+              "63": "0",
+              "64": "e",
+              "65": "7",
+              "66": "b",
+              "67": "a",
+              "68": "f",
+              "69": "d",
+              "70": "9",
+              "71": "8",
+              "72": "c",
+              "73": "f",
+              "74": "6",
+              "75": "/",
+              "76": "P",
+              "77": "r",
+              "78": "a",
+              "79": "n",
+              "80": "c",
+              "81": "h",
+              "82": "e",
+              "83": "t",
+              "84": "a",
+              "85": "-",
+              "86": "1",
+              "87": "_",
+              "88": "3",
+              "89": "-",
+              "90": "(",
+              "91": "2",
+              "92": ")",
+              "93": ".",
+              "94": "p",
+              "95": "n",
+              "96": "g",
+              "altText": "Categoria"
+            },
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            },
+            "products": null,
+            "banner": {
+              "data": {
+                "alt": "Marcadores"
+              }
+            },
+            "seoConfig": {
+              "pageTitle": "Marcadores"
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/acessorios/marcadores"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Product/SearchResult.tsx",
+            "page": {
+              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "count": 16,
+              "advancedConfigs": {
+                "includeOriginalAttributes": []
+              },
+              "pageOffset": 1,
+              "hideUnavailableItems": true
+            },
+            "layout": {
+              "columns": {
+                "mobile": 2,
+                "desktop": 4
+              },
+              "variant": "aside",
+              "pagination": "show-more"
+            },
+            "startingPage": 1,
+            "seoText": {
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
+              "title": "Mandril"
+            },
+            "topBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "categoryBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "filterBanner": {},
+            "bannerImage": {
+              "0": "h",
+              "1": "t",
+              "2": "t",
+              "3": "p",
+              "4": "s",
+              "5": ":",
+              "6": "/",
+              "7": "/",
+              "8": "a",
+              "9": "s",
+              "10": "s",
+              "11": "e",
+              "12": "t",
+              "13": "s",
+              "14": ".",
+              "15": "d",
+              "16": "e",
+              "17": "c",
+              "18": "o",
+              "19": "c",
+              "20": "a",
+              "21": "c",
+              "22": "h",
+              "23": "e",
+              "24": ".",
+              "25": "c",
+              "26": "o",
+              "27": "m",
+              "28": "/",
+              "29": "f",
+              "30": "f",
+              "31": "l",
+              "32": "o",
+              "33": "r",
+              "34": "e",
+              "35": "s",
+              "36": "t",
+              "37": "a",
+              "38": "/",
+              "39": "1",
+              "40": "2",
+              "41": "4",
+              "42": "9",
+              "43": "b",
+              "44": "f",
+              "45": "c",
+              "46": "6",
+              "47": "-",
+              "48": "d",
+              "49": "2",
+              "50": "8",
+              "51": "a",
+              "52": "-",
+              "53": "4",
+              "54": "b",
+              "55": "3",
+              "56": "d",
+              "57": "-",
+              "58": "8",
+              "59": "1",
+              "60": "f",
+              "61": "6",
+              "62": "-",
+              "63": "0",
+              "64": "e",
+              "65": "7",
+              "66": "b",
+              "67": "a",
+              "68": "f",
+              "69": "d",
+              "70": "9",
+              "71": "8",
+              "72": "c",
+              "73": "f",
+              "74": "6",
+              "75": "/",
+              "76": "P",
+              "77": "r",
+              "78": "a",
+              "79": "n",
+              "80": "c",
+              "81": "h",
+              "82": "e",
+              "83": "t",
+              "84": "a",
+              "85": "-",
+              "86": "1",
+              "87": "_",
+              "88": "3",
+              "89": "-",
+              "90": "(",
+              "91": "2",
+              "92": ")",
+              "93": ".",
+              "94": "p",
+              "95": "n",
+              "96": "g",
+              "altText": "Categoria"
+            },
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            },
+            "products": null,
             "banner": {
               "data": {
                 "alt": "Mandril"
@@ -301,10 +4343,10 @@
               "96": "g",
               "altText": "Categoria"
             },
-            "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
             },
+            "products": null,
             "banner": {
               "data": {
                 "alt": "Lixas"
@@ -456,10 +4498,10 @@
               "96": "g",
               "altText": "Categoria"
             },
-            "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
             },
+            "products": null,
             "banner": {
               "data": {
                 "alt": "Fresas"
@@ -611,10 +4653,10 @@
               "96": "g",
               "altText": "Categoria"
             },
-            "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
             },
+            "products": null,
             "banner": {
               "data": {
                 "alt": "Escaradores"
@@ -766,10 +4808,10 @@
               "96": "g",
               "altText": "Categoria"
             },
-            "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
             },
+            "products": null,
             "banner": {
               "data": {
                 "alt": "Diversos"
@@ -921,10 +4963,10 @@
               "96": "g",
               "altText": "Categoria"
             },
-            "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
             },
+            "products": null,
             "banner": {
               "data": {
                 "alt": "Discos"
@@ -1076,10 +5118,10 @@
               "96": "g",
               "altText": "Categoria"
             },
-            "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
             },
+            "products": null,
             "banner": {
               "data": {
                 "alt": "Conectores e Engates"
@@ -1231,10 +5273,10 @@
               "96": "g",
               "altText": "Categoria"
             },
-            "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
             },
+            "products": null,
             "banner": {
               "data": {
                 "alt": "Carregadores"
@@ -1386,10 +5428,10 @@
               "96": "g",
               "altText": "Categoria"
             },
-            "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
             },
+            "products": null,
             "banner": {
               "data": {
                 "alt": "Brocas"
@@ -1541,10 +5583,10 @@
               "96": "g",
               "altText": "Categoria"
             },
-            "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
             },
+            "products": null,
             "banner": {
               "data": {
                 "alt": "Bits e Pontas"
@@ -1696,10 +5738,10 @@
               "96": "g",
               "altText": "Categoria"
             },
-            "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
             },
+            "products": null,
             "banner": {
               "data": {
                 "alt": "Baterias e Carregadores"
@@ -1851,10 +5893,10 @@
               "96": "g",
               "altText": "Categoria"
             },
-            "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
             },
+            "products": null,
             "banner": {
               "data": {
                 "alt": "Ferramentas Pneumáticas"
@@ -2006,10 +6048,10 @@
               "96": "g",
               "altText": "Categoria"
             },
-            "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
             },
+            "products": null,
             "banner": {
               "data": {
                 "alt": "Ferramentas Manuais"
@@ -2161,17 +6203,17 @@
               "96": "g",
               "altText": "Categoria"
             },
-            "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
+            },
+            "products": null,
+            "seoConfig": {
+              "pageTitle": "Ferramentas Elétricas"
             },
             "banner": {
               "data": {
                 "alt": "Ferramentas Elétricas"
               }
-            },
-            "seoConfig": {
-              "pageTitle": "Ferramentas Elétricas"
             }
           },
           "rule": {
@@ -2316,17 +6358,17 @@
               "96": "g",
               "altText": "Categoria"
             },
-            "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
+            },
+            "products": null,
+            "seoConfig": {
+              "pageTitle": "Ferramentas á Bateria"
             },
             "banner": {
               "data": {
                 "alt": "Ferramentas á Bateria"
               }
-            },
-            "seoConfig": {
-              "pageTitle": "Ferramentas á Bateria"
             }
           },
           "rule": {
@@ -2471,17 +6513,17 @@
               "96": "g",
               "altText": "Categoria"
             },
-            "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
+            },
+            "products": null,
+            "seoConfig": {
+              "pageTitle": "Armazenamento"
             },
             "banner": {
               "data": {
                 "alt": "Armazenamento"
               }
-            },
-            "seoConfig": {
-              "pageTitle": "Armazenamento"
             }
           },
           "rule": {
@@ -2626,17 +6668,17 @@
               "96": "g",
               "altText": "Categoria"
             },
-            "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
+            },
+            "products": null,
+            "seoConfig": {
+              "pageTitle": "Acessórios"
             },
             "banner": {
               "data": {
                 "alt": "Acessórios"
               }
-            },
-            "seoConfig": {
-              "pageTitle": "Acessórios"
             }
           },
           "rule": {
@@ -2781,17 +6823,17 @@
               "96": "g",
               "altText": "Categoria"
             },
-            "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
+            },
+            "products": null,
+            "seoConfig": {
+              "pageTitle": "Proteção"
             },
             "banner": {
               "data": {
                 "alt": "Proteção"
               }
-            },
-            "seoConfig": {
-              "pageTitle": "Proteção"
             }
           },
           "rule": {
@@ -2936,17 +6978,17 @@
               "96": "g",
               "altText": "Categoria"
             },
-            "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
+            },
+            "products": null,
+            "seoConfig": {
+              "pageTitle": "Porta Cintos e Gravatas"
             },
             "banner": {
               "data": {
                 "alt": "Porta Cintos e Gravatas"
               }
-            },
-            "seoConfig": {
-              "pageTitle": "Porta Cintos e Gravatas"
             }
           },
           "rule": {
@@ -3095,13 +7137,13 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
+            "seoConfig": {
+              "pageTitle": "Organizadores"
+            },
             "banner": {
               "data": {
                 "alt": "Organizadores"
               }
-            },
-            "seoConfig": {
-              "pageTitle": "Organizadores"
             }
           },
           "rule": {
@@ -3250,13 +7292,13 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
+            "seoConfig": {
+              "pageTitle": "Espelhos"
+            },
             "banner": {
               "data": {
                 "alt": "Espelhos"
               }
-            },
-            "seoConfig": {
-              "pageTitle": "Espelhos"
             }
           },
           "rule": {
@@ -3405,13 +7447,13 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
+            "seoConfig": {
+              "pageTitle": "Escadas"
+            },
             "banner": {
               "data": {
                 "alt": "Escadas"
               }
-            },
-            "seoConfig": {
-              "pageTitle": "Escadas"
             }
           },
           "rule": {
@@ -3560,13 +7602,13 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
+            "seoConfig": {
+              "pageTitle": "Calceiros"
+            },
             "banner": {
               "data": {
                 "alt": "Calceiros"
               }
-            },
-            "seoConfig": {
-              "pageTitle": "Calceiros"
             }
           },
           "rule": {
@@ -3715,13 +7757,13 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
+            "seoConfig": {
+              "pageTitle": "Cabideiros Led"
+            },
             "banner": {
               "data": {
                 "alt": "Cabideiros Led"
               }
-            },
-            "seoConfig": {
-              "pageTitle": "Cabideiros Led"
             }
           },
           "rule": {
@@ -3870,13 +7912,13 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
+            "seoConfig": {
+              "pageTitle": "Cabideiros"
+            },
             "banner": {
               "data": {
                 "alt": "Cabideiros"
               }
-            },
-            "seoConfig": {
-              "pageTitle": "Cabideiros"
             }
           },
           "rule": {
@@ -4025,13 +8067,13 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
+            "seoConfig": {
+              "pageTitle": "Acessórios para Móveis"
+            },
             "banner": {
               "data": {
                 "alt": "Acessórios para Móveis"
               }
-            },
-            "seoConfig": {
-              "pageTitle": "Acessórios para Móveis"
             }
           },
           "rule": {
@@ -4180,13 +8222,13 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
+            "seoConfig": {
+              "pageTitle": "Suportes De Tv"
+            },
             "banner": {
               "data": {
                 "alt": "Suportes De Tv"
               }
-            },
-            "seoConfig": {
-              "pageTitle": "Suportes De Tv"
             }
           },
           "rule": {
@@ -4335,13 +8377,13 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
+            "seoConfig": {
+              "pageTitle": "Jardinagem"
+            },
             "banner": {
               "data": {
                 "alt": "Jardinagem"
               }
-            },
-            "seoConfig": {
-              "pageTitle": "Jardinagem"
             }
           },
           "rule": {
@@ -4490,13 +8532,13 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
+            "seoConfig": {
+              "pageTitle": "Aquecedor de Ambiente"
+            },
             "banner": {
               "data": {
                 "alt": "Aquecedor de Ambiente"
               }
-            },
-            "seoConfig": {
-              "pageTitle": "Aquecedor de Ambiente"
             }
           },
           "rule": {
@@ -4645,13 +8687,13 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
+            "seoConfig": {
+              "pageTitle": "Torneira de Cozinha"
+            },
             "banner": {
               "data": {
                 "alt": "Torneira de Cozinha"
               }
-            },
-            "seoConfig": {
-              "pageTitle": "Torneira de Cozinha"
             }
           },
           "rule": {
@@ -4800,13 +8842,13 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
+            "seoConfig": {
+              "pageTitle": "Porta Temperos e Condimentos"
+            },
             "banner": {
               "data": {
                 "alt": "Porta Temperos e Condimentos"
               }
-            },
-            "seoConfig": {
-              "pageTitle": "Porta Temperos e Condimentos"
             }
           },
           "rule": {
@@ -4955,13 +8997,13 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
+            "seoConfig": {
+              "pageTitle": "Porta Garrafas"
+            },
             "banner": {
               "data": {
                 "alt": "Porta Garrafas"
               }
-            },
-            "seoConfig": {
-              "pageTitle": "Porta Garrafas"
             }
           },
           "rule": {
@@ -5110,13 +9152,13 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
+            "seoConfig": {
+              "pageTitle": "Organizador"
+            },
             "banner": {
               "data": {
                 "alt": "Organizador"
               }
-            },
-            "seoConfig": {
-              "pageTitle": "Organizador"
             }
           },
           "rule": {
@@ -5265,13 +9307,13 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
+            "seoConfig": {
+              "pageTitle": "Misturadores"
+            },
             "banner": {
               "data": {
                 "alt": "Misturadores"
               }
-            },
-            "seoConfig": {
-              "pageTitle": "Misturadores"
             }
           },
           "rule": {
@@ -5420,13 +9462,13 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
+            "seoConfig": {
+              "pageTitle": "Lixeiras de Cozinha"
+            },
             "banner": {
               "data": {
                 "alt": "Lixeiras de Cozinha"
               }
-            },
-            "seoConfig": {
-              "pageTitle": "Lixeiras de Cozinha"
             }
           },
           "rule": {
@@ -5575,13 +9617,13 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
+            "seoConfig": {
+              "pageTitle": "Grades de Ventilação"
+            },
             "banner": {
               "data": {
                 "alt": "Grades de Ventilação"
               }
-            },
-            "seoConfig": {
-              "pageTitle": "Grades de Ventilação"
             }
           },
           "rule": {
@@ -5730,13 +9772,13 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
+            "seoConfig": {
+              "pageTitle": "Gaveta Aramada"
+            },
             "banner": {
               "data": {
                 "alt": "Gaveta Aramada"
               }
-            },
-            "seoConfig": {
-              "pageTitle": "Gaveta Aramada"
             }
           },
           "rule": {
@@ -5885,13 +9927,13 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
+            "seoConfig": {
+              "pageTitle": "Fruteira"
+            },
             "banner": {
               "data": {
                 "alt": "Fruteira"
               }
-            },
-            "seoConfig": {
-              "pageTitle": "Fruteira"
             }
           },
           "rule": {
@@ -6040,13 +10082,13 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
+            "seoConfig": {
+              "pageTitle": "Escorredores de Louças"
+            },
             "banner": {
               "data": {
                 "alt": "Escorredores de Louças"
               }
-            },
-            "seoConfig": {
-              "pageTitle": "Escorredores de Louças"
             }
           },
           "rule": {
@@ -6195,13 +10237,13 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
+            "seoConfig": {
+              "pageTitle": "Divisor De Talheres"
+            },
             "banner": {
               "data": {
                 "alt": "Divisor De Talheres"
               }
-            },
-            "seoConfig": {
-              "pageTitle": "Divisor De Talheres"
             }
           },
           "rule": {
