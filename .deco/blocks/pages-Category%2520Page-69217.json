@@ -22,7 +22,7 @@
                 "includeOriginalAttributes": []
               },
               "pageOffset": 1,
-              "hideUnavailableItems": true
+              "hideUnavailableItems": false
             },
             "layout": {
               "columns": {
@@ -153,7 +153,8 @@
             "banner": {
               "data": {
                 "alt": "Sopradores"
-              }
+              },
+              "@type": "image"
             },
             "seoConfig": {
               "pageTitle": "Sopradores"
@@ -305,11 +306,6 @@
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
             },
-            "banner": {
-              "data": {
-                "alt": "Politriz"
-              }
-            },
             "seoConfig": {
               "pageTitle": "Politriz"
             }
@@ -459,11 +455,6 @@
             "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
-            },
-            "banner": {
-              "data": {
-                "alt": "Bancada e Cavaletes"
-              }
             },
             "seoConfig": {
               "pageTitle": "Bancada e Cavaletes"
@@ -615,11 +606,6 @@
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
             },
-            "banner": {
-              "data": {
-                "alt": "Arcos para Serras"
-              }
-            },
             "seoConfig": {
               "pageTitle": "Arcos para Serras"
             }
@@ -769,11 +755,6 @@
             "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
-            },
-            "banner": {
-              "data": {
-                "alt": "Alicates"
-              }
             },
             "seoConfig": {
               "pageTitle": "Alicates"
@@ -925,11 +906,6 @@
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
             },
-            "banner": {
-              "data": {
-                "alt": "Tupias"
-              }
-            },
             "seoConfig": {
               "pageTitle": "Tupias"
             }
@@ -1079,11 +1055,6 @@
             "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
-            },
-            "banner": {
-              "data": {
-                "alt": "Serras"
-              }
             },
             "seoConfig": {
               "pageTitle": "Serras"
@@ -1235,11 +1206,6 @@
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
             },
-            "banner": {
-              "data": {
-                "alt": "Serra Tico Tico"
-              }
-            },
             "seoConfig": {
               "pageTitle": "Serra Tico Tico"
             }
@@ -1389,11 +1355,6 @@
             "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
-            },
-            "banner": {
-              "data": {
-                "alt": "Retificadoras"
-              }
             },
             "seoConfig": {
               "pageTitle": "Retificadoras"
@@ -1545,11 +1506,6 @@
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
             },
-            "banner": {
-              "data": {
-                "alt": "Plainas"
-              }
-            },
             "seoConfig": {
               "pageTitle": "Plainas"
             }
@@ -1699,11 +1655,6 @@
             "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
-            },
-            "banner": {
-              "data": {
-                "alt": "Pistolas"
-              }
             },
             "seoConfig": {
               "pageTitle": "Pistolas"
@@ -1856,11 +1807,6 @@
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
             },
-            "banner": {
-              "data": {
-                "alt": "Multicortadoras"
-              }
-            },
             "seoConfig": {
               "pageTitle": "Multicortadoras"
             }
@@ -2010,11 +1956,6 @@
             "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
-            },
-            "banner": {
-              "data": {
-                "alt": "Micro Retifica"
-              }
             },
             "seoConfig": {
               "pageTitle": "Micro Retifica"
@@ -2166,11 +2107,6 @@
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
             },
-            "banner": {
-              "data": {
-                "alt": "Instrumentos de Medição"
-              }
-            },
             "seoConfig": {
               "pageTitle": "Instrumentos de Medição"
             }
@@ -2320,11 +2256,6 @@
             "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
-            },
-            "banner": {
-              "data": {
-                "alt": "Furadeiras e Parafusadeiras"
-              }
             },
             "seoConfig": {
               "pageTitle": "Furadeiras e Parafusadeiras"
@@ -2476,11 +2407,6 @@
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
             },
-            "banner": {
-              "data": {
-                "alt": "Esmerilhadeiras"
-              }
-            },
             "seoConfig": {
               "pageTitle": "Esmerilhadeiras"
             }
@@ -2630,11 +2556,6 @@
             "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
-            },
-            "banner": {
-              "data": {
-                "alt": "Detector"
-              }
             },
             "seoConfig": {
               "pageTitle": "Detector"
@@ -2786,11 +2707,6 @@
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
             },
-            "banner": {
-              "data": {
-                "alt": "Chave de Impacto"
-              }
-            },
             "seoConfig": {
               "pageTitle": "Chave de Impacto"
             }
@@ -2940,11 +2856,6 @@
             "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
-            },
-            "banner": {
-              "data": {
-                "alt": "Maletas e Caixas"
-              }
             },
             "seoConfig": {
               "pageTitle": "Maletas e Caixas"
@@ -3096,11 +3007,6 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
-            "banner": {
-              "data": {
-                "alt": "Bolsas e Mochilas"
-              }
-            },
             "seoConfig": {
               "pageTitle": "Bolsas e Mochilas"
             }
@@ -3251,11 +3157,6 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
-            "banner": {
-              "data": {
-                "alt": "Vazadores"
-              }
-            },
             "seoConfig": {
               "pageTitle": "Vazadores"
             }
@@ -7748,11 +7649,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Espelhos"
-            },
-            "banner": {
-              "data": {
-                "alt": "Espelhos"
-              }
             }
           },
           "rule": {
