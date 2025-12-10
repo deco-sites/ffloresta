@@ -34,7 +34,8 @@
             },
             "startingPage": 1,
             "seoText": {
-              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
+              "title": "Sopradores"
             },
             "topBanner": {
               "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
@@ -148,6 +149,324 @@
             "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
+            },
+            "banner": {
+              "data": {
+                "alt": "Sopradores"
+              }
+            },
+            "seoConfig": {
+              "pageTitle": "Sopradores"
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/ferramentas-eletricas/sopradores"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Product/SearchResult.tsx",
+            "page": {
+              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "count": 16,
+              "advancedConfigs": {
+                "includeOriginalAttributes": []
+              },
+              "pageOffset": 1,
+              "hideUnavailableItems": true
+            },
+            "layout": {
+              "columns": {
+                "mobile": 2,
+                "desktop": 4
+              },
+              "variant": "aside",
+              "pagination": "show-more"
+            },
+            "startingPage": 1,
+            "seoText": {
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
+              "title": "Politriz"
+            },
+            "topBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "categoryBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "filterBanner": {},
+            "bannerImage": {
+              "0": "h",
+              "1": "t",
+              "2": "t",
+              "3": "p",
+              "4": "s",
+              "5": ":",
+              "6": "/",
+              "7": "/",
+              "8": "a",
+              "9": "s",
+              "10": "s",
+              "11": "e",
+              "12": "t",
+              "13": "s",
+              "14": ".",
+              "15": "d",
+              "16": "e",
+              "17": "c",
+              "18": "o",
+              "19": "c",
+              "20": "a",
+              "21": "c",
+              "22": "h",
+              "23": "e",
+              "24": ".",
+              "25": "c",
+              "26": "o",
+              "27": "m",
+              "28": "/",
+              "29": "f",
+              "30": "f",
+              "31": "l",
+              "32": "o",
+              "33": "r",
+              "34": "e",
+              "35": "s",
+              "36": "t",
+              "37": "a",
+              "38": "/",
+              "39": "1",
+              "40": "2",
+              "41": "4",
+              "42": "9",
+              "43": "b",
+              "44": "f",
+              "45": "c",
+              "46": "6",
+              "47": "-",
+              "48": "d",
+              "49": "2",
+              "50": "8",
+              "51": "a",
+              "52": "-",
+              "53": "4",
+              "54": "b",
+              "55": "3",
+              "56": "d",
+              "57": "-",
+              "58": "8",
+              "59": "1",
+              "60": "f",
+              "61": "6",
+              "62": "-",
+              "63": "0",
+              "64": "e",
+              "65": "7",
+              "66": "b",
+              "67": "a",
+              "68": "f",
+              "69": "d",
+              "70": "9",
+              "71": "8",
+              "72": "c",
+              "73": "f",
+              "74": "6",
+              "75": "/",
+              "76": "P",
+              "77": "r",
+              "78": "a",
+              "79": "n",
+              "80": "c",
+              "81": "h",
+              "82": "e",
+              "83": "t",
+              "84": "a",
+              "85": "-",
+              "86": "1",
+              "87": "_",
+              "88": "3",
+              "89": "-",
+              "90": "(",
+              "91": "2",
+              "92": ")",
+              "93": ".",
+              "94": "p",
+              "95": "n",
+              "96": "g",
+              "altText": "Categoria"
+            },
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            },
+            "banner": {
+              "data": {
+                "alt": "Politriz"
+              }
+            },
+            "seoConfig": {
+              "pageTitle": "Politriz"
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/ferramentas-eletricas/politriz"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Product/SearchResult.tsx",
+            "page": {
+              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "count": 16,
+              "advancedConfigs": {
+                "includeOriginalAttributes": []
+              },
+              "pageOffset": 1,
+              "hideUnavailableItems": true
+            },
+            "layout": {
+              "columns": {
+                "mobile": 2,
+                "desktop": 4
+              },
+              "variant": "aside",
+              "pagination": "show-more"
+            },
+            "startingPage": 1,
+            "seoText": {
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
+              "title": "Bancada e Cavaletes"
+            },
+            "topBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "categoryBanner": {
+              "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
+              "mobile": "https://assets.decocache.com/ffloresta/3595206d-6461-4364-80db-20f1a2c34486/Mask-group-(1).png"
+            },
+            "filterBanner": {},
+            "bannerImage": {
+              "0": "h",
+              "1": "t",
+              "2": "t",
+              "3": "p",
+              "4": "s",
+              "5": ":",
+              "6": "/",
+              "7": "/",
+              "8": "a",
+              "9": "s",
+              "10": "s",
+              "11": "e",
+              "12": "t",
+              "13": "s",
+              "14": ".",
+              "15": "d",
+              "16": "e",
+              "17": "c",
+              "18": "o",
+              "19": "c",
+              "20": "a",
+              "21": "c",
+              "22": "h",
+              "23": "e",
+              "24": ".",
+              "25": "c",
+              "26": "o",
+              "27": "m",
+              "28": "/",
+              "29": "f",
+              "30": "f",
+              "31": "l",
+              "32": "o",
+              "33": "r",
+              "34": "e",
+              "35": "s",
+              "36": "t",
+              "37": "a",
+              "38": "/",
+              "39": "1",
+              "40": "2",
+              "41": "4",
+              "42": "9",
+              "43": "b",
+              "44": "f",
+              "45": "c",
+              "46": "6",
+              "47": "-",
+              "48": "d",
+              "49": "2",
+              "50": "8",
+              "51": "a",
+              "52": "-",
+              "53": "4",
+              "54": "b",
+              "55": "3",
+              "56": "d",
+              "57": "-",
+              "58": "8",
+              "59": "1",
+              "60": "f",
+              "61": "6",
+              "62": "-",
+              "63": "0",
+              "64": "e",
+              "65": "7",
+              "66": "b",
+              "67": "a",
+              "68": "f",
+              "69": "d",
+              "70": "9",
+              "71": "8",
+              "72": "c",
+              "73": "f",
+              "74": "6",
+              "75": "/",
+              "76": "P",
+              "77": "r",
+              "78": "a",
+              "79": "n",
+              "80": "c",
+              "81": "h",
+              "82": "e",
+              "83": "t",
+              "84": "a",
+              "85": "-",
+              "86": "1",
+              "87": "_",
+              "88": "3",
+              "89": "-",
+              "90": "(",
+              "91": "2",
+              "92": ")",
+              "93": ".",
+              "94": "p",
+              "95": "n",
+              "96": "g",
+              "altText": "Categoria"
+            },
+            "products": null,
+            "flagsConfig": {
+              "__resolveType": "Configurações Globais de Flag"
+            },
+            "banner": {
+              "data": {
+                "alt": "Bancada e Cavaletes"
+              }
+            },
+            "seoConfig": {
+              "pageTitle": "Bancada e Cavaletes"
             }
           },
           "rule": {
@@ -180,7 +499,8 @@
             },
             "startingPage": 1,
             "seoText": {
-              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
+              "title": "Arcos para Serras"
             },
             "topBanner": {
               "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
@@ -294,6 +614,14 @@
             "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
+            },
+            "banner": {
+              "data": {
+                "alt": "Arcos para Serras"
+              }
+            },
+            "seoConfig": {
+              "pageTitle": "Arcos para Serras"
             }
           },
           "rule": {
@@ -326,7 +654,8 @@
             },
             "startingPage": 1,
             "seoText": {
-              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
+              "title": "Alicates"
             },
             "topBanner": {
               "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
@@ -440,6 +769,14 @@
             "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
+            },
+            "banner": {
+              "data": {
+                "alt": "Alicates"
+              }
+            },
+            "seoConfig": {
+              "pageTitle": "Alicates"
             }
           },
           "rule": {
@@ -472,7 +809,8 @@
             },
             "startingPage": 1,
             "seoText": {
-              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
+              "title": "Tupias"
             },
             "topBanner": {
               "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
@@ -586,6 +924,14 @@
             "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
+            },
+            "banner": {
+              "data": {
+                "alt": "Tupias"
+              }
+            },
+            "seoConfig": {
+              "pageTitle": "Tupias"
             }
           },
           "rule": {
@@ -618,7 +964,8 @@
             },
             "startingPage": 1,
             "seoText": {
-              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
+              "title": "Serras"
             },
             "topBanner": {
               "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
@@ -732,6 +1079,14 @@
             "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
+            },
+            "banner": {
+              "data": {
+                "alt": "Serras"
+              }
+            },
+            "seoConfig": {
+              "pageTitle": "Serras"
             }
           },
           "rule": {
@@ -764,7 +1119,8 @@
             },
             "startingPage": 1,
             "seoText": {
-              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
+              "title": "Serra Tico Tico"
             },
             "topBanner": {
               "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
@@ -878,6 +1234,14 @@
             "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
+            },
+            "banner": {
+              "data": {
+                "alt": "Serra Tico Tico"
+              }
+            },
+            "seoConfig": {
+              "pageTitle": "Serra Tico Tico"
             }
           },
           "rule": {
@@ -910,7 +1274,8 @@
             },
             "startingPage": 1,
             "seoText": {
-              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
+              "title": "Retificadoras"
             },
             "topBanner": {
               "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
@@ -1024,6 +1389,14 @@
             "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
+            },
+            "banner": {
+              "data": {
+                "alt": "Retificadoras"
+              }
+            },
+            "seoConfig": {
+              "pageTitle": "Retificadoras"
             }
           },
           "rule": {
@@ -1056,7 +1429,8 @@
             },
             "startingPage": 1,
             "seoText": {
-              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
+              "title": "Plainas"
             },
             "topBanner": {
               "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
@@ -1170,6 +1544,14 @@
             "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
+            },
+            "banner": {
+              "data": {
+                "alt": "Plainas"
+              }
+            },
+            "seoConfig": {
+              "pageTitle": "Plainas"
             }
           },
           "rule": {
@@ -1202,7 +1584,8 @@
             },
             "startingPage": 1,
             "seoText": {
-              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
+              "title": "Pistolas"
             },
             "topBanner": {
               "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
@@ -1316,6 +1699,14 @@
             "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
+            },
+            "banner": {
+              "data": {
+                "alt": "Pistolas"
+              }
+            },
+            "seoConfig": {
+              "pageTitle": "Pistolas"
             }
           },
           "rule": {
@@ -1349,7 +1740,8 @@
             },
             "startingPage": 1,
             "seoText": {
-              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
+              "title": "Multicortadoras"
             },
             "topBanner": {
               "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
@@ -1463,6 +1855,14 @@
             "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
+            },
+            "banner": {
+              "data": {
+                "alt": "Multicortadoras"
+              }
+            },
+            "seoConfig": {
+              "pageTitle": "Multicortadoras"
             }
           },
           "rule": {
@@ -1495,7 +1895,8 @@
             },
             "startingPage": 1,
             "seoText": {
-              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
+              "title": "Micro Retifica"
             },
             "topBanner": {
               "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
@@ -1609,6 +2010,14 @@
             "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
+            },
+            "banner": {
+              "data": {
+                "alt": "Micro Retifica"
+              }
+            },
+            "seoConfig": {
+              "pageTitle": "Micro Retifica"
             }
           },
           "rule": {
@@ -1641,7 +2050,8 @@
             },
             "startingPage": 1,
             "seoText": {
-              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
+              "title": "Instrumentos de Medição"
             },
             "topBanner": {
               "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
@@ -1755,6 +2165,14 @@
             "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
+            },
+            "banner": {
+              "data": {
+                "alt": "Instrumentos de Medição"
+              }
+            },
+            "seoConfig": {
+              "pageTitle": "Instrumentos de Medição"
             }
           },
           "rule": {
@@ -1787,7 +2205,8 @@
             },
             "startingPage": 1,
             "seoText": {
-              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
+              "title": "Furadeiras e Parafusadeiras"
             },
             "topBanner": {
               "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
@@ -1901,6 +2320,14 @@
             "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
+            },
+            "banner": {
+              "data": {
+                "alt": "Furadeiras e Parafusadeiras"
+              }
+            },
+            "seoConfig": {
+              "pageTitle": "Furadeiras e Parafusadeiras"
             }
           },
           "rule": {
@@ -1933,7 +2360,8 @@
             },
             "startingPage": 1,
             "seoText": {
-              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
+              "title": "Esmerilhadeiras"
             },
             "topBanner": {
               "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
@@ -2047,6 +2475,14 @@
             "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
+            },
+            "banner": {
+              "data": {
+                "alt": "Esmerilhadeiras"
+              }
+            },
+            "seoConfig": {
+              "pageTitle": "Esmerilhadeiras"
             }
           },
           "rule": {
@@ -2079,7 +2515,8 @@
             },
             "startingPage": 1,
             "seoText": {
-              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
+              "title": "Detector"
             },
             "topBanner": {
               "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
@@ -2193,6 +2630,14 @@
             "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
+            },
+            "banner": {
+              "data": {
+                "alt": "Detector"
+              }
+            },
+            "seoConfig": {
+              "pageTitle": "Detector"
             }
           },
           "rule": {
@@ -2225,7 +2670,8 @@
             },
             "startingPage": 1,
             "seoText": {
-              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>"
+              "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
+              "title": "Chave de Impacto"
             },
             "topBanner": {
               "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
@@ -2339,6 +2785,14 @@
             "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
+            },
+            "banner": {
+              "data": {
+                "alt": "Chave de Impacto"
+              }
+            },
+            "seoConfig": {
+              "pageTitle": "Chave de Impacto"
             }
           },
           "rule": {
@@ -2638,10 +3092,10 @@
               "96": "g",
               "altText": "Categoria"
             },
-            "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
             },
+            "products": null,
             "banner": {
               "data": {
                 "alt": "Bolsas e Mochilas"
@@ -2793,10 +3247,10 @@
               "96": "g",
               "altText": "Categoria"
             },
-            "products": null,
             "flagsConfig": {
               "__resolveType": "Configurações Globais de Flag"
             },
+            "products": null,
             "banner": {
               "data": {
                 "alt": "Vazadores"
@@ -5897,13 +6351,13 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
+            "seoConfig": {
+              "pageTitle": "Ferramentas Pneumáticas"
+            },
             "banner": {
               "data": {
                 "alt": "Ferramentas Pneumáticas"
               }
-            },
-            "seoConfig": {
-              "pageTitle": "Ferramentas Pneumáticas"
             }
           },
           "rule": {
@@ -6052,13 +6506,13 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
+            "seoConfig": {
+              "pageTitle": "Ferramentas Manuais"
+            },
             "banner": {
               "data": {
                 "alt": "Ferramentas Manuais"
               }
-            },
-            "seoConfig": {
-              "pageTitle": "Ferramentas Manuais"
             }
           },
           "rule": {
@@ -31003,10 +31457,10 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
+            "title": "Corrediças",
             "seoConfig": {
               "pageTitle": "Corrediças"
             },
-            "title": "Corrediças",
             "banner": {
               "data": {
                 "alt": "Corrediças"
