@@ -34903,10 +34903,10 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
-            "title": "Corrediças",
             "seoConfig": {
               "pageTitle": "Corrediças"
-            }
+            },
+            "title": "Corrediças"
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -38232,7 +38232,7 @@
                 "includeOriginalAttributes": []
               },
               "pageOffset": 1,
-              "hideUnavailableItems": true
+              "hideUnavailableItems": false
             },
             "layout": {
               "columns": {
