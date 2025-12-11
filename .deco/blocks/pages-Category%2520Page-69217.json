@@ -38794,7 +38794,7 @@
           "value": {
             "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
             "title": "Ferramentas de Qualidade | Ferragens Floresta",
-            "description": "Encontre ferramentas profissionais para seu projeto. Produtos duráveis e de alto desempenho na Ferragens Floresta. Veja ofertas!"
+            "description": "Encontre ferramentas profissionais para seu projeto. Produtos duráveis e de alto desempenho na Ferragens Floresta. Veja ofertas."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
