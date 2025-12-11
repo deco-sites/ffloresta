@@ -6,9 +6,9 @@
     "noIndexing": false,
     "description": "Ferramentas, puxadores, corrediças, trilhos e ferragens para móveis, com ofertas especiais e entrega para todo o Brasil",
     "titleTemplate": "%s | Ferragens Floresta",
-    "descriptionTemplate": "%s na Ferragens Floresta: ferramentas e ferragens para móveis com ótimos preços, variedade de marcas e entrega em todo o Brasil.",
     "favicon": "https://assets.decocache.com/ffloresta/789ff04a-cd4b-493d-9669-70722e090ad3/Logo.svg",
-    "title": "Ferragens Floresta | Dobradiças, Puxadores e Ferragens para Móveis"
+    "title": "Ferragens Floresta | Dobradiças, Puxadores e Ferragens para Móveis",
+    "descriptionTemplate": "%s"
   },
   "theme": {
     "__resolveType": "Deco"
