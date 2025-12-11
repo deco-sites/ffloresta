@@ -14804,7 +14804,7 @@
                 "includeOriginalAttributes": []
               },
               "pageOffset": 1,
-              "hideUnavailableItems": true
+              "hideUnavailableItems": false
             },
             "layout": {
               "columns": {
