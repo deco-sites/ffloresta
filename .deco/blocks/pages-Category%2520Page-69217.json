@@ -3307,11 +3307,6 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
-            "banner": {
-              "data": {
-                "alt": "Talhadeiras e Ponteiros"
-              }
-            },
             "seoConfig": {
               "pageTitle": "Talhadeiras e Ponteiros"
             }
@@ -3462,11 +3457,6 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
-            "banner": {
-              "data": {
-                "alt": "Suportes"
-              }
-            },
             "seoConfig": {
               "pageTitle": "Suportes"
             }
@@ -3617,11 +3607,6 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
-            "banner": {
-              "data": {
-                "alt": "Soquetes"
-              }
-            },
             "seoConfig": {
               "pageTitle": "Soquetes"
             }
@@ -3772,11 +3757,6 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
-            "banner": {
-              "data": {
-                "alt": "Serras"
-              }
-            },
             "seoConfig": {
               "pageTitle": "Serras"
             }
@@ -3927,11 +3907,6 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
-            "banner": {
-              "data": {
-                "alt": "Serra Copo"
-              }
-            },
             "seoConfig": {
               "pageTitle": "Serra Copo"
             }
@@ -4082,11 +4057,6 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
-            "banner": {
-              "data": {
-                "alt": "Rolamentos"
-              }
-            },
             "seoConfig": {
               "pageTitle": "Rolamentos"
             }
@@ -4237,11 +4207,6 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
-            "banner": {
-              "data": {
-                "alt": "Pinos e Grampos"
-              }
-            },
             "seoConfig": {
               "pageTitle": "Pinos e Grampos"
             }
@@ -4392,11 +4357,6 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
-            "banner": {
-              "data": {
-                "alt": "Marcadores"
-              }
-            },
             "seoConfig": {
               "pageTitle": "Marcadores"
             }
@@ -4547,11 +4507,6 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
-            "banner": {
-              "data": {
-                "alt": "Mandril"
-              }
-            },
             "seoConfig": {
               "pageTitle": "Mandril"
             }
@@ -4702,11 +4657,6 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
-            "banner": {
-              "data": {
-                "alt": "Lixas"
-              }
-            },
             "seoConfig": {
               "pageTitle": "Lixas"
             }
@@ -4857,11 +4807,6 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
-            "banner": {
-              "data": {
-                "alt": "Fresas"
-              }
-            },
             "seoConfig": {
               "pageTitle": "Fresas"
             }
@@ -5012,11 +4957,6 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
-            "banner": {
-              "data": {
-                "alt": "Escaradores"
-              }
-            },
             "seoConfig": {
               "pageTitle": "Escaradores"
             }
@@ -5167,11 +5107,6 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
-            "banner": {
-              "data": {
-                "alt": "Diversos"
-              }
-            },
             "seoConfig": {
               "pageTitle": "Diversos"
             }
@@ -5322,11 +5257,6 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
-            "banner": {
-              "data": {
-                "alt": "Discos"
-              }
-            },
             "seoConfig": {
               "pageTitle": "Discos"
             }
@@ -5477,11 +5407,6 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
-            "banner": {
-              "data": {
-                "alt": "Conectores e Engates"
-              }
-            },
             "seoConfig": {
               "pageTitle": "Conectores e Engates"
             }
@@ -5632,11 +5557,6 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
-            "banner": {
-              "data": {
-                "alt": "Carregadores"
-              }
-            },
             "seoConfig": {
               "pageTitle": "Carregadores"
             }
@@ -5787,11 +5707,6 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
-            "banner": {
-              "data": {
-                "alt": "Brocas"
-              }
-            },
             "seoConfig": {
               "pageTitle": "Brocas"
             }
@@ -5942,11 +5857,6 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
-            "banner": {
-              "data": {
-                "alt": "Bits e Pontas"
-              }
-            },
             "seoConfig": {
               "pageTitle": "Bits e Pontas"
             }
@@ -6097,11 +6007,6 @@
               "__resolveType": "Configurações Globais de Flag"
             },
             "products": null,
-            "banner": {
-              "data": {
-                "alt": "Baterias e Carregadores"
-              }
-            },
             "seoConfig": {
               "pageTitle": "Baterias e Carregadores"
             }
@@ -6254,11 +6159,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Ferramentas Pneumáticas"
-            },
-            "banner": {
-              "data": {
-                "alt": "Ferramentas Pneumáticas"
-              }
             }
           },
           "rule": {
@@ -6409,11 +6309,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Ferramentas Manuais"
-            },
-            "banner": {
-              "data": {
-                "alt": "Ferramentas Manuais"
-              }
             }
           },
           "rule": {
@@ -6564,11 +6459,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Ferramentas Elétricas"
-            },
-            "banner": {
-              "data": {
-                "alt": "Ferramentas Elétricas"
-              }
             }
           },
           "rule": {
@@ -6719,11 +6609,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Ferramentas á Bateria"
-            },
-            "banner": {
-              "data": {
-                "alt": "Ferramentas á Bateria"
-              }
             }
           },
           "rule": {
@@ -6874,11 +6759,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Armazenamento"
-            },
-            "banner": {
-              "data": {
-                "alt": "Armazenamento"
-              }
             }
           },
           "rule": {
@@ -7029,11 +6909,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Acessórios"
-            },
-            "banner": {
-              "data": {
-                "alt": "Acessórios"
-              }
             }
           },
           "rule": {
@@ -7184,11 +7059,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Proteção"
-            },
-            "banner": {
-              "data": {
-                "alt": "Proteção"
-              }
             }
           },
           "rule": {
@@ -7339,11 +7209,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Porta Cintos e Gravatas"
-            },
-            "banner": {
-              "data": {
-                "alt": "Porta Cintos e Gravatas"
-              }
             }
           },
           "rule": {
@@ -7494,11 +7359,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Organizadores"
-            },
-            "banner": {
-              "data": {
-                "alt": "Organizadores"
-              }
             }
           },
           "rule": {
@@ -7799,11 +7659,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Escadas"
-            },
-            "banner": {
-              "data": {
-                "alt": "Escadas"
-              }
             }
           },
           "rule": {
@@ -7954,11 +7809,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Calceiros"
-            },
-            "banner": {
-              "data": {
-                "alt": "Calceiros"
-              }
             }
           },
           "rule": {
@@ -8109,11 +7959,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Cabideiros Led"
-            },
-            "banner": {
-              "data": {
-                "alt": "Cabideiros Led"
-              }
             }
           },
           "rule": {
@@ -8264,11 +8109,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Cabideiros"
-            },
-            "banner": {
-              "data": {
-                "alt": "Cabideiros"
-              }
             }
           },
           "rule": {
@@ -8419,11 +8259,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Acessórios para Móveis"
-            },
-            "banner": {
-              "data": {
-                "alt": "Acessórios para Móveis"
-              }
             }
           },
           "rule": {
@@ -8574,11 +8409,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Suportes De Tv"
-            },
-            "banner": {
-              "data": {
-                "alt": "Suportes De Tv"
-              }
             }
           },
           "rule": {
@@ -8729,11 +8559,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Jardinagem"
-            },
-            "banner": {
-              "data": {
-                "alt": "Jardinagem"
-              }
             }
           },
           "rule": {
@@ -8884,11 +8709,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Aquecedor de Ambiente"
-            },
-            "banner": {
-              "data": {
-                "alt": "Aquecedor de Ambiente"
-              }
             }
           },
           "rule": {
@@ -9039,11 +8859,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Torneira de Cozinha"
-            },
-            "banner": {
-              "data": {
-                "alt": "Torneira de Cozinha"
-              }
             }
           },
           "rule": {
@@ -9194,11 +9009,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Porta Temperos e Condimentos"
-            },
-            "banner": {
-              "data": {
-                "alt": "Porta Temperos e Condimentos"
-              }
             }
           },
           "rule": {
@@ -9349,11 +9159,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Porta Garrafas"
-            },
-            "banner": {
-              "data": {
-                "alt": "Porta Garrafas"
-              }
             }
           },
           "rule": {
@@ -9504,11 +9309,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Organizador"
-            },
-            "banner": {
-              "data": {
-                "alt": "Organizador"
-              }
             }
           },
           "rule": {
@@ -9659,11 +9459,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Misturadores"
-            },
-            "banner": {
-              "data": {
-                "alt": "Misturadores"
-              }
             }
           },
           "rule": {
@@ -9814,11 +9609,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Lixeiras de Cozinha"
-            },
-            "banner": {
-              "data": {
-                "alt": "Lixeiras de Cozinha"
-              }
             }
           },
           "rule": {
@@ -9969,11 +9759,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Grades de Ventilação"
-            },
-            "banner": {
-              "data": {
-                "alt": "Grades de Ventilação"
-              }
             }
           },
           "rule": {
@@ -10124,11 +9909,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Gaveta Aramada"
-            },
-            "banner": {
-              "data": {
-                "alt": "Gaveta Aramada"
-              }
             }
           },
           "rule": {
@@ -10279,11 +10059,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Fruteira"
-            },
-            "banner": {
-              "data": {
-                "alt": "Fruteira"
-              }
             }
           },
           "rule": {
@@ -10434,11 +10209,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Escorredores de Louças"
-            },
-            "banner": {
-              "data": {
-                "alt": "Escorredores de Louças"
-              }
             }
           },
           "rule": {
@@ -10589,11 +10359,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Divisor De Talheres"
-            },
-            "banner": {
-              "data": {
-                "alt": "Divisor De Talheres"
-              }
             }
           },
           "rule": {
@@ -10744,11 +10509,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Colunas deslizantes"
-            },
-            "banner": {
-              "data": {
-                "alt": "Colunas deslizantes"
-              }
             }
           },
           "rule": {
@@ -10899,11 +10659,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Cesto Giratório"
-            },
-            "banner": {
-              "data": {
-                "alt": "Cesto Giratório"
-              }
             }
           },
           "rule": {
@@ -11054,11 +10809,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Barra Protetora"
-            },
-            "banner": {
-              "data": {
-                "alt": "Barra Protetora"
-              }
             }
           },
           "rule": {
@@ -11209,11 +10959,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Adega"
-            },
-            "banner": {
-              "data": {
-                "alt": "Adega"
-              }
             }
           },
           "rule": {
@@ -11364,11 +11109,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Torneiras"
-            },
-            "banner": {
-              "data": {
-                "alt": "Torneiras"
-              }
             }
           },
           "rule": {
@@ -11519,11 +11259,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Ralos"
-            },
-            "banner": {
-              "data": {
-                "alt": "Ralos"
-              }
             }
           },
           "rule": {
@@ -11674,11 +11409,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Organização"
-            },
-            "banner": {
-              "data": {
-                "alt": "Organização"
-              }
             }
           },
           "rule": {
@@ -11829,11 +11559,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Lixeiras"
-            },
-            "banner": {
-              "data": {
-                "alt": "Lixeiras"
-              }
             }
           },
           "rule": {
@@ -11984,11 +11709,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Espelhos"
-            },
-            "banner": {
-              "data": {
-                "alt": "Espelhos"
-              }
             }
           },
           "rule": {
@@ -12139,11 +11859,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Chuveiros"
-            },
-            "banner": {
-              "data": {
-                "alt": "Chuveiros"
-              }
             }
           },
           "rule": {
@@ -12294,11 +12009,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Acessórios para Móveis"
-            },
-            "banner": {
-              "data": {
-                "alt": "Acessórios para Móveis"
-              }
             }
           },
           "rule": {
@@ -12449,11 +12159,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Varais"
-            },
-            "banner": {
-              "data": {
-                "alt": "Varais"
-              }
             }
           },
           "rule": {
@@ -12604,11 +12309,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Tulhas"
-            },
-            "banner": {
-              "data": {
-                "alt": "Tulhas"
-              }
             }
           },
           "rule": {
@@ -12759,11 +12459,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Tábua De Passar"
-            },
-            "banner": {
-              "data": {
-                "alt": "Tábua De Passar"
-              }
             }
           },
           "rule": {
@@ -18649,11 +18344,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Fechadura para Móveis"
-            },
-            "banner": {
-              "data": {
-                "alt": "Fechadura para Móveis"
-              }
             }
           },
           "rule": {
@@ -27949,11 +27639,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Diversos"
-            },
-            "banner": {
-              "data": {
-                "alt": "Diversos"
-              }
             }
           },
           "rule": {
@@ -29344,11 +29029,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Kits de Portas"
-            },
-            "banner": {
-              "data": {
-                "alt": "Kits de Portas"
-              }
             }
           },
           "rule": {
@@ -30896,11 +30576,6 @@
             "products": null,
             "seoConfig": {
               "pageTitle": "Puxadores Zen"
-            },
-            "banner": {
-              "data": {
-                "alt": "Puxadores Zen"
-              }
             }
           },
           "rule": {
@@ -31356,11 +31031,6 @@
             "title": "Corrediças",
             "seoConfig": {
               "pageTitle": "Corrediças"
-            },
-            "banner": {
-              "data": {
-                "alt": "Corrediças"
-              }
             }
           },
           "rule": {
@@ -31546,7 +31216,7 @@
             "seoText": {
               "htmlContent": "<p><span style=\"color: rgb(0, 0, 0); font-size: 14px\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
               "title": "Corrediça Invisível",
-              "description": "<p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">Se você está procurando </span><strong><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">corrediças para gavetas de móveis</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">, armários ou planejados, a corrediça invisível pode ser uma excelente escolha. Diferente das corrediças tradicionais, que ficam aparentes nas laterais da gaveta, as corrediças invisíveis são discretas, oferecendo um acabamento mais limpo e elegante, sem comprometer a funcionalidade.</span></p><p><br></p><p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">Além da estética, elas garantem deslizes suaves, maior durabilidade e um toque de sofisticação que valoriza qualquer móvel. Descubra como escolher a corrediça ideal, conheça os tipos mais usados e veja todas as vantagens de investir nessa solução prática e moderna para sua casa ou escritório.</span></p><p></p><h2><span style=\"color: rgb(0, 0, 0); font-size: 16pt\">O que é corrediça invisível</span></h2><p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">É um mecanismo de deslizamento instalado na parte inferior da gaveta, mantendo as laterais totalmente limpas e sem elementos aparentes. Ela permite abertura parcial ou total da gaveta, suporta cargas de até 70 kg e pode incluir funções como amortecimento silencioso ou abertura por toque. </span></p><p></p><p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">Seu design discreto e a instalação facilitada tornam a montagem simples e o visual do móvel mais sofisticado.</span></p><p></p><p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">Esse tipo de</span><u><span style=\"color: rgb(0, 0, 0); font-size: 11pt\"> </span></u><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.ferragensfloresta.com.br/ferragens/corredicas\"><u><span style=\"color: #0050f0; font-size: 11pt\">corrediça</span></u></a><span style=\"color: rgb(0, 0, 0); font-size: 11pt\"> é especialmente indicado para móveis planejados e de alto padrão, como cozinhas, closets e home theather, onde o acabamento elegante e a experiência de uso são prioridades.</span></p><p></p><h2><span style=\"color: rgb(0, 0, 0); font-size: 16pt\">Principais tipos de corrediça invisível</span></h2><p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">Existem diferentes tipos de corrediças invisíveis, cada uma projetada para oferecer funcionalidade e estética específicas, garantindo que a gaveta funcione de forma suave e discreta.</span></p><p></p><h3><span style=\"color: rgb(67, 67, 67); font-size: 14pt\">Com amortecedor</span></h3><p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">Possui mecanismo que desacelera o fechamento da gaveta, garantindo movimento lento e silencioso, evitando batidas e desgastes.</span></p><p></p><h3><span style=\"color: rgb(67, 67, 67); font-size: 14pt\">Com fecho toque</span></h3><p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">Permite abrir a gaveta apenas pressionando a frente, dispensando puxadores, resultando em visual mais clean e alinhado (flush).</span></p><p></p><h3><span style=\"color: rgb(67, 67, 67); font-size: 14pt\">Extração total vs extração parcial</span></h3><p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">Extração total permite remover completamente a gaveta; extração parcial limita a abertura a apenas uma parte, útil para controle e segurança.</span></p><p></p><h2><span style=\"color: rgb(0, 0, 0); font-size: 16pt\">Como escolher sua corrediça invisível</span></h2><p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">Ao escolher uma corrediça invisível, considere:</span></p><p></p><ul><li><p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">Peso da gaveta e objetos: garanta capacidade adequada para suportar carga.</span></p></li><li><p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">Dimensões da gaveta: altura, largura e profundidade determinam o modelo compatível.</span></p></li><li><p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">Folgas necessárias: respeite tolerâncias para funcionamento suave.<br>Tipo de mobiliário: residencial, comercial ou planejado influenciam resistência e acabamento.</span></p></li><li><p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">Tipo de fecho: escolha entre amortecedor, push-to-open ou trava de segurança conforme necessidade.</span></p></li><li><p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">Ambiente de uso: cozinha, banheiro ou closet exigem materiais resistentes à umidade e desgaste.</span></p><p></p></li></ul><h2><span style=\"color: rgb(0, 0, 0); font-size: 16pt\">Cuidados na instalação e manutenção</span></h2><p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">Para garantir o bom funcionamento e a durabilidade da </span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.ferragensfloresta.com.br/ferragens/corredicas\"><span style=\"color: #0050f0; font-size: 11pt\">corrediça</span></a><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">, é essencial começar verificando nivelamento e </span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.ferragensfloresta.com.br/ferragens/fixacao\"><span style=\"color: #0050f0; font-size: 11pt\">fixação</span></a><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">. Certifique-se de que a gaveta e os trilhos estejam alinhados corretamente e que as folgas sejam adequadas. Parafusos e suportes bem fixos evitam travamentos e desgaste prematuro, proporcionando segurança e estabilidade no uso diário.</span></p><p><br></p><p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">Além disso, é importante manter os trilhos limpos e lubrificados quando necessário. A limpeza e lubrificação previnem o acúmulo de poeira e resíduos, garantindo um deslizamento suave e silencioso. Esse cuidado reduz o risco de rangidos e prolonga a vida útil do mecanismo.</span></p><p><br></p><p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">Por fim, sempre respeite a capacidade máxima de peso da gaveta. Evitar sobrecarga evita danos aos trilhos e ao sistema de fechamento, mantendo o funcionamento eficiente. Distribuir o peso de forma equilibrada também contribui para a durabilidade e conforto no uso diário.</span></p><p><br></p>"
+              "description": "<p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">Se você está procurando </span><strong><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">corrediças para gavetas de móveis</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">, armários ou planejados, a corrediça invisível pode ser uma excelente escolha. Diferente das corrediças tradicionais, que ficam aparentes nas laterais da gaveta, as corrediças invisíveis são discretas, oferecendo um acabamento mais limpo e elegante, sem comprometer a funcionalidade.</span></p><p><br></p><p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">Além da estética, elas garantem deslizes suaves, maior durabilidade e um toque de sofisticação que valoriza qualquer móvel. Descubra como escolher a corrediça ideal, conheça os tipos mais usados e veja todas as vantagens de investir nessa solução prática e moderna para sua casa ou escritório.</span></p><p></p><h2><span style=\"color: rgb(0, 0, 0); font-size: 16pt\">O que é corrediça invisível</span></h2><p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">É um mecanismo de deslizamento instalado na parte inferior da gaveta, mantendo as laterais totalmente limpas e sem elementos aparentes. Ela permite abertura parcial ou total da gaveta, suporta cargas de até 70 kg e pode incluir funções como amortecimento silencioso ou abertura por toque.</span></p><p></p><p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">Seu design discreto e a instalação facilitada tornam a montagem simples e o visual do móvel mais sofisticado.</span></p><p></p><p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">Esse tipo de</span><u><span style=\"color: rgb(0, 0, 0); font-size: 11pt\"> </span></u><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.ferragensfloresta.com.br/ferragens/corredicas\"><u><span style=\"color: rgb(0, 80, 240); font-size: 11pt\">corrediça</span></u></a><span style=\"color: rgb(0, 0, 0); font-size: 11pt\"> é especialmente indicado para móveis planejados e de alto padrão, como cozinhas, closets e home theather, onde o acabamento elegante e a experiência de uso são prioridades.</span></p><p></p><h2><span style=\"color: rgb(0, 0, 0); font-size: 16pt\">Principais tipos de corrediça invisível</span></h2><p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">Existem diferentes tipos de corrediças invisíveis, cada uma projetada para oferecer funcionalidade e estética específicas, garantindo que a gaveta funcione de forma suave e discreta.</span></p><p></p><h3><span style=\"color: rgb(67, 67, 67); font-size: 14pt\">Com amortecedor</span></h3><p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">Possui mecanismo que desacelera o fechamento da gaveta, garantindo movimento lento e silencioso, evitando batidas e desgastes.</span></p><p></p><h3><span style=\"color: rgb(67, 67, 67); font-size: 14pt\">Com fecho toque</span></h3><p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">Permite abrir a gaveta apenas pressionando a frente, dispensando puxadores, resultando em visual mais clean e alinhado (flush).</span></p><p></p><h3><span style=\"color: rgb(67, 67, 67); font-size: 14pt\">Extração total vs extração parcial</span></h3><p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">Extração total permite remover completamente a gaveta; extração parcial limita a abertura a apenas uma parte, útil para controle e segurança.</span></p><p></p><h2><span style=\"color: rgb(0, 0, 0); font-size: 16pt\">Como escolher sua corrediça invisível</span></h2><p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">Ao escolher uma corrediça invisível, considere:</span></p><p></p><ul><li><p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">Peso da gaveta e objetos: garanta capacidade adequada para suportar carga.</span></p></li><li><p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">Dimensões da gaveta: altura, largura e profundidade determinam o modelo compatível.</span></p></li><li><p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">Folgas necessárias: respeite tolerâncias para funcionamento suave.<br>Tipo de mobiliário: residencial, comercial ou planejado influenciam resistência e acabamento.</span></p></li><li><p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">Tipo de fecho: escolha entre amortecedor, push-to-open ou trava de segurança conforme necessidade.</span></p></li><li><p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">Ambiente de uso: cozinha, banheiro ou closet exigem materiais resistentes à umidade e desgaste.</span></p><p></p></li></ul><h2><span style=\"color: rgb(0, 0, 0); font-size: 16pt\">Cuidados na instalação e manutenção</span></h2><p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">Para garantir o bom funcionamento e a durabilidade da </span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.ferragensfloresta.com.br/ferragens/corredicas\"><span style=\"color: rgb(0, 80, 240); font-size: 11pt\">corrediça</span></a><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">, é essencial começar verificando nivelamento e </span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.ferragensfloresta.com.br/ferragens/fixacao\"><span style=\"color: rgb(0, 80, 240); font-size: 11pt\">fixação</span></a><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">. Certifique-se de que a gaveta e os trilhos estejam alinhados corretamente e que as folgas sejam adequadas. Parafusos e suportes bem fixos evitam travamentos e desgaste prematuro, proporcionando segurança e estabilidade no uso diário.</span></p><p><br></p><p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">Além disso, é importante manter os trilhos limpos e lubrificados quando necessário. A limpeza e lubrificação previnem o acúmulo de poeira e resíduos, garantindo um deslizamento suave e silencioso. Esse cuidado reduz o risco de rangidos e prolonga a vida útil do mecanismo.</span></p><p><br></p><p><span style=\"color: rgb(0, 0, 0); font-size: 11pt\">Por fim, sempre respeite a capacidade máxima de peso da gaveta. Evitar sobrecarga evita danos aos trilhos e ao sistema de fechamento, mantendo o funcionamento eficiente. Distribuir o peso de forma equilibrada também contribui para a durabilidade e conforto no uso diário.</span></p><p><br></p>"
             },
             "topBanner": {
               "desktop": "https://assets.decocache.com/ffloresta/121fa56a-a1b3-4f44-8c33-d8050244861d/Screenshot_65.png",
