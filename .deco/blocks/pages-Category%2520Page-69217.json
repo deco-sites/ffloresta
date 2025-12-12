@@ -38380,13 +38380,185 @@
             "__resolveType": "website/matchers/pathname.ts",
             "case": {
               "type": "Equals",
-              "pathname": "/puxadores/perfil"
+              "pathname": "/fechaduras/manuais/bico-de-papagaio"
             }
           }
         },
         {
           "value": {
             "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/fechaduras/manuais/auxiliares"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/fechaduras/manuais/anti-panico"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/fechaduras/manuais/alta-seguranca"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/fechaduras/manuais/acessorios"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/fechaduras/eletronica/moveis"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/fechaduras/eletronica/digital"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/fechaduras/eletronica/biometrica"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/fechaduras/eletronica/acessorios"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/fechaduras/seguranca"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/fechaduras/manuais"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/fechaduras/eletronica"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/puxadores/topo"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/puxadores/ponto"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Puxador Perfil | Ferragens Floresta",
+            "description": "Encontre Puxador Perfil de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/puxadores/perfil"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Puxador Infantil | Ferragens Floresta",
+            "description": "Encontre Puxador Infantil de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -38398,7 +38570,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Puxador de Embutir | Ferragens Floresta",
+            "description": "Encontre Puxador de Embutir de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -38410,7 +38584,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Puxador Duplo | Ferragens Floresta",
+            "description": "Encontre Puxadores Duplos de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -38422,7 +38598,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Puxador Concha | Ferragens Floresta",
+            "description": "Encontre Puxador Concha de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -38434,7 +38612,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Puxador Alça | Ferragens Floresta",
+            "description": "Encontre Puxador Alça de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -38446,7 +38626,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Ponteiras e Tampas | Ferragens Floresta",
+            "description": "Encontre ponteiras e tampas de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -38458,7 +38640,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Acessórios de Móveis | Ferragens Floresta",
+            "description": "Confira acessórios funcionais para móveis e projetos. Praticidade, qualidade e entrega rápida na Ferragens Floresta."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -38470,7 +38654,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Solventes | Ferragens Floresta",
+            "description": "Encontre solventes de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -38482,7 +38668,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Seladores | Ferragens Floresta",
+            "description": "Encontre seladores de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -38494,7 +38682,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Espumas | Ferragens Floresta",
+            "description": "Encontre espumas de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -38506,7 +38696,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Colas | Ferragens Floresta",
+            "description": "Encontre colas de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -38518,7 +38710,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Acessórios de Móveis | Ferragens Floresta",
+            "description": "Confira acessórios funcionais para móveis e projetos. Praticidade, qualidade e entrega rápida na Ferragens Floresta."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
