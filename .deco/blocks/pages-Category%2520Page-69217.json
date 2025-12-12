@@ -3742,7 +3742,7 @@
                 "includeOriginalAttributes": []
               },
               "pageOffset": 1,
-              "hideUnavailableItems": true
+              "hideUnavailableItems": false
             },
             "layout": {
               "columns": {
@@ -4053,7 +4053,7 @@
                 "includeOriginalAttributes": []
               },
               "pageOffset": 1,
-              "hideUnavailableItems": true
+              "hideUnavailableItems": false
             },
             "layout": {
               "columns": {
@@ -4203,7 +4203,7 @@
                 "includeOriginalAttributes": []
               },
               "pageOffset": 1,
-              "hideUnavailableItems": true
+              "hideUnavailableItems": false
             },
             "layout": {
               "columns": {
@@ -4353,7 +4353,7 @@
                 "includeOriginalAttributes": []
               },
               "pageOffset": 1,
-              "hideUnavailableItems": true
+              "hideUnavailableItems": false
             },
             "layout": {
               "columns": {
@@ -4503,7 +4503,7 @@
                 "includeOriginalAttributes": []
               },
               "pageOffset": 1,
-              "hideUnavailableItems": true
+              "hideUnavailableItems": false
             },
             "layout": {
               "columns": {
@@ -4653,7 +4653,7 @@
                 "includeOriginalAttributes": []
               },
               "pageOffset": 1,
-              "hideUnavailableItems": true
+              "hideUnavailableItems": false
             },
             "layout": {
               "columns": {
@@ -4803,7 +4803,7 @@
                 "includeOriginalAttributes": []
               },
               "pageOffset": 1,
-              "hideUnavailableItems": true
+              "hideUnavailableItems": false
             },
             "layout": {
               "columns": {
@@ -4953,7 +4953,7 @@
                 "includeOriginalAttributes": []
               },
               "pageOffset": 1,
-              "hideUnavailableItems": true
+              "hideUnavailableItems": false
             },
             "layout": {
               "columns": {
@@ -5103,7 +5103,7 @@
                 "includeOriginalAttributes": []
               },
               "pageOffset": 1,
-              "hideUnavailableItems": true
+              "hideUnavailableItems": false
             },
             "layout": {
               "columns": {
@@ -38372,6 +38372,188 @@
     {
       "__resolveType": "website/flags/multivariate/section.ts",
       "variants": [
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Perfis Led | Ferragens Floresta",
+            "description": "Encontre perfis led de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens/eletrica-e-iluminacao/perfis-led"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Luminárias Led | Ferragens Floresta",
+            "description": "Encontre luminárias led de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens/eletrica-e-iluminacao/luminarias-led"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Fontes e Conversores | Ferragens Floresta",
+            "description": "Encontre fontes e conversores de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens/eletrica-e-iluminacao/fontes-e-conversores"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Fitas Led | Ferragens Floresta",
+            "description": "Encontre fitas led de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens/eletrica-e-iluminacao/fitas-led"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Acessórios de Móveis | Ferragens Floresta",
+            "description": "Confira acessórios funcionais para móveis e projetos. Praticidade, qualidade e entrega rápida na Ferragens Floresta."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens/eletrica-e-iluminacao/acessorios"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Dobradiças para Porta Camarao | Ferragens Floresta",
+            "description": "Encontre Dobradiças para Porta Camarão de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens/dobradicas/porta-camarao"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Dobradiças Pivos | Ferragens Floresta",
+            "description": "Encontre Dobradiças Pivos de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens/dobradicas/pivos"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Dobradiças Palmelas | Ferragens Floresta",
+            "description": "Encontre Dobradiças palmelas de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens/dobradicas/palmelas"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Dobradiça Invisivel | Ferragens Floresta",
+            "description": "Encontre Dobradiça Invisivel de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens/dobradicas/invisivel"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Dobradiças De Copo | Ferragens Floresta",
+            "description": "Encontre de Dobradiças de Copo de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens/dobradicas/de-copo"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Dobradiças Comum | Ferragens Floresta",
+            "description": "Encontre Dobradiça Comum de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens/dobradicas/comum"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Acessórios de Móveis | Ferragens Floresta",
+            "description": "Confira acessórios funcionais para móveis e projetos. Praticidade, qualidade e entrega rápida na Ferragens Floresta."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens/dobradicas/acessorios"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Telescópicas | Ferragens Floresta",
+            "description": "Encontre telescópicas de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens/corredicas/telescopicas"
+            }
+          }
+        },
         {
           "value": {
             "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
