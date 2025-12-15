@@ -38374,7 +38374,9 @@
       "variants": [
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Bico de Papagaio para Fechadura Manual | Ferragens Floresta",
+            "description": "Encontre Fechaduras Bico de Papagaio de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -38386,7 +38388,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Acessórios Auxiliares para Fechadura Manual | Ferragens Floresta",
+            "description": "Encontre Acessórios Auxiliares de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -38398,7 +38402,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Fechadura Manual Anti Pânico | Ferragens Floresta",
+            "description": "Encontre Fechadura Manual Anti Pânico de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -38410,7 +38416,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Fechadura Manual de Alta Segurança | Ferragens Floresta",
+            "description": "Encontre Fechadura de Alta Segurança de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -38422,7 +38430,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Acessórios para Fechaduras Manuais | Ferragens Floresta",
+            "description": "Confira acessórios funcionais para móveis e projetos. Praticidade, qualidade e entrega rápida na Ferragens Floresta."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -38434,7 +38444,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Fechadura para Móveis | Ferragens Floresta",
+            "description": "Encontre Fechadura para Móveis de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -38446,7 +38458,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Fechadura Digital | Ferragens Floresta",
+            "description": "Encontre Fechadura Digital de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -38458,7 +38472,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Fechadura Biométrica | Ferragens Floresta",
+            "description": "Encontre Fechaduras Biométrica de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -38470,7 +38486,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Acessórios para Fechadura Eletrônica | Ferragens Floresta",
+            "description": "Confira Acessórios para Fechaduras funcionais para móveis e projetos. Praticidade, qualidade e entrega rápida na Ferragens Floresta."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -38482,7 +38500,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "fechaduras de Segurança | Ferragens Floresta",
+            "description": "Encontre Fechaduras de Segurança de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -38494,7 +38514,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Fechadura Manual | Ferragens Floresta",
+            "description": "Encontre Fechaduras Manuais de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -38506,7 +38528,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Fechadura Eletrônica | Ferragens Floresta",
+            "description": "Encontre Fechadura Eletrônica de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -38518,7 +38542,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Puxador Topo | Ferragens Floresta",
+            "description": "Encontre Puxador Topo de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
@@ -38530,7 +38556,9 @@
         },
         {
           "value": {
-            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Puxador Ponto | Ferragens Floresta",
+            "description": "Encontre Puxadores Ponto de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
           "rule": {
             "__resolveType": "website/matchers/pathname.ts",
