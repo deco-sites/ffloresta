@@ -38375,6 +38375,146 @@
         {
           "value": {
             "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Coplanar | Ferragens Floresta",
+            "description": "Encontre coplanar de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens-de-projetos/rometal/coplanar"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Tavoletto | Ferragens Floresta",
+            "description": "Encontre tavoletto de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens-de-projetos/hafele/tavoletto"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Slido F Park | Ferragens Floresta",
+            "description": "Encontre slido f park de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens-de-projetos/hafele/slido-f-park"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Slido Design 80 | Ferragens Floresta",
+            "description": "Encontre slido design 80 de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens-de-projetos/hafele/slido-design-80"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Slido Classic 60Vf | Ferragens Floresta",
+            "description": "Encontre slido classic 60vf de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens-de-projetos/hafele/slido-classic-60vf"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Hawa | Ferragens Floresta",
+            "description": "Encontre hawa de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens-de-projetos/hafele/hawa"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Free | Ferragens Floresta",
+            "description": "Encontre free de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens-de-projetos/hafele/free"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Bettlift | Ferragens Floresta",
+            "description": "Encontre bettlift de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens-de-projetos/hafele/bettlift"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Coplanar | Ferragens Floresta",
+            "description": "Encontre coplanar de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens-de-projetos/fgvtn/coplanar"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Space Step | Ferragens Floresta",
+            "description": "Encontre space step de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens-de-projetos/blum/space-step"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
             "title": "Servo Drive | Ferragens Floresta",
             "description": "Encontre servo drive de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
