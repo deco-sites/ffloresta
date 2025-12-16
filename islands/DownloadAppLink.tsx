@@ -67,35 +67,20 @@ const DownloadAppLink: React.FC = () => {
         {/* Seu SVG aqui */}
         <div className="flex justify-center">
           <svg
-            width="54"
-            height="54"
-            viewBox="0 0 54 54"
+            width="142"
+            height="142"
+            viewBox="0 0 142 142"
+            class="h-[52px] w-[52px]"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <rect opacity="0.9" width="54" height="54" rx="3" fill="#1F251C" />
-            <circle cx="26.7466" cy="26.7466" r="17.7466" fill="white" />
-            <rect
-              x="15.0845"
-              y="18.1267"
-              width="21.2959"
-              height="4.05636"
-              fill="#1F251C"
+            <path
+              d="M120.988 120.983C148.664 93.3063 148.664 48.4339 120.988 20.7575C93.3114 -6.919 48.439 -6.919 20.7626 20.7575C-6.91389 48.4339 -6.91389 93.3063 20.7626 120.983C48.439 148.659 93.3114 148.659 120.988 120.983Z"
+              fill="#657459"
             />
-            <rect
-              x="28.2678"
-              y="19.1409"
-              width="17.2395"
-              height="4.05636"
-              transform="rotate(90 28.2678 19.1409)"
-              fill="#1F251C"
-            />
-            <rect
-              x="18.1269"
-              y="25.2253"
-              width="16.2254"
-              height="4.05636"
-              fill="#1F251C"
+            <path
+              d="M113.39 55.2402V42.9102H28.3501V55.2402H63.5301V72.9202H35.8801V85.0402H63.5301V113.39H78.2001V85.0402H105.85V72.9202H78.2001V55.2402H113.39Z"
+              fill="white"
             />
           </svg>
         </div>
