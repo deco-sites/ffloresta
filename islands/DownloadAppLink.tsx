@@ -70,7 +70,7 @@ const DownloadAppLink: React.FC = () => {
             width="142"
             height="142"
             viewBox="0 0 142 142"
-            class="h-[52px] w-[52px]"
+            class="max-h-[52px] max-w-[52px]"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
