@@ -105,7 +105,6 @@ function NotFound() {
   );
 }
 
-// Componente para renderizar o banner (imagem ou vídeo)
 function BannerRenderer({ banner }: { banner: SearchBanner }) {
   const device = useDevice();
 
@@ -156,7 +155,6 @@ function BannerRenderer({ banner }: { banner: SearchBanner }) {
   return null;
 }
 
-// Função para detectar se é uma página de busca
 function isSearchPage(url: string): boolean {
   try {
     const urlObj = new URL(url);
@@ -173,25 +171,20 @@ const useUrlRebased = (overrides: string | undefined, base: string) => {
     const final = new URL(base);
     final.pathname = temp.pathname;
 
-    // Se for uma página de busca, garantir que mantenha o formato correto
     const isSearch = final.searchParams.has("q") || final.pathname === "/s";
 
     if (isSearch && final.pathname !== "/s") {
       final.pathname = "/s";
     }
 
-    // Primeiro, preservar todos os parâmetros da URL base
     const baseUrl = new URL(base);
     for (const [key, value] of baseUrl.searchParams.entries()) {
-      // Não preservar o parâmetro page da URL base se estivermos mudando de página
       if (key !== "page" || !temp.searchParams.has("page")) {
         final.searchParams.set(key, value);
       }
     }
 
-    // Depois, aplicar os overrides
     for (const [key, value] of temp.searchParams.entries()) {
-      // SEMPRE remover o parâmetro page se for 1
       if (key === "page" && value === "1") {
         final.searchParams.delete("page");
       } else if (key === "page") {
@@ -266,8 +259,8 @@ function PageResult(props: SectionProps<typeof loader>) {
         data-product-list
         class={clx(
           "grid items-center",
-          "grid-cols-2 gap-4", // Base
-          "xl:grid-cols-4", // ≥1240px
+          "grid-cols-2 gap-4",
+          "xl:grid-cols-4",
           "w-full"
         )}
       >
@@ -360,7 +353,6 @@ const setPageQuerystring = (page: string, id: string) => {
 
     for (const entry of entries) {
       if (entry.isIntersecting) {
-        // Só adicionar page se for diferente de 1
         if (page !== "1") {
           url.searchParams.set("page", page);
         } else {
@@ -370,7 +362,6 @@ const setPageQuerystring = (page: string, id: string) => {
         typeof history.state?.prevPage === "string" &&
         history.state?.prevPage !== page
       ) {
-        // Só adicionar page se for diferente de 1
         if (history.state.prevPage !== "1") {
           url.searchParams.set("page", history.state.prevPage);
         } else {
@@ -379,7 +370,6 @@ const setPageQuerystring = (page: string, id: string) => {
       }
     }
 
-    // Garantir que todos os filtros sejam preservados no histórico
     history.replaceState(
       { prevPage, filters: url.searchParams.toString() },
       "",
@@ -399,7 +389,6 @@ function Result(props: SectionProps<typeof loader>) {
   const zeroIndexedOffsetPage = pageInfo.currentPage - startingPage;
   const offset = zeroIndexedOffsetPage * perPage;
 
-  // Detectar se é uma página de busca
   const isSearch = isSearchPage(url);
 
   const categoryTitle =
@@ -453,14 +442,11 @@ function Result(props: SectionProps<typeof loader>) {
           <PageResult {...props} />
         ) : (
           <>
-            {/* Banner full width - fora do container */}
             {banner && <BannerRenderer banner={banner} />}
 
-            {/* Restante do conteúdo dentro do container */}
             <div class="container flex flex-col gap-4 sm:gap-5 w-full py-4 sm:py-5 px-5 lg:px-[4rem]">
               <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
 
-              {/* Adicionando o H1 aqui */}
               {categoryTitle && (
                 <h1 class="text-2xl font-bold text-[#1F251C]">
                   {categoryTitle}

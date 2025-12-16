@@ -35,7 +35,6 @@ interface SearchTerm {
   count?: number;
 }
 
-// Função para formatar a URL de pesquisa
 const formatSearchUrl = (searchQuery: string) => {
   const params = new URLSearchParams();
   params.set("q", searchQuery);
@@ -58,7 +57,6 @@ function ProductCard({
   if (isMobile) {
     return (
       <div class="bg-white flex p-2 w-full border-solid border-[0.7px] border-[#8D98A0] ">
-        {/* Imagem à esquerda */}
         <a href={relativeUrl} class="w-1/3 flex-shrink-0">
           <Image
             src={front?.url!}
@@ -71,7 +69,6 @@ function ProductCard({
           />
         </a>
 
-        {/* Nome e preço à direita */}
         <div class="ml-2 flex flex-col justify-center flex-grow">
           <a href={relativeUrl} class="block">
             <h3 class="text-[#3A4332] font-bold text-xs leading-tight uppercase line-clamp-2">
@@ -97,7 +94,6 @@ function ProductCard({
     );
   }
 
-  // Versão desktop
   return (
     <div class="bg-white flex flex-col p-[12px_18px] w-full max-w-[258px] border-solid border-[0.7px] border-[#8D98A0] ">
       <figure class="relative">
@@ -276,7 +272,6 @@ export default function CustomSearchBar({
       {focused.value && hasSuggestions() && (
         <div class="absolute top-full left-0 right-0 bg-white border border-base-200 rounded-none shadow-lg z-50 p-4 max-h-[638px] overflow-auto">
           <div class="flex flex-col md:flex-row gap-5">
-            {/* Coluna de termos de busca */}
             {showSearchTerms && searchTerms.value.length > 0 && (
               <div class="w-full md:w-1/3 bg-white">
                 <h3 class="font-bold text-lg mb-4">Termos de busca</h3>
@@ -308,7 +303,6 @@ export default function CustomSearchBar({
               </div>
             )}
 
-            {/* Coluna de produtos */}
             {showProductSuggestions && products.value.length > 0 && (
               <div class="flex-1 bg-white">
                 <h3 class="font-bold text-lg mb-4">Produtos sugeridos</h3>

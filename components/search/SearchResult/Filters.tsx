@@ -17,7 +17,6 @@ interface Props {
 const isToggle = (filter: Filter): filter is FilterToggle =>
   filter["@type"] === "FilterToggle";
 
-// Função para detectar se é uma página de busca (tem parâmetro q)
 function isSearchPage(url: string): boolean {
   try {
     const urlObj = new URL(url, "http://localhost");
@@ -27,16 +26,13 @@ function isSearchPage(url: string): boolean {
   }
 }
 
-// 🔧 Converter query params para o formato correto baseado no tipo de página
 function convertFilterUrl(url: string, base: string): string {
   try {
     const baseUrl = new URL(base);
     const targetUrl = new URL(url, base);
 
-    // Determinar se estamos em uma página de busca
     const isSearch = isSearchPage(base);
 
-    // Coletar todos os filtros da URL target
     const filters: { key: string; value: string }[] = [];
     for (const [key, value] of targetUrl.searchParams.entries()) {
       if (key.startsWith("filter.")) {
@@ -45,27 +41,21 @@ function convertFilterUrl(url: string, base: string): string {
     }
 
     if (isSearch) {
-      // Para página de busca: usar /s?q=termo&filter.xxx=valor
       const newUrl = new URL(baseUrl);
 
-      // Manter o parâmetro q se existir
       const searchQuery = baseUrl.searchParams.get("q") || "";
 
-      // Construir nova URL
       const finalUrl = new URL("/s", baseUrl.origin);
 
-      // Adicionar parâmetro de busca
       if (searchQuery) {
         finalUrl.searchParams.set("q", searchQuery);
         finalUrl.searchParams.set("map", "ft");
       }
 
-      // Adicionar todos os filtros aplicados
       for (const { key, value } of filters) {
         finalUrl.searchParams.set(`filter.${key}`, value);
       }
 
-      // Adicionar parâmetros da URL base que não são filtros (como sort)
       for (const [key, value] of baseUrl.searchParams.entries()) {
         if (
           !key.startsWith("filter.") &&
@@ -77,14 +67,12 @@ function convertFilterUrl(url: string, base: string): string {
         }
       }
 
-      // Remover parâmetro page se for 1 (padrão VTEX)
       if (finalUrl.searchParams.get("page") === "1") {
         finalUrl.searchParams.delete("page");
       }
 
       return finalUrl.pathname + finalUrl.search;
     } else {
-      // Para página de categoria: manter formato VTEX original
       targetUrl.search = "";
 
       let pathname = "";

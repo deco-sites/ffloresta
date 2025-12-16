@@ -70,8 +70,8 @@ export default function PageResult(props: PageResultProps) {
         data-product-list
         class={clx(
           "grid items-center",
-          "grid-cols-2 gap-4", // Base
-          "xl:grid-cols-4", // ≥1240px
+          "grid-cols-2 gap-4",
+          "xl:grid-cols-4",
           "w-full"
         )}
       >
