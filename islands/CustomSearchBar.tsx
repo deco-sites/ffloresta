@@ -37,18 +37,10 @@ interface SearchTerm {
 
 // Função para formatar a URL de pesquisa
 const formatSearchUrl = (searchQuery: string) => {
-  // Remove acentos e caracteres especiais
-  const normalizedQuery = searchQuery
-    .normalize("NFD") // Decompõe os caracteres acentuados
-    .replace(/[\u0300-\u036f]/g, "") // Remove os diacríticos
-    .toLowerCase();
-
-  const formattedQuery = normalizedQuery
-    .trim()
-    .replace(/\s+/g, "-") // Substitui espaços por hífens
-    .replace(/[^a-z0-9-]/g, ""); // Remove caracteres especiais, mantendo apenas letras, números e hífens
-
-  return `/${formattedQuery}?q=${encodeURIComponent(searchQuery)}&map=ft`;
+  const params = new URLSearchParams();
+  params.set("q", searchQuery);
+  params.set("map", "ft");
+  return `/s?${params.toString()}`;
 };
 
 function ProductCard({
@@ -142,7 +134,7 @@ function ProductCard({
                 <span class="font-bold text-[14px] leading-[170%] tracking-[3%] line-through">
                   {formatPrice(listPrice, offers?.priceCurrency).replace(
                     "R$",
-                    "",
+                    ""
                   )}
                 </span>
               </div>
@@ -244,7 +236,12 @@ export default function CustomSearchBar({
             value={query.value}
             onInput={(e) => (query.value = e.currentTarget.value)}
             onFocus={() => (focused.value = true)}
-            onBlur={() => setTimeout(() => (focused.value = false), 200)}
+            onBlur={() => (focused.value = false)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                focused.value = false;
+              }
+            }}
             autocomplete="off"
             aria-label="Buscar produtos"
           />
@@ -286,26 +283,27 @@ export default function CustomSearchBar({
                 <ul class="space-y-1 md:space-y-2">
                   {(isMobile.value
                     ? searchTerms.value.slice(0, 3)
-                    : searchTerms.value).map((term, index) => (
-                      <li key={index}>
-                        <a
-                          href={formatSearchUrl(term.term)}
-                          class="block py-1 md:py-2 hover:bg-base-200 rounded"
-                          onMouseDown={(e) => e.preventDefault()}
-                        >
-                          <div class="flex justify-between items-center">
-                            <span class="text-sm md:text-base text-capitalize">
-                              {term.term}
+                    : searchTerms.value
+                  ).map((term, index) => (
+                    <li key={index}>
+                      <a
+                        href={formatSearchUrl(term.term)}
+                        class="block py-1 md:py-2 hover:bg-base-200 rounded"
+                        onMouseDown={(e) => e.preventDefault()}
+                      >
+                        <div class="flex justify-between items-center">
+                          <span class="text-sm md:text-base text-capitalize">
+                            {term.term}
+                          </span>
+                          {term.count && (
+                            <span class="text-xs md:text-sm text-gray-500">
+                              {term.count}
                             </span>
-                            {term.count && (
-                              <span class="text-xs md:text-sm text-gray-500">
-                                {term.count}
-                              </span>
-                            )}
-                          </div>
-                        </a>
-                      </li>
-                    ))}
+                          )}
+                        </div>
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </div>
             )}

@@ -4131,6 +4131,9 @@ details.collapse summary::-webkit-details-marker {
 .max-h-\[520px\] {
   max-height: 520px;
 }
+.max-h-\[52px\] {
+  max-height: 52px;
+}
 .max-h-\[550px\] {
   max-height: 550px;
 }
@@ -4296,9 +4299,6 @@ details.collapse summary::-webkit-details-marker {
 .w-\[522px\] {
   width: 522px;
 }
-.w-\[52px\] {
-  width: 52px;
-}
 .w-\[57px\] {
   width: 57px;
 }
@@ -4459,6 +4459,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .max-w-\[522px\] {
   max-width: 522px;
+}
+.max-w-\[52px\] {
+  max-width: 52px;
 }
 .max-w-\[640px\] {
   max-width: 640px;
