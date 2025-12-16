@@ -38374,6 +38374,82 @@
       "variants": [
         {
           "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": null
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": null
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": null
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": null
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": null
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": null
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": null
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": null
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Volare | Ferragens Floresta",
+            "description": "Encontre volare de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens-de-projetos/rometal/volare"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Rivelatto | Ferragens Floresta",
+            "description": "Encontre rivelatto de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferragens-de-projetos/rometal/rivelatto"
+            }
+          }
+        },
+        {
+          "value": {
             "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
             "title": "Coplanar | Ferragens Floresta",
             "description": "Encontre coplanar de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
