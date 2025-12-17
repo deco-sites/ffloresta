@@ -17,12 +17,22 @@ interface Props {
 const isToggle = (filter: Filter): filter is FilterToggle =>
   filter["@type"] === "FilterToggle";
 
-// 🔧 Converter query params (?filter.xxx=) em path VTEX (/xxx/yyy?map=a,b)
-function convertToVtexPath(url: string, base: string): string {
+function isSearchPage(url: string): boolean {
   try {
+    const urlObj = new URL(url, "http://localhost");
+    return urlObj.searchParams.has("q") || urlObj.pathname === "/s";
+  } catch {
+    return false;
+  }
+}
+
+function convertFilterUrl(url: string, base: string): string {
+  try {
+    const baseUrl = new URL(base);
     const targetUrl = new URL(url, base);
 
-    // Coletar filtros aplicados
+    const isSearch = isSearchPage(base);
+
     const filters: { key: string; value: string }[] = [];
     for (const [key, value] of targetUrl.searchParams.entries()) {
       if (key.startsWith("filter.")) {
@@ -30,44 +40,70 @@ function convertToVtexPath(url: string, base: string): string {
       }
     }
 
-    // Limpar query string
-    targetUrl.search = "";
+    if (isSearch) {
+      const newUrl = new URL(baseUrl);
 
-    // Construir pathname e map
-    let pathname = "";
-    let map: string[] = [];
-    let initialQuery = "";
+      const searchQuery = baseUrl.searchParams.get("q") || "";
 
-    for (const { key, value } of filters) {
-      pathname += `/${value}`;
-      map.push(key);
+      const finalUrl = new URL("/s", baseUrl.origin);
 
-      if (key.startsWith("category") && !initialQuery) {
-        initialQuery = value;
+      if (searchQuery) {
+        finalUrl.searchParams.set("q", searchQuery);
+        finalUrl.searchParams.set("map", "ft");
       }
+
+      for (const { key, value } of filters) {
+        finalUrl.searchParams.set(`filter.${key}`, value);
+      }
+
+      for (const [key, value] of baseUrl.searchParams.entries()) {
+        if (
+          !key.startsWith("filter.") &&
+          key !== "q" &&
+          key !== "map" &&
+          key !== "page"
+        ) {
+          finalUrl.searchParams.set(key, value);
+        }
+      }
+
+      if (finalUrl.searchParams.get("page") === "1") {
+        finalUrl.searchParams.delete("page");
+      }
+
+      return finalUrl.pathname + finalUrl.search;
+    } else {
+      targetUrl.search = "";
+
+      let pathname = "";
+      let map: string[] = [];
+      let initialQuery = "";
+
+      for (const { key, value } of filters) {
+        pathname += `/${value}`;
+        map.push(key);
+
+        if (key.startsWith("category") && !initialQuery) {
+          initialQuery = value;
+        }
+      }
+
+      if (!initialQuery && filters.length > 0) {
+        initialQuery = filters[0].value;
+      }
+
+      targetUrl.pathname = pathname || targetUrl.pathname;
+
+      if (initialQuery) {
+        targetUrl.searchParams.set("initialMap", "c");
+        targetUrl.searchParams.set("initialQuery", initialQuery);
+      }
+      if (map.length > 0) {
+        targetUrl.searchParams.set("map", map.join(","));
+      }
+
+      return targetUrl.pathname + "?" + targetUrl.searchParams.toString();
     }
-
-    // Se não tiver categoria, usar o primeiro filtro como initialQuery
-    if (!initialQuery && filters.length > 0) {
-      initialQuery = filters[0].value;
-    }
-
-    // Atualizar pathname
-    targetUrl.pathname = pathname || targetUrl.pathname;
-
-    // Adicionar parâmetros obrigatórios VTEX
-    if (initialQuery) {
-      targetUrl.searchParams.set("initialMap", "c");
-      targetUrl.searchParams.set("initialQuery", initialQuery);
-    }
-    if (map.length > 0) {
-      targetUrl.searchParams.set("map", map.join(","));
-    }
-
-    // REMOVIDO: Não adicionar page=1 automaticamente
-    // targetUrl.searchParams.set("page", "1");
-
-    return targetUrl.pathname + "?" + targetUrl.searchParams.toString();
   } catch (e) {
     console.error("Error converting URL:", e);
     return url;
@@ -81,7 +117,7 @@ function ValueItem({
   quantity,
   baseUrl,
 }: FilterToggleValue & { baseUrl: string }) {
-  const href = convertToVtexPath(url, baseUrl);
+  const href = convertFilterUrl(url, baseUrl);
 
   return (
     <a
@@ -97,7 +133,7 @@ function ValueItem({
           "checkbox rounded-none w-4 h-4 max-w-4 max-h-4 border relative transition-all duration-200 flex items-center justify-center",
           selected
             ? "bg-[#1F251C] border-[#1F251C]"
-            : "border-[#CCCCCC] bg-white",
+            : "border-[#CCCCCC] bg-white"
         )}
       >
         {selected && (
@@ -113,12 +149,11 @@ function ValueItem({
       <span
         class={clx(
           "text-md transition-colors duration-200",
-          selected ? "text-[#1F251C] font-medium" : "text-[#1F251C]",
+          selected ? "text-[#1F251C] font-medium" : "text-[#1F251C]"
         )}
       >
         {label}
       </span>
-      {/* {quantity && <span class="text-sm text-gray-500">({quantity})</span>} */}
     </a>
   );
 }
@@ -139,7 +174,7 @@ function FilterValues({
         if (avatars) {
           return (
             <li key={`${key}-${value}`}>
-              <a href={convertToVtexPath(url, baseUrl)} rel="nofollow">
+              <a href={convertFilterUrl(url, baseUrl)} rel="nofollow">
                 <Avatar
                   content={value}
                   variant={selected ? "active" : "default"}
@@ -158,11 +193,9 @@ function FilterValues({
                 <ValueItem
                   {...item}
                   baseUrl={baseUrl}
-                  label={`${formatPrice(range.from)} - ${
-                    formatPrice(
-                      range.to,
-                    )
-                  }`}
+                  label={`${formatPrice(range.from)} - ${formatPrice(
+                    range.to
+                  )}`}
                 />
               </li>
             )
@@ -181,7 +214,7 @@ function FilterValues({
 
 function Filters({ filters, url }: Props) {
   const filteredFilters = filters.filter(
-    (filter) => !(isToggle(filter) && filter.key === "price"),
+    (filter) => !(isToggle(filter) && filter.key === "price")
   );
 
   return (

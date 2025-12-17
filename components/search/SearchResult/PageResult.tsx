@@ -34,7 +34,7 @@ export default function PageResult(props: PageResultProps) {
       <div
         class={clx(
           "pb-2 sm:pb-10",
-          (!prevPageUrl || partial === "hideLess") && "hidden",
+          (!prevPageUrl || partial === "hideLess") && "hidden"
         )}
       >
         <a
@@ -70,9 +70,9 @@ export default function PageResult(props: PageResultProps) {
         data-product-list
         class={clx(
           "grid items-center",
-          "grid-cols-2 gap-4", // Base
-          "xl:grid-cols-4", // ≥1240px
-          "w-full",
+          "grid-cols-2 gap-4",
+          "xl:grid-cols-4",
+          "w-full"
         )}
       >
         {products?.map((product, index) => (
@@ -92,7 +92,7 @@ export default function PageResult(props: PageResultProps) {
             rel="next"
             class={clx(
               "cursor-pointer",
-              (!nextPageUrl || partial === "hideMore") && "hidden",
+              (!nextPageUrl || partial === "hideMore") && "hidden"
             )}
             hx-swap="outerHTML show:parent:top"
             hx-get={partialNext}
