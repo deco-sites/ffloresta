@@ -1,11 +1,4 @@
 {
   "__resolveType": "site/loaders/flags-config.ts",
-  "items": [
-    {
-      "type": "image",
-      "collections": [
-        null
-      ]
-    }
-  ]
+  "items": []
 }

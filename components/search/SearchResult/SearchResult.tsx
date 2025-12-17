@@ -105,7 +105,6 @@ function NotFound() {
   );
 }
 
-// Componente para renderizar o banner (imagem ou vídeo)
 function BannerRenderer({ banner }: { banner: SearchBanner }) {
   const device = useDevice();
 
@@ -156,6 +155,15 @@ function BannerRenderer({ banner }: { banner: SearchBanner }) {
   return null;
 }
 
+function isSearchPage(url: string): boolean {
+  try {
+    const urlObj = new URL(url);
+    return urlObj.pathname === "/s" || urlObj.searchParams.has("q");
+  } catch {
+    return false;
+  }
+}
+
 const useUrlRebased = (overrides: string | undefined, base: string) => {
   let url: string | undefined = undefined;
   if (overrides) {
@@ -163,18 +171,20 @@ const useUrlRebased = (overrides: string | undefined, base: string) => {
     const final = new URL(base);
     final.pathname = temp.pathname;
 
-    // Primeiro, preservar todos os parâmetros da URL base (filtros atuais)
+    const isSearch = final.searchParams.has("q") || final.pathname === "/s";
+
+    if (isSearch && final.pathname !== "/s") {
+      final.pathname = "/s";
+    }
+
     const baseUrl = new URL(base);
     for (const [key, value] of baseUrl.searchParams.entries()) {
-      // Não preservar o parâmetro page da URL base se estivermos mudando de página
       if (key !== "page" || !temp.searchParams.has("page")) {
         final.searchParams.set(key, value);
       }
     }
 
-    // Depois, aplicar os overrides (principalmente a página)
     for (const [key, value] of temp.searchParams.entries()) {
-      // SEMPRE remover o parâmetro page se for 1
       if (key === "page" && value === "1") {
         final.searchParams.delete("page");
       } else if (key === "page") {
@@ -249,8 +259,13 @@ function PageResult(props: SectionProps<typeof loader>) {
         data-product-list
         class={clx(
           "grid items-center",
+<<<<<<< HEAD
           "grid-cols-2 gap-4", // Base
           "xl:grid-cols-4", // ≥1240px
+=======
+          "grid-cols-2 gap-4",
+          "xl:grid-cols-4",
+>>>>>>> abdb2f7fb3b9d5a77ef5b83f93ac66d296f0f02c
           "w-full"
         )}
       >
@@ -343,7 +358,6 @@ const setPageQuerystring = (page: string, id: string) => {
 
     for (const entry of entries) {
       if (entry.isIntersecting) {
-        // Só adicionar page se for diferente de 1
         if (page !== "1") {
           url.searchParams.set("page", page);
         } else {
@@ -353,7 +367,6 @@ const setPageQuerystring = (page: string, id: string) => {
         typeof history.state?.prevPage === "string" &&
         history.state?.prevPage !== page
       ) {
-        // Só adicionar page se for diferente de 1
         if (history.state.prevPage !== "1") {
           url.searchParams.set("page", history.state.prevPage);
         } else {
@@ -362,7 +375,6 @@ const setPageQuerystring = (page: string, id: string) => {
       }
     }
 
-    // Garantir que todos os filtros sejam preservados no histórico
     history.replaceState(
       { prevPage, filters: url.searchParams.toString() },
       "",
@@ -382,6 +394,11 @@ function Result(props: SectionProps<typeof loader>) {
   const zeroIndexedOffsetPage = pageInfo.currentPage - startingPage;
   const offset = zeroIndexedOffsetPage * perPage;
 
+<<<<<<< HEAD
+=======
+  const isSearch = isSearchPage(url);
+
+>>>>>>> abdb2f7fb3b9d5a77ef5b83f93ac66d296f0f02c
   const categoryTitle =
     seoConfig?.pageTitle || breadcrumb.itemListElement?.at(-1)?.name;
 
@@ -433,14 +450,11 @@ function Result(props: SectionProps<typeof loader>) {
           <PageResult {...props} />
         ) : (
           <>
-            {/* Banner full width - fora do container */}
             {banner && <BannerRenderer banner={banner} />}
 
-            {/* Restante do conteúdo dentro do container */}
             <div class="container flex flex-col gap-4 sm:gap-5 w-full py-4 sm:py-5 px-5 lg:px-[4rem]">
               <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
 
-              {/* Adicionando o H1 aqui */}
               {categoryTitle && (
                 <h1 class="text-2xl font-bold text-[#1F251C]">
                   {categoryTitle}

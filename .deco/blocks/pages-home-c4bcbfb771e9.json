@@ -49,7 +49,7 @@
         {
           "type": "image",
           "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/89017f01-8a68-4c67-9150-47aa1aae498e/dektop-acessorios.jpg",
+            "desktop": "https://assets.decocache.com/ffloresta/97ce7cae-0e4b-4304-bd30-72e564dd1b49/dektop-acessorios.jpg",
             "mobile": "https://assets.decocache.com/ffloresta/adac2852-b41a-409a-a8c9-ffb00dbe51fb/mobile-acessorios.jpg",
             "action": {
               "href": "/ferramentas/acessorios?initialMap=c&initialQuery=ferramentas&map=category-1%2Ccategory-2"
@@ -126,7 +126,7 @@
         "__resolveType": "vtex/loaders/intelligentSearch/productSearchValidator.ts",
         "props": {
           "sort": "price:desc",
-          "collection": "170",
+          "collection": "186",
           "count": 20,
           "hideUnavailableItems": false
         }
@@ -302,7 +302,8 @@
       "icon": "https://assets.decocache.com/ffloresta/411928eb-5e4b-4c3b-83d1-1c788f576a64/icon_prancheta.svg",
       "flagsConfig": {
         "__resolveType": "Configurações Globais de Flag"
-      }
+      },
+      "page": null
     },
     {
       "__resolveType": "site/sections/Content/BannerMosaic.tsx",
