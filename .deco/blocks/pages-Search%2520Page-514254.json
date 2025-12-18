@@ -15,10 +15,9 @@
         "advancedConfigs": {
           "includeOriginalAttributes": []
         },
-        "count": 16,
-        "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
-        "sort": "OrderByPriceDESC",
-        "filters": "dynamic"
+        "simulationBehavior": "default",
+        "fuzzy": "disabled",
+        "count": 16
       },
       "layout": {
         "columns": {
