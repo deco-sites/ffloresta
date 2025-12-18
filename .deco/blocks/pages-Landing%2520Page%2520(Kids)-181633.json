@@ -22,7 +22,7 @@
       "section": {
         "__resolveType": "site/sections/Product/SearchResult.tsx",
         "page": {
-          "__resolveType": "vtex/loaders/ProductListingPage.ts",
+          "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts.ts",
           "count": 12,
           "query": "kids"
         },
