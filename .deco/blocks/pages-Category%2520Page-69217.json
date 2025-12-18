@@ -17,7 +17,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -173,7 +173,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -329,7 +329,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -485,7 +485,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -641,7 +641,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -797,7 +797,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -953,7 +953,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -1109,7 +1109,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -1265,7 +1265,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -1421,7 +1421,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -1577,7 +1577,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -1733,7 +1733,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -1889,7 +1889,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -2045,7 +2045,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -2201,7 +2201,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -2357,7 +2357,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -2513,7 +2513,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -2669,7 +2669,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -2825,7 +2825,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -2981,7 +2981,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -3137,7 +3137,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -3293,7 +3293,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -3449,7 +3449,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -3605,7 +3605,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -3761,7 +3761,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -3917,7 +3917,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -4074,7 +4074,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -4225,7 +4225,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -4376,7 +4376,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -4527,7 +4527,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -4678,7 +4678,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -4829,7 +4829,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -4980,7 +4980,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -5131,7 +5131,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -5282,7 +5282,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -5433,7 +5433,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -5584,7 +5584,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -5736,7 +5736,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -5887,7 +5887,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -6038,7 +6038,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -6189,7 +6189,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -6340,7 +6340,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -6491,7 +6491,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -6642,7 +6642,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -6793,7 +6793,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -6944,7 +6944,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -7095,7 +7095,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -7246,7 +7246,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -7397,7 +7397,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -7548,7 +7548,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -7699,7 +7699,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -7850,7 +7850,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -8001,7 +8001,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -8152,7 +8152,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -8303,7 +8303,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -8454,7 +8454,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -8605,7 +8605,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -8756,7 +8756,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -8907,7 +8907,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -9058,7 +9058,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -9209,7 +9209,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -9360,7 +9360,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -9511,7 +9511,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -9662,7 +9662,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -9813,7 +9813,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -9964,7 +9964,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -10115,7 +10115,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -10266,7 +10266,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -10417,7 +10417,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -10568,7 +10568,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -10719,7 +10719,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -10870,7 +10870,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -11021,7 +11021,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -11172,7 +11172,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -11323,7 +11323,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -11474,7 +11474,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -11625,7 +11625,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -11776,7 +11776,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -11927,7 +11927,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -12078,7 +12078,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -12229,7 +12229,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -12380,7 +12380,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -12531,7 +12531,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -12682,7 +12682,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -12833,7 +12833,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -12984,7 +12984,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -13135,7 +13135,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -13286,7 +13286,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -13437,7 +13437,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -13588,7 +13588,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -13739,7 +13739,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -13890,7 +13890,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -14041,7 +14041,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -14192,7 +14192,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -14343,7 +14343,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -14494,7 +14494,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -14645,7 +14645,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -14796,7 +14796,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -14947,7 +14947,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -15098,7 +15098,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -15249,7 +15249,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -15400,7 +15400,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -15551,7 +15551,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -15702,7 +15702,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -15853,7 +15853,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -16004,7 +16004,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -16155,7 +16155,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -16306,7 +16306,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -16457,7 +16457,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -16613,7 +16613,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -16769,7 +16769,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -16925,7 +16925,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -17081,7 +17081,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -17237,7 +17237,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -17393,7 +17393,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -17549,7 +17549,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -17705,7 +17705,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -17861,7 +17861,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -18017,7 +18017,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -18173,7 +18173,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -18329,7 +18329,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -18485,7 +18485,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -18641,7 +18641,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -18797,7 +18797,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -18953,7 +18953,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -19109,7 +19109,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -19265,7 +19265,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -19421,7 +19421,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -19577,7 +19577,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -19733,7 +19733,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -19889,7 +19889,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -20045,7 +20045,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -20201,7 +20201,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -20357,7 +20357,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -20513,7 +20513,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -20669,7 +20669,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -20825,7 +20825,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -20981,7 +20981,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -21137,7 +21137,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -21293,7 +21293,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -21449,7 +21449,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -21605,7 +21605,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -21761,7 +21761,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -21917,7 +21917,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -22073,7 +22073,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -22229,7 +22229,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -22380,7 +22380,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -22536,7 +22536,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -22692,7 +22692,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -22848,7 +22848,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -23004,7 +23004,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -23160,7 +23160,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -23316,7 +23316,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -23472,7 +23472,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -23628,7 +23628,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -23784,7 +23784,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -23940,7 +23940,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -24096,7 +24096,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -24252,7 +24252,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -24408,7 +24408,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -24564,7 +24564,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -24720,7 +24720,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -24876,7 +24876,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -25032,7 +25032,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -25188,7 +25188,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -25344,7 +25344,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -25500,7 +25500,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -25656,7 +25656,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -25812,7 +25812,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -25968,7 +25968,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -26124,7 +26124,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -26280,7 +26280,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -26436,7 +26436,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -26592,7 +26592,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -26748,7 +26748,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -26904,7 +26904,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -27060,7 +27060,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -27216,7 +27216,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -27372,7 +27372,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -27528,7 +27528,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -27684,7 +27684,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -27840,7 +27840,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -27996,7 +27996,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -28152,7 +28152,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -28308,7 +28308,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -28464,7 +28464,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -28620,7 +28620,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -28776,7 +28776,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -28932,7 +28932,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -29088,7 +29088,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -29244,7 +29244,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -29400,7 +29400,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -29556,7 +29556,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -29712,7 +29712,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -29868,7 +29868,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -30024,7 +30024,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -30180,7 +30180,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -30336,7 +30336,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -30492,7 +30492,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -30648,7 +30648,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -30804,7 +30804,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -30960,7 +30960,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -31116,7 +31116,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -31272,7 +31272,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -31428,7 +31428,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -31584,7 +31584,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -31735,7 +31735,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -31891,7 +31891,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -32047,7 +32047,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -32203,7 +32203,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -32359,7 +32359,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -32515,7 +32515,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -32671,7 +32671,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -32827,7 +32827,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -32983,7 +32983,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -33134,7 +33134,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -33290,7 +33290,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -33447,7 +33447,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -33603,7 +33603,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -33759,7 +33759,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -33915,7 +33915,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -34071,7 +34071,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -34227,7 +34227,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -34383,7 +34383,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -34539,7 +34539,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -34691,7 +34691,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -34844,7 +34844,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -34996,7 +34996,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -35150,7 +35150,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -35301,7 +35301,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -35450,7 +35450,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -35599,7 +35599,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -35754,7 +35754,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -35903,7 +35903,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -36052,7 +36052,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -36201,7 +36201,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -36348,7 +36348,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -36495,7 +36495,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -36642,7 +36642,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -36789,7 +36789,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -36938,7 +36938,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -37087,7 +37087,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -37236,7 +37236,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -37385,7 +37385,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -37533,7 +37533,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -37693,7 +37693,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -37847,7 +37847,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -38006,7 +38006,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -38160,7 +38160,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -38317,7 +38317,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
@@ -38477,7 +38477,7 @@
             "__resolveType": "site/sections/Product/SearchResult.tsx",
             "page": {
               "fuzzy": "disabled",
-              "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+              "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
               "count": 16,
               "advancedConfigs": {
                 "includeOriginalAttributes": []
