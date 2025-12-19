@@ -38627,49 +38627,395 @@
           "value": {
             "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
           },
-          "rule": null
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/cozinha/porta-temperos-e-condimentos"
+            }
+          }
         },
         {
           "value": {
             "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
           },
-          "rule": null
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/cozinha/porta-garrafas"
+            }
+          }
         },
         {
           "value": {
             "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
           },
-          "rule": null
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/cozinha/organizador"
+            }
+          }
         },
         {
           "value": {
             "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
           },
-          "rule": null
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/cozinha/misturadores"
+            }
+          }
         },
         {
           "value": {
             "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
           },
-          "rule": null
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/cozinha/lixeiras"
+            }
+          }
         },
         {
           "value": {
             "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
           },
-          "rule": null
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/cozinha/grades-de-ventilacao"
+            }
+          }
         },
         {
           "value": {
             "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
           },
-          "rule": null
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/cozinha/gaveta-aramada"
+            }
+          }
         },
         {
           "value": {
             "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
           },
-          "rule": null
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/cozinha/fruteira"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/cozinha/escorredores-de-loucas"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/cozinha/divisor-de-talheres"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/cozinha/colunas-deslizantes"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/cozinha/cesto-giratorio"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/cozinha/barra-protetora"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/cozinha/adega"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/banheiro/torneiras"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/banheiro/toalheiros-eletricos"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/banheiro/ralos"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/banheiro/organizacao"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/banheiro/lixeiras"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/banheiro/espelhos"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Chuveiros | Ferragens Floresta",
+            "language": "Encontre chuveiros de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/banheiro/chuveiros"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Acessórios de Móveis | Ferragens Floresta",
+            "description": "Confira acessórios funcionais para móveis e projetos. Praticidade, qualidade e entrega rápida na Ferragens Floresta."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/banheiro/acessorios"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Varais | Ferragens Floresta",
+            "description": "Encontre varais de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/area-de-servico/varais"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Tulhas | Ferragens Floresta",
+            "description": "Encontre tulhas de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/area-de-servico/tulhas"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Tábua De Passar | Ferragens Floresta",
+            "description": "Encontre tábua de passar de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/area-de-servico/tabua-de-passar"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Suportes E Organizadores | Ferragens Floresta",
+            "description": "Encontre suportes e organizadores de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/area-de-servico/suportes-e-organizadores"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Quarto | Ferragens Floresta",
+            "description": "Encontre quarto de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/quarto"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Para Casa | Ferragens Floresta",
+            "description": "Encontre para casa de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/para-casa"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Cozinha | Ferragens Floresta",
+            "description": "Encontre cozinha de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/cozinha"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Banheiro | Ferragens Floresta",
+            "description": "Encontre banheiro de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/banheiro"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Área De Serviço | Ferragens Floresta",
+            "description": "Encontre área de serviço de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/area-de-servico"
+            }
+          }
         },
         {
           "value": {
