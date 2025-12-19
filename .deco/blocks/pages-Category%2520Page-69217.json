@@ -38626,6 +38626,300 @@
         {
           "value": {
             "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Baterias e Carregadores | Ferragens Floresta",
+            "description": "Encontre baterias e carregadores de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/acessorios/baterias-e-carregadores"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Ferramentas de Qualidade | Ferragens Floresta",
+            "description": "Encontre ferramentas profissionais para seu projeto. Produtos duráveis e de alto desempenho na Ferragens Floresta. Veja ofertas!"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/ferramentas-pneumaticas"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Ferramentas de Qualidade | Ferragens Floresta",
+            "description": "Encontre ferramentas profissionais para seu projeto. Produtos duráveis e de alto desempenho na Ferragens Floresta. Veja ofertas!"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/ferramentas-manuais"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Ferramentas de Qualidade | Ferragens Floresta",
+            "description": "Encontre ferramentas profissionais para seu projeto. Produtos duráveis e de alto desempenho na Ferragens Floresta. Veja ofertas!"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/ferramentas-eletricas"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Ferramentas de Qualidade | Ferragens Floresta",
+            "description": "Encontre ferramentas profissionais para seu projeto. Produtos duráveis e de alto desempenho na Ferragens Floresta. Veja ofertas!"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/ferramentas-a-bateria"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Armazenamento | Ferragens Floresta",
+            "description": "Encontre armazenamento de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/armazenamento"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Acessórios de Móveis | Ferragens Floresta",
+            "description": "Confira acessórios funcionais para móveis e projetos. Praticidade, qualidade e entrega rápida na Ferragens Floresta."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ferramentas/acessorios"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Proteção | Ferragens Floresta",
+            "description": "Encontre proteção de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/quarto/protecao"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Porta Cintos E Gravatas | Ferragens Floresta",
+            "description": "Encontre porta cintos e gravatas de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/quarto/porta-cintos-e-gravatas"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Organizadores | Ferragens Floresta",
+            "description": "Encontre organizadores de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/quarto/organizadores"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Espelhos | Ferragens Floresta",
+            "description": "Encontre espelhos de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/quarto/espelhos"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Escadas | Ferragens Floresta",
+            "description": "Encontre escadas de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/quarto/escadas"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Calceiros | Ferragens Floresta",
+            "description": "Encontre calceiros de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/quarto/calceiros"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Cabideiros Led | Ferragens Floresta",
+            "description": "Encontre cabideiros led de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/quarto/cabideiros-led"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Cabideiros | Ferragens Floresta",
+            "description": "Encontre cabideiros de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/quarto/cabideiros"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Acessórios de Móveis | Ferragens Floresta",
+            "description": "Confira acessórios funcionais para móveis e projetos. Praticidade, qualidade e entrega rápida na Ferragens Floresta."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/quarto/acessorios"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Suportes De Tv | Ferragens Floresta",
+            "description": "Encontre suportes de tv de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/para-casa/suportes-de-tv"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Jardinagem | Ferragens Floresta",
+            "description": "Encontre jardinagem de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/para-casa/jardinagem"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Eletroportáteis | Ferragens Floresta",
+            "description": "Encontre eletroportáteis de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/para-casa/eletroportateis"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Aquecedor de Ambientes | Ferragens Floresta",
+            "description": "Escolha Aquecedor de Ambientes ideais para cada ambiente da sua casa ou projeto. Qualidade e variedade na Ferragens Floresta."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/para-casa/aquecedor-de-ambiente"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
+            "title": "Torneiras para Cozinha | Ferragens Floresta",
+            "description": "Encontre torneiras de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
+          },
+          "rule": {
+            "__resolveType": "website/matchers/pathname.ts",
+            "case": {
+              "type": "Equals",
+              "pathname": "/ambientes/cozinha/torneiras"
+            }
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Seo/AdvancedSEOConfig.tsx",
             "title": "Porta Temperos E Condimentos | Ferragens Floresta",
             "description": "Encontre porta temperos e condimentos de qualidade na Ferragens Floresta. Linha completa disponível para compra online com segurança."
           },
