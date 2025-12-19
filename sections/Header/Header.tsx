@@ -11,6 +11,7 @@ import NavItemIsland from "../../islands/Header/NavItemIsland.tsx";
 import SearchBarIsland from "../../islands/CustomSearchBar.tsx";
 import HeaderDrawer from "../../components/header/HeaderDrawer.tsx";
 import MenuMobile from "../../islands/Header/MenuMobile.tsx";
+import DownloadAppLink from "../../islands/DownloadAppLink.tsx";
 
 export interface Logo {
   src: ImageWidget;
@@ -128,6 +129,7 @@ const Mobile = ({
   searchBar,
 }: Props & { alerts: HTMLWidget[] }) => (
   <div class="w-full">
+    <DownloadAppLink />
     <div class="flex items-center justify-between w-full py-3 px-4 gap-2 bg-[#1F251C] mt-[-1px]">
       <div class="flex-1 flex justify-start">
         <label
