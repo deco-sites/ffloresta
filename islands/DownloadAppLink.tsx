@@ -97,7 +97,7 @@ const DownloadAppLink: React.FC = () => {
           href={storeUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="block bg-[#3A4332] hover:bg-[#2c3325] text-white text-center text-[10px] font-bold p-[10px] rounded-lg transition-colors duration-200 ml-auto"
+          className="block bg-[#3A4332] hover:bg-[#2c3325] text-white text-center text-[10px] font-bold p-[10px] rounded-lg transition-colors duration-200 ml-auto mr-2"
         >
           BAIXE AGORA
         </a>
