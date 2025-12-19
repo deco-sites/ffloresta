@@ -212,24 +212,63 @@ function FilterValues({
   );
 }
 
+// Função para traduzir os labels dos filtros
+function translateFilterLabel(key: string, originalLabel: string): string {
+  const translations: Record<string, string> = {
+    Departments: "Departamentos",
+    Categories: "Categorias",
+    Brands: "Marcas",
+    PriceRanges: "Faixa de Preço",
+  };
+
+  return translations[originalLabel] || originalLabel;
+}
+
 function Filters({ filters, url }: Props) {
-  const filteredFilters = filters.filter(
-    (filter) => !(isToggle(filter) && filter.key === "price")
-  );
+  console.log(filters, url, "filters");
+
+  // Filtrar para remover PriceRanges, "price" e também filtros sem valores
+  const filteredFilters = filters.filter((filter) => {
+    if (isToggle(filter)) {
+      // Remover filtros de preço e PriceRanges
+      const isPriceFilter =
+        filter.key === "price" || filter.key === "PriceRanges";
+      // Verificar se o filtro tem valores (não está vazio)
+      const hasValues = filter.values && filter.values.length > 0;
+
+      return !isPriceFilter && hasValues;
+    }
+    return true;
+  });
+
+  // Se não houver filtros para exibir, não renderiza nada
+  if (filteredFilters.length === 0) {
+    return null;
+  }
 
   return (
     <ul
       class="flex flex-col gap-6 sm:p-0 divide-y divide-[#CCCCCC]"
       data-filters-container
     >
-      {filteredFilters.filter(isToggle).map((filter) => (
-        <li key={filter.key} class="flex flex-col gap-4 pt-4 px-4 xl:px-0">
-          <span class="text-md font-medium text-[#1F251C]">{filter.label}</span>
-          <div class="md:max-h-80 md:overflow-auto">
-            <FilterValues {...filter} baseUrl={url} />
-          </div>
-        </li>
-      ))}
+      {filteredFilters.filter(isToggle).map((filter) => {
+        // Verificar novamente se tem valores (para garantir)
+        if (!filter.values || filter.values.length === 0) {
+          return null;
+        }
+
+        return (
+          <li key={filter.key} class="flex flex-col gap-4 pt-4 px-4 xl:px-0">
+            {/* Usar o label traduzido */}
+            <span class="text-md font-medium text-[#1F251C]">
+              {translateFilterLabel(filter.key, filter.label)}
+            </span>
+            <div class="md:max-h-80 md:overflow-auto">
+              <FilterValues {...filter} baseUrl={url} />
+            </div>
+          </li>
+        );
+      })}
     </ul>
   );
 }
