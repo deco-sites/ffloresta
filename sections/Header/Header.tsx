@@ -11,6 +11,9 @@ import NavItemIsland from "../../islands/Header/NavItemIsland.tsx";
 import SearchBarIsland from "../../islands/CustomSearchBar.tsx";
 import HeaderDrawer from "../../components/header/HeaderDrawer.tsx";
 import MenuMobile from "../../islands/Header/MenuMobile.tsx";
+import Searchbar, {
+  type SearchbarProps,
+} from "../../components/search/Searchbar/Form.tsx";
 
 export interface Logo {
   src: ImageWidget;
@@ -20,33 +23,10 @@ export interface Logo {
   height?: number;
 }
 
-export interface SearchBarProps {
-  /**
-   * @title Placeholder
-   * @description Search bar default placeholder message
-   * @default What are you looking for?
-   */
-  placeholder?: string;
-  /**
-   * @title Mostrar sugestões de produtos
-   * @default true
-   */
-  showProductSuggestions?: boolean;
-  /**
-   * @title Mostrar termos de busca
-   * @default true
-   */
-  showSearchTerms?: boolean;
-  /**
-   * @title Nome da conta VTEX
-   * @description Exemplo: 'minhaloja'
-   */
-}
-
 export interface SectionProps {
   alerts?: HTMLWidget[];
   navItems?: SiteNavigationElement[] | null;
-  searchBar?: SearchBarProps;
+  searchBar?: SearchbarProps;
   logo: Logo;
   loading?: "eager" | "lazy";
 }
@@ -99,6 +79,7 @@ const Desktop = ({ navItems, logo, searchBar }: Props) => (
 
           <div class="flex-1 max-w-xl mx-4">
             {searchBar && <SearchBarIsland {...searchBar} />}
+            {searchBar && <Searchbar {...searchBar} />}
           </div>
 
           <div class="flex items-center gap-6">
