@@ -12,13 +12,11 @@
     {
       "__resolveType": "site/sections/Product/SearchResult.tsx",
       "page": {
-        "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
-        "sort": "price:desc",
-        "fuzzy": "automatic",
-        "selectedFacets": [],
         "advancedConfigs": {
           "includeOriginalAttributes": []
         },
+        "simulationBehavior": "default",
+        "fuzzy": "disabled",
         "count": 16
       },
       "layout": {
