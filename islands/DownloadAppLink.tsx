@@ -38,7 +38,7 @@ const DownloadAppLink: React.FC = () => {
 
   return (
     <div className="fixed w-[calc(100vw-32px)] right-1/2 transform translate-x-1/2 top-[176px] z-50">
-      <div className="bg-white w-full flex items-center rounded-lg border border-[#EAE6E6] shadow-[1px_1px_4px_0px_rgba(0,0,0,0.25)] py-2 px-4 relative ">
+      <div className="bg-white w-full flex items-center rounded-lg border border-[#EAE6E6] shadow-[1px_1px_4px_0px_rgba(0,0,0,0.25)] p-2 relative ">
         {/* Botão de fechar */}
         <button
           onClick={handleClose}
@@ -85,7 +85,7 @@ const DownloadAppLink: React.FC = () => {
           </svg>
         </div>
 
-        <div className="text-center min-w-[160px]">
+        <div className="text-center min-w-[140px]">
           <p className="text-[13px] text-gray-700 text-left">
             Só no app você aproveita
             <br />
@@ -97,7 +97,7 @@ const DownloadAppLink: React.FC = () => {
           href={storeUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="block bg-[#3A4332] hover:bg-[#2c3325] text-white text-center text-[13px] font-bold p-[10px] rounded-lg transition-colors duration-200 ml-auto"
+          className="block bg-[#3A4332] hover:bg-[#2c3325] text-white text-center text-[10px] font-bold p-[10px] rounded-lg transition-colors duration-200 ml-auto"
         >
           BAIXE AGORA
         </a>
