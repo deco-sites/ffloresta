@@ -79,7 +79,6 @@ const Desktop = ({ navItems, logo, searchBar }: Props) => (
 
           <div class="flex-1 max-w-xl mx-4">
             {searchBar && <SearchBarIsland {...searchBar} />}
-            {searchBar && <Searchbar {...searchBar} />}
           </div>
 
           <div class="flex items-center gap-6">

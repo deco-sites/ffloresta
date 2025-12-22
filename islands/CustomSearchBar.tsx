@@ -24,10 +24,6 @@ export interface Props {
    * @default true
    */
   showSearchTerms?: boolean;
-  /**
-   * @title Nome da conta VTEX
-   * @description Exemplo: 'minhaloja'
-   */
 }
 
 interface SearchTerm {
@@ -35,30 +31,11 @@ interface SearchTerm {
   count?: number;
 }
 
-// Função para criar um slug amigável para URLs
-const createSlug = (text: string): string => {
-  return text
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "") // Remove acentos
-    .replace(/[^a-z0-9]+/g, "-") // Substitui caracteres não alfanuméricos por hífen
-    .replace(/^-+|-+$/g, "") // Remove hífens do início e fim
-    .substring(0, 50); // Limita o tamanho do slug
-};
-
-// Nova função formatSearchUrl que cria URL no formato /slug?_q=termo&map=ft
+// Nova função formatSearchUrl que cria URL no formato /s?q=termo
 const formatSearchUrl = (searchQuery: string) => {
-  const slug = createSlug(searchQuery);
   const params = new URLSearchParams();
-  params.set("_q", searchQuery);
-  params.set("map", "ft");
-
-  // Se não conseguir criar um slug válido, usar fallback
-  if (!slug || slug.length === 0) {
-    return `/s?${params.toString()}`;
-  }
-
-  return `/${slug}?${params.toString()}`;
+  params.set("q", searchQuery);
+  return `/s?${params.toString()}`;
 };
 
 function ProductCard({
@@ -245,7 +222,7 @@ export default function CustomSearchBar({
           class="join w-full h-[36px] lg:h-9 bg-[#D9D9D9]"
         >
           <input
-            class="input join-item flex-grow h-[36px] lg:h-9 rounded-none border-none outline-none focus:outline-none bg-[#D9D9D9] placeholder:text-[#1F251C] placeholder:"
+            class="input join-item flex-grow h-[36px] lg:h-9 rounded-none border-none outline-none focus:outline-none bg-[#D9D9D9] placeholder:text-[#1F251C]"
             name="q"
             placeholder={placeholder}
             value={query.value}

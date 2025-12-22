@@ -18,7 +18,7 @@
         "count": 16,
         "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
         "sort": "orders:desc",
-        "fuzzy": "automatic",
+        "fuzzy": "disabled",
         "selectedFacets": [],
         "simulationBehavior": "default"
       },
