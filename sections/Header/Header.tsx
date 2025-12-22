@@ -12,6 +12,7 @@ import SearchBarIsland from "../../islands/CustomSearchBar.tsx";
 import HeaderDrawer from "../../components/header/HeaderDrawer.tsx";
 import MenuMobile from "../../islands/Header/MenuMobile.tsx";
 import DownloadAppLink from "../../islands/DownloadAppLink.tsx";
+import { type SearchbarProps } from "../../components/search/Searchbar/Form.tsx";
 
 export interface Logo {
   src: ImageWidget;
@@ -21,33 +22,10 @@ export interface Logo {
   height?: number;
 }
 
-export interface SearchBarProps {
-  /**
-   * @title Placeholder
-   * @description Search bar default placeholder message
-   * @default What are you looking for?
-   */
-  placeholder?: string;
-  /**
-   * @title Mostrar sugestões de produtos
-   * @default true
-   */
-  showProductSuggestions?: boolean;
-  /**
-   * @title Mostrar termos de busca
-   * @default true
-   */
-  showSearchTerms?: boolean;
-  /**
-   * @title Nome da conta VTEX
-   * @description Exemplo: 'minhaloja'
-   */
-}
-
 export interface SectionProps {
   alerts?: HTMLWidget[];
   navItems?: SiteNavigationElement[] | null;
-  searchBar?: SearchBarProps;
+  searchBar?: SearchbarProps;
   logo: Logo;
   loading?: "eager" | "lazy";
 }

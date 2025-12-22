@@ -15,9 +15,12 @@
         "advancedConfigs": {
           "includeOriginalAttributes": []
         },
-        "simulationBehavior": "default",
+        "count": 16,
+        "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+        "sort": "orders:desc",
         "fuzzy": "disabled",
-        "count": 16
+        "selectedFacets": [],
+        "simulationBehavior": "default"
       },
       "layout": {
         "columns": {
