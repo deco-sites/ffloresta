@@ -39,11 +39,11 @@ export interface BannerVideo {
 
 export type SearchBanner =
   | {
-      "@type": "image";
+      "@type"?: "image";
       data: BannerImage;
     }
   | {
-      "@type": "video";
+      "@type"?: "video";
       data: BannerVideo;
     };
 
@@ -259,8 +259,13 @@ function PageResult(props: SectionProps<typeof loader>) {
         data-product-list
         class={clx(
           "grid items-center",
+<<<<<<< HEAD
+          "grid-cols-2 gap-4", // Base
+          "xl:grid-cols-4", // ≥1240px
+=======
           "grid-cols-2 gap-4",
           "xl:grid-cols-4",
+>>>>>>> abdb2f7fb3b9d5a77ef5b83f93ac66d296f0f02c
           "w-full"
         )}
       >
@@ -389,8 +394,11 @@ function Result(props: SectionProps<typeof loader>) {
   const zeroIndexedOffsetPage = pageInfo.currentPage - startingPage;
   const offset = zeroIndexedOffsetPage * perPage;
 
+<<<<<<< HEAD
+=======
   const isSearch = isSearchPage(url);
 
+>>>>>>> abdb2f7fb3b9d5a77ef5b83f93ac66d296f0f02c
   const categoryTitle =
     seoConfig?.pageTitle || breadcrumb.itemListElement?.at(-1)?.name;
 
