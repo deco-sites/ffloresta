@@ -41,19 +41,27 @@ const formatSearchUrl = (searchQuery: string) => {
 function ProductCard({
   product,
   isMobile = false,
+  onClick,
 }: {
   product: Product;
   isMobile?: boolean;
+  onClick?: () => void;
 }) {
   const { url, image: images, offers, name } = product;
   const [front] = images ?? [];
   const { listPrice, price } = useOffer(offers);
   const relativeUrl = relative(url);
 
+  const handleClick = () => {
+    if (onClick) {
+      onClick();
+    }
+  };
+
   if (isMobile) {
     return (
       <div class="bg-white flex p-2 w-full border-solid border-[0.7px] border-[#8D98A0] ">
-        <a href={relativeUrl} class="w-1/3 flex-shrink-0">
+        <a href={relativeUrl} class="w-1/3 flex-shrink-0" onClick={handleClick}>
           <Image
             src={front?.url!}
             alt={front?.alternateName}
@@ -66,7 +74,7 @@ function ProductCard({
         </a>
 
         <div class="ml-2 flex flex-col justify-center flex-grow">
-          <a href={relativeUrl} class="block">
+          <a href={relativeUrl} class="block" onClick={handleClick}>
             <h3 class="text-[#3A4332] font-bold text-xs leading-tight uppercase line-clamp-2">
               {name}
             </h3>
@@ -97,6 +105,7 @@ function ProductCard({
           href={relativeUrl}
           aria-label="view product"
           class="grid grid-cols-1 grid-rows-1 w-full mt-10"
+          onClick={handleClick}
         >
           <Image
             src={front?.url!}
@@ -112,7 +121,7 @@ function ProductCard({
       </figure>
 
       <div class="mt-2 flex flex-col flex-grow">
-        <a href={relativeUrl} class="block">
+        <a href={relativeUrl} class="block" onClick={handleClick}>
           <h3 class="text-[#3A4332] text-[16px] leading-[137%] tracking-[0%] capitalize line-clamp-3 min-h-[66px]">
             {name}
           </h3>
@@ -158,6 +167,7 @@ export default function CustomSearchBar({
   const focused = useSignal(false);
   const error = useSignal<string | null>(null);
   const isMobile = useSignal(false);
+  const containerRef = useSignal<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -168,6 +178,22 @@ export default function CustomSearchBar({
       window.addEventListener("resize", handleResize);
       return () => window.removeEventListener("resize", handleResize);
     }
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(event.target as Node)
+      ) {
+        focused.value = false;
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, []);
 
   const fetchSuggestions = async (searchQuery: string) => {
@@ -206,6 +232,7 @@ export default function CustomSearchBar({
     e.preventDefault();
     const searchQuery = query.value.trim();
     if (searchQuery) {
+      focused.value = false;
       window.location.href = formatSearchUrl(searchQuery);
     }
   };
@@ -214,8 +241,12 @@ export default function CustomSearchBar({
     (showProductSuggestions && products.value.length > 0) ||
     (showSearchTerms && searchTerms.value.length > 0);
 
+  const closeModal = () => {
+    focused.value = false;
+  };
+
   return (
-    <div class="relative w-full lg:max-w-[638px]">
+    <div class="relative w-full lg:max-w-[638px]" ref={containerRef}>
       <div className="py-3 px-4 bg-[#3A4332] lg:p-0 lg:bg-transparent">
         <form
           onSubmit={handleSubmit}
@@ -228,12 +259,6 @@ export default function CustomSearchBar({
             value={query.value}
             onInput={(e) => (query.value = e.currentTarget.value)}
             onFocus={() => (focused.value = true)}
-            onBlur={() => (focused.value = false)}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") {
-                focused.value = false;
-              }
-            }}
             autocomplete="off"
             aria-label="Buscar produtos"
           />
@@ -266,7 +291,10 @@ export default function CustomSearchBar({
       {error.value && <div class="text-error text-sm mt-1">{error.value}</div>}
 
       {focused.value && hasSuggestions() && (
-        <div class="absolute top-full left-0 right-0 bg-white border border-base-200 rounded-none shadow-lg z-50 p-4 max-h-[638px] overflow-auto">
+        <div
+          class="absolute top-full left-0 right-0 bg-white border border-base-200 rounded-none shadow-lg z-50 p-4 max-h-[638px] overflow-auto"
+          onMouseDown={(e) => e.preventDefault()}
+        >
           <div class="flex flex-col md:flex-row gap-5">
             {showSearchTerms && searchTerms.value.length > 0 && (
               <div class="w-full md:w-1/3 bg-white">
@@ -280,7 +308,7 @@ export default function CustomSearchBar({
                       <a
                         href={formatSearchUrl(term.term)}
                         class="block py-1 md:py-2 hover:bg-base-200 rounded"
-                        onMouseDown={(e) => e.preventDefault()}
+                        onClick={closeModal}
                       >
                         <div class="flex justify-between items-center">
                           <span class="text-sm md:text-base text-capitalize">
@@ -308,6 +336,7 @@ export default function CustomSearchBar({
                       key={product.productID}
                       product={product}
                       isMobile={isMobile.value}
+                      onClick={closeModal}
                     />
                   ))}
                 </div>
@@ -315,7 +344,7 @@ export default function CustomSearchBar({
                   <a
                     href={formatSearchUrl(query.value)}
                     class="inline-block px-4 py-2 bg-[#3A4332] text-white rounded-none hover:bg-[#2D3326] transition-colors text-sm md:text-base"
-                    onMouseDown={(e) => e.preventDefault()}
+                    onClick={closeModal}
                   >
                     Ver mais produtos
                   </a>
