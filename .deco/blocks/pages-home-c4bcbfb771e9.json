@@ -49,8 +49,8 @@
         {
           "type": "image",
           "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/97ce7cae-0e4b-4304-bd30-72e564dd1b49/dektop-acessorios.jpg",
-            "mobile": "https://assets.decocache.com/ffloresta/adac2852-b41a-409a-a8c9-ffb00dbe51fb/mobile-acessorios.jpg",
+            "desktop": "https://assets.decocache.com/ffloresta/d9171c92-4a67-4106-8605-00b1cb6f9b7f/banner-desktop-fechadura.jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/3b5e5890-4102-46bf-bd53-c3612d526135/banner-mobile-fechadura.jpg",
             "action": {
               "href": "/ferramentas/acessorios?initialMap=c&initialQuery=ferramentas&map=category-1%2Ccategory-2"
             },
@@ -60,8 +60,8 @@
         {
           "type": "image",
           "data": {
-            "desktop": "https://assets.decocache.com/ffloresta/2668a4e4-a11e-434c-907c-b17c4a474cc4/dobradiC3A7a1a.jpg",
-            "mobile": "https://assets.decocache.com/ffloresta/0de3d430-bad8-4160-af14-a15c4517b849/dobradiC3A7a1B.jpg",
+            "desktop": "https://assets.decocache.com/ffloresta/5667c153-4d3c-4ec4-a84d-36607bb6a5fd/banner-desktop-ferramentas.jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/5c8d4528-91da-4375-98d9-2fc9d6e1c1c3/banner-mobile-ferramentas.jpg",
             "action": {
               "href": "/ferragens/dobradicas"
             },
@@ -74,8 +74,8 @@
             "action": {
               "href": "/ferramentas/vonder?initialMap=c&initialQuery=ferramentas&map=category-1%2Cbrand"
             },
-            "desktop": "https://assets.decocache.com/ffloresta/382e359f-a687-4fee-a9fe-58510815ef70/7-a-(1).jpg",
-            "mobile": "https://assets.decocache.com/ffloresta/ed59cf4b-6404-42c8-8ac5-1261408a094b/7-c.jpg",
+            "desktop": "https://assets.decocache.com/ffloresta/2c5d299c-11e5-432e-a979-3faf95d0ba0a/banner-desktop-puxador.jpg",
+            "mobile": "https://assets.decocache.com/ffloresta/163c6d35-044c-4f21-b096-7c76b0a5d018/banner-mobile-puxador.jpg",
             "alt": "banner"
           }
         },
