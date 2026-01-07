@@ -338,10 +338,13 @@
           "data": {
             "desktop": "https://assets.decocache.com/ffloresta/d25c49b4-cbc9-4538-987c-9bbeeeb4963c/1.png",
             "mobile": "https://assets.decocache.com/ffloresta/d25c49b4-cbc9-4538-987c-9bbeeeb4963c/1.png",
-            "alt": "alt",
+            "alt": "Puxadores",
             "autoplay": true,
             "loop": true,
-            "muted": true
+            "muted": true,
+            "action": {
+              "href": "/puxadores"
+            }
           }
         },
         {
@@ -349,7 +352,10 @@
           "data": {
             "desktop": "https://assets.decocache.com/ffloresta/db849ace-31d5-4327-80e4-85f602e03cf3/2.png",
             "mobile": "https://assets.decocache.com/ffloresta/db849ace-31d5-4327-80e4-85f602e03cf3/2.png",
-            "alt": "alt"
+            "alt": "Ferragens",
+            "action": {
+              "href": "/ferragens"
+            }
           }
         },
         {
@@ -357,7 +363,10 @@
           "data": {
             "desktop": "https://assets.decocache.com/ffloresta/428ded2a-c47f-4b1e-a7e3-23624799163c/3.png",
             "mobile": "https://assets.decocache.com/ffloresta/428ded2a-c47f-4b1e-a7e3-23624799163c/3.png",
-            "alt": "alt"
+            "alt": "Banheiro",
+            "action": {
+              "href": "/ambientes/banheiro"
+            }
           }
         }
       ]
