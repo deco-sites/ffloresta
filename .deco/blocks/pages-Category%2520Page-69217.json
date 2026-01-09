@@ -37701,7 +37701,8 @@
                 "includeOriginalAttributes": []
               },
               "pageOffset": 1,
-              "hideUnavailableItems": false
+              "hideUnavailableItems": false,
+              "query": "/ferragens-de-projetos"
             },
             "layout": {
               "columns": {
@@ -37832,7 +37833,7 @@
               "data": {
                 "desktop": "https://assets.decocache.com/ffloresta/6cfd9778-bca8-416e-945f-0faf207782a6/Prancheta-1_4_upscayl_4x_upscayl-standard-4x.png",
                 "mobile": "https://assets.decocache.com/ffloresta/bdd17e8b-ea21-45b8-b888-43489a688ec4/Prancheta-1_42x.png",
-                "alt": "ferragens de projetos"
+                "alt": "Ferragens de projetos"
               }
             }
           },
