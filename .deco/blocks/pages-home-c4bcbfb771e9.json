@@ -160,12 +160,12 @@
     },
     {
       "__resolveType": "site/sections/Product/ProductShelfWithBackground.tsx",
-      "title": "DESTAQUE FLORESTA",
+      "title": "Kits separados pra você",
       "products": {
         "__resolveType": "vtex/loaders/intelligentSearch/productSearchValidator.ts",
         "props": {
           "sort": "price:desc",
-          "collection": "142",
+          "collection": "188",
           "count": 14
         }
       },
